@@ -3,6 +3,6 @@
     languageName = "English"
     weight = 2
 
-    [languages.se]
+    [languages.sv]
     languageName = "Svenska"
     weight = 1

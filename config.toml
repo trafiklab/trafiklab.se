@@ -1,7 +1,0 @@
-baseURL = "http://2021.trafiklab.se/"
-languageCode = "en-uk"
-title = "Trafiklab"
-
-theme = "themes/trafiklab2021"
-
-enableEmoji = true
