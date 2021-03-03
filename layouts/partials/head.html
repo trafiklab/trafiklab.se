@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ block "title" . }}
+  {{ .Site.Title }}
+{{ end }}</title>
+<meta property="og:title" content="{{ .Title }}">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />

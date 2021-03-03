@@ -1,5 +1,74 @@
 {{ define "main" }}
+    <section class="header-section section-contrast">
+      <div class="header-container">
+        <h1>{{ .Title }}</h1>
 
-<!-- landing page layout -->
+        {{ .Content}}
+        <!-- landing page layout -->
+      </div>
+    </section>
+
+    <div class="home-container__segment">
+      <div class="tl-grid home-container__navigation-cards tl-grid__container tl-grid--spacing-large">
+
+        {{ $headless := .Site.GetPage "/headless" }}
+        {{ $frontBlocks := $headless.Resources.Match "front*" }}
+        {{ range $frontBlocks }}
+          <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
+            <a class="tl-base-card tl-navigation-card" href="/about">
+              <div class="tl-navigation-card__title-icon"><svg viewBox="0 0 16 16" width="1em" height="1em" class="tl-icon " color="currentColor"><path fill="currentColor" fill-rule="evenodd" d="M8 1c2.946 0 5.485 2.289 5.485 5.485 0 .906-.358 1.947-1.004 3.112a19.78 19.78 0 01-1.55 2.334 32.169 32.169 0 01-2.262 2.655l-.217.226a.636.636 0 01-.904 0l-.348-.364-.43-.469a32.168 32.168 0 01-1.701-2.048 19.78 19.78 0 01-1.55-2.334c-.646-1.165-1.004-2.206-1.004-3.112C2.515 3.289 5.055 1 8 1zm0 1.273c-2.27 0-4.212 1.75-4.212 4.212 0 .648.293 1.502.844 2.495a18.55 18.55 0 001.45 2.181 30.915 30.915 0 001.633 1.967l.285.311.284-.311a30.914 30.914 0 001.633-1.967 18.55 18.55 0 001.45-2.181c.552-.993.845-1.847.845-2.495 0-2.462-1.942-4.212-4.212-4.212zM8 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" clip-rule="evenodd"></path></svg>
+              </div>
+              <span class="tl-navigation-card__title">{{ .Title }}</span>
+              <div class="tl-paragraph tl-paragraph--margin-bottom">{{ .Content }}</div>
+              <div href="#" class="tl-button">{{ .Params.Cta }}</div>
+            </a>
+          </div>
+        {{ end }}
+
+      </div>
+    </div>
+
+    <div class="home-container__segment">
+      <div class="tl-grid home-container__traveling-abroad tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
+        <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
+          <h2 class="tl-h2">Use cases</h2>
+          {{ range ( where .Site.RegularPages "Type" "cases" | first 3 ) }}
+            <a class="tl-media-card__text" href="{{ .Permalink }}">
+              <div class="tl-base-card tl-base-card tl-media-card article-preview-card">
+                <div class="tl-media-card__media">
+                  <img src="{{ .Params.Image }}">
+                </div>
+                <div class="tl-media-card__text">
+                  <label class="tl-label tl-media-card__category"></label>
+                  <div class="tl-media-card__title">{{ .Title }}</div>
+                  <p class="tl-paragraph tl-paragraph--margin-bottom">{{ .Summary }}</p>
+                  <svg class="tl-icon tl-media-card__arrow-icon" viewBox="0 0 16 16" width="1em" height="1em" color="currentColor">
+                    <path fill="currentColor" fill-rule="evenodd" d="M10.043 2.76l-.943.943 3.625 3.623H1V8.66l11.726-.001L9.1 12.284l.943.943 4.762-4.762a.667.667 0 00.07-.86l-.07-.083-4.762-4.762z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          {{end}}
+        </div>
+
+        <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
+          <div class="tl-grid tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
+            <h2 class="tl-h2">News</h2>
+            {{ range ( where .Site.RegularPages "Type" "news" | first 3 ) }}
+              <div class="tl-grid tl-grid__item tl-grid--small-12">
+                <a class="tl-base-card tl-navigation-card tl-base-card--red-line tl-navigation-card--compact" href="{{ .Permalink }}">
+                  <span class="tl-navigation-card__title">{{ .Title }}</span>
+                  <div class="tl-paragraph tl-paragraph--margin-bottom">{{ slicestr .Summary 0 200 | markdownify }} ...</div>
+                  <svg class="tl-icon tl-navigattion-card__icon tl-navigation-card__arrow-icon" viewBox="0 0 16 16" width="1em" height="1em" color="currentColor">
+                    <path fill="currentColor" fill-rule="evenodd" d="M10.043 2.76l-.943.943 3.625 3.623H1V8.66l11.726-.001L9.1 12.284l.943.943 4.762-4.762a.667.667 0 00.07-.86l-.07-.083-4.762-4.762z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
+            {{end}}
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 {{ end }}

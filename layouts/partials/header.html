@@ -1,0 +1,31 @@
+<header class="header ui-menu--desktop">
+  <div class="top-navigation">
+    <div class="header-left">
+      <div class="tl-top-navigation-item">
+        <a href="{{ .Permalink }}"><img src="/images/logo.svg" class="logo" /></a>
+      </div>
+      <nav>
+        <ul>
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+              <li class="tl-top-navigation-item">
+                  <a href="{{ .URL }}">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      {{ range $.Site.Home.AllTranslations }}
+        {{ if ne $.Site.Language.LanguageName .Language.LanguageName }}
+          <a class="tl-icon-button" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{end }}
+      {{ end }}
+      <a href="#" class="tl-button tl-button--variant-primary user-link">{{ i18n "cta-header" }}</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,23 @@
+.header {
+  .top-navigation {
+    background: $dark-bg;
+  }
+  .logo {
+    margin: 10px;
+    width: 100px;
+  }
+  .tl-top-navigation-item a {
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  .tl-icon-button {
+    margin: 0 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
