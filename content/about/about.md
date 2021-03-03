@@ -1,4 +1,11 @@
-# A cooperation between Samtrafiken and Trafikverket
+---
+title: "About Trafiklab"
+menu: "main"
+translationKey: "about"
+url: "/about"
+weight: 4
+---
+## A cooperation between Samtrafiken and Trafikverket
 
 Trafiklab was founded in 2011 as a cooperation between Samtrafiken, SL and RISE Viktoria. Today Trafiklab is a way to
 fulfill Trafikverkets duty to publish public transport data. This is realized by cooperation between Samtrafiken and

@@ -1,8 +1,0 @@
-[languages]
-    [languages.en]
-    languageName = "English"
-    weight = 2
-
-    [languages.sv]
-    languageName = "Svenska"
-    weight = 1

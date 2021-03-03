@@ -7,3 +7,18 @@ title = "Trafiklab"
 theme = "trafiklab-2021"
 
 enableEmoji = true
+
+# paths
+[permalinks]
+  "/" = "/:title/"
+  posts = "/:section/:title/"
+
+# Multilingual
+[languages]
+  [languages.en]
+  languageName = "English"
+  weight = 2
+
+  [languages.sv]
+  languageName = "Svenska"
+  weight = 1

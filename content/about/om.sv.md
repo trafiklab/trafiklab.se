@@ -1,4 +1,11 @@
-# Samtrafiken och Trafikverket i samarbete
+---
+title: "Om Trafiklab"
+menu: "main"
+translationKey: "about"
+url: "/sv/om"
+weight: 4
+---
+## Samtrafiken och Trafikverket i samarbete
 
 Trafiklab startade 2011 i samarbete mellan Samtrafiken, SL och RISE Viktoria. Idag är Trafiklab ett sätt att uppfylla
 Trafikverkets uppdrag att tillhandahålla kollektivtrafikdata, vilket görs i samarbete mellan Samtrafiken och
