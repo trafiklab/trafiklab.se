@@ -1,5 +1,5 @@
 ---
-description: >- Just want to play around and experiment? Run our demo app in minutes on your own phone.
+description: Just want to play around and experiment? Run our demo app in minutes on your own phone.
 ---
 
 # Importing our demo project
