@@ -163,13 +163,13 @@ a.tl-media-card__text {
   appearance: none;
 
   background-color: $light-bg;
-  border: .125rem solid transparent;
+  border: .125rem solid $border-grey;
   border-radius: .25rem;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.5rem;
   min-width: 9.5rem;
   padding: .5rem 1rem;
@@ -178,7 +178,8 @@ a.tl-media-card__text {
   text-decoration: none;
   vertical-align: top;
   &.tl-button--variant-primary {
-    background-color: $pink;
+    background-color: $purple;
+    border-color: $purple;
     color: #fff;
   }
 }
@@ -222,8 +223,6 @@ a.tl-media-card__text {
 .top-navigation {
   display: flex;
   align-items: center;
-  overflow-x: scroll;
-  border-bottom: .0625rem solid #e9e9e9;
   width: 100%;
   padding: 1rem 1rem 0;
   transition: margin-left .1s ease-out;
@@ -267,7 +266,7 @@ a.tl-media-card__text {
   &.section-contrast {
     &:before {
       content: "";
-      background-color: $light-bg;
+      background-color: $dark-bg;
       position: absolute;
       height: 13rem;
       z-index: -1;
@@ -279,6 +278,9 @@ a.tl-media-card__text {
         padding: 0 2000px;
       }
     }
+  }
+  .header-container {
+    color: #fff;
   }
 }
 @media screen and (min-width: 50rem) {
@@ -295,4 +297,16 @@ a.tl-media-card__text {
 // Helpers
 .tl-h5--margin-bottom, .tl-h6--margin-bottom, .tl-paragraph--margin-bottom {
   margin-top: 0;
+}
+
+.tl-h1 {
+  font-size: 1.5rem;
+  line-height: 2.625rem;
+  margin: 0 0 1rem;
+}
+@media screen and (min-width: 50rem) {
+  .tl-h1 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
 }

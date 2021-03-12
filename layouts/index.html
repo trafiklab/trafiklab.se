@@ -15,12 +15,12 @@
         {{ $frontBlocks := $headless.Resources.Match "front*" }}
         {{ range $frontBlocks }}
           <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
-            <a class="tl-base-card tl-navigation-card" href="/about">
+            <a class="tl-base-card tl-navigation-card" href="{{ .Params.Link }}">
               <div class="tl-navigation-card__title-icon"><svg viewBox="0 0 16 16" width="1em" height="1em" class="tl-icon " color="currentColor"><path fill="currentColor" fill-rule="evenodd" d="M8 1c2.946 0 5.485 2.289 5.485 5.485 0 .906-.358 1.947-1.004 3.112a19.78 19.78 0 01-1.55 2.334 32.169 32.169 0 01-2.262 2.655l-.217.226a.636.636 0 01-.904 0l-.348-.364-.43-.469a32.168 32.168 0 01-1.701-2.048 19.78 19.78 0 01-1.55-2.334c-.646-1.165-1.004-2.206-1.004-3.112C2.515 3.289 5.055 1 8 1zm0 1.273c-2.27 0-4.212 1.75-4.212 4.212 0 .648.293 1.502.844 2.495a18.55 18.55 0 001.45 2.181 30.915 30.915 0 001.633 1.967l.285.311.284-.311a30.914 30.914 0 001.633-1.967 18.55 18.55 0 001.45-2.181c.552-.993.845-1.847.845-2.495 0-2.462-1.942-4.212-4.212-4.212zM8 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" clip-rule="evenodd"></path></svg>
               </div>
               <span class="tl-navigation-card__title">{{ .Title }}</span>
               <div class="tl-paragraph tl-paragraph--margin-bottom">{{ .Content }}</div>
-              <div href="#" class="tl-button">{{ .Params.Cta }}</div>
+              <div class="tl-button">{{ .Params.Cta }}</div>
             </a>
           </div>
         {{ end }}

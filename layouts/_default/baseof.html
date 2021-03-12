@@ -4,16 +4,20 @@
     {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
     {{ block "style" . }}{{ partial "style.html" .}}{{ end }}
   </head>
-  <body>
+  <body class="{{ .Type }}">
     <div id="page-container">
       {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
-      <main id="main-content">
+      {{ if eq .Type "open-data" }}
+        {{ block "main" . }}
+        {{ end }}
+      {{ else }}
+        <main id="main-content">
           {{ block "main" . }}
-          <!-- The part of the page that begins to differ between templates -->
           {{ end }}
-      </main>
-      {{ block "footer" . }}
-        {{ partial "footer.html" .}}
+        </main>
+        {{ block "footer" . }}
+          {{ partial "footer.html" .}}
+        {{ end }}
       {{ end }}
     </div>
   </body>
