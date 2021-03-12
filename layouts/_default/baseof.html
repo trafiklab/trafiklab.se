@@ -4,7 +4,7 @@
     {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
     {{ block "style" . }}{{ partial "style.html" .}}{{ end }}
   </head>
-  <body class="{{ .Type }}">
+  <body class="type-{{ .Type }}">
     <div id="page-container">
       {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
       {{ if eq .Type "open-data" }}
