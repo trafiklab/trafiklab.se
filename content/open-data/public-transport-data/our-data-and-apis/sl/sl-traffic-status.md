@@ -1,2 +1,0 @@
-# SL Traffic status
-

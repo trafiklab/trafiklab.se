@@ -1,2 +1,0 @@
-# GTFS PHP SDK
-

@@ -1,2 +1,0 @@
-# Interpreting HTTP Headers
-

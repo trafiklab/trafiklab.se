@@ -22,3 +22,9 @@ enableEmoji = true
   [languages.sv]
   languageName = "Svenska"
   weight = 1
+
+# HTML for shortcodes
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -3,7 +3,8 @@ title: "About Trafiklab"
 menu: "main"
 translationKey: "about"
 url: "/about"
-weight: 4
+weight: 3
+layout: info
 ---
 ## A cooperation between Samtrafiken and Trafikverket
 
