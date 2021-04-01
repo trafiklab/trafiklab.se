@@ -1,6 +1,46 @@
 <footer id="footer">
   <div class="footer-wrapper">
-    <a href="/"><img src="/images/logo.svg" class="logo" /></a>
-    <nav class="footer-menu">[Sidfots-meny]</nav>
+    <div class="footer-header">
+      <a href="/"><img src="/images/logo.svg" class="logo" /></a>
+    </div>
+    <div class="tl-grid footer-home__grid-container tl-grid__container tl-grid--spacing-large">
+      <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-2">
+        <nav class="footer-menu">
+          <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+              <li class="footer-text">
+                {{ if .Page.Params.absolute }}
+                  <a href="{{ .Page.Params.Link }}" target="_blank">
+                    <span>{{ .Title }}</span>
+                  </a>
+                {{ else }}
+                <a href="{{ .URL }}">
+                  {{ .Pre }}
+                  <span>{{ .Name }}</span>
+                </a>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+      <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-10">
+        {{ $headless := .Site.GetPage "/headless" }}
+        {{ $logos := $headless.Resources.Match "partner*" }}
+        {{ range $logos }}
+          {{ if .Params.absolute }}
+            <a href="{{ .Params.Link }}" target="_blank" class="footer-logo">
+              <img src="{{ .Params.Image }}" title="{{ .Title }}">
+            </a>
+          {{ else }}
+            <a href="{{ .URL }}">
+              {{ .Pre }}
+              <img src="{{ .Params.Image }}" title="{{ .Title }}">
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
   </div>
 </footer>

@@ -21,3 +21,20 @@
     text-decoration: none;
   }
 }
+body.type-data {
+  .header {
+    .top-navigation {
+      background: #fff;
+      .header-right .tl-icon-button {
+        display: none;
+      }
+    }
+    .logo {
+      background: $black;
+      padding: 5px
+    }
+    .tl-top-navigation-item a {
+      color: $black;
+    }
+  }
+}

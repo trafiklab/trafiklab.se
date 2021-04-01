@@ -7,7 +7,8 @@
   <body class="type-{{ .Type }}">
     <div id="page-container">
       {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
-      {{ if eq .Type "open-data" }}
+      {{ if eq .Type "data" }}
+        {{ block "sidebar" . }}{{ partial "sidebar.html" .}}{{ end }}
         {{ block "main" . }}
         {{ end }}
       {{ else }}
@@ -20,5 +21,8 @@
         {{ end }}
       {{ end }}
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    {{ block "page-script" . }}{{ end }}
   </body>
 </html>

@@ -1,19 +1,25 @@
 <header class="header ui-menu--desktop">
   <div class="top-navigation">
     <div class="header-left">
-      <div class="tl-top-navigation-item">
+      <div class="tl-top-navigation-item header-logo">
         <a href="/"><img src="/images/logo.svg" class="logo" /></a>
       </div>
       <nav>
         <ul>
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-              <li class="tl-top-navigation-item">
-                  <a href="{{ .URL }}">
-                    {{ .Pre }}
-                    <span>{{ .Name }}</span>
-                  </a>
-              </li>
+            <li class="tl-top-navigation-item {{ if $currentPage.IsMenuCurrent "main" . }} tl-top-navigation-item--active{{ end }}">
+              {{ if .Page.Params.absolute }}
+                <a href="{{ .Page.Params.Link }}" target="_blank">
+                  {{ .Title }}
+                </a>
+              {{ else }}
+                <a href="{{ .URL }}">
+                  {{ .Pre }}
+                  {{ .Name }}
+                </a>
+              {{ end }}
+            </li>
           {{ end }}
         </ul>
       </nav>

@@ -38,8 +38,8 @@
 .tl-side-navigation {
   --padding-vertical: 1rem;
   --padding-horizontal: 2.5rem;
-  background-color: var(--primary-background-color);
-  color: var(--primary-text-color);
+  background-color: #f8f8f8;
+  color: $black;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -86,12 +86,12 @@
 
 // Content
 @media screen and (min-width: 800px){
-  .page {
+  .type-data .page {
     margin: 7rem 5vw 10rem 23rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .page {
+  .type-data .page {
     margin: 7rem 15vw 10rem calc(26rem + 15vw);
   }
 }

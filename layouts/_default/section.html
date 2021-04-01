@@ -1,22 +1,33 @@
 {{ define "main" }}
 
-  <section class="header-section">
-    <div class="header-container">
-      <h1>{{ .Title }}</h1>
-
-      {{ .Content }}
+  <div data-aos="fade-in" class="omtur-article-header__wrapper aos-init aos-animate">
+    <div class="tl-grid article-header__container tl-grid__container tl-grid--spacing-none">
+      <div class="tl-grid tl-grid__item tl-grid--small-11 tl-grid--medium-5">
+        <h1 class="tl-h1">{{ .Title }}</h1>
+      </div>
+      <div class="tl-grid tl-grid__item tl-grid--small-1 tl-grid--medium-1"></div>
+      <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
+        <div class="tl-lead-paragraph" style="margin-top:0">{{ .Content }}</div>
+      </div>
     </div>
-  </section>
-
-  <div class="content-wrapper">
-    <ul>
-      <!-- Ranges through content/posts/*.md -->
+    <div class="blogpost-overview-grid">
       {{ range .Pages }}
-        <li>
-          <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-        </li>
+        <a class="tl-base-card blogpost-overview__link" title="{{ .Title }}" href="{{ .Permalink }}">
+          <div class="blogpost-overview__post">
+            <img src="{{ .Params.Image }}" class="blogpost-overview__image">
+            <div class="blogpost-overview__information">
+              <div>
+                <h3 class="tl-h3 tl-h3--margin-bottom blogpost-overview__title">{{ .Title }}</h3>
+                <div class="blogpost-overview__description">{{ .Summary }}</div>
+              </div>
+              <div class="blogpost-overview__date">
+                <label class="tl-label">{{ .Date.Format "2006-01-02" }}</label>
+              </div>
+            </div>
+          </div>
+        </a>
       {{ end }}
-    </ul>
+    </div>
   </div>
 
 {{ end }}
