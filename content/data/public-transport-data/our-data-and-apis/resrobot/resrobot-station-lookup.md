@@ -56,7 +56,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&key=API_KEY
 
 {{% tab "Xml" %}}
 
-```
+```xml
 https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&key=API_KEY
 ```
 
@@ -86,7 +86,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&key=API_KEY
 
 {{% tab "Xml" %}}
 
-```markup
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <LocationList xmlns="hafas_rest_v1">
     <StopLocation id="740098001" extId="740098001" name="GÖTEBORG" lon="11.973479" lat="57.708895" weight="22332" products="254"/>
