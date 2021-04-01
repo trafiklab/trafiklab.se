@@ -14,20 +14,25 @@
         {{ $currentPage := . }}
       </div>
       <ul class="tl-side-navigation tl-side-navigation--small list">
+        {{ if not (eq $currentPage.RelPermalink "/data/") }}
+          <li class="tl-side-navigation__item">
+            <a class="tl-side-navigation__click-target{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}} title" href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
         {{- range $i, $e := .Data.Pages -}}
           <li class="tl-side-navigation__item">
-            <a class="tl-side-navigation__click-target{{ if eq $currentPage.Permalink .Permalink }} active{{end}} title" href="{{ .Permalink }}">{{ .Title }}</a>
-            {{- if .Sections -}}
-              <ul>
-              {{- range .Sections -}}
-                {{- range $i, $e := .Data.Pages -}}
-                  <li class="tl-side-navigation__item">
-                    <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
-                  </li>
-                {{- end -}}
+            {{ if .Page.Params.headless }}
+              <div class="tl-side-navigation__click-target tl-side-navigation-group">{{ .Title }}</div>
+            {{ else }}
+              <a class="tl-side-navigation__click-target{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}} title" href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+            <ul class="tl-side-navigation tl-side-navigation--small">
+              {{- range $i, $e := .Data.Pages -}}
+                <li class="tl-side-navigation__item">
+                  <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
               {{- end -}}
-              </ul>
-            {{- end -}}
+            </ul>
           </li>
         {{- end -}}
       </ul>
