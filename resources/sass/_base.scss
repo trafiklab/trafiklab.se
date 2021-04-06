@@ -16,9 +16,6 @@
 }
 
 // Grid
-.tl-grid--spacing-large {
-  gap: 1.5rem;
-}
 .tl-grid__container {
   box-sizing: border-box;
   display: grid;
@@ -33,6 +30,12 @@
 }
 .tl-grid--small-12 {
   grid-column: span 12;
+}
+.tl-grid--spacing-large {
+  gap: 1.5rem;
+}
+.tl-grid--spacing-extraLarge {
+  gap: 2rem;
 }
 @media screen and (min-width: 50rem) {
   .tl-grid--medium-1 {
@@ -433,7 +436,7 @@ a.tl-media-card__text {
     width: 22rem;
   }
 }
-.omtur-blogpost-overview__information {
+.omtl-blogpost-overview__information {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -441,14 +444,54 @@ a.tl-media-card__text {
   padding-top: 1.5rem;
 }
 @media screen and (min-width: 50rem) {
-  .omtur-blogpost-overview__information {
+  .omtl-blogpost-overview__information {
     padding-top: 0;
     padding-left: 3rem;
     padding-right: 3rem;
   }
 }
 
+// About
+.omtl-people-presenter {
+  background: $light-bg;
+}
+.omtl-people-presenter--vertical .omtur-people-presenter__container {
+  display: flex;
+  flex-direction: column;
+}
+.omtl-people-presenter__image {
+  width: 100%;
+  min-height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.omtl-people-presenter__info {
+  background: $light-bg;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
+@media screen and (min-width: 50rem) {
+  .omtl-people-presenter__info {
+    padding: 3rem 0 3rem 3rem;
+  }
+}
+
 // Front adaptions
 .newsletter-signup {
   margin-top: 8rem;
+}
+
+// Typography
+.tl-h2 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin: 2rem 0 .75rem;
+}
+
+@media screen and (min-width: 50rem) {
+  .tl-h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }

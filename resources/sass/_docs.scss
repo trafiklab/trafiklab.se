@@ -181,6 +181,9 @@ input {
 .highlight {
   position: relative;
   z-index: 0;
+  pre {
+    overflow: auto;
+  }
 }
 
 .copy-code-button {
@@ -193,13 +196,11 @@ input {
   line-height: 14px;
   letter-spacing: 0.5px;
   width: 65px;
-  color: #232326;
-  background-color: #7f7f7f;
-  border: 1.25px solid #232326;
-  border-top-left-radius: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 4px;
+  color: $black;
+  background-color: #fff;
+  border: 1.25px solid $border-grey;
+  border-radius: none;
+  border-bottom-left-radius: 3px;
   white-space: nowrap;
   padding: 4px 4px 5px 4px;
   margin: 0 0 0 1px;
