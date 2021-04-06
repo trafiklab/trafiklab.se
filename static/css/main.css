@@ -993,6 +993,37 @@ input {
   opacity: 0.01;
 }
 
+.admonition {
+  background-color: #ededed;
+  border-left: 10px solid transparent;
+  padding: 15px;
+  margin-bottom: 21px;
+}
+.admonition .content {
+  margin-top: 0.75rem;
+}
+
+.tip {
+  border-color: #f277c6;
+}
+.tip svg {
+  color: #f277c6;
+}
+
+.warning {
+  border-color: #9b26b6;
+}
+.warning svg {
+  color: #9b26b6;
+}
+
+.note {
+  border-color: #232323;
+}
+.note svg {
+  color: #232323;
+}
+
 #body .nav-tabs {
   position: unset;
   width: unset;

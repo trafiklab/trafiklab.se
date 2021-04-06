@@ -223,3 +223,32 @@ input {
   z-index: -1;
   opacity: .01;
 }
+
+// Admonition
+.admonition {
+  background-color: $light-bg;
+  border-left: 10px solid transparent;
+  padding: 15px;
+  margin-bottom: 21px;
+  .content {
+    margin-top: .75rem;
+  }
+}
+.tip {
+  border-color: $pink;
+  svg {
+    color: $pink;
+  }
+}
+.warning {
+  border-color: $purple;
+  svg {
+    color: $purple;
+  }
+}
+.note {
+  border-color: $black;
+  svg {
+    color: $black;
+  }
+}
