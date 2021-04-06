@@ -48,7 +48,7 @@ Exact search returns only stations that match exactly with the search string.
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```text
+```xml
 https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&key=API_KEY
 ```
 
@@ -107,25 +107,25 @@ stations which name is an exact or near match to the input string.
 
 #### Call
 
-{% tabs %} {% tab title="Json" %}
+{{% tabs %}} {{% tab "Json" %}}
 
-```text
+```javascript
 https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KEY
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Xml" %}
+{{% tab "Xml" %}}
 
 ```
 https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}
 
 #### Response
 
-{% tabs %} {% tab title="Json" %}
+{{% tabs %}} {{% tab "Json" %}}
 
 ```javascript
 {
@@ -224,11 +224,11 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 }
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Xml" %}
+{{% tab "Xml" %}}
 
-```markup
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <LocationList xmlns="hafas_rest_v1">
     <StopLocation id="740098001" extId="740098001" name="GÖTEBORG" lon="11.973479" lat="57.708895" weight="22332" products="254"/>
@@ -244,6 +244,6 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 </LocationList>
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}
 
 ###  

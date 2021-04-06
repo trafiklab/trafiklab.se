@@ -43,7 +43,7 @@ from [Trafiklab](https://trafiklab.se) first.
 
 The following code example illustrates how you can retrieve a timetable for a certain stop.
 
-```text
+```xml
 $wrapper = new ResRobotWrapper();
 
 // Create a new routeplanning object. The wrapper will instantiate an object of the interface type.
@@ -76,7 +76,7 @@ the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/resrobo
 
 The following code gives a quick idea on how the SDK is used.
 
-```text
+```xml
 $entry = $response->getTimetable()[0]; // Get the first result
 // Type of transport, one of the constants in Trafiklab\Common\Model\Enum\TransportType
 $entry->getTransportType();
@@ -96,7 +96,7 @@ $scheduledStopTime = $timeTableEntry->getScheduledStopTime();
 
 The following code example illustrates how you can plan a route from A to B
 
-```text
+```xml
 $queryTime = new DateTime();
 $queryTime->setTime(18, 0);
 
@@ -123,7 +123,7 @@ the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/resrobo
 
 The following code gives a quick idea on how the SDK is used.
 
-```text
+```xml
 $trip = $response->getTrips()[0]; // Get the first result
 
 // Tell the user about every leg in their journey.

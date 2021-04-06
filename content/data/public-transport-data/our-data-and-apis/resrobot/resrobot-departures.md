@@ -43,21 +43,21 @@ from [ResRobot Stop lookup ](resrobot-station-lookup.md)or [GTFS Sverige 2](../g
 
 ### Call
 
-{% tabs %} {% tab title="Json" %}
+{{% tabs %}} {{% tab "Json" %}}
 
-```text
+```xml
 https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Xml" %}
+{{% tab "Xml" %}}
 
 ```
 https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}
 
 ### Response
 
@@ -66,7 +66,7 @@ För en exakt teknisk beskrivning av varje fält i svaret hanvisar vi till vår 
 {% hint style="info" %} Note that an actual response contains more entries and stops - we removed some from this example
 response since it's only meant to show the structure of the response. {% endhint %}
 
-{% tabs %} {% tab title="Json" %}
+{{% tabs %}} {{% tab "Json" %}}
 
 ```javascript
 {
@@ -263,11 +263,11 @@ response since it's only meant to show the structure of the response. {% endhint
 }
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Xml" %}
+{{% tab "Xml" %}}
 
-```markup
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <DepartureBoard xmlns="hafas_rest_v1">
     <Departure direction="Göteborg Eketrägatan" name="Länstrafik - Buss 16" transportNumber="16" transportCategory="BLT" type="S" stopid="740015585" stopExtId="740015585" stop="Göteborg Nordstan" date="2020-06-02" time="11:29:00">
@@ -359,4 +359,4 @@ response since it's only meant to show the structure of the response. {% endhint
 </DepartureBoard>
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}

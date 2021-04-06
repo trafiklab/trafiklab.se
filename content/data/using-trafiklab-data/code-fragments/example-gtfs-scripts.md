@@ -4,17 +4,17 @@ title: Calling APIs
 
 ## Reading the last-modified header
 
-{% tabs %} {% tab title="Javascript" %}
+{{% tabs %}} {{% tab "Javascript" %}}
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Java" %}
+{{% tab "Java" %}}
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="PHP" %}
+{{% tab "PHP" %}}
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}
 
 ## Making a conditional HTTP GET request
 
@@ -23,14 +23,14 @@ searching the web, adding "MDN" to your search query will ensure MDN results sho
 top. [Read the MDN page about conditional HTTP Requests here.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Conditional_requests)
 {% endhint %}
 
-{% tabs %} {% tab title="Javascript" %}
+{{% tabs %}} {{% tab "Javascript" %}}
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Java" %}
+{{% tab "Java" %}}
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="PHP" %}
+{{% tab "PHP" %}}
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}

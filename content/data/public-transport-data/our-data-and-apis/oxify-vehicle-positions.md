@@ -45,7 +45,7 @@ will always be UTC.
 
 This is a sample message:
 
-```text
+```xml
 $GPRMC,142937,A,5948.7028,N,01307.9771,E,49.53,349.7,101212,1.8,E*3A,,1421.trains.se,,8955.public.trains.se@2012-12-10;8957.public.trains.se@2012-12-10,oxyfi
 ```
 
@@ -93,7 +93,7 @@ In order to receive updates, you need to subscribe to the websocket steam.
 
 `wss://api.oxyfi.com/trainpos/listen?v=1&key=YOUR-KEY-HERE`
 
-{% tabs %} {% tab title="Python 3" %}
+{{% tabs %}} {{% tab "Python 3" %}}
 
 ```python
 #Uses https://github.com/websocket-client/websocket-client
@@ -106,9 +106,9 @@ ws = websocket.WebSocketApp("wss://api.oxyfi.com/trainpos/listen?v=1&key=YOUR-KE
 ws.run_forever()
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="NodeJS" %}
+{{% tab "NodeJS" %}}
 
 ```javascript
 // Uses https://github.com/websockets/ws
@@ -117,7 +117,7 @@ const ws = new WebSocket('wss://api.oxyfi.com/trainpos/listen?v=1&key=YOUR-KEY-H
 ws.on('message', function incoming(data) { console.log(data); })
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}
 
 ### Usage
 

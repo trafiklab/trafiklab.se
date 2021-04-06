@@ -75,7 +75,7 @@ The following excerpt gives some example values for the different fields.
 
 {% code title="agency.txt" %}
 
-```text
+```xml
 agency_id,agency_name,agency_url,agency_timezone,agency_lang
 141010000000001418,Västtrafik,https://www.resrobot.se/,Europe/Stockholm,sv
 141010000000001001,Västtrafik Göteborgsområdet AB Lokaltrafik AB,https://www.resrobot.se/,Europe/Stockholm,sv
@@ -111,7 +111,7 @@ The following excerpt shows some example values.
 
 {% code title="routes.txt" %}
 
-```text
+```xml
 route_id,agency_id,route_short_name,route_long_name,route_type
 9011014280200000,141010000000001418,302,,717
 9011014374100000,141010000000001418,420,,717
@@ -136,7 +136,7 @@ Always** | Identifies a set of dates when service is available for one or more r
 
 The following excerpt shows what a trips.txt file can look like:
 
-```text
+```xml
 route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
 9011014255000000,1,141010000961947846,,0,1
 9011014255000000,1,141010000961947902,,0,1
@@ -319,7 +319,7 @@ efficient way \(for example by caching data, not reading the entire file into me
 
 The following excerpt shows some stop\_times from a GTFS Regional feed.
 
-```text
+```xml
 trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type,drop_off_type,shape_dist_traveled,timepoint
 141010000961947846,08:30:00,08:30:00,9022014017767002,1,Borås,3,1,0,1
 141010000961947846,08:32:00,08:32:00,9022014017513002,2,Borås,3,3,794,1
@@ -353,7 +353,7 @@ Station** \(`location_type=1`\): this field must be empty. • **Entrance/exit**
 \(`location_type=3`\): the `parent_station` field contains the ID of a station \(`location_type=1`\) | | `platform_code`
 | Text | GTFS Regional only | Platform identifier for a platform stop \(a stop belonging to a station\). |
 
-```text
+```xml
 stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,platform_code
 9021014016110000,BruksvÃ¤gen,57.828220,12.014754,1,,
 9021014016113000,IdrottsvÃ¤gen,57.837484,12.014661,1,,
@@ -382,7 +382,7 @@ Always** | End service day for the service interval. This service day is include
 {% hint style="info" %} Trafiklab feeds use the calendar.txt file to define the periods during which lines are
 operated/valid. The actual operating days are defined in calendar\_dates.txt. {% endhint %}
 
-```text
+```xml
 service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
 1,0,0,0,0,0,0,0,20200221,20200612
 2,0,0,0,0,0,0,0,20200222,20200613
@@ -447,7 +447,7 @@ service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,e
   </tbody>
 </table>
 
-```text
+```xml
 service_id,date,exception_type
 1,20200221,1
 1,20200224,1
@@ -518,7 +518,7 @@ service_id,date,exception_type
   </tbody>
 </table>
 
-```text
+```xml
 shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
 1,57.927181,12.529311,1,0
 1,57.927172,12.529295,2,0
@@ -620,7 +620,7 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
   </tbody>
 </table>
 
-```text
+```xml
 from_stop_id,to_stop_id,transfer_type,min_transfer_time,from_trip_id,to_trip_id
 9022014061616002,9022014061616002,1,,141010000981658971,141010000967489295
 9022014080420002,9022014080420002,1,,141010000981659030,141010000981658971

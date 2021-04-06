@@ -41,7 +41,7 @@ This example call retrieves all routes from Stockholm Central Station \(74000000
 
 ### Call
 
-```text
+```xml
 https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&passlist=true&showPassingPoints=true&key=API_KEY
 ```
 
@@ -50,7 +50,7 @@ https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&
 {% hint style="info" %} Note that an actual response contains more entries and stops - we removed some from this example
 response since it's only meant to show the structure of the response. {% endhint %}
 
-{% tabs %} {% tab title="Json" %}
+{{% tabs %}} {{% tab "Json" %}}
 
 ```javascript
 {
@@ -283,11 +283,11 @@ response since it's only meant to show the structure of the response. {% endhint
 }
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Xml" %}
+{{% tab "Xml" %}}
 
-```markup
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <TripList scrB="1|OB|MTµ11µ9501µ9341µ9763µ9851µ0µ0µ66133µ9322µ1µ-2147483616µ0µ1µ2|PDHµ60b11222cb3bfeafacd1e38613ce2846|RDµ2062020|RTµ112220" scrF="1|OF|MTµ11µ9741µ9741µ10003µ10003µ0µ0µ2613µ9631µ8µ-2147482606µ0µ1µ2|PDHµ60b11222cb3bfeafacd1e38613ce2846|RDµ2062020|RTµ112220" xmlns="hafas_rest_v1">
     <Trip idx="0" ctxRecon="T$A=1@O=Stockholm Centralstation@L=740000001@a=128@$A=1@O=Norrköping Centralstation@L=740000007@a=128@$202006021141$202006021326$JRE  231$$1$§T$A=1@O=Norrköping Centralstation@L=740000007@a=128@$A=1@O=Mjölby station@L=740000180@a=128@$202006021348$202006021435$JLT 8739$$1$§T$A=1@O=Mjölby station@L=740000180@a=128@$A=1@O=Tranås station@L=740000041@a=128@$202006021447$202006021508$JLT18839$$1$§T$A=1@O=Tranås station@L=740000041@a=128@$A=1@O=Nässjö Centralstation@L=740000140@a=128@$202006021614$202006021641$JLT27621$$1$§T$A=1@O=Nässjö Centralstation@L=740000140@a=128@$A=1@O=Alvesta station@L=740000004@a=128@$202006021701$202006021753$JLT17619$$1$§T$A=1@O=Alvesta station@L=740000004@a=128@$A=1@O=Malmö Centralstation@L=740000003@a=128@$202006021833$202006022011$JRE 1101$$1$" tripId="C-0" duration="PT8H30M">
@@ -490,4 +490,4 @@ response since it's only meant to show the structure of the response. {% endhint
 </TripList>
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}

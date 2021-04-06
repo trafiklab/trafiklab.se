@@ -30,7 +30,7 @@ URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency\_stops.txt**](
 This file contains a mapping between the operators' local IDs and the national ids \(rikshållplatser\). For example, the
 following mapping means that operator `275` uses the id `41063` for the stop with national id `740066331` .
 
-```text
+```xml
 agency_id,stop_id,agency_stop_id
 275,740066331,41063
 ```
@@ -38,7 +38,7 @@ agency_id,stop_id,agency_stop_id
 In the GTFS `agency.txt` file, we find that agency\_id 275 corresponds to SL. In other words, SL uses id `41063` for the
 stop with national id `740066331` .
 
-```text
+```xml
 agency_id,stop_id,agency_stop_id
 275,SL,http://www.sl.se,Europe/Stockholm,sv
 ```

@@ -17,5 +17,4 @@ users get a choice in how they consume public transport data. Whether you want t
 or smartphone, or talk to a smart speaker in order to know when your train leaves: we're enabling it.
 
 ## New to Trafiklab? Get started here!
-
-{% page-ref page="an-introduction-to-trafiklab/using-trafiklab/" %}
+[Using Trafiklab.se]({{< ref "an-introduction-to-trafiklab/using-trafiklab/" >}} "Using Trafiklab.se")

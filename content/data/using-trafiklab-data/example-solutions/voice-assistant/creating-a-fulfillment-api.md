@@ -25,9 +25,9 @@ In order to be able to code a fulfillment application, we need to know the reque
 format. [This format is explained fully on the dialogflow website](https://dialogflow.com/docs/fulfillment/how-it-works)
 . You can find an example Dialogflow request and response in the V2 format below.
 
-{% tabs %} {% tab title="Request" %} Headers:
+{{% tabs %}} {{% tab "Request" %}} Headers:
 
-```text
+```xml
  POST https://my-service.com/action
 
  Headers:
@@ -78,9 +78,9 @@ Request Body:
  }
 ```
 
-{% endtab %}
+{{% /tab %}}
 
-{% tab title="Response" %} Response body:
+{{% tab "Response" %}} Response body:
 
 ```javascript
 {
@@ -163,7 +163,7 @@ optional when you just want to have a voice response. A simple response could lo
 }
 ```
 
-{% endtab %} {% endtabs %}
+{{% /tab %}} {{% /tabs %}}
 
 More details on setting up fulfillment using Firebase, Google cloud, or using NodeJS libraries can be found
 in [the dialogflow docs](https://dialogflow.com/docs/fulfillment/configure). If you want more information on specific
