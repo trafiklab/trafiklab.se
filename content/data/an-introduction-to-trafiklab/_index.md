@@ -1,5 +1,3 @@
 ---
-title: An introduction to Trafiklab
-headless: true
-weight: 1
+title: An introduction to Trafiklab headless: true weight: 10
 ---
