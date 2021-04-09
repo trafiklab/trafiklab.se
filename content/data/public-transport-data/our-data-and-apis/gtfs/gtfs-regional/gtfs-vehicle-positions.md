@@ -1,3 +1,0 @@
----
-title: GTFS Vehicle positions
----
