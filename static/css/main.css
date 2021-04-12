@@ -855,6 +855,28 @@ body #footer .footer-logo img {
   cursor: default;
 }
 
+ul.dropdown-list a {
+  padding-left: 3.5rem;
+}
+ul.dropdown-list .dropdown-list a {
+  padding-left: 4.5rem;
+}
+
+.tl-side-navigation__item a.dropdown {
+  display: flex;
+}
+.tl-side-navigation__item a.dropdown .dropdown-toggle {
+  align-items: center;
+  margin-left: auto;
+  background: url("../icons/RightArrow.svg") no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.tl-side-navigation__item a.dropdown .dropdown-toggle.active {
+  background: url("../icons/DownArrow.svg") no-repeat;
+}
+
 @media screen and (min-width: 800px) {
   .type-data .page {
     margin: 7rem 5vw 10rem 23rem;

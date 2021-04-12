@@ -87,6 +87,32 @@
   background-color: $light-bg;
   cursor: default;
 }
+ul.dropdown-list {
+  a {
+    padding-left: 3.5rem;
+  }
+  .dropdown-list {
+    a {
+      padding-left: 4.5rem;
+    }
+  }
+}
+.tl-side-navigation__item {
+  a.dropdown {
+    display: flex;
+    .dropdown-toggle {
+      align-items: center;
+      margin-left: auto;
+      background: url('../icons/RightArrow.svg') no-repeat;
+      display: block;
+      width: 20px;
+      height: 20px;
+      &.active {
+        background: url('../icons/DownArrow.svg') no-repeat;
+      }
+    }
+  }
+}
 
 // Content
 @media screen and (min-width: 800px){

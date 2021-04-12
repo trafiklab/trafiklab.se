@@ -20,6 +20,7 @@
 var input = $("input.fuzzy-search");
 
 $(input).keyup(function() {
+  $('.dropdown-list').show();
   var searchTerms = $(this).val();
 
   $('.tl-side-navigation li').each(function() {
@@ -29,6 +30,9 @@ $(input).keyup(function() {
         $(this).toggle(hasMatch);
 
   });
+});
+$(input).blur(function() {
+  $('.dropdown-list').hide();
 });
 </script>
 <script type="text/javascript">
@@ -118,5 +122,13 @@ function addCopyButtonToDom(button, highlightDiv) {
 
 document.querySelectorAll(".highlight")
   .forEach(highlightDiv => createCopyButton(highlightDiv));
+</script>
+<script type="text/javascript">
+$('.dropdown-list').hide();
+$('.dropdown-toggle').click(function(e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+  $(this).parent().parent().find('> .dropdown-list').slideToggle();
+});
 </script>
 {{- end -}}
