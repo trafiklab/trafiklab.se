@@ -2,6 +2,7 @@
 title: "Operator data in GTFS Regional"
 date: "2021-03-01"
 layout: info
+image: /images/news/train-unsplash.jpg
 ---
 
 # Operator data in GTFS Regional Static
