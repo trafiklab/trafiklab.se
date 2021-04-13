@@ -1,5 +1,6 @@
 ---
-title: GTFS Regional layout: "single"
+title: GTFS Regional
+layout: "single"
 ---
 
 {% hint style="info" %} For technical details about HTTP headers and URLs, please use the OpenAPI Specification
@@ -36,7 +37,7 @@ The following table shows which operators
 | Hallandstrafiken (Hallands län)| ✅ | 🚫 | 🚫 | 🚫 |
 | JLT (Jönköpings län)| ✅ | 🚫 | 🚫 | 🚫 |
 | Kalmar länstrafik (Kalmar län)| ✅ | ✅ | ✅ | 🚫 |
-| Kronobergs länstrafik (Kronobergs län)| ✅ | 🚫 | 🚫 | 🚫 |	
+| Kronobergs länstrafik (Kronobergs län)| ✅ | 🚫 | 🚫 | 🚫 |
 | LTR (Jämtlands län)| ✅ | 🚫 | 🚫 | 🚫 |
 | Länstrafiken Norrbotten| ✅ | 🚫 | 🚫 | 🚫 |
 | Länstrafiken Västerbotten| ✅ | 🚫 | 🚫 | 🚫 |

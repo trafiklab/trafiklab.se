@@ -1,5 +1,6 @@
 ---
-title: Our Data and APIs layout: "single"
+title: Our Data and APIs
+layout: "single"
 weight: 20
 ---
 

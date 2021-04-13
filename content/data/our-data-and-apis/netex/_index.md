@@ -1,5 +1,6 @@
 ---
-title: NeTEx Regional layout: "single"
+title: NeTEx Regional
+layout: "single"
 ---
 
 {% hint style="info" %}For technical details about HTTP headers and URLs, please use the OpenAPI Specification.{%
