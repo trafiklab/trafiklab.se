@@ -1,5 +1,16 @@
 // Base class styling. Credits to entur.no.
 
+html {
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 50rem) {
+  html {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 // Main
 #main-content {
   padding-top: 6rem;
@@ -101,7 +112,7 @@
 }
 .article-preview-card {
   background: #fff;
-  height: 100%;
+  // height: 100%;
   width: 100%;
 }
 
@@ -394,6 +405,15 @@ a.tl-media-card__text {
     line-height: 2.25rem;
   }
 }
+.tl-h1--margin-bottom,
+.tl-h2--margin-bottom,
+.tl-h3--margin-bottom,
+.tl-h4--margin-bottom,
+.tl-h5--margin-bottom,
+.tl-h6--margin-bottom,
+.tl-paragraph--margin-bottom {
+    margin-top: 0;
+}
 
 .tl-label {
   font-size: .875rem;
@@ -428,7 +448,7 @@ a.tl-media-card__text {
   }
 }
 .blogpost-overview__image {
-    width: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 50rem) {
   .blogpost-overview__image {
@@ -436,7 +456,7 @@ a.tl-media-card__text {
     width: 22rem;
   }
 }
-.omtl-blogpost-overview__information {
+.blogpost-overview__information {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -444,11 +464,14 @@ a.tl-media-card__text {
   padding-top: 1.5rem;
 }
 @media screen and (min-width: 50rem) {
-  .omtl-blogpost-overview__information {
+  .blogpost-overview__information {
     padding-top: 0;
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+.blogpost-overview__description {
+
 }
 
 // About

@@ -53,8 +53,8 @@
         </div>
 
         <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
+          <h2 class="tl-h2">News</h2>
           <div class="tl-grid tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
-            <h2 class="tl-h2">News</h2>
             {{ range ( where .Site.RegularPages "Type" "news" | first 3 ) }}
               <div class="tl-grid tl-grid__item tl-grid--small-12">
                 <a class="tl-base-card tl-navigation-card tl-base-card--red-line tl-navigation-card--compact" href="{{ .Permalink }}">
