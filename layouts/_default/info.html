@@ -8,25 +8,28 @@
     {{ $directory := trim .File.Dir "/" }}
     {{ $headless := .Site.GetPage "/headless" }}
     {{ $infoBlocks := $headless.Resources.Match (print $directory "*") }}
-    <h2 class="tl-h2">Kontakt</h2>
-    <div class="tl-grid tl-grid__container tl-grid--spacing-extraLarge">
-      {{ range $infoBlocks }}
-        <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
-          <div class="omtl-people-presenter omtur-people-presenter--vertical">
-            <div class="omtl-people-presenter__container">
-              {{ if .Params.Image }}
-                <div class="omtl-people-presenter__image">
-                  <img src="{{ .Params.Image }}">
+    {{ if $infoBlocks }}
+      {{ $title := (index $infoBlocks 0) }}
+      <h2 class="tl-h2">{{ $title.Params.Heading }}</h2>
+      <div class="tl-grid tl-grid__container tl-grid--spacing-extraLarge">
+        {{ range $infoBlocks }}
+          <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
+            <div class="omtl-people-presenter omtur-people-presenter--vertical">
+              <div class="omtl-people-presenter__container">
+                {{ if .Params.Image }}
+                  <div class="omtl-people-presenter__image">
+                    <img src="{{ .Params.Image }}">
+                  </div>
+                {{ end }}
+                <div class="omtl-people-presenter__info">
+                  <h3>{{ .Title }}</h3>
+                  {{ .Content }}
                 </div>
-              {{ end }}
-              <div class="omtl-people-presenter__info">
-                <h3>{{ .Title }}</h3>
-                {{ .Content }}
               </div>
             </div>
           </div>
-        </div>
-      {{ end }}
-    </div>
+        {{ end }}
+      </div>
+    {{ end }}
   </aside>
 {{ end }}
