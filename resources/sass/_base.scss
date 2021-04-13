@@ -518,3 +518,27 @@ a.tl-media-card__text {
     line-height: 3rem;
   }
 }
+
+// Table
+table {
+  border-collapse: collapse;
+  width: 100%;
+  thead {
+    border-bottom: .125rem solid $light-border-grey;
+    th {
+      color: $grey-font;
+      font-size: .875rem;
+      font-weight: 500;
+      text-align: left;
+      height: 3.75rem;
+      padding: 1rem 1.5rem;
+    }
+  }
+  tbody tr {
+    border-bottom: .125rem solid $light-border-grey;
+    td {
+      height: 3.75rem;
+      padding: 1rem 1.5rem;
+    }
+  }
+}
