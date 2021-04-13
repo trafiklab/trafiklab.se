@@ -24,7 +24,7 @@
                 {{- range $i, $e := .Data.Pages -}}
                   <li class="tl-side-navigation__item">
                     {{ if .Data }}
-                      <a class="tl-side-navigation__click-target child-title dropdown" href="{{ .Permalink }}">
+                      <a class="tl-side-navigation__click-target child-title dropdown{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">
                         <span class="title">{{ .Title }}</span>
                         <span class="dropdown-toggle"></span>
                       </a>
@@ -32,7 +32,7 @@
                         {{- range $i, $e := .Data.Pages -}}
                           <li class="tl-side-navigation__item">
                             {{ if .Data }}
-                              <a class="tl-side-navigation__click-target child-title dropdown" href="{{ .Permalink }}">
+                              <a class="tl-side-navigation__click-target child-title dropdown{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">
                                 <span class="title">{{ .Title }}</span>
                                 <span class="dropdown-toggle"></span>
                               </a>
