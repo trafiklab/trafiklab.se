@@ -14,53 +14,51 @@
         {{ $currentPage := . }}
       </div>
       <ul class="tl-side-navigation tl-side-navigation--small list">
-        {{ if not (eq $currentPage.RelPermalink "/data/") }}
-          <li class="tl-side-navigation__item">
-            <a class="tl-side-navigation__click-target{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}} title" href="{{ .Permalink }}">{{ .Title }}</a>
-          </li>
-        {{ end }}
-        {{- range $i, $e := .Data.Pages -}}
+        {{- range $i, $e := (where .Site.Pages "Section" "data") -}}
           <li class="tl-side-navigation__item">
             {{ if .Page.Params.headless }}
               <div class="tl-side-navigation__click-target tl-side-navigation-group">{{ .Title }}</div>
-            {{ else }}
-              <a class="tl-side-navigation__click-target{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}} title" href="{{ .Permalink }}">{{ .Title }}</a>
             {{ end }}
-            <ul class="tl-side-navigation tl-side-navigation--small">
-              {{- range $i, $e := .Data.Pages -}}
-                <li class="tl-side-navigation__item">
-                  {{ if .Data }}
-                    <a class="tl-side-navigation__click-target child-title dropdown" href="{{ .Permalink }}">
-                      <span class="title">{{ .Title }}</span>
-                      <span class="dropdown-toggle"></span>
-                    </a>
-                    <ul class="tl-side-navigation tl-side-navigation--small dropdown-list">
-                      {{- range $i, $e := .Data.Pages -}}
-                        <li class="tl-side-navigation__item">
-                          {{ if .Data }}
-                            <a class="tl-side-navigation__click-target child-title dropdown" href="{{ .Permalink }}">
-                              <span class="title">{{ .Title }}</span>
-                              <span class="dropdown-toggle"></span>
-                            </a>
-                            <ul class="tl-side-navigation tl-side-navigation--small dropdown-list">
-                              {{- range $i, $e := .Data.Pages -}}
-                                <li class="tl-side-navigation__item">
-                                  <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
-                                </li>
-                              {{- end -}}
-                            </ul>
-                          {{ else }}
-                            <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
-                          {{ end }}
-                        </li>
-                      {{- end -}}
-                    </ul>
-                  {{ else }}
-                    <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
-                  {{ end }}
-                </li>
-              {{- end -}}
-            </ul>
+            {{ if not .Page.Params.menu }}
+              <ul class="tl-side-navigation tl-side-navigation--small">
+                {{- range $i, $e := .Data.Pages -}}
+                  <li class="tl-side-navigation__item">
+                    {{ if .Data }}
+                      <a class="tl-side-navigation__click-target child-title dropdown" href="{{ .Permalink }}">
+                        <span class="title">{{ .Title }}</span>
+                        <span class="dropdown-toggle"></span>
+                      </a>
+                      <ul class="tl-side-navigation tl-side-navigation--small dropdown-list">
+                        {{- range $i, $e := .Data.Pages -}}
+                          <li class="tl-side-navigation__item">
+                            {{ if .Data }}
+                              <a class="tl-side-navigation__click-target child-title dropdown" href="{{ .Permalink }}">
+                                <span class="title">{{ .Title }}</span>
+                                <span class="dropdown-toggle"></span>
+                              </a>
+                              <ul class="tl-side-navigation tl-side-navigation--small dropdown-list">
+                                {{- range $i, $e := .Data.Pages -}}
+                                  <li class="tl-side-navigation__item">
+                                    <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                                  </li>
+                                {{- end -}}
+                              </ul>
+                            {{ else }}
+                              <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                            {{ end }}
+                          </li>
+                        {{- end -}}
+                      </ul>
+                    {{ else }}
+                      {{ $hierarchy := split .Page.File.Dir "/" }}
+                      {{ if not (index $hierarchy 2) }}
+                        <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                      {{ end }}
+                    {{ end }}
+                  </li>
+                {{- end -}}
+              </ul>
+            {{ end }}
           </li>
         {{- end -}}
       </ul>
