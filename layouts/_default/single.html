@@ -126,6 +126,7 @@ document.querySelectorAll(".highlight")
 <script type="text/javascript">
 $('.dropdown-list').hide();
 $('.tl-side-navigation__click-target--active').parents('.dropdown-list').show();
+$('.tl-side-navigation__click-target--active').siblings('.dropdown-list').show();
 $('.dropdown-toggle').click(function(e) {
   e.preventDefault();
   $(this).toggleClass('active');
