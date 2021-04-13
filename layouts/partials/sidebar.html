@@ -39,12 +39,12 @@
                               <ul class="tl-side-navigation tl-side-navigation--small dropdown-list">
                                 {{- range $i, $e := .Data.Pages -}}
                                   <li class="tl-side-navigation__item">
-                                    <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                                    <a class="tl-side-navigation__click-target child-title{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">{{ .Title }}</a>
                                   </li>
                                 {{- end -}}
                               </ul>
                             {{ else }}
-                              <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                              <a class="tl-side-navigation__click-target child-title{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">{{ .Title }}</a>
                             {{ end }}
                           </li>
                         {{- end -}}
@@ -52,7 +52,7 @@
                     {{ else }}
                       {{ $hierarchy := split .Page.File.Dir "/" }}
                       {{ if not (index $hierarchy 2) }}
-                        <a class="tl-side-navigation__click-target child-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                        <a class="tl-side-navigation__click-target child-title{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">{{ .Title }}</a>
                       {{ end }}
                     {{ end }}
                   </li>
