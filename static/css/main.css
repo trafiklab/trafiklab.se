@@ -285,10 +285,41 @@ html {
   font-weight: 600;
   margin: 0.5rem 0 1rem;
 }
+.tl-navigation-card .tl-navigation-card__title:after {
+  content: "";
+  display: block;
+  bottom: 1rem;
+  height: 0.1875rem;
+  width: 2rem;
+  margin: 0 auto;
+  opacity: var(--show-active-line);
+  background: #9b26b6;
+  transition: width 0.2s ease-in-out;
+}
+.tl-navigation-card:hover {
+  transform: scale(1.05);
+}
+.tl-navigation-card:hover .tl-navigation-card__title:after {
+  width: 4rem;
+}
 
 .article-preview-card {
   background: #fff;
   width: 100%;
+}
+
+.tl-card-list {
+  box-shadow: 0 0.125rem 0.1875rem 0 rgba(0, 0, 0, 0.25);
+  border: 0.0625rem solid #e9e9e9;
+  border-radius: 0.25rem;
+}
+.tl-card-list .tl-card-list__item {
+  display: block;
+  margin: 1rem 2rem;
+  text-decoration: none;
+}
+.tl-card-list .tl-card-list__item .list-item-title {
+  font-weight: 600;
 }
 
 .tl-media-card {
@@ -516,9 +547,19 @@ a.tl-media-card__text {
   position: relative;
   margin-bottom: 1.5rem;
 }
+.header-section.section-contrast {
+  position: relative;
+}
+.header-section.section-contrast p {
+  max-width: 60%;
+}
 .header-section.section-contrast:before {
   content: "";
-  background-color: #232323;
+  background: #232323;
+  background: -moz-linear-gradient(0deg, rgba(35, 35, 35, 0.7581407563) 0%, #232323 50%, #232323 100%);
+  background: -webkit-linear-gradient(0deg, rgba(35, 35, 35, 0.7581407563) 0%, #232323 50%, #232323 100%);
+  background: linear-gradient(0deg, rgba(35, 35, 35, 0.7581407563) 0%, #232323 50%, #232323 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232323",endColorstr="#232323",GradientType=1);
   position: absolute;
   height: 13rem;
   z-index: -1;
@@ -531,6 +572,17 @@ a.tl-media-card__text {
     margin: 0 -2000px;
     padding: 0 2000px;
   }
+}
+.header-section.section-contrast:after {
+  content: "";
+  position: absolute;
+  bottom: -65px;
+  background: url(../images/tl-illustration.svg) no-repeat bottom right;
+  display: block;
+  background-size: 400px;
+  width: 400px;
+  height: 230px;
+  right: 0;
 }
 .header-section .header-container {
   color: #fff;

@@ -21,7 +21,6 @@
               </div>
               <span class="tl-navigation-card__title">{{ .Title }}</span>
               <div class="tl-paragraph tl-paragraph--margin-bottom">{{ .Content }}</div>
-              <div class="tl-button">{{ .Params.Cta }}</div>
             </a>
           </div>
         {{ end }}
@@ -54,17 +53,15 @@
 
         <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
           <h2 class="tl-h2">News</h2>
-          <div class="tl-grid tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
+          <div class="tl-card-list">
             {{ range ( where .Site.RegularPages "Type" "news" | first 3 ) }}
-              <div class="tl-grid tl-grid__item tl-grid--small-12">
-                <a class="tl-base-card tl-navigation-card tl-base-card--red-line tl-navigation-card--compact" href="{{ .Permalink }}">
-                  <span class="tl-navigation-card__title">{{ .Title }}</span>
-                  <div class="tl-paragraph tl-paragraph--margin-bottom">{{ slicestr .Summary 0 200 | markdownify }} ...</div>
-                  <svg class="tl-icon tl-navigattion-card__icon tl-navigation-card__arrow-icon" viewBox="0 0 16 16" width="1em" height="1em" color="currentColor">
-                    <path fill="currentColor" fill-rule="evenodd" d="M10.043 2.76l-.943.943 3.625 3.623H1V8.66l11.726-.001L9.1 12.284l.943.943 4.762-4.762a.667.667 0 00.07-.86l-.07-.083-4.762-4.762z" clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-              </div>
+              <a class="tl-card-list__item" href="{{ .Permalink }}">
+                <h3 class="list-item-title">{{ .Title }}</h3>
+                <div class="tl-paragraph tl-paragraph--margin-bottom">{{ slicestr .Summary 0 200 | markdownify }} ...</div>
+                <svg class="tl-icon tl-navigattion-card__icon tl-navigation-card__arrow-icon" viewBox="0 0 16 16" width="1em" height="1em" color="currentColor">
+                  <path fill="currentColor" fill-rule="evenodd" d="M10.043 2.76l-.943.943 3.625 3.623H1V8.66l11.726-.001L9.1 12.284l.943.943 4.762-4.762a.667.667 0 00.07-.86l-.07-.083-4.762-4.762z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
             {{end}}
           </div>
         </div>
