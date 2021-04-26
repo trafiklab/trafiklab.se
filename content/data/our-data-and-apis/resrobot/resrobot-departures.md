@@ -2,8 +2,8 @@
 title: ResRobot Timetables
 ---
 
-{% hint style="info" %} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {% endhint %}
+{{% note %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
+Specification available on our developer portal. {{% /note %}}
 
 ## What does this API provide?
 
@@ -63,8 +63,8 @@ https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
 
 För en exakt teknisk beskrivning av varje fält i svaret hanvisar vi till vår OpenAPI dokumentation.
 
-{% hint style="info" %} Note that an actual response contains more entries and stops - we removed some from this example
-response since it's only meant to show the structure of the response. {% endhint %}
+{{% note %}} Note that an actual response contains more entries and stops - we removed some from this example
+response since it's only meant to show the structure of the response. {{% /note %}}
 
 {{% tabs %}} {{% tab "Json" %}}
 
