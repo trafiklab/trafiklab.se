@@ -1017,7 +1017,8 @@ input {
   z-index: 0;
 }
 .highlight pre {
-  overflow: auto;
+  max-height: 800px;
+  overflow: scroll;
 }
 
 .copy-code-button {
@@ -1067,26 +1068,33 @@ input {
 .admonition .content {
   margin-top: 0.75rem;
 }
+.admonition svg {
+  height: 20px;
+  width: 20px;
+}
 
 .tip {
-  border-color: #f277c6;
+  background-color: #d9f3cb;
+  border-color: #58c11d;
 }
 .tip svg {
-  color: #f277c6;
+  color: #58c11d;
 }
 
 .warning {
-  border-color: #9b26b6;
+  background-color: #fbdae6;
+  border-color: #b33261;
 }
 .warning svg {
-  color: #9b26b6;
+  color: #b33261;
 }
 
 .note {
-  border-color: #232323;
+  background-color: #d8eefd;
+  border-color: #2e8fce;
 }
 .note svg {
-  color: #232323;
+  color: #2e8fce;
 }
 
 #body .nav-tabs {

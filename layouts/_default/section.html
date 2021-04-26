@@ -14,7 +14,9 @@
       {{ range .Pages }}
         <a class="tl-base-card blogpost-overview__link" title="{{ .Title }}" href="{{ .Permalink }}">
           <div class="blogpost-overview__post">
-            <img src="{{ .Params.Image }}" class="blogpost-overview__image">
+            {{ if .Params.Image }}
+              <img src="{{ .Params.Image }}" class="blogpost-overview__image">
+            {{ end }}
             <div class="blogpost-overview__information">
               <div>
                 <h3 class="tl-h3 tl-h3--margin-bottom blogpost-overview__title">{{ .Title }}</h3>
