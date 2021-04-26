@@ -254,11 +254,16 @@ input {
 // Admonition
 .admonition {
   background-color: $light-bg;
-  border-left: 10px solid transparent;
-  padding: 15px;
+  display: flex;
   margin-bottom: 21px;
+  .admonition-icon {
+    padding: .75rem;
+    svg {
+      color: #fff;
+    }
+  }
   .content {
-    margin-top: .75rem;
+    margin: .75rem;
   }
   svg {
     height: 20px;
@@ -267,22 +272,19 @@ input {
 }
 .tip {
   background-color: #d9f3cb;
-  border-color: #58c11d;
-  svg {
-    color: #58c11d;
+  .admonition-icon {
+    background-color: #58c11d;
   }
 }
 .warning {
   background-color: #fbdae6;
-  border-color: #b33261;
-  svg {
-    color: #b33261;
+  .admonition-icon {
+    background-color: #b33261;
   }
 }
 .note {
   background-color: #d8eefd;
-  border-color: #2e8fce;
-  svg {
-    color: #2e8fce;
+  .admonition-icon {
+    background-color: #2e8fce;
   }
 }

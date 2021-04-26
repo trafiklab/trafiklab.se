@@ -323,6 +323,9 @@ a.tl-media-card__text {
     z-index: 40;
   }
 }
+div.tl-top-navigation-item {
+  padding: 1rem;
+}
 .tl-top-navigation-item {
   --show-active-line: 0;
   display: inline-block;
@@ -330,7 +333,6 @@ a.tl-media-card__text {
   color: inherit;
   text-decoration: none;
   position: relative;
-  padding: 1rem;
   min-width: 5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -410,6 +412,9 @@ a.tl-media-card__text {
   }
   .header-container {
     color: #fff;
+    margin: auto;
+    max-width: 86rem;
+    padding: 5em 1.5rem .5rem;
   }
 }
 @media screen and (min-width: 50rem) {

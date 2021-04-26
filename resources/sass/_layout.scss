@@ -22,7 +22,7 @@
 #page-container {
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 @media screen and (min-width: 50rem) {
   .main-content-wrapper {
