@@ -108,10 +108,10 @@ needed to decode the file\). Note that these schemes are not meant as a specific
 as a specification for the serialisation and deserialisation. If you are looking for the GTFS-RT specification \(not the
 protobuf scheme\), you can find it [here](https://developers.google.com/transit/gtfs-realtime).
 
-{% hint style="info" %} The GTFS Realtime protobuf scheme can be found
+{{% info %}} The GTFS Realtime protobuf scheme can be found
 here: [https://developers.google.com/transit/gtfs-realtime/gtfs-realtime-proto](https://developers.google.com/transit/gtfs-realtime/gtfs-realtime-proto)
 \([direct download](https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto)\)
-{% endhint %}
+{{% /info %}}
 
 ### Decoding a protobuf file
 

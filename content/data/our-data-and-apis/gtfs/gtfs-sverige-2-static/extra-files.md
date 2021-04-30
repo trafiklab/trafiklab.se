@@ -2,8 +2,8 @@
 title: Extra files
 ---
 
-{% hint style="info" %} For technical details about HTTP headers, URLs, and response structures, please use the Open-API
-Specification available on our developer portal. {% endhint %}
+{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the Open-API
+Specification available on our developer portal. {{% /info %}}
 
 Extra files are files which provide additional information about the information in the GTFS files. They are not part of
 the GTFS standard, but contain the information which is needed to link the GTFS files to internal operator systems, or
@@ -45,10 +45,10 @@ agency_id,stop_id,agency_stop_id
 
 One or more operators have a local id for each national id. Not every local id corresponds to a national id.
 
-{% hint style="info" %} The local stop id for SL \(id 275, Stockholms Lokaltrafik\) is used by SL for _Stop-Area_. You
+{{% info %}} The local stop id for SL \(id 275, Stockholms Lokaltrafik\) is used by SL for _Stop-Area_. You
 can use SLs API [SL Hållplatser och Linjer 2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2/dokumentation) to
 translate it to a SiteID used in other SL APIs**.**
-{% endhint %}
+{{% /info %}}
 
 ### **agency\_stops\_&lt;AGENCY\_ID&gt;.txt**
 

@@ -33,9 +33,9 @@ data.
 | Getting a list of all public transport stop-areas for an operator or a country | Projects where large files \(&gt;25MB\) can't be used |
 | Getting the live position of all public transport vehicles |  |
 
-{% hint style="info" %} There are hundreds of libraries, examples and demos for GTFS. You can find some
+{{% info %}} There are hundreds of libraries, examples and demos for GTFS. You can find some
 at [https://github.com/andredarcie/awesome-gtfs](https://github.com/andredarcie/awesome-gtfs)
-and [https://github.com/CUTR-at-USF/awesome-transit](https://github.com/CUTR-at-USF/awesome-transit). {% endhint %}
+and [https://github.com/CUTR-at-USF/awesome-transit](https://github.com/CUTR-at-USF/awesome-transit). {{% /info %}}
 
 ## GTFS at Trafiklab
 

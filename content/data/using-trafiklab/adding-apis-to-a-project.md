@@ -13,8 +13,8 @@ the "profile and projects" page, choosethe project you want to edit and click on
 Now choose "Redigera" in the navigation bar. This will bring up the edit interface. Now you can select all apis you want
 to add and press "save". The newly added APIs will now show up on the project page.
 
-{% hint style="warning" %} You can see a warning when saving a project that contains deprecated APIs. Continue reading
-to learn how to resolve this. {% endhint %}
+{{% warning %}}  You can see a warning when saving a project that contains deprecated APIs. Continue reading
+to learn how to resolve this.  {{% /warning %}}
 
 ### Saving a project that contains deprecated APIs
 

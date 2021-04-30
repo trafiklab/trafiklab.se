@@ -5,13 +5,13 @@ weight: 10
 ---
 Creating an account on Trafiklab is required in order to create projects and API keys.
 
-{% hint style="danger" %} Disable browser plugins like Google Translate when creating an account. They are known to
-cause issues when logging in, creating accounts and creating projects. {% endhint %}
+{{% warning %}}  Disable browser plugins like Google Translate when creating an account. They are known to
+cause issues when logging in, creating accounts and creating projects.  {{% /warning %}}
 
 To start, go [the account creation page](https://www.trafiklab.se/user/register).
 
-{% hint style="info" %} You can also register and login through Github. In order to do so, just click the "Sign up using
-Github" button. {% endhint %}
+{{% info %}}  You can also register and login through Github. In order to do so, just click the "Sign up using
+Github" button.  {{% /info %}}
 
 You need to fill in a valid mail address and username. This email address will be used to contact you if we make changes
 to an API you are using. Your email address will never be made public.

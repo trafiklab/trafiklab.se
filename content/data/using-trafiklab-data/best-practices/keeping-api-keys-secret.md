@@ -5,9 +5,9 @@ title: Keeping API keys secret
 Your API keys are personal, and you should try to keep them secret. You shouldn't try hard, but just, you know, don't
 post them in plain text on the internet.
 
-{% hint style="danger" %} Others using your API key might lead to your API key hitting its quota. We cannot reset your
+{{% warning %}} Others using your API key might lead to your API key hitting its quota. We cannot reset your
 API usage for this, and will not upgrade your key for this. If your key is being abused, assigning a new API key will
-not fix these issues either, unless you take measures to prevent abuse. {% endhint %}
+not fix these issues either, unless you take measures to prevent abuse. {{% /warning %}}
 
 While you should keep the above disclaimer in mind, you can relax a bit as we do not know of any cases in where keys got
 abused. You can find some tips on handling your API keys below.

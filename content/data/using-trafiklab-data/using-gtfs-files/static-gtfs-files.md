@@ -8,9 +8,9 @@ A GTFS File is a zip file containing multiple text files. Every text file contai
 \(stops, routes, ...\) as comma-separated values. These files can be compared to a table in a database, with _foreign
 keys_ linking these files together.
 
-{% hint style="info" %} A GTFS archive forms a database-like structure with every file as one table, and you can import
+{{% info %}} A GTFS archive forms a database-like structure with every file as one table, and you can import
 these CSV files directly into a new database to run queries on them. One example is
-the [csv2db ](https://csv2db.github.io/)tool, but there are many other ways to achieve this. {% endhint %}
+the [csv2db ](https://csv2db.github.io/)tool, but there are many other ways to achieve this. {{% /info %}}
 
 The GTFS standard defines files which must be present in the dataset, and files which are optional. In this guide we
 will only discuss the files which are present in the Trafiklab datasets.
@@ -24,7 +24,7 @@ optionally required, or optional. The diagram above shows which fields are used 
 always present in a file are marked in bold. The tables marked in green are required by the GTFS standard, the blue ones
 are optional files used in the Trafiklab data.
 
-{% hint style="warning" %} GTFS Sverige 2 does not contain a shapes.txt file {% endhint %}
+{{% warning %}} GTFS Sverige 2 does not contain a shapes.txt file {{% /warning %}}
 
 ### How it's linked together
 
@@ -35,30 +35,30 @@ A certain "path" on which public transport vehicles travel, is called a **route*
 is provided by a public transport **agency** \(defined in agencies.txt\), and can be serviced one or more times in a
 day. Every **trip** on a route is defined in the trips.txt file.
 
-{% hint style="info" %}
+{{% info %}}
 **Example**: Let's say there is a route "Stockholm - Skövde - Göteborg". There is a train leaving stockholm at 10:00,
-12:00, and 16:00. In this case, we have one route with three trips on that route. {% endhint %}
+12:00, and 16:00. In this case, we have one route with three trips on that route. {{% /info %}}
 
 The stops which are made during a trip are defined as **stop times** in stop\_times.txt. A **stop time** does not
 contain information about the stop itself: it only links a **trip** to a **stop**, and includes some additional
 information such as the time of arrival and departure. Stops itself are defined in the stops.txt file, including
 information such as their name, location, entrances, ... .
 
-{% hint style="warning" %} Different trips on the same route might make use of different stops. {% endhint %}
+{{% warning %}} Different trips on the same route might make use of different stops. {{% /warning %}}
 
-{% hint style="info" %}
+{{% info %}}
 **Example**: Let's say there is a trip on the route "Stockholm - Skövde - Göteborg" leaving at 10:00. The GTFS file
-would contain the trip, 3 stops, and 3 stop\_times to link the stops to the trip. {% endhint %}
+would contain the trip, 3 stops, and 3 stop\_times to link the stops to the trip. {{% /info %}}
 
 ## What does each GTFS file contain
 
-{% hint style="warning" %} The content below is based on the official GTFS Specification, developed by the GTFS
+{{% warning %}} The content below is based on the official GTFS Specification, developed by the GTFS
 community and published
 at [https://developers.google.com/transit/gtfs/reference/](https://developers.google.com/transit/gtfs/reference/).
 
 We modified the version below to describe the feeds published by Trafiklab. Fields and files that are not included in
 any Trafiklab feed are not described below. For the latest version or in case of conflict, refer to the official
-documentation. {% endhint %}
+documentation. {{% /warning %}}
 
 ### agency.txt
 
@@ -144,8 +144,8 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
 9011014255000000,1,141010000961948014,,0,1
 ```
 
-{% hint style="info" %} This example doesn't include a headsign, which means descriptions must be obtained from a higher
-lever \(route\) or lower level \(stop time\). {% endhint %}
+{{% info %}} This example doesn't include a headsign, which means descriptions must be obtained from a higher
+lever \(route\) or lower level \(stop time\). {{% /info %}}
 
 ### stop\_times.txt
 
@@ -313,9 +313,9 @@ A stop time is a certain trip picking up or dropping of passengers at a certain 
   </tbody>
 </table>
 
-{% hint style="warning" %} Stop\_times.txt is usually the largest file in a GTFS feed. Depending on the hardware and
+{{% warning %}} Stop\_times.txt is usually the largest file in a GTFS feed. Depending on the hardware and
 programming language, it can be computationally intensive to read all the data. Make sure you read this file in an
-efficient way \(for example by caching data, not reading the entire file into memory, ...\). {% endhint %}
+efficient way \(for example by caching data, not reading the entire file into memory, ...\). {{% /warning %}}
 
 The following excerpt shows some stop\_times from a GTFS Regional feed.
 
@@ -379,8 +379,8 @@ Always** | Indicates whether the service operates on all Mondays in the date ran
 | `end_date` | Date | **
 Always** | End service day for the service interval. This service day is included in the interval. |
 
-{% hint style="info" %} Trafiklab feeds use the calendar.txt file to define the periods during which lines are
-operated/valid. The actual operating days are defined in calendar\_dates.txt. {% endhint %}
+{{% info %}} Trafiklab feeds use the calendar.txt file to define the periods during which lines are
+operated/valid. The actual operating days are defined in calendar\_dates.txt. {{% /info %}}
 
 ```xml
 service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date

@@ -4,8 +4,8 @@ title: Obtaining stop ids
 
 ### ResRobot and GTFS Sverige 2
 
-{% hint style="info" %} ResRobot and GTFS Sverige 2 use the same ids for stops. You can combine them however you want.
-{% endhint %}
+{{% info %}} ResRobot and GTFS Sverige 2 use the same ids for stops. You can combine them however you want.
+{{% /info %}}
 
 When you want to specify a station by its id, you will need at least one of the following:
 
@@ -31,5 +31,5 @@ If you want to find the nearest stations using an API, you can use Resrobot När
 GTFS Regional does not share stop ids with any other dataset. You can find the stop id for an operator's stop in the
 stops.txt file of that operator's GTFS Regional feed.
 
-{% hint style="warning" %} Different operators use different ids for the same stop. This means that, for example,
-Stockholm Centralen has different ids in SJ's, SL's and UL's GTFS Regional feed. {% endhint %}
+{{% warning %}} Different operators use different ids for the same stop. This means that, for example,
+Stockholm Centralen has different ids in SJ's, SL's and UL's GTFS Regional feed. {{% /warning %}}

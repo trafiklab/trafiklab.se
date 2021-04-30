@@ -13,12 +13,12 @@ ResRobot is an API which provides information for public transport in entire Swe
 | Mobile applications | Building your own route-planner algorithm |
 | Websites |  |
 
-{% hint style="warning" %} SL's APIs only offer data for SL's traffic. [ResRobot ](../resrobot/)offers the same data for
-entire Sweden. {% endhint %}
+{{% warning %}} SL's APIs only offer data for SL's traffic. [ResRobot ](../resrobot/)offers the same data for
+entire Sweden. {{% /warning %}}
 
 {% page-ref page="../resrobot/" %}
 
-{% hint style="info" %} If you want to do analytics, or if your service will have more than a million active users, we
-recommend using GTFS and hosting your own API based on that data. {% endhint %}
+{{% info %}} If you want to do analytics, or if your service will have more than a million active users, we
+recommend using GTFS and hosting your own API based on that data. {{% /info %}}
 
 {% page-ref page="../gtfs/gtfs-regional/" %}

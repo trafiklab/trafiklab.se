@@ -6,8 +6,8 @@ Our departures/arrivals APIs are commonly used for digital signage, both in publ
 malls, appartment blocks, ...\) and private spaces \(magic mirror, hobby projects, ...\). Since every API call incurrs
 costs for the provider \(Trafiklab, SL, ...\), we encourage people to use them in an efficient way.
 
-{% hint style="info" %} We want you to use data, we like it when you use our data, but we do not want to needlessly "
-waste" computing resources. {% endhint %}
+{{% info %}} We want you to use data, we like it when you use our data, but we do not want to needlessly "
+waste" computing resources. {{% /info %}}
 
 Generally, our policy is to limit private projects \(which affect 5 or less persons\) to the bronze, 10,000 requests per
 month level. We believe this is enough for the usual hobby projects such as a smart mirror, a computer widget, ... . Of
@@ -36,7 +36,7 @@ This solution will use about 7600 requests per month, which is well under the ma
 days per month = 322 requests per day, and will thus work perfectly. There is even a margin of 70 requests per day,
 which can be used to update the data even more during certain intervals.
 
-{% hint style="info" %} Updating data every 2 or 5 minutes doesnt mean your "bus leaves in 5 minutes" data will be wrong
+{{% info %}} Updating data every 2 or 5 minutes doesn't mean your "bus leaves in 5 minutes" data will be wrong
 after one minute. We strongly recommend that you generate these  "in ... minutes" texts on the client side, based on the
 timestamp included in the API responses. This way you can update the user interface every 10 seconds while only updating
-the data every 2 minutes. {% endhint %}
+the data every 2 minutes. {{% /info %}}

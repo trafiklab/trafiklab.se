@@ -3,8 +3,8 @@ title: GTFS Sverige 2
 layout: "single"
 ---
 
-{% hint style="info" %} For technical details about HTTP headers and URLs, please use the OpenAPI Specification
-available on our developer portal. {% endhint %}
+{{% info %}} For technical details about HTTP headers and URLs, please use the OpenAPI Specification
+available on our developer portal. {{% /info %}}
 
 ### What does this dataset contains?
 

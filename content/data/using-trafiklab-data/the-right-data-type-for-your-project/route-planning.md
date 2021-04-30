@@ -14,8 +14,8 @@ you don't need to worry about servers or algorithms. Your app can make requests 
 possibility to specify the origin and destination, transport modes, time of departure/arrival, ... . You typically make
 no more than one API call every few seconds.
 
-{% hint style="info" %} If you're building an application specifically for Stockholms Länstrafik, you can use SLs APIs
-instead of ResRobot. They have the same features, and might offer slightly more detailed data. {% endhint %}
+{{% info %}} If you're building an application specifically for Stockholms Länstrafik, you can use SLs APIs
+instead of ResRobot. They have the same features, and might offer slightly more detailed data. {{% /info %}}
 
 #### Searching for routes
 
@@ -27,9 +27,9 @@ When it comes to specifying the origin, destination, and possible vias, there ar
 the station ids, or you can use coordinates. While using coordinates has the benefit of seeing the walk to and from the
 first and last stop, these queries tend to be a bit slower.
 
-{% hint style="warning" %} Coordinates are personal data, and you should obtain permission from users before sending
+{{% warning %}} Coordinates are personal data, and you should obtain permission from users before sending
 their position to an API. The use of this data should be described in your app or websites privacy policy, in accordance
-to the GDPR. {% endhint %}
+to the GDPR. {{% /warning %}}
 
 #### Searching for stations
 

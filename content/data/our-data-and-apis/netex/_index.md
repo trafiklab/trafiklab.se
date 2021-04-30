@@ -3,8 +3,7 @@ title: NeTEx Regional
 layout: "single"
 ---
 
-{% hint style="info" %}For technical details about HTTP headers and URLs, please use the OpenAPI Specification.{%
-endhint %}
+{{% info %}} For technical details about HTTP headers and URLs, please use the OpenAPI Specification.{{% /info %}}
 
 ## What does this dataset contains?
 

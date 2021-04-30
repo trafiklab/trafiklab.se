@@ -2,8 +2,8 @@
 title: ResRobot Stop lookup
 ---
 
-{% hint style="info" %} For technical details about HTTP headers, URLs, and response structures, please use the Open-API
-Specification available on our developer portal. {% endhint %}
+{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the Open-API
+Specification available on our developer portal. {{% /info %}}
 
 ## What does this API provide?
 
@@ -33,10 +33,10 @@ ResRobot Stop lookup takes the search string and the wanted number of results as
 matching stations with their location, name and id. Users can choose between exact matching and approximate matching by
 adding a question mark to the end of the search string.
 
-{% hint style="info" %} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS
+{{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS
 Sverige 2. This way you can provide autocomplete and other search functions without internet access. It will make your
 application more responsive and more reliable as you don't have to wait for API responses.
-See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {% endhint %}
+See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
 
 ## Example calls
 
@@ -95,10 +95,10 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&key=API_KEY
 
 {{% /tab %}} {{% /tabs %}}
 
-{% hint style="info" %} All-caps stations, like GÖTEBORG in the example above, are virtual stations. These are a group
+{{% info %}} All-caps stations, like GÖTEBORG in the example above, are virtual stations. These are a group
 of stations, for example to group stops which are close to eachother or to group several stops serving the same area.
 This is especially useful for people who are not familiar with the environment. Instead of having to choose between
-several stops which they don't know, they can simply search for trips to "Göteborg". {% endhint %}
+several stops which they don't know, they can simply search for trips to "Göteborg". {{% /info %}}
 
 ### Fuzzy search
 

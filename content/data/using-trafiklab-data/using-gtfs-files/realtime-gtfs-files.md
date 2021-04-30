@@ -2,13 +2,13 @@
 title: Realtime GTFS files
 ---
 
-{% hint style="info" %} We will only discuss the general working and contents of GTFS Realtime feeds. You can find the
+{{% info %}} We will only discuss the general working and contents of GTFS Realtime feeds. You can find the
 complete technical specification
-at [https://developers.google.com/transit/gtfs-realtime/](https://developers.google.com/transit/gtfs-realtime/). {%
-endhint %}
+at [https://developers.google.com/transit/gtfs-realtime/](https://developers.google.com/transit/gtfs-realtime/). {{%
+info %}}
 
-{% hint style="danger" %} GTFS Realtime communicates deviations from the data in the static GTFS file. You need both in
-order to create realtime timetables. {% endhint %}
+{{% warning %}} GTFS Realtime communicates deviations from the data in the static GTFS file. You need both in
+order to create realtime timetables. {{% /warning %}}
 
 The GTFS Realtime standard uses the protobuf format to transfer compact messages which describe deviations between the
 real world and the schedules for a public transport network. There are 3 different feeds, each of which provides their

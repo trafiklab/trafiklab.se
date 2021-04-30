@@ -10,9 +10,9 @@ started with both.
 
 {% page-ref page="realtime-gtfs-files.md" %}
 
-{% hint style="info" %} You can find the complete GTFS reference
+{{% info %}} You can find the complete GTFS reference
 at [https://developers.google.com/transit/gtfs/reference/](https://developers.google.com/transit/gtfs/reference/).
 
 You can find the complete GTFS-RT reference
 at [https://developers.google.com/transit/gtfs-realtime/reference](https://developers.google.com/transit/gtfs-realtime/reference)
-{% endhint %}
+{{% /info %}}

@@ -2,8 +2,8 @@
 title: "Getting API keys"
 weight: 3
 ---
-{% hint style="success" %} You need an account and project in order to retrieve API keys. Haven't created an account
-yet? [Get started here](creating-an-account.md). {% endhint %}
+{{% success %}}  You need an account and project in order to retrieve API keys. Haven't created an account
+yet? [Get started here](creating-an-account.md).  {{% /success %}}
 
 After creating a project, the last thing which is left is to retrieve API keys for your projects. In order to do this,
 head to your personal page, by hovering over your profile name in the top-right corner. Alternatively, you can follow

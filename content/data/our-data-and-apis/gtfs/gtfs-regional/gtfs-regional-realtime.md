@@ -2,8 +2,8 @@
 title: Realtime data
 ---
 
-{% hint style="info" %} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {% endhint %}
+{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
+Specification available on our developer portal. {{% /info %}}
 
 ## Retrieving real-time data
 
@@ -22,10 +22,9 @@ using [Trip updates](gtfs-regional-realtime.md#tripupdates).
 See [the table on the GTFS Regional overview page](./#which-operators-are-covered-by-this-dataset) to find out which
 operators are supported \(Realtime data column\).
 
-{% hint style="info" %} ServiceAlerts can remain unchanged for relatively long periods \(for example a couple of
+{{% info %}} ServiceAlerts can remain unchanged for relatively long periods \(for example a couple of
 hours\). You can prevent unnecessary downloads by making use
-of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/conditional-get-requests.md). {% endhint
-%}
+of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/conditional-get-requests.md). {{% info %}}
 
 ### TripUpdates
 
@@ -34,8 +33,8 @@ estimated delay for each vehicle on each stop.
 See [the table on the GTFS Regional overview page](./#which-operators-are-covered-by-this-dataset) to find out which
 operators are supported \(Real-time data column\).
 
-{% hint style="warning" %} In some cases it isn't possible to link certain delays to a specific trip. In this case, they
-may be linked to a route instead. {% endhint %}
+{{% warning %}} In some cases it isn't possible to link certain delays to a specific trip. In this case, they
+may be linked to a route instead. {{% /warning %}}
 
 ### VehiclePositions
 

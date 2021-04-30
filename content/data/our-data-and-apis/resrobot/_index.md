@@ -25,8 +25,8 @@ a lot of data from a lot of vehicles is needed.
 | Mobile applications | Building your own route-planner algorithm |
 | Websites and widgets |  |
 
-{% hint style="warning" %} If you want to do analytics, or if your service will have more than a million active users,
+{{% warning %}} If you want to do analytics, or if your service will have more than a million active users,
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a
-million API calls. {% endhint %}
+million API calls. {{% /warning %}}
 
 {% page-ref page="../gtfs/" %}

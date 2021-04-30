@@ -3,10 +3,10 @@ title: Getting started
 description: Getting started with Trafiklab 
 weight: 1
 ---
-{{% tip %}}
+{{% info %}}
 New to trafiklab? Start reading here and continue to the next pages using the buttons at the
 bottom.
-{{% /tip %}}
+{{% /info %}}
 
 All the data on Trafiklab is provided free of charge to anyone who is interested. However, most of the APIs which we
 provide cost us money, and therefore we need to keep control over the number of requests to each service.
