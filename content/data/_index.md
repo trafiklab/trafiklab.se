@@ -1,11 +1,11 @@
 ---
-title: "Our data"
+title: "Data"
 menu: "main"
 weight: 1
 layout: "single"
 ---
 
-# Introduction
+## Introduction
 
 Data is worthless when it's not being used. And using data is hard when there is no documentation, or when it is
 needlessly complicated. That's why we set out to document everything that can be done or found on Trafiklab. Everything
