@@ -47,5 +47,5 @@ build:
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: hugo server -D -E -F --renderToDisk -d public
+  instant_preview_command: hugo server -D -E -F --renderToDisk -d public --config=config/config.toml
 version: 0.81.0
