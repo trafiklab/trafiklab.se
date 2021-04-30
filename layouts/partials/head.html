@@ -8,4 +8,5 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<link rel="stylesheet" type="text/css" media="screen" href="{{ relURL "/css/main.css" }}" />
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}" />
