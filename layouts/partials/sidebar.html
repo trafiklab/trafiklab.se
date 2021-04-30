@@ -13,9 +13,10 @@
         </div>
         {{ $currentPage := . }}
       </div>
+      {{ $root := .Site.GetPage "data" }}
       <ul class="tl-side-navigation tl-side-navigation--small list">
-        {{- range $i, $e := (where .Site.Pages "Section" "data") -}}
-          <li class="tl-side-navigation__item">
+        {{- range $i, $e := $root.Pages -}}
+        <li class="tl-side-navigation__item">
             {{ if .Page.Params.headless }}
               <div class="tl-side-navigation__click-target tl-side-navigation-group">{{ .Title }}</div>
             {{ end }}
