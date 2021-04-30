@@ -14,7 +14,7 @@ Besides storing the message for future use the server customizes messages on the
 information and passes them on to subscribers. One such subscriber is the WebSocket API service.
 
 The Trainpos API is one such subscriber. It subscribes on messages that contains the _NMEA version 2.2_ specification of
-the _$GPRMC_ sentence tagged with vehicleId and train number \(tågnummer\), both public and internal train numbers.
+the _$GPRMC_ sentence tagged with vehicleId and train number (tågnummer), both public and internal train numbers.
 
 VehicleId is a unique number assigned to every train-set or carriage in Sweden, this number is typically written on the
 vehicle and is never changed. The train number on the other hand identifies a specific route, the train number is
@@ -67,15 +67,15 @@ $GPRMC,142937,A,5948.7028,N,01307.9771,E,49.53,349.7,101212,1.8,E*3A,,1421.train
 | 12 | E | Magnetic deviation direction, E for east of the meridian 0° and W for west |
 | 13 | \*3A | The checksum data, always begins with \* |
 | 14 | n/a | Not used |
-| 15 | 1421.trains.se | Identifies the vehicle, 1421 in this case \(Värmlandstrafik\) |
+| 15 | 1421.trains.se | Identifies the vehicle, 1421 in this case (Värmlandstrafik) |
 | 16 | n/a | Not used |
 | 17 | 8955.public.trains.se@2012-12-10; 8957.public.trains.se@2012-12-10 | Train numbers concatenated with semicolon if more than one is present. See more details about how this string is built up in section "A Note on Train Numbers". |
 | 18 | oxyfi | Data origin |
 
 #### **A Note on Train Numbers**
 
-A train-set or carriage may carry more than one train number at a time, each being either announced \(public\) or
-technical \(internal\). The string in the message field that carries train number is therefore built up like
+A train-set or carriage may carry more than one train number at a time, each being either announced (public) or
+technical (internal). The string in the message field that carries train number is therefore built up like
 domain-names concatenated together with semicolon. For instance, train number 8955 is the announced train number and
 thus “tagged” with public resulting in 8955.public.trains.se. If there had been a corresponding technical only train
 number too, say 8845, that would have resulted in the following string 8955.public.trains.se;8845.internal.trains.se.

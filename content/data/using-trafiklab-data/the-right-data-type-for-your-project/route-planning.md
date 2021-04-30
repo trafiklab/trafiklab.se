@@ -42,7 +42,7 @@ read about the different methods to obtain an id for the ResRobot routeplanning.
 
 If you need more than one API call every few seconds, for example when you're creating statistics or an isochrome map,
 you will need to run your own API. This has the advantage that you can make as much requests as you want. In order to
-run your own API, you can \(for example\)
+run your own API, you can (for example)
 use [the open-source OpenTripPlanner](https://github.com/opentripplanner/OpenTripPlanner/) in combination with
 our [GTFS Sverige 2](../../public-transport-data/our-data-and-apis/gtfs/gtfs-sverige-2-static/)
 or [GTFS Regional](../../public-transport-data/our-data-and-apis/gtfs/gtfs-regional/) datasets.

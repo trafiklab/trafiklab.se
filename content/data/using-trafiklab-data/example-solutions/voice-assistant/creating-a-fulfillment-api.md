@@ -14,7 +14,7 @@ the intent which was used and the parameters which were extracted is sent as JSO
 application now needs to process this data and formulate a response, which will then be passed back to the digital
 assistant. You can see the entire process in the image below.
 
-![The complete data flow to](../../../.gitbook/assets/image-1.png)
+![The complete data flow](/media/2020/05/voice-bot-architecture.png)
 
 In order to enable fulfillment, head over to the fulfillment page on DialogFlow by clicking _fulfillment_ in the left
 sidebar. Switch the slider to enabled, and enter the address of your server app here. You can also use the inline editor
@@ -37,7 +37,7 @@ format. [This format is explained fully on the dialogflow website](https://dialo
 
 Request Body:
 
-```javascript
+```json
  {
    "responseId": "ea3d77e8-ae27-41a4-9e1d-174bd461b68c",
    "session": "projects/your-agents-project-id/agent/sessions/88d13aa8-2999-4f71-b233-39cbf3a824a0",
@@ -82,7 +82,7 @@ Request Body:
 
 {{% tab "Response" %}} Response body:
 
-```javascript
+```json
 {
   "fulfillmentText": "This is a text response",
   "fulfillmentMessages": [
@@ -143,7 +143,7 @@ Request Body:
 These are samples containing a lot of fields. _FulfillmentMessages_, _outputContexts_ and _followupEventInput_ are
 optional when you just want to have a voice response. A simple response could look like this:
 
-```javascript
+```json
 {
   "fulfillmentText": "This is a text response",
   "payload": {
@@ -203,5 +203,3 @@ the [GTFS Sverige 2](../../../public-transport-data/our-data-and-apis/gtfs/gtfs-
 find the stop id for a given name on your own server without any API,
 or [SL's hallplatser-och-linjer-2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2) dataset to do the same for
 SL.
-
-###  

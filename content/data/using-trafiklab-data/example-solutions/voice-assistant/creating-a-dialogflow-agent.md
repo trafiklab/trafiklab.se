@@ -4,18 +4,18 @@ title: Creating a DialogFlow agent
 
 ## I'm sorry, could you repeat that?
 
-Language is hard. The first challenge when creating a \(voice\) assistant is understanding users, by both recognizing _
+Language is hard. The first challenge when creating a (voice) assistant is understanding users, by both recognizing _
 what they say_, and figuring out _what they mean_. Luckily we don't need to solve this problem entirely by ourselves.
 There are already platforms available which take care of the speech recognition and the natural language processing
-\(NLP\). Examples are Dialogflow \(Google\), Lex \(Amazon\), Bot Framework \(Microsoft Azure\), Snips, ...
+(NLP). Examples are Dialogflow (Google), Lex (Amazon), Bot Framework (Microsoft Azure), Snips, ...
 
 Today we will explore Dialogflow, a service through which anyone can create apps on the Google Home platform, and with
 little extra effort on other platforms as well. Other frameworks might have small differences in naming, but generally
 have the same structure.
 
 Head over to [the dialogflow website](https://dialogflow.com/) and sign in through a Google account. This Google account
-can be used later on to test on your device \(you can add additional testing accounts as well\). Create a new _agent_
-\(this is what an 'app' is called\) by filling in the name, and possibly changing the language. You can add other
+can be used later on to test on your device (you can add additional testing accounts as well). Create a new _agent_
+(this is what an 'app' is called) by filling in the name, and possibly changing the language. You can add other
 languages to your _agent_ later on.
 
 There are 3 core concepts needed to build our app.
@@ -58,14 +58,14 @@ While there is a wide range of built-in entities, we can also create our own. We
 transport. The advantage in doing this is that there will be less errors in the user input, and our application will
 receive one of our given possibilities as transport mode. We create our own transport-method entity, and accept bus,
 tram, train, metro and ferry. We enter some synonyms for each method, to ensure we understand our user well, but
-dialogflow will internally replace the synonym with the reference value \( bus, tram, train, metro or ferry\) when
+dialogflow will internally replace the synonym with the reference value ( bus, tram, train, metro or ferry) when
 storing it in a variable. This means our own little server application which will deliver the data doesn't need to think
 about synonyms.
 
 **Important:** When adding a new language for your _agent_, you will need to create the entity again. In this case, use
 the same reference values but use translated synonyms.
 
-![Our own DialogFlow entity](../../../.gitbook/assets/image%20%286%29.png)
+![Our own DialogFlow entity](/media/2020/05/voice-bot-transport-methods.png)
 
 We now change our transportation method in our intent from `@sys.any` to `@transportation-method` to make use of our
 newly created entity. Previously, when the user said "When does the next train in Stockholm leave", the voice assistant

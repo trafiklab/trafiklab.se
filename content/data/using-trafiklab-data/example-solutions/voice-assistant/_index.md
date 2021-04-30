@@ -12,6 +12,6 @@ station by letting you shout at your Google Home, Echo Speaker, or your phone to
 leave. Today we will create our own voice assistant app to provide us with real-time transport data through Google
 Assistant.
 
-Example code is written in PHP, but any language works. All frameworks are free. No \(credit\) card is required for
+Example code is written in PHP, but any language works. All frameworks are free. No (credit) card is required for
 sign-up. You can create everything yourself based on this tutorial, or you can choose to import the dialogflow agent
 and/or our server implementation.

@@ -26,11 +26,11 @@ their own API keys.
 Well, they likely need to have the API key on board, and there's nothing wrong with that. Just include them in your app
 or program if needed.
 
-## I'm running my own \(proxy-\)server
+## I'm running my own (proxy-)server
 
 You might be running your own server, to transform API data, to add more data, or for any other reason. In this case,
 you might want to limit your server so only your own app can use it. Again, you shouldn't be aiming to build something
 similar to the Great Firewall of China around your server. You can simply validate the user-agent to check if it matches
 your app, or use rate-limiting to block others from scraping your API. The easiest solution to prevent others from
-trying to use your server is of course to open-source it, allowing anyone to run their own instances \(but we understand
-that this isn't always possible\).
+trying to use your server is of course to open-source it, allowing anyone to run their own instances (but we understand
+that this isn't always possible).

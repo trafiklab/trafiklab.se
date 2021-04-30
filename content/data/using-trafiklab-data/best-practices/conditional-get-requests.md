@@ -4,7 +4,7 @@ title: Conditional GET requests
 
 Conditional requests are a part of the HTTP specification. They define a condition, determining when the server should
 send a response. They can define the condition that the resource must have been modified since a given timestamp
-\(if-modified-since\) or that the resource should not match with a given checksum \(if-none-match\). If the client has
+(if-modified-since) or that the resource should not match with a given checksum (if-none-match). If the client has
 the latest, actual data, the if-none-match or if-modified-since validation will fail, and a 304 response is sent,
 telling the client there is no new data is available. If new data is available, a 200 response is sent, including the
 new data.
@@ -20,10 +20,10 @@ other methods, the request will be processed only if the eventually existing
 resource's [`ETag`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) doesn't match any of the values
 listed.
 
-When the condition fails \(when the file has not been changed\)
+When the condition fails (when the file has not been changed)
 for [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
 and [`HEAD`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD) methods, then the server must return HTTP
-status code 304 \(Not Modified\).
+status code 304 (Not Modified).
 
 The comparison with the stored [`ETag`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) uses the _weak
 comparison algorithm_, meaning two files can be considered identical if the content is equivalent — they don't have to

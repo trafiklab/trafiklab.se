@@ -29,14 +29,14 @@ use of them without prior warning.
 | :--- | :--- | :--- |
 | 101  | High Speed Rail Service | X2000 |
 | 102  | Long Distance Rail Service | Mälartåg |
-| 105 | Sleeper Rail Service | Night train \(Nattåg\) |
-| 106 | Regional Rail Service | Commuter trains \(Pendeltåg\) |
+| 105 | Sleeper Rail Service | Night train (Nattåg) |
+| 106 | Regional Rail Service | Commuter trains (Pendeltåg) |
 | 401 | Metro Service | Tunnelbanan Stockholm |
 | 700 | Bus Service |  |
 | 702 | Express Bus Service |  |
 | 900 | Tram Service | Trams in Göteborg |
 | 1000 | Water Transport Service | SL Pendelbåt, Stockholm-Helsinki |
-| 1501 | Communal Taxi Service | Buses with advance order conditions \(Förbeställningstrafik\) |
+| 1501 | Communal Taxi Service | Buses with advance order conditions (Förbeställningstrafik) |
 
 A complete list of all route types can be found
 at [https://developers.google.com/transit/gtfs/reference/extended-route-types](https://developers.google.com/transit/gtfs/reference/extended-route-types)

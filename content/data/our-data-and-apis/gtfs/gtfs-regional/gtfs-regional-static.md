@@ -30,7 +30,7 @@ use of them without prior warning.
 | 100 | Railway Service |  |
 | 401 | Metro Service |  |
 | 700 | Bus Service |  |
-| 717 | Share Taxi Service | Advance order traffic \(Förbeställningstrafik\) |
+| 717 | Share Taxi Service | Advance order traffic (Förbeställningstrafik) |
 | 900 | Tram Service |  |
 | 1000 | Water Transport Service | Ferry, pendelbåt |
 

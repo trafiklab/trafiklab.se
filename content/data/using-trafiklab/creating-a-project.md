@@ -15,9 +15,9 @@ profil och project". Hit the purple "Skapa nytt project" and fill in a cool name
 After entering a name, you can select which APIs you want to use. Don't worry if you're still unsure about which ones
 you need - [you can change this and other settings later](). Projects which will be included get marked in purple.
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![The API picking screen](/media/2020/05/project-pick-apis.png)
 
 Enter a short description and some tags for your project, so others can easily find it. Thereafter, you can press the
-save button \("spara"\) to create your project.
+save button ("spara") to create your project.
 
 {{% info %}}  Only projects with the "lanserat" status are publicly visible.  {{% /info %}}

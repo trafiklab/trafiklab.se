@@ -13,7 +13,7 @@ to [a zip file](https://raw.githubusercontent.com/trafiklab/google-assistant-dem
 In order to do this, head over to [the dialogflow console](https://console.dialogflow.com) and create a new agent first.
 After creating a new agent, you click the gear wheal in the top left, next to your agent name.
 
-![Locating the DialogFlow project settings](../../../.gitbook/assets/image-5.png)
+![Locating the DialogFlow project settings](/media/2020/05/voice-bot-settings.png)
 
 After going to the settings, choose the Export and Import tab. Choose Restore from zip to clone the project from the zip
 file. Once your project has been restored, you will still need to update the fulfillment settings to point to your own

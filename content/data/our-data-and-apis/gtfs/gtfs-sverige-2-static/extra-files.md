@@ -20,14 +20,14 @@ feed has been updated before downloading it.
 
 URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trafikverket\_stops.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trafikverket_stops.txt)
 
-This file contains a mapping between national stop IDs \(rikshållplatser\) and Trafikverkets signatures. For example,
+This file contains a mapping between national stop IDs (rikshållplatser) and Trafikverkets signatures. For example,
 CST -&gt; 740000001. Only for train stations.
 
 ### **agency\_stops.txt**
 
 URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency\_stops.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency_stops.txt)
 
-This file contains a mapping between the operators' local IDs and the national ids \(rikshållplatser\). For example, the
+This file contains a mapping between the operators' local IDs and the national ids (rikshållplatser). For example, the
 following mapping means that operator `275` uses the id `41063` for the stop with national id `740066331` .
 
 ```xml
@@ -45,7 +45,7 @@ agency_id,stop_id,agency_stop_id
 
 One or more operators have a local id for each national id. Not every local id corresponds to a national id.
 
-{{% info %}} The local stop id for SL \(id 275, Stockholms Lokaltrafik\) is used by SL for _Stop-Area_. You
+{{% info %}} The local stop id for SL (id 275, Stockholms Lokaltrafik) is used by SL for _Stop-Area_. You
 can use SLs API [SL Hållplatser och Linjer 2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2/dokumentation) to
 translate it to a SiteID used in other SL APIs**.**
 {{% /info %}}
@@ -71,4 +71,4 @@ URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trips\_technical.txt*
 This file contains a mapping between trip ids and their corresponding technical trip numbers. The technical trip number
 is unique for a route in an agency. In other words, the combination of the 3 values agency\_id, technical\_route\_number
 and technical\_trip\_number is unique. Train numbers always have their train number as technical trip number, even if
-the train has a public line number \(for example Pendeltåg 40 i Stockholm\)
+the train has a public line number (for example Pendeltåg 40 i Stockholm)

@@ -7,7 +7,7 @@ weight: 40
 cause issues when logging in, creating accounts and creating projects. {{% /warning %}}
 
 When you want to add more APIs to an existing project, you need to head edit the project first. This can be done by
-heading to your "profile and projects" page \(found in the dropdown from your username in the top-right corner\). From
+heading to your "profile and projects" page (found in the dropdown from your username in the top-right corner). From
 the "profile and projects" page, choosethe project you want to edit and click on its name.
 
 Now choose "Redigera" in the navigation bar. This will bring up the edit interface. Now you can select all apis you want
@@ -20,7 +20,7 @@ to learn how to resolve this.  {{% /warning %}}
 
 When editing an existing project, you might be confronted with a warning when you save.
 
-![The warning which is shown when your project contains deprecated APIs](../../.gitbook/assets/image%20%2816%29.png)
+![The warning which is shown when your project contains deprecated APIs](/media/2020/05/remove-old-keys.png)
 
 This means you still have an old API in your project, while the API has been shut down. In this case you will be forced
 to remove the old API and its associated keys. Press the "Delete keys" button and save the project to make it "normal"

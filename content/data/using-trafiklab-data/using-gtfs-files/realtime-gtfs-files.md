@@ -19,7 +19,7 @@ own type of information.
 ServiceAlerts provide information about incidents, planned maintainance, ... which affect more than one or a couple of
 trips. They can describe a closed station, incidents like electricity failures or defect trains, extra services for
 certain events, ... . They typically contain similar information as the messages shown on digital signs in stations.
-Usually a header, description and link are provided, along with a cause and an effect \(provided as an enum\). Service
+Usually a header, description and link are provided, along with a cause and an effect (provided as an enum). Service
 alerts can be limited in time or to certain agencies, trips, stops, transport types, ...
 
 ## TripUpdates

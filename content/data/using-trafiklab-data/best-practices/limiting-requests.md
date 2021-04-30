@@ -2,14 +2,14 @@
 title: Limiting requests
 ---
 
-Our departures/arrivals APIs are commonly used for digital signage, both in public spaces \(digital signage in stores,
-malls, appartment blocks, ...\) and private spaces \(magic mirror, hobby projects, ...\). Since every API call incurrs
-costs for the provider \(Trafiklab, SL, ...\), we encourage people to use them in an efficient way.
+Our departures/arrivals APIs are commonly used for digital signage, both in public spaces (digital signage in stores,
+malls, appartment blocks, ...) and private spaces (magic mirror, hobby projects, ...). Since every API call incurrs
+costs for the provider (Trafiklab, SL, ...), we encourage people to use them in an efficient way.
 
 {{% info %}} We want you to use data, we like it when you use our data, but we do not want to needlessly "
 waste" computing resources. {{% /info %}}
 
-Generally, our policy is to limit private projects \(which affect 5 or less persons\) to the bronze, 10,000 requests per
+Generally, our policy is to limit private projects (which affect 5 or less persons) to the bronze, 10,000 requests per
 month level. We believe this is enough for the usual hobby projects such as a smart mirror, a computer widget, ... . Of
 course, if you have a private project that requires more requests, feel free to reach out to us, but please read the
 hints below first.

@@ -36,8 +36,8 @@ including a bit of information about each vehicle, such as where it is heading o
 
 ## Example call
 
-This example call retrieves all routes from Stockholm Central Station \(740000001\) to Malmö Central Station
-\(740000003\), departing right now \(since no specific time or date is specified in the call\).
+This example call retrieves all routes from Stockholm Central Station (740000001) to Malmö Central Station
+(740000003), departing right now (since no specific time or date is specified in the call).
 
 ### Call
 

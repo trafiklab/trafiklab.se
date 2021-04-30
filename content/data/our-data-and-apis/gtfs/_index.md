@@ -12,12 +12,12 @@ the entirety of Sweden.
 ### How does GTFS Work?
 
 A GTFS file is a zip archive that contains several \*.txt files. You can compare this archive file with a database. The
-files inside the archive contain Comma Separated Values \(CSV\) data, meaning they are easy to read, both for computers
+files inside the archive contain Comma Separated Values (CSV) data, meaning they are easy to read, both for computers
 and humans. Each file contains all the instances of a certain type, just like a database table. For example, one file
 contains all the routes, another file contains all the stops. The files are linked together through ids, similar to how
 foreign keys work in a database. The image below gives an idea of the structure.
 
-![The structure of a GTFS dataset](../../../.gitbook/assets/image%20%2815%29.png)
+![The structure of a GTFS dataset](/media/2020/05/gtfs-static-model.png)
 
 ### When should I use GTFS?
 
@@ -28,9 +28,9 @@ data.
 
 | Well suited for | Not so suited for |
 | :--- | :--- |
-| Analysing \(real-time\) transport data | Quickly getting the next departures from a stop |
+| Analysing (real-time) transport data | Quickly getting the next departures from a stop |
 | Building your own route-planner or API | Quickly calculating a route from A to B |
-| Getting a list of all public transport stop-areas for an operator or a country | Projects where large files \(&gt;25MB\) can't be used |
+| Getting a list of all public transport stop-areas for an operator or a country | Projects where large files (&gt;25MB) can't be used |
 | Getting the live position of all public transport vehicles |  |
 
 {{% info %}} There are hundreds of libraries, examples and demos for GTFS. You can find some
@@ -50,7 +50,7 @@ those two feeds below.
 | Transit coverage | 100% | 92% |
 | Data quality | Average quality | Highest quality |
 | Real-time data | Only static data | Static + Real-time + GPS positions |
-| Historical data \(static\) | Since 2012 | Not available |
+| Historical data (static) | Since 2012 | Not available |
 
 ## Read more
 

@@ -14,8 +14,8 @@ Don't worry if you need an upgrade - you'll most likely get it.
 
 ### What happens when an API is discontinued?
 
-We rarely discontinue APIs. When a change is coming up, users are notified in good time \(often multiple months
-before\).
+We rarely discontinue APIs. When a change is coming up, users are notified in good time (often multiple months
+before).
 
 ### Whenever I try to edit my project, I get a warning about old keys which will be removed. Why is this and what should I do?
 
@@ -40,8 +40,8 @@ No. If you're wondering if our APIs can handle a certain load, please ask instea
 
 You will get a message describing the reason when an API key upgrade gets denied. Typically this is due to magic mirror
 solutions wanting to use more than 10.000 API calls per month, or due to using the wrong data type, in which case we
-will point out how other data can make your life easier \(for example, when using an API for analytics/mass queries
-instead of our GTFS/GTFS-RT data\)
+will point out how other data can make your life easier (for example, when using an API for analytics/mass queries
+instead of our GTFS/GTFS-RT data)
 
 ## I still have questions
 

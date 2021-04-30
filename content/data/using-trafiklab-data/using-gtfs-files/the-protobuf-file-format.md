@@ -9,7 +9,7 @@ Protocol buffers is a language-neutral, platform-neutral, extensible mechanism f
 XML or JSON, but smaller and faster. A protobuf scheme describes once how the data is structured, after which special
 generated source code can be used to easily write and read your structured data to and from a variety of data streams
 and using a variety of languages. Protobuf is a binary format, and it does not contain any structural information.
-Therefore, you will need a scheme \(with the structure\) and code to deserialize it in order to access the data.
+Therefore, you will need a scheme (with the structure) and code to deserialize it in order to access the data.
 
 Protobuf was developed by Google in the early 2000's as a way to communicate between systems, and is now used as the
 standard format for GTFS-RT as well
@@ -19,8 +19,8 @@ standard format for GTFS-RT as well
 Protobuf is the standard for GTFS-RT data. Since all producers use the same protobuf format and scheme, consumers only
 have to code an application once, whereafter it is available
 
-When we publish data in realtime, new data is published and fetched every 15 seconds \(TripUpdates, ServiceAlerts\) or
-even every 3 seconds \(VehiclePositions\). For TripUpdates, this means 5760 updates, per operator, per day. For example,
+When we publish data in realtime, new data is published and fetched every 15 seconds (TripUpdates, ServiceAlerts) or
+even every 3 seconds (VehiclePositions). For TripUpdates, this means 5760 updates, per operator, per day. For example,
 a file size reduction with 500kb would result in a saving of 2,5gb of data transfer per day, just for this one feed with
 one consumer. This is important both for producers, since data transfer can make up a significant part of the hosting
 costs, as well as for consumers such as you, who also have to pay for transfer.
@@ -103,20 +103,20 @@ default
 
 ```
 
-Every field is described: whether or not it is optional, the data type, and the position in the binary data \(which is
-needed to decode the file\). Note that these schemes are not meant as a specification for the information/content, but
-as a specification for the serialisation and deserialisation. If you are looking for the GTFS-RT specification \(not the
-protobuf scheme\), you can find it [here](https://developers.google.com/transit/gtfs-realtime).
+Every field is described: whether or not it is optional, the data type, and the position in the binary data (which is
+needed to decode the file). Note that these schemes are not meant as a specification for the information/content, but
+as a specification for the serialisation and deserialisation. If you are looking for the GTFS-RT specification (not the
+protobuf scheme), you can find it [here](https://developers.google.com/transit/gtfs-realtime).
 
 {{% info %}} The GTFS Realtime protobuf scheme can be found
 here: [https://developers.google.com/transit/gtfs-realtime/gtfs-realtime-proto](https://developers.google.com/transit/gtfs-realtime/gtfs-realtime-proto)
-\([direct download](https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto)\)
+([direct download](https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto))
 {{% /info %}}
 
 ### Decoding a protobuf file
 
 When you decode a protbuf file, you end up with structured data. The exact datastructures which are used to hold this
-data can differ between programming languages \(for example List vs Arrays\), but the content will be the same. Below
+data can differ between programming languages (for example List vs Arrays), but the content will be the same. Below
 you can see a fragment of a GTFS-RT TripUpdate file after it has been decoded from protobuf.
 
 {% code title="TripUpdate.pb, fragment deserialized to jsonld" %}

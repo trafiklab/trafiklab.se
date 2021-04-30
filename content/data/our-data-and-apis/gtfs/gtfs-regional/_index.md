@@ -16,12 +16,12 @@ feed, please look at GTFS Sverige 2
 ### Data format
 
 The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the GTFS-Realtime
-\(GTFS-RT\) standard, and is stored in the protobuf format.
+(GTFS-RT) standard, and is stored in the protobuf format.
 
 ### How often is this dataset updated?
 
 The static data in this dataset is updated on a daily basis, typically between 03:00 and 07:00. The real-time data
-\(ServiceAlerts.pb and TripUpdates.pb\) is updated every 15 seconds. The vehicle position data \(VehiclePositions.pb\)
+(ServiceAlerts.pb and TripUpdates.pb) is updated every 15 seconds. The vehicle position data (VehiclePositions.pb)
 is updated every 3 seconds.
 
 ### Which operators are covered by this dataset?

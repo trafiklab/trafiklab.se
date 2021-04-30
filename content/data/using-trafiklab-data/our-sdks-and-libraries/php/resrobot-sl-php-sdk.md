@@ -35,7 +35,7 @@ The following software is required to use this SDK:
 In order to use the ResRobot Timetable and Routeplanning APIs, you need to obtain an API key
 from [Trafiklab](https://trafiklab.se) first.
 
-### Getting Timetables \(departures or arrivals from a stop\)
+### Getting Timetables (departures or arrivals from a stop)
 
 #### Timetables
 
@@ -68,7 +68,7 @@ issue so we can review this.
 
 **Response**
 
-In order to use the data returned by your request, you can simply call getTimeTable\(\) on the response object. This
+In order to use the data returned by your request, you can simply call getTimeTable() on the response object. This
 method returns an array of TimeTableEntry instances, each of which describes one departure or arrival. You can look at
 the code and PHPDoc in order to get up-to-date information on which fields are available. Detailed information about
 ResRobot responses can be found at
@@ -115,7 +115,7 @@ $response = $resRobotWrapper->getRoutePlanning($routePlanningRequest);
 
 **Response**
 
-In order to use the data returned by your request, you can simply call getTrips\(\) on the response object. This method
+In order to use the data returned by your request, you can simply call getTrips() on the response object. This method
 returns an array of Trip instances, each of which describes one departure or arrival. You can look at the code and
 PHPDoc in order to get up-to-date information on which fields are available. Detailed information about ResRobot
 responses can be found at

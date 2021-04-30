@@ -8,8 +8,8 @@ Specification available on our developer portal. {{% /note %}}
 ## What does this API provide?
 
 ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
-transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket \(All train traffic
-including SJ, MTRX, .... except for Arlanda Express\).
+transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket (All train traffic
+including SJ, MTRX, .... except for Arlanda Express).
 
 ### Data format
 
@@ -38,7 +38,7 @@ including a bit of information about each vehicle, such as where it is heading o
 
 ## Example call
 
-This call will show all departures from Göteborg Central Station \(740000002\). The id can be obtained
+This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [ResRobot Stop lookup ](resrobot-station-lookup.md)or [GTFS Sverige 2](../gtfs/gtfs-sverige-2-static/).
 
 ### Call
