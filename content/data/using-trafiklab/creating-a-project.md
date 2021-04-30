@@ -1,5 +1,6 @@
 ---
 title: "Creating a project"
+weight: 20
 ---
 {% hint style="danger" %} Disable browser plugins like Google Translate when creating an project. They are known to
 cause issues when logging in, creating accounts and creating projects. {% endhint %}

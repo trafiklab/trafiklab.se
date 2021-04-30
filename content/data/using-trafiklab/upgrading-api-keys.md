@@ -1,5 +1,6 @@
 ---
 title: "Upgrading API keys"
+weight: 50
 ---
 When your application needs more API calls than your API key quota allow, you can upgrade your keys to a higher level.
 Upgrading API keys is completely free, and only needed to ensure all Trafiklab users can keep using the the service for

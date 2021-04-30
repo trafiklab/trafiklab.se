@@ -1,6 +1,7 @@
 ---
-title: "Using Trafiklab.se"
-layout: "single"
+title: Getting started 
+description: Getting started with Trafiklab 
+weight: 1
 ---
 {{% tip %}}
 New to trafiklab? Start reading here and continue to the next pages using the buttons at the

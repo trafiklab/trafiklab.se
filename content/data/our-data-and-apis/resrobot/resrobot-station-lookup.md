@@ -48,7 +48,7 @@ Exact search returns only stations that match exactly with the search string.
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```xml
+```text
 https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&key=API_KEY
 ```
 
@@ -56,7 +56,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&key=API_KEY
 
 {{% tab "Xml" %}}
 
-```xml
+```text
 https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&key=API_KEY
 ```
 
@@ -109,7 +109,7 @@ stations which name is an exact or near match to the input string.
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```text
 https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KEY
 ```
 
@@ -117,7 +117,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KE
 
 {{% tab "Xml" %}}
 
-```
+```text
 https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 ```
 

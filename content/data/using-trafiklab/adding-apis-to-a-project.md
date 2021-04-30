@@ -1,6 +1,7 @@
 ---
-title: Adding APIs to a project
-description: Adding more APIs to an existing project
+title: Adding APIs to a project 
+description: Adding more APIs to an existing project 
+weight: 40
 ---
 {{% warning %}} Disable browser plugins like Google Translate when creating an project. They are known to
 cause issues when logging in, creating accounts and creating projects. {{% /warning %}}

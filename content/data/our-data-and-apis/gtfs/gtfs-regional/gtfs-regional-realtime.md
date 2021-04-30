@@ -19,7 +19,7 @@ Service alerts allow you to get information about disruptions on the transit net
 roadworks \(a certain stop might not get served for a few days\) to electricity outages on a rail network. ServiceAlerts
 are broad and general information. Delays and cancellations of individual trips are usually communicated
 using [Trip updates](gtfs-regional-realtime.md#tripupdates).
-See[ the table on the GTFS Regional overview page](./#which-operators-are-covered-by-this-dataset) to find out which
+See [the table on the GTFS Regional overview page](./#which-operators-are-covered-by-this-dataset) to find out which
 operators are supported \(Realtime data column\).
 
 {% hint style="info" %} ServiceAlerts can remain unchanged for relatively long periods \(for example a couple of
@@ -31,7 +31,7 @@ of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/c
 
 Trip updates contain real-time departure and arrival times for individual trips. This means you can get the current,
 estimated delay for each vehicle on each stop.
-See[ the table on the GTFS Regional overview page](./#which-operators-are-covered-by-this-dataset) to find out which
+See [the table on the GTFS Regional overview page](./#which-operators-are-covered-by-this-dataset) to find out which
 operators are supported \(Real-time data column\).
 
 {% hint style="warning" %} In some cases it isn't possible to link certain delays to a specific trip. In this case, they
@@ -41,7 +41,7 @@ may be linked to a route instead. {% endhint %}
 
 The vehiclepositions.pb feed contains the GPS positions for all operators. Depending on the operator, these positions
 are updated every 1 to 3 seconds. The availability of this data is indicated in a separate column
-in [ the GTFS Regional availability table](./#which-operators-are-covered-by-this-dataset).
+in [the GTFS Regional availability table](./#which-operators-are-covered-by-this-dataset).
 
 ## Using real-time data
 

@@ -1,6 +1,7 @@
 ---
 title: Creating an account
-description: How to create an account on Trafiklab.se
+description: How to create an account on Trafiklab.se 
+weight: 10
 ---
 Creating an account on Trafiklab is required in order to create projects and API keys.
 

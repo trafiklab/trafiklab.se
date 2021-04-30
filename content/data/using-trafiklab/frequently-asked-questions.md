@@ -1,5 +1,6 @@
 ---
 title: "Frequently asked questions"
+weight: 100
 ---
 ## Trafiklab
 
