@@ -163,6 +163,14 @@ html {
   }
   .tl-media-card__media {
     transition: transform .2s ease-in-out;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%
+    }
   }
   .tl-media-card__text {
     -webkit-appearance: none;
