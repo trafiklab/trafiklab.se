@@ -1,6 +1,6 @@
 ---
-title: Getting started 
-description: Getting started with Trafiklab 
+title: Getting started
+description: Getting started with Trafiklab
 weight: 1
 ---
 {{% info %}}
