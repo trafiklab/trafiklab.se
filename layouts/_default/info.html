@@ -1,6 +1,8 @@
 {{ define "main" }}
   <div class="content-wrapper">
-    <h1>{{ .Title }}</h1>
+    {{ if not .Params.Hide_title }}
+      <h1>{{ .Title }}</h1>
+    {{ end }}
 
     {{ .Content }}
   </div>
