@@ -2,6 +2,7 @@
 title: "Occupancy data in GTFS Regional"
 date: "2021-04-16"
 layout: info
+hide_title: true
 ---
 
 # Occupancy data in GTFS Regional Realtime
