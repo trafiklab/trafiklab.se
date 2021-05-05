@@ -11,7 +11,6 @@
     left: 0;
     top: 7rem;
     padding-bottom: 10rem;
-    overflow-y: scroll;
     position: fixed;
     z-index: 10;
   }
@@ -24,6 +23,7 @@
 
 .menu {
   height: calc(100vh - 7rem);
+  overflow-y: scroll;
   width: 100%;
   .menu__top {
     background-color: #f8f8f8;
@@ -125,6 +125,14 @@ ul.dropdown-list {
     margin: 7rem 15vw 10rem calc(26rem + 15vw);
   }
 }
+
+// Content footer
+.docs-footer {
+  border-top: 2px solid $light-border-grey;
+  font-size: 0.75rem;
+  padding: .5rem 0;
+}
+
 
 // Forms
 .tl-form-control {

@@ -138,11 +138,21 @@ html {
   border: 0.0625rem solid #e9e9e9;
   border-radius: 0.25rem;
   .tl-card-list__item {
+    border-bottom: 1px dashed $border-grey;
     display: block;
     margin: 1rem 2rem;
+    padding-bottom: 1rem;
     text-decoration: none;
+    transition: .5s;
+    &:last-child {
+      border-bottom: none;
+    }
     .list-item-title {
       font-weight: 600;
+    }
+    &:hover,
+    &:focus {
+      opacity: .7;
     }
   }
 }
@@ -212,6 +222,12 @@ html {
 }
 a.tl-media-card__text {
   text-decoration: none;
+  &:hover,
+  &:focus {
+    .tl-base-card {
+      border-color: $purple;
+    }
+  }
 }
 
 .tl-navigation-card__title-icon {
@@ -272,6 +288,10 @@ a.tl-media-card__text {
     background-color: $purple;
     border-color: $purple;
     color: #fff;
+    &:hover,
+    &:focus {
+      background-color: $light-purple;
+    }
   }
 }
 .tl-icon-button {

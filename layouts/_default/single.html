@@ -12,6 +12,9 @@
         <h1 class="tl-h1" id="stops--and-timetable-data">{{ .Title }}</h1>
         {{ .Content }}
       </main>
+      <footer class="docs-footer">
+        Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+      </footer>
     </div>
   </div>
 {{ end }}
@@ -127,6 +130,7 @@ document.querySelectorAll(".highlight")
 $('.dropdown-list').hide();
 $('.tl-side-navigation__click-target--active').parents('.dropdown-list').show();
 $('.tl-side-navigation__click-target--active').siblings('.dropdown-list').show();
+$('.tl-side-navigation__click-target--active').find('.dropdown-toggle').addClass('active');
 $('.dropdown-toggle').click(function(e) {
   e.preventDefault();
   $(this).toggleClass('active');

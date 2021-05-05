@@ -9,7 +9,13 @@
   .tl-top-navigation-item a {
     color: #FFF;
     padding: 1rem;
+    position: relative;
     text-decoration: none;
+    svg {
+      height: 13px;
+      position: absolute;
+      right: -2px;
+    }
   }
 }
 .header-right {

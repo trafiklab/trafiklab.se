@@ -16,6 +16,22 @@ body {
 
 body a, body a:link, body a:visited {
   color: unset;
+  transition: .5s;
+}
+
+body p a,
+body p a:link,
+body p a:visited,
+body table a,
+body table a:link,
+body table a:visited, {
+  color: $purple;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $light-purple;
+    border-bottom: 1px dashed $light-purple;
+  }
 }
 
 // Headings
@@ -26,5 +42,6 @@ h1, h2, h3, h4 {
 
 p {
   font-size: 1rem;
+  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   line-height: 1.5rem;
 }
