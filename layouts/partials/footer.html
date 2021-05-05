@@ -43,4 +43,22 @@
       </div>
     </div>
   </div>
+  <aside class="footer-friends">
+    <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-10">
+      {{ $headless := .Site.GetPage "/headless" }}
+      {{ $logos := $headless.Resources.Match "friend*" }}
+      {{ range $logos }}
+        {{ if .Params.absolute }}
+          <a href="{{ .Params.Link }}" target="_blank" class="footer-logo">
+            <img src="{{ .Params.Image }}" title="{{ .Title }}">
+          </a>
+        {{ else }}
+          <a href="{{ .URL }}">
+            {{ .Pre }}
+            <img src="{{ .Params.Image }}" title="{{ .Title }}">
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </aside>
 </footer>

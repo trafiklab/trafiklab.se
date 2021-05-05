@@ -40,8 +40,22 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
+h2 {
+  color: $grey-font;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 700;
+}
+
 p {
   font-size: 1rem;
   font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   line-height: 1.5rem;
+}
+
+.page p img {
+  max-width: 100%;
 }

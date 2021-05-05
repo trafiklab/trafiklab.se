@@ -11,6 +11,7 @@
     padding: 1rem;
     position: relative;
     text-decoration: none;
+    white-space: nowrap;
     svg {
       height: 13px;
       position: absolute;
@@ -26,6 +27,36 @@
     margin: 0 1rem;
     font-weight: 600;
     text-decoration: none;
+  }
+  .l-lang {
+    display: none;
+  }
+}
+@media screen and (min-width: 50rem) {
+  .header-right {
+    .l-lang {
+      display: block;
+    }
+    .s-lang {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 40rem) {
+  .tl-button.tl-button--variant-primary {
+    padding: 0;
+    background: none;
+    border: none;
+    min-width: auto;
+    white-space: nowrap;
+  }
+  body.type-data .header .top-navigation {
+    .tl-button.tl-button--variant-primary {
+      color: $black;
+    }
+  }
+  .top-navigation {
+    overflow-x: scroll;
   }
 }
 body.type-data {
