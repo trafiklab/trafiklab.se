@@ -266,7 +266,6 @@ input {
   margin-bottom: 21px;
   .admonition-icon {
     padding: .75rem;
-    color: #fff;
   }
 
   .content {
@@ -282,9 +281,8 @@ input {
 
 .success {
   background-color: #d9f3cb;
-
   .admonition-icon {
-    background-color: #58c11d;
+    color: #58c11d;
   }
 }
 
@@ -292,16 +290,14 @@ input {
   background-color: #fbdae6;
 
   .admonition-icon {
-    background-color: #b33261;
+    color: #b33261;
   }
 }
 
 .warning {
   background-color: #fffae6;
-
   .admonition-icon {
     color: #ff991f;
-    background-color: #fffae6;
   }
 }
 
@@ -309,7 +305,7 @@ input {
   background-color: #deebff;
 
   .admonition-icon {
-    background-color: #2e8fce;
+    color: #2e8fce;
   }
 }
 
@@ -317,6 +313,6 @@ input {
   background-color: #eae6ff;
 
   .admonition-icon {
-    background-color: #9d95fd;
+    color: #9d95fd;
   }
 }
