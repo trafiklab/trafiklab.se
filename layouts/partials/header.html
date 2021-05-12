@@ -30,13 +30,31 @@
     </div>
 
     <div class="header-right">
+      {{- $currentPage := . -}}
+      {{ $pagelang := .Language.Lang }}
+      {{ $pageTranslations := slice }}
+      {{ range .Translations }}
+        {{ $pageTranslations = $pageTranslations | append .Lang }}
+      {{ end }}
       {{ range $.Site.Home.AllTranslations }}
-        {{ if ne $.Site.Language.LanguageName .Language.LanguageName }}
-          <a class="tl-icon-button" href="{{ .Permalink }}">
-            <span class="l-lang">{{ .Language.LanguageName }}</span>
-            <span class="s-lang">{{ .Site.Language.Lang }}</span>
-          </a>
-        {{end }}
+        {{ if in $pageTranslations .Lang }}
+          {{- $specificLang := .Lang -}}
+          {{ range $currentPage.Translations }}
+            {{ if (eq .Lang $specificLang) }}
+              <a class="tl-icon-button" href="{{ .Permalink }}">
+                  <span class="l-lang" href="{{ .Permalink }}">{{ .Language.LanguageName }}</span>
+                  <span class="s-lang" href="{{ .Permalink }}">{{ .Lang }}</span>
+              </a>
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ if ne .Lang $pagelang }}
+            <a class="tl-icon-button" href="{{ .Permalink }}">
+              <span class="l-lang">{{ .Language.LanguageName }}</span>
+              <span class="s-lang">{{ .Site.Language.Lang }}</span>
+            </a>
+          {{ end }}
+        {{ end }}
       {{ end }}
       <a href="#" class="tl-button tl-button--variant-primary user-link">{{ i18n "cta-header" }}</a>
     </div>
