@@ -9,7 +9,7 @@ Specification available on our developer portal. {{% /info %}}
 
 In order to retrieve the static data you need an API key. Follow the link below to read more about API keys.
 
-{% page-ref page="../../../../an-introduction-to-trafiklab/using-trafiklab/getting-api-keys.md" %}
+{{% page-ref page="/data/using-trafiklab/getting-api-keys" %}}
 
 ### GTFS Extensions
 

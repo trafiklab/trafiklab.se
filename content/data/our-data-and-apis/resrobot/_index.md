@@ -30,4 +30,5 @@ a lot of data from a lot of vehicles is needed.
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a
 million API calls. {{% /warning %}}
 
-{% page-ref page="../gtfs/" %}
+{{% page-ref page="/data/our-data-and-apis/gtfs-regional/" %}}
+{{% page-ref page="/data/our-data-and-apis/gtfs-sverige-2/" %}}

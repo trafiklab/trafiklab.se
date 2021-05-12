@@ -19,7 +19,7 @@ of [the ResRobot Stolptidstabeller 2 API](../../public-transport-data/our-data-a
 In order to specify which station you want data from, you will need to obtain the id for that station. Follow the link
 below to read about the different methods to obtain the id of a stop for the ResRobot APIs.
 
-{% page-ref page="obtaining-stop-ids.md" %}
+{{% page-ref page="obtaining-stop-ids" %}}
 
 #### Getting the departures or arrivals
 
@@ -30,7 +30,7 @@ Read the API documentation for more information about the parameters and respons
 ### For large websites and analytics
 
 Larger websites or apps that need to handle a lot of traffic, it might be easier to create your own, local API. This can
-be done either through a self-hosted [OpenTripPlanner ](https://github.com/opentripplanner)instance, fed
+be done either through a self-hosted [OpenTripPlanner](https://github.com/opentripplanner) instance, fed
 with [GTFS Sverige 2](../../public-transport-data/our-data-and-apis/gtfs/gtfs-sverige-2-static/)
 or [GTFS Regional](../../public-transport-data/our-data-and-apis/gtfs/gtfs-regional/) data, or by creating your own
 wrapper around our GTFS data.
