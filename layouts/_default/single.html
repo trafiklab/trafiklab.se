@@ -13,7 +13,8 @@
         {{ .Content }}
       </main>
       <footer class="docs-footer">
-        Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+        Last updated: {{ .Lastmod.Format "January 2, 2006" }} |
+        <a href="https://github.com/trafiklab/trafiklab.se/blob/main/content/{{ replace .File.Path "\\" "/" }}">Edit on Github</a>
       </footer>
     </div>
   </div>
