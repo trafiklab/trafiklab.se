@@ -24,7 +24,8 @@ operators are supported (Realtime data column).
 
 {{% info %}} ServiceAlerts can remain unchanged for relatively long periods (for example a couple of
 hours). You can prevent unnecessary downloads by making use
-of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/conditional-get-requests.md). {{% info %}}
+of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/conditional-get-requests.md). {{% 
+/info %}}
 
 ### TripUpdates
 

@@ -32,5 +32,5 @@ TripUpdates file, this can both mean that there are no delays, or that no inform
 ## VehicleUpdates
 
 VehicleUpdates contain realtime GPS positions of public transport vehicles. These allow you to see where a vehicle is
-located, along with its speed and bearing. These can be used to show vehicles on a map, to analyze traffik congestion,
-....
+located, along with its speed and bearing. These can be used to show vehicles on a map, to analyze traffic congestion,
+...

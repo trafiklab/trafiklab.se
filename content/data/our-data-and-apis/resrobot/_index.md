@@ -1,6 +1,7 @@
 ---
 title: ResRobot
 layout: "single"
+weight: 40
 ---
 
 ## What is ResRobot?

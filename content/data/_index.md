@@ -1,5 +1,5 @@
 ---
-title: "Data"
+title: "Open data"
 menu: "main"
 weight: 1
 layout: "single"
