@@ -42,3 +42,7 @@ enableGitInfo = true
 [mediaTypes]
   [mediaTypes."application/rdf+xml"]
     suffixes = ["rdf"]
+
+
+[params]
+  repository = "https://github.com/trafiklab/trafiklab.se/"
