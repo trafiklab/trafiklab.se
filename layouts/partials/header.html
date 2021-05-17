@@ -2,8 +2,8 @@
   <div class="top-navigation">
     <div class="header-left">
       <div class="tl-top-navigation-item header-logo">
-        {{ $logoUrl := resources.Get "/images/logo.svg" }}
-        <a href="/"><img src="{{ $logoUrl }}" class="logo" /></a>
+        {{- $logoUrl := resources.Get "images/logo.svg" -}}
+        <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="logo" /></a>
       </div>
       <nav>
         <ul>
