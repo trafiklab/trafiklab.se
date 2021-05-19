@@ -1,4 +1,4 @@
-baseURL = "http://2021.trafiklab.se/"
+baseURL = "https://2021.trafiklab.se/"
 defaultContentLanguage  = "en"
 
 title = "Trafiklab"
