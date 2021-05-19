@@ -1,1 +1,48 @@
+baseURL = "http://2021.trafiklab.se/"
+defaultContentLanguage  = "en"
 
+title = "Trafiklab"
+
+# Theme is loaded through a git submodule
+theme = "trafiklab-2021"
+
+enableEmoji = true
+enableGitInfo = true
+
+# paths
+[permalinks]
+  "/" = "/:title/"
+  posts = "/:section/:title/"
+
+# Multilingual
+[languages]
+  [languages.en]
+  languageName = "English"
+  weight = 2
+
+  [languages.sv]
+  languageName = "Svenska"
+  weight = 1
+
+# HTML for shortcodes
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputFormats]
+  [outputFormats.dcat]
+    isPlainText = false
+    isHTML = false
+    permalinkable = true
+    mediaType = "application/rdf+xml"
+    rel = "alternate"
+    protocol = "http://"
+
+[mediaTypes]
+  [mediaTypes."application/rdf+xml"]
+    suffixes = ["rdf"]
+
+
+[params]
+  repository = "https://github.com/trafiklab/trafiklab.se/"

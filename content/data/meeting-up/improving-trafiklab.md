@@ -1,5 +1,5 @@
 ---
-title: Making things better, together
+title: Improving Trafiklab
 ---
 
 ## Publishing your data on Trafiklab

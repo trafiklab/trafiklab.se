@@ -1,0 +1,78 @@
+{
+  "languages": {
+    "sv": "http://publications.europa.eu/resource/authority/language/SWE",
+    "en": "http://publications.europa.eu/resource/authority/language/ENG"
+  },
+  "themes": {
+    "transport": "http://eurovoc.europa.eu/100154"
+  },
+  "regions": {
+    "sweden": "http://sws.geonames.org/2661886/"
+  },
+  "formats": {
+    "xml": {
+      "name": "XML",
+      "mimetype": "application/xml",
+      "description": {
+        "sv": "Extensible Markup Language",
+        "en": "Extensible Markup Language"
+      }
+    },
+    "json": {
+      "name": "json",
+      "mimetype": "application/json",
+      "description": {
+        "sv": "Javascript Object Notation (JSON)",
+        "en": "Javascript Object Notation (JSON)"
+      }
+    },
+    "json-ld": {
+      "name": "json-ld",
+      "mimetype": "application/json+ld",
+      "description": {
+        "sv": "JavaScript Object Notation (JSON) for Linked Data",
+        "en": "JavaScript Object Notation (JSON) for Linked Data"
+      }
+    },
+    "csv": {
+      "name": "csv",
+      "mimetype": "text/csv",
+      "description": {
+        "sv": "Comma separated values",
+        "en": "Comma separated values"
+      }
+    },
+    "gtfs": {
+      "name": "GTFS",
+      "mimetype": "text/csv",
+      "description": {
+        "sv": "General Transit Feed Specification, a worldwide standard for scheduled public transport data",
+        "en": "General Transit Feed Specification, a worldwide standard for scheduled public transport data"
+      }
+    },
+    "gtfs-rt": {
+      "name": "GTFS-Realtime",
+      "mimetype": "application/x-protobuf",
+      "description": {
+        "sv": "General Transit Feed Specification for real-time data, a worldwide standard for real-time public transport data",
+        "en": "General Transit Feed Specification for real-time data, a worldwide standard for real-time public transport data"
+      }
+    },
+    "netex": {
+      "name": "NeTEx",
+      "mimetype": "application/xml",
+      "description": {
+        "sv": "Network and Timetable Exchange files according to the Nordic profile",
+        "en": "Network and Timetable Exchange files according to the Nordic profile"
+      }
+    },
+    "siri": {
+      "name": "SIRI",
+      "mimetype": "application/xml",
+      "description": {
+        "sv": "Service Interchange for Realtime information, the realtime counterpart of the European NeTEx standard. Files are according to the Nordic profile.",
+        "en": "Service Interchange for Realtime information, the realtime counterpart of the European NeTEx standard. Files are according to the Nordic profile."
+      }
+    }
+  }
+}

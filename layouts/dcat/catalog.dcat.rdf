@@ -1,0 +1,24 @@
+<rdf:RDF>
+    <dcat:Catalog rdf:nodeID="catalog">
+        <dcterms:modified>{{ .LastMod.format "2006-01-02"}}</dcterms:modified>
+        {{ $catalog = $.Params "catalog" }}
+        {{ range $language, $title := $catalog.title }}
+            <dcterms:title xml:lang="{{ $language }}">{{ $title }}</dcterms:title>
+        {{ end }}
+        {{ range $language, $description := $catalog.description }}
+            <dcterms:description xml:lang="{{ $language }}">{{ $description }}</dcterms:description>
+        {{ end }}
+        <!-- TODO: loop over all datasources -->
+        <dcat:dataset rdf:resource="https://www.trafiklab.se/sites/default/files/dcat/dataset-12603.rdf"/>
+
+        <foaf:homepage>{{ $catalog.homepage }}</foaf:homepage>
+        <dcterms:issued>{{ $catalog.issued_date }}</dcterms:issued>
+        <dcterms:spatial rdf:resource="{{ index $.Site.Data.dcat.regions $catalog.region }}"/>
+        <dcterms:language rdf:resource="{{ index $.Site.Data.dcat.languages $catalog.language }}"/>
+        <dcterms:publisher
+                rdf:resource="{{ref . (dict "path" (print "/dcat/publishers/" $catalog.publisher ".md") "outputFormat" "dcat")}}"/>
+        <adms:contactPoint
+                rdf:resource="{{ref . (dict "path" (print "/dcat/contacts/" $catalog.contact ".md") "outputFormat" "dcat")}}"/>
+    </dcat:Catalog>
+    <!-- Optional: include datasets, contacts, ... here as embed -->
+</rdf:RDF>

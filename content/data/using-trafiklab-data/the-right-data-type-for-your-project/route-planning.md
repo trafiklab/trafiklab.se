@@ -36,7 +36,7 @@ to the GDPR. {{% /warning %}}
 If you want to specify the origin and destination station, you will need to find their ids. Follow the link below to
 read about the different methods to obtain an id for the ResRobot routeplanning.
 
-{% page-ref page="obtaining-stop-ids.md" %}
+{{% page-ref page="obtaining-stop-ids" %}}
 
 ### When you need more API calls: hosting your own OpenTripPlanner instance
 

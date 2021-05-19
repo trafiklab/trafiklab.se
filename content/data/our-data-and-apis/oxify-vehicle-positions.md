@@ -1,5 +1,6 @@
 ---
 title: Oxyfi Vehicle positions
+weight: 90
 ---
 
 Oxyfi Vehicle Positions is a Push-API which provides real-time vehicle positions for public transport vehicles.

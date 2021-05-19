@@ -1,0 +1,6 @@
+<rdf:RDF>
+    <vcard:Organization rdf:about="{{ .Permalink }}">
+        <vcard:fn>{{ $.Param "contact.name" }}</vcard:fn>
+        <vcard:hasEmail rdf:resource="{{ $.Param "contact.e-mail" }}"/>
+    </vcard:Organization>
+</rdf:RDF>

@@ -1,6 +1,7 @@
 ---
 title: NeTEx Regional
 layout: "single"
+weight: 30
 ---
 
 {{% info %}} For technical details about HTTP headers and URLs, please use the OpenAPI Specification.{{% /info %}}

@@ -9,7 +9,7 @@ Specification available on our developer portal. {{% /info %}}
 
 In order to retrieve the static data you need an API key. Follow the link below to read more about API keys.
 
-{% page-ref page="../../../../an-introduction-to-trafiklab/using-trafiklab/getting-api-keys.md" %}
+{{% page-ref page="/data/using-trafiklab/getting-api-keys" %}}
 
 ## Available real-time data
 
@@ -24,7 +24,8 @@ operators are supported (Realtime data column).
 
 {{% info %}} ServiceAlerts can remain unchanged for relatively long periods (for example a couple of
 hours). You can prevent unnecessary downloads by making use
-of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/conditional-get-requests.md). {{% info %}}
+of [Conditional HTTP requests](../../../../using-trafiklab-data/best-practices/conditional-get-requests.md). {{% 
+/info %}}
 
 ### TripUpdates
 
@@ -44,6 +45,6 @@ in [the GTFS Regional availability table](./#which-operators-are-covered-by-this
 
 ## Using real-time data
 
-You can read more about how to use real-time data in our Using data chapter:
+You can read more about how to use real-time data in our GTFS format documentation:
 
-{% page-ref page="../../../transport-data-formats/using-gtfs-files/" %}
+{{% page-ref page="/data/using-trafiklab-data/using-gtfs-files/" %}}

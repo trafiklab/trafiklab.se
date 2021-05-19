@@ -1,0 +1,7 @@
+<rdf:RDF>
+    <foaf:Agent rdf:about="{{ .Permalink }}">
+        <foaf:name>{{ $.Param "publisher.name" }}</foaf:name>
+        <foaf:homepage>{{ $.Param "publisher.homepage" }}</foaf:homepage>
+        <dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company"/>
+    </foaf:Agent>
+</rdf:RDF>
