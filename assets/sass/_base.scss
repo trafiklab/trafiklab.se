@@ -151,13 +151,10 @@ html {
 }
 
 .tl-card-list {
-  box-shadow: 0 0.125rem 0.1875rem 0 rgba(0, 0, 0, 0.25);
-  border: 0.0625rem solid #e9e9e9;
-  border-radius: 0.25rem;
   .tl-card-list__item {
     border-bottom: 1px dashed $border-grey;
     display: block;
-    margin: 1rem 2rem;
+    margin: 1rem;
     padding-bottom: 1rem;
     text-decoration: none;
     transition: .5s;
