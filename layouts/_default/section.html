@@ -10,9 +10,9 @@
         <div class="tl-lead-paragraph" style="margin-top:0">{{ .Content }}</div>
       </div>
     </div>
-    <div class="blogpost-overview-grid">
+    <div class="blogpost-overview-grid tl-card-list">
       {{ range .Pages }}
-        <a class="tl-base-card blogpost-overview__link" title="{{ .Title }}" href="{{ .Permalink }}">
+        <a class="tl-card-list__item blogpost-overview__link" title="{{ .Title }}" href="{{ .Permalink }}">
           <div class="blogpost-overview__post">
             {{ if .Params.Image }}
               <img src="{{ .Params.Image }}" class="blogpost-overview__image">

@@ -154,7 +154,7 @@ html {
   .tl-card-list__item {
     border-bottom: 1px dashed $border-grey;
     display: block;
-    margin: 1rem;
+    margin: 1rem 0;
     padding-bottom: 1rem;
     text-decoration: none;
     transition: .5s;
@@ -169,6 +169,9 @@ html {
       opacity: .7;
     }
   }
+}
+.section-front-news {
+  padding: 0 1rem;
 }
 
 // Media card
@@ -570,7 +573,7 @@ div.tl-top-navigation-item {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  padding: 2rem;
+  padding: 1rem;
   cursor: pointer;
 }
 @media screen and (min-width: 50rem) {
