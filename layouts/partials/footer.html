@@ -1,7 +1,8 @@
 <footer id="footer">
   <div class="footer-wrapper">
     <div class="footer-header">
-      <a href="/"><img src="/images/logo.svg" class="logo" /></a>
+      {{- $logoUrl := resources.Get "images/logo.svg" -}}
+      <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="logo" /></a>
     </div>
     <div class="tl-grid footer-home__grid-container tl-grid__container tl-grid--spacing-large">
       <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-2">

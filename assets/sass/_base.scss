@@ -95,7 +95,7 @@ html {
 }
 
 // Navigation card
-.tl-navigation-card {
+.tl-navigation-card, .tl-inline-navigation-card {
   // display: flex;
   background: #fff;
   display: block;
@@ -129,6 +129,21 @@ html {
     }
   }
 }
+
+.tl-inline-navigation-card {
+  padding: 1rem;
+  text-align: center;
+  &:hover {
+    transform: none;
+  }
+  .tl-navigation-card__title {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+    margin: .5rem 0 1rem;
+  }
+}
+
 .article-preview-card {
   background: #fff;
   // height: 100%;
@@ -642,6 +657,7 @@ div.tl-top-navigation-item {
 table {
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 1rem;
   thead {
     border-bottom: .125rem solid $light-border-grey;
     th {

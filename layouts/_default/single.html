@@ -9,11 +9,14 @@
     </div>
     <div class="page">
       <main id="site-content">
-        <h1 class="tl-h1" id="stops--and-timetable-data">{{ .Title }}</h1>
+        <h1 class="tl-h1">{{ .Title }}</h1>
         {{ .Content }}
       </main>
       <footer class="docs-footer">
         Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+        {{ if isset $.Site.Params "repository" }}
+        | <a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace .File.Path "\\" "/" }}">Edit on Github</a>
+        {{ end }}
       </footer>
     </div>
   </div>
