@@ -1,11 +1,12 @@
 ---
 title: Realtime GTFS files
+weight: 20
 ---
 
 {{% info %}} We will only discuss the general working and contents of GTFS Realtime feeds. You can find the
 complete technical specification
-at [https://developers.google.com/transit/gtfs-realtime/](https://developers.google.com/transit/gtfs-realtime/). {{%
-info %}}
+at [https://developers.google.com/transit/gtfs-realtime/](https://developers.google.com/transit/gtfs-realtime/). 
+{{% /info %}}
 
 {{% warning %}} GTFS Realtime communicates deviations from the data in the static GTFS file. You need both in
 order to create realtime timetables. {{% /warning %}}
@@ -34,3 +35,7 @@ TripUpdates file, this can both mean that there are no delays, or that no inform
 VehicleUpdates contain realtime GPS positions of public transport vehicles. These allow you to see where a vehicle is
 located, along with its speed and bearing. These can be used to show vehicles on a map, to analyze traffic congestion,
 ...
+
+## Continue reading
+
+{{% page-ref page="/data/using-trafiklab-data/using-gtfs-files/the-protobuf-file-format" %}}

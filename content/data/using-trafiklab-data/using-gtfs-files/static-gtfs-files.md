@@ -1,5 +1,6 @@
 ---
 title: Static GTFS files
+weight: 10
 ---
 
 ## How GTFS works
