@@ -302,9 +302,8 @@ a.tl-media-card__text {
   text-decoration: none;
   vertical-align: top;
   &.tl-button--variant-primary {
-    background-color: #fff;
-    border-color: transparent;
-    color: $purple;
+    background-color: $purple;
+    border-color: $purple;
     &:hover,
     &:focus {
       background-color: $light-purple;
@@ -438,11 +437,11 @@ div.tl-top-navigation-item {
     position: relative;
     &:before {
       content: "";
-      background: rgb(126,33,204);
-      background: -moz-linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      background: -webkit-linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      background: linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e21cc",endColorstr="#7e21cc",GradientType=1);
+      background: rgb(35,35,35);
+      background: -moz-linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
+      background: -webkit-linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
+      background: linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232323",endColorstr="#232323",GradientType=1);
       position: absolute;
       height: 13rem;
       z-index: -1;
