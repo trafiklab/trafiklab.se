@@ -85,7 +85,7 @@ html {
   display: flex;
   box-shadow: 0 0.125rem 0.1875rem 0 rgba(0, 0, 0, .25);
   border: 0.0625rem solid #e9e9e9;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   align-items: center;
   appearance: none;
   -webkit-appearance: none;
@@ -331,9 +331,6 @@ a.tl-media-card__text {
     display: none;
   }
 }
-// .ui-menu--desktop {
-//   display: none;
-// }
 @media screen and (min-width: 50rem) {
   .ui-menu--desktop {
     display: flex;
@@ -441,12 +438,11 @@ div.tl-top-navigation-item {
     position: relative;
     &:before {
       content: "";
-      // background-color: $dark-bg;
-      background: rgb(35,35,35);
-      background: -moz-linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
-      background: -webkit-linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
-      background: linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232323",endColorstr="#232323",GradientType=1);
+      background: rgb(126,33,204);
+      background: -moz-linear-gradient(0deg, rgba(126,33,204,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
+      background: -webkit-linear-gradient(0deg, rgba(126,33,204,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
+      background: linear-gradient(0deg, rgba(126,33,204,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e21cc",endColorstr="#4b1fc2",GradientType=1);
       position: absolute;
       height: 13rem;
       z-index: -1;

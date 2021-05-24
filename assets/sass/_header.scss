@@ -1,13 +1,10 @@
 .header {
-  .top-navigation {
-    background: $dark-bg;
-  }
   .logo {
     margin: 10px;
     width: 100px;
   }
   .tl-top-navigation-item a {
-    color: #FFF;
+    color: $black;
     padding: 1rem;
     position: relative;
     text-decoration: none;
@@ -73,8 +70,15 @@ body {
       background: $black;
       padding: 5px
     }
-    .tl-top-navigation-item a {
-      color: $black;
+  }
+  &.type-page {
+    .header {
+      .top-navigation {
+        background: $blue-bg;
+        .tl-top-navigation-item a {
+          color: #fff;
+        }
+      }
     }
   }
 }
