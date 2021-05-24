@@ -288,7 +288,7 @@ a.tl-media-card__text {
 
   background-color: $light-bg;
   border: 1px solid $border-grey;
-  border-radius: .25rem;
+  border-radius: .5rem;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
@@ -302,9 +302,9 @@ a.tl-media-card__text {
   text-decoration: none;
   vertical-align: top;
   &.tl-button--variant-primary {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
+    background-color: #fff;
+    border-color: transparent;
+    color: $purple;
     &:hover,
     &:focus {
       background-color: $light-purple;
@@ -439,17 +439,17 @@ div.tl-top-navigation-item {
     &:before {
       content: "";
       background: rgb(126,33,204);
-      background: -moz-linear-gradient(0deg, rgba(126,33,204,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      background: -webkit-linear-gradient(0deg, rgba(126,33,204,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      background: linear-gradient(0deg, rgba(126,33,204,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e21cc",endColorstr="#4b1fc2",GradientType=1);
+      background: -moz-linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
+      background: -webkit-linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
+      background: linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e21cc",endColorstr="#7e21cc",GradientType=1);
       position: absolute;
       height: 13rem;
       z-index: -1;
       margin: 0 -1000px;
       padding: 0 1000px;
       @media screen and (min-width: 50rem) {
-        height: 22rem;
+        height: 24rem;
         margin: 0 -2000px;
         padding: 0 2000px;
       }
@@ -475,7 +475,7 @@ div.tl-top-navigation-item {
 }
 @media screen and (min-width: 50rem) {
   .header-section {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
   }
   .header-container {
     padding-top: 5rem;
@@ -497,6 +497,7 @@ div.tl-top-navigation-item {
   .header-section.section-contrast {
     .header-container {
       padding-top: 1.5em;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     }
     p {
       max-width: 100%;
