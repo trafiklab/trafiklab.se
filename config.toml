@@ -43,6 +43,8 @@ enableGitInfo = true
   [mediaTypes."application/rdf+xml"]
     suffixes = ["rdf"]
 
-
 [params]
   repository = "https://github.com/trafiklab/trafiklab.se/"
+  mailchimpId = "32daffb7a6"
+  mailchimpUser = "f850700e99947106e6a19cfaa"
+  mailchimpAccount = "trafiklab.us20"
