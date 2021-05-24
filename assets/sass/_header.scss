@@ -17,6 +17,12 @@
       width: auto;
     }
   }
+  .header-right .tl-icon-button {
+    color: $black;
+  }
+}
+body.type-data .header .header-right .tl-icon-button {
+  color: #fff;
 }
 .header-right {
   display: flex;
@@ -49,11 +55,6 @@
     min-width: auto;
     white-space: nowrap;
   }
-  body.type-data .header .top-navigation {
-    .tl-button.tl-button--variant-primary {
-      color: $black;
-    }
-  }
   .top-navigation {
     overflow-x: scroll;
   }
@@ -62,9 +63,6 @@ body {
   .header {
     .top-navigation {
       background: #fff;
-      .header-right .tl-icon-button {
-        color: #fff;
-      }
     }
     .logo {
       background: $black;
@@ -76,6 +74,9 @@ body {
       .top-navigation {
         background: $blue-bg;
         .tl-top-navigation-item a {
+          color: #fff;
+        }
+        .header-right .tl-icon-button {
           color: #fff;
         }
       }
