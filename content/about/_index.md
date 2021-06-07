@@ -3,8 +3,8 @@ title: "About"
 menu: "main"
 translationKey: "about"
 url: "/about"
-weight: 3
-layout: info
+weight: 30
+layout: about
 ---
 ## A cooperation between Samtrafiken and Trafikverket
 
