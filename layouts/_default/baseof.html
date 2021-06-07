@@ -3,10 +3,11 @@
   <head>
     {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
   </head>
-  <body class="type-{{ .Type }}">
+  {{ $sidebar := eq (.FirstSection.Param "sidebar") true }}
+  <body class="type-{{ .Type }} {{ if $sidebar }} type-with-sidebar {{ end }}">
     <div id="page-container">
       {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
-      {{ if eq .Type "data" }}
+      {{ if $sidebar }}
         {{ block "sidebar" . }}{{ partial "sidebar.html" .}}{{ end }}
         {{ block "main" . }}
         {{ end }}

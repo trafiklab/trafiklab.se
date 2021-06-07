@@ -116,12 +116,12 @@ ul.dropdown-list {
 
 // Content
 @media screen and (min-width: 800px){
-  .type-data .page {
+  .type-with-sidebar .page {
     margin: 7rem 5vw 10rem 23rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .type-data .page {
+  .type-with-sidebar .page {
     margin: 7rem 15vw 10rem calc(20rem + 15vw);
   }
 }
