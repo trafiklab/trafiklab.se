@@ -1,0 +1,42 @@
+$white: #fff;
+$white-bg: $white;
+$black: #232323;
+
+.header-section {
+  &.section-contrast {
+    &:before {
+      background: $white;
+    }
+  }
+}
+
+body.type-page {
+  .header {
+    .top-navigation {
+      background: $white;
+    }
+  }
+  .tl-button.tl-button--variant-primary {
+    border-color: transparent;
+    // color: $purple;
+  }
+  .header .logo {
+    background: transparent;
+    width: 110px;
+  }
+}
+
+body.type-page .header .top-navigation .tl-top-navigation-item a,
+body.type-page .header .top-navigation .header-right .tl-icon-button,
+.header-section .header-container {
+  color: $black;
+}
+
+body.type-page .header .logo {
+  background: $black;
+}
+
+.header-section.section-contrast:after {
+  background: url(../white-illustration.svg) no-repeat 100% 100%;
+  background-size: 400px;
+}
