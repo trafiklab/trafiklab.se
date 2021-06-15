@@ -10,3 +10,6 @@ $RECYCLE.BIN/
 
 # OSX
 .DS_Store
+
+# Hugo generated SASS files
+/resources/_gen/assets/scss/
