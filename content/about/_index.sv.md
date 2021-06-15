@@ -3,7 +3,7 @@ title: "Om Trafiklab"
 menu: "main"
 translationKey: "about"
 url: "/sv/om"
-weight: 3
+weight: 30
 layout: info
 ---
 ## Samtrafiken och Trafikverket i samarbete

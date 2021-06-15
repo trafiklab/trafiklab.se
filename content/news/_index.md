@@ -1,7 +1,7 @@
 ---
 title: "News"
 menu: "main"
-weight: 2
+weight: 10
 layout: section
 ---
 News about Trafiklab.
