@@ -1,14 +1,10 @@
-$blue: #4B1FC2;
-$blue-bg: $blue;
-
 .header-section {
   &.section-contrast {
     &:before {
-      background: rgb(126,33,204);
-      background: -moz-linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      background: -webkit-linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      background: linear-gradient(0deg, rgba(75,31,194,1) 0%, rgba(75,31,194,1) 50%, rgba(75,31,194,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e21cc",endColorstr="#7e21cc",GradientType=1);
+      background: $purple;
+      background: -moz-linear-gradient(0deg, $purple 0%, $purple 50%, $purple 100%);
+      background: -webkit-linear-gradient(0deg, $purple 0%, $purple 50%, $purple 100%);
+      background: linear-gradient(0deg, $purple 0%, $purple 50%, $purple 100%);
     }
   }
 }
@@ -16,7 +12,7 @@ $blue-bg: $blue;
 body.type-page {
   .header {
     .top-navigation {
-      background: $blue-bg;
+      background: $purple;
     }
   }
   .tl-button.tl-button--variant-primary {
