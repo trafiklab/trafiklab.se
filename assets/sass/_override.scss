@@ -36,6 +36,8 @@ body.type-page {
   font-size:50px;
   font-family: "League Gothic", "Raleway";
   text-transform: uppercase;
+  color: #fff !important;
+  background-color: $purple;
 }
 
 .header-container p{
@@ -45,6 +47,8 @@ body.type-page {
   line-height: 40px;
   height: 40px;
   max-width: none;
+  color: #fff !important;
+  background-color: $purple;
 }
 
 .landing-roller{
@@ -53,4 +57,5 @@ body.type-page {
   font-family: "League Gothic", "Raleway";
   text-transform: uppercase;
   color: #fff !important;
+  background-color: $purple;
 }
