@@ -1,0 +1,31 @@
+.newsletter-signup {
+  background: $light-bg;
+  border-radius: .75rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+}
+
+#mc_embed_signup form {
+  input.email {
+    border-color: $border-grey;
+    border-radius: .5rem;
+    height: auto;
+    line-height: 1.5rem;
+    padding: .5rem 1rem;
+  }
+
+  input.button {
+    @extend .tl-button;
+    background-color: $purple;
+    border-color: $purple;
+    color: #fff;
+    height: auto;
+    line-height: 1.5rem;
+    padding: .5rem 1rem;
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $purple;
+    }
+  }
+}

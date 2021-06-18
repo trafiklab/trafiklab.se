@@ -1,5 +1,12 @@
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 29rem;            /* Footer height */
+}
+
 body #footer {
-  background: $light-bg;
+  background: $dark-bg;
   .footer-wrapper {
     margin: 0 auto;
     max-width: 86rem;
@@ -22,9 +29,15 @@ body #footer {
     padding: 0
     }
     a {
-      color: $black;
+      color: #fff;
       text-decoration: none;
     }
+  }
+  .tl-h2 {
+    margin-top: 0;
+  }
+  .logos-1 {
+    margin-bottom: 1rem;
   }
   .footer-logo {
     display: inline-block;
@@ -38,10 +51,6 @@ body #footer {
       max-width: 100%;
       height: auto;
     }
-  }
-  .footer-friends {
-    background: $dark-bg;
-    padding: 2rem 1.5rem;
   }
 }
 

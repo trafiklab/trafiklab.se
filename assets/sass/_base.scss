@@ -441,6 +441,7 @@ div.tl-top-navigation-item {
       background: -moz-linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
       background: -webkit-linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
       background: linear-gradient(0deg, rgba(35,35,35,0.758140756302521) 0%, rgba(35,35,35,1) 50%, rgba(35,35,35,1) 100%);
+      box-shadow: inset 0 -0.5rem 0.5rem 0 rgba(0, 0, 0, .1);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232323",endColorstr="#232323",GradientType=1);
       position: absolute;
       height: 13rem;
@@ -448,7 +449,7 @@ div.tl-top-navigation-item {
       margin: 0 -1000px;
       padding: 0 1000px;
       @media screen and (min-width: 50rem) {
-        height: 24rem;
+        height: 29rem;
         margin: 0 -2000px;
         padding: 0 2000px;
       }
