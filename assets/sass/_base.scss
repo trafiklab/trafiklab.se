@@ -462,12 +462,12 @@ body.type-page .tl-top-navigation-item {
     &:after {
       content: "";
       position: absolute;
-      bottom: -65px;
-      background: url(../images/tl-illustration.svg) no-repeat bottom right;
+      bottom: -25px;
+      background: url(../images/tl-illustration-map.svg) no-repeat bottom right;
       display: block;
-      background-size: 400px;
-      width: 400px;
-      height: 230px;
+      background-size: 450px;
+      width: 450px;
+      height: 300px;
       right: 1.5rem;
     }
   }
