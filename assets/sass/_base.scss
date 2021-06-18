@@ -400,6 +400,11 @@ div.tl-top-navigation-item {
     transition: width .2s ease-in-out,opacity .2s ease-in-out;
   }
 }
+body.type-page .tl-top-navigation-item {
+  &::after {
+    background: #fff;
+  }
+}
 .tl-top-navigation-item--active {
   --show-active-line: 1;
   &:after {
