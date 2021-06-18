@@ -26,7 +26,7 @@ body p a:link,
 body p a:visited,
 body table a,
 body table a:link,
-body table a:visited, {
+body table a:visited {
   color: $purple;
   text-decoration: none;
   &:hover,

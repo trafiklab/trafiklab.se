@@ -31,7 +31,7 @@
           {{ $headless := .Site.GetPage "/headless" }}
           {{ $logos := $headless.Resources.Match "partner*" }}
           {{ $title := (index $logos 0) }}
-          <h2 class="tl-h2">{{ $title.Params.Heading }}</h2>
+          <h4>{{ $title.Params.Heading }}</h4>
           {{ range $logos }}
             {{ if .Params.absolute }}
               <a href="{{ .Params.Link }}" target="_blank" class="footer-logo">
@@ -49,7 +49,7 @@
           {{ $headless := .Site.GetPage "/headless" }}
           {{ $logos := $headless.Resources.Match "friend*" }}
           {{ $title := (index $logos 0) }}
-          <h2 class="tl-h2">{{ $title.Params.Heading }}</h2>
+          <h4>{{ $title.Params.Heading }}</h4>
           {{ range $logos }}
             {{ if .Params.absolute }}
               <a href="{{ .Params.Link }}" target="_blank" class="footer-logo">
