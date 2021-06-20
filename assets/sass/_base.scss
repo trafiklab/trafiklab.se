@@ -413,6 +413,9 @@ body.type-page .tl-top-navigation-item {
 }
 .tl-top-navigation-item.header-logo {
   --show-active-line: 0;
+  a {
+    display: block;
+  }
 }
 @media screen and (max-width: 40rem) {
   .header-left {
