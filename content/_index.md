@@ -1,5 +1,6 @@
 ---
 title: "Trafiklab"
+hero: /tl-illustration-map.svg
 mc: true
 ---
 <p>We publish <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/gtfs-regional-realtime/">realtime 
