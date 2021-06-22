@@ -1,14 +1,19 @@
 {{ define "main" }}
     <section class="header-section section-contrast">
-      <div class="header-container">
-        <h1>{{ .Title }}</h1>
+      <div class="header-container tl-grid tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
+        <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-7">
+          <h1>{{ .Title }}</h1>
 
-        {{ .Content}}
-        <!-- landing page layout -->
+          {{ .Content}}
+          <!-- landing page layout -->
+        </div>
+        <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-5">
+          <img class="hero-illustration" src="{{ .Params.Hero }}">
+        </div>
       </div>
     </section>
 
-    <div class="home-container__segment">
+    <div class="home-container__segment home-container__front-blocks">
       <div class="tl-grid home-container__navigation-cards tl-grid__container tl-grid--spacing-large">
 
         {{ $headless := .Site.GetPage "/headless" }}
@@ -29,7 +34,7 @@
     </div>
 
     <div class="home-container__segment">
-      <div class="tl-grid home-container__traveling-abroad tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
+      <div class="tl-grid home-container__cases_news tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
         <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
           <h2 class="tl-h2">Use cases</h2>
           {{ range ( where .Site.RegularPages "Type" "cases" | first 3 ) }}

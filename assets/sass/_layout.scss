@@ -1,7 +1,7 @@
 #main-content {
   margin: 0 1.5rem;
   max-width: 100%;
-  padding-bottom: 30rem;
+  padding-bottom: 29rem;
 }
 
 @media screen and (min-width: 50rem) {
@@ -10,12 +10,18 @@
     max-width: 1376px;
     min-height: 31rem;
     padding-right: 1.5rem;
-    padding-leftt: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   .content-wrapper {
     width: 50rem;
     margin: 0 auto;
+  }
+
+  body.type-page #main-content {
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
