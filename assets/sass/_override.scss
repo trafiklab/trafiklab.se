@@ -19,6 +19,11 @@ body.type-page {
     background-color: #fff;
     border-color: transparent;
     color: $purple;
+    &:hover,
+    &:focus {
+      background-color: $purple;
+      color: #fff;
+    }
   }
   .header .logo {
     background: transparent;
