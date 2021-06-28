@@ -68,11 +68,14 @@ button.mobile-menu-button {
 }
 
 .burger-menu-button__icon {
-  background-color: #fff;
+  background-color: $purple;
   height: 0.125rem;
   margin: 0.25rem 0;
   transition: 0.4s transform ease-in-out, 0.4s color ease-in-out, 0.4s opacity ease-in-out;
   width: 1.375rem;
+}
+body.type-page .burger-menu-button__icon {
+  background-color: #fff;
 }
 
 .mobile-menu-button.is-open .burger-menu-button__icon__1 {

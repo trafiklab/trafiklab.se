@@ -477,7 +477,7 @@ body.type-page .tl-top-navigation-item a {
 @media screen and (max-width: 50rem) {
   .header div.header-logo,
   .header div.header-logo a,
-  .header div.header-logo a .logo {
+  body.type-page .header div.header-logo a .logo {
     margin-left: 0;
     padding-left: 0;
   }
