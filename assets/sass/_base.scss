@@ -407,7 +407,7 @@ div.tl-top-navigation-item {
     }
   }
 }
-body.type-page .tl-top-navigation-item {
+body.type-page .tl-top-navigation-item a {
   &::after {
     background: #fff;
   }
@@ -418,7 +418,7 @@ body.type-page .tl-top-navigation-item {
     width: 2rem;
   }
 }
-.tl-top-navigation-item.header-logo {
+.tl-top-navigation-item.header-logo a {
   --show-active-line: 0;
   a {
     display: block;
