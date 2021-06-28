@@ -31,33 +31,42 @@
     </div>
 
     <div class="header-right">
-      {{- $currentPage := . -}}
-      {{ $pagelang := .Language.Lang }}
-      {{ $pageTranslations := slice }}
-      {{ range .Translations }}
-        {{ $pageTranslations = $pageTranslations | append .Lang }}
-      {{ end }}
-      {{ range $.Site.Home.AllTranslations }}
-        {{ if in $pageTranslations .Lang }}
-          {{- $specificLang := .Lang -}}
-          {{ range $currentPage.Translations }}
-            {{ if (eq .Lang $specificLang) }}
-              <a class="tl-icon-button" href="{{ .Permalink }}">
-                  <span class="l-lang" href="{{ .Permalink }}">{{ .Language.LanguageName }}</span>
-                  <span class="s-lang" href="{{ .Permalink }}">{{ .Lang }}</span>
+      {{ partial "language.html" .}}
+      <a href="#" class="tl-button tl-button--variant-primary user-link">{{ i18n "cta-header" }}</a>
+      <button class="mobile-menu-button">
+        <div class="burger-menu-button__icons">
+          <div class="burger-menu-button__icon burger-menu-button__icon__1"></div>
+          <div class="burger-menu-button__icon burger-menu-button__icon__2"></div>
+          <div class="burger-menu-button__icon burger-menu-button__icon__3"></div>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="vs-mobile">
+    <nav class="mobile-navigation">
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          <li class="tl-mobile-navigation-item {{ if $currentPage.IsMenuCurrent "main" . }} tl-top-navigation-item--active{{ end }}">
+            {{ if .Page.Params.absolute }}
+              <a href="{{ .Page.Params.Link }}" target="_blank">
+                {{ .Title }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            {{ else }}
+              <a href="{{ .URL }}">
+                {{ .Pre }}
+                {{ .Name }}
               </a>
             {{ end }}
-          {{ end }}
-        {{ else }}
-          {{ if ne .Lang $pagelang }}
-            <a class="tl-icon-button" href="{{ .Permalink }}">
-              <span class="l-lang">{{ .Language.LanguageName }}</span>
-              <span class="s-lang">{{ .Site.Language.Lang }}</span>
-            </a>
-          {{ end }}
+          </li>
         {{ end }}
-      {{ end }}
-      <a href="#" class="tl-button tl-button--variant-primary user-link">{{ i18n "cta-header" }}</a>
-    </div>
+      </ul>
+      <a href="#">{{ i18n "cta-header" }}</a>
+      {{ partial "language.html" .}}
+    </nav>
   </div>
 </header>

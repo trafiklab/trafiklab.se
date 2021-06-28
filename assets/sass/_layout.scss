@@ -4,6 +4,10 @@
   padding-bottom: 29rem;
 }
 
+body.type-page #main-content {
+  margin: 0;
+}
+
 @media screen and (min-width: 50rem) {
   #main-content {
     margin: auto;

@@ -1,0 +1,24 @@
+{{- $currentPage := . -}}
+{{ $pagelang := .Language.Lang }}
+{{ $pageTranslations := slice }}
+{{ range .Translations }}
+  {{ $pageTranslations = $pageTranslations | append .Lang }}
+{{ end }}
+{{ range $.Site.Home.AllTranslations }}
+  {{ if in $pageTranslations .Lang }}
+    {{- $specificLang := .Lang -}}
+    {{ range $currentPage.Translations }}
+      {{ if (eq .Lang $specificLang) }}
+        <a class="tl-icon-button" href="{{ .Permalink }}">
+            <span class="l-lang" href="{{ .Permalink }}">{{ .Language.LanguageName }}</span>
+        </a>
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ if ne .Lang $pagelang }}
+      <a class="tl-icon-button" href="{{ .Permalink }}">
+        <span class="l-lang">{{ .Language.LanguageName }}</span>
+      </a>
+    {{ end }}
+  {{ end }}
+{{ end }}

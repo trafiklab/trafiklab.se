@@ -23,5 +23,13 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     {{ block "page-script" . }}{{ end }}
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".mobile-menu-button").click(function () {
+          $(this).toggleClass("is-open");
+          $(".mobile-navigation").toggleClass("is-open");
+        });
+      });
+    </script>
   </body>
 </html>
