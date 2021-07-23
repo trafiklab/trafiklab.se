@@ -1,12 +1,12 @@
-<header class="header ui-menu--desktop">
+<header class="site-header">
   <div class="top-navigation">
     <div class="header-left">
-      <div class="tl-top-navigation-item header-logo">
-        {{- $logoUrl := resources.Get "images/logo.svg" -}}
-        <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="logo" /></a>
-      </div>
       <nav>
         <ul>
+          <li class="tl-top-navigation-item header-logo">
+            {{- $logoUrl := resources.Get "images/logo.svg" -}}
+            <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="logo" /></a>
+          </li>
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
             <li class="tl-top-navigation-item {{ if $currentPage.IsMenuCurrent "main" . }} tl-top-navigation-item--active{{ end }}">
