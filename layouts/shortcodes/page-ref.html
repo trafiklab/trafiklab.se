@@ -1,17 +1,19 @@
-{{ with .Site.GetPage (.Get "page") }}
-<div class="tl-grid tl-grid__container">
-    <a class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6 tl-base-card tl-inline-navigation-card"
-       href="{{ .Permalink }}">
-        <h4 class="tl-navigation-card__title">{{ .Title }}</h4>
-        <p class="tl-paragraph tl-paragraph--margin-bottom">{{ slicestr .Summary 0 100 | markdownify }} ...</p>
-        <svg class="tl-icon tl-navigation-card__icon tl-navigation-card__arrow-icon" viewBox="0 0 16 16" width="1em"
-             height="1em" color="currentColor">
-            <path fill="currentColor" fill-rule="evenodd"
-                  d="M10.043 2.76l-.943.943 3.625 3.623H1V8.66l11.726-.001L9.1 12.284l.943.943 4.762-4.762a.667.667 0 00.07-.86l-.07-.083-4.762-4.762z"
-                  clip-rule="evenodd"></path>
-        </svg>
-    </a>
-</div>
-{{ else }}
-{{ errorf "Missing page for page-ref: '%s'" (.Get "page") }}
+<div class="tl-grid tl-grid__container tl-page-ref">
+{{ $site := .Site }}
+{{ range $var :=  .Params }}
+    {{ with $site.GetPage $var }}
+<a class="tl-grid__item tl-grid--small-12 tl-grid--medium-4 tl-base-card tl-inline-navigation-card" href="{{ .Permalink }}">
+    <h4 class="tl-navigation-card__title">{{ .Title }}</h4>
+    <p class="tl-paragraph tl-paragraph--margin-bottom">{{ slicestr .Summary 0 100 | markdownify }} ...</p>
+    <svg class="tl-icon tl-navigation-card__icon tl-navigation-card__arrow-icon" viewBox="0 0 16 16" width="1em"
+         height="1em" color="currentColor">
+        <path fill="currentColor" fill-rule="evenodd"
+              d="M10.043 2.76l-.943.943 3.625 3.623H1V8.66l11.726-.001L9.1 12.284l.943.943 4.762-4.762a.667.667 0 00.07-.86l-.07-.083-4.762-4.762z"
+              clip-rule="evenodd"></path>
+    </svg>
+</a>
+    {{ else }}
+        {{ errorf "Missing page for page-ref: '%s'" (.Get "page") }}
+    {{ end }}
 {{ end }}
+</div>

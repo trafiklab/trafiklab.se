@@ -34,6 +34,7 @@ html {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-flow: row;
+  column-gap: 16px;
   width: 100%;
 }
 .tl-grid__item {
@@ -51,35 +52,10 @@ html {
   gap: 2rem;
 }
 @media screen and (min-width: 50rem) {
-  .tl-grid--medium-1 {
-    grid-column: span 1;
-  }
-  .tl-grid--medium-2 {
-    grid-column: span 2;
-  }
-  .tl-grid--medium-3 {
-    grid-column: span 3;
-  }
-  .tl-grid--medium-4 {
-    grid-column: span 4;
-  }
-  .tl-grid--medium-5 {
-    grid-column: span 5;
-  }
-  .tl-grid--medium-6 {
-    grid-column: span 6;
-  }
-  .tl-grid--medium-7 {
-    grid-column: span 7;
-  }
-  .tl-grid--medium-9 {
-    grid-column: span 9;
-  }
-  .tl-grid--medium-10 {
-    grid-column: span 10;
-  }
-  .tl-grid--medium-11 {
-    grid-column: span 11;
+  @for $i from 1 through 12 {
+    .tl-grid--medium-#{$i} {
+      grid-column: span $i;
+    }
   }
 }
 
@@ -504,7 +480,7 @@ img.hero-illustration {
 @media screen and (max-width: 50rem) {
   img.hero-illustration {
     display: none;
-  } 
+  }
 }
 
 .home-container__front-blocks {

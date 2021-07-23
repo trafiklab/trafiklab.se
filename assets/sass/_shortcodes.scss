@@ -57,11 +57,13 @@ pre {
   > a {
     color: #fff !important;
     background: $black;
+
     &:hover {
       color: #fff !important;
     }
   }
 }
+
 .nav-tabs > li > a:hover {
   color: $black !important;
 }
