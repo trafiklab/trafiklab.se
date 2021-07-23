@@ -1,0 +1,66 @@
+.header-section {
+  &.section-contrast {
+    &:before {
+      background: $purple;
+      background: -moz-linear-gradient(0deg, $purple 0%, $purple 50%, $purple 100%);
+      background: -webkit-linear-gradient(0deg, $purple 0%, $purple 50%, $purple 100%);
+      background: linear-gradient(0deg, $purple 0%, $purple 50%, $purple 100%);
+    }
+  }
+}
+
+body.type-page {
+  .header {
+    .top-navigation {
+      background: $purple;
+    }
+  }
+  .tl-button.tl-button--variant-primary {
+    background-color: #fff;
+    border-color: transparent;
+    color: $purple;
+    &:hover,
+    &:focus {
+      background-color: $purple;
+      color: #fff;
+    }
+  }
+  .header .logo {
+    background: transparent;
+    width: 110px;
+  }
+}
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("/fonts/LeagueGothic-Regular.otf");
+}
+
+.header-container h1 {
+  display: inline;
+  font-size:50px;
+  font-family: "League Gothic", "Raleway";
+  text-transform: uppercase;
+  color: #fff !important;
+  background-color: $purple;
+}
+
+.header-container p{
+  font-size:30px;
+  font-family: Arial;
+  font-weight: 400;
+  line-height: 40px;
+  height: 40px;
+  max-width: none;
+  color: #fff !important;
+  background-color: $purple;
+}
+
+.landing-roller{
+  font-size:40px;
+  line-height: 40px;
+  font-family: "League Gothic", "Raleway";
+  text-transform: uppercase;
+  color: #fff !important;
+  background-color: $purple;
+}
