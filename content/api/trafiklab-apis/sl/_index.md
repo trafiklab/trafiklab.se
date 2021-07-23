@@ -17,9 +17,7 @@ ResRobot is an API which provides information for public transport in entire Swe
 {{% warning %}} SL's APIs only offer data for SL's traffic. [ResRobot](../resrobot/) offers the same data for
 entire Sweden. {{% /warning %}}
 
-{{% page-ref page="/api/trafiklab-apis/resrobot/" %}}
-
 {{% info %}} If you want to do analytics, or if your service will have more than a million active users, we
 recommend using GTFS and hosting your own API based on that data. {{% /info %}}
 
-{{% page-ref page="/api/trafiklab-apis/gtfs-regional/" %}}
+{{% page-ref "/api/trafiklab-apis/resrobot/" "/api/trafiklab-apis/gtfs-regional/" %}}
