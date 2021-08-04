@@ -3,7 +3,9 @@ title: ResRobot
 layout: "single"
 weight: 40
 url: "api/resrobot"
-aliases: ["api/resrobot-reseplanerare", "api/resrobot-stolptidtabeller-2"]
+aliases: 
+  - /api/resrobot-reseplanerare
+  - /api/resrobot-stolptidtabeller-2
 ---
 
 ### What is ResRobot?

@@ -2,7 +2,9 @@
 title: GTFS Regional
 layout: "single"
 weight: 10
-url: "/api/trafiklab-apis/gtfs-regional/"
+aliases:
+  - /api/gtfs-regional-static-data
+  - /api/gtfs-regional-realtime
 ---
 
 GTFS regional is a set of GTFS feeds of high quality, with realtime data and even realtime GPS positions for 

@@ -1,5 +1,6 @@
 ---
 title: ResRobot Stop lookup
+alias: /api/resrobot-reseplanerare/platsuppslag
 ---
 
 {{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the Open-API

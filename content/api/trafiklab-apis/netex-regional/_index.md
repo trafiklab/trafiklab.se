@@ -2,7 +2,6 @@
 title: NeTEx Regional
 layout: "single"
 weight: 30
-url: "api/netex-regional"
 alias: "api/netex-regional-static-data"
 ---
 

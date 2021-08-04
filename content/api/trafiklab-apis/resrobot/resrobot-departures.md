@@ -1,5 +1,6 @@
 ---
 title: ResRobot Timetables
+alias: /node/14075/documentation
 ---
 
 {{% note %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
