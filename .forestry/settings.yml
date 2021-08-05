@@ -5,6 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: content/open data
+  label: Docs
+  create: all
+  match: "**/*"
+- type: directory
   path: content/about
   label: About
   create: all
@@ -15,7 +20,7 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/data
+  path: content/api
   label: Data
   create: all
   match: "**/*"
