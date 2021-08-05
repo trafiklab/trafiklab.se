@@ -46,35 +46,17 @@ https://ec.europa.eu/transport/sites/default/files/its-national-access-points.pd
 
 |Country|Provider/Attribution|License|GTFS|NeTEx|Comments|
 |----|----|----|----|----|----|
-|🇦🇹 Austria|||
 |🇧🇪 Belgium|[NMBS/SNCB](https://nmbs.be)|Contract|[Registration page](https://www.belgiantrain.be/en/3rd-party-services/mobility-service-providers/public-data)|[Registration page](https://www.belgiantrain.be/en/3rd-party-services/mobility-service-providers/public-data)|Signed contract required. NeTEx according to Belgian Epip profile.|
-|🇧🇬 Bulgaria|||
-|🇭🇷 Croatia|||
-|🇨🇾 Republic of Cyprus|||
-|🇨🇿 Czech Republic|||
-|🇩🇰 Denmark|[Rejseplanen](https://rejseplanen.dk)| |[Registration page](https://help.rejseplanen.dk/hc/en-us/categories/201728005-Labs)| | Account required | 
+|🇩🇰 Denmark|[Rejseplanen](https://rejseplanen.dk)| |[gtfs.zip](http://www.rejseplanen.info/labs/GTFS.zip)| | Account required for developer portal access | 
 |🇪🇪 Estonia|[Transpordiamet](https://www.mnt.ee/eng/public-transportation/public-transport-information-system)| |[gtfs.zip](https://peatus.ee/gtfs/gtfs.zip)| | |
 |🇫🇮 Finland| | | [National Access Point, regional feeds](https://finap.fi/#/services) | [National Access Point, regional feeds](https://finap.fi/#/services) | |
 |🇫🇷 France| | |[Open Data Portal, regional feeds](https://navitia.opendatasoft.com/explore/?sort=modified&q=&refine.geographicarea=France)| | |
 |🇩🇪 Germany|DELFI/opendata-oepnv.de|CC-BY 4.0|[Registration page](https://www.opendata-oepnv.de/ht/de/organisation/delfi/startseite?tx_vrrkit_view%5Bdataset_name%5D=deutschlandweite-sollfahrplandaten-gtfs&tx_vrrkit_view%5Baction%5D=details&tx_vrrkit_view%5Bcontroller%5D=View)|[Registration page](https://www.opendata-oepnv.de/ht/de/organisation/delfi/startseite?tx_vrrkit_view%5Bdataset_name%5D=deutschlandweite-sollfahrplandaten&tx_vrrkit_view%5Bdataset_formats%5D%5B0%5D=ZIP&tx_vrrkit_view%5Baction%5D=details&tx_vrrkit_view%5Bcontroller%5D=View)|Unfortunately, this feed only covers ~75% of all public transportation (as of 4/2020), mainly because some regional providers are still not included. If this is insufficient for you, consider using the german NETEX feed, which has a higher coverage, or manually combine available regional feeds. Account required.|
-|🇬🇷 Greece|||
-|🇭🇺 Hungary|||
-|🇮🇸 Iceland|||
 |🇮🇪 Ireland|[Transport for Ireland](https://www.transportforireland.ie/transitData/PT_Data.html)|CC-BY 4.0|[gtfs.zip](https://www.transportforireland.ie/transitData/google_transit_combined.zip)||
-|🇮🇹 Italy|||
-|🇱🇻 Latvia|||
+|🇱🇻 Latvia|Rīgas Satiksme| | [gtfs.zip](http://saraksti.rigassatiksme.lv/riga/gtfs.zip) | | |
 |🇱🇹 Lithuania|[Visimarsrutai](https://www.visimarsrutai.lt/gtfs/)| |[gtfs.zip](https://www.visimarsrutai.lt/gtfs/gtfs_all.zip)||
-|🇱🇺 Luxembourg|||
-|🇲🇹 Malta|||
 |🇳🇱 Netherlands|[OpenOV, Nationaal Toegangspunt ITS](https://nt.ndw.nu/#/settings/multimodaal-reisinformatie-overview/1)|CC0|[gtfs-openov-nl.zip](http://gtfs.openov.nl/gtfs-rt/gtfs-openov-nl.zip)
 |🇳🇴 Norway|[Entur](https://developer.entur.no)|NLOD|[rb_norway-aggregated-gtfs.zip](https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_norway-aggregated-gtfs.zip)|[rb_norway-aggregated-netex.zip](https://storage.googleapis.com/marduk-production/outbound/netex/rb_norway-aggregated-netex.zip)|
-|🇵🇱 Poland|||
-|🇵🇹 Portugal|||
-|🇷🇴 Romania|||
-|🇸🇰 Slovakia|||
-|🇸🇮 Slovenia|||
-|🇪🇸 Spain|||
-|🇨🇭 Switzerland|||
 
 Sources:
 
