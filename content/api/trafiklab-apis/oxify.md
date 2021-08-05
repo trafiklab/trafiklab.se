@@ -1,6 +1,8 @@
 ---
-title: Oxyfi-Realtidspositionering 
+title: Oxyfi-Realtidspositionering
+layout: "single"
 summary: Push-API med information om realtidspositioner på fordon i kollektivtrafiken. För närvarande levererar API:et information för alla tåg som körs av Värmlandstrafik, Norrtåg och Tåg i Bergslagen. Informationen kommer från Oxyfis system för Internet ombord. Arbete pågår också för att ta med tåg från andra tågoperatörer.
+weight: 95
 ---
 
 ## API Overview

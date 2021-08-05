@@ -6,7 +6,7 @@ layout: "single"
 sidebar: true
 ---
 
-# Trafiklabs APIs
+## Trafiklabs APIs
 
 At Trafiklab we're offering a wide range of APIs and datasets. Each API and dataset provides data of a different kind or
 format. Choosing the right data for your project will help you getting the best results.
@@ -26,3 +26,11 @@ and datasets.
 | [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
 | Oxify Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
 | Trafikverkets API | Json, XML |  |  | Road and national rail | Road and rail API |
+
+## Other APIs
+
+While we offer a wide range of APIs and datasets covering public transport, easily accessible through Trafiklab, you
+sometimes need something less focussed on public transport, or data not available on Trafiklab.
+
+The APIs in the "other" category cannot be accessed through Trafiklab, but might still be valuable additions for your 
+project.

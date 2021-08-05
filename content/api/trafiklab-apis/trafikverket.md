@@ -1,7 +1,7 @@
 ---
 title: Trafikverket Öppet API 
 layout: "single"
-weight: 30 
+weight: 90 
 summary: Aktuell trafikinformation från Trafikverket om både tåg- och vägtrafik.
 aliases:
   - /api/trafikverket-oppet-api

@@ -1,5 +1,7 @@
 ---
 title: "Göteborg open data"
+layout: "single"
+weight: 110
 ---
 Göteborg's open-data portal contains lots of valuable information, such as reports about air quality , bike-sharing and
 traffic noise.
