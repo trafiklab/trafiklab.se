@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: $footer-height;
+  min-height: $footer-height;
 }
 
 body #footer {
@@ -62,7 +62,7 @@ body #footer {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 50rem) {
+@media (min-width:  $breakpoint-mobile) {
   .footer-text {
     margin-bottom: 1rem;
   }

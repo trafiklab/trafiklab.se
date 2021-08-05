@@ -13,7 +13,7 @@ body.type-home #main-content {
   margin: 0;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: $breakpoint-mobile) {
   #main-content {
     margin: auto;
     max-width: 1376px;
@@ -39,6 +39,14 @@ body.type-home #main-content {
   flex-direction: row;
 }
 
+@media screen and (max-width: $breakpoint-mobile){
+  .with-sidebar #page-content {
+    flex-direction: column-reverse;
+  }
+
+
+}
+
 .with-footer #page-content {
   padding-bottom: $footer-height + 3rem; // additional margin for better readability
 }
@@ -53,22 +61,34 @@ body.type-home #main-content {
 
 .main-content > .page {
   margin: 0 auto;
+  padding: 0 48px;
 }
 
 // Content
-@media screen and (min-width: 800px) {
+@media screen and (min-width: $breakpoint-mobile) {
   .page {
-    width: 800px;
+    width: 700px;
+    max-width: 100%;
+  }
+  .with-sidebar .page {
+    width: 100%;
+    max-width: 700px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-lg) {
   .page {
-    width: 1200px;
+    width: 900px;
+    max-width: 100%;
+  }
+
+  .with-sidebar .page {
+    width: 100%;
+    max-width: 1100px;
   }
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: $breakpoint-mobile) {
   .main-content-wrapper {
     overflow-x: visible;
   }

@@ -15,9 +15,9 @@
     {{ $root := .FirstSection }}
     <ul class="tl-side-navigation tl-side-navigation--small list">
       {{ if not $root.Params.headless }}
-      <li class="tl-side-navigation__item">
-        <a class="tl-side-navigation__click-target child-title {{ if eq $currentPage.Permalink $root.Permalink }} tl-side-navigation__click-target--active{{end}}"
-           href="{{ .Permalink }}">
+      <li class="tl-side-navigation tl-side-navigation__item">
+        <a class="tl-side-navigation__click-target {{ if eq $currentPage.Permalink $root.Permalink }} tl-side-navigation__click-target--active{{end}}"
+           href="{{ $root.Permalink }}">
           <span class="title">{{ $root.Title }}</span>
         </a>
       </li>

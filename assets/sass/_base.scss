@@ -4,7 +4,7 @@ html {
   font-size: 1rem;
   line-height: 1.375rem;
 }
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: $breakpoint-mobile) {
   html {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -61,7 +61,6 @@ html {
 }
 
 .header-container h1 {
-  display: inline;
   font-size:50px;
   font-family: "League Gothic", "Raleway";
   text-transform: uppercase;
@@ -112,7 +111,8 @@ html {
 .tl-grid--spacing-extraLarge {
   gap: 2rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   @for $i from 1 through 12 {
     .tl-grid--medium-#{$i} {
       grid-column: span $i;
@@ -302,7 +302,8 @@ a.tl-media-card__text {
   line-height: 1.5rem;
   margin: 0 0 1rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .tl-paragraph {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -314,7 +315,8 @@ a.tl-media-card__text {
   line-height: 1.875rem;
   margin: 1.5rem 0;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .tl-lead-paragraph {
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -370,7 +372,7 @@ a.tl-media-card__text {
 img.hero-illustration {
   width: 100%;
 }
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: $breakpoint-mobile) {
   img.hero-illustration {
     display: none;
   }
@@ -391,7 +393,8 @@ img.hero-illustration {
   line-height: 2.625rem;
   margin: 0 0 1rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .tl-h1 {
     font-size: 2.5rem;
     line-height: 3.75rem;
@@ -402,7 +405,8 @@ img.hero-illustration {
   line-height: 1.5rem;
   margin: 1.5rem 0 .5rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .tl-h3 {
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -422,7 +426,8 @@ img.hero-illustration {
   font-size: .875rem;
   line-height: 1.25rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .tl-label {
     line-height: 1.375rem;
   }
@@ -445,7 +450,8 @@ img.hero-illustration {
   padding: 1rem;
   cursor: pointer;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .blogpost-overview__post {
     flex-direction: row;
   }
@@ -453,7 +459,8 @@ img.hero-illustration {
 .blogpost-overview__image {
   width: 100%;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .blogpost-overview__image {
     height: 14rem;
     width: 22rem;
@@ -466,7 +473,8 @@ img.hero-illustration {
   padding-right: 0;
   padding-top: 1.5rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .blogpost-overview__information {
     padding-top: 0;
     padding-left: 3rem;
@@ -497,7 +505,8 @@ img.hero-illustration {
   background: $light-bg;
   padding: 1.5rem 0 1.5rem 1.5rem;
 }
-@media screen and (min-width: 50rem) {
+
+@media screen and (min-width: $breakpoint-mobile) {
   .omtl-people-presenter__info {
     padding: 3rem 0 3rem 3rem;
   }
@@ -515,7 +524,7 @@ img.hero-illustration {
   margin: 2rem 0 .75rem;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: $breakpoint-mobile) {
   .tl-h2 {
     font-size: 1.5rem;
     line-height: 2rem;

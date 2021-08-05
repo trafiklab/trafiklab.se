@@ -14,9 +14,14 @@ $light-bg: $grey;
 
 $header-height: 96px;
 
+
+$breakpoint-mobile: 760px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1200px;
+
 $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $app-font-family: "Raleway", $font-family-base;
 
-$sidebar-width: 20rem;
-$sidebar-width-lg: 26rem;
+$sidebar-width: 320px;
+$sidebar-width-lg: 420px;
 $footer-height: 29rem;

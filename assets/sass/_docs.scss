@@ -7,21 +7,10 @@
   background: $light-bg;
 }
 
-  .site-sidebar-wrapper {
-    max-width: $sidebar-width;
-    height: 100vh;
-    padding-bottom: 10rem;
-  }
-
-
-@media screen and (min-width: 75rem) {
-  .site-sidebar-wrapper {
-    max-width: $sidebar-width-lg;
-
-    .menu {
-      width: $sidebar-width-lg;
-    }
-  }
+.site-sidebar-wrapper {
+  max-width: $sidebar-width;
+  height: 100vh;
+  padding-bottom: 10rem;
 }
 
 .menu {
@@ -35,11 +24,39 @@
     padding: 1.5rem 2.5rem;
   }
 }
-@media screen and (min-width: 800px) {
-  .menu__logo {
-    display: none;
+
+@media screen and (min-width: $breakpoint-md) {
+  .site-sidebar-wrapper {
+    width: $sidebar-width-lg;
+    max-width: $sidebar-width-lg;
+    min-width: $sidebar-width-lg;
+
+    .menu {
+      width: $sidebar-width-lg;
+      max-width: $sidebar-width-lg;
+      min-width: $sidebar-width-lg;
+    }
   }
 }
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .site-sidebar-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding-bottom: 0;
+
+    .menu {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      height: auto;
+      overflow-y: unset;
+    }
+  }
+}
+
 .tl-side-navigation {
   --padding-vertical: 1rem;
   --padding-horizontal: 2.5rem;
@@ -51,14 +68,17 @@
   position: relative;
   transition: max-width .2s ease-in-out;
 }
-@media screen and (min-width: 50rem) {
-  .tl-side-navigation {
-    max-width: 26rem;
+
+@media screen and (min-width: $breakpoint-mobile) {
+  .menu__logo {
+    display: none;
   }
 }
+
 .tl-side-navigation--small {
   --padding-vertical: 0.6875rem;
 }
+
 .tl-side-navigation__click-target {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -309,5 +329,27 @@ input {
 
   .admonition-icon {
     color: #9d95fd;
+  }
+}
+
+.docs-header {
+  margin-top: 2rem;
+
+  .docs-header-vcs {
+    filter: invert(95%);
+
+    &:hover {
+      filter: invert(50%);
+    }
+
+    img {
+      height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .docs-header-vcs {
+    display: none;
   }
 }

@@ -1,7 +1,8 @@
 .site-header {
   display: flex;
   flex-direction: column;
-  height: $header-height;
+  min-height: $header-height;
+  background-color: white;
 
   .top-navigation {
     display: flex;
@@ -9,7 +10,6 @@
     width: 100%;
     transition: margin-left .1s ease-out;
     z-index: 20;
-
     background-color: white;
 
     font-size: 0.875rem;
@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: $breakpoint-mobile) {
   .top-navigation {
     height: 6rem;
     position: fixed;
@@ -132,10 +132,8 @@ div.tl-top-navigation-item {
 
 
 body.type-home {
-  .site-header {
-    .top-navigation {
-      background: $purple;
-    }
+  .site-header, .top-navigation {
+    background: $purple;
   }
 
   .tl-button.tl-button--variant-primary {
@@ -187,6 +185,7 @@ button.mobile-menu-button {
 .mobile-navigation {
   background: $black;
   display: none;
+
   a,
   a:link,
   a:visited {
@@ -196,14 +195,17 @@ button.mobile-menu-button {
     margin: 0 1rem;
     width: 100%;
   }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
     .tl-mobile-navigation-item {
       display: block;
       text-align: left;
       width: 100%;
+
       a {
         font-weight: 600;
         text-decoration: none;
@@ -286,8 +288,34 @@ body.type-home {
   }
 }
 
+@media screen and (max-width: $breakpoint-mobile) {
+  .tl-top-navigation-item.header-logo {
+    margin-left: 0;
+    padding-left: 0;
 
-@media screen and (min-width: 50rem) {
+    a, img {
+      margin-left: 0;
+    }
+  }
+
+  .tl-button.tl-button--variant-primary {
+    padding: 0;
+    background: none;
+    border: none;
+    min-width: auto;
+    white-space: nowrap;
+  }
+
+  .header-section.section-contrast {
+    &:after {
+      bottom: -20px;
+      background-size: 300px;
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
   .header-right {
     .tl-icon-button,
     .user-link {
@@ -301,31 +329,7 @@ body.type-home {
   .header-left li {
     display: block;
   }
-}
 
-@media screen and (max-width: 50rem) {
-  .tl-top-navigation-item.header-logo {
-    margin-left: 0;
-    padding-left: 0;
-
-    a, img {
-      margin-left: 0;
-      padding-left: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 40rem) {
-  .tl-button.tl-button--variant-primary {
-    padding: 0;
-    background: none;
-    border: none;
-    min-width: auto;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (min-width: 50rem) {
   .header-section {
     padding-bottom: 7rem;
 
@@ -343,16 +347,6 @@ body.type-home {
   }
   .article-header__container, .article-header__wrapper {
     margin-bottom: 5rem;
-  }
-}
-
-@media screen and (max-width: 60rem) {
-  .header-section.section-contrast {
-    &:after {
-      bottom: -20px;
-      background-size: 300px;
-      width: 300px;
-    }
   }
 }
 
