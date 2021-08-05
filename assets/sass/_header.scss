@@ -1,6 +1,7 @@
 .site-header {
   display: flex;
   flex-direction: column;
+  height: $header-height;
 
   .top-navigation {
     display: flex;
@@ -8,6 +9,8 @@
     width: 100%;
     transition: margin-left .1s ease-out;
     z-index: 20;
+
+    background-color: white;
 
     font-size: 0.875rem;
     justify-content: space-between;
@@ -128,7 +131,7 @@ div.tl-top-navigation-item {
 }
 
 
-body.type-page {
+body.type-home {
   .site-header {
     .top-navigation {
       background: $purple;
@@ -213,7 +216,7 @@ button.mobile-menu-button {
   }
 }
 
-body.type-page {
+body.type-home {
   .mobile-navigation {
     background: $purple;
   }

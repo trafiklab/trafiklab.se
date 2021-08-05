@@ -4,31 +4,30 @@
     {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
   </head>
   {{ $sidebar := eq (.FirstSection.Param "sidebar") true }}
-  <body class="type-{{ .Type }} {{ if $sidebar }} type-with-sidebar {{ end }}">
-    <div id="page-container">
-      {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
+  <body class="type-{{ .Type }} {{ if $sidebar }} with-sidebar {{ end }}  {{ if not $sidebar }} with-footer {{ end }}">
+  <div id="page-container">
+    {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
+    <div id="page-content">
       {{ if $sidebar }}
-        {{ block "sidebar" . }}{{ partial "sidebar.html" .}}{{ end }}
-        {{ block "main" . }}
-        {{ end }}
-      {{ else }}
-        <main id="main-content">
-          {{ block "main" . }}
-          {{ end }}
-        </main>
-        {{ block "footer" . }}
-          {{ partial "footer.html" .}}
-        {{ end }}
-      {{ end }}
+      {{ block "sidebar" . }}{{ partial "sidebar.html" .}}{{ end }}
+      {{ block "main" . }} {{ end }}
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    {{ block "page-script" . }}{{ end }}
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $(".mobile-menu-button").click(function () {
-          $(this).toggleClass("is-open");
-          $(".mobile-navigation").toggleClass("is-open");
-        });
+    {{ else }}
+    {{ block "main" . }} {{ end }}
+  </div>
+  {{ block "footer" . }}
+  {{ partial "footer.html" .}}
+  {{ end }}
+  {{ end }}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  {{ block "page-script" . }}{{ end }}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".mobile-menu-button").click(function () {
+        $(this).toggleClass("is-open");
+        $(".mobile-navigation").toggleClass("is-open");
+      });
       });
     </script>
   </body>

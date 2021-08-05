@@ -1,37 +1,42 @@
 {{ define "main" }}
+
+<main class="main-content">
+
+  <div class="page">
   <div class="content-wrapper">
     {{ if not .Params.Hide_title }}
-      <h1>{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
     {{ end }}
 
     {{ .Content }}
   </div>
   <aside class="info-extras">
-    {{ $directory := trim .File.Dir "/" }}
+    {{ $directory := trim .File.Dir "\\/" }}
     {{ $headless := .Site.GetPage "/headless" }}
-    {{ $infoBlocks := $headless.Resources.Match (print $directory "*") }}
+    {{ $infoBlocks := $headless.Resources.Match (print $directory "/*") }}
     {{ if $infoBlocks }}
-      {{ $title := (index $infoBlocks 0) }}
-      <h2 class="tl-h2">{{ $title.Params.Heading }}</h2>
-      <div class="tl-grid tl-grid__container tl-grid--spacing-extraLarge">
-        {{ range $infoBlocks }}
-          <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
-            <div class="omtl-people-presenter omtur-people-presenter--vertical">
-              <div class="omtl-people-presenter__container">
-                {{ if .Params.Image }}
-                  <div class="omtl-people-presenter__image">
-                    <img src="{{ .Params.Image }}">
-                  </div>
-                {{ end }}
-                <div class="omtl-people-presenter__info">
-                  <h3>{{ .Title }}</h3>
-                  {{ .Content }}
-                </div>
-              </div>
+    {{ $title := (index $infoBlocks 0) }}
+    <h2 class="tl-h2">{{ $title.Params.Heading }}</h2>
+    <div class="tl-grid tl-grid__container tl-grid--spacing-extraLarge">
+      {{ range $infoBlocks }}
+      <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
+        <div class="omtl-people-presenter omtur-people-presenter--vertical">
+          <div class="omtl-people-presenter__container">
+            {{ if .Params.Image }}
+            <div class="omtl-people-presenter__image">
+              <img src="{{ .Params.Image }}">
+            </div>
+            {{ end }}
+            <div class="omtl-people-presenter__info">
+              <h3>{{ .Title }}</h3>
+              {{ .Content }}
             </div>
           </div>
-        {{ end }}
+        </div>
       </div>
+      {{ end }}
+    </div>
     {{ end }}
-  </aside>
+  </aside></div>
+</main>
 {{ end }}
