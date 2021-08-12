@@ -2,10 +2,9 @@
 title: "Occupancy data in GTFS Regional"
 date: "2021-04-16"
 layout: info
-hide_title: true
+image: /media/2021/01/sj-x2000-centralen.jpg
+image_credit: Samtrafiken
 ---
-
-# Occupancy data in GTFS Regional Realtime
 
 In the past month we have started publishing new data in the GTFS Regional Realtime dataset. This new data shows the
 occupancy on public transport vehicles in realtime, which adds opportunities and enables use-cases which were not
