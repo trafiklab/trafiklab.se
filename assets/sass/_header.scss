@@ -345,8 +345,13 @@ body.type-home {
       }
     }
   }
-  .article-header__container, .article-header__wrapper {
+  .article-header__wrapper {
     margin-bottom: 5rem;
+  }
+  .article-header__container {
+    border-bottom: 1px dashed $border-grey;
+    margin: 1rem 0 3rem;
+    padding-bottom: 2rem;
   }
 }
 

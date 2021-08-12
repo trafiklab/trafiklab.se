@@ -3,21 +3,16 @@
 <main class="main-content">
   <div class="page">
     <div data-aos="fade-in" class="omtl-article-header__wrapper aos-init aos-animate">
-      <div class="tl-grid article-header__container tl-grid__container tl-grid--spacing-none">
-        <div class="tl-grid tl-grid__item tl-grid--small-11 tl-grid--medium-5">
-          <h1 class="tl-h1">{{ .Title }}</h1>
-        </div>
-        <div class="tl-grid tl-grid__item tl-grid--small-1 tl-grid--medium-1"></div>
-        <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6">
-          <div class="tl-lead-paragraph" style="margin-top:0">{{ .Content }}</div>
-        </div>
+      <div class=" article-header__container">
+        <h1 class="tl-h1">{{ .Title }}</h1>
+        <div class="tl-lead-paragraph" style="margin-top:0">{{ .Content }}</div>
       </div>
       <div class="blogpost-overview-grid tl-card-list">
         {{ range .Pages }}
         <a class="tl-card-list__item blogpost-overview__link" title="{{ .Title }}" href="{{ .Permalink }}">
           <div class="blogpost-overview__post">
             {{ if .Params.Image }}
-            <img src="{{ .Params.Image }}" class="blogpost-overview__image">
+              <img src="{{ .Params.Image }}" class="blogpost-overview__image">
             {{ end }}
             <div class="blogpost-overview__information">
               <div>

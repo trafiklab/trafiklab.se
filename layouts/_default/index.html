@@ -56,3 +56,26 @@
 
 </main>
 {{ end }}
+
+{{- define "page-script" -}}
+<script type="text/javascript">
+
+$(function () {
+  const $first = $('.landing-roller:first');
+  const $second = $('.landing-roller').eq(1);
+  const firstArr = ["Time tables", "Test", "GTFS files"];
+  const secondArr = ["Awesome applications", "Travel planners", "Tests"];
+
+  count = 0;
+
+  
+  setInterval(function () {
+    count++;
+
+    $first.text(firstArr[count % firstArr.length]);
+    $second.text(secondArr[count % secondArr.length]);
+  }, 4500);
+});
+
+</script>
+{{- end -}}

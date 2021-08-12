@@ -197,17 +197,36 @@ html {
     display: block;
     margin: 1rem 0;
     padding-bottom: 1rem;
+    --show-active-line: 0;
     text-decoration: none;
     transition: .5s;
     &:last-child {
       border-bottom: none;
     }
     .list-item-title {
+      display: inline-block;
       font-weight: 600;
+      &::after {
+        content: "";
+        display: block;
+        bottom: 1rem;
+        height: .125rem;
+        width: 0;
+        margin: 0 auto;
+        opacity: var(--show-active-line);
+        background: $black;
+        transition: width .2s ease-in-out, opacity .2s ease-in-out;
+      }
     }
     &:hover,
     &:focus {
       opacity: .7;
+      .list-item-title {
+        --show-active-line: 1;
+        &::after {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -444,23 +463,17 @@ img.hero-illustration {
   }
 }
 .blogpost-overview__post {
-  display: flex;
-  flex-direction: column;
   border-radius: 2px;
   padding: 1rem;
   cursor: pointer;
 }
 
-@media screen and (min-width: $breakpoint-mobile) {
-  .blogpost-overview__post {
-    flex-direction: row;
-  }
-}
 .blogpost-overview__image {
+  margin: 0 auto 1rem;
   width: 100%;
 }
 
-@media screen and (min-width: $breakpoint-mobile) {
+@media screen and (max-width: $breakpoint-mobile) {
   .blogpost-overview__image {
     height: 14rem;
     width: 22rem;
