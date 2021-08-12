@@ -34,6 +34,13 @@
       </div>
     </div>
 
+    {{ if .Params.highlighted_page }}
+    {{ $page := .Site.GetPage .Params.highlighted_page}}
+    <div class="home-container__segment">
+    {{ partial "image_header.html" (dict "context" . "src" $page.Params.image "alt" "Theme image" "title" $page.Title "link" $page.Permalink) }}
+    </div>
+    {{ end }}
+
     {{ if or .Params.news_section .Params.cases_section }}
       <div class="home-container__segment">
         <div class="tl-grid home-container__cases_news tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
