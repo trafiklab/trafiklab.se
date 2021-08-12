@@ -5,8 +5,13 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: content/about
-  label: About
+  path: content/api
+  label: Data
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/docs
+  label: Docs
   create: all
   match: "**/*"
 - type: directory
@@ -15,18 +20,13 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/data
-  label: Data
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/headless
-  label: Headless
-  create: all
-  match: "**/*"
-- type: directory
   path: content/news
   label: News
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/about
+  label: About
   create: all
   match: "**/*"
 - type: directory
@@ -34,6 +34,11 @@ sections:
   label: Pages
   create: all
   match: "*"
+- type: directory
+  path: content/headless
+  label: Headless
+  create: all
+  match: "**/*"
 upload_dir: static/media
 public_path: "/media"
 front_matter_path: ''

@@ -1,5 +1,7 @@
 ---
 title: "Skjutsgruppen"
+layout: "single"
+weight: 1000
 ---
 
 Skjutsgruppen is a tool for travelling together. The principle is that you either ask for a ride or offer a ride if you

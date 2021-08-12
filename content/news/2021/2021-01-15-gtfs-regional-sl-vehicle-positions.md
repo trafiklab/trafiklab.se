@@ -2,6 +2,8 @@
 title: "SL Vehicle positions in GTFS Regional"
 date: "2021-01-15"
 layout: info
+image: /media/2021/01/sparvagn-erik-hansman-unsplash.jpg
+image_credit: Erik Hansman, Unsplash
 ---
 
 # SL Vehicle Position data in GTFS Regional Static

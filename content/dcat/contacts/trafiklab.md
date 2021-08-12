@@ -1,3 +1,4 @@
+---
 {
   "contact": {
     "name": "Trafiklab",

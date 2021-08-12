@@ -1,4 +1,6 @@
 ---
+layout: "single"
+weight: 50
 title: Västtrafiks API-portal
 ---
 

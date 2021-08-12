@@ -1,5 +1,7 @@
 ---
 title: "Emmission Quality"
+layout: "single"
+weight: 200
 ---
 
 This API was launched during the TravelHack hackathon by the Victoria Institute. It shows the environmental impact 

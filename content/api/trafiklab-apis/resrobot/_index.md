@@ -3,17 +3,19 @@ title: ResRobot
 layout: "single"
 weight: 40
 url: "api/resrobot"
-aliases: ["api/resrobot-reseplanerare", "api/resrobot-stolptidtabeller-2"]
+aliases: 
+  - /api/resrobot-reseplanerare
+  - /api/resrobot-stolptidtabeller-2
 ---
 
-## What is ResRobot?
+### What is ResRobot?
 
 ResRobot is an API which provides information for public transport in entire Sweden. It consists of three endpoints. The
 first endpoint, Stop lookup, allows you to search for stops and to obtain their ID. The second endpoint, Timetables,
 allows you to find departures and arrivals for those stations. The last endpoint, the route planner, allows you to find
 ways to travel from A to B.
 
-## When should I use ResRobot?
+### When should I use ResRobot?
 
 ResRobot is an API which answers to specific questions, such as "when does the next bus leave from stop X". The response
 is quick and easy to use, and can be used directly without having to process it first. This makes it a good fit for for
@@ -32,5 +34,4 @@ a lot of data from a lot of vehicles is needed.
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a
 million API calls. {{% /warning %}}
 
-{{% page-ref page="/api/trafiklab-apis/gtfs-regional/" %}}
-{{% page-ref page="/api/trafiklab-apis/gtfs-sverige-2/" %}}
+{{% page-ref "/api/trafiklab-apis/gtfs-regional/" "/api/trafiklab-apis/gtfs-sverige-2/" %}}

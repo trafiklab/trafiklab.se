@@ -238,7 +238,7 @@ A stop time is a certain trip picking up or dropping of passengers at a certain 
           <br />
           <br />A <code>stop_headsign</code> value specified for one <code>stop_time</code> does
           not apply to subsequent <code>stop_time</code>s in the same trip.</p>
-        <p></p>
+        
         <p>&#x2139;GTFS Regional specifies the stop_headsign for each stop</p>
       </td>
     </tr>
@@ -573,7 +573,7 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
       <td>
         <p>Identifies a trip where a connection between trips starts. Part of the
           Trip-to-trip transfers extension.</p>
-        <p></p>
+        
         <p><a href="https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers">https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers</a>
         </p>
       </td>
@@ -587,7 +587,7 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
       <td>
         <p>Identifies a trip where a connection between trips ends. Part of the Trip-to-trip
           transfers extension.</p>
-        <p></p>
+        
         <p><a href="https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers">https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers</a>
         </p>
       </td>

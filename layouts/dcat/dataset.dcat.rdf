@@ -1,41 +1,5 @@
-<rdf:RDF>
-    <dcat:Dataset rdf:about="{{ .Permalink }}">
-    {{ $page := . }}
-    {{ with $.Param "dataset" }}
-        {{ range $language, $title := .title }}
-        <dcterms:title xml:lang="{{ $language }}">{{ $title }}</dcterms:title>
-        {{ end }}
-        {{ range $language, $description := .description }}
-        <dcterms:description xml:lang="{{ $language }}">{{ $description }}</dcterms:description>
-        {{ end }}
-
-        {{ range $language, $keywords := .keywords }}
-            {{ range $keyword := $keywords }}
-        <dcat:keyword xml:lang="{{ $language }}">{{ $keyword }}</dcat:keyword>
-            {{ end }}
-        {{ end }}
-
-        <dcat:distribution>
-            {{ $format := index $.Site.Data.dcat.formats .format }}
-            <dcterms:title>{{ $format.name }}</dcterms:title>
-
-            {{ range $language, $description := $format.description }}
-            <dcterms:description xml:lang="{{ $language }}">{{ $description }}</dcterms:description>
-            {{ end }}
-
-            <dcat:accessURL rdf:resource="{{ .access_url }}"/>
-            <dcterms:license rdf:resource="{{ .license }}"/>
-            <dcterms:format>{{ $format.mimetype }}</dcterms:format>
-        </dcat:distribution>
-
-        <dcat:theme rdf:resource="{{ index $.Site.Data.dcat.themes .theme }}"/>
-        <dcterms:spatial rdf:resource="{{ index $.Site.Data.dcat.regions .region }}"/>
-        <dcat:landingPage rdf:resource="{{ .access_url }}"/>
-        <dcterms:language rdf:resource="{{ index $.Site.Data.dcat.languages .language }}"/>
-        <dcterms:publisher rdf:resource="{{ref $page (dict "path" (print "/dcat/publishers/" .publisher ".md") "outputFormat" "dcat")}}"/>
-        <adms:contactPoint rdf:resource="{{ref $page (dict "path" (print "/dcat/contacts/" .contact ".md") "outputFormat" "dcat")}}"/>
-        <dcterms:license rdf:resource="{{ .license }}"/>
-        <adms:version>1</adms:version>
-    {{ end }}
-    </dcat:Dataset>
+<rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#" xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+    {{ .Render "dataset-entry" }}
 </rdf:RDF>

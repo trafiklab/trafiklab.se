@@ -1,5 +1,6 @@
 ---
 title: ResRobot Route planner
+alias: /api/resrobot-reseplanerare/dokumentation
 ---
 
 {{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI

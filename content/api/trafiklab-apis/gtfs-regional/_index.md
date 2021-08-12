@@ -2,23 +2,27 @@
 title: GTFS Regional
 layout: "single"
 weight: 10
-url: "/api/trafiklab-apis/gtfs-regional/"
+aliases:
+  - /api/gtfs-regional-static-data
+  - /api/gtfs-regional-realtime
 ---
 
-{{% info %}} For technical details about HTTP headers and URLs, please use the OpenAPI Specification
-available on our developer portal. {{% /info %}}
+GTFS regional is a set of GTFS feeds of high quality, with realtime data and even realtime GPS positions for 
+vehicles for some operators.  
 
-## What does this dataset contains?
+### What does this dataset contains?
 
 This dataset contains high quality detailed data, both static and real-time, in the GTFS format. Each dataset contains
-data for a specific region or operator. While the combined GTFS feeds do cover all regional public transport and some
-private companies as well, each feed uses their own ids for each stop. If you are looking for an aggregated national
-feed, please look at GTFS Sverige 2
+data for a specific region or operator. While the combined GTFS feeds do cover all regional public transport operators, 
+and some private companies as well, each feed uses their own ids for each stop. If you are looking for an aggregated 
+national feed, please look at GTFS Sverige 2.
 
 ### Data format
 
 The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the GTFS-Realtime
 (GTFS-RT) standard, and is stored in the protobuf format.
+
+This data is also available in the NeTEx format. For the NeTEx format, see the [NeTEx regional API](/api/netex-regional/).
 
 ### How often is this dataset updated?
 

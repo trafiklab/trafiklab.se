@@ -1,0 +1,49 @@
+<dcat:Dataset rdf:about="{{ .Permalink }}">
+    {{ $page := . }}
+    {{ with $.Param "dataset" }}
+        {{ range $language, $title := .title }}
+            <dcterms:title xml:lang="{{ $language }}">{{ $title }}</dcterms:title>
+        {{ end }}
+        {{ range $language, $description := .description }}
+            <dcterms:description xml:lang="{{ $language }}">{{ $description }}</dcterms:description>
+        {{ end }}
+
+        {{ range $language, $keywords := .keywords }}
+            {{ range $keyword := $keywords }}
+                <dcat:keyword xml:lang="{{ $language }}">{{ $keyword }}</dcat:keyword>
+            {{ end }}
+        {{ end }}
+
+        <dcat:distribution>
+            <dcat:Distribution>
+                {{ $format := index $.Site.Data.dcat.formats .format }}
+                <dcterms:title>{{ $format.name }}</dcterms:title>
+
+                {{ range $language, $description := $format.description }}
+                    <dcterms:description xml:lang="{{ $language }}">{{ $description }}</dcterms:description>
+                {{ end }}
+
+                <dcat:accessURL rdf:resource="{{ .access_url }}"/>
+                <dcterms:license rdf:resource="{{ .license }}"/>
+                <dcterms:format>{{ $format.mimetype }}</dcterms:format>
+            </dcat:Distribution>
+        </dcat:distribution>
+
+        <dcat:theme rdf:resource="{{ index $.Site.Data.dcat.themes .theme }}"/>
+        <dcterms:spatial rdf:resource="{{ index $.Site.Data.dcat.regions .region }}"/>
+        <dcat:landingPage rdf:resource="{{ .access_url }}"/>
+        <dcterms:language rdf:resource="{{ index $.Site.Data.dcat.languages .language }}"/>
+        <dcat:publisher>
+            {{ with $.Site.GetPage (print "/dcat/publishers/" .publisher ".md")}}
+                {{ .Render "publisher-entry"}}
+            {{ end }}
+        </dcat:publisher>
+        <dcat:contact>
+            {{ with $.Site.GetPage (print "/dcat/contacts/" .contact ".md")}}
+                {{ .Render "contact-entry"}}
+            {{ end }}
+        </dcat:contact>
+        <dcterms:license rdf:resource="{{ .license }}"/>
+        <adms:version>1</adms:version>
+    {{ end }}
+</dcat:Dataset>

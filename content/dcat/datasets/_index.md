@@ -1,3 +1,3 @@
-headless:true
-layout:empty
+---
+headless: true
 ---

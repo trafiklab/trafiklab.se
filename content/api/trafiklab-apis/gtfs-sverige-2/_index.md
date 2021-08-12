@@ -5,12 +5,11 @@ weight: 20
 url: "api/gtfs-sverige-2"
 ---
 
-{{% info %}} For technical details about HTTP headers and URLs, please use the OpenAPI Specification
-available on our developer portal. {{% /info %}}
+GTFS Sverige 2 is a GTFS dataset which covers all public transport in Sweden.
 
 ### What does this dataset contains?
 
-GTFS Sverige is our national feed. It contains all public transport in the entire country of Sweden. The data is
+GTFS Sverige 2 is our national feed. It contains all public transport in the entire country of Sweden. The data is
 correct, but lacks the details which are included in the GTFS Regional dataset.
 
 ### Data format

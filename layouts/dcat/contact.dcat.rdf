@@ -1,6 +1,5 @@
-<rdf:RDF>
-    <vcard:Organization rdf:about="{{ .Permalink }}">
-        <vcard:fn>{{ $.Param "contact.name" }}</vcard:fn>
-        <vcard:hasEmail rdf:resource="{{ $.Param "contact.e-mail" }}"/>
-    </vcard:Organization>
+<rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#" xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+    {{ .Render "contact-entry"}}
 </rdf:RDF>
