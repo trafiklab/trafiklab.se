@@ -1,0 +1,142 @@
+{{ define "main" }}
+<main class="main-content">
+  <div class="page">
+    <main id="site-content">
+      <div class="news-header {{ if .Params.image }} with-image {{ end }}">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="Theme image" class="image--wide">
+        {{ end }}
+        <h1 class="tl-h1">{{ .Title }}</h1>
+      </div>
+      {{ .Content }}
+    </main>
+    <footer class="docs-footer">
+      Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+      {{ if isset $.Site.Params "repository" }}
+      {{ end }}
+    </footer>
+  </div>
+</main>
+{{ end }}
+
+{{- define "page-script" -}}
+<script type="text/javascript">
+var input = $("input.fuzzy-search");
+
+$(input).keyup(function() {
+  $('.dropdown-list').show();
+  var searchTerms = $(this).val();
+
+  $('.tl-side-navigation li').each(function() {
+
+    var hasMatch = searchTerms.length == 0 ||
+      $(this).text().toLowerCase().indexOf(searchTerms.toLowerCase()) > 0;
+        $(this).toggle(hasMatch);
+
+  });
+});
+$(input).blur(function() {
+  $('.dropdown-list').hide();
+});
+</script>
+<script type="text/javascript">
+$('.tab-content').find('.tab-pane').each(function(idx, item) {
+  var navTabs = $(this).closest('.code-tabs').find('.nav-tabs'),
+      title = $(this).attr('title');
+  navTabs.append('<li data-lang="'+title+'"><a href="JavaScript:void(0)">'+title+'</a></li');
+});
+
+$('.code-tabs ul.nav-tabs').each(function() {
+  $(this).find("li:first").addClass('active');
+})
+
+$('.code-tabs .tab-content').each(function() {
+  $(this).find("div:first").addClass('active');
+});
+
+$('.nav-tabs a').click(function(e) {
+  e.preventDefault();
+  var tab = $(this).parent(),
+      lang = tab.data('lang');
+  $('.nav-tabs').find('.active').removeClass('active');
+  $('.nav-tabs li[data-lang="'+lang+'"]').addClass('active');
+  $('.tab-pane.active').removeClass('active');
+  $('.tab-pane[title="'+lang+'"]').addClass('active');
+
+});
+
+function createCopyButton(highlightDiv) {
+  const button = document.createElement("button");
+  button.className = "copy-code-button";
+  button.type = "button";
+  button.innerText = "Copy";
+  button.addEventListener("click", () => copyCodeToClipboard(button, highlightDiv));
+  addCopyButtonToDom(button, highlightDiv);
+}
+
+async function copyCodeToClipboard(button, highlightDiv) {
+  const codeToCopy = highlightDiv.querySelector(":last-child > pre > code").innerText;
+  try {
+    result = await navigator.permissions.query({ name: "clipboard-write" });
+    if (result.state == "granted" || result.state == "prompt") {
+      await navigator.clipboard.writeText(codeToCopy);
+    } else {
+      copyCodeBlockExecCommand(codeToCopy, highlightDiv);
+    }
+  } catch (_) {
+    copyCodeBlockExecCommand(codeToCopy, highlightDiv);
+  }
+  finally {
+    codeWasCopied(button);
+  }
+}
+
+function copyCodeBlockExecCommand(codeToCopy, highlightDiv) {
+  const textArea = document.createElement("textArea");
+  textArea.contentEditable = 'true'
+  textArea.readOnly = 'false'
+  textArea.className = "copyable-text-area";
+  textArea.value = codeToCopy;
+  highlightDiv.insertBefore(textArea, highlightDiv.firstChild);
+  const range = document.createRange()
+  range.selectNodeContents(textArea)
+  const sel = window.getSelection()
+  sel.removeAllRanges()
+  sel.addRange(range)
+  textArea.setSelectionRange(0, 999999)
+  document.execCommand("copy");
+  highlightDiv.removeChild(textArea);
+}
+
+function codeWasCopied(button) {
+  button.blur();
+  button.innerText = "Copied!";
+  setTimeout(function() {
+    button.innerText = "Copy";
+  }, 2000);
+}
+
+function addCopyButtonToDom(button, highlightDiv) {
+  highlightDiv.insertBefore(button, highlightDiv.firstChild);
+  const wrapper = document.createElement("div");
+  wrapper.className = "highlight-wrapper";
+  highlightDiv.parentNode.insertBefore(wrapper, highlightDiv);
+  wrapper.appendChild(highlightDiv);
+}
+
+document.querySelectorAll(".highlight")
+  .forEach(highlightDiv => createCopyButton(highlightDiv));
+</script>
+<script type="text/javascript">
+$('.dropdown-list').hide();
+$('.tl-side-navigation__click-target--active').parents('.dropdown-list').show();
+$('.tl-side-navigation__click-target--active').siblings('.dropdown-list').show();
+$('.tl-side-navigation__click-target--active').find('.dropdown-toggle').addClass('active');
+$('.dropdown-toggle').click(function(e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+  $(this).parent().parent().find('> .dropdown-list').slideToggle();
+});
+
+</script>
+{{- end -}}

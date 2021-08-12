@@ -93,3 +93,27 @@ body.type-home #main-content {
     overflow-x: visible;
   }
 }
+
+.image--wide {
+  height: 400px;
+  width: calc(100% + 400px);
+  margin-left: -200px;
+  margin-right: -200px;
+  border-radius: $border-radius-default;
+  object-fit: cover;
+}
+
+.news-header.with-image h1 {
+  position: relative;
+  margin-left: -200px;
+  margin-right: -200px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 40px;
+  height: 100px;
+  margin-top: -100px;
+  border-bottom-left-radius: $border-radius-default;
+  border-bottom-right-radius: $border-radius-default;
+  color: #fff;
+  background: linear-gradient(#00000000, $black);
+}
