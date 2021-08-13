@@ -2,7 +2,7 @@
 
 <main class="main-content">
   <div class="page">
-    <div data-aos="fade-in" class="omtl-article-header__wrapper aos-init aos-animate">
+    <div class="omtl-article-header__wrapper">
       <div class=" article-header__container">
         <h1 class="tl-h1">{{ .Title }}</h1>
         <div class="tl-lead-paragraph" style="margin-top:0">{{ .Content }}</div>
@@ -15,12 +15,12 @@
               <img src="{{ .Params.Image }}" class="blogpost-overview__image">
             {{ end }}
             <div class="blogpost-overview__information">
+              <div class="blogpost-overview__date">
+                <label class="tl-label">{{ .Date.Format "2006-01-02" }}</label>
+              </div>
               <div>
                 <h3 class="tl-h3 tl-h3--margin-bottom blogpost-overview__title">{{ .Title }}</h3>
                 <div class="blogpost-overview__description">{{ .Summary }}</div>
-              </div>
-              <div class="blogpost-overview__date">
-                <label class="tl-label">{{ .Date.Format "2006-01-02" }}</label>
               </div>
             </div>
           </div>

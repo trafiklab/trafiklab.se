@@ -456,48 +456,6 @@ img.hero-illustration {
   }
 }
 
-// Blog/News
-.blogpost-overview-grid {
-  display: grid;
-  row-gap: 1.5rem;
-  width: 80%;
-  margin: 0 auto;
-  .blogpost-overview__link {
-    text-decoration: none;
-  }
-}
-.blogpost-overview__post {
-  border-radius: 2px;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.blogpost-overview__image {
-  margin: 0 auto 1rem;
-  width: 100%;
-}
-
-@media screen and (max-width: $breakpoint-mobile) {
-  .blogpost-overview__image {
-    height: 14rem;
-    width: 22rem;
-  }
-}
-.blogpost-overview__information {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-right: 0;
-  padding-top: 1.5rem;
-}
-
-@media screen and (min-width: $breakpoint-mobile) {
-  .blogpost-overview__information {
-    padding-top: 0;
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
 
 // About
 .omtl-people-presenter {
