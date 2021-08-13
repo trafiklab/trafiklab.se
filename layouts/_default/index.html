@@ -68,20 +68,31 @@
 <script type="text/javascript">
 
 $(function () {
-  const $first = $('.landing-roller:first');
-  const $second = $('.landing-roller').eq(1);
-  const firstArr = ["Time tables", "Test", "GTFS files"];
-  const secondArr = ["Awesome applications", "Travel planners", "Tests"];
+    const $first = $('.landing-roller:first');
+    const $second = $('.landing-roller').eq(1);
+    const firstArr = ["Time tables", "Test", "GTFS files"];
+    const secondArr = ["Awesome applications", "Travel planners", "Tests"];
 
-  count = 0;
+    count = 0;
 
-  
-  setInterval(function () {
-    count++;
 
-    $first.text(firstArr[count % firstArr.length]);
-    $second.text(secondArr[count % secondArr.length]);
-  }, 4500);
+    setInterval(function () {
+        $first.addClass('landing-roller--changing')
+        $second.addClass('landing-roller--changing')
+    }, 4500)
+    setTimeout(function () {
+        setInterval(function () {
+            count++;
+            $first.text(firstArr[count % firstArr.length]);
+            $second.text(secondArr[count % secondArr.length]);
+        }, 4500);
+    }, 250);
+    setTimeout(function () {
+        setInterval(function () {
+            $first.removeClass('landing-roller--changing')
+            $second.removeClass('landing-roller--changing')
+        }, 4500);
+    }, 500);
 });
 
 </script>
