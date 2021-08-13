@@ -8,5 +8,5 @@ mc: true
 type: home
 ---
 <p>We publish <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/gtfs-regional-realtime/">realtime 
-vehicle positions</a> as open data</p>
+vehicle positions</a></p>
 <p>so you can build <a class="landing-roller" href="/cases">digital signage</a></p>
