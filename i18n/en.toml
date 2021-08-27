@@ -1,2 +1,5 @@
-[cta-header]
+[brand]
+other = "Trafiklab"
+
+[header-cta-keys]
 other = "API keys"
