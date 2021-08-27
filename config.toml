@@ -3,3 +3,13 @@
 extended = true
 max = ""
 min = "0.80.0"
+
+# Multilingual
+[languages]
+    [languages.en]
+    languageName = "English"
+    weight = 2
+
+    [languages.sv]
+    languageName = "Svenska"
+    weight = 1
