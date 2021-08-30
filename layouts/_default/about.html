@@ -20,11 +20,11 @@
     <div class="tl-grid tl-grid__container tl-grid--spacing-extraLarge">
       {{ range $infoBlocks }}
       <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
-        <div class="omtl-people-presenter omtur-people-presenter--vertical">
+        <div class="omtl-people-presenter omtl-people-presenter--vertical">
           <div class="omtl-people-presenter__container">
             {{ if .Params.Image }}
             <div class="omtl-people-presenter__image">
-              <img src="{{ .Params.Image }}">
+              <img src="{{ .Params.Image }}" alt="{{ .Title }}">
             </div>
             {{ end }}
             <div class="omtl-people-presenter__info">

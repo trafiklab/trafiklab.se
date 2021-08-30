@@ -460,11 +460,14 @@ img.hero-illustration {
 // About
 .omtl-people-presenter {
   background: $light-bg;
+  border-radius: $border-radius-default;
 }
-.omtl-people-presenter--vertical .omtur-people-presenter__container {
+
+.omtl-people-presenter--vertical .omtl-people-presenter__container {
   display: flex;
   flex-direction: column;
 }
+
 .omtl-people-presenter__image {
   width: 100%;
   min-height: 15rem;
@@ -472,16 +475,14 @@ img.hero-illustration {
   align-items: center;
   justify-content: center;
   position: relative;
+
+  img {
+    width: calc(100% - 16px);
+    padding: 8px;
+  }
 }
 .omtl-people-presenter__info {
-  background: $light-bg;
-  padding: 1.5rem 0 1.5rem 1.5rem;
-}
-
-@media screen and (min-width: $breakpoint-mobile) {
-  .omtl-people-presenter__info {
-    padding: 3rem 0 3rem 3rem;
-  }
+  padding: 1.5rem;
 }
 
 // Front adaptions
