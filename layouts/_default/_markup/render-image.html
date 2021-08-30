@@ -4,34 +4,4 @@
 {{ $caption = . | safeHTML }}
 {{ end }}
 
-{{ if hasPrefix .Destination "http" }}
-<img src="{{.Destination}}" alt=".PlainText | safeHTML">
-{{ else }}
-    {{ $image := resources.Get (printf "%s" (.Destination | safeURL)) }}
-    {{ if $image }}
-
-        {{ if eq $image.MediaType "image/jpg" }}
-            {{ $small := $image.Resize "480x webp" }}
-            {{ $medium := $image.Resize "768x webp" }}
-            {{ $large := $image.Resize "1024x webp" }}
-            {{ $xlarge := $image.Resize  "1600x webp" }}
-<img sizes="100vw"
-     srcset="{{ $small.Permalink }} 480w, {{ $medium.Permalink }} 768w, {{ $large.Permalink }} 1024w, {{ $xlarge.Permalink }} 1200w"
-     src="{{ $xlarge.Permalink }}"
-     alt="{{ $alt }}"
-     {{ with $caption}}
-     title="{{ . }}"
-     {{ end }}
-/>
-        {{ else }}
-<img src="{{ $image.Permalink }}"
-     alt="{{ $alt }}"
-     {{ with $caption}}
-     title="{{ . }}"
-     {{ end }}
-/>
-        {{ end }}
-    {{ else }}
-        {{ printf "%s" (.Destination | safeURL)}}
-    {{ end }}
-{{ end }}
+{{ partial "responsive-image.html" (dict "context" . "src" (.Destination | safeURL) "alt" $alt "caption" $caption) }}
