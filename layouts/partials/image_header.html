@@ -12,7 +12,25 @@
     {{ if $link }}
     <a href="{{$link}}">
         {{ end }}
-        <img src="{{ $src }}" alt="{{ $alt }}" class="image-header__image">
+
+
+        {{ with $src }}
+        {{ $image := resources.Get (printf "%s" ($src | safeURL)) }}
+        {{ if $image }}
+        {{ if in $src ".jpg"}}
+        {{ $resized := $image.Resize "1600x webp" }}
+        <img src="{{ $resized.Permalink }}"
+             alt="{{ $alt }}"
+             class="image-header__image"
+        />
+        {{ else }}
+        <img src="{{ $image.Permalink }}"
+             alt="{{ $alt }}"
+             class="image-header__image"
+        />
+        {{ end }}
+        {{ end }}
+        {{ end }}
         {{ if $link }}
     </a>
     {{ end }}
