@@ -16,16 +16,16 @@ Github" button.  {{% /info %}}
 You need to fill in a valid mail address and username. This email address will be used to contact you if we make changes
 to an API you are using. Your email address will never be made public.
 
-![Your mail address and username](/media/2020/05/create-account-email-username.png)
+![Screenshot of the e-mail address and username fields](/media/2020/05/create-account-email-username.png)
 
 While the first- and last-name fields are required, you use your initials if you want. You can also, optionally, sign up
 for the Trafiklab newsletter.
 
 After filling in your information, you need to accept the terms and conditions and confirm you're not a robot.
 
-![The terms and conditions checkbox](/media/2020/05/accept-tos.png)
+![Screenshot of the terms and conditions checkbox](/media/2020/05/accept-tos.png)
 
-![The CAPTCHA challenge to prove you&apos;re human](/media/2020/05/captcha.png)
+![Screenshot of the CAPTCHA challenge proving you&apos;re human](/media/2020/05/captcha.png)
 
 Hit the submit button on the bottom of the page, and you will receive a one-time login link in your email. Using this
 link you can login and choose a password.

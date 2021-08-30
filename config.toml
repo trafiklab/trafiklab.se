@@ -9,6 +9,12 @@ theme = "trafiklab-2021"
 enableEmoji = true
 enableGitInfo = true
 
+[module]
+[module.hugoVersion]
+extended = true
+max = ""
+min = "0.83.0"
+
 # paths
 [permalinks]
   "/" = "/:title/"
