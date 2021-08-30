@@ -53,9 +53,7 @@ those two feeds below.
 | Real-time data | Only static data | Static + Real-time + GPS positions |
 | Historical data (static) | Since 2012 | Not available |
 
-{{% page-ref page="static-gtfs-files" %}}
-
-{{% page-ref page="realtime-gtfs-files" %}}
+{{% page-ref static-gtfs-files realtime-gtfs-files %}}
 
 {{% info %}} You can find the complete GTFS reference
 at [https://developers.google.com/transit/gtfs/reference/](https://developers.google.com/transit/gtfs/reference/).
