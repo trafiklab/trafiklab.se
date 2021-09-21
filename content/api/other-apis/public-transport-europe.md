@@ -62,3 +62,9 @@ Sources:
 
 - https://eu.data.public-transport.earth/
 - https://github.com/public-transport/european-transport-operators
+
+### In cooperation with Interreg
+
+This page has been created in cooperation with Stronger Combined, a project by the European Regional Development Fund.
+
+![Stronger Combined, InterReg logo](/media/2021/09/stronger-combined-interreg.png)
