@@ -29,6 +29,9 @@ min = "0.87.0"
   [languages.sv]
   languageName = "Svenska"
   weight = 1
+    [languages.sv.permalinks]
+      news = "nyheter/:year/:month/:title/"
+      cases = "fallstudier/:year/:month/:title/"
 
 # HTML for shortcodes
 [markup]
