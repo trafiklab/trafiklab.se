@@ -2,7 +2,7 @@
 .admonition {
   background-color: $light-bg;
   display: flex;
-  margin-bottom: 21px;
+  margin: 16px 0;
   border-radius: $border-radius-default;
   .admonition-icon {
     padding: .75rem;
@@ -10,6 +10,14 @@
 
   .content {
     margin: .75rem;
+
+    .p:first-of-type {
+      margin-top: 0;
+    }
+
+    .p:last-of-type{
+      margin-bottom: 0;
+    }
   }
 
   svg {
