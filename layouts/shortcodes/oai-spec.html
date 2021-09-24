@@ -1,17 +1,29 @@
-<style>iframe{width:100%}</style>
-<iframe id="swagger-ui" frameBorder="0" scrolling="no" src="{{ "swagger-ui/index.html" | absURL }}" >
-</iframe>
+<link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-ui.css" />
+<script src="/swagger-ui/swagger-ui-bundle.js" charset="UTF-8"> </script>
+<script src="/swagger-ui/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
 
-<script type="text/javascript" src="{{"/scripts/iframeResizer.min.js" | absURL }}"></script>
-<script type="text/javascript">
-  iFrameResize({
-    log         : true,                  // Enable console logging
-    checkOrigin : false,
-    sizeWidth   : true,
-    widthCalculationMethod : 'rightMostElement'
-  });
-  var shortcode_url = "{{ .Get "url" }}";
-  {{ with .Get "api_key" }}
-  var shortcode_api_key = "{{ . }}";
-  {{ end }}
+<div id="swagger-ui"></div>
+
+<script>
+    window.onload = function() {
+        var url = parent.shortcode_url;
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+            url: {{ .Get "url" }},
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: "StandaloneLayout",
+            validatorUrl: "none"
+        });
+        // End Swagger UI call region
+
+        window.ui = ui;
+    };
 </script>

@@ -27,14 +27,14 @@
   }
 }
 
-.success {
+.admonition.success {
   background-color: #d9f3cb;
   .admonition-icon {
     color: #58c11d;
   }
 }
 
-.error {
+.admonition.error {
   background-color: #fbdae6;
 
   .admonition-icon {
@@ -42,14 +42,14 @@
   }
 }
 
-.warning {
+.admonition.warning {
   background-color: #fffae6;
   .admonition-icon {
     color: #ff991f;
   }
 }
 
-.info {
+.admonition.info {
   background-color: #deebff;
 
   .admonition-icon {
@@ -57,7 +57,7 @@
   }
 }
 
-.note {
+.admonition.note {
   background-color: #eae6ff;
 
   .admonition-icon {
