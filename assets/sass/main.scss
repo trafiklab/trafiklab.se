@@ -7,11 +7,12 @@
 @import 'header';
 @import 'footer';
 @import 'docs';
-@import 'shortcodes';
 @import 'override';
 @import 'mc';
 @import 'partials/image_header';
 @import 'partials/landing_roller';
+@import 'partials/docs_footer';
+@import 'shortcodes/tabs';
 @import 'shortcodes/admoniton';
 @import 'blogposts';
 
