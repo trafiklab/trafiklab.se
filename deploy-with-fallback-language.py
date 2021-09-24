@@ -77,7 +77,7 @@ def checkout_theme_submodule():
     https_url = ssh_url.replace('git@github.com:', 'https://github.com/')
     print('Fetching theme submodule from ' + https_url, flush=True)
     os.system('git remote set-url origin ' + https_url)
-    os.system('git pull')
+    os.system('git pull origin main')
     os.chdir(cwd)
 
 
