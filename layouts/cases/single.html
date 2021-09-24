@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="main-content">
+  <div class="page">
+    <main id="site-content">
+      {{ partial "image_header.html" (dict "context" . "src" .Params.image "alt" "Theme image" "credit" .Params.image_credit "date" .Params.date "title" .Title "wide" true) }}
+      {{ .Content }}
+    </main>
+    <footer class="docs-footer">
+      Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+      {{ if isset $.Site.Params "repository" }}
+      {{ end }}
+    </footer>
+  </div>
+</main>
+{{ end }}
