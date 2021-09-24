@@ -38,7 +38,7 @@ Om du vill se webbsidan på Engelska, [klicka här](/en/).
 def generate_fallback_page(filepath, language_code, dry_run=False):
     translation_path = filepath.replace('.md', f'.{language_code}.md')
     print(f"Creating fallback page for lang {language_code}, "
-          + f"from {translation_path}) to {filepath}")
+          + f"from {translation_path} to {filepath}")
     if not dry_run:
         copy2(filepath, translation_path)
         add_missing_translation_warning(translation_path)
@@ -68,4 +68,4 @@ if __name__ == "__main__":
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/docs'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
     # Continue build
-    os.system("hugo -d public")
+    os.system("hugo -d /public")

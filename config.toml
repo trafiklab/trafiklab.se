@@ -13,7 +13,7 @@ enableGitInfo = true
 [module.hugoVersion]
 extended = true
 max = ""
-min = "0.83.0"
+min = "0.87.0"
 
 # paths
 [permalinks]
