@@ -47,7 +47,7 @@ from [ResRobot Stop lookup ](resrobot-station-lookup.md)or [GTFS Sverige 2](../g
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```xml
+```text
 https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
 ```
 
@@ -55,8 +55,8 @@ https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
 
 {{% tab "Xml" %}}
 
-```
-https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
+```text
+https://api.resrobot.se/v2/departureBoard?id=740000002&format=xml&key=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
