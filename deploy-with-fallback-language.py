@@ -70,8 +70,13 @@ def replace_ssh_submodules_with_http():
         file.write(content)
 
 
-def checkout_submodules():
-    os.system("git submodule foreach git pull")
+def checkout_theme_submodule():
+    cwd = os.getcwd()
+    os.chdir('themes/trafiklab-2021')
+    ssh_url = os.popen('git remote get-url origin').read()
+    https_url = ssh_url.replace('git@github.com:', 'https://github.com/')
+    os.system('git remote set-url origin ' + https_url)
+    os.chdir(cwd)
 
 
 if __name__ == "__main__":
@@ -85,7 +90,7 @@ if __name__ == "__main__":
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
     # Continue build
     replace_ssh_submodules_with_http()
-    checkout_submodules()
+    checkout_theme_submodule()
     if os.path.exists("public"):
         os.removedirs("public")
     os.system("hugo -d public")
