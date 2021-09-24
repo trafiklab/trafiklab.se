@@ -54,6 +54,7 @@ min = "0.87.0"
 
 [params]
   repository = "https://github.com/trafiklab/trafiklab.se/"
+  support = "https://support.trafiklab.se/"
   mailchimpId = "32daffb7a6"
   mailchimpUser = "f850700e99947106e6a19cfaa"
   mailchimpAccount = "trafiklab.us20"
