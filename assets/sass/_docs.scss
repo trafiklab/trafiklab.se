@@ -275,63 +275,6 @@ input {
   opacity: .01;
 }
 
-// Admonition
-.admonition {
-  background-color: $light-bg;
-  display: flex;
-  margin-bottom: 21px;
-  .admonition-icon {
-    padding: .75rem;
-  }
-
-  .content {
-    margin: .75rem;
-  }
-
-  svg {
-    margin-top: 4px; // TODO: Check if this is a good fix to align the admonition icon with the first content line
-    height: 16px;
-    width: 16px;
-  }
-}
-
-.success {
-  background-color: #d9f3cb;
-  .admonition-icon {
-    color: #58c11d;
-  }
-}
-
-.error {
-  background-color: #fbdae6;
-
-  .admonition-icon {
-    color: #b33261;
-  }
-}
-
-.warning {
-  background-color: #fffae6;
-  .admonition-icon {
-    color: #ff991f;
-  }
-}
-
-.info {
-  background-color: #deebff;
-
-  .admonition-icon {
-    color: #2e8fce;
-  }
-}
-
-.note {
-  background-color: #eae6ff;
-
-  .admonition-icon {
-    color: #9d95fd;
-  }
-}
 
 .docs-header {
   margin-top: 2rem;
