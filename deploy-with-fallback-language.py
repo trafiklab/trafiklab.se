@@ -75,7 +75,9 @@ def checkout_theme_submodule():
     os.chdir('themes/trafiklab-2021')
     ssh_url = os.popen('git remote get-url origin').read()
     https_url = ssh_url.replace('git@github.com:', 'https://github.com/')
+    print('Fetching theme submodule from ' + https_url)
     os.system('git remote set-url origin ' + https_url)
+    os.system('git pull')
     os.chdir(cwd)
 
 
