@@ -4,6 +4,7 @@ date: 2016-10-25
 draft: false
 image: /media/2016/10/resledaren-joel-holmberg.jpg
 layout: info
+description: The Resledaren application makes it easy to travel using public transport, especially for people with cognitive issues, such as adhd and autism. With additional reminders and overviews for the journey, this app provides the support many need to travel independently using public transport.
 ---
 Appen Resledaren gör det enklare att resa i kollektivtrafiken, särskilt för personer med kognitiva
 funktionsnedsättningar såsom adhd och autism. Med extra minnestöd och överblick över resan ger appen stödet många

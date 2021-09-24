@@ -4,6 +4,7 @@ date: 2016-08-30
 draft: false
 image: /media/2016/08/keoscreens-fridhemsplan.jpg
 layout: info
+descriptions: Keoscreens is an in-vehicle display system to show riders the next stops of their bus.
 ---
 Sedan ett år tillbaka får resenärer i Stockholms innerstad trafikinformation i realtid direkt på skärmar ombord på de
 blåa bussarna med tjänsten KeoScreens. Exempelvis kan man se kommande hållplatser, möjliga byten och hur många minuter
