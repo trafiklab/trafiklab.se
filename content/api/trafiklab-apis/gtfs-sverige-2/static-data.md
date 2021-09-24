@@ -1,9 +1,7 @@
 ---
 title: Static data
+weight: 10
 ---
-
-{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {{% /info %}}
 
 ### Retrieving Static data
 

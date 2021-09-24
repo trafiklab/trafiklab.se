@@ -1,10 +1,8 @@
 ---
 title: Realtime data
-alias: "api/gtfs-regional-realtime"
+aliases: "api/gtfs-regional-realtime"
+weight: 20
 ---
-
-{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {{% /info %}}
 
 ## Retrieving real-time data
 

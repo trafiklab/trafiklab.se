@@ -1,10 +1,8 @@
 ---
 title: Static data
-alias: "api/gtfs-regional-static"
+aliases: "api/gtfs-regional-static"
+weight: 10
 ---
-
-{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {{% /info %}}
 
 ## Retrieving static data
 

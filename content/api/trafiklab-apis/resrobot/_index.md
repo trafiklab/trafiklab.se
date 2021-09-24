@@ -1,5 +1,5 @@
 ---
-title: ResRobot
+title: ResRobot v2
 layout: "single"
 weight: 40
 url: "api/resrobot"

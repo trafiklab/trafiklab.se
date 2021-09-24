@@ -1,11 +1,8 @@
 ---
 title: ResRobot Route planner
-alias: /api/resrobot-reseplanerare/dokumentation
+aliases: /api/resrobot-reseplanerare/dokumentation
+weight: 20
 ---
-
-{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {{% /info %}}
-
 ## What does this API provide?
 
 ResRobot Route planner provides routes between two stops or points. Users can specify the start and end point, date,

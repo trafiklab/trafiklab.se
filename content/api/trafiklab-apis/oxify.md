@@ -7,10 +7,10 @@ weight: 95
 
 ## API Overview
 
-Poistions are represented by GPS data that is generated locally onboard each train-set. The current position is
+Positions are represented by GPS data that is generated locally onboard each train-set. The current position is
 transmitted as a message every second to Oxyfi’s real-time server on shore.
 
-Besides storing the message for future use the server customizes messages on the fly by tagging it with additional
+Besides storing the message for future use, the server customizes messages on the fly by tagging it with additional
 information and passes them on to subscribers. One such subscriber is the websocket API service.
 
 The Trainpos API is one such subscriber. It subscribes on messages that contains the NMEA version 2.2 specification of
@@ -138,9 +138,9 @@ Here are some suggestion of libraries that can be used to parse NMEA formatted d
 
 To get the current list of trains that delivers data through the Trainpos API, see
 
-[https://api.oxyfi.com/trainpos/trainIdentites.htm](https://api.oxyfi.com/trainpos/trainIdentites.htm) push-API
+[http://api.oxyfi.com/trainpos/trainIdentites.htm](http://api.oxyfi.com/trainpos/trainIdentites.htm) push-API
 
-On the 2017-04-21 the current list of trains is:
+On the 2021-09-24 the current list of trains is:
 
 ### Värmlandstrafik
 
@@ -148,27 +148,23 @@ On the 2017-04-21 the current list of trains is:
     <tbody>
     <tr>
         <td>1414</td>
-        <td>9048</td>
-        <td>9081</td>
-    </tr>
-    <tr>
         <td>1415</td>
-        <td>9049</td>
-        <td>9082</td>
-    </tr>
-    <tr>
         <td>1416</td>
-        <td>9050</td>
-        <td>9083</td>
-    </tr>
-    <tr>
         <td>1420</td>
-        <td>9066</td>
-        <td></td>
+        <td>1421</td>
     </tr>
     <tr>
-        <td>1421</td>
-        <td>9067</td>
+        <td>9048</td>
+        <td>9049</td>
+        <td>9050</td>
+        <td>9066</td>
+        <td>9067</td>    
+    </tr>
+    <tr>
+        <td>9081</td>
+        <td>9082</td>
+        <td>9083</td>
+        <td></td>
         <td></td>
     </tr>
     </tbody>
@@ -178,41 +174,38 @@ On the 2017-04-21 the current list of trains is:
 
 <table>
     <tbody>
-    <tr>
-        <td>62001</td>
-        <td>62007</td>
-        <td>9034</td>
+<tr>
+<td>1429</td>
+<td>3112</td>
+<td>3167</td>
+<td>3189</td>
+<td>9032</td>
     </tr>
     <tr>
-        <td>62002</td>
-        <td>62008</td>
-        <td>9042</td>
+<td>9033</td>
+<td>9034</td>
+<td>9042</td>
+<td>9051</td>
+<td>9062</td>
     </tr>
     <tr>
-        <td>62003</td>
-        <td>62009</td>
-        <td>9062</td>
+<td>62001</td>
+<td>62002</td>
+<td>62003</td>
+<td>62004</td>
+<td>62005</td>
     </tr>
     <tr>
-        <td>62004</td>
-        <td>62010</td>
-        <td>3112</td>
+<td>62006</td>
+<td>62007</td>
+<td>62008</td>
+<td>62009</td>
+<td>62010</td>
     </tr>
     <tr>
-        <td>62005</td>
-        <td>62011</td>
-        <td>3167</td>
-    </tr>
-    <tr>
-        <td>62006</td>
-        <td>62012</td>
-        <td>3189</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>1429</td>
-    </tr>
+<td>62011</td>
+<td>62012</td>
+</tr>
     </tbody>
 </table> 
 
@@ -221,54 +214,75 @@ On the 2017-04-21 the current list of trains is:
 <table>
     <tbody>
     <tr>
-        <td>9005</td>
-        <td>9018</td>
-        <td>9068</td>
+<td>3190</td>
+<td>3223</td>
+<td>3231</td>
+<td>3234</td>
+<td>3235</td>
     </tr>
     <tr>
-        <td>9006</td>
-        <td>9019</td>
-        <td>9056</td>
+<td>9005</td>
+<td>9006</td>
+<td>9007</td>
+<td>9008</td>
+<td>9009</td>
     </tr>
     <tr>
-        <td>9007</td>
-        <td>9020</td>
-        <td>9057</td>
+<td>9011</td>
+<td>9012</td>
+<td>9013</td>
+<td>9014</td>
+<td>9015</td>
     </tr>
     <tr>
-        <td>9008</td>
-        <td>9021</td>
-        <td>3190</td>
+<td>9018</td>
+<td>9019</td>
+<td>9020</td>
+<td>9021</td>
+<td>9022</td>
     </tr>
     <tr>
-        <td>9009</td>
-        <td>9022</td>
-        <td>3223</td>
+<td>9023</td>
+<td>9024</td>
+<td>9025</td>
+<td>9037</td>
+<td>9039</td>
     </tr>
     <tr>
-        <td>9011</td>
-        <td>9023</td>
-        <td>3231</td>
+<td>9056</td>
+<td>9057</td>
+<td>9068</td>
     </tr>
+    </tbody>
+</table>
+
+### Blekingetrafiken
+
+<table>
+    <tbody>
     <tr>
-        <td>9012</td>
-        <td>9024</td>
-        <td>3234</td>
-    </tr>
-    <tr>
-        <td>9013</td>
-        <td>9025</td>
-        <td>3235</td>
-    </tr>
-    <tr>
-        <td>9014</td>
-        <td>9037</td>
+        <td>3108</td>
+        <td>3109</td>
+        <td>3111</td>
+        <td></td>
         <td></td>
     </tr>
+    </tbody>
+</table>
+
+### Kalmars länstrafik
+<table>
+    <tbody>
     <tr>
-        <td>9015</td>
-        <td>9039</td>
-        <td></td>
+        <td>3106</td>
+        <td>3134</td>
+        <td>3135</td>
+        <td>3136</td>
+        <td>3137</td>
+    </tr>
+    <tr>
+        <td>3168</td>
+        <td>3169</td>
     </tr>
     </tbody>
 </table>

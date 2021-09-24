@@ -1,10 +1,8 @@
 ---
 title: ResRobot Stop lookup
-alias: /api/resrobot-reseplanerare/platsuppslag
+aliases: /api/resrobot-reseplanerare/platsuppslag
+weight: 30
 ---
-
-{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the Open-API
-Specification available on our developer portal. {{% /info %}}
 
 ## What does this API provide?
 

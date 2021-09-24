@@ -1,9 +1,7 @@
 ---
 title: Historical data
+weight: 30
 ---
-
-{{% info %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {{% /info %}}
 
 Historical GTFS data can be found
 at  [**https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/**](https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/)**
