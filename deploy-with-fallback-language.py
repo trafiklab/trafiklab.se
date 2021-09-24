@@ -68,4 +68,5 @@ if __name__ == "__main__":
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/docs'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
     # Continue build
-    os.system("hugo -d /public")
+    os.removedirs("public")
+    os.system("hugo -d public")
