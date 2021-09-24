@@ -1,6 +1,6 @@
 {{ $args := . }}
-<div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6 section-front-news">
-    <h2 class="tl-h2">{{ $args.title }}</h2>
+<div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6 section-recent-list">
+    <a href="{{ ($args.context.Site.GetPage (print $args.type)).Permalink }}"><h2 class="tl-h2">{{ ($args.context.Site.GetPage (print $args.type)).Title }}</h2></a>
     <div class="tl-card-list">
         {{ range ( where $args.context.Site.RegularPages "Type" (print $args.type) | first 3 ) }}
         <a class="tl-card-list__item" href="{{ .Permalink }}">

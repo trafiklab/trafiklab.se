@@ -234,8 +234,12 @@ html {
     }
   }
 }
-.section-front-news {
+.section-recent-list {
   padding: 0 1rem;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 // Media card

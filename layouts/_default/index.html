@@ -46,11 +46,11 @@
         <div class="tl-grid home-container__cases_news tl-grid__container tl-grid--spacing-large tl-grid--spacing-row-undefined">
 
           {{ if .Params.cases_section }}
-            {{ partial "recent_list.html" (dict "context" . "type" "cases" "title" "Use cases") }}
+            {{ partial "recent_list.html" (dict "context" . "type" "cases") }}
           {{end}}
 
           {{ if .Params.news_section }}
-            {{ partial "recent_list.html" (dict "context" . "type" "news" "title" "News") }}
+            {{ partial "recent_list.html" (dict "context" . "type" "news") }}
           {{end}}
         </div>
       </div>
