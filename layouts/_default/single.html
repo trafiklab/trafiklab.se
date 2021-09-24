@@ -11,12 +11,7 @@
       </div>
       {{ .Content }}
     </main>
-    <footer class="docs-footer">
-      Last updated: {{ .Lastmod.Format "January 2, 2006" }}
-      {{ if isset $.Site.Params "repository" }}
-      | <a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace .File.Path " \\" "/" }}">Edit on Github</a>
-      {{ end }}
-    </footer>
+    {{ partial "docs-footer.html" .}}
   </div>
 </main>
 {{ end }}

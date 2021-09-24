@@ -12,3 +12,21 @@ other = "A theme image showing a train, a train stop, train tickets and a smartp
 
 [read-more-about]
 other = "Read more about"
+
+[docs-footer-about-this-page]
+other = "About this page"
+
+[docs-footer-something-wrong]
+other = "Is there something wrong with this page?"
+
+[docs-footer-edit-on-github]
+other = "Edit this page on Github"
+
+[docs-footer-report-issue]
+other = "Report an issue"
+
+[docs-footer-published-at]
+other = "This page was published at"
+
+[docs-footer-last-modified]
+other = "This page was last modified at"

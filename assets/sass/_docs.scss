@@ -144,9 +144,18 @@ ul.dropdown-list {
 // Content footer
 .docs-footer {
   border-top: 2px solid $light-border-grey;
-  font-size: 0.75rem;
   padding: .5rem 0;
   margin-top: 1rem;
+
+  .docs-footer__container {
+    border-radius: $border-radius-default;
+    background-color: $grey;
+    padding: 1rem;
+
+    :first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 

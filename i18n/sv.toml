@@ -12,3 +12,21 @@ other = "En temabild som visar ett tåg, en tåghållplats, tågbiljetter och en
 
 [read-more-about]
 other = "Läs mer om"
+
+[docs-footer-about-this-page]
+other = "Om denna sida"
+
+[docs-footer-something-wrong]
+other = "Är det något fel med denna sida?"
+
+[docs-footer-edit-on-github]
+other = "Redigera sidan på Github"
+
+[docs-footer-report-issue]
+other = "Rapportera ett problem"
+
+[docs-footer-published-at]
+other = "Sidan först publicerades den"
+
+[docs-footer-last-modified]
+other = "Sidan sist uppdaterades den"
