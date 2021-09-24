@@ -58,6 +58,22 @@ def generate_fallback_pages_if_needed(dir: str, dry_run=False):
             generate_fallback_pages_if_needed(os.path.join(root, dirname), dry_run=dry_run)
 
 
+def replace_ssh_submodules_with_http():
+    # DigitalOcean apps platform cannot checkout SSH submodules at the moment
+    # Read in the file
+    with open(".gitmodules", 'r', encoding='utf8') as file:
+        content = file.read()
+    # Replace the target string
+    content = content.replace('git@github.com:', 'https://github.com/')
+    # Write the file out again
+    with open(".gitmodules", 'w', encoding='utf8') as file:
+        file.write(content)
+
+
+def checkout_submodules():
+    os.system("git submodule update --recursive --remote")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.set_defaults(dry=False)
@@ -68,5 +84,8 @@ if __name__ == "__main__":
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/docs'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
     # Continue build
-    os.removedirs("public")
+    replace_ssh_submodules_with_http()
+    checkout_submodules()
+    if os.path.exists("public"):
+        os.removedirs("public")
     os.system("hugo -d public")
