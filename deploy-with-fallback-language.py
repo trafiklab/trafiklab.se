@@ -71,7 +71,7 @@ def replace_ssh_submodules_with_http():
 
 
 def checkout_submodules():
-    os.system("git submodule update --recursive --remote")
+    os.system("git submodule foreach git pull")
 
 
 if __name__ == "__main__":
