@@ -8,6 +8,14 @@ layout: info
 Sedan ett år tillbaka får resenärer i Stockholms innerstad trafikinformation i realtid direkt på skärmar ombord på de
 blåa bussarna med tjänsten KeoScreens. Exempelvis kan man se kommande hållplatser, möjliga byten och hur många minuter
 det är till bytet. Resultatet är nöjdare resenärer – hela 95 procent uppger att skärmarna underlättar resan.
+<!--more-->
+
+{{% warning %}}
+**Note:** This information is old and has not (yet) been translated to English. You are instead viewing the Swedish
+version.
+
+To view the entire website in Swedish, [click here](/sv/).
+{{% /warning %}}
 
 Bakom KeoScreens står operatören Keolis, som fick idén i samband med att de för tre år sen lämnade anbud till
 upphandlingen av Stockholms innerstads busstrafik.
