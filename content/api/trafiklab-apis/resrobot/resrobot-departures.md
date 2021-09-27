@@ -4,9 +4,6 @@ aliases: /node/14075/documentation
 weight: 10
 ---
 
-{{% note %}} For technical details about HTTP headers, URLs, and response structures, please use the OpenAPI
-Specification available on our developer portal. {{% /note %}}
-
 ## What does this API provide?
 
 ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
