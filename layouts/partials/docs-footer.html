@@ -1,39 +1,25 @@
 {{ $is_fallback_source_page := (isset .Params "generated_fallback_page_source") }}
-{{ $fallback_source_page := "BLA" }}
+{{ $source_page := . }}
+{{ if $is_fallback_source_page }}
+    {{ $source_page = index .Translations 0 }}
+{{ end }}
 
-{{ if eq $is_fallback_source_page true }}
-{{ if in .Params.generated_fallback_page_source "_index"}}
-<!-- TODO: actually get the section page object, .GetPage does not work here -->
-{{ $is_fallback_source_page = false }}
-{{ else }}
-{{ $fallback_source_page = (.Site.GetPage (.Params.generated_fallback_page_source)) }}
-{{ end }}
-{{ end }}
+{{ $source_page.File }}
 
 <footer class="docs-footer">
     <div class="docs-footer__container">
         <h3>{{ i18n "docs-footer-about-this-page" }}</h3>
-
-        {{ if .Date }}<p>{{ i18n "docs-footer-published-at" }} {{ .Date.Format "January 2, 2006" }}.</p>{{ end }}
-
-        {{ if (not $is_fallback_source_page)}}
-            <p>{{ i18n "docs-footer-last-modified" }} {{ .Lastmod.Format "January 2, 2006" }}.</p>
-        {{ else }}
-            <p>{{ i18n "docs-footer-last-modified" }} {{ $fallback_source_page.Lastmod.Format "January 2, 2006" }}.</p>
-        {{ end }}
-
-            <h3>{{ i18n "docs-footer-something-wrong" }}</h3>
+        {{ if $source_page.Date }}<p>{{ i18n "docs-footer-published-at" }} {{ $source_page.Date.Format "January 2, 2006" }}.</p>{{ end }}
+        {{ if $source_page.GitInfo }}<p>{{ i18n "docs-footer-last-modified" }} {{ $source_page.GitInfo.AuthorDate.Format "January 2, 2006" }}.</p>{{ end }}
+        <h3>{{ i18n "docs-footer-something-wrong" }}</h3>
         {{ if isset $.Site.Params "support" }}
             <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
         {{ end }}
 
         {{ if isset $.Site.Params "repository" }}
-            {{ if (not $is_fallback_source_page) }}
-                <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace .File.Path "\\" "/" }}">
-                {{ i18n "docs-footer-edit-on-github" }}</a></p>
-            {{ else }}
-                <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace $fallback_source_page.File.Path "\\" "/" }}">
-                    {{ i18n "docs-footer-edit-on-github" }}</a></p>
+            <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            {{ i18n "docs-footer-edit-on-github" }}</a></p>
+            {{ if $is_fallback_source_page }}
                 <p><a href="{{ $.Site.Params.repository }}tree/main/content/{{ replace .File.Dir "\\" "/" }}">
                     {{ i18n "docs-footer-create-translation-on-github" }}</a></p>
             {{ end }}
