@@ -28,7 +28,7 @@ Om du vill se webbsidan på Engelska, [klicka här](/en/).
 
     # Replace the target string
     content = content.replace('---', '', 1)  # Remove the top --- marker
-    content = '---' + content.replace('---', '---' + warning)  # Replace the bottom --- marker, add the top marker back
+    content = '---' + content.replace('---', '---' + warning, 1)  # Replace the bottom --- marker, add the top marker back
 
     # Write the file out again
     with open(filepath, 'w', encoding='utf8') as file:
