@@ -9,7 +9,7 @@ def has_translation(filepath, language_code):
     return os.path.exists(translated_path)
 
 
-def add_missing_translation_warning(filepath: str, source_page: str):
+def add_missing_translation_warning(filepath: str):
     warning = """
     
 {{% warning %}}
@@ -32,9 +32,7 @@ Om du vill se webbsidan på Engelska, [klicka här](/en/).
     content = content.replace('---', '---' + warning, 1)
     # Add the leading --- back, along with a property to indicate which page acted as the source
     # Remove the leading .../content/ part of the path
-    source_page = source_page[source_page.index('content') + 7:]
-    source_page = source_page.replace("\\", "/")
-    content = f'---\ngenerated_fallback_page_source: "{source_page}"' + content
+    content = '---\ngenerated_fallback_page_source: true"' + content
 
     # Write the file out again
     with open(filepath, 'w', encoding='utf8') as file:
@@ -47,7 +45,7 @@ def generate_fallback_page(source_file_path, language_code, dry_run=False):
           + f"from {translation_path} to {source_file_path}")
     if not dry_run:
         copy2(source_file_path, translation_path)
-        add_missing_translation_warning(translation_path, source_file_path)
+        add_missing_translation_warning(translation_path)
 
 
 def generate_fallback_pages_if_needed(dir: str, dry_run=False):
