@@ -9,7 +9,7 @@ def has_translation(filepath, language_code):
     return os.path.exists(translated_path)
 
 
-def add_missing_translation_warning(filepath):
+def add_missing_translation_warning(filepath: str, source_page: str):
     warning = """
     
 {{% warning %}}
@@ -28,20 +28,25 @@ Om du vill se webbsidan på Engelska, [klicka här](/en/).
 
     # Replace the target string
     content = content.replace('---', '', 1)  # Remove the top --- marker
-    content = '---' + content.replace('---', '---' + warning, 1)  # Replace the bottom --- marker, add the top marker back
+    # Add the warning
+    content = content.replace('---', '---' + warning, 1)
+    # Add the leading --- back, along with a property to indicate which page acted as the source
+    # Remove the leading .../content/ part of the path
+    source_page = source_page[source_page.index('content') + 8:]
+    content = f'generated_fallback_page_source: {source_page}\n---' + content
 
     # Write the file out again
     with open(filepath, 'w', encoding='utf8') as file:
         file.write(content)
 
 
-def generate_fallback_page(filepath, language_code, dry_run=False):
-    translation_path = filepath.replace('.md', f'.{language_code}.md')
+def generate_fallback_page(source_file_path, language_code, dry_run=False):
+    translation_path = source_file_path.replace('.md', f'.{language_code}.md')
     print(f"Creating fallback page for lang {language_code}, "
-          + f"from {translation_path} to {filepath}")
+          + f"from {translation_path} to {source_file_path}")
     if not dry_run:
-        copy2(filepath, translation_path)
-        add_missing_translation_warning(translation_path)
+        copy2(source_file_path, translation_path)
+        add_missing_translation_warning(translation_path, source_file_path)
 
 
 def generate_fallback_pages_if_needed(dir: str, dry_run=False):
