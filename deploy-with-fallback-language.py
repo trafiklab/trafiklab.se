@@ -91,14 +91,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.set_defaults(dry=False)
     parser.add_argument('--dry', dest='dry', action='store_true')
+    parser.add_argument('--without-git-fix', dest='git_fix', action='store_false')
     args = parser.parse_args()
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/api'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/cases'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/docs'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
     # Continue build
-    replace_ssh_submodules_with_http()
-    checkout_theme_submodule()
+    if args.git_fix:
+        replace_ssh_submodules_with_http()
+        checkout_theme_submodule()
     if os.path.exists("public"):
         os.removedirs("public")
     os.system("hugo -d public --minify")
