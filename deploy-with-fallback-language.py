@@ -32,8 +32,9 @@ Om du vill se webbsidan på Engelska, [klicka här](/en/).
     content = content.replace('---', '---' + warning, 1)
     # Add the leading --- back, along with a property to indicate which page acted as the source
     # Remove the leading .../content/ part of the path
-    source_page = source_page[source_page.index('content') + 8:]
-    content = f'generated_fallback_page_source: {source_page}\n---' + content
+    source_page = source_page[source_page.index('content') + 7:]
+    source_page = source_page.replace("\\", "/")
+    content = f'---\ngenerated_fallback_page_source: "{source_page}"' + content
 
     # Write the file out again
     with open(filepath, 'w', encoding='utf8') as file:
@@ -100,4 +101,4 @@ if __name__ == "__main__":
     checkout_theme_submodule()
     if os.path.exists("public"):
         os.removedirs("public")
-    os.system("hugo -d public")
+    os.system("hugo -d public --minify")
