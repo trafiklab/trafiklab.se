@@ -1,0 +1,8 @@
+#swagger-ui {
+  .swagger-ui {
+    p {
+      // This is the standard value for Swagger-UI, but it gets overridden by the default paragraph style included on the website.
+      font-size: 12px;
+    }
+  }
+}

@@ -20,7 +20,10 @@ other = "Om denna sida"
 other = "Är det något fel med denna sida?"
 
 [docs-footer-edit-on-github]
-other = "Redigera sidan på Github"
+other = "Redigera denna sida på Github"
+
+[docs-footer-create-translation-on-github]
+other = "Översätt denna sida på Github"
 
 [docs-footer-report-issue]
 other = "Rapportera ett problem"

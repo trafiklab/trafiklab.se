@@ -1,16 +1,26 @@
 <footer class="docs-footer">
     <div class="docs-footer__container">
         <h3>{{ i18n "docs-footer-about-this-page" }}</h3>
+        {{ if (.Params.generated_fallback_page_source) }} {{ $fallback_source_page := (.GetPage (.Params.generated_fallback_page_source)) }} {{ else }} {{ $fallback_source_page := false }}{{ end }}
         {{ if .Date }}<p>{{ i18n "docs-footer-published-at" }} {{ .Date.Format "January 2, 2006" }}.</p>{{ end }}
-        <p>{{ i18n "docs-footer-last-modified" }} {{ .Lastmod.Format "January 2, 2006" }}.</p>
-        <h3>{{ i18n "docs-footer-something-wrong" }}</h3>
+        {{ if (not .Params.generated_fallback_page_source)}}<p>{{ i18n "docs-footer-last-modified" }} {{ .Lastmod.Format "January 2, 2006" }}.</p>{{ end }}
+        {{ if (.Params.generated_fallback_page_source)}}<p>{{ i18n "docs-footer-last-modified" }} {{ $fallback_source_page.Lastmod.Format "January 2, 2006" }}.</p>{{ end }}
+            <h3>{{ i18n "docs-footer-something-wrong" }}</h3>
         {{ if isset $.Site.Params "support" }}
-        <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
+            <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
         {{ end }}
         {{ if isset $.Site.Params "repository" }}
-        <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace .File.Path "\\" "/" }}">
-        {{ i18n "docs-footer-edit-on-github" }}
-        </a></p>
+            {{ if not .Params.generated_fallback_page_source }}
+                <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace .File.Path "\\" "/" }}">
+                {{ i18n "docs-footer-edit-on-github" }}</a></p>
+            {{ else }}
+                <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace ($fallback_source_page.File.Path "\\" "/" }}">
+                    {{ i18n "docs-footer-edit-on-github" }}</a></p>
+            {{ end }}
+        {{ end }}
+        {{ if and (isset $.Site.Params "repository") .Params.generated_fallback_page_source }}
+            <p><a href="{{ $.Site.Params.repository }}tree/main/content/{{ replace .File.Dir "\\" "/" }}">
+        {{ i18n "docs-footer-create-translation-on-github" }}</a></p>
         {{ end }}
     </div>
 </footer>

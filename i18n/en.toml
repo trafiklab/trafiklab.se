@@ -22,6 +22,9 @@ other = "Is there something wrong with this page?"
 [docs-footer-edit-on-github]
 other = "Edit this page on Github"
 
+[docs-footer-create-translation-on-github]
+other = "Create a translation for this page on Github"
+
 [docs-footer-report-issue]
 other = "Report an issue"
 
