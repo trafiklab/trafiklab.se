@@ -16,6 +16,8 @@
 
         {{ if isset $.Site.Params "repository" }}
             <p><a href="{{ $.Site.Params.repository }}blob/main/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            {{ i18n "docs-footer-view-on-github" }}</a></p>
+            <p><a href="{{ $.Site.Params.repository }}edit/main/content/{{ replace $source_page.File.Path "\\" "/" }}">
             {{ i18n "docs-footer-edit-on-github" }}</a></p>
             {{ if $is_fallback_source_page }}
                 <p><a href="{{ $.Site.Params.repository }}tree/main/content/{{ replace .File.Dir "\\" "/" }}">

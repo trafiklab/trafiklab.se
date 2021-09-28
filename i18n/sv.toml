@@ -19,6 +19,9 @@ other = "Om denna sida"
 [docs-footer-something-wrong]
 other = "Är det något fel med denna sida?"
 
+[docs-footer-view-on-github]
+other = "Visa denna sida på Github"
+
 [docs-footer-edit-on-github]
 other = "Redigera denna sida på Github"
 

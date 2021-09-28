@@ -19,6 +19,9 @@ other = "About this page"
 [docs-footer-something-wrong]
 other = "Is there something wrong with this page?"
 
+[docs-footer-view-on-github]
+other = "View this page on Github"
+
 [docs-footer-edit-on-github]
 other = "Edit this page on Github"
 
