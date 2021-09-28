@@ -10,8 +10,8 @@
         </label>
         <input aria-invalid="false" class="tl-form-control fuzzy-search" aria-labelledby="tl-textfield-7376805771428288" width="fluid" value="">
       </div>
-      {{ $currentPage := . }}
     </div>
+    {{ $currentPage := . }}
     {{ $root := .FirstSection }}
     <ul class="tl-side-navigation tl-side-navigation--small list">
       {{ if not $root.Params.headless }}
@@ -55,7 +55,7 @@
                             <a class="tl-side-navigation__click-target child-title{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">{{ .Title }}</a>
                           {{ end }}
                         </li>
-                      {{- end -}}
+                      {{ end }}
                     </ul>
                   {{ else }}
                     {{ $hierarchy := split .Page.File.Dir "/" }}
@@ -64,7 +64,7 @@
                     {{ end }}
                   {{ end }}
                 </li>
-              {{- end -}}
+              {{ end }}
             </ul>
           {{ end }}
         </li>
