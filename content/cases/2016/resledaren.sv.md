@@ -3,7 +3,7 @@ title: "Resledaren"
 date: 2016-10-25
 draft: false
 image: /media/2016/10/resledaren-joel-holmberg.jpg
-layout: info
+
 ---
 Appen Resledaren gör det enklare att resa i kollektivtrafiken, särskilt för personer med kognitiva
 funktionsnedsättningar såsom adhd och autism. Med extra minnestöd och överblick över resan ger appen stödet många

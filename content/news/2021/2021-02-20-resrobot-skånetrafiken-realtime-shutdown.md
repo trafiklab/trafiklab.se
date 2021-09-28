@@ -1,7 +1,6 @@
 ---
 title: "Skånetrafiken API shutting down, ResRobot affected"
 date: "2021-02-20"
-layout: info
 ---
 
 # Skånetrafiken real-time data dissapearing from ResRobot

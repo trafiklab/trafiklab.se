@@ -1,7 +1,7 @@
 ---
 title: "Changes to the GTFS Regional API"
 date: "2020-02-20"
-layout: info
+
 ---
 
 # Changes in the GTFS Regional URLs

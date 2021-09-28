@@ -1,7 +1,7 @@
 ---
 title: "National coverage for the GTFS Regional and NeTEx Regional APIs"
 date: "2020-12-08"
-layout: info
+
 ---
 
 # National coverage for the GTFS Regional and NeTEx Regional APIs

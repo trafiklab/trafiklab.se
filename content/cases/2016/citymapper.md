@@ -3,7 +3,7 @@ title: "Citymapper"
 date: 2016-11-28
 draft: false
 image: /media/2016/11/citymapper_smartphone.jpg
-layout: info
+
 description: In August Citymapper launched its travel and navigation app for Stockholm.
 ---
 Nu i augusti lanserade den London-baserade startupen Citymapper sin rese- och navigationsapp för Stockholm. Sedan 2012

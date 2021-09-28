@@ -4,7 +4,7 @@ date: 2017-02-16
 draft: false
 description: På skjutsgruppen.se finns Sveriges enda tjänst som kombinerar kollektivtrafikresor med samåkning i hyrbilar och privatpersoners fordon. Bakom tjänsten står den ideella samåkningsrörelsen Skjutsgruppen, som idag engagerar över 70 000 deltagare. Målet är att effektivare nyttja befintliga resurser för en bättre miljö, samtidigt som mobiliteten ökar och människor möts.
 image: /media/2017/02/skjutsgruppen_bag.jpg
-layout: info
+
 ---
 På skjutsgruppen.se finns Sveriges enda tjänst som kombinerar kollektivtrafikresor med samåkning i hyrbilar och
 privatpersoners fordon. Bakom tjänsten står den ideella samåkningsrörelsen Skjutsgruppen, som idag engagerar över 70 000

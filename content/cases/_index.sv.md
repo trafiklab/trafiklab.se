@@ -1,6 +1,6 @@
 ---
 title: "Fallstudier     "
-layout: info
+
 weight: 20
 menu: "main"
 url: "fallstudier"

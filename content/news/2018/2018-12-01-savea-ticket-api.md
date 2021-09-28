@@ -1,7 +1,7 @@
 ---
 title: "Savea ticket api lancering"
 date: "2018-12-01"
-layout: info
+
 ---
 Under Trainhack den 25-27 oktober lanserade Savea ett öppet försäljnings-API för de aktörer som använder företagets bokningsplattform.
 

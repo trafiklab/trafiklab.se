@@ -1,7 +1,7 @@
 ---
 title: "ResRobot update with breaking changes"
 date: "2021-10-06"
-layout: info
+
 image: /media/2021/10/ResRobot-header.png
 image_credit: Samtrafiken
 ---

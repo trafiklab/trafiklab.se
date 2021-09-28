@@ -1,6 +1,6 @@
 ---
 title: "Cases"
-layout: info
+
 weight: 20
 menu: "main"
 ---
