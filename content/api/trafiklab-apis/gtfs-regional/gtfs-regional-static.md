@@ -1,18 +1,25 @@
 ---
-title: Static data
+title: Static data 
 aliases: "api/gtfs-regional-static"
 weight: 10
 ---
 
 ## Retrieving static data
 
-In order to retrieve the static data you need an API key. Follow the link below to read more about API keys.
+The static GTFS Regional dataset contains files describing all planned public transport data. It can be combined 
+with optional realtime data available in the GTFS Realtime data API.
 
-{{% page-ref page="/docs/using-trafiklab/getting-api-keys" %}}
+In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
+API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files. 
+
+{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/gtfs-regional-static-spec"  
+"/docs/using-trafiklab-data/using-gtfs-files"  %}}
 
 ## GTFS Extensions
 
-GTFS Regional uses some of [the GTFS Extensions](https://developers.google.com/transit/gtfs/reference/gtfs-extensions).
+GTFS Regional uses some of 
+[the GTFS Extensions](https://developers.google.com/transit/gtfs/reference/gtfs-extensions).
+These extensions are not part of the specification, but are additions to offer additional details. 
 
 ### Extended route types
 
@@ -35,9 +42,27 @@ use of them without prior warning.
 
 ### Trip-to-trip transfers
 
-[Trip to trip transfers ](https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers)make
+[Trip to trip transfers ](https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers) make
 use of the `from_trip_id`  and `to_trip_id` columns in the transfers.txt file.
 
 From Googles documentation:
 
-> The `from_trip_id` and `to_trip_id` fields can contain a `trip_id`, as specified by `trips.txt`. If `from_trip_id` is specified, the transfer will only apply to the arriving trip with the given trip id, at the given `from_stop_id`. If `to_trip_id` is specified, the transfer will only apply to the departing trip with the given trip id, at the given `to_stop_id`.
+> The `from_trip_id` and `to_trip_id` fields can contain a `trip_id`, as specified by `trips.txt`. If `from_trip_id` is
+> specified, the transfer will only apply to the arriving trip with the given trip id, at the given `from_stop_id`. 
+> If `to_trip_id` is specified, the transfer will only apply to the departing trip with the given trip id, at the 
+> given `to_stop_id`.
+
+
+## Notes and known issues
+
+- Since GTFS defines vehicle types on a route-level, the vehicle-type for some trips might be incorrect if those 
+  trips deviate from the route's most common vehicle type. This can for example happen when some trips on a bus 
+  route are executed with a taxi instead of a bus.
+- Calendar.txt is only used to define validity periods, not to define service dates. Actual service dates are 
+  described in calendar_dates.txt.
+- When both `route_short_name` and `route_long_name` have a value, `route_long_name` should be considered the correct 
+  line name. In this case, `route_short_name` should only be used for systems that cannot show the long name.
+- There might be differences between GTFS Sverige 2 and GTFS Regional Static, for example in the validity period for 
+  routes which might be longer in GTFS Sverige 2. This is due to the higher detail of the GTFS Regional Static dataset.
+- GTFS Regional contains transfers between stop points within the same stop, as well as transfers between different 
+  stop areas and transfers to and from specific trips.
