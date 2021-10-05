@@ -10,10 +10,12 @@ aliases:
 
 ### What is ResRobot?
 
-ResRobot is an API which provides information for public transport in entire Sweden. It consists of three endpoints. The
-first endpoint, Stop lookup, allows you to search for stops and to obtain their ID. The second endpoint, Timetables,
-allows you to find departures and arrivals for those stations. The last endpoint, the route planner, allows you to find
-ways to travel from A to B.
+ResRobot is a collection of APIs which provide information for public transport in entire Sweden. It consists of four 
+endpoints. 
+- ResRobot Timetables allows you to find departures and arrivals for those stations
+- ResRobot Routeplanner allows you to find ways to travel from A to B 
+- ResRobot Stop lookup allows you to search for stops and to obtain their ID
+- ResRobot Nearby stops allows you to search for nearby stops based on coordinates.
 
 ### When should I use ResRobot?
 

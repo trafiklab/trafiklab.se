@@ -61,5 +61,6 @@ The following table shows which operators
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **beta** status. This means that the fields can be added, or changed without prior warning.
-However, when breaking changes are made, you will get one or two months to update your implementations.
+Both the static and realtime datafeeds are stable. While we add new data all the time, we don't make breaking 
+changes. Should we need to make a breaking change, we'll inform users first, and you'll have around 6 months time to 
+make the necessary adjustments to your code.

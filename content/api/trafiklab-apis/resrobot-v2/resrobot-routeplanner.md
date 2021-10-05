@@ -32,17 +32,30 @@ exactly the same parameters and have the same response structure. API Calls take
 some other parameters to fine-tune the results. It returns a list of departures or arrivals from the given stop,
 including a bit of information about each vehicle, such as where it is heading or where it comes from.
 
+{{% info %}}
+Only the most important parameters and response variables are described on this page. Looking for more technical
+details? These can be found in [the OpenAPI specification](resrobot-spec.md).
+{{% /info %}}
+
 ## Example call
 
 This example call retrieves all routes from Stockholm Central Station (740000001) to Malmö Central Station
 (740000003), departing right now (since no specific time or date is specified in the call).
 
 ### Call
-
-```xml
-https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&passlist=true&showPassingPoints=true&key=API_KEY
+{{% tabs %}} 
+{{% tab "Json" %}}
+```text
+https://api.resrobot.se/v2/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&key=API_KEY
 ```
-
+{{% /tab %}}
+{{% tab "Xml" %}}
+```text
+https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&key
+=API_KEY
+```
+{{% /tab %}}
+{{% /tabs %}} 
 ### Response
 
 {{% info %}} Note that an actual response contains more entries and stops - we removed some from this example

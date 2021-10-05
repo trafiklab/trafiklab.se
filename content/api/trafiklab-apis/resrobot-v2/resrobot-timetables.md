@@ -35,10 +35,15 @@ exactly the same parameters and have the same response structure. API Calls take
 some other parameters to fine-tune the results. It returns a list of departures or arrivals from the given stop,
 including a bit of information about each vehicle, such as where it is heading or where it comes from.
 
+{{% info %}}
+Only the most important parameters and response variables are described on this page. Looking for more technical 
+details? These can be found in [the OpenAPI specification](resrobot-spec.md).
+{{% /info %}}
+
 ## Example call
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
-from [ResRobot Stop lookup ](resrobot-station-lookup.md)or [GTFS Sverige 2](../gtfs/gtfs-sverige-2-static/).
+from [ResRobot Stop lookup](resrobot-station-lookup.md) or [GTFS Sverige 2](../gtfs/gtfs-sverige-2-static/).
 
 ### Call
 

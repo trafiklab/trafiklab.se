@@ -19,4 +19,4 @@ entire Sweden. {{% /info %}}
 {{% info %}} If you want to do analytics, or if your service will have more than a million active users, we
 recommend using GTFS data directly, or hosting your own API based on GTFS data. {{% /info %}}
 
-{{% page-ref "/api/trafiklab-apis/resrobot/" "/api/trafiklab-apis/gtfs-regional/" %}}
+{{% page-ref "/api/trafiklab-apis/resrobot-v2/" "/api/trafiklab-apis/gtfs-regional/" %}}
