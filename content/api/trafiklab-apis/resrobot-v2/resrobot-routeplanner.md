@@ -56,6 +56,10 @@ https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&p
 ```
 {{% /tab %}}
 {{% /tabs %}} 
+
+#### Request parameters
+
+
 ### Response
 
 {{% info %}} Note that an actual response contains more entries and stops - we removed some from this example

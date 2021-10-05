@@ -6,7 +6,7 @@ weight: 31
 
 ## What does this API provide?
 
-ResRobot stop lookup provides information about stops, including their ids and position, by searching for a certain 
+ResRobot nearby stops provides information about stops, including their ids and position, by searching for a certain 
 pair of coordinates.
 
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS
@@ -37,9 +37,9 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
 breaking changes are made, you will get three months or more to update your implementations.
 
-## Using ResRobot Stop lookup
+## Using ResRobot Nearby stops
 
-ResRobot Stop lookup takes the search string and the wanted number of results as parameters, and returns a list of
+ResRobot Nearby stops takes the search string and the wanted number of results as parameters, and returns a list of
 matching stations with their location, name and id. Users can choose between exact matching and approximate matching by
 adding a question mark to the end of the search string.
 
@@ -47,7 +47,6 @@ adding a question mark to the end of the search string.
 Only the most important parameters and response variables are described on this page. Looking for more technical
 details? These can be found in [the OpenAPI specification](resrobot-spec.md).
 {{% /info %}}
-
 
 ## Example calls
 
@@ -111,12 +110,9 @@ of stations, for example to group stops which are close to eachother or to group
 This is especially useful for people who are not familiar with the environment. Instead of having to choose between
 several stops which they don't know, they can simply search for trips to "Göteborg". {{% /info %}}
 
-### Fuzzy search
 
-By adding a question mark to the query string, fuzzy matching is used instead of exact matching. This will return
-stations which name is an exact or near match to the input string.
 
-#### Call
+### Call
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -134,7 +130,27 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 
 {{% /tab %}} {{% /tabs %}}
 
-#### Response
+#### Request parameters
+
+| **Name**        | **Type** | **Required** | **Description**                                                                                                                                    |
+| --------------- | ----------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| key             | String      | Ja               | Your API key                                                                                                                                    |
+| originCoordLat  | String      | Ja               | Latitude (WGS84, decimal degree), eg 59.293611                                                                                                      |
+| originCoordLong | String      | Ja               | Longitude (WGS84, decimal degree), eg 18.083056                                                                                                     |
+| maxNo           | Integer     | Nej              | The maximum number of results to return, default 10, maximum 1000                                                                         |
+| r               | Integer     | Nej              | Maximum distance between given coordinates and the stop. Default 1000, max 10000 |
+| lang            | String      | Nej              | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages.
+| format          | String      | Nej              | Json or Xml |
+
+
+{{% info %}}
+**Fuzzy search**
+
+By adding a question mark to the query string, fuzzy matching is used instead of exact matching. This will return
+stations which name is an exact or near match to the input string.
+{{% /info %}}
+
+### Response
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -257,4 +273,17 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 
 {{% /tab %}} {{% /tabs %}}
 
-###  
+#### Data fields
+
+| **Name**     | **Data type**               | **Description**                                                                                                                                                                                                                                                         |
+| ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LocationList | StopLocation[]              | List with results                                                                                                                                                                                                          |
+| StopLocation | Object                      |                                                                                                                                                                                                                                                                         |
+| name         | String                      | Stop name                                                                                                                                                                                                                                                     |
+| extId        | String                      | Stop id for use in other ResRobot APIs.                                                                                                                                                                                                                                    |
+| id           | String                      | Internal id. Do not use.                                                              |
+| dist         | Integer                     | Distance from the queried coordinates, in meters.                                                                                                                                                                                                                      |
+| lat          | String                      | Latitude (WGS84, decimal degree) for this stop, eg 59.293611                                                                                                                                                                                                                           |
+| lon          | String                      | Longitude (WGS84, decimal degree) for this stop, eg 18.083056                                                                                                                                                                                                                          |
+| products     | Integer                     | Transport modes available at thist stop, as a sum of the following values:<br>1 – Flyg<br>2 - Snabbtåg<br>4 - Tåg<br>8 - Expressbuss<br>16 - Lokaltåg<br>32 - Tunnelbana<br>64 – Spårvagn<br>128 – Buss<br>256 – Båt<br>512 – Taxi<br>(160 – Tunnelbana och Buss) |
+| weight       | Integer                     | Shows how much traffic is handled at this stop, a stop with more traffic gets a higher weight. Between 0 and 32767.              |
