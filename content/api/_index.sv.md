@@ -8,12 +8,12 @@ is_fallback_source_page: true
 ---
 
 {{% warning %}}
-**Obs:** Denna innehåll finns inte tillgängligt på Svenska. Därför ser du Engelska versionen.
+**Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
 
-Om du tycker att denna sida borde översättas till Svenska, kan du skriva till oss på
+Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på
 [support.trafiklab.se](https://suport.trafiklab.se).
 
-Om du vill se webbsidan på Engelska, [klicka här](/en/).
+Om du vill se webbsidan på engelska, [klicka här](/en/).
 {{% /warning %}}
 
 
