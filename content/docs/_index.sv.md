@@ -31,6 +31,6 @@ Tycker du dock att vi borde översätta vissa sidor, till exempel för att kunna
 du gärna höra av dig genom [support.trafiklab.se](https://support.trafiklab.se), [mejl](mailto:info@trafiklab.se) eller
 [Github](https://github.com/trafiklab/trafiklab.se). {{% /info %}}
 
-### Om du är ny till Trafiklab är det enklast att börja här
+### Om du är ny på Trafiklab är det enklast att börja här
 
 [Using Trafiklab.se](/sv/docs/using-trafiklab/)
