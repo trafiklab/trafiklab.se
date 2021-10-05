@@ -70,12 +70,18 @@
 $(function () {
     const $first = $('.landing-roller:first');
     const $second = $('.landing-roller').eq(1);
-    const firstArr = ["Time tables", "Test", "GTFS files"];
-    const secondArr = ["Awesome applications", "Travel planners", "Tests"];
+    const rollerValues = [
+        {{ range .Params.landingRoller }}
+        [
+            "{{ .dataName }}",
+            "{{ .dataLink }}",
+            "{{ .caseName }}",
+            "{{ .caseLink }}",
+        ],
+        {{ end }}
+    ]
 
     count = 0;
-
-
     setInterval(function () {
         $first.addClass('landing-roller--changing')
         $second.addClass('landing-roller--changing')
@@ -83,16 +89,20 @@ $(function () {
     setTimeout(function () {
         setInterval(function () {
             count++;
-            $first.text(firstArr[count % firstArr.length]);
-            $second.text(secondArr[count % secondArr.length]);
+            let item = rollerValues[count % rollerValues.length];
+            console.log(item)
+            $first.text(item[0]);
+            $first.attr("href", item[1]);
+            $second.text(item[2]);
+            $second.attr("href", item[3]);
         }, 4500);
-    }, 250);
+    }, 500);
     setTimeout(function () {
         setInterval(function () {
             $first.removeClass('landing-roller--changing')
             $second.removeClass('landing-roller--changing')
         }, 4500);
-    }, 500);
+    }, 1000);
 });
 
 </script>
