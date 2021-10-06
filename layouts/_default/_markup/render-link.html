@@ -1,0 +1,6 @@
+{{ $permaLink := .Destination }}
+{{ if and (not (strings.HasPrefix .Destination "http")) (in .Destination ".md") }}
+{{ $permaLink = ref .Page .Destination }}
+{{ end }}
+
+<a href="{{ $permaLink | safeURL }}">{{ .Text | safeHTML }}</a>
