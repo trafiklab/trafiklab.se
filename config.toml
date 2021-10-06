@@ -9,6 +9,8 @@ theme = "trafiklab-2021"
 enableEmoji = true
 enableGitInfo = true
 
+refLinksErrorLevel = "WARNING"
+
 [module]
 [module.hugoVersion]
 extended = true

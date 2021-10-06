@@ -1,6 +1,6 @@
 ---
 title: ResRobot Stop lookup
-aliases: /api/resrobot-reseplanerare/platsuppslag
+aliases: /api/trafiklab-apis/resrobot-reseplanerare/platsuppslag
 weight: 30
 ---
 

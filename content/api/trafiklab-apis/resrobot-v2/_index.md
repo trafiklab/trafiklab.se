@@ -4,8 +4,8 @@ layout: "single"
 weight: 40
 url: "api/resrobot"
 aliases: 
-  - /api/resrobot-reseplanerare
-  - /api/resrobot-stolptidtabeller-2
+  - /api/trafiklab-apis/resrobot-reseplanerare
+  - /api/trafiklab-apis/resrobot-stolptidtabeller-2
 ---
 
 ### What is ResRobot?

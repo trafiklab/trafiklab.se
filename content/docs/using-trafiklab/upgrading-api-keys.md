@@ -29,7 +29,7 @@ The following requests will always be denied:
 * **Silver or higher for departure boards used in Magic Mirror and other non-public projects.** The reason for this is
   that the bronze level offers enough API calls to show the next departures all day long. Better coding is more
   effecient than polling an API every 30 seconds or
-  minute. [See Adjusting the update frequency during the day ](../../using-trafiklab-data/best-practices/limiting-requests.md#adjusting-the-update-frequency-during-the-day)
+  minute. [See Adjusting the update frequency during the day ](./../using-trafiklab-data/best-practices/limiting-requests.md#adjusting-the-update-frequency-during-the-day)
   in our best practices to learn how you can do this.
 * **Upgrades on journey planning APIs in order to get analytics like isochrone maps and travel times between all cities,
   all current delays.** We want you to use the right tool for the job. We will deny all requests where the goal is to

@@ -1,6 +1,6 @@
 ---
 title: ResRobot nearby stops
-aliases: /api/resrobot-reseplanerare/narliggande-hallplatser
+aliases: /api/trafiklab-apis/resrobot-reseplanerare/narliggande-hallplatser
 weight: 31
 ---
 

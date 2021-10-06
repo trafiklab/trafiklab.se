@@ -21,8 +21,8 @@ and datasets.
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | [GTFS Sverige 2](gtfs/gtfs-sverige-2-static/) | GTFS | ✅ | ❌ | Entire Sweden | All Public Transport Dataset |
 | [GTFS Regional](gtfs/gtfs-regional/) | GTFS(-RT) | ✅ | Some, [see details](gtfs/gtfs-regional/#which-operators-are-covered-by-this-dataset) | [See details](gtfs/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Public Transport Datasets |
-| [ResRobot Stolptidstabeller](resrobot/resrobot-departures.md) | Json, XML | ✅ | Some, [see details](resrobot/resrobot-departures.md) | Entire Sweden | Departure board API |
-| [ResRobot Reseplanerare](resrobot/resrobot-routeplanner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
+| [ResRobot Stolptidstabeller](/api/trafiklab-apis/resrobot-v2/resrobot-timetables.md) | Json, XML | ✅ | Some, [see details](/api/trafiklab-apis/resrobot-v2/resrobot-timetables.md) | Entire Sweden | Departure & Arrival board API |
+| [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/resrobot-routeplanner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
 | [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
 | Oxify Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
 | Trafikverkets API | Json, XML |  |  | Road and national rail | Road and rail API |
@@ -31,6 +31,6 @@ and datasets.
 
 While we offer a wide range of APIs and datasets covering public transport, easily accessible through Trafiklab, you
 sometimes need something less focussed on public transport, or data not available on Trafiklab.
-
+~~~~
 The APIs in the "other" category cannot be accessed through Trafiklab, but might still be valuable additions for your 
 project.
