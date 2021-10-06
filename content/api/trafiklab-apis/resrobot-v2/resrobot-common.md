@@ -9,6 +9,8 @@ collected these common data types here.
 
 ## Product
 
+{{% tabs %}}
+{{% tab "json" %}}
 ```json
 "Product": {
   "name": "Regional Tåg 231",
@@ -21,7 +23,8 @@ collected these common data types here.
   "operatorUrl": "http://www.sj.se"
 },
 ```
-
+{{% /tab %}}
+{{% tab "xml" %}}
 ```xml
 <Product catCode="7" 
          catOutL="Länstrafik - Buss" 
@@ -31,6 +34,8 @@ collected these common data types here.
          operatorCode="279" 
          operatorUrl="http://www.vasttrafik.se/"/>
 ```
+{{% /tab %}}
+{{% /tabs %}}
 
 | **Name**            | **Data type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------- | ------------------------- | ----------------------|
