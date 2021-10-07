@@ -23,8 +23,10 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
-breaking changes are made, you will get three months or more to update your implementations.
+This API has the **stable** status. When breaking changes are made, you will get six months or more to update your
+implementations. Examples of breaking changes are the changes to existing fields or query parameters, or in case new
+query parameters are required to keep the results the same. The addition of new fields isn't considered a breaking
+change, and can happen without warning.
 
 ## Using ResRobot Stop lookup
 
@@ -34,7 +36,7 @@ adding a question mark to the end of the search string.
 
 {{% info %}}
 Only the most important parameters and response variables are described on this page. Looking for more technical
-details? These can be found in [the OpenAPI specification](resrobot-spec.md).
+details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
 
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS

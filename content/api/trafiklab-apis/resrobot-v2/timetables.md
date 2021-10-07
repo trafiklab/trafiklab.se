@@ -25,8 +25,8 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
-breaking changes are made, you will get three months or more to update your implementations.
+This API has the **stable** status. This means that we will communicate when fields are added, or changed. When
+breaking changes are made, you will get six months or more to update your implementations.
 
 ## Using ResRobot Timetables
 
@@ -37,13 +37,13 @@ including a bit of information about each vehicle, such as where it is heading o
 
 {{% info %}}
 Only the most important parameters and response variables are described on this page. Looking for more technical 
-details? These can be found in [the OpenAPI specification](resrobot-spec.md).
+details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
 
 ## Example call
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
-from [ResRobot Stop lookup](resrobot-stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-2/).
+from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-2/).
 
 ### Call
 
@@ -93,7 +93,7 @@ https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&key=API_KEY
 | time          | Time (HH:MM)       | No, default now          | Search on a specific time, specified in HH:MM format, e.g. 19:06.
 | maxJourneys   | Integer            | No, default 20           | The maximum number of results to return.|
 | operators     | String             | No, default all          | Only include traffic from certain operators<br>Example: operators=275,287<br>(275=SL, 287=Arlanda Express)|
-| products      | Integer            | No, default all          | Only include certain traffic modes, see [common request products](resrobot-common.md)|
+| products      | Integer            | No, default all          | Only include certain traffic modes, see [common request products](common.md)|
 | passlist      | Integer            | No, default 1            | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.|
 | lang          | String (sv/en/de)  | No, default sv           | Language to use in the response. Affects both data (names for different transport types) and error messages.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | format        | String             | No, default xml          | The response format, json or XML.                                                                                                                                                                                                                                                                                                                                                                                                       | |
@@ -424,7 +424,7 @@ endpoints in this table. When we write departure/arrival, apply the one that mat
 | transportCategory              | String                       | See product.catOutL                                                                                                         |
 | name                           | String                       | TransportCategory + transportNumber<br>Example: ”ULT 19” (Tunnelbana linje 19)                                              |
 | direction                      | String                       | Name of the last stop on the vehicle’s trip                                                                                 |
-| Product                        | Product                      | See [common data types](resrobot-common.md)                                                                                 |
+| Product                        | Product                      | See [common data types](common.md)                                                                                 |
 | Stops                          | Stop\[\]                     | List of upcoming stops for the vehicle at this at this departure/arrival. Enabled/disabled through the `passlist` parameter |
 | Stop.name                      | String                       | Name of the stop                                                                                                            |
 | Stop.arrTime                   | String                       | Arrival time at this stop, formatted as HH:MM                                                                               |
