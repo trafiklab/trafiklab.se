@@ -94,6 +94,7 @@ Request category codes for filtering differ from response category codes. These 
 
 |Name| Numeric value|
 | ------------------- | ----------------------|
+|Air traffic|1|
 |High speed trains, Snabbtåg, Arlanda Express|2|
 |Local trains Tåg, PågaTåg, Öresundståg|4|
 |Express busses, Flygbussar|8|
