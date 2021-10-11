@@ -1,4 +1,4 @@
-baseURL = "https://2021.trafiklab.se/"
+baseURL = "/"
 defaultContentLanguage  = "en"
 
 title = "Trafiklab"
@@ -55,9 +55,9 @@ min = "0.87.0"
     suffixes = ["rdf"]
 
 [params]
-  DEVELOPER_PORTAL_URL = "https://developer.trafiklab.se"
-  SITE_SOURCE_REPOSITORY = "https://github.com/trafiklab/trafiklab.se/"
-  SITE_SOURCE_REPOSITORY_BRANCH = "main"
+  devPortalUrl = "https://developer.trafiklab.se"
+  sourceRepository = "https://github.com/trafiklab/trafiklab.se/"
+  sourceRepositoryBranch = "main"
   support = "https://support.trafiklab.se/"
   mailchimpId = "32daffb7a6"
   mailchimpUser = "f850700e99947106e6a19cfaa"
