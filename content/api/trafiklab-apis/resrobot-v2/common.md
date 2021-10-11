@@ -57,18 +57,18 @@ Request category codes for filtering differ from response category codes. These 
 
 |Abbreviation| Name|
 | ------------------- | ----------------------|
-|BLT |Buss Länstrafik| 
-|BXB |Buss Express| 
-|ULT |Tunnelbana Länstrafik| 
-|JAX |Järnväg Arlanda Express| 
-|JLT |ärnväg Länstrafik)| 
-|JRE |Järnväg Regionaltrafik| 
-|JIC |Järnväg InterCity| 
-|JPT |Järnväg PågaTåg| 
-|JEX |Järnväg Express| 
-|SLT |Spårvagn Länstrafik| 
-|FLT |Färja Länstrafik| 
-|FUT |Färja Utrikes|
+|BLT | Regional bus |
+|BXB | Express bus |
+|ULT | Metro |
+|JAX | Arlanda Express |
+|JLT | Local train |
+|JRE | Regional train |
+|JIC | InterCity train |
+|JPT | PågaTåg |
+|JEX | Express train |
+|SLT | Tram |
+|FLT | Lokal ferry |
+|FUT | International ferry |
 
 **Numeric representation**
 
