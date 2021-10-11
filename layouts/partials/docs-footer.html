@@ -14,7 +14,7 @@
             <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
         {{ end }}
 
-        {{ if isset $.Site.Params "repository" }}
+        {{ if isset $.Site.Params "sourceRepository" }}
             <p><a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
             {{ i18n "docs-footer-view-on-github" }}</a></p>
             <p><a href="{{ $.Site.Params.sourceRepository }}edit/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
