@@ -32,7 +32,7 @@
 
     <div class="header-right" aria-roledescription="">
       {{ partial "language.html" .}}
-      <a href="{{ .Site.Params.DEVELOPER_PORTAL_URL }}" class="tl-button tl-button--variant-primary user-link">{{ i18n "header-cta-keys" }}</a>
+      <a href="{{ .Site.Params.devPortalUrl }}" class="tl-button tl-button--variant-primary user-link">{{ i18n "header-cta-keys" }}</a>
       <button class="mobile-menu-button" aria-haspopup="true" aria-label="Open mobile menu" aria-hidden="true">
         <div class="burger-menu-button__icons">
           <div class="burger-menu-button__icon burger-menu-button__icon__1"></div>
@@ -65,7 +65,7 @@
           </li>
         {{ end }}
       </ul>
-      <a href="{{ .Site.Params.DEVELOPER_PORTAL_URL }}">{{ i18n "header-cta-keys" }}</a>
+      <a href="{{ .Site.Params.devPortalUrl }}">{{ i18n "header-cta-keys" }}</a>
       {{ partial "language.html" .}}
     </nav>
   </div>

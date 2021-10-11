@@ -4,7 +4,7 @@
     <main id="site-content">
       <div class="docs-header">
         <h1 class="tl-h1">{{ .Title }}
-          <a href="{{ $.Site.Params.SITE_SOURCE_REPOSITORY }}blob/{{ $.Site.Params.SITE_SOURCE_REPOSITORY_BRANCH }}/content/{{ replace .File.Path "\\" "/" }}" class="docs-header-vcs">
+          <a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Path "\\" "/" }}" class="docs-header-vcs">
           {{- $githubLogoUrl := resources.Get "images/github.svg" -}}
           <img alt="Edit on Github" src="{{$githubLogoUrl.Permalink}}"/>
           </a></h1>

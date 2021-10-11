@@ -15,12 +15,12 @@
         {{ end }}
 
         {{ if isset $.Site.Params "repository" }}
-            <p><a href="{{ $.Site.Params.SITE_SOURCE_REPOSITORY }}blob/{{ $.Site.Params.SITE_SOURCE_REPOSITORY_BRANCH }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            <p><a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
             {{ i18n "docs-footer-view-on-github" }}</a></p>
-            <p><a href="{{ $.Site.Params.SITE_SOURCE_REPOSITORY }}edit/{{ $.Site.Params.SITE_SOURCE_REPOSITORY_BRANCH }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            <p><a href="{{ $.Site.Params.sourceRepository }}edit/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
             {{ i18n "docs-footer-edit-on-github" }}</a></p>
             {{ if $is_fallback_source_page }}
-                <p><a href="{{ $.Site.Params.SITE_SOURCE_REPOSITORY }}tree/{{ $.Site.Params.SITE_SOURCE_REPOSITORY_BRANCH }}/content/{{ replace .File.Dir "\\" "/" }}">
+                <p><a href="{{ $.Site.Params.sourceRepository }}tree/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Dir "\\" "/" }}">
                     {{ i18n "docs-footer-create-translation-on-github" }}</a></p>
             {{ end }}
         {{ end }}
