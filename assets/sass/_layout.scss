@@ -47,14 +47,6 @@ body.type-home #main-content {
 
 }
 
-.with-footer #page-content {
-  padding-bottom: $footer-height + 3rem; // additional margin for better readability
-}
-
-.type-home #page-content {
-  padding-bottom: $footer-height; // no additional margin on homepage
-}
-
 .main-content {
   flex-grow: 1;
 }

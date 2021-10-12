@@ -13,6 +13,7 @@
 @import 'partials/landing_roller';
 @import 'partials/docs_footer';
 @import 'shortcodes/tabs';
+@import 'shortcodes/highlight';
 @import 'shortcodes/admoniton';
 @import 'shortcodes/swagger_ui';
 @import 'blogposts';
@@ -68,4 +69,13 @@ p {
 
 .page p img {
   max-width: 100%;
+}
+
+code:not(.highlight code) {
+  background-color: $grey;
+  border-radius: $border-radius-default/2;
+  padding: 0.10rem;
+  margin: 0.10rem 0;
+  font-size: 0.9rem;
+  display:inline-block;
 }

@@ -1,6 +1,4 @@
 #footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   min-height: $footer-height;
 }
@@ -52,6 +50,7 @@ body #footer {
       max-height: 60px;
       max-width: 100%;
       height: auto;
+      filter: brightness(0) invert(1); /* Force footer logos to be white */
     }
   }
 }
