@@ -1,5 +1,7 @@
 ---
-title: SL Traffic status
+title: SL Traffic status v2.0 (Trafikläget 2)
+weight: 600
+date: 2018-06-01
 ---
 
 ## Beskrivning
@@ -19,11 +21,11 @@ En händelse påverkar sitt trafikslag, så att trafikslagets sammanfattande sta
 finns ibland just nu aktiva händelser tillhörande trafikslaget. En händelse kan utöver statusen dessutom vara planerad.
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 ## URL
 
-https://api.sl.se/api2/trafficsituation.<FORMAT>? key=<DIN API NYCKEL>;
+`https://api.sl.se/api2/trafficsituation.<FORMAT>?key=<DIN API NYCKEL>`
 
 ## Format
 

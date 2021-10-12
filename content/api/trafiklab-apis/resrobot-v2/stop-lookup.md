@@ -51,13 +51,9 @@ A new version of ResRobot is available. Existing apps should migrate to the new 
 build new apps on version 2.0.
 {{% /warning %}}
 
-## Example calls
+## Example
 
-### Exact search
-
-Exact search returns only stations that match exactly with the search string.
-
-#### Call
+### Call
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -75,7 +71,25 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&key=API_KEY
 
 {{% /tab %}} {{% /tabs %}}
 
-#### Response
+#### Request parameters
+
+| **Name**        | **Type** | **Required** | **Description**                                                                                                                                    |
+| --------------- | ----------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| key             | String      | Yes               | Your API key                                                                                                                                    |
+| input           | String      | Yes               | The search string. Append a question mark for fuzzy search.                                                                                                      |
+| maxNo           | Integer     | No              | The maximum number of results to return, default 10, maximum 1000                                                                         |
+| lang            | String      | No              | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages.
+| format          | String      | No              | Json or Xml |
+
+{{% info %}}
+
+**Fuzzy search**
+
+By adding a question mark to the query string, fuzzy matching is used instead of exact matching. This will return
+stations which name is an exact or near match to the input string.
+{{% /info %}}
+
+### Response
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -113,150 +127,19 @@ of stations, for example to group stops which are close to eachother or to group
 This is especially useful for people who are not familiar with the environment. Instead of having to choose between
 several stops which they don't know, they can simply search for trips to "Göteborg". {{% /info %}}
 
-### Fuzzy search
 
-By adding a question mark to the query string, fuzzy matching is used instead of exact matching. This will return
-stations which name is an exact or near match to the input string.
 
-#### Call
+### Response Data fields
 
-{{% tabs %}} {{% tab "Json" %}}
-
-```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KEY
-```
-
-{{% /tab %}}
-
-{{% tab "Xml" %}}
-
-```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
-```
-
-{{% /tab %}} {{% /tabs %}}
-
-#### Response
-
-{{% tabs %}} {{% tab "Json" %}}
-
-```javascript
-{
-  "StopLocation": [
-    {
-      "id": "740098001",
-      "extId": "740098001",
-      "name": "GÖTEBORG",
-      "lon": 11.973479,
-      "lat": 57.708895,
-      "weight": 22332,
-      "products": 254
-    },
-    {
-      "id": "740000002",
-      "extId": "740000002",
-      "name": "Göteborg Centralstation",
-      "lon": 11.973479,
-      "lat": 57.708895,
-      "weight": 17428,
-      "products": 182
-    },
-    {
-      "id": "740098526",
-      "extId": "740098526",
-      "name": "GÖTEBORG GAMLESTADEN",
-      "lon": 12.004411,
-      "lat": 57.729148,
-      "weight": 16810,
-      "products": 112
-    },
-    {
-      "id": "740016365",
-      "extId": "740016365",
-      "name": "Göteborg Sävenäs lokstation",
-      "lon": 12.021077,
-      "lat": 57.725993,
-      "weight": 13,
-      "products": 128
-    },
-    {
-      "id": "740025610",
-      "extId": "740025610",
-      "name": "Göteborg Berzeliigatan",
-      "lon": 11.981884,
-      "lat": 57.698504,
-      "weight": 4917,
-      "products": 200
-    },
-    {
-      "id": "740015578",
-      "extId": "740015578",
-      "name": "Göteborg Korsvägen",
-      "lon": 11.986909,
-      "lat": 57.696625,
-      "weight": 4917,
-      "products": 200
-    },
-    {
-      "id": "740016358",
-      "extId": "740016358",
-      "name": "Göteborg Kungsportsplatsen",
-      "lon": 11.969748,
-      "lat": 57.704023,
-      "weight": 4917,
-      "products": 200
-    },
-    {
-      "id": "740072430",
-      "extId": "740072430",
-      "name": "Göteborg Stenpiren",
-      "lon": 11.957424,
-      "lat": 57.705803,
-      "weight": 4669,
-      "products": 448
-    },
-    {
-      "id": "740025609",
-      "extId": "740025609",
-      "name": "Göteborg Bellevue",
-      "lon": 12.023477,
-      "lat": 57.732456,
-      "weight": 4488,
-      "products": 192
-    },
-    {
-      "id": "740020752",
-      "extId": "740020752",
-      "name": "Göteborg Brunnsparken",
-      "lon": 11.967843,
-      "lat": 57.706945,
-      "weight": 4488,
-      "products": 192
-    }
-  ]
-}
-```
-
-{{% /tab %}}
-
-{{% tab "Xml" %}}
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<LocationList xmlns="hafas_rest_v1">
-    <StopLocation id="740098001" extId="740098001" name="GÖTEBORG" lon="11.973479" lat="57.708895" weight="22332" products="254"/>
-    <StopLocation id="740000002" extId="740000002" name="Göteborg Centralstation" lon="11.973479" lat="57.708895" weight="17428" products="182"/>
-    <StopLocation id="740098526" extId="740098526" name="GÖTEBORG GAMLESTADEN" lon="12.004411" lat="57.729148" weight="16810" products="112"/>
-    <StopLocation id="740016365" extId="740016365" name="Göteborg Sävenäs lokstation" lon="12.021077" lat="57.725993" weight="13" products="128"/>
-    <StopLocation id="740025610" extId="740025610" name="Göteborg Berzeliigatan" lon="11.981884" lat="57.698504" weight="4917" products="200"/>
-    <StopLocation id="740015578" extId="740015578" name="Göteborg Korsvägen" lon="11.986909" lat="57.696625" weight="4917" products="200"/>
-    <StopLocation id="740016358" extId="740016358" name="Göteborg Kungsportsplatsen" lon="11.969748" lat="57.704023" weight="4917" products="200"/>
-    <StopLocation id="740072430" extId="740072430" name="Göteborg Stenpiren" lon="11.957424" lat="57.705803" weight="4669" products="448"/>
-    <StopLocation id="740025609" extId="740025609" name="Göteborg Bellevue" lon="12.023477" lat="57.732456" weight="4488" products="192"/>
-    <StopLocation id="740020752" extId="740020752" name="Göteborg Brunnsparken" lon="11.967843" lat="57.706945" weight="4488" products="192"/>
-</LocationList>
-```
-
-{{% /tab %}} {{% /tabs %}}
-
-###  
+| **Name**     | **Data type**               | **Description**                                                                                                                                                                                                                                                         |
+| ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LocationList | StopLocation[]              | List with results                                                                                                                                                                                                          |
+| StopLocation | Object                      |                                                                                                                                                                                                                                                                         |
+| name         | String                      | Stop name                                                                                                                                                                                                                                                     |
+| extId        | String                      | Stop id for use in other ResRobot APIs.                                                                                                                                                                                                                                    |
+| id           | String                      | Internal id. Do not use.                                                              |
+| dist         | Integer                     | Distance from the queried coordinates, in meters.                                                                                                                                                                                                                      |
+| lat          | String                      | Latitude (WGS84, decimal degree) for this stop, eg 59.293611                                                                                                                                                                                                                           |
+| lon          | String                      | Longitude (WGS84, decimal degree) for this stop, eg 18.083056                                                                                                                                                                                                                          |
+| products     | Integer                     | Transport modes available at thist stop, as a sum of the following values:<br>1 – Flyg<br>2 - Snabbtåg<br>4 - Tåg<br>8 - Expressbuss<br>16 - Lokaltåg<br>32 - Tunnelbana<br>64 – Spårvagn<br>128 – Buss<br>256 – Båt<br>512 – Taxi<br>(160 – Tunnelbana och Buss) |
+| weight       | Integer                     | Shows how much traffic is handled at this stop, a stop with more traffic gets a higher weight. Between 0 and 32767.              |

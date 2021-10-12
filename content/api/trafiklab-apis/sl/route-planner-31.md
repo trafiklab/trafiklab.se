@@ -1,11 +1,13 @@
 ---
-title: SL Routeplanner
+title: SL Route-planner v3.1 (Reseplanerare 3.1)
+weight: 100
+date: 2020-06-26
 ---
 <h2> <a>Beskrivning</a></h2>
 <p>Med detta API kan du få reseförslag från A till B inom Stockholms län med SLs trafik. I SLs reseplanerare finns även Waxholmsbolagets trafik. APIet kan användas för att beräkna reseförslag mellan valfri kombination av position och/eller stoppställe. APIet returnerar reseförslag från ”bästa matchning” av det som läggs in.</p>
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 I reseplaneraren finns det fyra olika funktioner som kan anropas:</p>
 
@@ -20,7 +22,7 @@ Den returnerar en lista på alla stop/stationer inklusive alla ankomst- och avg�
   
 Reseplaneraren anropas med en GET-request per tjänst med UTF-8 url-kodade GET-parametrar.
 
-##Förändringar sedan tidigare version
+## Förändringar sedan tidigare version
 
 <p>En ändring har genomförts som kan påverka implementerande applikationer.<br />
 För version 3.1 av reseplaneraren så har svarsformatet avseende crd-elementen i den polyline som beskriver detaljerad färdväg ändrats. Punkterna representeras i denna version av double-tal jämfört med version 3.0 som representerade dem som heltal.<br />
@@ -30,25 +32,10 @@ För version 3.1 av reseplaneraren så har svarsformatet avseende crd-elementen 
 <span>>Travelplanner 3.1: <em>&lt;crd&gt;17.973032&lt;/crd&gt;&lt;crd&gt;59.360501&lt;/crd&gt;&lt;crd&gt;9.0E-6&lt;/crd&gt;&lt;crd&gt;1.8E-5&lt;/crd&gt;</em></p>
 <h2>URL</h2>
 
-- Trip:
-
-```text
-api.sl.se/api2/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&amp;parametrar
-```
-
-- Journey detail:
-
-```text
-api.sl.se/api2/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&amp;<referensparameter>
-```
-- Recontruction:
-```text
-api.sl.se/api2/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;<referensparameter>
-```
-- XSD:
-```text
-api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>
-```
+- Trip: `api.sl.se/api2/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&parametrar`
+- Journey detail: `api.sl.se/api2/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
+- Recontruction: `api.sl.se/api2/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
+- XSD: `api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`
 
 ## Format
 Json eller Xml enligt ändelse till serviceanropet.

@@ -1,14 +1,18 @@
 ---
-title: SL Station lookup
+title: SL Station lookup v1.0 (Platsuppslag)
+weight: 300
+date: 2018-06-01
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara söka efter hållplatsområden eller hållplatser, adresser och platser.</p>
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 <h2>URL</h2>
-<p class="notranslate">https://api.sl.se/api2/typeahead.&lt;FORMAT&gt;?key=&lt;DIN NYCKEL&gt;&amp;searchstring=&lt;SÖKORD&gt;&amp;stationsonly=&lt;ENDAST STATIONER&gt;&amp;maxresults=&lt;MAX ANTAL SVAR&gt;</p>
+
+`https://api.sl.se/api2/typeahead.<FORMAT>?key=<DIN NYCKEL>%&searchstring=<SÖKORD>%&stationsonly=<ENDAST STATIONER>&maxresults<MAX ANTAL SVAR>`
+
 <h2>Format</h2>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>
 <h2>Parametrar</h2>

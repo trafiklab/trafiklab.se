@@ -1,18 +1,22 @@
 ---
-title: SL Disturbances
+title: SL Service alerts v2.0 (Störningsinformation 2)
+weight: 500
+date: 2018-06-01
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få fram information om aktuella och planerade störningar i SL-trafiken. Med API ‘et kan du ställa frågor om störningar på till exempel en viss linje eller ett visst trafikslag. Svaret består av störningsmeddelanden med viss metainformation.</p>
 <p>För att se informationen som returneras av detta API, se <a href="https://api.sl.se/ta">https://api.sl.se/ta</a> (detta är en störningsinformationssida som är anpassad för SL:s interna behov och inte avsedd att användas av resenärerna).</p>
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 <p>Om ingen av parametrarna ”TransportMode”, ”LineNumber” och ”SiteId” skickas med anropet skickas samtliga avvikelser tillbaks som svar.</p>
 <p>Är du intresserad av Störningar här och nu i SL trafiken se<a href="https://sl.se/sv/find/?query=St%c3%b6rningsinformation">https://sl.se/sv/find/?query=St%c3%b6rningsinformation</a></p>
 <h2>Metod deviations</h2>
 <p>URL</p>
-<p>https://api.sl.se/api2/deviations.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;transportMode=&lt;TRANSPORTMODE&gt;&amp;lineNumber=&lt;LINENUMBER&gt;&amp;siteId=&lt;SITEID&gt;&amp;fromDate=&lt;FROMDATE&gt;&amp;toDate=&lt;TODATE&gt;</p>
+
+`https://api.sl.se/api2/deviations.<FORMAT>?key=<DIN API NYCKEL>&transportMode=<TRANSPORTMODE>&lineNumber=<LINENUMBER>&siteId=<SITEID>&fromDate=<FROMDATE>&toDate=<TODATE>`
+
 <p>Format</p>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>
 <p>Parametrar</p>
