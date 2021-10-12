@@ -1,14 +1,18 @@
 ---
-title: SL Nearby stops
+title: SL Nearby stops v2.0 (Närliggande hållplatser 2)
+weight: 310
+date: 2018-06-01
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få information om närliggande hållplatser till en försedd plats baserad på lat och long.</p>
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 <h2>URL</h2>
-<p>api.sl.se/api2/nearbystopsv2.&lt;FORMAT&gt;?key=&lt;DIN NYCKEL&gt;&amp;originCoordLat=&lt;LAT&gt;&amp; originCoordLong=&lt;LONG&gt;&amp;maxNo=&lt;MAX ANTAL SVAR&gt;&amp;r=&lt;RADIUS I METER&gt;</p>
+
+`api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
+
 <h2>Format</h2>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>
 <h3>Parametrar</h3>

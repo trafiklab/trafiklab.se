@@ -136,21 +136,13 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 
 | **Name**        | **Type** | **Required** | **Description**                                                                                                                                    |
 | --------------- | ----------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key             | String      | Ja               | Your API key                                                                                                                                    |
-| originCoordLat  | String      | Ja               | Latitude (WGS84, decimal degree), eg 59.293611                                                                                                      |
-| originCoordLong | String      | Ja               | Longitude (WGS84, decimal degree), eg 18.083056                                                                                                     |
-| maxNo           | Integer     | Nej              | The maximum number of results to return, default 10, maximum 1000                                                                         |
-| r               | Integer     | Nej              | Maximum distance between given coordinates and the stop. Default 1000, max 10000 |
-| lang            | String      | Nej              | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages.
-| format          | String      | Nej              | Json or Xml |
-
-
-{{% info %}}
-**Fuzzy search**
-
-By adding a question mark to the query string, fuzzy matching is used instead of exact matching. This will return
-stations which name is an exact or near match to the input string.
-{{% /info %}}
+| key             | String      | Yes              | Your API key                                                                                                                                    |
+| originCoordLat  | String      | Yes              | Latitude (WGS84, decimal degree), eg 59.293611                                                                                                      |
+| originCoordLong | String      | Yes              | Longitude (WGS84, decimal degree), eg 18.083056                                                                                                     |
+| maxNo           | Integer     | No               | The maximum number of results to return, default 10, maximum 1000                                                                         |
+| r               | Integer     | No               | Maximum distance between given coordinates and the stop. Default 1000, max 10000 |
+| lang            | String      | No               | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages.
+| format          | String      | No               | Json or Xml |
 
 ### Response
 
@@ -275,7 +267,7 @@ stations which name is an exact or near match to the input string.
 
 {{% /tab %}} {{% /tabs %}}
 
-#### Data fields
+## Response Data fields
 
 | **Name**     | **Data type**               | **Description**                                                                                                                                                                                                                                                         |
 | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,11 +1,13 @@
 ---
-title: SL Stops and lines
+title: SL Stops and lines v2.0 (Hållplatser och linjer 2)
+weight: 400
+date: 2018-06-01
 ---
 
 Listning av hållplatser och linjer i Stockholms län.
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website.{{% /info %}}
 
 <p>För att kunna beskriva trafikinformation på ett konsekvent sätt, är det nödvändigt att ingående begrepp och definitioner är klara och tydliga. De viktigaste begreppen för denna tjänst presenteras nedan.</p>
 <p><a href="https://www.trafiklab.se/sites/default/files/documentation-files/model.pdf">Begreppsmodell</a></p>
@@ -81,17 +83,24 @@ has therefore not been translated {{% /info %}}
 <h2>Åtkomst</h2>
 <p>URL:er för anrop finns specificerade nedan:</p>
 <p>Produktionsmiljö</p>
-<p>https://api.sl.se/api2/LineData.xml?model=[model]&amp;key=[key]</p>
-<p>https://api.sl.se/api2/LineData.json?model=[model]&amp;key=[key]</p>
+
+`https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+
+`https://api.sl.se/api2/LineData.json?model=[model]&key=[key]`
+
 <p>Observera att det är extension i anropet som avgör formateringen av svaret.</p>
 <h2>API nycklar, behörighet</h2>
-<p>API nycklar kan införskaffas via följande sajt: <a href="http://www.trafiklab.se/api">https://www.trafiklab.se/api</a></p>
+<p>API nycklar kan införskaffas via Trafiklabs utvecklareportal</p>
 <p>En API nyckel ska användas i URL:en för ett API anrop.</p>
-<p>https://api.sl.se/api2/LineData.xml?model=[model]&amp;key=[key]</p>
+
+`https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+
 <h2>Format</h2>
 <p>API:et har support för XML och JSON dataformatering.</p>
 <p>Önskad formatering anges i URL:en för ett API anrop.</p>
-<p>api.sl.se/api2/LineData.xml?model=[model]&amp;key=[key]</p>
+
+`api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+
 <h2>Datatyper</h2>
 <p>Alla datatyper representeras alltid i strängform för respektive format.</p>
 <p>Typen angiven vid beskrivningar av modeller anger endast en lämplig datatyp att konvertera värdet till i ett givet programmeringsspråk.</p>
@@ -124,8 +133,8 @@ has therefore not been translated {{% /info %}}
 <h2>Filtrering av data</h2>
 <p>För modellerna line och jour är det önskvärt att kunna särskilja vilken trafiktyp datat avser. Detta kan åstadkommas genom att skicka med den valfria parametern DefaultTransportModeCode som kan innehålla någon av de Transportmode-värdena som returneras vid anrop till modellen transportmode, ex ”BUS” eller ”METRO”</p>
 <p>Ex:</p>
-<p>https://api.sl.se/api2/linedata.xml?key=[nyckel]&amp;model=line&amp;DefaultTransportModeCode=METRO</p>
-<p>https://api.sl.se/api2/linedata.xml?key=[nyckel]&amp;model=jour&amp;DefaultTransportModeCode=BUS</p>
+`https://api.sl.se/api2/linedata.xml?key=[nyckel]&model=line&DefaultTransportModeCode=METRO`
+`https://api.sl.se/api2/linedata.xml?key=[nyckel]&model=jour&DefaultTransportModeCode=BUS`
 <h2>Teckenkodning</h2>
 <p>UTF-8 används för både XML och Json.</p>
 <h2>Prestanda</h2>

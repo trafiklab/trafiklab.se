@@ -1,13 +1,19 @@
 ---
-title: SL Departures (Realtidsinformation 4)
----<h2>Beskrivning</h2>
+title: SL Departures v4.0 (Realtidsinformation 4)
+weight: 200
+date: 2018-06-01
+---
+
+<h2>Beskrivning</h2>
 <p lang="sv-SE">Realtidsinformation gällande buss, tunnelbana, pendeltåg och lokalbana.</p>
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated {{% /info %}}
+has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 <h2>URL</h2>
-<p>https://api.sl.se/api2/realtimedeparturesV4.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;siteid=&lt;SITEID&gt;&amp;timewindow=&lt;TIMEWINDOW&gt;</p>
+
+`https://api.sl.se/api2/realtimedeparturesV4.<FORMAT>?key=<DIN API NYCKEL>&siteid=<SITEID>&timewindow=<TIMEWINDOW>`
+
 <h2>Format</h2>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>
 <h2>Parametrar</h2>
