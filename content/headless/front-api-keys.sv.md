@@ -1,7 +1,7 @@
 ---
 title: API-nycklar
 cta: Dina nycklar
-link: "#"
+link: "https://developer.trafiklab.se/"
 icon: /icons/OpenedLock.svg
 icon_alt: ett öppet lås
 ---

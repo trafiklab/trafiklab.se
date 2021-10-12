@@ -1,7 +1,7 @@
 ---
 title: API keys
 cta: Your keys
-link: "#"
+link: "https://developer.trafiklab.se/"
 icon: /icons/OpenedLock.svg
 icon_alt: an open padlock
 ---
