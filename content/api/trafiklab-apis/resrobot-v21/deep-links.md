@@ -14,11 +14,11 @@ You will get a redirect to the page with results.
 
 ### How often is this data updated?
 
-The static data used for this API is updated when changes are made, at most once per day.
+The static data behind the ResRobot web application is updated when changes are made, at most once per day.
 
-### Which operators are covered by this dataset?
+### Which operators are covered by this API?
 
-All operators which operate in Sweden are covered by the ResRobot APIs.
+All operators which operate in Sweden are covered by the ResRobot web application.
 
 ### How often does the data format changes? Do breaking changes happen?
 

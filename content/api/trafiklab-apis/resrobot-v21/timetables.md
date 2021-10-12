@@ -89,7 +89,7 @@ https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&accessId=API_KEY
 - The `key` parameter has been renamed to `accessId`.
 - `maxJourneys` is ignored when making queries in the near past or future, when realtime data is available. We recommend
   using the new `duration` parameter to consistently limit the results list to a specific time window.
-- `passlist` is now 0 by default. Set to `1` to keep the same response data as ResRobot 2.0. 
+- `passlist` is now 0 by default.  Set to `1` to keep the responses the same if you need this data.
 {{% /note %}}
 
 | **Name**      | **Data type**      | **Required**             | **Description**                                                                                                                                                                                           |
@@ -422,7 +422,7 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 - `Product` is now wrapped in an array
 - `TransportNumber` is no longer included. Use `ProductAtStop.num` or `ProductAtStop.displayNumber` instead. 
 - `JourneyStatus` and `JourneyDetailRef` have been added
-- `Type` has changed meaning and possible values. This field used to indicate the type of the departing journey, but now indicates the type of departs location.
+- `Type` has a different meaning and different possible values. This field used to indicate the type of the departing/arriving journey, but now indicates the type of location for this departure/arrival
 - Any applications which made use of the internal ids (`id` and `stopid`) should switch over to using the public ids (`extId` and `stopExtId`) instead.
 
 {{% /note %}}
