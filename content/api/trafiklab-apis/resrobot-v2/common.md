@@ -37,13 +37,16 @@ collected these common data types here.
 {{% /tab %}}
 {{% /tabs %}}
 
-| **Name**            | **Data type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ------------------------- | ----------------------|
-| Product.name              | String                  | catOutL + num |
-| Product.operator          | String                  | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                                                                                                                                                                                                                                                      | |
-| Product.catOutS           | String                  | Transport type code.<br>Examples:  |
-| Product.catOutL           | String                  | Category name <br>Example: "Buss", "Tåg", "Intercity", "Tunnelbana", "Arlanda Express","Regional","InterCity", ”PågaTåg”                                                                                                                                                                                                                                              |
-| Product.catOutCode        | Integer                 | Category code, see below                                            |
+| **Name**              | **Data type**           | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------- | ----------------------- | ----------------------|
+| Product.name          | String                  | catOutL + num |
+| Product.num           | String                  | Line or train number |
+| Product.operator      | String                  | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                                                                                                                                                                                                                                                      | |
+| Product.catOutS       | String                  | Transport type code, see below  |
+| Product.catOutL       | String                  | Category name <br>Example: "Buss", "Tåg", "Intercity", "Tunnelbana", "Arlanda Express","Regional","InterCity", ”PågaTåg”                                                                                                                                                                                                                                              |
+| Product.catCode       | Integer                 | Category code, identical to catOutS                                           |
+| Product.operator      | String                  | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                                                                                                                                                                                                                                                      | |
+| Product.operatorCode  | String                  | Operator code. For example: “256”, "289".
 
 ### Response product categories
 

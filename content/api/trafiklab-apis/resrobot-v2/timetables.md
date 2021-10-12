@@ -40,6 +40,13 @@ Only the most important parameters and response variables are described on this 
 details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
 
+{{% warning %}}
+**New version available**
+
+A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
+build new apps on version 2.0.
+{{% /warning %}}
+
 ## Example call
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
@@ -418,7 +425,7 @@ endpoints in this table. When we write departure/arrival, apply the one that mat
 | rtTrack                        | String                       | Realtime track                                                                                                              |
 | rtDepTrack                     | String                       | Realtime departure track, in case arrival and departure track aren’t identical                                              |
 | stop                           | String                       | Stop name                                                                                                                   |
-| stopId                         | String                       | Internal id, do not use                                                                                                     |
+| stopid                         | String                       | Internal id, do not use                                                                                                     |
 | stopExtId                      | String                       | Stop id                                                                                                                     |
 | transportNumber                | String                       | Line number. Example:“19”                                                                                                   |
 | transportCategory              | String                       | See product.catOutL                                                                                                         |

@@ -1,6 +1,7 @@
 ---
 title: ResRobot Stop lookup
 weight: 30
+date: 2021-10-12
 ---
 
 ## What does this API provide?
@@ -54,7 +55,7 @@ Exact search returns only stations that match exactly with the search string.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&key=API_KEY
+https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -62,11 +63,20 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&key=API_KEY
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&key=API_KEY
+https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
 
+#### Request parameters
+
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The `key` parameter has been renamed to `accessId`.
+
+{{% /note %}}
+ 
 #### Response
 
 {{% tabs %}} {{% tab "Json" %}}
@@ -115,7 +125,7 @@ stations which name is an exact or near match to the input string.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KEY
+https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -123,7 +133,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KE
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
+https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -251,4 +261,30 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
 
 {{% /tab %}} {{% /tabs %}}
 
-###  
+
+## Response Data fields
+
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The root object now contains an array of `stopLocationOrCoordLocation` instead of an array of `stopLocation`.
+- `stopLocation` can now be found in the items present in the `stopLocationOrCoordLocation` array.
+- The `products` field has been replaced with an array of Products. Instead of accessing the sum of all products through `products`, you can now obtain all the individual products through `ProductAtStop[].cls`
+- `timezoneOffset` has been added to each `StopLocation`.
+
+{{% /note %}}
+
+
+| **Name**     | **Data type**               | **Description**                                                                                                                                                                                                                                                         |
+| ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stopLocationOrCoordLocation | stopLocationOrCoordLocation[] | List with results                                                                                                                                                                                                          |
+| stopLocationOrCoordLocation.StopLocation | StopLocation | Actual data is contained in the `StopLocation` property                                                                                                                                                                                                          |
+| StopLocation | Object                      | Object containing a single stop                                                                                                                                                                                                                                                                        |
+| StopLocation.name         | String                      | Stop name                                                                                                                                                                                                                                                     |
+| StopLocation.extId        | String                      | Stop id for use in other ResRobot APIs.                                                                                                                                                                                                                                    |
+| StopLocation.id           | String                      | Internal id. Do not use.                                                              |
+| StopLocation.dist         | Integer                     | Distance from the queried coordinates, in meters.                                                                                                                                                                                                                      |
+| StopLocation.lat          | String                      | Latitude (WGS84, decimal degree) for this stop, eg 59.293611                                                                                                                                                                                                                           |
+| StopLocation.lon          | String                      | Longitude (WGS84, decimal degree) for this stop, eg 18.083056                                                                                                                                                                                                                          |
+| StopLocation.productAtStop     | Product[]              | See [common data types](common.md). Only the `cls` field of each product will contain actual data.  |
+| StopLocation.weight       | Integer                     | Shows how much traffic is handled at this stop, a stop with more traffic gets a higher weight. Between 0 and 32767.              |

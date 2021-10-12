@@ -1,6 +1,7 @@
 ---
 title: ResRobot Route planner
 weight: 20
+date: 2021-10-12
 ---
 ## What does this API provide?
 
@@ -47,22 +48,28 @@ This example call retrieves all routes from Stockholm Central Station (740000001
 {{% tabs %}} 
 {{% tab "Json" %}}
 ```text
-https://api.resrobot.se/v2/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&key=API_KEY
+https://api.resrobot.se/v2/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
 ```
 {{% /tab %}}
 {{% tab "Xml" %}}
 ```text
-https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&key
-=API_KEY
+https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
 ```
 {{% /tab %}}
 {{% /tabs %}} 
 
 #### Request parameters
 
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The `key` parameter has been renamed to `accessId`.
+
+{{% /note %}}
+ 
 | **Name**                        | **Data type**            | **Required**                                                   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------- | ------------------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key                             | String                   | Yes                                                            | Your API key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| accessId                        | String                   | Yes                                                            | Your API key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | lang                            | String (sv/en/de)        | No, default sv                                                 | Language to use in the response. Affects both data (names for different transport types) and error messages.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | date                            | Date (YYYY-MM-DD)        | No, default today                                              | Search on a specific date, specified in YYYY-MM-DD format, e.g. 2021-12-31.<br>You can only search for dates within the timetable period, defined by planningPeriodBegin and planningPeriodEnd which is present in all route-planning responses.                                                                                                                                                                                                                                                                                                                                                                                                |
 | time                            | Time (HH:MM)             | No, default now                                                | Search on a specific time, specified in HH:MM format, e.g. 19:06.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -556,6 +563,8 @@ response since it's only meant to show the structure of the response. {{% /info 
 | Leg.dist                         | Integer           | Distance of this leg in meter. Relevant när type=WALK eller type=BIKE.                                                                                                                                                                                                                               |
 | Leg.Origin                       | Origin            | Information about the departure stop                                                                                                                                                                                                                                                                 |
 | Leg.Destination                  | Origin            | Information about the destination stop                                                                                                                                                                                                                                                               |
+| Leg.JourneyStatus                | Origin            | Information about the vehicle journey status, **P**lanned, **R**eplacement, **A**dditional or **S**pecial.                                                                                                                                                                                                                                                          |
+| Leg.JourneyDetailRef             | Origin            | Contains a reference to this specific vehicle journey. Only when `type` = `JNY`                                                                                                                                                                                                                                                             |
 | Origin.name                      | String            | Name of the departure stop                                                                                                                                                                                                                                                                           |
 | Origin.type                      | String            | `ST` for stop.                                                                                                                                                                                                                                                                                       |
 | Origin.date                      | Date (YYYY-MM-DD) | Departure date in in YYYY-MM-DD format, e.g. 2021-12-31.                                                                                                                                                                                                                                             |

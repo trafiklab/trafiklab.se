@@ -1,6 +1,7 @@
 ---
 title: ResRobot data types 
 weight: 990
+date: 2021-10-12
 ---
 
 The different ResRobot API endpoints have different response structures, but some parts of the response are shared among
@@ -9,18 +10,34 @@ collected these common data types here.
 
 ## Product
 
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- `operatorUrl` is no longer available
+- Several fields have been added
+{{% /note %}}
+
 {{% tabs %}}
 {{% tab "json" %}}
 ```json
 "Product": {
-  "name": "Regional Tåg 231",
-  "num": "231",
-  "catCode": "2",
-  "catOutS": "JRE",
-  "catOutL": "Regional Tåg",
-  "operatorCode": "74",
-  "operator": "SJ",
-  "operatorUrl": "http://www.sj.se"
+    "name": "Länstrafik - Tåg 40",
+    "internalName": "Länstrafik - Tåg 40",
+    "displayNumber": "40",
+    "num": "40",
+    "line": "40",
+    "lineId": "1275000000036",
+    "catOut": "JLT",
+    "catIn": "JLT",
+    "catCode": "4",
+    "cls": "16",
+    "catOutS": "JLT",
+    "catOutL": "Länstrafik - Tåg",
+    "operatorCode": "275",
+    "operator": "SL",
+    "admin": "275___",
+    "routeIdxFrom": 0,
+    "routeIdxTo": 1
 },
 ```
 {{% /tab %}}
@@ -32,18 +49,27 @@ collected these common data types here.
          name="Länstrafik - Buss Grön X" 
          num="Grön X" operator="Västtrafik"
          operatorCode="279" 
-         operatorUrl="http://www.vasttrafik.se/"/>
+         />
 ```
 {{% /tab %}}
 {{% /tabs %}}
 
-| **Name**            | **Data type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ------------------------- | ----------------------|
-| Product.name              | String                  | catOutL + num |
-| Product.operator          | String                  | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                                                                                                                                                                                                                                                      | |
-| Product.catOutS           | String                  | Transport type code.<br>Examples:  |
-| Product.catOutL           | String                  | Category name <br>Example: "Buss", "Tåg", "Intercity", "Tunnelbana", "Arlanda Express","Regional","InterCity", ”PågaTåg”                                                                                                                                                                                                                                              |
-| Product.catOutCode        | Integer                 | Category code, see below                                            |
+| **Name**              | **Data type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------- | ------------------------- | ----------------------|
+| Product.name          | String                  | Public name, matches catOutL + num |
+| Product.internalName  | String                  | Internal name, matches catOutL + num|
+| Product.displayNumber | String                  | Publicly announced number (train or line number) |
+| Product.num           | String                  | Internal product number (e.g. train number) |
+| Product.line          | String                  | Publicly announced line name, if available |
+| Product.lineId        | String                  | Line id for use in further requests |
+| Product.catCode       | Integer                 | Category code, see _Response product categories > Numeric representation_ below |
+| Product.cls           | String                  | Category class, same codes as used in requests, see below |
+| Product.catIn         | String                  | Transport type code for the vehicle when it arrives, in string format. Typically identical to catOut. |
+| Product.catOut        | String                  | Same as catOutS|
+| Product.catOutS       | String                  | Transport type code for the vehicle when it departs, in string format. See _Response product categories > String representation_ below. |
+| Product.catOutL       | String                  | Transport type name for the vehicle when it departs, depending on language parameter <br>Example: "Buss", "Tåg", "Tunnelbana"                                                                                                                                                                                                                                          |
+| Product.operator      | String                  | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                                                                                                                                                                                                                                                      | |
+| Product.operatorCode  | String                  | Operator code. For example: “256”, "289".                                                                                                                                                                                                                                                                                                                      | |
 
 ### Response product categories
 

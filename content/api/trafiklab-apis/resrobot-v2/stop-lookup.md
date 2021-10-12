@@ -44,6 +44,13 @@ Sverige 2. This way you can provide autocomplete and other search functions with
 application more responsive and more reliable as you don't have to wait for API responses.
 See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
 
+{{% warning %}}
+**New version available**
+
+A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
+build new apps on version 2.0.
+{{% /warning %}}
+
 ## Example calls
 
 ### Exact search

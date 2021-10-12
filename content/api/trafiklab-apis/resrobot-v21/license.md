@@ -1,6 +1,7 @@
 ---
 title: License 
 weight: 1000
+date: 2021-10-12
 ---
 
 Data from the ResRobot API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.

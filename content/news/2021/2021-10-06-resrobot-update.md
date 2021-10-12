@@ -4,8 +4,6 @@ date: "2021-10-06"
 
 image: /media/2021/10/ResRobot-header.png
 image_credit: Samtrafiken
-
-draft: true
 ---
 
 We are now releasing a new version of ResRobot. This version is an incremental update, keeping most things 

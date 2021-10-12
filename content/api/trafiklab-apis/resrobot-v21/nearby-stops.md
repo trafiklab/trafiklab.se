@@ -1,6 +1,7 @@
 ---
 title: ResRobot nearby stops
 weight: 31
+date: 2021-10-12
 ---
 
 ## What does this API provide?
@@ -51,16 +52,12 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 
 ## Example calls
 
-### Exact search
-
-Exact search returns only stations that match exactly with the search string.
-
-#### Call
+### Call
 
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=json&key=API_KEY
+https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -68,12 +65,21 @@ https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=json&key=
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=xml&key=API_KEY
+https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
 
-#### Response
+#### Request parameters
+
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The `key` parameter has been renamed to `accessId`.
+
+{{% /note %}}
+
+### Response
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -112,179 +118,29 @@ This is especially useful for people who are not familiar with the environment. 
 several stops which they don't know, they can simply search for trips to "Göteborg". {{% /info %}}
 
 
-
-### Call
-
-{{% tabs %}} {{% tab "Json" %}}
-
-```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&key=API_KEY
-```
-
-{{% /tab %}}
-
-{{% tab "Xml" %}}
-
-```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&key=API_KEY
-```
-
-{{% /tab %}} {{% /tabs %}}
-
-#### Request parameters
-
-| **Name**        | **Type** | **Required** | **Description**                                                                                                                                    |
-| --------------- | ----------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key             | String      | Ja               | Your API key                                                                                                                                    |
-| originCoordLat  | String      | Ja               | Latitude (WGS84, decimal degree), eg 59.293611                                                                                                      |
-| originCoordLong | String      | Ja               | Longitude (WGS84, decimal degree), eg 18.083056                                                                                                     |
-| maxNo           | Integer     | Nej              | The maximum number of results to return, default 10, maximum 1000                                                                         |
-| r               | Integer     | Nej              | Maximum distance between given coordinates and the stop. Default 1000, max 10000 |
-| lang            | String      | Nej              | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages.
-| format          | String      | Nej              | Json or Xml |
-
-
-{{% info %}}
-**Fuzzy search**
-
-By adding a question mark to the query string, fuzzy matching is used instead of exact matching. This will return
-stations which name is an exact or near match to the input string.
-{{% /info %}}
-
-### Response
-
-{{% tabs %}} {{% tab "Json" %}}
-
-```javascript
-{
-  "StopLocation": [
-    {
-      "id": "740098001",
-      "extId": "740098001",
-      "name": "GÖTEBORG",
-      "lon": 11.973479,
-      "lat": 57.708895,
-      "weight": 22332,
-      "products": 254
-    },
-    {
-      "id": "740000002",
-      "extId": "740000002",
-      "name": "Göteborg Centralstation",
-      "lon": 11.973479,
-      "lat": 57.708895,
-      "weight": 17428,
-      "products": 182
-    },
-    {
-      "id": "740098526",
-      "extId": "740098526",
-      "name": "GÖTEBORG GAMLESTADEN",
-      "lon": 12.004411,
-      "lat": 57.729148,
-      "weight": 16810,
-      "products": 112
-    },
-    {
-      "id": "740016365",
-      "extId": "740016365",
-      "name": "Göteborg Sävenäs lokstation",
-      "lon": 12.021077,
-      "lat": 57.725993,
-      "weight": 13,
-      "products": 128
-    },
-    {
-      "id": "740025610",
-      "extId": "740025610",
-      "name": "Göteborg Berzeliigatan",
-      "lon": 11.981884,
-      "lat": 57.698504,
-      "weight": 4917,
-      "products": 200
-    },
-    {
-      "id": "740015578",
-      "extId": "740015578",
-      "name": "Göteborg Korsvägen",
-      "lon": 11.986909,
-      "lat": 57.696625,
-      "weight": 4917,
-      "products": 200
-    },
-    {
-      "id": "740016358",
-      "extId": "740016358",
-      "name": "Göteborg Kungsportsplatsen",
-      "lon": 11.969748,
-      "lat": 57.704023,
-      "weight": 4917,
-      "products": 200
-    },
-    {
-      "id": "740072430",
-      "extId": "740072430",
-      "name": "Göteborg Stenpiren",
-      "lon": 11.957424,
-      "lat": 57.705803,
-      "weight": 4669,
-      "products": 448
-    },
-    {
-      "id": "740025609",
-      "extId": "740025609",
-      "name": "Göteborg Bellevue",
-      "lon": 12.023477,
-      "lat": 57.732456,
-      "weight": 4488,
-      "products": 192
-    },
-    {
-      "id": "740020752",
-      "extId": "740020752",
-      "name": "Göteborg Brunnsparken",
-      "lon": 11.967843,
-      "lat": 57.706945,
-      "weight": 4488,
-      "products": 192
-    }
-  ]
-}
-```
-
-{{% /tab %}}
-
-{{% tab "Xml" %}}
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<LocationList xmlns="hafas_rest_v1">
-    <StopLocation id="740098001" extId="740098001" name="GÖTEBORG" lon="11.973479" lat="57.708895" weight="22332" products="254"/>
-    <StopLocation id="740000002" extId="740000002" name="Göteborg Centralstation" lon="11.973479" lat="57.708895" weight="17428" products="182"/>
-    <StopLocation id="740098526" extId="740098526" name="GÖTEBORG GAMLESTADEN" lon="12.004411" lat="57.729148" weight="16810" products="112"/>
-    <StopLocation id="740016365" extId="740016365" name="Göteborg Sävenäs lokstation" lon="12.021077" lat="57.725993" weight="13" products="128"/>
-    <StopLocation id="740025610" extId="740025610" name="Göteborg Berzeliigatan" lon="11.981884" lat="57.698504" weight="4917" products="200"/>
-    <StopLocation id="740015578" extId="740015578" name="Göteborg Korsvägen" lon="11.986909" lat="57.696625" weight="4917" products="200"/>
-    <StopLocation id="740016358" extId="740016358" name="Göteborg Kungsportsplatsen" lon="11.969748" lat="57.704023" weight="4917" products="200"/>
-    <StopLocation id="740072430" extId="740072430" name="Göteborg Stenpiren" lon="11.957424" lat="57.705803" weight="4669" products="448"/>
-    <StopLocation id="740025609" extId="740025609" name="Göteborg Bellevue" lon="12.023477" lat="57.732456" weight="4488" products="192"/>
-    <StopLocation id="740020752" extId="740020752" name="Göteborg Brunnsparken" lon="11.967843" lat="57.706945" weight="4488" products="192"/>
-</LocationList>
-```
-
-{{% /tab %}} {{% /tabs %}}
-
 #### Data fields
+
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The root object now contains an array of `stopLocationOrCoordLocation` instead of an array of `stopLocation`.
+- `stopLocation` can now be found in the items present in the `stopLocationOrCoordLocation` array.
+- The `products` field has been replaced with an array of Products. Instead of accessing the sum of all products through `products`, you can now obtain all the individual products through `ProductAtStop[].cls`
+- `timezoneOffset` has been added to each `StopLocation`.
+
+{{% /note %}}
+
 
 | **Name**     | **Data type**               | **Description**                                                                                                                                                                                                                                                         |
 | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LocationList | StopLocation[]              | List with results                                                                                                                                                                                                          |
-| StopLocation | Object                      |                                                                                                                                                                                                                                                                         |
-| name         | String                      | Stop name                                                                                                                                                                                                                                                     |
-| extId        | String                      | Stop id for use in other ResRobot APIs.                                                                                                                                                                                                                                    |
-| id           | String                      | Internal id. Do not use.                                                              |
-| dist         | Integer                     | Distance from the queried coordinates, in meters.                                                                                                                                                                                                                      |
-| lat          | String                      | Latitude (WGS84, decimal degree) for this stop, eg 59.293611                                                                                                                                                                                                                           |
-| lon          | String                      | Longitude (WGS84, decimal degree) for this stop, eg 18.083056                                                                                                                                                                                                                          |
-| products     | Integer                     | Transport modes available at thist stop, as a sum of the following values:<br>1 – Flyg<br>2 - Snabbtåg<br>4 - Tåg<br>8 - Expressbuss<br>16 - Lokaltåg<br>32 - Tunnelbana<br>64 – Spårvagn<br>128 – Buss<br>256 – Båt<br>512 – Taxi<br>(160 – Tunnelbana och Buss) |
-| weight       | Integer                     | Shows how much traffic is handled at this stop, a stop with more traffic gets a higher weight. Between 0 and 32767.              |
+| stopLocationOrCoordLocation | stopLocationOrCoordLocation[] | List with results                                                                                                                                                                                                          |
+| stopLocationOrCoordLocation.StopLocation | StopLocation | Actual data is contained in the `StopLocation` property                                                                                                                                                                                                          |
+| StopLocation | Object                      | Object containing a single stop                                                                                                                                                                                                                                                                        |
+| StopLocation.name         | String                      | Stop name                                                                                                                                                                                                                                                     |
+| StopLocation.extId        | String                      | Stop id for use in other ResRobot APIs.                                                                                                                                                                                                                                    |
+| StopLocation.id           | String                      | Internal id. Do not use.                                                              |
+| StopLocation.dist         | Integer                     | Distance from the queried coordinates, in meters.                                                                                                                                                                                                                      |
+| StopLocation.lat          | String                      | Latitude (WGS84, decimal degree) for this stop, eg 59.293611                                                                                                                                                                                                                           |
+| StopLocation.lon          | String                      | Longitude (WGS84, decimal degree) for this stop, eg 18.083056                                                                                                                                                                                                                          |
+| StopLocation.productAtStop     | Product[]              | See [common data types](common.md). Only the `cls` field of each product will contain actual data.  |
+| StopLocation.weight       | Integer                     | Shows how much traffic is handled at this stop, a stop with more traffic gets a higher weight. Between 0 and 32767.              |

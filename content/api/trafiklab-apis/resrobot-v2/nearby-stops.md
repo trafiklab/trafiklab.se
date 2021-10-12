@@ -50,6 +50,13 @@ Only the most important parameters and response variables are described on this 
 details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
 
+{{% warning %}}
+**New version available**
+
+A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
+build new apps on version 2.0.
+{{% /warning %}}
+
 ## Example calls
 
 ### Exact search

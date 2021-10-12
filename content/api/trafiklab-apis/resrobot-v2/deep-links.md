@@ -33,6 +33,13 @@ In order to use deep links into ResRobot results, you construct the request URL 
 results for, and redirect the user who needs to see the results to this URL. This allows you to show users
 route-plannings directly from your website or app, without any need to implement your own user-interface. 
 
+{{% warning %}}
+**New version available**
+
+A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
+build new apps on version 2.0.
+{{% /warning %}}
+
 ## Request and response
 
 ### Requests

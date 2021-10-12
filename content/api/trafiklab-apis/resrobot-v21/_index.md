@@ -1,8 +1,9 @@
 ---
-title: ResRobot v2
+title: ResRobot v2.1
 layout: "single"
-weight: 40
-url: "api/resrobot"
+weight: 41
+url: "api/resrobot21"
+date: 2021-10-12
 ---
 
 ### What is ResRobot?
