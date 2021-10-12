@@ -1,6 +1,6 @@
 ---
 title: "Trafiklab"
-hero: /tl-illustration-map.svg
+hero: /tl-illustration-map2.svg
 cases_section: true
 news_section: true
 highlighted_page: /news/2021/2021-04-16-gtfs-regional-occupancy-data
