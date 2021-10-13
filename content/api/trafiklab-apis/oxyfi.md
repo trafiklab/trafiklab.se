@@ -138,6 +138,8 @@ Here are some suggestion of libraries that can be used to parse NMEA formatted d
 
 To get the current list of trains that delivers data through the Trainpos API, see
 
+{{% warning %}} The current list of trains is not available over HTTPS. {{% /warning %}}
+
 [http://api.oxyfi.com/trainpos/trainIdentites.htm](http://api.oxyfi.com/trainpos/trainIdentites.htm) push-API
 
 On the 2021-09-24 the current list of trains is:

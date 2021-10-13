@@ -35,7 +35,7 @@ and datasets.
 | [ResRobot Stolptidstabeller](/api/trafiklab-apis/resrobot-v2/resrobot-timetables.md) | Json, XML | ✅ | Some, [see details](/api/trafiklab-apis/resrobot-v2/resrobot-timetables.md) | Entire Sweden | Departure & Arrival board API |
 | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/resrobot-routeplanner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
 | [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
-| Oxify Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
+| Oxyfi Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
 | Trafikverkets API | Json, XML |  |  | Road and national rail | Road and rail API |
 
 ## Other APIs
