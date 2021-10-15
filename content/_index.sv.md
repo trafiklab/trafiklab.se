@@ -25,4 +25,4 @@ landingRoller:
       caseLink: "/cases"
 ---
 <p>Vi publicerar <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/gtfs-regional-realtime/">fordonspositioner</a></p>
-<p>så att du kan skapa <a class="landing-roller" href="/cases">applikationer</a></p>
+<p>så att du kan skapa <a class="landing-roller" href="/cases">visualiseringar</a></p>

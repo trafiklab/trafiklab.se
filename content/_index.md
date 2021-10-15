@@ -24,5 +24,5 @@ landingRoller:
       caseName: "research"
       caseLink: "/cases"
 ---
-<p>We publish <a class="landing-roller" href="api">GTFS-RT</a></p>
-<p>so you can create <a class="landing-roller" href="/cases">Digital signage</a></p>
+<p>We publish <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/gtfs-regional-realtime/">vehicle positions</a></p>
+<p>so you can create <a class="landing-roller" href="/cases">visualizations</a></p>

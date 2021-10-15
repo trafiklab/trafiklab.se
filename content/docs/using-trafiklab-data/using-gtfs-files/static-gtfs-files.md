@@ -96,9 +96,7 @@ The GTFS standard defines 9 route_types, but all Trafiklab feeds make use
 of [extended route types](https://developers.google.com/transit/gtfs/reference/extended-route-types). Check the
 feed-specific documentation for examples.
 
-{{% page-ref page="/api/trafiklab-apis/gtfs-sverige-2/" %}}
-
-{{% page-ref page="/api/trafiklab-apis/gtfs-regional/" %}}
+{{% page-ref "/api/trafiklab-apis/gtfs-sverige-2/" "/api/trafiklab-apis/gtfs-regional/" %}}
 
 The following excerpt shows some example values.
 
@@ -226,8 +224,7 @@ A stop time is a certain trip picking up or dropping of passengers at a certain 
       </td>
     </tr>
     <tr>
-      <td><code>stop_headsign</code>
-      </td>
+      <td><code>stop_headsign</code></td>
       <td>Text</td>
       <td>GTFS Regional only</td>
       <td>
@@ -238,7 +235,6 @@ A stop time is a certain trip picking up or dropping of passengers at a certain 
           <br />
           <br />A <code>stop_headsign</code> value specified for one <code>stop_time</code> does
           not apply to subsequent <code>stop_time</code>s in the same trip.</p>
-        
         <p>&#x2139;GTFS Regional specifies the stop_headsign for each stop</p>
       </td>
     </tr>
@@ -319,16 +315,12 @@ trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_t
 
 | Field Name | Type | Present | Description |
 | :--- | :--- | :--- | :--- |
-| `stop_id` | ID | **
-Always** | Identifies a stop, station, or station entrance. The term "station entrance" refers to both station entrances and station exits. Stops, stations or station entrances are collectively referred to as locations. Multiple routes may use the same stop. |
-| `stop_name` | Text | **
-Always** | Name of the location. Use a name that people will understand in the local and tourist vernacular. When the location is a boarding area (`location_type=4`), the `stop_name` should contains the name of the boarding area as displayed by the agency. It could be just one letter (like on some European intercity railway stations), or text like “Wheelchair boarding area” (NYC’s Subway) or “Head of short trains” (Paris’ RER).  |
-| `stop_lat` | Latitude | **Always** | Latitude of the location. Conditionally Required: • **
-Required** for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). • Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`). |
-| `stop_lon` | Longitude | **Always** | Longitude of the location. Conditionally Required: • **
-Required** for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). • Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`). |
-| `location_type` | Enum | **Always** | Type of the location: • `0` (or blank): **Stop** (or **Platform**). A location where passengers board or disembark from a transit vehicle. Is called a platform when defined within a `parent_station`. • `1`: **Station**. A physical structure or area that contains one or more platform. • `2`: **Entrance/Exit**. A location where passengers can enter or exit a station from the street. If an entrance/exit belongs tomultiple stations, it can be linked by pathways to both, but the data provider must pick one of them as parent. |
-| `parent_station` | ID referencing `stops.stop_id` | GTFS Regional only | Defines hierarchy between the differentlocations defined in `stops.txt`. It contains the ID of the parent location, as followed: • **Stop/platform** (`location_type=0`): the `parent_station` field contains the ID of a station. • **Station** (`location_type=1`): this field must be empty. • **Entrance/exit** (`location_type=2`) or **generic node** (`location_type=3`): the `parent_station` field contains the ID of a station (`location_type=1`) |
+| `stop_id` | ID | **Always** | Identifies a stop, station, or station entrance. The term "station entrance" refers to both station entrances and station exits. Stops, stations or station entrances are collectively referred to as locations. Multiple routes may use the same stop. |
+| `stop_name` | Text | **Always** | Name of the location. Use a name that people will understand in the local and tourist vernacular. When the location is a boarding area (`location_type=4`), the `stop_name` should contains the name of the boarding area as displayed by the agency. It could be just one letter (like on some European intercity railway stations), or text like “Wheelchair boarding area” (NYC’s Subway) or “Head of short trains” (Paris’ RER).  |
+| `stop_lat` | Latitude | **Always** | Latitude of the location. Conditionally Required: <br>• **Required** for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). <br>• Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`). |
+| `stop_lon` | Longitude | **Always** | Longitude of the location. Conditionally Required: <br>• **Required** for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). <br>• Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`). |
+| `location_type` | Enum | **Always** | Type of the location: <br>• `0` (or blank): **Stop** (or **Platform**). A location where passengers board or disembark from a transit vehicle. Is called a platform when defined within a `parent_station`. <br>• `1`: **Station**. A physical structure or area that contains one or more platform. <br>• `2`: **Entrance/Exit**. A location where passengers can enter or exit a station from the street. If an entrance/exit belongs to multiple stations, it can be linked by pathways to both, but the data provider must pick one of them as parent. |
+| `parent_station` | ID referencing `stops.stop_id` | GTFS Regional only | Defines hierarchy between the differentlocations defined in `stops.txt`. It contains the ID of the parent location, as followed: <br>• **Stop/platform** (`location_type=0`): the `parent_station` field contains the ID of a station. <br>• **Station** (`location_type=1`): this field must be empty. <br>• **Entrance/exit** (`location_type=2`) or **generic node** (`location_type=3`): the `parent_station` field contains the ID of a station (`location_type=1`) |
 | `platform_code`| Text | GTFS Regional only | Platform identifier for a platform stop (a stop belonging to a station). |
 
 ```text
@@ -487,7 +479,6 @@ service_id,date,exception_type
           the point specified in this record. Used by trip planners to show the correct
           portion of the shape on a map. Values must increase along with <code>shape_pt_sequence</code>;
           they cannot be used to show reverse travel along a route. Distance in kilometres.</p>
-        <p>&lt;em&gt;&lt;/em&gt;</p>
       </td>
     </tr>
   </tbody>
@@ -571,11 +562,7 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
       </td>
       <td>Optional</td>
       <td>
-        <p>Identifies a trip where a connection between trips starts. Part of the
-          Trip-to-trip transfers extension.</p>
-        
-        <p><a href="https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers">https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers</a>
-        </p>
+        <p>Identifies a trip where a connection between trips starts. If empty, this rule applies for all trips.</p>
       </td>
     </tr>
     <tr>
@@ -585,11 +572,7 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
       </td>
       <td>Optional</td>
       <td>
-        <p>Identifies a trip where a connection between trips ends. Part of the Trip-to-trip
-          transfers extension.</p>
-        
-        <p><a href="https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers">https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers</a>
-        </p>
+        <p>Identifies a trip where a connection between trips ends. If empty, this rule applies for all trips.</p>
       </td>
     </tr>
   </tbody>
