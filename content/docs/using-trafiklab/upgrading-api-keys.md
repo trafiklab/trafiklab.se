@@ -6,6 +6,9 @@ When your application needs more API calls than your API key quota allow, you ca
 Upgrading API keys is completely free, and only needed to ensure all Trafiklab users can keep using the the service for
 free.
 
+{{% warning %}}  Disable browser plugins like Google Translate when creating an project. They are known to
+cause issues on the developer portal, when logging in, creating accounts and creating projects. {{% /warning %}}
+
 ![Screenshot of an api key with an upgrade link](/media/2020/05/key-visible.png)
 
 In order to upgrade your API key, click the "Uppgradera" link and fill out the form.
@@ -37,4 +40,17 @@ The following requests will always be denied:
   to get the data you need, you should
   be [using GTFS and GTFS-RT instead](../../public-transport-data/our-data-and-apis/gtfs/). As a result, you will be
   able to build better analytics and they will take less time to generate, so this is a win-win.
-* **Stress tests etc** Just... no.
+* **Stress tests etc** Are not allowed and will never be approved. Ask us if you have special needs for your application.
+
+{{% note %}} Right now, the developer portal is not available in English yet. While these guides should help you to get
+started, the following list of common Swedish words should help you getting around on the developer portal.
+
+* **Spara**: Save/Submit
+* **Tillbaka**: Back
+* **Radera**: Delete
+* **Hämta**: Fetch
+* **Skapa**: Create
+* **Nyckel**: (API) key
+* **Nivå**: Level
+* **Konto**: Account
+  {{% /note %}}

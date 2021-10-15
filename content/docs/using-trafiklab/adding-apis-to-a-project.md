@@ -3,8 +3,8 @@ title: Adding APIs to a project
 description: Adding more APIs to an existing project 
 weight: 40
 ---
-{{% warning %}} Disable browser plugins like Google Translate when creating an project. They are known to
-cause issues when logging in, creating accounts and creating projects. {{% /warning %}}
+{{% warning %}}  Disable browser plugins like Google Translate when creating an project. They are known to
+cause issues on the developer portal, when logging in, creating accounts and creating projects. {{% /warning %}}
 
 When you want to add more APIs to an existing project, you need to head edit the project first. This can be done by
 heading to your "profile and projects" page (found in the dropdown from your username in the top-right corner). From
@@ -25,3 +25,16 @@ When editing an existing project, you might be confronted with a warning when yo
 This means you still have an old API in your project, while the API has been shut down. In this case you will be forced
 to remove the old API and its associated keys. Press the "Delete keys" button and save the project to make it "normal"
 again, after which you can edit it as you like.
+
+{{% note %}} Right now, the developer portal is not available in English yet. While these guides should help you to get
+started, the following list of common Swedish words should help you getting around on the developer portal.
+
+* **Spara**: Save/Submit
+* **Tillbaka**: Back
+* **Radera**: Delete
+* **Hämta**: Fetch
+* **Skapa**: Create
+* **Nyckel**: (API) key
+* **Nivå**: Level
+* **Konto**: Account
+{{% /note %}}
