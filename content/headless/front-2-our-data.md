@@ -5,4 +5,4 @@ link: "/api"
 icon: /icons/Database.svg
 icon_alt: a database
 ---
-Utforska våra kostnadsfria API: er som ger dig tillgång till kollektivtrafikdata för hela landet 
+Explore our free APIs for public transport in Sweden
