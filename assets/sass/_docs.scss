@@ -202,17 +202,22 @@ ul.dropdown-list {
   height: 3rem;
   padding: 1rem;
   top: -.125rem;
+  left: 2rem;
   transition: top .2s ease-in-out,font-size .2s ease-in-out,padding .2s ease-in-out,line-height .2s ease-in-out;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
-.tl-form-control-wrapper:focus-within .tl-input-group__label {
+
+.tl-form-control-wrapper:focus-within .tl-input-group__label,
+.tl-form-control:not([value=""]) ~ label > .tl-input-group__label {
+/* :not([value=""]) requires javascript to set the property on change, see https://stackoverflow.com/a/35408000/1889679 */
   top: .125rem;
   font-size: .75rem;
   padding: 0 0 0 1rem;
 }
+
 input {
   border: none;
 }

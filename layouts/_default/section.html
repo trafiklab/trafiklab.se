@@ -16,7 +16,7 @@
             {{ end }}
             <div class="blogpost-overview__information">
               <div class="blogpost-overview__date">
-                <label class="tl-label">{{ .Date.Format "2006-01-02" }}</label>
+                <label class="tl-label">{{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
               </div>
               <div>
                 <h3 class="tl-h3 tl-h3--margin-bottom blogpost-overview__title">{{ .Title }}</h3>
