@@ -19,7 +19,7 @@
 
         {{ $headless := .Site.GetPage "/headless" }}
         {{ $frontBlocks := $headless.Resources.Match "front*" }}
-        {{ range $frontBlocks }}
+        {{ range sort ($frontBlocks)  "Params.weight" }}
           <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-4">
             <a class="tl-base-card tl-navigation-card" href="{{ .Params.link }}">
               <div class="tl-navigation-card__title-icon">
