@@ -64,7 +64,7 @@ https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&p
 **Changes compared to ResRobot v2.0:**
 
 - The `key` parameter has been renamed to `accessId`.
-- `passlist` is now 0 by default. Set to `1` to keep the responses the same if you need this data.
+- `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
 
 {{% /note %}}
  

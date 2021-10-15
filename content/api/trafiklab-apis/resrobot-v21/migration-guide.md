@@ -55,7 +55,7 @@ the change from `key` to `accessId` described above:
 
 - `maxJourneys` is ignored when making queries in the near past or future, when realtime data is available. We recommend
   using the new `duration` parameter to consistently limit the results list to a specific time window.
-- `passlist` is now 0 by default. Set to `1` to keep the responses the same if you need this data.
+- `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
 
 The following specific changes have been made to the departureBoard/ArrivalBoard responses:
 
@@ -74,28 +74,15 @@ Non-breaking changes:
 The following specific breaking changes have been made to the trips request parameters, other than the change from `key`
 to `accessId` described above:
 
-- `passlist` is now 0 by default. Set to `1` to keep the responses the same if you need this data.
+- `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
 
 The following breaking changes have been made to the trips responses:
 
-- `Product` is now the an array of products, containing one element.
+- `Product` is now an array of products, containing one element.
 
 Non-breaking changes:
 
 - JourneyStatus and JourneyDetailRef have been added to each `Leg`
-
-## Specific changes to the nearby stops endpoint
-
-No specific changes breaking have been made to the nearby stops request parameters, other than the change from `key`
-to `accessId` described above.
-
-The following breaking changes have been made to the nearby stops responses:
-
-- The root object now contains an array of `stopLocationOrCoordLocation` instead of an array of `stopLocation`.
-- `stopLocation` can now be found in the items present in the `stopLocationOrCoordLocation` array.
-- The `products` field has been replaced with an array of Products. Instead of accessing the sum of all products
-  through `products`, you can now obtain all the individual products through `ProductAtStop[].cls`
-- `timezoneOffset` has been added to each `StopLocation`.
 
 ## Specific changes to the nearby stops endpoint
 
