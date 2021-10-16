@@ -1,7 +1,7 @@
 ---
 title: SL Departures v4.0 (Realtidsinformation 4)
 weight: 200
-date: 2018-06-01
+date: 2016-11-30
 ---
 
 <h2>Beskrivning</h2>

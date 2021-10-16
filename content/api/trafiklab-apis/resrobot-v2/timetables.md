@@ -2,6 +2,7 @@
 title: ResRobot Timetables
 aliases: /node/14075/documentation
 weight: 10
+date: 2015-06-24
 ---
 
 ## What does this API provide?

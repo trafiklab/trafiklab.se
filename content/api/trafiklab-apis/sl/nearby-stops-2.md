@@ -1,7 +1,7 @@
 ---
 title: SL Nearby stops v2.0 (Närliggande hållplatser 2)
 weight: 310
-date: 2018-06-01
+date: 2019-01-14
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få information om närliggande hållplatser till en försedd plats baserad på lat och long.</p>

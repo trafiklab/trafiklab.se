@@ -1,7 +1,7 @@
 ---
 title: SL Route-planner v3.1 (Reseplanerare 3.1)
 weight: 100
-date: 2020-06-26
+date: 2019-01-14
 ---
 <h2> <a>Beskrivning</a></h2>
 <p>Med detta API kan du få reseförslag från A till B inom Stockholms län med SLs trafik. I SLs reseplanerare finns även Waxholmsbolagets trafik. APIet kan användas för att beräkna reseförslag mellan valfri kombination av position och/eller stoppställe. APIet returnerar reseförslag från ”bästa matchning” av det som läggs in.</p>

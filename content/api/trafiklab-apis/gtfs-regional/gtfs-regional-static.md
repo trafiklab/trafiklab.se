@@ -2,6 +2,7 @@
 title: Static data 
 aliases: "api/gtfs-regional-static"
 weight: 10
+date: 2019-06-10
 ---
 
 ## Retrieving static data

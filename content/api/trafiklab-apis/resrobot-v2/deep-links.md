@@ -2,6 +2,7 @@
 title: ResRobot Deep Links 
 aliases: /api/resrobot-reseplanerare/djuplankning-0 
 weight: 200
+date: 2015-06-24
 ---
 
 ## What does this API provide?

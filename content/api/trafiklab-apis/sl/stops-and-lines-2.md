@@ -1,7 +1,7 @@
 ---
 title: SL Stops and lines v2.0 (Hållplatser och linjer 2)
 weight: 400
-date: 2018-06-01
+date: 2015-03-02
 ---
 
 Listning av hållplatser och linjer i Stockholms län.

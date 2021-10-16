@@ -1,7 +1,7 @@
 ---
 title: SL Service alerts v2.0 (Störningsinformation 2)
 weight: 500
-date: 2018-06-01
+date: 2014-03-14
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få fram information om aktuella och planerade störningar i SL-trafiken. Med API ‘et kan du ställa frågor om störningar på till exempel en viss linje eller ett visst trafikslag. Svaret består av störningsmeddelanden med viss metainformation.</p>

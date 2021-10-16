@@ -2,6 +2,7 @@
 title: ResRobot Stop lookup
 aliases: /api/trafiklab-apis/resrobot-reseplanerare/platsuppslag
 weight: 30
+date: 2015-06-24
 ---
 
 ## What does this API provide?

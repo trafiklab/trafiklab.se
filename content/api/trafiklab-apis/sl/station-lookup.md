@@ -1,7 +1,7 @@
 ---
 title: SL Station lookup v1.0 (Platsuppslag)
 weight: 300
-date: 2018-06-01
+date: 2014-03-14
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara söka efter hållplatsområden eller hållplatser, adresser och platser.</p>
