@@ -1,6 +1,6 @@
 ---
 title: Testing and deploying your app
-description: 'Understanding why things work, or why they don't.'
+description: "Understanding why things work, or why they don't."
 ---
 
 ## Putting it to the test
