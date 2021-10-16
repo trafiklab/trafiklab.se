@@ -13,7 +13,7 @@ SL's APIs is a collection of 7 APIs which provide information about planned and 
 | Mobile applications | Building your own route-planner algorithm |
 | Websites |  |
 
-{{% info %}} SL's APIs only offer data for SL's traffic. [ResRobot](../resrobot/) offers the same data for
+{{% info %}} SL's APIs only offer data for SL's traffic. [ResRobot](/api/trafiklab-apis/resrobot-v2/) offers the same data for
 entire Sweden. {{% /info %}}
 
 {{% info %}} If you want to do analytics, or if your service will have more than a million active users, we

@@ -4,8 +4,8 @@ weight: 30
 ---
 
 Historical GTFS data can be found
-at  [**https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/**](https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/)**
-.** This archive is updated every time a new GTFS feed is published. The latest version is not available in this
+at [https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/](https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/). 
+This archive is updated every time a new GTFS feed is published. The latest version is not available in this
 archive, only through the 'usual' API endpoint.
 
 ### Differences between historical systems

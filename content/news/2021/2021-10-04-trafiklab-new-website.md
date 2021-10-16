@@ -1,6 +1,6 @@
 ---
 title: "Trafiklab website update"
-date: "2021-10-04"
+date: "2021-10-16"
 
 image: /media/2021/10/Trafiklab-logo-large.png
 image_credit: Samtrafiken

@@ -6,9 +6,9 @@ weight: 10
 
 ## What does this API provide?
 
-ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
-transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket (All train traffic
-including SJ, MTRX, .... except for Arlanda Express).
+ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can for instance specify the stop,
+date, time and transport modes. Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket (All train
+traffic including SJ and MTRX, except for Arlanda Express).
 
 ### Data format
 

@@ -22,7 +22,8 @@ national feed, please look at GTFS Sverige 2.
 The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the GTFS-Realtime
 (GTFS-RT) standard, and is stored in the protobuf format.
 
-This data is also available in the NeTEx format. For the NeTEx format, see the [NeTEx regional API](/api/netex-regional/).
+This data is also available in the NeTEx format. For the NeTEx format, see the 
+[NeTEx regional API](/api/trafiklab-apis/netex-regional/).
 
 ### How often is this dataset updated?
 
