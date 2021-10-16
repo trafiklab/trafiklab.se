@@ -3,7 +3,7 @@ title: Combining data and APIs
 layout: "single"
 ---
 Most of our APIs and datasets are based on different databases and systems, which results in different ids. However,
-some of the datasets can be combined.
+some datasets can be combined.
 
 ## Datasets that can be combined
 

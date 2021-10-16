@@ -38,7 +38,7 @@ No. If you're wondering if our APIs can handle a certain load, please ask instea
 
 ### Why did my request for an API key upgrade get denied?
 
-You will get a message describing the reason when an API key upgrade gets denied. Typically this is due to magic mirror
+You will get a message describing the reason when an API key upgrade gets denied. Typically, this is due to magic mirror
 solutions wanting to use more than 10.000 API calls per month, or due to using the wrong data type, in which case we
 will point out how other data can make your life easier (for example, when using an API for analytics/mass queries
 instead of our GTFS/GTFS-RT data)

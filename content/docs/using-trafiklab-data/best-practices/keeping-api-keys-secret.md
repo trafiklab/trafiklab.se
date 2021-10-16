@@ -14,7 +14,7 @@ abused. You can find some tips on handling your API keys below.
 
 ## I have an open-source project
 
-**Dont hardcode your API key, but make sure it can be configured in a configuration file!**
+**Don't hardcode your API key, but make sure it can be configured in a configuration file!**
 
 Most projects have a separte properties file that isn't committed to the versioning system. In git, you can use the
 .gitignore file to exclude files from being committed. Save your key in a file that isn't comitted and explain how to

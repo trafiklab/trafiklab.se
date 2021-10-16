@@ -43,7 +43,7 @@ day. Every **trip** on a route is defined in the trips.txt file.
 The stops which are made during a trip are defined as **stop times** in stop\_times.txt. A **stop time** does not
 contain information about the stop itself: it only links a **trip** to a **stop**, and includes some additional
 information such as the time of arrival and departure. Stops itself are defined in the stops.txt file, including
-information such as their name, location, entrances, ... .
+information such as their name, location and entrances.
 
 {{% warning %}} Different trips on the same route might make use of different stops. {{% /warning %}}
 

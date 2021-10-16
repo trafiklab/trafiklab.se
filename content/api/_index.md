@@ -9,7 +9,7 @@ sidebar: true
 ## Trafiklabs APIs
 
 At Trafiklab we're offering a wide range of APIs and datasets. Each API and dataset provides data of a different kind or
-format. Choosing the right data for your project will help you getting the best results.
+format. Choosing the right data for your project will help you to get the best results.
 
 The following pages will give you an overview of all our data, describing what's included, the format, how to get it,
 and some examples. Make sure you also check

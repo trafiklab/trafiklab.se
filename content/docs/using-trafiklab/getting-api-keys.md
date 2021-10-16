@@ -5,7 +5,7 @@ weight: 3
 {{% success %}} You need an account and project in order to retrieve API keys. Haven't created an account
 yet? [Get started here](creating-an-account.md).  {{% /success %}}
 
-{{% warning %}}  Disable browser plugins like Google Translate when creating an project. They are known to
+{{% warning %}}  Disable browser plugins like Google Translate when creating a project. They are known to
 cause issues on the developer portal, when logging in, creating accounts and creating projects. {{% /warning %}}
 
 After creating a project, the last thing which is left is to retrieve API keys for your projects. In order to do this,
@@ -26,7 +26,7 @@ You can now use APIs and start building! Read on to learn more about how you can
 add more APIs or how to upgrade your keys.
 
 {{% note %}} Right now, the developer portal is not available in English yet. While these guides should help you to get
-started, the following list of common Swedish words should help you getting around on the developer portal.
+started, the following list of common Swedish words should help you to get around on the developer portal.
 
 * **Spara**: Save/Submit
 * **Tillbaka**: Back

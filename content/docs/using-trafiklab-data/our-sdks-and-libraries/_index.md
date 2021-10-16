@@ -7,7 +7,7 @@ If you're using PHP, you're lucky! We developed open-source SDKs which offer tho
 SL APIs. They are interchangeable, meaning your code doesn't need any modification to change the data source. They are
 also updated when APIs are updated, meaning you don't get breaking changes in your code.
 
-The SDKs can be found at Github:
+The SDKs can be found at GitHub:
 
 * ResRobot: [https://github.com/trafiklab/resrobot-php-sdk](https://github.com/trafiklab/resrobot-php-sdk)
 * SL: [https://github.com/trafiklab/sl-php-sdk](https://github.com/trafiklab/sl-php-sdk)

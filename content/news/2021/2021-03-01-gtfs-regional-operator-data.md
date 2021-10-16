@@ -9,7 +9,7 @@ image_credit: Patrik Carlberg, Unsplash
 # Operator data in GTFS Regional Static
 
 In the coming days we will start publishing new data in the GTFS Regional dataset. This new data will show which
-operator is servicing each trip, which adds possibilities and enables use-cases which were not possible before. This new
+operator is servicing each trip, which adds opportunities and enables use-cases which were not possible before. This new
 file has been defined as an optional file in the GTFS Specification for a while, and we are now ready to start
 publishing this data.
 

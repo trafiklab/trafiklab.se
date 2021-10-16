@@ -24,7 +24,7 @@ When we publish data in realtime, new data is published and fetched every 15 sec
 even every 3 seconds (VehiclePositions). For TripUpdates, this means 5760 updates, per operator, per day. For example,
 a file size reduction with 500kb would result in a saving of 2,5gb of data transfer per day, just for this one feed with
 one consumer. This is important both for producers, since data transfer can make up a significant part of the hosting
-costs, as well as for consumers such as you, who also have to pay for transfer.
+costs, and for consumers such as you, who also have to pay for transfer.
 
 Thanks to its smaller size,protobuf can bring advantages when it comes to decoding performance. This means that systems
 can decode and handle messages quicker, which becomes especially important when you want to consume a large number of
@@ -104,9 +104,9 @@ default
 
 ```
 
-Every field is described: whether or not it is optional, the data type, and the position in the binary data (which is
+Every field is described: whether it is optional, the data type, and the position in the binary data (which is
 needed to decode the file). Note that these schemes are not meant as a specification for the information/content, but
-as a specification for the serialisation and deserialisation. If you are looking for the GTFS-RT specification (not the
+as a specification for the serialization and deserialisation. If you are looking for the GTFS-RT specification (not the
 protobuf scheme), you can find it [here](https://developers.google.com/transit/gtfs-realtime).
 
 {{% info %}} The GTFS Realtime protobuf scheme can be found

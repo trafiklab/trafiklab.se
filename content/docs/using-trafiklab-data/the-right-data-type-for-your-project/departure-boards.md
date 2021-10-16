@@ -7,10 +7,10 @@ A departure board contains simple yet extremely useful public transport data. De
 departures and arrivals for a stations based on its id. This means that showing a departure board consists of two parts:
 finding the station id, and fetching the data.
 
-### For apps, small websites, ...
+### For apps and small websites
 
 If you simply want to show the next departures on a digital signage board in shopping mall, on a smartphone, smartwatch,
-smartmirror, ... you can make use
+smart mirror or similar, you can make use
 of [the ResRobot Stolptidstabeller 2 API](/api/trafiklab-apis/resrobot-v2/timetables.md)
 . This API provides an easy way to fetch the departures or arrivals at any stop, either now or in the future.
 

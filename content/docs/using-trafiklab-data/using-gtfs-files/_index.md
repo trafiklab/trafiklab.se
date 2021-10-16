@@ -8,7 +8,7 @@ layout: "single"
 The **General Transit Feed Specification** is a file format which originally was developed by Google in 2006. It
 combines all the data in one compact file. This means you can download a single file to get timetable information for
 the entirety of Sweden. The GTFS Standard consists of 2 parts: static and real-time data. In the following sections, we
-will help you getting started with both.
+will help you to get started with both.
 
 ### How does GTFS Work?
 

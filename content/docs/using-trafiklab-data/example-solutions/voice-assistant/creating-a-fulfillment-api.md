@@ -176,11 +176,8 @@ We now know the request format, and how our response should look like. In order 
 the Trafiklab APIs. Depending on which features we want to implement, there are two or three
 types of API requests which we will use:
 
-* **Station lookups**: The station name, passed as a parameter by DialogFlow, needs to be converted to an ID so we can
-  specify which station we mean
-
-  when talking to other APIs.
-
+* **Station lookups**: The station name, passed as a parameter by DialogFlow, needs to be converted to an ID, so we can
+  specify which station we mean when talking to other APIs.
 * **Departure boards**: A departures API gives information about the next departures from a given stop location.
 * **Routeplanning**: If you want to create an extra intent that handles routeplanning, you will need an API like this to
   quickly provide you with a response.

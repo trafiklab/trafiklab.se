@@ -21,7 +21,7 @@ Provided that you
    respective type of API) ; and
 3. accept these Terms and Conditions;
 
-Samtrafiken grants you a licence to the SL APIs in accordance with the following.
+Samtrafiken grants you a license to the SL APIs in accordance with the following.
 
 ### License grant
 

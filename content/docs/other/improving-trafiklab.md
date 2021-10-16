@@ -14,7 +14,7 @@ info@trafiklab.se for more information.
 ## Fixing bugs in our code and documentation
 
 We're always striving to deliver high quality documentation and code examples. Unfortunately, bugs, typos and errors
-happen. If you found a mistake, you can either report it through Kundo or Github, or you can fix it directly yourself.
+happen. If you found a mistake, you can either report it through Kundo or GitHub, or you can fix it directly yourself.
 
 | Problem location | Where to report | How to fix |
 | :--- | :--- | :--- |
