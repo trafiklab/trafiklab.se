@@ -1,5 +1,5 @@
 ---
-title: SL Station lookup v1.0 (Platsuppslag)
+title: SL Stop lookup v1.0 (Platsuppslag)
 weight: 300
 date: 2014-03-14
 ---

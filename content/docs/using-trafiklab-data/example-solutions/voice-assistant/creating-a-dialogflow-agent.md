@@ -7,7 +7,7 @@ title: Creating a DialogFlow agent
 Language is hard. The first challenge when creating a (voice) assistant is understanding users, by both recognizing _
 what they say_, and figuring out _what they mean_. Luckily we don't need to solve this problem entirely by ourselves.
 There are already platforms available which take care of the speech recognition and the natural language processing
-(NLP). Examples are Dialogflow (Google), Lex (Amazon), Bot Framework (Microsoft Azure), Snips, ...
+(NLP). Examples are Dialogflow (Google), Lex (Amazon), Bot Framework (Microsoft Azure) and Snips.
 
 Today we will explore Dialogflow, a service through which anyone can create apps on the Google Home platform, and with
 little extra effort on other platforms as well. Other frameworks might have small differences in naming, but generally
@@ -50,7 +50,7 @@ Built-in entities are for example
 * `sys.geo-city`, which will autocorrect with city names
 * `sys.geo-capital`, which will autocorrect with capital names
 * `sys.airport`, which will autocorrect with airport names
-* `sys.number`, `sys.flight-number`, `sys.weight-unit`, ...
+* `sys.number`, `sys.flight-number`, `sys.weight-unit`
 
 Using `@sys.any` will accept any input, without trying to correct it to a certain set of names or a specific format.
 

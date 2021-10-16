@@ -3,9 +3,7 @@ title: The right data for your project
 layout: "single"
 ---
 
-### Making a voice assistant tell you about public transport
-
-### Showing the next departures on a smart mirror
+{{% page-ref "departure-boards.md" "obtaining-stop-ids.md" "route-planning.md" %}}
 
 ### Creating a map with travel times
 
@@ -20,8 +18,14 @@ such as OpenTripPlanner, which allow you to load a GTFS file and to make API cal
 {{% info %}} There are over 50.000 stop locations in Sweden. It would take 25 million API calls to create an
 isochrone map from every stop to every stop.This is equal to all ResRobot API traffic for 2 months. {{% /info %}}
 
-### Creating your own routeplanner algorithm
+<!--
+### Making a voice assistant tell you about public transport
+
+### Showing the next departures on a smart mirror
+
+### Creating your own route-planner algorithm
 
 ### Tracking delays
 
 ### Showing the actual position of a bus, train, ...
+-->

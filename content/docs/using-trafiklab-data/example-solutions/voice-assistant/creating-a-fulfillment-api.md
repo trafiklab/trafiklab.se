@@ -173,7 +173,7 @@ use [the Google Assistant documentation](https://developers.google.com/actions/a
 ## Creating a custom fulfillment server application
 
 We now know the request format, and how our response should look like. In order to be able to anwer, we will use
-the [trafiklab](https://trafiklab.se) APIs. Depending on which features we want to implement, there are two or three
+the Trafiklab APIs. Depending on which features we want to implement, there are two or three
 types of API requests which we will use:
 
 * **Station lookups**: The station name, passed as a parameter by DialogFlow, needs to be converted to an ID so we can
@@ -190,9 +190,9 @@ information.
 
 |  | Sweden | Stockholm |
 | :--- | :--- | :--- |
-| Station lookup | [ResRobot Reseplanerare](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare/platsuppslag) | [SL Platsuppslag](https://www.trafiklab.se/api/sl-platsuppslag) |
-| Departure boards | [ResRobot Stolptidstabeller 2](https://www.trafiklab.se/api/trafiklab-apis/resrobot-stolptidtabeller-2) | [SL Realtidsinformation 4](https://www.trafiklab.se/api/sl-realtidsinformation-4) |
-| Routeplanning | [ResRobot Reseplanerare](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare/sok-resa) | [SL Reseplanerare 3.1](https://www.trafiklab.se/api/sl-reseplanerare-31) |
+| Station lookup | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/stop-lookup) | [SL Platsuppslag](/api/trafiklab-apis/sl/stop-lookup) |
+| Departure boards | [ResRobot Stolptidstabeller 2](/api/trafiklab-apis/resrobot-v2/timetables) | [SL Realtidsinformation 4](/api/trafiklab-apis/sl/departures-4) |
+| Routeplanning | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/route-planner) | [SL Reseplanerare 3.1](/api/trafiklab-apis/sl/route-planner-31) |
 
 \* ResRobot also works in Stockholm, but the SL APIs might offer better accuracy and realtime data.  
 \*\* API versions are the latest at time of writing. Future versions will be just as suited for this.
