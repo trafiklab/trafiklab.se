@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="main-content">
   <div class="page">
-    <main id="site-content">
+    <article id="site-content">
       <div class="docs-header">
         <h1 class="tl-h1">{{ .Title }}
           {{ if isset .Site.Params "sourcerepository" }}
@@ -13,7 +13,7 @@
         </h1>
       </div>
       {{ .Content }}
-    </main>
+    </article>
     {{ partial "docs-footer.html" .}}
   </div>
 </main>

@@ -119,6 +119,30 @@ html {
   }
 }
 
+@media screen and (min-width: $breakpoint-md) {
+  @for $i from 1 through 12 {
+    .tl-grid--large-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  @for $i from 1 through 12 {
+    .tl-grid--xlarge-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+  @for $i from 1 through 12 {
+    .tl-grid--xxlarge-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
 // Base card
 .tl-base-card {
   display: flex;
@@ -460,6 +484,7 @@ img.hero-illustration {
 .omtl-people-presenter {
   background: $light-bg;
   border-radius: $border-radius-default;
+  margin-bottom: 1.5rem;
 }
 
 .omtl-people-presenter--vertical .omtl-people-presenter__container {
