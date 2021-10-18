@@ -18,7 +18,7 @@ In order to retrieve the static data you need an API key. Follow the link below 
 Service alerts allow you to get information about disruptions on the transit network. This can anything from planned
 roadworks (a certain stop might not get served for a few days) to electricity outages on a rail network. ServiceAlerts
 are broad and general information. Delays and cancellations of individual trips are usually communicated
-using [Trip updates](./gtfs-regional-realtime.md#tripupdates).
+using [Trip updates](#tripupdates).
 See [the table on the GTFS Regional overview page](./_index.md#which-operators-are-covered-by-this-dataset) to find out which
 operators are supported (Realtime data column).
 
