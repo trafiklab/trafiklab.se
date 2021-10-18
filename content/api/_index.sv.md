@@ -8,13 +8,10 @@ is_fallback_source_page: true
 ---
 
 {{% warning %}}
-**Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
+**Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen. Om du tycker att denna
+sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://suport.trafiklab.se).
 
-Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på
-[support.trafiklab.se](https://suport.trafiklab.se).
-
-Om du vill se webbsidan på engelska, [klicka här](/en/).
-{{% /warning %}}
+Om du vill se webbsidan på engelska, [klicka här](/en/). {{% /warning %}}
 
 
 ## Trafiklabs APIs
@@ -34,7 +31,7 @@ and datasets.
 | [GTFS Regional](gtfs/gtfs-regional/) | GTFS(-RT) | ✅ | Some, [see details](gtfs/gtfs-regional/#which-operators-are-covered-by-this-dataset) | [See details](gtfs/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Public Transport Datasets |
 | [ResRobot Stolptidstabeller](/api/trafiklab-apis/resrobot-v2/timetables.md) | Json, XML | ✅ | Some, [see details](/api/trafiklab-apis/resrobot-v2/timetables.md) | Entire Sweden | Departure & Arrival board API |
 | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/route-planner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
-| [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
+| [SLs APIs](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
 | Oxyfi Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
 | Trafikverkets API | Json, XML |  |  | Road and national rail | Road and rail API |
 
