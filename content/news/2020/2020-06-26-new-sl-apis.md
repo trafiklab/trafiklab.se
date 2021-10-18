@@ -1,6 +1,7 @@
 ---
 title: New SL API ”Public transport information Region Stockholm” replacing today’s 7 SL APIs at Trafiklab 
 date: 2020-06-26 
+image: /media/2020/06/sl-inverse.jpg
 aliases:
 - /node/29122
 - /api/sl-reseplanerare/new-sl-api-public-transport-information-region
