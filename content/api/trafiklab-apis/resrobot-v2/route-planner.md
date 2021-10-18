@@ -1,8 +1,10 @@
 ---
 title: ResRobot Route planner
-aliases: /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
 weight: 20
 date: 2015-06-24
+aliases: 
+  - /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
+  - /api/resrobot-reseplanerare/dokumentation/sokresa
 ---
 ## What does this API provide?
 

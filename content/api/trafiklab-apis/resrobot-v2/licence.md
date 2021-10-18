@@ -1,9 +1,13 @@
 ---
-title: License 
+title: Licence 
 weight: 1000
+aliases:
+  - /api/resrobot-reseplanerare/licens
+  - /node/14049/license
+  - /node/14075/license
 ---
 
-Data from the NeTEx Regional API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+Data from the ResRobot API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
 
 ## Summary
 

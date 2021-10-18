@@ -2,6 +2,15 @@
 title: SL Traffic status v2.0 (Trafikläget 2)
 weight: 600
 date: 2014-03-14
+aliases:
+  - /api/sl-trafiklaget-2
+  - /api/sl-trafiklaget-2/documentation
+  - /api/sl-trafiklaget-2/nivaer
+  - /api/sl-trafiklaget-2/console
+  - /node/12603
+  - /node/12603/documentation
+  - /node/12603/nivaer
+  - /node/12603/console
 ---
 
 ## Beskrivning

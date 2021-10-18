@@ -1,7 +1,22 @@
 ---
-title: License 
+title: Licence 
 weight: 1000
 date: 2015-02-27
+aliases:
+  - /api/sl-reseplanerare-31/license
+  - /node/25593/license
+  - /api/sl-realtidsinformation-4/license
+  - /node/15754/licens
+  - /api/sl-platsuppslag/licens
+  - /node/12617/licens
+  - /api/sl-hallplatser-och-linjer-2/licens
+  - /node/13609/licens
+  - /api/sl-trafiklaget-2/licens
+  - /node/12603/licens
+  - /api/sl-storningsinformation-2/licens
+  - /node/12605/licens
+  - /api/sl-narliggande-hallplatser-2/konsol
+  - /node/25595
 ---
 
 ## Terms and conditions for SL APIs on Trafiklab.se

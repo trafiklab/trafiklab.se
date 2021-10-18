@@ -13,7 +13,7 @@ with optional realtime data available in the GTFS Realtime data API.
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files. 
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/gtfs-regional-static-spec"  
+{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/static-spec"  
 "/docs/using-trafiklab-data/using-gtfs-files"  %}}
 
 ## GTFS Extensions

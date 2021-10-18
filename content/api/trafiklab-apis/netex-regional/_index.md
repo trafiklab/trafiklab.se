@@ -2,7 +2,9 @@
 title: NeTEx Regional
 layout: "single"
 weight: 30
-aliases: "/api/netex-regional-static-data"
+aliases: 
+  - /api/netex-regional-static-data
+  - /node/27769/documentation
 date: 2019-11-22
 ---
 

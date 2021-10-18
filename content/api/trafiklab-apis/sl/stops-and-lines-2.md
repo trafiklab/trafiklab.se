@@ -2,6 +2,15 @@
 title: SL Stops and lines v2.0 (Hållplatser och linjer 2)
 weight: 400
 date: 2015-03-02
+aliases:
+- /api/sl-hallplatser-och-linjer-2
+- /api/sl-hallplatser-och-linjer-2/documentation
+- /api/sl-hallplatser-och-linjer-2/nivaer
+- /api/sl-hallplatser-och-linjer-2/console
+- /node/13609
+- /node/13609/documentation
+- /node/13609/nivaer
+- /node/13609/console
 ---
 
 Listning av hållplatser och linjer i Stockholms län.

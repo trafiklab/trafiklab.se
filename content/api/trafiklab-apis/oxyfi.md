@@ -3,6 +3,17 @@ title: Oxyfi-Realtidspositionering
 layout: "single"
 summary: Push-API med information om realtidspositioner på fordon i kollektivtrafiken. För närvarande levererar API:et information för alla tåg som körs av Värmlandstrafik, Norrtåg och Tåg i Bergslagen. Informationen kommer från Oxyfis system för Internet ombord. Arbete pågår också för att ta med tåg från andra tågoperatörer.
 weight: 95
+aliases:
+  - /api/oxyfi-realtidspositionering
+  - /api/oxyfi-realtidspositionering/dokumentation
+  - /api/oxyfi-realtidspositionering/nivaer
+  - /api/oxyfi-realtidspositionering/konsol
+  - /api/oxyfi-realtidspositionering/licens
+  - /node/16601
+  - /node/16601/dokumentation
+  - /node/16601/nivaer
+  - /node/16601/konsol
+  - /node/16601/licens
 ---
 
 ## API Overview
@@ -10,7 +21,7 @@ weight: 95
 Positions are represented by GPS data that is generated locally onboard each train-set. The current position is
 transmitted as a message every second to Oxyfi’s real-time server on shore.
 
-Besides storing the message for future use, the server customizes messages on the fly by tagging it with additional
+Beside storing the message for future use, the server customizes messages on the fly by tagging it with additional
 information and passes them on to subscribers. One such subscriber is the websocket API service.
 
 The Trainpos API is one such subscriber. It subscribes on messages that contains the NMEA version 2.2 specification of
@@ -29,7 +40,7 @@ subscriber, if a new subscribe request arrives at the API, it will close any ope
 The total delay from position generation onboard until it is sent out from the real-time server is typically less than
 100 ms. The vast majority of this delay is occurring in the mobile network that connects the vehicle to the internet.
 
-Each train-set or carriage reports its position every second so you should get a message per second for each vehicle
+Each train-set or carriage reports its position every second, so you should get a message per second for each vehicle
 that currently has both power and radio coverage.
 
 ## Message Details

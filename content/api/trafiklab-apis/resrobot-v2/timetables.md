@@ -1,8 +1,10 @@
 ---
 title: ResRobot Timetables
-aliases: /node/14075/documentation
 weight: 10
 date: 2015-06-24
+aliases: 
+  - /api/resrobot-stolptidtabeller-2/documentation
+  - /node/14075/documentation
 ---
 
 ## What does this API provide?

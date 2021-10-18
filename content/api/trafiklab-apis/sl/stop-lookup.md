@@ -2,6 +2,15 @@
 title: SL Stop lookup v1.0 (Platsuppslag)
 weight: 300
 date: 2014-03-14
+aliases:
+  - /api/sl-platsuppslag
+  - /api/sl-platsuppslag/dokumentation
+  - /api/sl-platsuppslag/nivaer
+  - /api/sl-platsuppslag/konsol
+  - /node/12617
+  - /node/12617/dokumentation
+  - /node/12617/nivaer
+  - /node/12617/konsol
 ---
 <h2>Beskrivning</h2>
 <p>Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara söka efter hållplatsområden eller hållplatser, adresser och platser.</p>

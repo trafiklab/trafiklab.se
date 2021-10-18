@@ -6,7 +6,11 @@ summary: Up-to-date information from Trafikverket, regarding both rail and road 
 date: 06-02-2014
 aliases:
   - /api/trafikverket-oppet-api
+  - /api/trafikverket-oppet-api/documentation
+  - /api/trafikverket-oppet-api/licens
+  - /node/12475
   - /node/12475/documentation
+  - /node/12475/licens
 ---
 
 
