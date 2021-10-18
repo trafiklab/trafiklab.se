@@ -14,9 +14,7 @@ def add_missing_translation_warning(filepath: str):
     
 {{% warning %}}
 **Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
-
-Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på 
-[support.trafiklab.se](https://suport.trafiklab.se).
+Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://suport.trafiklab.se).
 
 Om du vill se webbsidan på engelska, [klicka här](/en/).
 {{% /warning %}}
