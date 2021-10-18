@@ -15,9 +15,11 @@
               {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "blogpost-overview__image") }}
             {{ end }}
             <div class="blogpost-overview__information">
+              {{ if or .Lastmod .Date }}
               <div class="blogpost-overview__date">
                 <label class="tl-label">{{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
               </div>
+              {{ end }}
               <div>
                 <h3 class="tl-h3 tl-h3--margin-bottom blogpost-overview__title">{{ .Title }}</h3>
                 <div class="blogpost-overview__description">{{ .Summary }}</div>
