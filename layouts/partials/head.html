@@ -17,6 +17,9 @@
 <meta name="theme-color" content="#ffffff">
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+{{ if .Params.Description }}
+<meta name="description" content="{{ .Params.Description }}">
+{{ end }}
 
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ $style.RelPermalink }}" />
