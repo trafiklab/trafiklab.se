@@ -1,6 +1,7 @@
 import argparse
 import os
 import os.path
+import platform
 from shutil import copy2
 
 
@@ -99,4 +100,9 @@ if __name__ == "__main__":
         checkout_theme_submodule()
     if os.path.exists("public"):
         os.removedirs("public")
-    os.system("hugo -d public --minify")
+    exitCode = os.system("hugo -d public --minify")
+    if platform.system() != "Windows":
+        exitCode = os.WEXITSTATUS(exitCode)
+    print(f"Hugo build process exited with code {exitCode}")
+    exit(exitCode)
+
