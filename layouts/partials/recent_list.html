@@ -6,7 +6,7 @@
         <a class="tl-card-list__item" href="{{ .Permalink }}">
             <h3 class="list-item-title">{{ .Title }}</h3>
             {{ if gt (len .Summary) 200 }}
-            <p class="tl-paragraph tl-paragraph--margin-bottom">{{ slicestr .Summary 0 200 | markdownify }} ...</p>
+            <p class="tl-paragraph tl-paragraph--margin-bottom">{{ .Summary | markdownify | truncate 300 }}</p>
             {{ else }}
             <p class="tl-paragraph tl-paragraph--margin-bottom">{{ .Summary | markdownify }}</p>
             {{ end }}

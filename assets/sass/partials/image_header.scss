@@ -40,6 +40,10 @@ $image-header-wide-expansion: 200px;
     pointer-events: none;
   }
 
+  .image-header__title {
+    line-height: 2rem;
+  }
+
   .image-header__details {
     border-top: 1px solid #fff;
     padding-top: $image-header-title-details-spacing / 2;
