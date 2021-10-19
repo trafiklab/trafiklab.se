@@ -1,8 +1,8 @@
 <script type="application/ld+json">
-    <!-- This snippet will cause breadcrumbs to show up in for example Google search results -->
+    {{/* This snippet will cause breadcrumbs to show up in for example Google search results */}}
     {{ $tree := slice . }}
     {{ $page := .Parent }}
-    <!-- There is no while loop, so just try 7 levels, this should suffice for every page -->
+    {{/* There is no while loop, so just try 7 levels, this should suffice for every page */}}
     {{ if $page }}{{ if $page.Parent}}
     {{ $tree = $tree | append (slice $page.Parent) }} {{ $page = $page.Parent }}
     {{ end }}{{ end }}
