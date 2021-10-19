@@ -27,6 +27,7 @@ Tjänsten initierades 2011 som ett samarbete mellan Samtrafiken, SL och RISE Vik
 
 Sveriges alla trafikföretag har enligt EU:s ITS-direktiv** krav på sig att tillgängliggöra sin kollektivtrafikdata i rätt format. Samtrafiken hjälper trafikföretagen att uppfylla kraven, och säkerställer därmed att rätt data publiceras på Trafiklab.
 
-\* Application Programming Interface
-
+\* Application Programming Interface  
 \** Intelligent Transport System
+
+![](/media/2021/10/tagline_logo.png)
