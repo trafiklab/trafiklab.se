@@ -10,7 +10,6 @@ menu:
     weight: 30
 
 ---
-## Om Trafiklab
 
 För att få resenärer att välja ett klimatsmart resande med kollektivtrafik, i stället för att resa med bil och flyg, är
 innovation och nya smarta tjänster viktigt. Det kan Trafiklab möjliggöra.
@@ -39,4 +38,4 @@ på Trafiklab.
 \* Application Programming Interface  
 \** Intelligent Transport System
 
-![](/media/2021/10/tagline_logo.png)
+![Samtrafiken logo](/media/2021/10/tagline_logo.png)
