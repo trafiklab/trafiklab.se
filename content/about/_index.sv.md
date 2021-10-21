@@ -37,5 +37,3 @@ på Trafiklab.
 
 \* Application Programming Interface  
 \** Intelligent Transport System
-
-![Samtrafiken logo](/media/2021/10/tagline_logo.png)
