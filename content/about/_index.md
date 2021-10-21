@@ -9,15 +9,21 @@ menu:
     weight: 30
 
 ---
-## A cooperation between Samtrafiken and Trafikverket
 
-Trafiklab was founded in 2011 as a cooperation between Samtrafiken, SL and RISE Viktoria. Today Trafiklab is a way to
-fulfill Trafikverkets duty to publish public transport data. This is realized by cooperation between Samtrafiken and
-Trafikverket.
+Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes. 
 
-At Trafiklab developers can use data and APIs for public transport in Sweden, and easily obtain the information needed
-to develop services which benefit Samtrafikens owners, partners, travelers, and society as a whole.
+### An open platform for innovation in Swedish public transport
 
-At Trafiklab we drive innovation for open data in the mobility sector, together with different actors both in- and
-outside our industry. We continuously work to open more datasets, and to improve the datasets we already provide, in
-order to create even more possibilities for developers.
+Trafiklab is a service developed and managed by Samtrafiken on behalf of the regional public transport authorities in Sweden.
+At trafiklab.se, developers can access data and APIs * from public transport in Sweden and thus easily get the information needed to develop smart services that benefit travelers and society. Public transport data is available in both static and dynamic formats, and it is continuously updated. We are constantly working with opening up more data sources and improving the existing ones.
+
+Several collaborations take place through Trafiklab with various actors both within and outside the public transport industry. The purpose is to benefit open data-based innovation in the mobility sector.
+
+The service was initiated in 2011 as a collaboration between Samtrafiken, SL and RISE Viktoria.
+
+###ITS Directive in the EU
+
+According to the EU's ITS Directive**, all Swedish transport companies are required to make their public transport data available in the correct format. Samtrafiken helps the transport companies to meet the requirements, and thus ensures that the correct data is published on Trafiklab.
+
+\* Application Programming Interface
+\** Intelligent Transport System
