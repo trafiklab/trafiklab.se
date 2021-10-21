@@ -21,5 +21,3 @@ to develop services which benefit Samtrafikens owners, partners, travelers, and 
 At Trafiklab we drive innovation for open data in the mobility sector, together with different actors both in- and
 outside our industry. We continuously work to open more datasets, and to improve the datasets we already provide, in
 order to create even more possibilities for developers.
-
-![Samtrafiken logo](/media/2021/10/tagline_logo.png)
