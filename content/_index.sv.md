@@ -8,21 +8,22 @@ mc: true
 type: home
 landingRoller:
     - dataName: "API:er"
-      dataLink: "/api"
+      dataLink: "/sv/api"
       caseName: "route-planners"
-      caseLink: "/cases"
+      caseLink: "/sv/cases"
     - dataName: "GTFS-RT"
-      dataLink: "/api"
+      dataLink: "/sv/api"
       caseName: "förutsägelser"
-      caseLink: "/cases"
+      caseLink: "/sv/cases"
     - dataName: "API:er"
-      dataLink: "/api"
+      dataLink: "/sv/api"
       caseName: "digital signage"
-      caseLink: "/cases"
+      caseLink: "/sv/cases"
     - dataName: "historiskt data"
-      dataLink: "/api"
+      dataLink: "/sv/api"
       caseName: "forskning"
-      caseLink: "/cases"
+      caseLink: "/sv/cases"
+description: "Trafiklab är ett initiativ för öppen trafikdata. Vi vill göra det enklare att få tillgång till APIer från trafikföretag, lättare att visa upp vad som finns och roligare att prata om vad man skulle kunna göra. Här kan du utforska vad andra gjort, dela bra idéer och hitta information om tillgängliga APIer."
 ---
-<p>Vi publicerar <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/gtfs-regional-realtime/">fordonspositioner</a></p>
-<p>så att du kan skapa <a class="landing-roller" href="/cases">applikationer</a></p>
+<p>Vi publicerar <a class="landing-roller" href="/sv/api/trafiklab-apis/gtfs-regional/realtime/">fordonspositioner</a></p>
+<p>så att du kan skapa <a class="landing-roller" href="/sv/cases">visualiseringar</a></p>

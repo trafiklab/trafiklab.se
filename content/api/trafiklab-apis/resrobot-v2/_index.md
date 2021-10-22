@@ -5,7 +5,9 @@ weight: 40
 url: "api/resrobot"
 aliases: 
   - /api/trafiklab-apis/resrobot-reseplanerare
+  - /node/14049
   - /api/trafiklab-apis/resrobot-stolptidtabeller-2
+  - /node/14075
 ---
 
 ### What is ResRobot?
@@ -28,7 +30,7 @@ build new apps on version 2.0.
 ### When should I use ResRobot?
 
 ResRobot is an API which answers to specific questions, such as "when does the next bus leave from stop X". The response
-is quick and easy to use, and can be used directly without having to process it first. This makes it a good fit for for
+is quick and easy to use, and can be used directly without having to process it first. This makes it a good fit for
 example smartphone applications where travellers need an answer on their queries, but a poor choice for analytics where
 a lot of data from a lot of vehicles is needed.
 

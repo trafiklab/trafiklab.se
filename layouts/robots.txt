@@ -1,0 +1,6 @@
+User-agent: *
+# {{ getenv "HUGO_ENV" }}
+Disallow:{{ if ne (getenv "HUGO_ENV") "production" }} /{{ end }}
+
+User-agent: www.deadlinkchecker.com
+Disallow:

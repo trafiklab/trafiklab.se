@@ -39,7 +39,7 @@ sections:
   label: Headless
   create: all
   match: "**/*"
-upload_dir: static/media
+upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
 use_front_matter_path: false

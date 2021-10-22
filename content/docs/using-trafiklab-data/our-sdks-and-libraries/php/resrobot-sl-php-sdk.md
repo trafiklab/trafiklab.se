@@ -2,18 +2,7 @@
 title: ResRobot PHP SDK
 ---
 
-[![Build status](https://travis-ci.com/trafiklab/resrobot-php-sdk.svg?branch=master)](https://travis-ci.com/trafiklab/resrobot-php-sdk) [![Latest Stable Version](https://poser.pugx.org/trafiklab/resrobot-php-sdk/v/stable)](https://packagist.org/packages/trafiklab/resrobot-php-sdk) [![codecov](https://codecov.io/gh/trafiklab/resrobot-php-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/trafiklab/resrobot-php-sdk) [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-
-{{% info %}} The most up-to-date version of this documentation can be found
-at [https://github.com/trafiklab/resrobot-php-sdk](https://github.com/trafiklab/resrobot-php-sdk)
-{{% /info %}}
-
-ResRobot offers realtime data about Sweden's public transport. Show all departures and arrivals for a stop, or easily
-plan a route from A to B. More information can be found
-at [Trafiklab - ResRobot routeplanner](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare)
-and [Trafiklab - ResRobot departures](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare).
-
-This repository contains a PHP SDK to easily use the ResRobot APIs. This way you don't need to worry about making
+We created a PHP SDK to easily use the ResRobot APIs. This way you don't need to worry about making
 requests, caching, or parsing responses. All responses are parsed and returned as PHP classes.
 
 ## Installation
@@ -43,7 +32,7 @@ from [Trafiklab](https://trafiklab.se) first.
 
 The following code example illustrates how you can retrieve a timetable for a certain stop.
 
-```xml
+```php
 $wrapper = new ResRobotWrapper();
 
 // Create a new routeplanning object. The wrapper will instantiate an object of the interface type.
@@ -76,7 +65,7 @@ the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/trafikl
 
 The following code gives a quick idea on how the SDK is used.
 
-```xml
+```php
 $entry = $response->getTimetable()[0]; // Get the first result
 // Type of transport, one of the constants in Trafiklab\Common\Model\Enum\TransportType
 $entry->getTransportType();
@@ -96,7 +85,7 @@ $scheduledStopTime = $timeTableEntry->getScheduledStopTime();
 
 The following code example illustrates how you can plan a route from A to B
 
-```xml
+```php
 $queryTime = new DateTime();
 $queryTime->setTime(18, 0);
 
@@ -123,7 +112,7 @@ the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/trafikl
 
 The following code gives a quick idea on how the SDK is used.
 
-```xml
+```php
 $trip = $response->getTrips()[0]; // Get the first result
 
 // Tell the user about every leg in their journey.

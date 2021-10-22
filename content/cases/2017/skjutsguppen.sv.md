@@ -46,7 +46,7 @@ delandet av ett och samma fordon.
 
 Skjutsgruppen och Mattias Jägerskog utsågs till Trafiklabhjälte 2016. En del av motiveringen löd så här: “Mattias har
 genom sitt engagemang drivit frågor om nya sätt att se på mobilitet, delningsekonomi och hur öppna data är en central
-komponent i detta arbete.” För hela motiveringen, se: www.hjalte.trafiklab.se
+komponent i detta arbete.”
 
 **FAKTA OM SKJUTSGRUPPEN.SE**
 

@@ -20,7 +20,7 @@ allmänna dokumentationen, som beskriver hur man använder Trafiklab, hur man an
 sätt. Den allmänna dokumentationen innehåller även handledningar och mycket mer.
 
 Om du upptäcker fel eller någonting som saknar, kan ni hojta till på vårt supportforum
-([support.trafiklab.se](https://support.trafiklab.se)) eller så kan man lämna in förbättringsförslag genom Github-länken
+([support.trafiklab.se](https://support.trafiklab.se)) eller så kan man lämna in förbättringsförslag genom GitHub-länken
 som man hittar på varje sida.
 
 {{% info %}} För att kunna tillgängliggöra mer dokumentation till fler användare, tillhandahåller vi dokumentationen
@@ -29,7 +29,7 @@ och att nästan alla utvecklare därför har en bra förståelse av engelska spr
 
 Tycker du dock att vi borde översätta vissa sidor, till exempel för att kunna använda de i samband med undervisning, får
 du gärna höra av dig genom [support.trafiklab.se](https://support.trafiklab.se), [mejl](mailto:info@trafiklab.se) eller
-[Github](https://github.com/trafiklab/trafiklab.se). {{% /info %}}
+[GitHub](https://github.com/trafiklab/trafiklab.se). {{% /info %}}
 
 ### Om du är ny på Trafiklab är det enklast att börja här
 

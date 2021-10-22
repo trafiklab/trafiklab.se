@@ -2,6 +2,7 @@
 title: ResRobot Stop lookup
 aliases: /api/trafiklab-apis/resrobot-reseplanerare/platsuppslag
 weight: 30
+date: 2015-06-24
 ---
 
 ## What does this API provide?
@@ -42,7 +43,7 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS
 Sverige 2. This way you can provide autocomplete and other search functions without internet access. It will make your
 application more responsive and more reliable as you don't have to wait for API responses.
-See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
+See [Combining data and APIs](docs/using-trafiklab-data/combining-data/) for more information. {{% /info %}}
 
 {{% warning %}}
 **New version available**

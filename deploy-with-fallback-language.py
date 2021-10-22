@@ -1,6 +1,7 @@
 import argparse
 import os
 import os.path
+import platform
 from shutil import copy2
 
 
@@ -14,9 +15,7 @@ def add_missing_translation_warning(filepath: str):
     
 {{% warning %}}
 **Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
-
-Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på 
-[support.trafiklab.se](https://suport.trafiklab.se).
+Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://suport.trafiklab.se).
 
 Om du vill se webbsidan på engelska, [klicka här](/en/).
 {{% /warning %}}
@@ -101,4 +100,9 @@ if __name__ == "__main__":
         checkout_theme_submodule()
     if os.path.exists("public"):
         os.removedirs("public")
-    os.system("hugo -d public --minify")
+    exitCode = os.system("hugo -d public --minify")
+    if platform.system() != "Windows":
+        exitCode = os.WEXITSTATUS(exitCode)
+    print(f"Hugo build process exited with code {exitCode}")
+    exit(exitCode)
+

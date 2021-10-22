@@ -23,7 +23,7 @@ mindre, vilket innebär färre potentiella användare och lägre grad av komplex
 sedan länge flera populära digitala reseappar tillgängliga i Sverige.
 
 – Anledningen till att vi ändå startat i Stockholm är främst önskemål från användare, men även att det finns bra öppen
-trafikdata tillgängligt, säger Claudia Bruyant Ndege, general manager Norden på Citymapper. image
+trafikdata tillgängligt, säger Claudia Bruyant Ndege, general manager Norden på Citymapper.
 
 ![Claudia Bruyant Ndege, general manager Norden på Citymapper.](/media/2016/11/citymapper_claudia_ndege.jpg 
 "Claudia Bruyant Ndege, general manager Norden på Citymapper.")

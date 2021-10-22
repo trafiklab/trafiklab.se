@@ -9,12 +9,12 @@ sidebar: true
 ## Trafiklabs APIs
 
 At Trafiklab we're offering a wide range of APIs and datasets. Each API and dataset provides data of a different kind or
-format. Choosing the right data for your project will help you getting the best results.
+format. Choosing the right data for your project will help you to get the best results.
 
 The following pages will give you an overview of all our data, describing what's included, the format, how to get it,
 and some examples. Make sure you also check
-out [The right data type for your project](../../using-trafiklab-data/the-right-data-type-for-your-project/) to help you
-choose the right data source. [Using our data](../transport-data-formats/) will help you to get started with our APIs
+out [The right data type for your project](../docs/using-trafiklab-data/the-right-data-type-for-your-project/) to help you
+choose the right data source. [Using our data](../docs/using-trafiklab-data/) will help you to get started with our APIs
 and datasets.
 
 | API | File format | Scheduled data | Real-time data | Coverage | What is it |
@@ -31,6 +31,6 @@ and datasets.
 
 While we offer a wide range of APIs and datasets covering public transport, easily accessible through Trafiklab, you
 sometimes need something less focussed on public transport, or data not available on Trafiklab.
-~~~~
+
 The APIs in the "other" category cannot be accessed through Trafiklab, but might still be valuable additions for your 
 project.

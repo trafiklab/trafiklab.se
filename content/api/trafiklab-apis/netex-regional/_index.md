@@ -2,7 +2,10 @@
 title: NeTEx Regional
 layout: "single"
 weight: 30
-aliases: "/api/netex-regional-static-data"
+aliases: 
+  - /api/netex-regional-static-data
+  - /node/27769/documentation
+date: 2019-11-22
 ---
 
 NeTEx regional is a set of NeTEx feeds of high quality. These feeds contain all data present in GTFS Regional, as 

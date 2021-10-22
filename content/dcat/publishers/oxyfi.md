@@ -1,7 +1,7 @@
 {
   "publisher":{
-    "name": "Oxify",
-    "homepage": "https://www.oxify.se"
+    "name": "Oxyfi",
+    "homepage": "https://oxyfi.se"
   },
   "layout": "publisher",
   "outputs": ["dcat"]

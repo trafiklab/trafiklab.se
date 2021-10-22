@@ -1,4 +1,4 @@
 ---
 title: PHP
-layout: "single"
+layout: "section"
 ---

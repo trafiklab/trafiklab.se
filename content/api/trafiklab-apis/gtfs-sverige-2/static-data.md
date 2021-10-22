@@ -1,6 +1,7 @@
 ---
 title: Static data
 weight: 10
+date: 2015-11-09
 ---
 
 ### Retrieving Static data

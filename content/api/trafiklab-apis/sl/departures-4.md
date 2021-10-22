@@ -1,7 +1,16 @@
 ---
 title: SL Departures v4.0 (Realtidsinformation 4)
 weight: 200
-date: 2018-06-01
+date: 2016-11-30
+aliases:
+  - /api/sl-realtidsinformation-4
+  - /api/sl-realtidsinformation-4/dokumentation
+  - /api/sl-realtidsinformation-4/nivaer
+  - /api/sl-realtidsinformation-4/konsol
+  - /node/15754
+  - /node/15754/dokumentation
+  - /node/15754/nivaer
+  - /node/15754/konsol
 ---
 
 <h2>Beskrivning</h2>

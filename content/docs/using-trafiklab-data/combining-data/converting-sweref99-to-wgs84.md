@@ -1,5 +1,6 @@
 ---
 title: Converting SWEREF99 to WGS84
+aliases: /konvertering-swref99-wgs84
 ---
 
 The old trafikverkets API, and some other Swedish datasets as well, make use of the SWEREF99 coordinate system. This is

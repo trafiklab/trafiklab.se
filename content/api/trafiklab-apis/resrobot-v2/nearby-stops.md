@@ -2,6 +2,7 @@
 title: ResRobot nearby stops
 aliases: /api/trafiklab-apis/resrobot-reseplanerare/narliggande-hallplatser
 weight: 31
+date: 2015-06-24
 ---
 
 ## What does this API provide?

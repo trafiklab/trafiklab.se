@@ -8,13 +8,10 @@ is_fallback_source_page: true
 ---
 
 {{% warning %}}
-**Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
+**Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen. Om du tycker att denna
+sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://suport.trafiklab.se).
 
-Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på
-[support.trafiklab.se](https://suport.trafiklab.se).
-
-Om du vill se webbsidan på engelska, [klicka här](/en/).
-{{% /warning %}}
+Om du vill se webbsidan på engelska, [klicka här](/en/). {{% /warning %}}
 
 
 ## Trafiklabs APIs
@@ -24,8 +21,8 @@ format. Choosing the right data for your project will help you getting the best 
 
 The following pages will give you an overview of all our data, describing what's included, the format, how to get it,
 and some examples. Make sure you also check
-out [The right data type for your project](../../using-trafiklab-data/the-right-data-type-for-your-project/) to help you
-choose the right data source. [Using our data](../transport-data-formats/) will help you to get started with our APIs
+out [The right data type for your project](../docs/using-trafiklab-data/the-right-data-type-for-your-project/) to help you
+choose the right data source. [Using our data](../docs/using-trafiklab-data/) will help you to get started with our APIs
 and datasets.
 
 | API | File format | Scheduled data | Real-time data | Coverage | What is it |

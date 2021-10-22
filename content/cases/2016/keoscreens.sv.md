@@ -20,7 +20,7 @@ upphandlingen av Stockholms innerstads busstrafik.
 Strategin var framgångsrik och Keolis vann upphandlingen i början av 2014. Utvecklingen av tjänsten KeoScreens startade
 direkt i samarbete med leverantörerna Hogia PTS och Mobitec samt med trafikförvaltningen på Stockholm Läns Landsting som
 beställare. Projektet handlade både om att säkerställa installationen av skärmarna ombord på bussarna direkt i
-fordonsleverantörens fabrik och att utveckla ett stabilt system för störnings- och realtidsdata. image
+fordonsleverantörens fabrik och att utveckla ett stabilt system för störnings- och realtidsdata.
 
 ![Otto Dyberg, IT-chef på Keolis](/media/2016/08/keoscreens-otto-dyberg.jpg "Otto Dyberg, IT-chef på Keolis")
 

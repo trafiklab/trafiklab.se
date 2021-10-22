@@ -1,12 +1,15 @@
 ---
 title: ResRobot Route planner
-aliases: /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
 weight: 20
+date: 2015-06-24
+aliases: 
+  - /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
+  - /api/resrobot-reseplanerare/dokumentation/sokresa
 ---
 ## What does this API provide?
 
 ResRobot Route planner provides routes between two stops or points. Users can specify the start and end point, date,
-time, transport modes, ...
+time, transport modes, and more.
 
 ### Data format
 

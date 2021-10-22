@@ -8,6 +8,7 @@ theme = "trafiklab-2021"
 
 enableEmoji = true
 enableGitInfo = true
+enableRobotsTXT = true
 
 refLinksErrorLevel = "WARNING"
 

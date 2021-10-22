@@ -1,5 +1,5 @@
 ---
-title: "Meeting up"
+title: "Other"
 headless: true
 weight: 100
 ---
