@@ -90,7 +90,6 @@ $(function () {
         setInterval(function () {
             count++;
             let item = rollerValues[count % rollerValues.length];
-            console.log(item)
             $first.text(item[0]);
             $first.attr("href", item[1]);
             $second.text(item[2]);

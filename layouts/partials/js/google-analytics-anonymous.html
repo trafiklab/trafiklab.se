@@ -1,0 +1,19 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+{{ if isset .Site.Params "googleAnalyticsId" }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsID }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.Params.googleAnalyticsId }}');
+    // Never send any personal data or tracking, just count users
+    gtag('set', 'allow_google_signals', false);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+    });
+
+</script>
+
+{{ end }}
