@@ -9,7 +9,7 @@ This August, London-based startup Citymapper launched its travel and navigation 
 
 The fact that the popular navigation app Citymapper has chosen to cover Stockholm doesn't quite follow the pattern of how this fast-growing tech company tends to choose cities. Compared to practically every other city in the app, Stockholm is significantly smaller, which means fewer potential users and a lower degree of complexity in the transportation system. In addition, several popular digital travel apps have long been available in Sweden.
 
-\- The reason why we still started in Stockholm is mainly user requests, but also that there is good open data available, says Claudia Bruyant Ndege, General Manager Nordic at Citymapper.
+\- The reason why we still started in Stockholm is mainly user requests, but also that there is good open data available, says **Claudia Bruyant Ndege**, General Manager Nordic at Citymapper.
 
 ![Claudia Bruyant Ndege, general manager Norden på Citymapper.](/media/2016/11/citymapper_claudia_ndege.jpg  "Claudia Bruyant Ndege, general manager Norden på Citymapper.")
 
