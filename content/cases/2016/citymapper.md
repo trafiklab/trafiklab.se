@@ -27,8 +27,10 @@ Since its launch, the app has become even more popular among Swedes. Despite onl
 
 \- We are happy but we want to continue developing the service for Stockholm. At the moment we are keeping our fingers crossed to be able to add rental bikes and more detailed bus information, but we have not been able to get hold of that data yet. We just need the right data, then we've got the resources and expertise to develop digital services that make it easier for the traveller.
 
-**FACTS ABOUT CITYMAPPER**
+
 ![A screenshot from the citymapper app](/media/2016/11/citymapper_screenshot.jpg)
+
+**FACTS ABOUT CITYMAPPER**
 
 **Launched in:** In Stockholm in August 2016, but the company was founded in 2012 in London by entrepreneur Azmat Yusuf who developed the app for more than 35 major cities. Awarded the Editors Choice Award by Apple UK in August 2016 and App of the Year from Apple in 2013, 2014 and 2015.
 
