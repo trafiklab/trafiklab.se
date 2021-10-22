@@ -35,7 +35,7 @@ is updated every 3 seconds.
 
 The following table shows which operators
 
-| Operator | Static data | Real-time data | Vehicle positions | Occupancy data positions |
+| Operator | Static data | Real-time data | Vehicle positions | Occupancy data |
 | :--- | :---: | :---: | :---: | :---: |
 | Blekingetrafiken (Blekinge län)| ✅ |  |  |  |
 | Dalatrafik (Dalarnas län)| ✅ | ✅ | ✅ |  |
