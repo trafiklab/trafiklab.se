@@ -9,8 +9,7 @@ menu:
     weight: 30
 
 ---
-
-Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes. 
+Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes.
 
 ### An open platform for innovation in Swedish public transport
 
@@ -21,9 +20,10 @@ Several collaborations take place through Trafiklab with various actors both wit
 
 The service was initiated in 2011 as a collaboration between Samtrafiken, SL and RISE Viktoria.
 
-###ITS Directive in the EU
+### ITS Directive in the EU
 
 According to the EU's ITS Directive**, all Swedish transport companies are required to make their public transport data available in the correct format. Samtrafiken helps the transport companies to meet the requirements, and thus ensures that the correct data is published on Trafiklab.
 
 \* Application Programming Interface
+
 \** Intelligent Transport System
