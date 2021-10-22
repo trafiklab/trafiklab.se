@@ -7,7 +7,6 @@ description: Skjutsgruppen.se is Swedens only service which combines public tran
   over 70.000 members.
 
 ---
-  
 Skjutsgruppen is Sweden's only service combining public transport with carpooling in rental cars and private vehicles. Skjutsgruppen is a non-profit carpooling movement, which today engages over 70,000 participant. The goal is to use existing resources more efficient, which benefits the envorinment while increasing mobility and meeting people.
 
 Ten years ago, **Mattias Jägerskog** started Skjutsgruppen as a social experiment. Friends invited friends via social media to ride together and the response was huge. On Facebook and Twitter, the hashtag #skjutsgruppen quickly spread, thousands of people used it to give each other a ride. When the Facebook group reached 20,000 participants, it was time to take the next step - develop a search tool for carpooling. And it was not just about carpooling in private vehicles.
@@ -36,4 +35,4 @@ Skjutsgruppen and Mattias Jägerskog were named Trafiklab hero 2016. Part of the
 
 **Data from Trafiklab:** ResRobot's API Route planner
 
-**Antal deltagare:** As of today 70 000 users
+**User count:** As of today 70 000 users
