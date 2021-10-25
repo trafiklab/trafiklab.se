@@ -1,9 +1,10 @@
 ---
-title: "Fallstudier     "
+title: 'Fallstudier     '
+weight: "20"
+url: fallstudier
+menu:
+  main:
+    weight: 20
 
-weight: 20
-menu: "main"
-url: "fallstudier"
 ---
-Läs om projekten som använder vår öppna data – allt från större företag som integrerat trafikdata i sina tjänster till
-tredjepartsutvecklarna som tar fram lösningar för just deras vardagsbehov.
+Läs om projekt som använder vår öppna data – allt från stora företag som integrerat trafikdata i sina tjänster till tredjepartsutvecklare som tar fram lösningar för sina egna vardagsbehov.
