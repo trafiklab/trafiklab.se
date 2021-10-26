@@ -1,80 +1,48 @@
 ---
-title: "Resledaren"
+title: Resledaren
 date: 2016-10-25
-draft: false
-image: /media/2016/10/resledaren-joel-holmberg.jpg
+image: "/media/2016/10/resledaren-joel-holmberg.jpg"
+description: The Resledaren application makes it easy to travel using public transport,
+  especially for people with cognitive issues, such as adhd and autism. With additional
+  reminders and overviews for the journey, this app provides the support many need
+  to travel independently using public transport.
 
-description: The Resledaren application makes it easy to travel using public transport, especially for people with cognitive issues, such as adhd and autism. With additional reminders and overviews for the journey, this app provides the support many need to travel independently using public transport.
 ---
-Appen Resledaren gör det enklare att resa i kollektivtrafiken, särskilt för personer med kognitiva
-funktionsnedsättningar såsom adhd och autism. Med extra minnestöd och överblick över resan ger appen stödet många
-behöver för att kunna resa på egen hand i kollektivtrafiken. Nu tar utvecklarna bakom Resledaren nästa steg med den nya
-projektet Dit-i-tid.
-<!--more-->
+The app Resledaren makes it easier to travel with public transport, especially for people with cognitive disabilities such as adhd and autism. With extra memory support and an overview of the journey, the app provides the support many people need to travel independently on public transport. Now the developers behind Resledaren are taking the next step with the new project Dit-i-tid (There-on-time).
 
-{{% warning %}}
-**Note:** This information is old and has not (yet) been translated to English. You are instead viewing the Swedish
-version.
+The Resledaren app was born three years ago during Trafiklab's Travelhack innovation competition, where developers competed during 24 hours to create services that improve public transport. IT consultants **Hampus Sethfors** and **Joel Holmberg** won by developing a prototype of Resledaren together.
 
-To view the entire website in Swedish, [click here](/sv/).
-{{% /warning %}}
+> - We both have relatives with adhd and aspergers, so we knew how limiting it is to not be able to get around on public transport on our own. At the same time, we saw that the technology we needed was in place, so we went ahead with Resledaren," says Joel Holmberg.
 
-Appen Resledaren föddes för tre år sedan under Trafiklabs innovationstävling Travelhack, där utvecklare tävlade om att
-på 24 timmar skapa tjänster som förbättrar kollektivtrafiken. IT-konsulterna Hampus Sethfors och Joel Holmberg vann,
-genom att tillsammans ta fram en prototyp på Resledaren.
+The service works throughout Sweden and reminds the user when it is time to leave home and what is good to take with them. It provides an overview of the journey by showing all stations to be passed and where to change or get off. During the journey, the service notifies when it is time to exit the vehicle and guides the user all the way to the final destination.
 
-> Vi har både två närstående med adhd och aspberger, så vi visste hur begränsande det är att inte kunna ta sig fram i
-kollektivtrafiken på egen hand. Samtidigt såg vi att tekniken som behövdes fanns på plats, så då körde vi på med
-Resledaren, berättar Joel Holmberg.
+> - People with cognitive impairment often have difficulties with time perception, short-term memory, orientation, problem solving and flexibility. This makes it difficult for them to travel alone, while many do not qualify for transport services. The service compensates for these impairments and is one of the puzzle pieces needed to make society accessible to all, says Joel.
 
-Tjänsten fungerar i hela Sverige och påminner användaren när det är dags att gå hemifrån samt vad som är bra att ha med
-sig. Den ger en överblick över resan genom att visa alla stationer som ska passeras och var man ska byta eller gå av.
-Under resan meddelar tjänsten när det är dags att kliva av och guidar användaren hela vägen till slutadressen.
+The app was launched in 2014 and has won several awards. The target audience is large, and the app has currently been downloaded over 10,000 times. In Sweden, about 10% of the population has some form of cognitive impairment, but more people than that benefit from the service.
 
-> Personer med kognitiv funktionsnedsättning har ofta svårigheter med tidsuppfattning, korttidsminne,
-orienteringsförmåga, problemlösning och flexibilitet. Det gör det svårt för dem att resa ensamma samtidigt som många
-inte kvalificerar sig för färdtjänst. Tjänsten kompenserar för de nedsatta funktionsförmågorna och är en av
-pusselbitarna som behövs för att samhället ska vara tillgängligt för alla.
+> - Many people with visual impairments use Resledaren because standard journey planners are not built to allow users to, for example, zoom in or have text read to them. In addition, many people without disabilities use the app, people who simply want to be helped with reminders in stressful everyday situations, Joel says.
 
-Appen lanserades 2014 och har vunnit flera utmärkelser. Målgruppen är stor, för närvarande har appen laddats ner över 10
-000 gånger. I Sverige har ungefär 10 procent av befolkningen någon form av kognitiv funktionsnedsättning, men det är
-fler än så som har nytta av tjänsten.
-
-> Många med synnedsättningar använder Resledaren eftersom vanliga reseplanerare inte är byggda för att användarna
-exempelvis ska kunna zooma in eller få text uppläst. Utöver det använder många utan funktionsnedsättning appen, personer
-som helt enkelt vill bli hjälpta med påminnelser i stressiga vardagssituationer.
-
-Med erfarenheterna från Resledaren har Joel Holmberg och Hampus Sethfors tillsammans med autismexperten Anna Sjödin
-nyligen startat det nya projektet Dit-i-tid. Det är ett API som arrangörer av möten, event och andra aktiviteter kopplar
-upp sig mot för att skicka ut påminnelse-SMS med reseförslag, information om evenemanget och mycket annat. 
+With the experience from Resledaren Joel Holmberg and Hampus Sethfors launched a new project, toghether with the autism expert Anna Sjödin: Dit-i-tid (There-in-time). It's an API that organisers of meetings, events and other activities connect to in order to send out reminder SMS messages with travel suggestions, information about the event and much more.
 
 ![Dit-i-tid på en smartphone](/media/2016/10/resledaren-dit-i-tid.jpg "Dit-i-tid på en smartphone")
 
-> Vi vänder oss till alla som bryr sig om att alla besökare kan komma dit i tid, eller kanske förlorar på att kunderna
-inte dyker upp såsom vårdgivare eller kulturarrangörer. Dit-i-tid har all användbar funktionalitet från Resledaren, men
-är i grunden en annan typ av tjänst. Användarna behöver inte ladda ner en app, utan det är arrangören som skickar
-påminnelserna som sen blir ingången till all annan funktionalitet.
+> - Dit-i-tid is for anyone who cares that all visitors can get there on time, or might lose out if customers don't turn up, such as healthcare providers or cultural organisers. Dit-i-tid has all the useful functionality of the Resledare, but is essentially a different type of service. Users don't have to download an app, but the organiser sends the reminders which then become the gateway to all other functionality.
 
-Både Resledaren och Dit-i-tid använder öppen data via Trafiklab.
+Both the Resledaren and Dit-i-tid use open data from Trafiklab.
 
-> Den största utmaningen med Resledaren har varit finansiering, så gratis öppen kollektivtrafikdata har varit en
-förutsättning för att våra projekt ska bli verklighet. Med mer stabil data med bra kvalité kommer utvecklar-Sverige att
-kunna göra ännu fler användbara tjänster.
+> - The biggest challenge with Resledaren has been funding, so free open public transport data has been a prerequisite for our projects to become a reality. With more stable data of good quality, Developer-Sweden will be able to make even more useful services.
 
-Dit-i-tid lanseras under nästa år.
+Dit-i-tid will be launched next year.
 
-**FAKTA OM RESLEDAREN** 
+
 ![Resledaren på en smartphone](/media/2016/10/resledaren-smartphone.jpg "Resledaren på en smartphone")
 
-**Lanseringsår:**
-2014
+**FACTS ABOUT RESLEDAREN**
 
-**Typ av tjänst:**
-Reseplanerar-app för Iphone och Android med extra stöd för personer med kognitiva funktionsnedsättningar, såsom ADHD och
-autism.
+**Launched in:** 2014
 
-**Data från Trafiklab:**
-SL Reseplanerare SL Realtidsinformation SL Platsuppslag ResRobot Reseplanerare
+**Type of service:** Travel planning-app with extra support for people with cognitive dysfunction, duch as ADHD or autism.
 
-**Antal användare:**
-Över 10 000 nedladdningar.
+**Data from Trafiklab:** SL Route planner, SL Real time, SL Stop lookout, ResRobot Travel planner
+
+**User count:** More then 10 000 downloads
