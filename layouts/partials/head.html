@@ -21,6 +21,10 @@
 <meta name="description" content="{{ .Params.Description }}">
 {{ end }}
 
+{{ if .Params.hidden }}
+<meta name="robots" content="noindex">
+{{ end }}
+
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ $style.RelPermalink }}" />
 
