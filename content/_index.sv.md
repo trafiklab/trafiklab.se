@@ -25,5 +25,5 @@ landingRoller:
       caseLink: "/sv/cases"
 description: "Trafiklab är ett initiativ för öppen trafikdata. Vi vill göra det enklare att få tillgång till APIer från trafikföretag, lättare att visa upp vad som finns och roligare att prata om vad man skulle kunna göra. Här kan du utforska vad andra gjort, dela bra idéer och hitta information om tillgängliga APIer."
 ---
-<p>Vi publicerar <a class="landing-roller" href="/sv/apis/trafiklab-apis/gtfs-regional/realtime/">fordonspositioner</a></p>
+<p>Vi publicerar <a class="landing-roller" href="/sv/api/trafiklab-apis/gtfs-regional/realtime/">fordonspositioner</a></p>
 <p>så att du kan skapa <a class="landing-roller" href="/sv/cases">visualiseringar</a></p>

@@ -50,7 +50,7 @@ your application. While this is not enforced in any way, it is good practice to 
 be `MyDemoApp/1.0.0 (mail@example.com)`. If you don't want to send a user agent, you can just leave out this line.
 
 Detailed information about ResRobot request parameters can be found at
-the [ResRobot departures/arrivals API page](https://www.trafiklab.se/apis/trafiklab-apis/resrobot-reseplanerare). Only the most
+the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare). Only the most
 important/most used request parameters are implemented in the SDK, in order to reduce clutter, and to ensure that we can
 keep the SDK unchanged in case of changes to the API. If you believe we have missed an important field, please create an
 issue so we can review this.
@@ -61,7 +61,7 @@ In order to use the data returned by your request, you can simply call getTimeTa
 method returns an array of TimeTableEntry instances, each of which describes one departure or arrival. You can look at
 the code and PHPDoc in order to get up-to-date information on which fields are available. Detailed information about
 ResRobot responses can be found at
-the [ResRobot departures/arrivals API page](https://www.trafiklab.se/apis/trafiklab-apis/resrobot-reseplanerare).
+the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare).
 
 The following code gives a quick idea on how the SDK is used.
 
@@ -108,7 +108,7 @@ In order to use the data returned by your request, you can simply call getTrips(
 returns an array of Trip instances, each of which describes one departure or arrival. You can look at the code and
 PHPDoc in order to get up-to-date information on which fields are available. Detailed information about ResRobot
 responses can be found at
-the [ResRobot departures/arrivals API page](https://www.trafiklab.se/apis/trafiklab-apis/resrobot-reseplanerare).
+the [ResRobot departures/arrivals API page](https://www.trafiklab.se/api/trafiklab-apis/resrobot-reseplanerare).
 
 The following code gives a quick idea on how the SDK is used.
 

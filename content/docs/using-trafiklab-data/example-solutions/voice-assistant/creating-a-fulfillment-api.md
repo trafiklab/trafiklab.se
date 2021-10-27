@@ -187,9 +187,9 @@ information.
 
 |  | Sweden | Stockholm |
 | :--- | :--- | :--- |
-| Station lookup | [ResRobot Reseplanerare](/apis/trafiklab-apis/resrobot-v2/stop-lookup) | [SL Platsuppslag](/apis/trafiklab-apis/sl/stop-lookup) |
-| Departure boards | [ResRobot Stolptidstabeller 2](/apis/trafiklab-apis/resrobot-v2/timetables) | [SL Realtidsinformation 4](/apis/trafiklab-apis/sl/departures-4) |
-| Routeplanning | [ResRobot Reseplanerare](/apis/trafiklab-apis/resrobot-v2/route-planner) | [SL Reseplanerare 3.1](/apis/trafiklab-apis/sl/route-planner-31) |
+| Station lookup | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/stop-lookup) | [SL Platsuppslag](/api/trafiklab-apis/sl/stop-lookup) |
+| Departure boards | [ResRobot Stolptidstabeller 2](/api/trafiklab-apis/resrobot-v2/timetables) | [SL Realtidsinformation 4](/api/trafiklab-apis/sl/departures-4) |
+| Routeplanning | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v2/route-planner) | [SL Reseplanerare 3.1](/api/trafiklab-apis/sl/route-planner-31) |
 
 \* ResRobot also works in Stockholm, but the SL APIs might offer better accuracy and realtime data.  
 \*\* API versions are the latest at time of writing. Future versions will be just as suited for this.
@@ -198,5 +198,5 @@ To use these APIs, you can either use [our SDKs](../../our-sdks-and-libraries/),
 make use of
 the [GTFS Sverige 2](../../../public-transport-data/our-data-and-apis/gtfs/gtfs-sverige-2-static/) [stops.txt]() file to
 find the stop id for a given name on your own server without any API,
-or [SL's hallplatser-och-linjer-2](https://www.trafiklab.se/apis/sl-hallplatser-och-linjer-2) dataset to do the same for
+or [SL's hallplatser-och-linjer-2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2) dataset to do the same for
 SL.

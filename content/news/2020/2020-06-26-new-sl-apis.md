@@ -4,7 +4,7 @@ date: 2020-06-26
 image: /media/2020/06/sl-inverse.jpg
 aliases:
 - /node/29122
-- /apis/sl-reseplanerare/new-sl-api-public-transport-information-region
+- /api/sl-reseplanerare/new-sl-api-public-transport-information-region
 ---
 
 **The new SL API has been delayed to Q1 2021. We will update you when we know more.**

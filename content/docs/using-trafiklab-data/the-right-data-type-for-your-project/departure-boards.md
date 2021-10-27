@@ -11,7 +11,7 @@ finding the station id, and fetching the data.
 
 If you simply want to show the next departures on a digital signage board in shopping mall, on a smartphone, smartwatch,
 smart mirror or similar, you can make use
-of [the ResRobot Stolptidstabeller 2 API](/apis/trafiklab-apis/resrobot-v2/timetables.md)
+of [the ResRobot Stolptidstabeller 2 API](/api/trafiklab-apis/resrobot-v2/timetables.md)
 . This API provides an easy way to fetch the departures or arrivals at any stop, either now or in the future.
 
 #### Finding the id of a stop
@@ -24,13 +24,13 @@ below to read about the different methods to obtain the id of a stop for the Res
 #### Getting the departures or arrivals
 
 The departures or arrivals for the chosen id can be obtained by a single request to
-our [ResRobot Stolptidstabeller 2 API](/apis/trafiklab-apis/resrobot-v2/timetables.md).
+our [ResRobot Stolptidstabeller 2 API](/api/trafiklab-apis/resrobot-v2/timetables.md).
 Read the API documentation for more information about the parameters and response format.
 
 ### For large websites and analytics
 
 Larger websites or apps that need to handle a lot of traffic, it might be easier to create your own, local API. This can
 be done either through a self-hosted [OpenTripPlanner](https://github.com/opentripplanner) instance, fed
-with [GTFS Sverige 2](/apis/trafiklab-apis/gtfs-sverige-2/)
-or [GTFS Regional](/apis/trafiklab-apis/gtfs-regional/) data, or by creating your own
+with [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/)
+or [GTFS Regional](/api/trafiklab-apis/gtfs-regional/) data, or by creating your own
 wrapper around our GTFS data.

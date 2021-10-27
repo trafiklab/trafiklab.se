@@ -96,7 +96,7 @@ The GTFS standard defines 9 route_types, but all Trafiklab feeds make use
 of [extended route types](https://developers.google.com/transit/gtfs/reference/extended-route-types). Check the
 feed-specific documentation for examples.
 
-{{% page-ref "/apis/trafiklab-apis/gtfs-sverige-2/" "/apis/trafiklab-apis/gtfs-regional/" %}}
+{{% page-ref "/api/trafiklab-apis/gtfs-sverige-2/" "/api/trafiklab-apis/gtfs-regional/" %}}
 
 The following excerpt shows some example values.
 
