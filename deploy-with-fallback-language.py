@@ -91,6 +91,7 @@ if __name__ == "__main__":
     parser.add_argument('--without-git-fix', dest='git_fix', action='store_false')
     args = parser.parse_args()
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/api'), dry_run=args.dry)
+    generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/apis'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/cases'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/docs'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
