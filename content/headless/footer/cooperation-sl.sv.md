@@ -1,7 +1,7 @@
 ---
 title: "SL"
 link: "https://www.sl.se"
-absolute: true
 image: /footer/sl_logo.png
-heading: Vi är Trafiklab
+heading: I samarbete med Svensk kollektivtrafik
+draft: true
 ---
