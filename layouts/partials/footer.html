@@ -27,42 +27,35 @@
         </nav>
       </div>
       <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-10">
-        <div class="logos-1">
-          {{ $headless := .Site.GetPage "/headless" }}
-          {{ $logos := $headless.Resources.Match "partner*" }}
-          {{ $title := (index $logos 0) }}
-          <h4>{{ $title.Params.Heading }}</h4>
+        {{ $headless := .Site.GetPage "/headless" }}
+        {{ $logos := $headless.Resources.Match "footer/*" }}
+
+        {{ range $logos }}
+          {{ if not .Params.draft }}
+            {{ $.Scratch.Add "heading" (slice .Params.Heading) }}
+          {{ end }}
+        {{ end }}
+
+        {{ range .Scratch.Get "heading" | uniq }}
+        <div class="logo-group">
+          <h4>{{ . }}</h4>
+          {{ $title := . }}
           {{ range $logos }}
-            {{ if .Params.absolute }}
-              <a href="{{ .Params.Link }}" target="_blank" class="footer-logo" aria-label="{{i18n "read-more-about"}} {{ .Title }}">
-                <img src="{{ .Params.Image }}" title="{{ .Title }}" alt="{{ .Title }} logo">
-              </a>
-            {{ else }}
-              <a href="{{ .URL }}" aria-label="{{i18n "read-more-about"}} {{ .Title }}">
-                {{ .Pre }}
-                <img src="{{ .Params.Image }}" title="{{ .Title }}" alt="{{ .Title }} logo">
-              </a>
+            {{ if and (eq $title .Params.Heading) (not .Params.draft) }}
+              {{ if .Params.Link }}
+                <a href="{{ .Params.Link }}" target="_blank" class="footer-logo" aria-label="{{i18n "read-more-about"}} {{ .Title }}">
+                  <img src="{{ .Params.Image }}" title="{{ .Title }}" alt="{{ .Title }} logo">
+                </a>
+              {{ else }}
+                <a href="{{ .URL }}" aria-label="{{i18n "read-more-about"}} {{ .Title }}">
+                  {{ .Pre }}
+                  <img src="{{ .Params.Image }}" title="{{ .Title }}" alt="{{ .Title }} logo">
+                </a>
+              {{ end }}
             {{ end }}
           {{ end }}
         </div>
-        <div class="logos-2">
-          {{ $headless := .Site.GetPage "/headless" }}
-          {{ $logos := $headless.Resources.Match "friend*" }}
-          {{ $title := (index $logos 0) }}
-          <h4>{{ $title.Params.Heading }}</h4>
-          {{ range $logos }}
-            {{ if .Params.absolute }}
-              <a href="{{ .Params.Link }}" target="_blank" class="footer-logo">
-                <img src="{{ .Params.Image }}" title="{{ .Title }}">
-              </a>
-            {{ else }}
-              <a href="{{ .URL }}">
-                {{ .Pre }}
-                <img src="{{ .Params.Image }}" title="{{ .Title }}">
-              </a>
-            {{ end }}
-          {{ end }}
-        </div>
+        {{ end }}
       </div>
     </div>
   </div>
