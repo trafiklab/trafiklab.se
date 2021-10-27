@@ -1,37 +1,37 @@
 ---
-title: "Trafiklab typography"
+title: "Trafiklab typography Test Page"
 description: "Internal test page for testing typography"
 hidden: true 
 layout: "single"
 url: "/typography"
 ---
 
-# Markdown Test Page
-
-* [Headings](#Headings)
-* [Paragraphs](#Paragraphs)
-* [Blockquotes](#Blockquotes)
-* [Lists](#Lists)
-* [Horizontal rule](#Horizontal)
-* [Table](#Table)
-* [Code](#Code)
-* [Inline elements](#Inline)
-
-***
-
 # Headings
 
-# Heading one
+# The quick brown fox jumps over the lazy dog
 
-## Heading two
+This is a paragraph under heading one. In this paragraph, the quick brown fox jumps over the lazy dog.
 
-### Heading three
+## The quick brown fox jumps over the lazy dog
 
-#### Heading four
+This is a paragraph under heading two. In this paragraph, the quick brown fox jumps over the lazy dog.
 
-##### Heading five
+### The quick brown fox jumps over the lazy dog
 
-###### Heading six
+This is a paragraph under heading three. In this paragraph, the quick brown fox jumps over the lazy dog.
+
+#### The quick brown fox jumps over the lazy dog
+
+This is a paragraph under heading four. In this paragraph, the quick brown fox jumps over the lazy dog.
+
+##### The quick brown fox jumps over the lazy dog
+
+This is a paragraph under heading five. In this paragraph, the quick brown fox jumps over the lazy dog.
+
+###### The quick brown fox jumps over the lazy dog
+
+This is a paragraph under heading six. In this paragraph, the quick brown fox jumps over the lazy dog.
+
 
 # Paragraphs
 
