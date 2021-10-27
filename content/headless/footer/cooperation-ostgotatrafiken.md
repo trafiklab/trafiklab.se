@@ -1,7 +1,7 @@
 ---
 title: "Östgötatrafiken"
 link: "https://www.ostgotatrafiken.se"
-absolute: true
 image: /footer/LOGOTYP_2016_RGB.png
-heading: Vi är Trafiklab
+heading: In cooperation with Swedish public transport companies
+draft: true
 ---
