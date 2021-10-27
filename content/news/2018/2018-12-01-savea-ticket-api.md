@@ -11,7 +11,7 @@ De som säljer Saveas biljetter erbjuds en provision på 10 000 kr per 500 såld
 
 Genom API:et lämnas information om tillgängliga avgångar och biljettpriser. Försäljningstransaktionen där kunden lämnar betalningsuppgifter sker på en webbsida som tillhandahålls av Savea. På detta sätt möjliggörs enkla integrationer utan krav på säkerhetslösningar eller försäljningsavtal.  
 
-https://www.trafiklab.se/api/savea-ticket-api
+https://www.trafiklab.se/apis/savea-ticket-api
 
 https://labs.savea.se/ticket-api/
 

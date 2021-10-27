@@ -25,5 +25,5 @@ landingRoller:
       caseLink: "/cases"
 description: "Trafiklab is an initiative for open data related to public transport. We publish high quality data, make it simpler to access APIs from public transport companies, easier to find data and more interesting to talk about possibilities. Here you can find information, see what others have done, and read about what's happening."
 ---
-<p>We publish <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/realtime/">vehicle positions</a></p>
+<p>We publish <a class="landing-roller" href="/apis/trafiklab-apis/gtfs-regional/realtime/">vehicle positions</a></p>
 <p>so you can create <a class="landing-roller" href="/cases">visualizations</a></p>

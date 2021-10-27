@@ -44,8 +44,8 @@ If you need more than one API call every few seconds, for example when you're cr
 you will need to run your own API. This has the advantage that you can make as many requests as you want. In order to
 run your own API, you can (for example)
 use [the open-source OpenTripPlanner](https://github.com/opentripplanner/OpenTripPlanner/) in combination with
-our [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/)
-or [GTFS Regional](/api/trafiklab-apis/gtfs-regional/) datasets.
+our [GTFS Sverige 2](/apis/trafiklab-apis/gtfs-sverige-2/)
+or [GTFS Regional](/apis/trafiklab-apis/gtfs-regional/) datasets.
 
 ### Creating your own route-planning API
 
@@ -53,13 +53,13 @@ If an existing project such as  [the open-source OpenTripPlanner](https://github
 doesn't fulfill your needs, you can create your own route-planning API. Note that this is for experienced programmers
 with lots of time only. You will need to implement your own route-planning algorithm and write your own API, but you can
 do anything you want. Use
-our [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/)
-or [GTFS Regional](/api/trafiklab-apis/gtfs-regional/) datasets as a datasource.
+our [GTFS Sverige 2](/apis/trafiklab-apis/gtfs-sverige-2/)
+or [GTFS Regional](/apis/trafiklab-apis/gtfs-regional/) datasets as a datasource.
 
 ### Client-side route-planning
 
 If you need client-side route-planning, you can use
-our [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/)
-or [GTFS Regional](/api/trafiklab-apis/gtfs-regional/) datasets as a datasource and
+our [GTFS Sverige 2](/apis/trafiklab-apis/gtfs-sverige-2/)
+or [GTFS Regional](/apis/trafiklab-apis/gtfs-regional/) datasets as a datasource and
 convert them into [Linked Connections](https://linkedconnections.org/). This way you get small data blocks which you can
 process directly in route-planning algorithms on mobile devices.
