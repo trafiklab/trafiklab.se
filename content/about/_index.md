@@ -9,7 +9,7 @@ menu:
     weight: 30
 
 ---
-###### Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes.
+**Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes.**
 
 ### An open platform for innovation in Swedish public transport
 
