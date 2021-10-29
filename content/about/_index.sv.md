@@ -10,7 +10,7 @@ menu:
     weight: 30
 
 ---
-###### För att få resenärer att välja ett klimatsmart resande med kollektivtrafik, i stället för att resa med bil och flyg, är innovation och nya smarta tjänster viktigt. Det kan Trafiklab möjliggöra.
+**För att få resenärer att välja ett klimatsmart resande med kollektivtrafik, i stället för att resa med bil och flyg, är innovation och nya smarta tjänster viktigt. Det kan Trafiklab möjliggöra.**
 
 ### En öppen plattform för innovation inom svensk kollektivtrafik
 
