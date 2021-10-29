@@ -1,12 +1,12 @@
 {
   "dataset": {
     "title": {
-      "sv": "GTFS Regional Static",
-      "en": "GTFS Regional Static"
+      "sv": "ResRobot",
+      "en": "ResRobot"
     },
     "description": {
-      "sv": "Filer standardformatet GTFS med planerad kollektivtrafik per region i detalj.",
-      "en": "Detailed GTFS data of planned public transport per region in Sweden."
+      "sv": "ResRobot är en resesökmotor och API som fungerar med all kollektivtrafik i hela Sverige",
+      "en": "ResRobot is a route-planning API for all public transport in Sweden."
     },
     "keywords": {
       "sv": [
@@ -33,7 +33,7 @@
     "license": "https://creativecommons.org/licenses/zero/1.0/",
     "theme": "transport",
     "language": "sv",
-    "formats": ["gtfs"],
+    "formats": ["json", "xml"],
     "region": "sweden",
     "contact": "trafiklab",
     "publisher": "trafiklab",

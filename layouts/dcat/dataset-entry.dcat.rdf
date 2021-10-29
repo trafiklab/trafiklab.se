@@ -15,18 +15,21 @@
         {{ end }}
 
         <dcat:distribution>
+            {{ $dataset := .}}
+            {{ range .formats }}
             <dcat:Distribution>
-                {{ $format := index $.Site.Data.dcat.formats .format }}
+                {{ $format := index $.Site.Data.dcat.formats . }}
                 <dcterms:title>{{ $format.name }}</dcterms:title>
 
                 {{ range $language, $description := $format.description }}
                     <dcterms:description xml:lang="{{ $language }}">{{ $description }}</dcterms:description>
                 {{ end }}
 
-                <dcat:accessURL rdf:resource="{{ .access_url }}"/>
-                <dcterms:license rdf:resource="{{ .license }}"/>
+                <dcat:accessURL rdf:resource="{{ $dataset.access_url }}"/>
+                <dcterms:license rdf:resource="{{ $dataset.license }}"/>
                 <dcterms:format>{{ $format.mimetype }}</dcterms:format>
             </dcat:Distribution>
+            {{ end }}
         </dcat:distribution>
 
         <dcat:theme rdf:resource="{{ index $.Site.Data.dcat.themes .theme }}"/>

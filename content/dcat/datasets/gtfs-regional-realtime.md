@@ -5,8 +5,8 @@
       "en": "GTFS Regional Static"
     },
     "description": {
-      "sv": "Filer standardformatet GTFS med planerad kollektivtrafik per region i detalj.",
-      "en": "Detailed GTFS data of planned public transport per region in Sweden."
+      "sv": "Filer standardformatet GTFS-RT med realtidsuppdateringar angående kollektivtrafik per region i detalj.",
+      "en": "Detailed GTFS-RT realtime updates for public transport per region in Sweden."
     },
     "keywords": {
       "sv": [
@@ -33,7 +33,7 @@
     "license": "https://creativecommons.org/licenses/zero/1.0/",
     "theme": "transport",
     "language": "sv",
-    "formats": ["gtfs"],
+    "formats": ["gtfs-rt"],
     "region": "sweden",
     "contact": "trafiklab",
     "publisher": "trafiklab",

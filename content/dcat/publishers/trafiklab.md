@@ -4,6 +4,7 @@
     "homepage": "https://trafiklab.se"
   },
   "layout": "publisher",
-  "outputs": ["dcat"]
+  "outputs": ["dcat"],
+  "aliases": ["/sites/default/files/dcat/trafiklab_publisher.rdf"]
 }
 

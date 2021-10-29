@@ -1,12 +1,12 @@
 {
   "dataset": {
     "title": {
-      "sv": "GTFS Regional Static",
-      "en": "GTFS Regional Static"
+      "sv": "NeTEx Regional",
+      "en": "NeTEx Regional"
     },
     "description": {
-      "sv": "Filer standardformatet GTFS med planerad kollektivtrafik per region i detalj.",
-      "en": "Detailed GTFS data of planned public transport per region in Sweden."
+      "sv": "Filer standardformatet NeTEx med planerad kollektivtrafik per region i detalj.",
+      "en": "Detailed NeTEx data of planned public transport per region in Sweden."
     },
     "keywords": {
       "sv": [
@@ -33,7 +33,7 @@
     "license": "https://creativecommons.org/licenses/zero/1.0/",
     "theme": "transport",
     "language": "sv",
-    "formats": ["gtfs"],
+    "formats": ["netex"],
     "region": "sweden",
     "contact": "trafiklab",
     "publisher": "trafiklab",
