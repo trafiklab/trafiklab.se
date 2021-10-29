@@ -17,7 +17,7 @@ body table a:visited {
 // Headings
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $grey-font;
+  font-family: $app-font-family;
   font-weight: 400;
 }
 
@@ -28,15 +28,25 @@ h1 {
   margin: 0 0 1rem;
 }
 
+h1.tl-brand{
+  font-size:50px;
+  font-weight: 500;
+  font-family: "League Gothic", "Raleway";
+  text-transform: uppercase;
+  color: #fff !important;
+  background-color: $purple;
+  letter-spacing: 0.1rem;
+}
+
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 500;
   line-height: 2.5rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   margin: 1.5rem 0 .5rem;
   line-height: 2rem;
 }
@@ -91,6 +101,6 @@ h6 {
 
 p, th, td {
   font-size: 1rem;
-  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-family: $font-family-base;
   line-height: 1.5rem;
 }
