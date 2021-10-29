@@ -3,8 +3,6 @@ title: "Skånetrafiken API shutting down, ResRobot affected"
 date: "2021-02-20"
 ---
 
-# Skånetrafiken real-time data dissapearing from ResRobot
-
 On March 31st Skånetrafiken will be shutting down their realtime API. As Resrobot Stolptidtabeller uses this API, this
 means that realtime information for Skånetrafiken will no longer be present in the ResRobot Stolptidtabeller data. The
 scheduled (static) data will still be present, and ResRobot Stolptidtabeller will continue working.

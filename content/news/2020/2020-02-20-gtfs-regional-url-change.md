@@ -4,8 +4,6 @@ date: "2020-02-20"
 
 ---
 
-# Changes in the GTFS Regional URLs
-
 The Regional APIs will soon be stable. However, before we can release them as stable, we need to make a last change to
 the URL structure. This change means that you, as a data consumer, need to make a small change to your client in order
 to keep using our data.

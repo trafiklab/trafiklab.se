@@ -1,9 +1,11 @@
 ---
-title: "Nyheter"
-menu: "main"
-weight: 10
+title: Nyheter
+weight: "10"
 layout: section
-url: "nyheter"
+url: nyheter
+menu:
+  main:
+    weight: 10
+
 ---
-Här kommer löpande nyheter om vad som är aktuellt på Trafiklab just nu men också högt och lågt om vad som händer i 
-världen inom öppen data, API:er, kollektivtrafik och andra intressanta områden.
+Här presenteras löpande information om vad som är aktuellt på Trafiklab, men även andra nyheter inom områden som öppna data, API:er och kollektivtrafik. 

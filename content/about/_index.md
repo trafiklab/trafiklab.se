@@ -9,12 +9,13 @@ menu:
     weight: 30
 
 ---
-Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes.
+**Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes.**
 
 ### An open platform for innovation in Swedish public transport
 
 Trafiklab is a service developed and managed by Samtrafiken on behalf of the regional public transport authorities in Sweden.
-At trafiklab.se, developers can access data and APIs * from public transport in Sweden and thus easily get the information needed to develop smart services that benefit travelers and society. Public transport data is available in both static and dynamic formats, and it is continuously updated. We are constantly working with opening up more data sources and improving the existing ones.
+
+Developers can access data and APIs * from public transport in Sweden; information needed to develop smart services that benefit travelers and society. Public transport data is available in both static and dynamic formats, and it is continuously updated. We are constantly working with opening up more data sources and improving the existing ones.
 
 Several collaborations take place through Trafiklab with various actors both within and outside the public transport industry. The purpose is to benefit open data-based innovation in the mobility sector.
 
@@ -27,4 +28,3 @@ According to the EU's ITS Directive**, all Swedish transport companies are requi
 \* Application Programming Interface
 
 \** Intelligent Transport System
-

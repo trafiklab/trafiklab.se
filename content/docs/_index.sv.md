@@ -1,35 +1,30 @@
 ---
-title: "Dokumentation"
-menu: "main"
-weight: 5 
-layout: "single"
-sidebar: true 
+title: Dokumentation
+weight: "5"
+layout: single
+sidebar: true
 url: docs
----
+menu:
+  main:
+    weight: 5
 
+---
 ## Introduktion
 
-Data är inte värt mycket när den inte används, eller när det inte går att använda den. Och det går inte att använda den
-när det inte finns tydlig dokumentation. Därför har vi sett över vår dokumentation och dokumenterar allt vi gör samt
-det du kan göra med vår data.
+Data är inte värt mycket när den inte används, eller när det inte _går_ att använda den. Och det går inte att använda den när det inte finns tydlig dokumentation. Därför dokumenterar vi allt vi gör samt vad du kan göra med vår data.
 
-<!-- more -->
+Vår dokumentation är uppdelad i två delar:
 
-Vår dokumentation är uppdelad i två delar: Själva API-dokumentationen, som beskriver alla API:er och deras detaljer, och den 
-allmänna dokumentationen, som beskriver hur man använder Trafiklab, hur man använder API:er och trafikdata på bästa
-sätt. Den allmänna dokumentationen innehåller även handledningar och mycket mer.
+· **API-dokumentation:** En beskrivning av alla API:er och deras detaljer
 
-Om du upptäcker fel eller någonting som saknar, kan ni hojta till på vårt supportforum
-([support.trafiklab.se](https://support.trafiklab.se)) eller så kan man lämna in förbättringsförslag genom GitHub-länken
-som man hittar på varje sida.
+· **Allmän dokumentation:** Beskriver hur man använder Trafiklab, API:er och trafikdata på bästa sätt.
 
-{{% info %}} För att kunna tillgängliggöra mer dokumentation till fler användare, tillhandahåller vi dokumentationen
-bara på engelska. Detta eftersom att de flesta utvecklingsverktyg samt kurser och videos på nätet redan är på engelska,
-och att nästan alla utvecklare därför har en bra förståelse av engelska språket.
+Om du upptäcker ett fel eller något du saknar kan du antingen nå oss i vårt supportforum ([support.trafiklab.se](https://support.trafiklab.se)) eller lämna in förbättringsförslag genom GitHub-länken som finns längst ner på de flesta sidor. 
 
-Tycker du dock att vi borde översätta vissa sidor, till exempel för att kunna använda de i samband med undervisning, får
-du gärna höra av dig genom [support.trafiklab.se](https://support.trafiklab.se), [mejl](mailto:info@trafiklab.se) eller
-[GitHub](https://github.com/trafiklab/trafiklab.se). {{% /info %}}
+{{% info %}} För att kunna tillgängliggöra mer dokumentation till fler användare, tillhandahåller vi bara dokumentation på engelska. Skälet till detta är att många utvecklingsverktyg, kurser och videos på nätet bara finns tillgängliga på engelska. Vi hoppas därför att det ska vara fullt tillräckligt även hos oss. 
+
+Om du ändå tycker att vi borde översätta vissa sidor, för att till exempel kunna använda dem i samband med undervisning, går det bra att kontakta oss genom [support.trafiklab.se](https://support.trafiklab.se), [mejl](mailto:info@trafiklab.se) eller
+[GitHub](https://github.com/trafiklab/trafiklab.se).{{% /info %}}
 
 ### Om du är ny på Trafiklab är det enklast att börja här
 
