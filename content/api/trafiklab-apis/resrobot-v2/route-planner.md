@@ -5,6 +5,8 @@ date: 2015-06-24
 aliases: 
   - /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
   - /api/resrobot-reseplanerare/dokumentation/sokresa
+  - /api/resrobot-reseplanerare/dokumentation/
+  - /api/resrobot-reseplanerare
 ---
 ## What does this API provide?
 
