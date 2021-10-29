@@ -428,58 +428,6 @@ img.hero-illustration {
   margin-top: -5rem;
 }
 
-// Helpers
-.tl-h5--margin-bottom, .tl-h6--margin-bottom, .tl-paragraph--margin-bottom {
-  margin-top: 0;
-}
-
-.tl-h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 2.625rem;
-  margin: 0 0 1rem;
-}
-
-@media screen and (min-width: $breakpoint-mobile) {
-  .tl-h1 {
-    font-size: 2.5rem;
-    line-height: 3.75rem;
-  }
-}
-.tl-h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 1.5rem 0 .5rem;
-}
-
-@media screen and (min-width: $breakpoint-mobile) {
-  .tl-h3 {
-    font-size: 1.5rem;
-    line-height: 2.25rem;
-  }
-}
-.tl-h1--margin-bottom,
-.tl-h2--margin-bottom,
-.tl-h3--margin-bottom,
-.tl-h4--margin-bottom,
-.tl-h5--margin-bottom,
-.tl-h6--margin-bottom,
-.tl-paragraph--margin-bottom {
-    margin-top: 0;
-}
-
-.tl-label {
-  font-size: .875rem;
-  line-height: 1.25rem;
-}
-
-@media screen and (min-width: $breakpoint-mobile) {
-  .tl-label {
-    line-height: 1.375rem;
-  }
-}
-
-
 // About
 .omtl-people-presenter {
   background: $light-bg;
