@@ -15,9 +15,8 @@ Data är inte värt mycket när den inte används, eller när det inte _går_ at
 
 Vår dokumentation är uppdelad i två delar:
 
-· **API-dokumentation:** En beskrivning av alla API:er och deras detaljer
-
-· **Allmän dokumentation:** Beskriver hur man använder Trafiklab, API:er och trafikdata på bästa sätt.
+- **API-dokumentation:** En beskrivning av alla API:er och deras detaljer
+- **Allmän dokumentation:** Beskriver hur man använder Trafiklab, API:er och trafikdata på bästa sätt.
 
 Om du upptäcker ett fel eller något du saknar kan du antingen nå oss i vårt supportforum ([support.trafiklab.se](https://support.trafiklab.se)) eller lämna in förbättringsförslag genom GitHub-länken som finns längst ner på de flesta sidor. 
 
