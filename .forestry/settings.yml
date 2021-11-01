@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: directory
   path: content/api
-  label: Data
+  label: Apis
   create: all
   match: "**/*"
 - type: directory
@@ -31,14 +31,26 @@ sections:
   match: "**/*"
 - type: directory
   path: content
-  label: Pages
+  label: All pages
   create: all
   match: "*"
+- type: heading
+  label: Blocks
+- type: directory
+  path: content/headless/footer/*
+  label: Footer logos
+  create: documents
+  match: "**/*"
+- type: directory
+  path: content/headless/about
+  label: Contacts (About)
+  create: documents
+  match: "**/*"
 - type: directory
   path: content/headless
-  label: Headless
-  create: all
-  match: "**/*"
+  label: Front CTAs
+  create: none
+  match: front*
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
