@@ -2,6 +2,8 @@
 title: Getting started
 description: Getting started with Trafiklab
 weight: 1
+aliases:
+ - "/hur-gor-jag"
 ---
 {{% info %}}
 New to trafiklab? Start reading here and continue to the next pages using the buttons at the
