@@ -2,7 +2,7 @@
 title: Guldlänken till Trafiklab
 date: 2013-10-24
 aliases:
-- /post/64944598762/guldlänken-till-trafiklab"
+- "/post/64944598762/guldlänken-till-trafiklab"
 
 ---
 Trafiklab tilldelades under eftermiddagen årets Guldlänk av IT-minister Anna-Karin Hatt. Stort tack och fantastiskt roligt med fokus på Öppen data!
