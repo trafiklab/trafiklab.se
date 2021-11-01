@@ -20,8 +20,9 @@ $breakpoint-md: 960px;
 $breakpoint-lg: 1100px;
 $breakpoint-xl: 1250px;
 
-$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$app-font-family: "Raleway", $font-family-base;
+$primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$alternative-font: "Raleway", $primary-font;
+$brand-font: "League Gothic", $alternative-font;
 
 $sidebar-width: 320px;
 $sidebar-width-lg: 420px;

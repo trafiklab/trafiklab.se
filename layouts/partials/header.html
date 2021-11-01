@@ -3,9 +3,9 @@
     <div class="header-left">
       <nav aria-label="main">
         <ul>
-          <li class="tl-top-navigation-item header-logo">
+          <li class="tl-top-navigation-item brand">
             {{- $logoUrl := resources.Get "images/logo.svg" -}}
-            <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="logo" alt="{{ i18n "brand" }}" /></a>
+            <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="brand" alt="{{ i18n "brand" }}" /></a>
           </li>
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}

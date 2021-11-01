@@ -1,6 +1,10 @@
 .newsletter-signup {
   background: $light-bg;
   padding: 1.5rem;
+
+  * {
+    font-family: $alternative-font;
+  }
 }
 
 #mc_embed_signup form {

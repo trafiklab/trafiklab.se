@@ -1,3 +1,8 @@
+* {
+  font-size: 1rem;
+  font-family: $primary-font;
+  line-height: 1.5rem;
+}
 
 body p a,
 body p a:link,
@@ -17,13 +22,13 @@ body table a:visited {
 // Headings
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $app-font-family;
+  font-family: $alternative-font;
   font-weight: 400;
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: 2.25rem;
+  line-height: 3.0rem;
   font-weight: 600;
   margin: 0 0 1rem;
 }
@@ -31,7 +36,7 @@ h1 {
 h1.tl-brand{
   font-size:50px;
   font-weight: 500;
-  font-family: "League Gothic", "Raleway";
+  font-family: $brand-font;
   text-transform: uppercase;
   color: #fff !important;
   background-color: $purple;
@@ -39,52 +44,42 @@ h1.tl-brand{
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 600;
   line-height: 2.5rem;
+  margin: 0 0 1rem;
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 1.5rem 0 .5rem;
+  margin: 1rem 0 .5rem;
   line-height: 2rem;
 }
 
 h4 {
   font-size: 1.25rem;
   font-weight: 600;
+  margin: 1rem 0 .5rem;
 }
 
 h5{
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
+  margin: 1rem 0 .5rem;
 }
 
 h6 {
   font-size: 1rem;
+  margin: 1rem 0 .5rem;
 }
 
-
-.tl-h5--margin-bottom, .tl-h6--margin-bottom, .tl-paragraph--margin-bottom {
+// Helpers
+.mt-0 {
   margin-top: 0;
 }
 
-
-// Helpers
-@media screen and (min-width: $breakpoint-mobile) {
-  h3 {
-    font-size: 1.5rem;
-    line-height: 2.25rem;
-  }
-}
-.tl-h1--margin-bottom,
-.tl-h2--margin-bottom,
-.tl-h3--margin-bottom,
-.tl-h4--margin-bottom,
-.tl-h5--margin-bottom,
-.tl-h6--margin-bottom,
-.tl-paragraph--margin-bottom {
+.mb-0 {
   margin-top: 0;
 }
 
@@ -97,10 +92,4 @@ h6 {
   .tl-label {
     line-height: 1.375rem;
   }
-}
-
-p, th, td {
-  font-size: 1rem;
-  font-family: $font-family-base;
-  line-height: 1.5rem;
 }

@@ -42,6 +42,12 @@ $image-header-wide-expansion: 200px;
 
   .image-header__title {
     line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h2.image-header__title {
+    font-weight: 500;
+    font-size: 2rem;
   }
 
   .image-header__details {

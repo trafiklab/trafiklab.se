@@ -16,7 +16,7 @@
     {{ $infoBlocks := $headless.Resources.Match (print $directory "/*") }}
     {{ if $infoBlocks }}
     {{ $title := (index $infoBlocks 0) }}
-    <h2 class="tl-h2">{{ $title.Params.Heading }}</h2>
+    <h2>{{ $title.Params.Heading }}</h2>
     <div class="tl-grid tl-grid__container tl-grid--spacing-extraLarge">
       {{ range $infoBlocks }}
       <div class="tl-grid tl-grid__item tl-grid--small-12 tl-grid--medium-6 tl-grid--large-6 tl-grid--xlarge-4">

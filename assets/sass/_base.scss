@@ -161,6 +161,7 @@ html {
   position: relative;
   transition: transform 0.2s ease-in-out;
   .tl-navigation-card__title {
+    font-family: $alternative-font;
     display: inline-block;
     font-size: 1.5rem;
     line-height: 1.875rem;
@@ -452,20 +453,6 @@ img.hero-illustration {
 // Front adaptions
 .newsletter-signup {
   margin-top: 8rem;
-}
-
-// Typography
-.tl-h2 {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
-  margin: 2rem 0 .75rem;
-}
-
-@media screen and (min-width: $breakpoint-mobile) {
-  .tl-h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 // Table

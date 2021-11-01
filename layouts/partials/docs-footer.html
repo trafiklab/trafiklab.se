@@ -6,12 +6,12 @@
 
 <footer class="docs-footer">
     <div class="docs-footer__container">
-        <h3>{{ i18n "docs-footer-about-this-page" }}</h3>
+        <h4>{{ i18n "docs-footer-about-this-page" }}</h4>
         {{ if $source_page.Date }}<p>{{ i18n "docs-footer-published-at" }} {{ $source_page.Date.Format "January 2, 2006" }}.</p>{{ end }}
         {{ if $source_page.GitInfo }}
         {{ if or ($source_page.Date.IsZero) (lt $source_page.Date $source_page.GitInfo.AuthorDate)}}<p>{{ i18n "docs-footer-last-modified" }} {{ $source_page.GitInfo.AuthorDate.Format "January 2, 2006" }}.</p>{{ end }}
         {{ end }}
-        <h3>{{ i18n "docs-footer-something-wrong" }}</h3>
+        <h4>{{ i18n "docs-footer-something-wrong" }}</h4>
         {{ if isset $.Site.Params "support" }}
             <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
         {{ end }}

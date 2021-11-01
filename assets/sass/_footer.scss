@@ -4,17 +4,24 @@
 }
 
 body #footer {
+  * {
+    font-family: $alternative-font;
+  }
+
   background: $dark-bg;
+
   .footer-wrapper {
     margin: 0 auto;
     max-width: 86rem;
     padding: 4rem 1.5rem 3rem;
   }
-  .logo {
+
+  .brand {
     background: $black;
     padding: 5px;
     width: 100px;
   }
+
   .footer-header {
     align-items: center;
     display: flex;
@@ -24,30 +31,38 @@ body #footer {
   nav.footer-menu {
     ul {
       list-style: none;
-      padding: 0
+      padding: 0;
+      margin-top: 0;
     }
+
     a {
       color: #fff;
       text-decoration: none;
     }
   }
-  h4 {
+
+  h4.logo-row--header {
     color: #fff;
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 1rem;
     text-transform: uppercase;
+    font-weight: unset;
+    font-size: 1em;
   }
-  .logo-group {
+
+  .logo-row {
     margin-bottom: 1rem;
   }
-  .footer-logo {
+
+  .logo-row--item {
     display: inline-block;
     flex: 0 0 13%;
-    max-width: 13%;
-    padding: .5rem;
+    margin: .5rem;
+
     img {
       display: inline-block;
       vertical-align: middle;
-      max-height: 60px;
+      max-height: 40px;
       max-width: 100%;
       height: auto;
       filter: brightness(0) invert(1); /* Force footer logos to be white */

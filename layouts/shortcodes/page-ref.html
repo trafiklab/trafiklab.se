@@ -11,7 +11,7 @@
     {{ with $site.GetPage $var }}
 <a class="tl-grid__item tl-grid--small-12 tl-grid--medium-{{$mdSize}} tl-base-card tl-inline-navigation-card" href="{{ .Permalink }}">
 <h4 class="tl-navigation-card__title">{{ .Title }}</h4>
-<p class="tl-paragraph tl-paragraph--margin-bottom">{{ .Summary | markdownify | truncate 100 }}</p>
+<p class="tl-paragraph mt-0">{{ .Summary | markdownify | truncate 100 }}</p>
 <svg class="tl-icon tl-navigation-card__icon tl-navigation-card__arrow-icon" viewBox="0 0 16 16" width="1em"
      height="1em" color="currentColor">
 <path fill="currentColor" fill-rule="evenodd"

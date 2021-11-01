@@ -5,6 +5,10 @@
   flex: 1;
   transition: max-width .1s ease-out;
   background: $light-bg;
+
+  * {
+    font-family: $alternative-font;
+  }
 }
 
 .site-sidebar-wrapper {

@@ -4,6 +4,10 @@
   min-height: $header-height;
   background-color: white;
 
+  * {
+    font-family: $alternative-font;
+  }
+
   .top-navigation {
     display: flex;
     align-items: center;
@@ -49,20 +53,29 @@
     }
   }
 
-  .tl-top-navigation-item.header-logo a {
+  .tl-top-navigation-item.brand a {
     padding: 0;
     text-align: center;
   }
 
-  .logo {
+  img.brand {
     margin-top: 8px;
-    padding: 8px;
+    // On mobile, the left padding should be zero to align with the content
+    padding: 8px 8px 8px 0;
     height: 40px;
     background-color: $black;
   }
 
   .header-right .tl-icon-button {
     color: $black;
+  }
+}
+
+
+@media screen and (min-width: $breakpoint-mobile) {
+  // On large screens, the left padding can be 8px so it doesn't feel as cramped
+  .site-header img.brand {
+    padding-left: 8px;
   }
 }
 
@@ -101,12 +114,12 @@ div.tl-top-navigation-item {
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
 
   a {
     display: inline-block;
+    font-family: $alternative-font;
+    font-size: 1rem;
+    font-weight: 600;
 
     &:hover {
       --show-active-line: 1;
@@ -152,7 +165,7 @@ body.type-home {
     color: #fff;
   }
 
-  .site-header .logo {
+  .site-header img.brand {
     background: transparent;
   }
 
@@ -280,7 +293,7 @@ body.type-home {
   }
 }
 
-.tl-top-navigation-item.header-logo a {
+.tl-top-navigation-item.brand a {
   --show-active-line: 0;
 
   a {
@@ -289,7 +302,7 @@ body.type-home {
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
-  .tl-top-navigation-item.header-logo {
+  .tl-top-navigation-item.brand {
     margin-left: 0;
     padding-left: 0;
 
@@ -351,7 +364,7 @@ body.type-home {
   .article-header__container {
     border-bottom: 1px dashed $border-grey;
     margin: 1rem 0 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 }
 

@@ -11,9 +11,7 @@
      aria-label="A banner with a background image and the title of the page">
     {{ if $link }}
     <a href="{{$link}}">
-        {{ end }}
-
-
+    {{ end }}
         {{ with $src }}
         {{ $image := resources.Get (printf "%s" ($src | safeURL)) }}
         {{ if $image }}
@@ -31,12 +29,15 @@
         {{ end }}
         {{ end }}
         {{ end }}
-        {{ if $link }}
+    {{ if $link }}
     </a>
     {{ end }}
     <div class="image-header__overlay">
+        {{ if $link }}
+        <h2 class="image-header__title">{{ $title }}</h2>
+        {{ else }}
         <h1 class="image-header__title">{{ $title }}</h1>
-
+        {{ end }}
         {{ if or $date $credit $link}}
         <span class="image-header__details">
         {{ if $date }}
