@@ -1,7 +1,8 @@
 ---
 title: Meet-up med Åsa Vagland
 date: 2014-05-22
-aliases: "/post/86498228483/meet-up-med-åsa-vagland"
+aliases:
+  - "/post/86498228483/meet-up-med-åsa-vagland"
 draft: true
 
 ---

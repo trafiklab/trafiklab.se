@@ -1,7 +1,8 @@
 ---
 title: Skrytfilm om trafiklab
 date: 2012-12-01
-aliases: "/post/64945172501/skrytfilm-om-trafiklab"
+aliases:
+  - "/post/64945172501/skrytfilm-om-trafiklab"
 draft: true
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: Trafiklab Årets Mälardarling 2016
 date: 2016-07-07
-aliases: "/post/147034645498/trafiklab-årets-mälardarling-2016"
+aliases:
+  - "/post/147034645498/trafiklab-årets-mälardarling-2016"
 draft: true
 image: "/media/2016/07/2016-07-07-trafiklab-arets-malardarling-2016-1.jpg"
 ---

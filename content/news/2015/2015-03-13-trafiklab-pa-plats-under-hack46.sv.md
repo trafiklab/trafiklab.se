@@ -1,7 +1,8 @@
 ---
 title: Trafiklab på plats under hack46
 date: 2015-03-13
-aliases: "/post/113501700608/trafiklab-på-plats-under-hack46"
+aliases:
+  - "/post/113501700608/trafiklab-på-plats-under-hack46"
 draft: true
 image: "/media/2015/03/2015-03-13-trafiklab-pa-plats-under-hack46-1.png"
 ---

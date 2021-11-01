@@ -1,7 +1,8 @@
 ---
 title: Tågmonitor...
 date: 2013-04-13
-aliases: "/post/64944466157/tågmonitor"
+aliases:
+  - "/post/64944466157/tågmonitor"
 draft: true
 
 ---

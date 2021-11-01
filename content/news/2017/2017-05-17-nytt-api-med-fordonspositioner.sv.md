@@ -1,7 +1,8 @@
 ---
 title: Nytt API med fordonspositioner
 date: 2017-05-17
-aliases: "/post/160764041803/nytt-api-med-fordonspositioner"
+aliases:
+  - "/post/160764041803/nytt-api-med-fordonspositioner"
 draft: true
 image: "/media/2017/05/2017-05-17-nytt-api-med-fordonspositioner-1.gif"
 ---

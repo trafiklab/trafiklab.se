@@ -1,7 +1,8 @@
 ---
 title: En lyckad meetup med Åsa Vagland igår!
 date: 2014-06-17
-aliases: "/post/89056496573/en-lyckad-meetup-med-åsa-vagland-igår"
+aliases:
+  - "/post/89056496573/en-lyckad-meetup-med-åsa-vagland-igår"
 draft: true
 image: "/media/2014/06/2014-06-17-en-lyckad-meetup-med-asa-vagland-igar-1.jpg"
 ---

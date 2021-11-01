@@ -1,7 +1,8 @@
 ---
 title: En höjdartorsdag – Trafiklabs meetup var fullsatt
 date: 2014-10-31
-aliases: "/post/101420149508/en-höjdartorsdag-–-trafiklabs-meetup-var-fullsatt"
+aliases:
+  - "/post/101420149508/en-höjdartorsdag-–-trafiklabs-meetup-var-fullsatt"
 draft: true
 image: "/media/2014/10/2014-10-31-en-hojdartorsdag-trafiklabs-meetup-var-fullsatt-1.jpg"
 ---

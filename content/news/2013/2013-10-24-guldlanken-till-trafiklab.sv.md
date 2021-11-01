@@ -1,7 +1,8 @@
 ---
 title: Guldlänken till Trafiklab
 date: 2013-10-24
-aliases: "/post/64944598762/guldlänken-till-trafiklab"
+aliases:
+  - /post/64944598762/guldlänken-till-trafiklab"
 draft: true
 
 ---

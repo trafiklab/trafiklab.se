@@ -1,7 +1,8 @@
 ---
 title: Finalisterna till Trafiklabhjälte 2015 utsedda
 date: 2015-11-20
-aliases: "/post/133584241938/finalisterna-till-trafiklabhjälte-2015-utsedda"
+aliases:
+  - "/post/133584241938/finalisterna-till-trafiklabhjälte-2015-utsedda"
 draft: true
 image: "/media/2015/11/2015-11-20-finalisterna-till-trafiklabhjalte-2015-utsedda-1.png"
 ---

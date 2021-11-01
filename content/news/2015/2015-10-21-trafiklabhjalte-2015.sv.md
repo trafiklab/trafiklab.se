@@ -1,7 +1,8 @@
 ---
 title: Trafiklabhjälte 2015
 date: 2015-10-21
-aliases: "/post/131609215679/trafiklabhjälte-2015"
+aliases:
+  - "/post/131609215679/trafiklabhjälte-2015"
 draft: true
 
 ---

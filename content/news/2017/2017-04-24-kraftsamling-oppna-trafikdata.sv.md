@@ -1,7 +1,8 @@
 ---
 title: Kraftsamling öppna trafikdata
 date: 2017-04-24
-aliases: "/post/159933699388/kraftsamling-öppna-trafikdata"
+aliases:
+  - "/post/159933699388/kraftsamling-öppna-trafikdata"
 draft: true
 image: "/media/2017/04/2017-04-24-kraftsamling-oppna-trafikdata-1.png"
 ---

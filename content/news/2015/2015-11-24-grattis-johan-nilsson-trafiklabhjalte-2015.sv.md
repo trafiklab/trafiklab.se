@@ -1,7 +1,8 @@
 ---
 title: Grattis Johan Nilsson! Trafiklabhjälte 2015
 date: 2015-11-24
-aliases: "/post/133879103343/grattis-johan-nilsson-trafiklabhjälte-2015"
+aliases:
+  - "/post/133879103343/grattis-johan-nilsson-trafiklabhjälte-2015"
 draft: true
 image: "/media/2015/11/2015-11-24-grattis-johan-nilsson-trafiklabhjalte-2015-1.jpg"
 ---

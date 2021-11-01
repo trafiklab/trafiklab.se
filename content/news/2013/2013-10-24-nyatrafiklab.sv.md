@@ -1,7 +1,8 @@
 ---
 title: #nyatrafiklab
 date: 2013-10-24
-aliases: "/post/64951246993/nyatrafiklab"
+aliases:
+  - "/post/64951246993/nyatrafiklab"
 draft: true
 
 ---

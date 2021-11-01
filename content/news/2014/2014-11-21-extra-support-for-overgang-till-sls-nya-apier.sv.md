@@ -1,7 +1,8 @@
 ---
 title: Extra support för övergång till SLs nya APIer
 date: 2014-11-21
-aliases: "/post/103192253568/extra-support-för-övergång-till-sls-nya-apier"
+aliases:
+  - "/post/103192253568/extra-support-för-övergång-till-sls-nya-apier"
 draft: true
 
 ---

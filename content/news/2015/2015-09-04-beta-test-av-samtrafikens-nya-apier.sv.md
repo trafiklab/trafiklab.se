@@ -1,7 +1,8 @@
 ---
 title: Beta-test av Samtrafikens nya APIer
 date: 2015-09-04
-aliases: "/post/128326454223/beta-test-av-samtrafikens-nya-apier"
+aliases:
+  - "/post/128326454223/beta-test-av-samtrafikens-nya-apier"
 draft: true
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: ePSI Trailblazer-pris till Trafiklab
 date: 2012-03-14
-aliases: "/post/64944715381/epsi-trailblazer-pris-till-trafiklab"
+aliases:
+  - "/post/64944715381/epsi-trailblazer-pris-till-trafiklab"
 draft: true
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: Förbättringar i GTFS Sverige 2
 date: 2017-03-31
-aliases: "/post/159032292828/förbättringar-i-gtfs-sverige-2"
+aliases:
+  - "/post/159032292828/förbättringar-i-gtfs-sverige-2"
 draft: true
 image: "/media/2017/03/2017-03-31-forbattringar-i-gtfs-sverige-2-1.gif"
 ---

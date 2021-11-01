@@ -4,7 +4,8 @@ translationKey: about
 url: "/sv/om-trafiklab"
 weight: "30"
 layout: info
-aliases: "/om-trafiklab"
+aliases:
+  - "/om-trafiklab"
 menu:
   main:
     weight: 30

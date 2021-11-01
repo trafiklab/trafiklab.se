@@ -1,7 +1,8 @@
 ---
 title: Vi vill träffa dig 12 juni
 date: 2018-05-18
-aliases: "/post/174018832658/vi-vill-träffa-dig-12-juni"
+aliases:
+  - "/post/174018832658/vi-vill-träffa-dig-12-juni"
 draft: true
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: Uppdateringar i Trafiklabs APIer under våren
 date: 2015-03-18
-aliases: "/post/113952510758/uppdateringar-i-trafiklabs-apier-under-våren"
+aliases:
+  - "/post/113952510758/uppdateringar-i-trafiklabs-apier-under-våren"
 draft: true
 
 ---

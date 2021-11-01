@@ -1,7 +1,8 @@
 ---
 title: Slides från meetupen med Trafiklab
 date: 2015-03-13
-aliases: "/post/113504277768/slides-från-meetupen-med-trafiklab"
+aliases:
+  - "/post/113504277768/slides-från-meetupen-med-trafiklab"
 draft: true
 
 ---

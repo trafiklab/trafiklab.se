@@ -1,7 +1,8 @@
 ---
 title: CASE Hinner jag? Sthlm
 date: 2016-07-01
-aliases: "/post/146749713498/case-hinner-jag-sthlm"
+aliases:
+  - "/post/146749713498/case-hinner-jag-sthlm"
 draft: true
 
 ---

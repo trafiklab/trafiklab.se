@@ -1,7 +1,8 @@
 ---
 title: Välbesökt meetup igår
 date: 2016-02-12
-aliases: "/post/139168395523/välbesökt-meetup-igår"
+aliases:
+  - "/post/139168395523/välbesökt-meetup-igår"
 draft: true
 image: "/media/2016/02/2016-02-12-valbesokt-meetup-igar-1.jpg"
 ---

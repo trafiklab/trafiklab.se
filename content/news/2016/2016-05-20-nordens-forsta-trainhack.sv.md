@@ -1,7 +1,8 @@
 ---
 title: Nordens första #trainhack
 date: 2016-05-20
-aliases: "/post/144642540711/nordens-första-trainhack"
+aliases:
+  - "/post/144642540711/nordens-första-trainhack"
 draft: true
 image: "/media/2016/05/2016-05-20-nordens-forsta-trainhack-1.jpg"
 ---

@@ -1,7 +1,8 @@
 ---
 title: Nyheter i SL Hållplatser och linjer 2
 date: 2018-10-16
-aliases: "/post/179106057483/nyheter-i-sl-hållplatser-och-linjer-2"
+aliases:
+  - "/post/179106057483/nyheter-i-sl-hållplatser-och-linjer-2"
 draft: true
 
 ---

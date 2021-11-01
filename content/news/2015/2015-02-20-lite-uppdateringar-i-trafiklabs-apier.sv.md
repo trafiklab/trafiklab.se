@@ -1,7 +1,8 @@
 ---
 title: Lite uppdateringar i Trafiklabs APIer
 date: 2015-02-20
-aliases: "/post/111560517018/lite-uppdateringar-i-trafiklabs-apier"
+aliases:
+  - "/post/111560517018/lite-uppdateringar-i-trafiklabs-apier"
 draft: true
 
 ---

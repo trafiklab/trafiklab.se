@@ -1,7 +1,8 @@
 ---
 title: Hjälp oss bli bättre!
 date: 2014-11-04
-aliases: "/post/101760094853/hjälp-oss-bli-bättre"
+aliases:
+  - "/post/101760094853/hjälp-oss-bli-bättre"
 draft: true
 
 ---

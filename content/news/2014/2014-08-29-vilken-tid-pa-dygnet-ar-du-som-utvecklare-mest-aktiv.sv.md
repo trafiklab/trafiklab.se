@@ -1,7 +1,8 @@
 ---
 title: Vilken tid på dygnet är du som utvecklare mest aktiv?
 date: 2014-08-29
-aliases: "/post/96080589548/vilken-tid-på-dygnet-är-du-som-utvecklare-mest-aktiv"
+aliases:
+  - "/post/96080589548/vilken-tid-på-dygnet-är-du-som-utvecklare-mest-aktiv"
 draft: true
 
 ---

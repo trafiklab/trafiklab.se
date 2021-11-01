@@ -1,7 +1,8 @@
 ---
 title: Nytt API för GTFS-filer
 date: 2012-08-15
-aliases: "/post/64944546086/nytt-api-för-gtfs-filer"
+aliases:
+  - "/post/64944546086/nytt-api-för-gtfs-filer"
 draft: true
 
 ---

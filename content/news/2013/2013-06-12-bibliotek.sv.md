@@ -1,7 +1,8 @@
 ---
 title: Bibliotek
 date: 2013-06-12
-aliases: "/post/64944437577/bibliotek"
+aliases:
+  - "/post/64944437577/bibliotek"
 draft: true
 
 ---

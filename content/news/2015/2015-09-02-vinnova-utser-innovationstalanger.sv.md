@@ -1,7 +1,8 @@
 ---
 title: Vinnova utser Innovationstalanger
 date: 2015-09-02
-aliases: "/post/128169528228/vinnova-utser-innovationstalanger"
+aliases:
+  - "/post/128169528228/vinnova-utser-innovationstalanger"
 draft: true
 
 ---

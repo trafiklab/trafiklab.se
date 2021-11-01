@@ -1,7 +1,8 @@
 ---
 title: EastSwedenHack2014
 date: 2014-09-03
-aliases: "/post/96526097233/eastswedenhack2014"
+aliases:
+  - "/post/96526097233/eastswedenhack2014"
 draft: true
 
 ---

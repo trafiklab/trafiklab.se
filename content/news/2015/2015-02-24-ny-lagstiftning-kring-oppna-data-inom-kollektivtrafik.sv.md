@@ -1,7 +1,8 @@
 ---
 title: Ny lagstiftning kring öppna data inom kollektivtrafik?
 date: 2015-02-24
-aliases: "/post/111938016713/ny-lagstiftning-kring-öppna-data-inom-kollektivtrafik"
+aliases:
+  - "/post/111938016713/ny-lagstiftning-kring-öppna-data-inom-kollektivtrafik"
 draft: true
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: Årets finalister till Trafiklabhjälte
 date: 2017-11-14
-aliases: "/post/167486075363/årets-finalister-till-trafiklabhjälte"
+aliases:
+  - "/post/167486075363/årets-finalister-till-trafiklabhjälte"
 draft: true
 
 ---
