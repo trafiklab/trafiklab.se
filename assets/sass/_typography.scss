@@ -1,7 +1,17 @@
 * {
-  font-size: 1rem;
   font-family: $primary-font;
+}
+
+a, p, ul, ol, li, span{
+  font-size: 1rem;
   line-height: 1.5rem;
+}
+
+code, pre {
+  font-family: $code-font;
+  * {
+    font-family: $code-font;
+  }
 }
 
 body p a,
@@ -12,6 +22,7 @@ body table a:link,
 body table a:visited {
   color: $purple;
   text-decoration: none;
+
   &:hover,
   &:focus {
     color: $light-purple;
