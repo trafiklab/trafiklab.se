@@ -37,7 +37,7 @@ sections:
 - type: heading
   label: Blocks
 - type: directory
-  path: content/headless/footer/*
+  path: content/headless/footer
   label: Footer logos
   create: documents
   match: "**/*"
@@ -45,12 +45,12 @@ sections:
   path: content/headless/about
   label: Contacts (About)
   create: documents
-  match: "**/*"
+  match: "*"
 - type: directory
   path: content/headless
   label: Front CTAs
   create: none
-  match: front*
+  match: front*.md
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
