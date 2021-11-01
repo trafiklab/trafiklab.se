@@ -1,7 +1,8 @@
 ---
 title: Trafiklabhjälte 2017
 date: 2017-11-22
-aliases: "/post/167763359133/"
+aliases:
+  - "/post/167763359133/"
 draft: true
 image: "/media/2017/11/2017-11-22--1.jpg"
 ---

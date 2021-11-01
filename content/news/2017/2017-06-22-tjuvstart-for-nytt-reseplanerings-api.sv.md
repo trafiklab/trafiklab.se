@@ -1,7 +1,8 @@
 ---
 title: Tjuvstart för nytt Reseplanerings-API
 date: 2017-06-22
-aliases: "/post/162117351103/tjuvstart-för-nytt-reseplanerings-api"
+aliases:
+  - "/post/162117351103/tjuvstart-för-nytt-reseplanerings-api"
 draft: true
 
 ---

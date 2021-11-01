@@ -1,7 +1,8 @@
 ---
 title: Missa inte Trafiklabs Meetup!
 date: 2014-03-17
-aliases: "/post/79859013060/missa-inte-trafiklabs-meetup"
+aliases:
+  - "/post/79859013060/missa-inte-trafiklabs-meetup"
 draft: true
 
 ---

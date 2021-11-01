@@ -1,7 +1,8 @@
 ---
 title: Tävla i East Sweden Hack – vinn en resa till Silicon Valley
 date: 2014-06-13
-aliases: "/post/88650867108/tävla-i-east-sweden-hack-–-vinn-en-resa-till-silicon-valley"
+aliases:
+  - "/post/88650867108/tävla-i-east-sweden-hack-–-vinn-en-resa-till-silicon-valley"
 draft: true
 
 ---

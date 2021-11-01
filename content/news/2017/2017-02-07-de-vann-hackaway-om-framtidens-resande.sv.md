@@ -1,7 +1,8 @@
 ---
 title: De vann hackaway om framtidens resande
 date: 2017-02-07
-aliases: "/post/156923093591/de-vann-hackaway-om-framtidens-resande"
+aliases:
+  - "/post/156923093591/de-vann-hackaway-om-framtidens-resande"
 draft: true
 image: "/media/2017/02/2017-02-07-de-vann-hackaway-om-framtidens-resande-1.jpg"
 ---

@@ -1,7 +1,8 @@
 ---
 title: Missa inte vår meetup den 30 oktober!
 date: 2014-10-17
-aliases: "/post/100228179658/missa-inte-vår-meetup-den-30-oktober"
+aliases:
+  - "/post/100228179658/missa-inte-vår-meetup-den-30-oktober"
 draft: true
 
 ---

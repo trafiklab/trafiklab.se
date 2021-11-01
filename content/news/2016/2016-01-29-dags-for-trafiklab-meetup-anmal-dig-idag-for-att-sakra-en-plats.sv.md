@@ -1,7 +1,8 @@
 ---
 title: Dags för Trafiklab Meetup! Anmäl dig idag för att säkra en plats.
 date: 2016-01-29
-aliases: "/post/138275868388/dags-för-trafiklab-meetup-anmäl-dig-idag-för-att-säkra-en-plats"
+aliases:
+  - "/post/138275868388/dags-för-trafiklab-meetup-anmäl-dig-idag-för-att-säkra-en-plats"
 draft: true
 
 ---

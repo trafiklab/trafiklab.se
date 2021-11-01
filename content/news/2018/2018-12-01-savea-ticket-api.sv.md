@@ -1,7 +1,8 @@
 ---
 title: Savea ticket api
 date: 2018-12-01
-aliases: "/post/180690772548/savea-ticket-api"
+aliases:
+  - "/post/180690772548/savea-ticket-api"
 draft: true
 
 ---

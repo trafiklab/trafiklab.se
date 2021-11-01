@@ -1,7 +1,8 @@
 ---
 title: Startup Weekend Travel
 date: 2017-04-25
-aliases: "/post/159970264003/startup-weekend-travel"
+aliases:
+  - "/post/159970264003/startup-weekend-travel"
 draft: true
 image: "/media/2017/04/2017-04-25-startup-weekend-travel-1.png"
 ---

@@ -1,7 +1,8 @@
 ---
 title: Python modul
 date: 2013-10-24
-aliases: "/post/64945022022/python-modul"
+aliases:
+  - "/post/64945022022/python-modul"
 draft: true
 
 ---

@@ -1,7 +1,8 @@
 ---
 title: Har du gjort något riktigt vasst på öppna APIer från Trafiklab?
 date: 2015-01-27
-aliases: "/post/109285098938/har-du-gjort-något-riktigt-vasst-på-öppna-apier-från-trafiklab"
+aliases:
+  - "/post/109285098938/har-du-gjort-något-riktigt-vasst-på-öppna-apier-från-trafiklab"
 draft: true
 
 ---

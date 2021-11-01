@@ -1,7 +1,8 @@
 ---
 title: Olympic City Transport Challenge
 date: 2015-11-09
-aliases: "/post/132886485543/olympic-city-transport-challenge"
+aliases:
+  - "/post/132886485543/olympic-city-transport-challenge"
 draft: true
 
 ---

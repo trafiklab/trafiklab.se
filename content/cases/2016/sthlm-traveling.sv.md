@@ -1,7 +1,8 @@
 ---
 title: CASE STHLM Traveling
 date: 2016-05-24
-aliases: "/post/144858331138/case-sthlm-traveling"
+aliases:
+  - "/post/144858331138/case-sthlm-traveling"
 draft: true
 image: "/media/2016/05/2016-05-24-case-sthlm-traveling-1.jpg"
 ---

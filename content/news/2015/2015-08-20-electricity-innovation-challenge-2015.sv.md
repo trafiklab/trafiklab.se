@@ -1,7 +1,8 @@
 ---
 title: ElectriCity Innovation Challenge 2015
 date: 2015-08-20
-aliases: "/post/127151207863/electricity-innovation-challenge-2015"
+aliases:
+  - "/post/127151207863/electricity-innovation-challenge-2015"
 draft: true
 image: "/media/2015/08/2015-08-20-electricity-innovation-challenge-2015-1.png"
 ---

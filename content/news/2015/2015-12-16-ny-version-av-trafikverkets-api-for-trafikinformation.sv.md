@@ -1,7 +1,8 @@
 ---
 title: Ny version av Trafikverkets API för trafikinformation
 date: 2015-12-16
-aliases: "/post/135322792263/ny-version-av-trafikverkets-api-för-trafikinformation"
+aliases:
+  - "/post/135322792263/ny-version-av-trafikverkets-api-för-trafikinformation"
 draft: true
 
 ---

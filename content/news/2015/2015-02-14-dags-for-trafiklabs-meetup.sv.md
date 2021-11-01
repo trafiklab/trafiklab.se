@@ -1,7 +1,8 @@
 ---
 title: Dags för Trafiklabs meetup
 date: 2015-02-14
-aliases: "/post/111001046108/dags-för-trafiklabs-meetup"
+aliases:
+  - "/post/111001046108/dags-för-trafiklabs-meetup"
 draft: true
 
 ---

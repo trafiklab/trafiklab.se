@@ -1,7 +1,8 @@
 ---
 title: Välbesökt och givande dialog på Trafiklabs meetup!
 date: 2014-04-15
-aliases: "/post/82795773821/välbesökt-och-givande-dialog-på-trafiklabs-meetup"
+aliases:
+  - "/post/82795773821/välbesökt-och-givande-dialog-på-trafiklabs-meetup"
 draft: true
 image: "/media/2014/04/2014-04-15-valbesokt-och-givande-dialog-pa-trafiklabs-meetup-1.jpg"
 ---

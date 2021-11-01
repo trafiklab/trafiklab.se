@@ -1,7 +1,8 @@
 ---
 title: Trafiklab på Commutathon
 date: 2015-06-15
-aliases: "/post/121574998118/trafiklab-på-commutathon"
+aliases:
+  - "/post/121574998118/trafiklab-på-commutathon"
 draft: true
 
 ---

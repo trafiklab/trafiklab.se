@@ -1,7 +1,8 @@
 ---
 title: Fullspäckad agenda på kommande meet-up med Trafiklab
 date: 2016-05-19
-aliases: "/post/144597997813/fullspäckad-agenda-på-kommande-meet-up-med-trafiklab"
+aliases:
+  - "/post/144597997813/fullspäckad-agenda-på-kommande-meet-up-med-trafiklab"
 draft: true
 
 ---

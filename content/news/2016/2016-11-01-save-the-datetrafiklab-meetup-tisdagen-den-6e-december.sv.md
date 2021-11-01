@@ -1,7 +1,8 @@
 ---
 title: Save the date!Trafiklab Meetup tisdagen den 6e december
 date: 2016-11-01
-aliases: "/post/152589303563/save-the-datetrafiklab-meetup-tisdagen-den-6e-december"
+aliases:
+  - "/post/152589303563/save-the-datetrafiklab-meetup-tisdagen-den-6e-december"
 draft: true
 
 ---

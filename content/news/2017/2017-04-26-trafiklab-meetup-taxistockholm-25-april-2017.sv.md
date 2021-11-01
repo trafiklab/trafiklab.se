@@ -1,7 +1,8 @@
 ---
 title: Trafiklab Meetup @TaxiStockholm 25 april 2017
 date: 2017-04-26
-aliases: "/post/160005118443/trafiklab-meetup-taxistockholm-25-april-2017"
+aliases:
+  - "/post/160005118443/trafiklab-meetup-taxistockholm-25-april-2017"
 draft: true
 image: "/media/2017/04/2017-04-26-trafiklab-meetup-taxistockholm-25-april-2017-1.jpg"
 ---

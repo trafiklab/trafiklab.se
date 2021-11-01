@@ -1,7 +1,8 @@
 ---
 title: Förändringar i GTFS Sverige och ResRobots APIer
 date: 2016-05-25
-aliases: "/post/144899868373/förändringar-i-gtfs-sverige-och-resrobots-apier"
+aliases:
+  - "/post/144899868373/förändringar-i-gtfs-sverige-och-resrobots-apier"
 draft: true
 
 ---

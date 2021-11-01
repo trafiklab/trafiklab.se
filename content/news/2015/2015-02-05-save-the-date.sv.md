@@ -1,7 +1,8 @@
 ---
 title: SAVE THE DATE!
 date: 2015-02-05
-aliases: "/post/110145757078/save-the-date"
+aliases:
+  - "/post/110145757078/save-the-date"
 draft: true
 
 ---

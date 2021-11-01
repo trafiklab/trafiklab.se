@@ -1,7 +1,8 @@
 ---
 title: På 15 minuter påverkar du framtiden för Trafiklab
 date: 2014-11-21
-aliases: "/post/103190933543/på-15-minuter-påverkar-du-framtiden-för-trafiklab"
+aliases:
+  - "/post/103190933543/på-15-minuter-påverkar-du-framtiden-för-trafiklab"
 draft: true
 
 ---

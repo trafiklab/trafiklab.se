@@ -1,7 +1,8 @@
 ---
 title: Produktionssättning av SL's nya APIer
 date: 2014-05-21
-aliases: "/post/86405953218/produktionssättning-av-sl's-nya-apier"
+aliases:
+  - "/post/86405953218/produktionssättning-av-sl's-nya-apier"
 draft: true
 
 ---

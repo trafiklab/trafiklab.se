@@ -1,7 +1,8 @@
 ---
 title: Vinnarna från Trainhack
 date: 2016-08-29
-aliases: "/post/149650880613/vinnarna-från-trainhack"
+aliases:
+  - "/post/149650880613/vinnarna-från-trainhack"
 draft: true
 image: "/media/2016/08/2016-08-29-vinnarna-fran-trainhack-1.jpg"
 ---

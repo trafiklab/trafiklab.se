@@ -1,7 +1,8 @@
 ---
 title: Hög tid för ny meetup med Trafiklab!
 date: 2017-03-29
-aliases: "/post/158961011013/hög-tid-för-ny-meetup-med-trafiklab"
+aliases:
+  - "/post/158961011013/hög-tid-för-ny-meetup-med-trafiklab"
 draft: true
 
 ---

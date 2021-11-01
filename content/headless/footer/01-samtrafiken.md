@@ -1,7 +1,7 @@
 ---
 title: "Samtrafiken"
 link: "https://www.samtrafiken.se"
-image: /footer/st_logo_white.png
-heading: Trafiklab, part of Samtrafiken i Sverige AB
+image: /footer/st_logo_white_30px.png
+heading: Trafiklab, a brand of Samtrafiken
 weight: 1
 ---

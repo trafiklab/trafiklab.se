@@ -1,7 +1,8 @@
 ---
 title: Trafiklab inspirerar hela vägen till Rio
 date: 2014-06-12
-aliases: "/post/88565178113/trafiklab-inspirerar-hela-vägen-till-rio"
+aliases:
+  - "/post/88565178113/trafiklab-inspirerar-hela-vägen-till-rio"
 draft: true
 
 ---

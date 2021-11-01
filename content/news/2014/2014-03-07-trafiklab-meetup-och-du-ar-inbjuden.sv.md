@@ -1,7 +1,8 @@
 ---
 title: Trafiklab Meetup och du är inbjuden!
 date: 2014-03-07
-aliases: "/post/78845839788/trafiklab-meetup-och-du-är-inbjuden"
+aliases:
+  - "/post/78845839788/trafiklab-meetup-och-du-är-inbjuden"
 draft: true
 
 ---

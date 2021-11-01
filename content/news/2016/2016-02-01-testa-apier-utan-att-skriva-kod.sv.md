@@ -1,7 +1,8 @@
 ---
 title: Testa APIer utan att skriva kod
 date: 2016-02-01
-aliases: "/post/138497647538/testa-apier-utan-att-skriva-kod"
+aliases:
+  - "/post/138497647538/testa-apier-utan-att-skriva-kod"
 draft: true
 image: "/media/2016/02/2016-02-01-testa-apier-utan-att-skriva-kod-1.jpg"
 ---

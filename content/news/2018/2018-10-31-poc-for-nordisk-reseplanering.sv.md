@@ -1,7 +1,8 @@
 ---
 title: POC för Nordisk Reseplanering
 date: 2018-10-31
-aliases: "/post/179616332203/poc-för-nordisk-reseplanering"
+aliases:
+  - "/post/179616332203/poc-för-nordisk-reseplanering"
 draft: true
 image: "/media/2018/10/2018-10-31-poc-for-nordisk-reseplanering-1.png"
 ---

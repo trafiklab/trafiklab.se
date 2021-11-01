@@ -1,7 +1,8 @@
 ---
 title: Biljetter till Trainhack-17 släppta
 date: 2017-07-11
-aliases: "/post/162857646568/biljetter-till-trainhack-17-släppta"
+aliases:
+  - "/post/162857646568/biljetter-till-trainhack-17-släppta"
 draft: true
 image: "/media/2017/07/2017-07-11-biljetter-till-trainhack-17-slappta-1.jpg"
 ---

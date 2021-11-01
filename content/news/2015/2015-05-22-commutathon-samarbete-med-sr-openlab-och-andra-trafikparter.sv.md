@@ -1,7 +1,8 @@
 ---
 title: Commutathon - samarbete med SR, Openlab och andra trafikparter
 date: 2015-05-22
-aliases: "/post/119600601478/commutathon-samarbete-med-sr-openlab-och-andra-trafikparter"
+aliases:
+  - "/post/119600601478/commutathon-samarbete-med-sr-openlab-och-andra-trafikparter"
 draft: true
 
 ---

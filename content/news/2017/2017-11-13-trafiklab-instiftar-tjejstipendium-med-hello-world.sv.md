@@ -1,7 +1,8 @@
 ---
 title: Trafiklab instiftar tjejstipendium med Hello World
 date: 2017-11-13
-aliases: "/post/167446649168/trafiklab-instiftar-tjejstipendium-med-hello-world"
+aliases:
+  - "/post/167446649168/trafiklab-instiftar-tjejstipendium-med-hello-world"
 draft: true
 image: "/media/2017/11/2017-11-13-trafiklab-instiftar-tjejstipendium-med-hello-world-1.png"
 ---

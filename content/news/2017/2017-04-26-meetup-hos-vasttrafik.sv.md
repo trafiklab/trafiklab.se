@@ -1,7 +1,8 @@
 ---
 title: Meetup hos Västtrafik
 date: 2017-04-26
-aliases: "/post/160007217388/meetup-hos-västtrafik"
+aliases:
+  - "/post/160007217388/meetup-hos-västtrafik"
 draft: true
 
 ---

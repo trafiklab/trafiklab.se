@@ -1,6 +1,7 @@
 ---
 title: Realtime data
-aliases: "api/gtfs-regional-realtime"
+aliases:
+  - "api/gtfs-regional-realtime"
 weight: 20
 date: 2019-06-10
 ---

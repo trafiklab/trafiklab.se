@@ -1,7 +1,8 @@
 ---
 title: Nytt API från Trafikverket!
 date: 2014-02-10
-aliases: "/post/76216302912/nytt-api-från-trafikverket"
+aliases:
+  - "/post/76216302912/nytt-api-från-trafikverket"
 draft: true
 
 ---

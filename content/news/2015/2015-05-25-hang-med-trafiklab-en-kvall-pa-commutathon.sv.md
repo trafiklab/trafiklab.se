@@ -1,7 +1,8 @@
 ---
 title: Häng med Trafiklab en kväll på Commutathon
 date: 2015-05-25
-aliases: "/post/119832056103/häng-med-trafiklab-en-kväll-på-commutathon"
+aliases:
+  - "/post/119832056103/häng-med-trafiklab-en-kväll-på-commutathon"
 draft: true
 
 ---

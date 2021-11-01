@@ -1,6 +1,7 @@
 ---
 title: Static data 
-aliases: "/node/27769/documentation"
+aliases:
+  - "/node/27769/documentation"
 weight: 10 
 date: 2019-11-22
 ---
@@ -26,7 +27,7 @@ API's OpenAPI specification.
 | **DinTur (Västernorrlands län)**                    | [https://opendata.samtrafiken.se/netex/dintur/dintur.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/dintur/dintur.zip?key=<api-nyckel>)                         |
 | **Gotlands kollektivtrafik (Gotlands län)**         | [https://opendata.samtrafiken.se/netex/gotland/gotland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/gotland/gotland.zip?key=<api-nyckel>)                     |
 | **Hallandstrafiken**                                | [https://opendata.samtrafiken.se/netex/halland/halland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/halland/halland.zip?key=<api-nyckel>)                     |
-| **JLT (Jönköpings län) **                           | [https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>)                                     |
+| **JLT (Jönköpings län)**                            | [https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>)                                     |
 | **Kalmar Länstrafik (Kalmar län)**                  | [https://opendata.samtrafiken.se/netex/klt/klt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/klt/klt.zip?key=<api-nyckel>)                                           |
 | **Kronobergs Länstrafik (Kronobergs län)**          | [https://opendata.samtrafiken.se/netex/krono/krono.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/krono/krono.zip?key=<api-nyckel>)                             |
 | **LTR (Jämtlands län)**                             | [https://opendata.samtrafiken.se/netex/jamtland/jamtland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jamtland/jamtland.zip?key=<api-nyckel>)                 |

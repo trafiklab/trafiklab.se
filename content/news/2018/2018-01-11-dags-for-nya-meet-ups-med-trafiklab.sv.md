@@ -1,7 +1,8 @@
 ---
 title: Dags för nya meet-ups med Trafiklab!
 date: 2018-01-11
-aliases: "/post/169573589048/dags-för-nya-meet-ups-med-trafiklab"
+aliases:
+  - "/post/169573589048/dags-för-nya-meet-ups-med-trafiklab"
 draft: true
 image: "/media/2018/01/2018-01-11-dags-for-nya-meet-ups-med-trafiklab-1.png"
 ---

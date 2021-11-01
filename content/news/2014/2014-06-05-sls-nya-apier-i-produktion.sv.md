@@ -1,7 +1,8 @@
 ---
 title: SLs nya APIer i produktion
 date: 2014-06-05
-aliases: "/post/87877662923/sls-nya-apier-i-produktion"
+aliases:
+  - "/post/87877662923/sls-nya-apier-i-produktion"
 draft: true
 image: "/media/2014/06/2014-06-05-sls-nya-apier-i-produktion-1.png"
 ---

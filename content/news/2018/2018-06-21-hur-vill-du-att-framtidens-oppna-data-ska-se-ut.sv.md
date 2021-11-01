@@ -1,7 +1,8 @@
 ---
 title: Hur vill du att framtidens öppna data ska se ut?
 date: 2018-06-21
-aliases: "/post/175107887658/hur-vill-du-att-framtidens-öppna-data-ska-se-ut"
+aliases:
+  - "/post/175107887658/hur-vill-du-att-framtidens-öppna-data-ska-se-ut"
 draft: true
 image: "/media/2018/06/2018-06-21-hur-vill-du-att-framtidens-oppna-data-ska-se-ut-1.png"
 ---

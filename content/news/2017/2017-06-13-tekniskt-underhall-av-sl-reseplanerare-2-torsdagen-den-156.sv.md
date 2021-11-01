@@ -1,7 +1,8 @@
 ---
 title: Tekniskt underhåll av SL Reseplanerare 2 torsdagen den 15/6
 date: 2017-06-13
-aliases: "/post/161774026583/tekniskt-underhåll-av-sl-reseplanerare-2-torsdagen-den-156"
+aliases:
+  - "/post/161774026583/tekniskt-underhåll-av-sl-reseplanerare-2-torsdagen-den-156"
 draft: true
 
 ---

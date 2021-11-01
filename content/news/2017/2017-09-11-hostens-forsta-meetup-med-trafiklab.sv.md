@@ -1,7 +1,8 @@
 ---
 title: Höstens första meetup med Trafiklab
 date: 2017-09-11
-aliases: "/post/165221856343/höstens-första-meetup-med-trafiklab"
+aliases:
+  - "/post/165221856343/höstens-första-meetup-med-trafiklab"
 draft: true
 
 ---
