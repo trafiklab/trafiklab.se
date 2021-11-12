@@ -1,16 +1,15 @@
 ---
-title: 
+title: Nya trafiklab är här
 date: 2013-10-24
 aliases:
 - "/post/64951246993/nyatrafiklab"
 
 ---
-**Nya Trafiklab är här**
 
 Efter en längre tids arbete kan vi nu äntligen lansera nya Trafiklab. Det är mycket som är nytt och vi kommer den
 närmaste tiden förbättra tjänsten löpande.
 
-### VAD ÄR NYTT?
+### Vad är nytt?
 
 #### Design
 
@@ -63,7 +62,7 @@ med er användare. Obs! Iom lanseringen har vi dock en tillfällig extra feedbac
 Allmänna systemuppdateringar och prestandafixar som ska göra att sajten blir rappare att använda framförallt som
 inloggad medlem.
 
-### KOMMANDE UTVECKLING
+### Kommande utveckling
 
 Saker som ligger på vår lista:
 
@@ -88,13 +87,13 @@ Innehållet kring API:erna kommer att gås igenom och göra enklare att använda
 I nuläget använder vi en enkel Google-sökning men vi undersöker möjligheten till att byta till eget sajtsök med
 facetter.
 
-### GE OSS FEEDBACK!
+### Ge os feedback
 
 Vi är all ears och vill höra vad ni tycker! Det finns en tillfällig feedback-funktion nu iom lanseringen. Där kan ni
 enkelt ge tips, feedback och rapportera fel. Det går givetvis även bra att använda sig av
 vårt [Kundo-forum](http://kundo.se/org/trafiklabse).
 
-### NYHETER MED PROJEKTSIDORNA
+### Nyheter med projektsidorna
 
 För dig som har projekt på Trafiklab så innebär det en del förändringar. Vi har försökt att automatisera uppgraderingen
 på bästa möjliga sätt men vi ber er ändå att gå igenom era projekt för att se så att allt stämmer.
