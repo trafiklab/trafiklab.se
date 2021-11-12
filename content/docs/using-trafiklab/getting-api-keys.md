@@ -1,6 +1,6 @@
 ---
 title: "Getting API keys"
-weight: 3
+weight: 50
 ---
 {{% success %}} You need an account and project in order to retrieve API keys. Haven't created an account
 yet? [Get started here](creating-an-account.md).  {{% /success %}}
