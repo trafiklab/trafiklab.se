@@ -6,9 +6,29 @@ weight: 20
 date: 2019-06-10
 ---
 
-## Retrieving real-time data
+The realtime GTFS Regional data consists of data feeds describing disturbances, deviations, delays, and even realtime 
+GPS vehicle positions, separated per region or operator. It should be combined with static data available in the GTFS 
+Regional API.
 
-In order to retrieve the static data you need an API key. Follow the link below to read more about API keys.
+In order to retrieve the data you need an API key. Technical details for fetching the data can be found in the
+API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.
+
+{{% info %}}
+**Availability of regional data** differs per operator. See the [overview page](_index.md) to see which data is provided
+by the operator(s) you are interested in.
+{{% /info %}}
+
+{{% note %}}
+**Where to download**
+
+The dataset can be accessed through the following URLs:
+- [https://opendata.samtrafiken.se/gtfs-rt/{operator}/ServiceAlerts.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/ServiceAlerts.pb?key={apikey})
+- [https://opendata.samtrafiken.se/gtfs-rt/{operator}/TripUpdates.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/TripUpdates.pb?key={apikey})
+- [https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey})
+
+Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
+OpenAPI specification, but are also listed on the [static data documentation page](static.md). Replace `{apikey}` with your own API key.
+{{% /note %}}
 
 {{% page-ref page="/docs/using-trafiklab/getting-api-keys" %}}
 
