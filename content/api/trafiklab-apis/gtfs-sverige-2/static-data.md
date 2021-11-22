@@ -4,10 +4,19 @@ weight: 10
 date: 2015-11-09
 ---
 
-### Retrieving Static data
+The static _GTFS Sverige 2_ dataset contains files describing all planned public transport data for Sweden.
 
-The static GTFS data can be retrieved through the following URL: https://api.resrobot.se/gtfs/sweden.zip?key=APIKEY .
-Replace APIKEY with your own API key, which you can obtain through our developer portal.
+In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
+API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.
+
+{{% note %}}
+**Where to download**
+
+The dataset can be found
+at [https://api.resrobot.se/gtfs/sweden.zip?key={apikey}](https://api.resrobot.se/gtfs/sweden.zip?key={apikey}). 
+
+Replace `{apikey}` with your own API key. 
+{{% /note %}}
 
 {{% page-ref "/docs/using-trafiklab/getting-api-keys" %}}
 
@@ -18,7 +27,7 @@ GTFS Sverige 2 uses some of [the GTFS Extensions](https://developers.google.com/
 #### Extended Route Types
 
 [Extended route types](https://developers.google.com/transit/gtfs/reference/extended-route-types) allow for more
-specific transport modes to be used. GTFS Sverige does not use the standard one digit GTFS route types, but uses only
+specific transport modes to be used. GTFS Sverige does not use the standard one digit GTFS route types, but only uses
 extended route types.
 
 The following list shows the most used transport modes. This is a non-extensive list, only meant to give an idea of the
@@ -46,7 +55,6 @@ at [https://developers.google.com/transit/gtfs/reference/extended-route-types](h
 
 GTFS Sverige 2 includes trip-to-trip transfers, which are detailed transfer rules that provide additional details on
 which transfers are possible, and how long they take.
-
 
 {{% info %}}
 **Trip-to-trip transfers used to be an extension** to the GTFS standard, but [this extension has been

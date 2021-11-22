@@ -6,13 +6,21 @@ weight: 10
 date: 2019-11-22
 ---
 
-## Retrieving static data
-
 The static NeTEx Regional dataset contains files describing all planned public transport data, with more technical
 details compared to the GTFS Regional feeds.
 
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification.
+
+{{% note %}}
+**Where to download**
+
+The dataset can be accessed through the following URL:
+[https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key=APIKEY).
+
+Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
+OpenAPI specification, but are also listed on the [GTFS Regional static data documentation page](../gtfs-regional/static.md). Replace `{apikey}` with your own API key.
+{{% /note %}}
 
 {{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-regional/netex-regional-spec" %}}
 
