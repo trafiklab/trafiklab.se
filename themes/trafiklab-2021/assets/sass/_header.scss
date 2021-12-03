@@ -1,0 +1,370 @@
+.site-header {
+  display: flex;
+  flex-direction: column;
+  min-height: $header-height;
+  background-color: white;
+
+  * {
+    font-family: $alternative-font;
+  }
+
+  .top-navigation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: margin-left .1s ease-out;
+    z-index: 20;
+    background-color: white;
+
+    font-size: 0.875rem;
+    justify-content: space-between;
+    margin: auto;
+    padding: 1rem 1.5rem 1rem;
+
+    .header-left {
+      align-items: center;
+      display: flex;
+      position: relative;
+      z-index: 40;
+
+      ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  .tl-top-navigation-item a {
+    color: $black;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+
+    height: 58px;
+
+    svg {
+      height: 12px;
+      position: absolute;
+      right: -3px;
+      top: 15px;
+      width: auto;
+    }
+  }
+
+  .tl-top-navigation-item.brand a {
+    padding: 0;
+    text-align: center;
+  }
+
+  img.brand {
+    margin-top: 8px;
+    // On mobile, the left padding should be zero to align with the content
+    padding: 8px 8px 8px 0;
+    height: 40px;
+    background-color: $black;
+  }
+
+  .header-right .tl-icon-button {
+    color: $black;
+  }
+}
+
+
+@media screen and (min-width: $breakpoint-mobile) {
+  // On large screens, the left padding can be 8px so it doesn't feel as cramped
+  .site-header img.brand {
+    padding-left: 8px;
+  }
+}
+
+
+// Navigation
+@media (min-width: 48.125rem) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+  .top-navigation {
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    overflow-x: initial;
+    padding: 2.5rem 0 2.5rem 2.5rem;
+    justify-content: flex-start;
+  }
+}
+
+div.tl-top-navigation-item {
+  padding: 1rem;
+}
+
+.tl-top-navigation-item {
+  --show-active-line: 0;
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  min-width: 5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    font-family: $alternative-font;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:hover {
+      --show-active-line: 1;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      bottom: 1rem;
+      height: .1875rem;
+      width: 0;
+      margin: 0 auto;
+      opacity: var(--show-active-line);
+      background: $purple;
+      transition: width .2s ease-in-out, opacity .2s ease-in-out;
+    }
+  }
+}
+
+
+body.type-home {
+  .site-header, .top-navigation {
+    background: $purple;
+  }
+
+  .tl-button.tl-button--variant-primary {
+    background-color: #fff;
+    border-color: transparent;
+    color: $purple;
+
+    &:hover,
+    &:focus {
+      background-color: $purple;
+      color: #fff;
+    }
+  }
+
+  .tl-top-navigation-item a, .header-right .tl-icon-button {
+    color: #fff;
+  }
+
+  .site-header img.brand {
+    background: transparent;
+  }
+
+  .tl-top-navigation-item a {
+    &::after {
+      background: #fff;
+    }
+  }
+
+  .burger-menu-button__icon {
+    background-color: #fff;
+  }
+}
+
+
+.vs-mobile {
+  width: 100%;
+}
+
+button.mobile-menu-button {
+  background-color: transparent;
+  border: none;
+  height: unset;
+  margin-left: 1rem;
+  position: relative;
+  width: unset;
+  z-index: 40;
+}
+
+.mobile-navigation {
+  background: $black;
+  display: none;
+
+  a,
+  a:link,
+  a:visited {
+    color: #FFF;
+    display: block;
+    padding: 0.5rem 0;
+    margin: 0 1rem;
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .tl-mobile-navigation-item {
+      display: block;
+      text-align: left;
+      width: 100%;
+
+      a {
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+body.type-home {
+  .mobile-navigation {
+    background: $purple;
+  }
+}
+
+.burger-menu-button__icon {
+  background-color: $purple;
+  height: 0.125rem;
+  margin: 0.25rem 0;
+  transition: 0.4s transform ease-in-out, 0.4s color ease-in-out, 0.4s opacity ease-in-out;
+  width: 1.375rem;
+}
+
+
+.mobile-menu-button.is-open .burger-menu-button__icon__1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+  transform: rotate(-45deg) translate(-4.8px, 3.8px);
+}
+
+.mobile-menu-button.is-open .burger-menu-button__icon__2 {
+  opacity: 0;
+}
+
+.mobile-menu-button.is-open .burger-menu-button__icon__3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-4.9px, -3px);
+}
+
+.header-left li {
+  display: none;
+}
+
+.header-left li:first-of-type {
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  .tl-icon-button {
+    display: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .user-link {
+    display: none;
+  }
+}
+
+.tl-top-navigation-item--active a {
+  --show-active-line: 1;
+
+  &:after {
+    width: 2rem;
+  }
+}
+
+.tl-top-navigation-item.brand a {
+  --show-active-line: 0;
+
+  a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .tl-top-navigation-item.brand {
+    margin-left: 0;
+    padding-left: 0;
+
+    a, img {
+      margin-left: 0;
+    }
+  }
+
+  .tl-button.tl-button--variant-primary {
+    padding: 0;
+    background: none;
+    border: none;
+    min-width: auto;
+    white-space: nowrap;
+  }
+
+  .header-section.section-contrast {
+    &:after {
+      bottom: -20px;
+      background-size: 300px;
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+  .header-right {
+    .tl-icon-button,
+    .user-link {
+      display: block;
+    }
+  }
+  .vs-mobile,
+  .mobile-menu-button {
+    display: none;
+  }
+  .header-left li {
+    display: block;
+  }
+
+  .header-section {
+    padding-bottom: 7rem;
+
+    .header-container {
+      padding-top: 5rem;
+
+      p {
+        font-size: 30px;
+
+        .landing-roller {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  .article-header__wrapper {
+    margin-bottom: 5rem;
+  }
+  .article-header__container {
+    border-bottom: 1px dashed $border-grey;
+    margin: 1rem 0 3rem;
+    padding-bottom: 1rem;
+  }
+}
+

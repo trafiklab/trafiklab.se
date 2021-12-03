@@ -1,0 +1,56 @@
+{{ $args := . }}
+{{ $src := $args.src }}
+{{ $isWide := $args.wide }}
+{{ $alt := $args.alt }}
+{{ $title := $args.title }}
+{{ $date := $args.date }}
+{{ $link := $args.link }}
+{{ $credit := $args.credit }}
+
+<div class="image-header {{ if $isWide }} image-header--wide {{ end }} {{ if or $date $credit}} image-header--with-details {{ end }}" role="banner"
+     aria-label="A banner with a background image and the title of the page">
+    {{ if $link }}
+    <a href="{{$link}}">
+    {{ end }}
+        {{ with $src }}
+        {{ $image := resources.Get (printf "%s" ($src | safeURL)) }}
+        {{ if $image }}
+        {{ if in $src ".jpg"}}
+        {{ $resized := $image.Resize "1600x webp" }}
+        <img src="{{ $resized.Permalink }}"
+             alt="{{ $alt }}"
+             class="image-header__image"
+        />
+        {{ else }}
+        <img src="{{ $image.Permalink }}"
+             alt="{{ $alt }}"
+             class="image-header__image"
+        />
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    {{ if $link }}
+    </a>
+    {{ end }}
+    <div class="image-header__overlay">
+        {{ if $link }}
+        <h2 class="image-header__title">{{ $title }}</h2>
+        {{ else }}
+        <h1 class="image-header__title">{{ $title }}</h1>
+        {{ end }}
+        {{ if or $date $credit $link}}
+        <span class="image-header__details">
+        {{ if $date }}
+        <span class="image-header__date">Published: {{ $date.Format "2006-01-02" }}</span>
+        {{ end }}
+        {{ if and $date $credit }} | {{ end }}
+        {{ if $credit }}
+        <span class="image-header__credit">Image: {{ $credit }}</span>
+        {{ end }}
+        </span>
+        {{ if $link }}
+        Click to read more
+        {{ end }}
+        {{ end }}
+    </div>
+</div>

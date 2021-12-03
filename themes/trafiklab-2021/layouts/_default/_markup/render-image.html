@@ -1,0 +1,7 @@
+{{ $alt := .PlainText | safeHTML }}
+{{ $caption := "" }}
+{{ with .Title }}
+{{ $caption = . | safeHTML }}
+{{ end }}
+
+{{ partial "responsive-image.html" (dict "context" . "src" (.Destination | safeURL) "alt" $alt "caption" $caption) }}
