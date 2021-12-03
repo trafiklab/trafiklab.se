@@ -1,0 +1,17 @@
+.home-container__segment.home-container__segment--logowall {
+
+  .tl-grid.tl-grid__container {
+    grid-auto-flow: row dense;
+  }
+
+  a.tl-grid__item.logowall__logo {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+
+    img {
+      height: 40px;
+      max-width: 100%;
+    }
+  }
+}
