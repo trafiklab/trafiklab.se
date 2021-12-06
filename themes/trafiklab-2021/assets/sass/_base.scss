@@ -93,14 +93,19 @@ html {
   margin: 0;
   grid-auto-rows: auto;
 }
-.tl-grid--small-12 {
-  grid-column: span 12;
-}
+
 .tl-grid--spacing-large {
   gap: 1.5rem;
 }
+
 .tl-grid--spacing-extraLarge {
   gap: 2rem;
+}
+
+@for $i from 1 through 12 {
+  .tl-grid--small-#{$i} {
+    grid-column: span $i;
+  }
 }
 
 @media screen and (min-width: $breakpoint-mobile) {
