@@ -1,7 +1,7 @@
 ---
 title: Knowledge base
 cta: Knowledge base
-link: "/docs"
+link: "/docs/"
 icon: /icons/LightBulb.svg
 icon_alt: a lightbulb
 weight: 3
