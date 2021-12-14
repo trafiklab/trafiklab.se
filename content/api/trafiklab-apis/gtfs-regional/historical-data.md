@@ -1,9 +1,8 @@
 ---
 title: Historical data
 weight: 30
-draft: true
 ---
 
-Historical GTFS data can be accessed through the KoDA project.
+Historical GTFS data can be accessed through the KoDa API.
 
 {{% page-ref page="/api/trafiklab-apis/koda" %}}

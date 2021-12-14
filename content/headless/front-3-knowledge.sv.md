@@ -1,7 +1,7 @@
 ---
 title: Kunskapsbas
 cta: Kunskapsbas
-link: "/sv/docs"
+link: "/sv/docs/"
 icon: /icons/LightBulb.svg
 icon_alt: en glodlampa
 weight: 3
