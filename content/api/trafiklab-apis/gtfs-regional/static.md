@@ -24,7 +24,7 @@ Replace `{operator}` with the abbreviation of the operator you want to download.
 OpenAPI specification, but are also listed below for your convenience. Replace `{apikey}` with your own API key. 
 {{% /note %}}
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/static-spec"  
+{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/static-specification" 
 "/docs/using-trafiklab-data/using-gtfs-files"  %}}
 
 **Operator abbreviations used in GTFS Regional**

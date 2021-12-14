@@ -22,7 +22,7 @@ Replace `{operator}` with the abbreviation of the operator you want to download.
 OpenAPI specification, but are also listed on the [GTFS Regional static data documentation page](../gtfs-regional/static.md). Replace `{apikey}` with your own API key.
 {{% /note %}}
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-regional/netex-regional-spec" %}}
+{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-regional/netex-regional-specification" %}}
 
 ## Download URLs
 
