@@ -55,6 +55,8 @@ response. If you receive this response, you can poll the URL every 30 seconds un
 along with the actual data. If someone else already requested the file earlier, you might be able to download the file
 immediately.
 
+Depending on the amount of data, creation of an archive can take between 1 and 30 minutes.
+
 {{% info %}} We are in the process of triggering every file automatically, to make all files available directly. This
 means you might not encounter `HTTP 202` accepted responses for certain operators, feeds and/or dates. You should
 however keep the possibility of this response code in mind while developing applications. {{% /info %}}
