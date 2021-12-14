@@ -55,7 +55,11 @@ response. If you receive this response, you can poll the URL every 30 seconds un
 along with the actual data. If someone else already requested the file earlier, you might be able to download the file
 immediately.
 
-Depending on the amount of data, creation of an archive can take between 1 and 30 minutes.
+Depending on the amount of data, creation of an archive can take between 1 and 60 minutes. If you need large amounts of
+data, you can test a few dates to see if the data has been created already. Alternatively, you could run a small script
+that sends HTTP HEAD requests to create all the files without actually downloading them. Such a script could test a URL
+and wait until it receives an HTTP 200 response code for that URL, then move on to the next file. This way, all files
+would be ready to download by the time you actually need the data.
 
 {{% info %}} We are in the process of triggering every file automatically, to make all files available directly. This
 means you might not encounter `HTTP 202` accepted responses for certain operators, feeds and/or dates. You should
