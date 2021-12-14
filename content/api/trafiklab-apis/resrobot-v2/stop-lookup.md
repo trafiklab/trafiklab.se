@@ -37,7 +37,7 @@ adding a question mark to the end of the search string.
 
 {{% info %}}
 Only the most important parameters and response variables are described on this page. Looking for more technical
-details? These can be found in [the OpenAPI specification](api-spec.md).
+details? These can be found in [the OpenAPI specification](api-specification.md).
 {{% /info %}}
 
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS
