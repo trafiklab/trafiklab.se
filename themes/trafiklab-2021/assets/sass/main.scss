@@ -1,0 +1,42 @@
+@import 'modern-normalize';
+
+@import 'variables';
+@import 'fonts';
+@import 'typography';
+@import 'layout';
+@import 'base';
+@import 'header';
+@import 'footer';
+@import 'docs';
+@import 'override';
+@import 'mc';
+@import 'partials/image_header';
+@import 'partials/landing_roller';
+@import 'partials/docs_footer';
+@import 'shortcodes/tabs';
+@import 'shortcodes/highlight';
+@import 'shortcodes/admoniton';
+@import 'shortcodes/swagger_ui';
+@import 'blogposts';
+
+body {
+  font-family: $alternative-font;
+  font-weight: 400;
+}
+
+body a, body a:link, body a:visited {
+  color: unset;
+  transition: .5s;
+}
+
+.page p img {
+  max-width: 100%;
+}
+
+code:not(.highlight code):not(#swagger-ui code) {
+  background-color: $grey;
+  border-radius: $border-radius-default/2;
+  padding: 0.10rem;
+  margin: 0.10rem 0;
+  font-size: 0.9rem;
+}

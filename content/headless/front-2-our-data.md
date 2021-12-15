@@ -1,7 +1,7 @@
 ---
 title: Our data
 cta: Use our data
-link: "/api"
+link: "/api/"
 icon: /icons/Database.svg
 icon_alt: a database
 ---

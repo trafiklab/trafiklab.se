@@ -16,10 +16,10 @@ def create_redirect(path: str):
 </html>
 """
     # Write the file
-    dir = os.path.dirname(f"./static{path}")
+    dir = os.path.dirname(f"./static{path}/")
     if not os.path.exists(dir):
         os.makedirs(dir)
-    with open(f"./static{path}.html", 'w+', encoding='utf8') as file:
+    with open(f"./static{path}/index.html", 'w+', encoding='utf8') as file:
         file.write(content)
 
 

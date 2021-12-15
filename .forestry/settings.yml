@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: directory
   path: content/api
-  label: Data
+  label: Apis
   create: all
   match: "**/*"
 - type: directory
@@ -31,14 +31,26 @@ sections:
   match: "**/*"
 - type: directory
   path: content
-  label: Pages
+  label: All pages
   create: all
+  match: "*"
+- type: heading
+  label: Blocks
+- type: directory
+  path: content/headless/footer
+  label: Footer logos
+  create: documents
+  match: "**/*"
+- type: directory
+  path: content/headless/about
+  label: Contacts (About)
+  create: documents
   match: "*"
 - type: directory
   path: content/headless
-  label: Headless
-  create: all
-  match: "**/*"
+  label: Front CTAs
+  create: none
+  match: front*.md
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
@@ -47,7 +59,7 @@ file_template: ":year:/:month:/:filename:"
 build:
   preview_env:
   - HUGO_ENV=staging
-  - HUGO_VERSION=0.81.0
+  - HUGO_VERSION=0.87.0
   preview_output_directory: public
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"

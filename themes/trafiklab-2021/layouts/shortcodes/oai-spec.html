@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-ui.css" />
+<script src="/swagger-ui/swagger-ui-bundle.js" charset="UTF-8"> </script>
+<script src="/swagger-ui/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+
+<div id="swagger-ui"></div>
+
+<script>
+    window.onload = function() {
+        var url = parent.shortcode_url;
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+            url: {{ .Get "url" }},
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: "StandaloneLayout",
+            validatorUrl: "none"
+        });
+        // End Swagger UI call region
+
+        window.ui = ui;
+    };
+</script>

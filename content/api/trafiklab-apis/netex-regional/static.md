@@ -1,11 +1,10 @@
 ---
 title: Static data 
-aliases: "/node/27769/documentation"
+aliases:
+  - "/node/27769/documentation"
 weight: 10 
 date: 2019-11-22
 ---
-
-## Retrieving static data
 
 The static NeTEx Regional dataset contains files describing all planned public transport data, with more technical
 details compared to the GTFS Regional feeds.
@@ -13,7 +12,17 @@ details compared to the GTFS Regional feeds.
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification.
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-regional/netex-regional-spec" %}}
+{{% note %}}
+**Where to download**
+
+The dataset can be accessed through the following URL:
+[https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key=APIKEY).
+
+Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
+OpenAPI specification, but are also listed on the [GTFS Regional static data documentation page](../gtfs-regional/static.md). Replace `{apikey}` with your own API key.
+{{% /note %}}
+
+{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-regional/netex-regional-specification" %}}
 
 ## Download URLs
 
@@ -26,7 +35,7 @@ API's OpenAPI specification.
 | **DinTur (Västernorrlands län)**                    | [https://opendata.samtrafiken.se/netex/dintur/dintur.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/dintur/dintur.zip?key=<api-nyckel>)                         |
 | **Gotlands kollektivtrafik (Gotlands län)**         | [https://opendata.samtrafiken.se/netex/gotland/gotland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/gotland/gotland.zip?key=<api-nyckel>)                     |
 | **Hallandstrafiken**                                | [https://opendata.samtrafiken.se/netex/halland/halland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/halland/halland.zip?key=<api-nyckel>)                     |
-| **JLT (Jönköpings län) **                           | [https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>)                                     |
+| **JLT (Jönköpings län)**                            | [https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>)                                     |
 | **Kalmar Länstrafik (Kalmar län)**                  | [https://opendata.samtrafiken.se/netex/klt/klt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/klt/klt.zip?key=<api-nyckel>)                                           |
 | **Kronobergs Länstrafik (Kronobergs län)**          | [https://opendata.samtrafiken.se/netex/krono/krono.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/krono/krono.zip?key=<api-nyckel>)                             |
 | **LTR (Jämtlands län)**                             | [https://opendata.samtrafiken.se/netex/jamtland/jamtland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jamtland/jamtland.zip?key=<api-nyckel>)                 |

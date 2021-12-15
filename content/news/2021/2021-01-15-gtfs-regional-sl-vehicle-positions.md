@@ -6,8 +6,6 @@ image: /media/2021/01/sparvagn-erik-hansman-unsplash.jpg
 image_credit: Erik Hansman, Unsplash
 ---
 
-# SL Vehicle Position data in GTFS Regional Static
-
 In the coming days we will start publishing vehicle positions for SL (Stocksholms lokaltrafik) in the GTFS Regional
 dataset. This means that all operators which provide realtime will support both TripUpdates, ServiceAlerts and
 VehiclePositions. SL will start publishing through a staged rollout where there number of vehicles with realtime

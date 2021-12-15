@@ -33,7 +33,7 @@
     "license": "https://creativecommons.org/licenses/zero/1.0/",
     "theme": "transport",
     "language": "sv",
-    "format": "gtfs",
+    "formats": ["gtfs"],
     "region": "sweden",
     "contact": "trafiklab",
     "publisher": "trafiklab",

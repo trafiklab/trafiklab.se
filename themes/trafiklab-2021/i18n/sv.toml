@@ -1,0 +1,38 @@
+[brand]
+other = "Trafiklab"
+
+[header-cta-keys]
+other = "API-nycklar"
+
+[header-aria-change-language]
+other = "Byt språk till Engelska"
+
+[hero-aria-image]
+other = "En temabild som visar ett tåg, en tåghållplats, tågbiljetter och en mobiltelefon, som är alla länkade med linjer."
+
+[read-more-about]
+other = "Läs mer om"
+
+[docs-footer-about-this-page]
+other = "Om denna sida"
+
+[docs-footer-something-wrong]
+other = "Är det något fel med denna sida?"
+
+[docs-footer-view-on-github]
+other = "Visa denna sida på Github"
+
+[docs-footer-edit-on-github]
+other = "Redigera denna sida på Github"
+
+[docs-footer-create-translation-on-github]
+other = "Översätt denna sida på Github"
+
+[docs-footer-report-issue]
+other = "Rapportera ett problem"
+
+[docs-footer-published-at]
+other = "Sidan först publicerades den"
+
+[docs-footer-last-modified]
+other = "Sidan uppdaterades sist den"

@@ -35,25 +35,25 @@ is updated every 3 seconds.
 
 The following table shows which operators
 
-| Operator | Static data | Real-time data | Vehicle positions | Occupancy data positions |
+| Operator | Static data | Real-time data | Vehicle positions | Occupancy data |
 | :--- | :---: | :---: | :---: | :---: |
 | Blekingetrafiken (Blekinge län)| ✅ |  |  |  |
 | Dalatrafik (Dalarnas län)| ✅ | ✅ | ✅ |  |
 | DinTur (Västernorrlands län)| ✅ |  |  |  |
 | Gotlands kollektivtrafik (Gotlands län)| ✅ |  |  |  |
 | Hallandstrafiken (Hallands län)| ✅ |  |  |  |
-| JLT (Jönköpings län)| ✅ |  |  |  |
+| JLT (Jönköpings län)| ✅ | 🕒 H1 2022 | 🕒 H1 2022 |  |
 | Kalmar länstrafik (Kalmar län)| ✅ | ✅ | ✅ |  |
 | Kronobergs länstrafik (Kronobergs län)| ✅ |  |  |  |
 | LTR (Jämtlands län)| ✅ |  |  |  |
 | Länstrafiken Norrbotten| ✅ |  |  |  |
-| Länstrafiken Västerbotten| ✅ |  |  |  |
-| Länstrafiken Örebro| ✅ |  |  |  |
+| Länstrafiken Västerbotten| ✅ | 🕒 | 🕒 |  |
+| Länstrafiken Örebro| ✅ | 🕒 |  |  |
 | Skånetrafiken (Skåne län) | ✅ |✅ | ✅ | ✅ |
 | SL (Stockholms län) | ✅ |✅ | ✅ |  |
 | Sörmlandstrafiken (Södermanlands län) | ✅ |  |  |  |
 | UL (Uppsala län) | ✅ |✅ | ✅ |  |
-| VL (Västmanlands län) | ✅ |  |  |  |
+| VL (Västmanlands län) | ✅ | 🕒 Q4-Q1 2022 | 🕒 Q4-Q1 2022 |  |
 | Värmlandstrafik & Karlstadbuss (Värmlands län) | ✅ |✅ | ✅ |  |
 | Västtrafik (Västra götalands län) | ✅ |  |  |  |
 | X-Trafik (Gävleborgs län) | ✅ |  |  |  |

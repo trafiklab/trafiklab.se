@@ -1,9 +1,9 @@
 ---
 title: Kunskapsbas
 cta: Kunskapsbas
-link: "/sv/docs"
+link: "/sv/docs/"
 icon: /icons/LightBulb.svg
 icon_alt: en glodlampa
 weight: 3
 ---
-Lär dig mer om Trafiklab, hur man använder Trafiklab, och hur man använder trafikdata
+Lär dig mer om Trafiklab och hur man använder trafikdata

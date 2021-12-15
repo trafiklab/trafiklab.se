@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="main-content">
+  <div class="page">
+    <article id="site-content">
+      <div class="docs-header">
+        <h1 class="tl-h1">{{ .Title }}
+          <!--{{ if isset .Site.Params "sourcerepository" }}
+          <a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Path "\\" "/" }}" class="docs-header-vcs">
+          {{- $githubLogoUrl := resources.Get "images/github.svg" -}}
+          <img alt="Edit on Github" src="{{$githubLogoUrl.Permalink}}"/>
+          </a>
+          {{ end }}-->
+        </h1>
+      </div>
+      {{ .Content }}
+    </article>
+    {{ partial "docs-footer.html" .}}
+  </div>
+</main>
+{{ end }}
+
+{{- define "page-script" -}}
+{{ partial "js/code-blocks.html" .}}
+{{ partial "js/sidebar-navigation.html" .}}
+{{ partial "js/sidebar-search.html" .}}
+{{- end -}}

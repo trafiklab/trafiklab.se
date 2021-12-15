@@ -1,72 +1,41 @@
 ---
-title: "Citymapper"
+title: Citymapper
 date: 2016-11-28
-draft: false
-image: /media/2016/11/citymapper_smartphone.jpg
-
+image: "/media/2016/11/citymapper_smartphone.jpg"
 description: In August Citymapper launched its travel and navigation app for Stockholm.
+
 ---
-Nu i augusti lanserade den London-baserade startupen Citymapper sin rese- och navigationsapp för Stockholm. Sedan 2012
-guidar appen pendlare i London, New York och 35 andra storstäder runt om i världen. Förutom kollektivtrafiken visar
-tjänsten även gång- och cykelvägar och rymmer andra färdmedel som Uber, hyrcyklar och bildelningstjänster.<!--more-->
+This August, London-based startup Citymapper launched its travel and navigation app for Stockholm. Since 2012, the app has been guiding commuters in London, New York and 35 other major cities around the world. In addition to public transport, the service also shows walking and cycling routes and accommodates other means of transport such as Uber, rental bikes and car-sharing services.
 
-{{% warning %}}
-**Note:** This information is old and has not (yet) been translated to English. You are instead viewing the Swedish
-version.
+The fact that the popular navigation app Citymapper has chosen to cover Stockholm doesn't quite follow the pattern of how this fast-growing tech company tends to choose cities. Compared to practically every other city in the app, Stockholm is significantly smaller, which means fewer potential users and a lower degree of complexity in the transportation system. In addition, several popular digital travel apps have long been available in Sweden.
 
-To view the entire website in Swedish, [click here](/sv/).
-{{% /warning %}}
+\- The reason why we still started in Stockholm is mainly user requests, but also that there is good open data available, says **Claudia Bruyant Ndege**, General Manager Nordic at Citymapper.
 
-Att den hajpade navigationsappen Citymapper har valt att täcka Stockholm följer inte helt mönstret för hur detta
-snabbväxande techbolag brukar välja städer. Jämfört med i princip alla andra städer i appen så är Stockholm betydligt
-mindre, vilket innebär färre potentiella användare och lägre grad av komplexitet i transportsystemet. Dessutom finns det
-sedan länge flera populära digitala reseappar tillgängliga i Sverige.
+![Claudia Bruyant Ndege, general manager Norden på Citymapper.](/media/2016/11/citymapper_claudia_ndege.jpg  "Claudia Bruyant Ndege, general manager Norden på Citymapper.")
 
-– Anledningen till att vi ändå startat i Stockholm är främst önskemål från användare, men även att det finns bra öppen
-trafikdata tillgängligt, säger Claudia Bruyant Ndege, general manager Norden på Citymapper.
+\- Swedes are international and digital, so we actually had many Swedish users even before the launch. They had used the app when they were on holidays abroad, and wanted to be able to use the app at home as well.
 
-![Claudia Bruyant Ndege, general manager Norden på Citymapper.](/media/2016/11/citymapper_claudia_ndege.jpg 
-"Claudia Bruyant Ndege, general manager Norden på Citymapper.")
+In addition to qualitative open traffic data in Sweden, it is also important for Citymapper to have real-time information.
 
-– Svenskar är internationella och digitala, så vi hade faktiskt många svenska användare redan innan lanseringen. De hade
-använt appen när de varit på semester utomlands, och ville även kunna använda appen på hemmaplan.
+\- We found Trafiklab who could offer multiple APIs from one place, including the real-time information we needed. Then we supplemented it with data from car sharing services. We want to include all the modes a traveller needs to get from point A to point B.
 
-Förutom att det finns öppen trafikdata av god kvalité i Sverige, så är det även viktigt för Citymapper att det är
-realtidsinformation.
-
-– Vi hittade till Trafiklab som kunde erbjuda flera API:er från ett och samma ställe, däribland den realtidsinformation
-vi behövde. Sen har vi kompletterat med data från bildelningstjänster. Vi vill ha med alla färdmedel som en resenärer
-har nytta av för att ta sig från punkt A till punkt B.
-
-Att Citymapper inkluderar fler färdmedel än enbart kollektivtrafiken gör att de skiljer sig från andra reseappar. I
-Stockholm har man exempelvis inkluderat Uber, Ikeabussen och fram till november även bildelningstjänsten Car2Go. I många
-andra städer är även hyrcyklar ett alternativ. Användarna kan se i appen hur lång tid det tar att gå och att cykla med
-egen cyklar. 
+The fact that Citymapper includes more ways to travel than just public transport makes it different from other travel apps. In Stockholm, for example, it has included Uber, the Ikea bus and, until November, the Car2Go car-sharing service. In many other cities, rental bikes are also an option. Users can see in the app how long it takes to walk and to cycle with their own bikes.
 
 ![A smartphone with the citymapper app](/media/2016/11/citymapper_smartphone_2.jpg)
 
-Sedan lanseringen har appen blivit än mer populär bland svenskarna. Trots att man enbart täcker Stockholm så klättrade
-appen högt upp i App Stores svenska topplistor direkt efter lanseringen.
+Since its launch, the app has become even more popular among Swedes. Despite only covering Stockholm, the app climbed high in the App Store's Swedish charts immediately after launch.
 
-– Vi är nöjda men vill fortsätta att utveckla tjänsten för Stockholm. Just nu håller vi tummarna för att kunna
-komplettera med hyrcyklar och mer detaljerad bussinformation, men vi har inte lyckats få tag på den datan ännu. Vi
-behöver bara rätt data, sen har vi resurserna och kompetensen att utveckla digitala tjänster som underlättar för
-resenären.
+\- We are happy but we want to continue developing the service for Stockholm. At the moment we are keeping our fingers crossed to be able to add rental bikes and more detailed bus information, but we have not been able to get hold of that data yet. We just need the right data, then we've got the resources and expertise to develop digital services that make it easier for the traveller.
 
-**FAKTA OM CITYMAPPER** 
+
 ![A screenshot from the citymapper app](/media/2016/11/citymapper_screenshot.jpg)
 
-**Lanseringsår:**
-I Stockholm augusti 2016, men företaget grundades 2012 i London av entreprenören Azmat Yusuf som utvecklat appen för mer
-än 35 storstäder. Tilldelades Editors Choice Award av Apple Sverige i augusti 2016 och App of the Year från Apple år
-2013, 2014 och 2015.
+**FACTS ABOUT CITYMAPPER**
 
-**Typ av tjänst:**
-Rese- och navigationsapp för Iphone och Android för kollektivtrafiken och andra färdmedel, såsom gång, cykel, taxi,
-bildelningstjänster och hyrcyklar.
+**Launched in:** In Stockholm in August 2016, but the company was founded in 2012 in London by entrepreneur Azmat Yusuf who developed the app for more than 35 major cities. Awarded the Editors Choice Award by Apple UK in August 2016 and App of the Year from Apple in 2013, 2014 and 2015.
 
-**Data från Trafiklab:**
-GTFS Sverige 2 SL Realtidsinformation 3 SL Störningsinformation 3
+**Type of service:** Travel and navigation app for Iphone and Android for public transport and other means of transport, such as walking, cycling, taxis, car-sharing services and rental bikes.
 
-**Antal användare:**
-Ingen officiell siffra finns tillgänglig, men appen återfinns högt upp på topplistorna över populära navigationsappar.
+**Data from Trafiklab:** GTFS Sverige 2, SL Real time information 3, SL Service alerts
+
+**User count:** No official number is available, but the app is high up on the charts for popular navigation apps.

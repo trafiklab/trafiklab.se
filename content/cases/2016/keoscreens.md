@@ -1,73 +1,41 @@
 ---
-title: "Keoscreens"
+title: Keoscreens
 date: 2016-08-30
-draft: false
-image: /media/2016/08/keoscreens-fridhemsplan.jpg
+image: "/media/2016/08/keoscreens-fridhemsplan.jpg"
+descriptions: Keoscreens is an in-vehicle display system to show riders the next stops
+  of their bus.
 
-descriptions: Keoscreens is an in-vehicle display system to show riders the next stops of their bus.
 ---
-Sedan ett år tillbaka får resenärer i Stockholms innerstad trafikinformation i realtid direkt på skärmar ombord på de
-blåa bussarna med tjänsten KeoScreens. Exempelvis kan man se kommande hållplatser, möjliga byten och hur många minuter
-det är till bytet. Resultatet är nöjdare resenärer – hela 95 procent uppger att skärmarna underlättar resan.
-<!--more-->
+Since a year ago, travellers in Stockholm's city centre have been able to get real-time traffic information directly on screens on board the blue buses with the KeoScreens service. For example, they can see upcoming stops, possible changes and how many minutes it is to the change. The result is more satisfied travellers - as many as 95% say the screens make their journey easier.
 
-{{% warning %}}
-**Note:** This information is old and has not (yet) been translated to English. You are instead viewing the Swedish
-version.
+KeoScreens is the brainchild of the operator Keolis, which came up with the idea three years ago when it submitted a tender for Stockholm's inner city bus services.
 
-To view the entire website in Swedish, [click here](/sv/).
-{{% /warning %}}
+> We wanted to do something that stood out in the procurement. And we knew from countless surveys that travellers always want better and more up-to-date information during their journey, especially in the event of disruption. So we invested in a new digital service for passenger information," says **Otto Dyberg**, IT manager at Keolis.
 
-Bakom KeoScreens står operatören Keolis, som fick idén i samband med att de för tre år sen lämnade anbud till
-upphandlingen av Stockholms innerstads busstrafik.
-
-- Vi ville göra något som utmärkte oss i upphandlingen. Och vi visste från otaliga undersökningar att resenärerna alltid
-  efterfrågar bättre och uppdaterad information under resan, inte minst vid störningar. Så vi satsade på en ny digital
-  ombordtjänst för resenärsinformation, säger Otto Dyberg, IT-chef på Keolis.
-
-Strategin var framgångsrik och Keolis vann upphandlingen i början av 2014. Utvecklingen av tjänsten KeoScreens startade
-direkt i samarbete med leverantörerna Hogia PTS och Mobitec samt med trafikförvaltningen på Stockholm Läns Landsting som
-beställare. Projektet handlade både om att säkerställa installationen av skärmarna ombord på bussarna direkt i
-fordonsleverantörens fabrik och att utveckla ett stabilt system för störnings- och realtidsdata.
+The strategy was successful and Keolis won the contract in early 2014. The development of the KeoScreens service started immediately in cooperation with the suppliers Hogia PTS and Mobitec and with the traffic administration of Stockholm as the client. The project involved both ensuring the installation of the screens on board the buses directly in the vehicle supplier's factory and developing a stable system for fault and real-time data.
 
 ![Otto Dyberg, IT-chef på Keolis](/media/2016/08/keoscreens-otto-dyberg.jpg "Otto Dyberg, IT-chef på Keolis")
 
-- Missvisande trafikinformation är ju kanske ännu mer irriterande än ingen information alls, så korrekt och kvalitativ
-  realtidsdata har varit en förutsättning för projektet. Sedan ville vi visa hur trafiken rullar i verkligheten, inte
-  den statiska tidtabellsinformationen, vilket gjorde projektet komplext.
+> Misleading traffic information is perhaps even more annoying than no information at all, so accurate and qualitative real-time data has been a prerequisite for the project. Then we wanted to show how the traffic moves in reality, not the static timetable information, which made the project complex, says Otto Dyberg.
 
-Efter ett års utveckling lanserades KeoScreens i etapper på de blå innerstadsbussarna, som används av närmare en miljon
-resenärer varje vecka. Och det dröjde inte länge förrän resenärerna tagit tjänsten till sig. En uppföljande
-kundundersökning under hösten 2015 visade att 95 procent av resenärerna följer informationen på skärmarna och tycker att
-den underlättar deras resande.
+After a year of development, KeoScreens was launched in stages on the blue inner-city buses, which are used by nearly one million passengers every week. And it didn't take long for passengers to embrace the service. A follow-up customer survey in autumn 2015 showed that 95% of passengers follow the information on the screens and think it makes their journey easier.
 
-- Målet har varit att förenkla och ge resenärer en trygghet i sitt resande och det verkar vi ha lyckats med. En
-  förklaring till varför tjänsten är uppskattad är att vi låtit trafik- och störningsinformation i realtid få stå i
-  fokus. Den typ av information har resenärerna stor nytta av i sitt resande.
+> The aim has been to simplify and give travellers peace of mind, and we seem to have succeeded. One explanation for why the service is popular is that we have allowed real-time traffic and disruption information to take centre stage. This type of information is very useful for travellers, Otto says.
 
-KeoScreen använder SL:s störnings- och realtidsdata från alla operatörer och trafikslag via Trafiklabs API.
+KeoScreen uses SL's disruption and real-time data from all operators and traffic types via Trafiklab's API.
 
-- Den öppna datan har varit viktig för att snabbt kunna realisera projektet, även om vi som ett större företag hade
-  kunnat lösa det ändå men till en högre kostnad. Framåt kommer det dessutom att bli viktigare med innovation som driver
-  resande i trafikupphandlingarna. Hos oss pratar vi exempelvis mycket om digitala tjänster som tillgängliggör alla
-  typer av transporter för resenärerna. Öppen data en viktig komponent för den utvecklingen.
+> The open data has been important to be able to realise the project quickly, even if as a larger company we could have done it anyway but at a higher cost. Going forward, innovation that drives travel will also be more important in transport procurement. For example, we talk a lot about digital services that make all types of transport accessible to travellers. Open data an important component for that development, says Otto.
 
-Förutom att KeoScreens används på de blå bussarna i Stockholm så har lösningen även testkörts under våren 2016 av
-Västtrafik.
+In addition to KeoScreens being used on the blue buses in Stockholm, the solution has also been tested during the spring of 2016 by Västtrafik.
 
 ![KeoScreens ombord på de blåa innerstadsbussarna i Stockholm.](/media/2016/08/keoscreens-fridhemsplan.jpg "KeoScreens ombord på de blåa innerstadsbussarna i Stockholm.")
 
-**FAKTA OM KEOSCREENS**
+**FACTS ABOUT KEOSCREENS**
 
-**Lanseringsår:**
-2015
+**Launch date:** 2015
 
-**Typ av tjänst:**
-Digitala skärmar ombord på bussen med realtidsinformation, såsom komande hållplatser, byten vid kommande hållplatser och
-antal minuter kvar till nästa avgång. Även störningsinformation visas.
+**Type of service:** Digital screens on board the bus with real-time information, such as upcoming stops, changes at upcoming stops and the number of minutes left until the next departure. Disturbance information is also displayed.
 
-**Data från Trafiklab:**
-Trafiklabs API för realtids- och störningsinformation för fordon SL Realtidsinformation 3 + SL Störningsinformation 2
+**Data from Trafiklab:** Trafiklabs API for realtime and service alerts, SL Real time and SL Service alerts
 
-**Antal användare:**
-Hundratusentals stockholmare varje vecka på de blå innerstadsbussarna i Stockholm.
+**User count:** Hundreds of thousands of Stockholmers ride the blue inner-city buses in Stockholm every week.

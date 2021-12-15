@@ -1,71 +1,38 @@
 ---
-title: "Skjutsgruppen.se"
+title: Skjutsgruppen.se
 date: 2017-02-16
-draft: false
-image: /media/2017/02/skjutsgruppen_bag.jpg
+image: "/media/2017/02/skjutsgruppen_bag.jpg"
+description: Skjutsgruppen.se is Swedens only service which combines public transport
+  with carpooling. Skjutsgruppen, the group behind the website, consists today of
+  over 70.000 members.
 
-description: Skjutsgruppen.se is Swedens only service which combines public transport with carpooling. Skjutsgruppen, the group behind the website, consists today of over 70.000 members. 
 ---
-På skjutsgruppen.se finns Sveriges enda tjänst som kombinerar kollektivtrafikresor med samåkning i hyrbilar och
-privatpersoners fordon. Bakom tjänsten står den ideella samåkningsrörelsen Skjutsgruppen, som idag engagerar över 70 000
-deltagare.<!--more--> Målet är att effektivare nyttja befintliga resurser för en bättre miljö, samtidigt som mobiliteten
-ökar och människor möts.
+Skjutsgruppen is Sweden's only service combining public transport with carpooling in rental cars and private vehicles. Skjutsgruppen is a non-profit carpooling movement, which today engages over 70,000 participant. The goal is to use existing resources more efficient, which benefits the envorinment while increasing mobility and meeting people.
 
-{{% warning %}}
-**Note:** This information is old and has not (yet) been translated to English. You are instead viewing the Swedish
-version.
-
-To view the entire website in Swedish, [click here](/sv/).
-{{% /warning %}}
-
-För tio år sedan startade Mattias Jägerskog Skjutsgruppen som ett socialt experiment. Vänner bjöd in vänner via sociala
-medier för att samåka och gensvaret blev enormt. På Facebook och Twitter började snabbt hashtaggen #skjutsgruppen att
-användas av tusentals människor för att ge varandra skjuts. När Facebook-gruppen nådde 20 000 deltagare var det dags att
-ta nästa steg – utveckla ett sökverktyg för samåkning. Och det handlade inte enbart om samåkning i privatpersoners
-fordon.
+Ten years ago, **Mattias Jägerskog** started Skjutsgruppen as a social experiment. Friends invited friends via social media to ride together and the response was huge. On Facebook and Twitter, the hashtag #skjutsgruppen quickly spread, thousands of people used it to give each other a ride. When the Facebook group reached 20,000 participants, it was time to take the next step - develop a search tool for carpooling. And it was not just about carpooling in private vehicles.
 
 ![Skjutsgruppen meetup](/media/2017/02/skjutsgruppen_talking.jpg)
-– I vår förenings stadgar står det att vi ska “…främja former av miljövänligt resande med inriktning mot gemensamt
-resande såsom samåkning, kollektivtrafik och därmed likartade samt förenliga verksamheter.” Vi har ända sen starten
-längtat efter att visualisera “den totala resan” och när det fanns öppna API:er med kollektivtrafikdata blev det
-praktiskt genomförbart, berättar Mattias Jägerskog.
+\- Our association's statutes state that we must “… encourage different kinds of environmentally friendly travel with a focus on travelling together such as carpooling, public transport and similar compatible functions”. Ever since the start we’ve longed to visualize ”the total journey” and when there were open APIs with public transport data, it became doable, says Mattias Jägerskog.
 
-Efter en crowdfunding-kampanj som samlade in 200 000 kronor sattes projektet igång och ett par månader senare lanserades
-den nya söktjänsten på skjutsgruppen.se. I en och samma sökning får resenären förslag på platser i privatpersoners
-bussar, båtar, bilar, cyklar och luftballonger och kollektivtrafiken i hela Sverige. Dessutom har tjänsten kompletterats
-med samåkningsbilar från biluthyraren Hertz.
+After a crowdfunding campaign that raised SEK 200,000, the project started and a couple of months later they launched the search service on skjutsgruppen.se. In one search, the traveler receives suggestions for places in private individuals cars, boats, buses, bicycles and hot air balloons and public transport throughout Sweden. In addition, the service has been supplemented with carpools from car rental company Hertz.
 
 ![Mattias Jägerskog, initiativtagare till Skjutsgruppen.](/media/2017/02/mattias_jagerskog_skjutsgruppen.jpg "Mattias
 Jägerskog, initiativtagare till Skjutsgruppen.")
 
-– Om en hyrbil körs enbart från punkt A till punkt B men inte tillbaka, så behöver den återtransporteras. Hertz erbjuder
-därför via tjänsten Freerider privatpersoner att köra tillbaka hyrbilarna gratis, och med hjälp av vårt verktyg kan
-flera åka tillsammans i dessa hyrbilar. På så sätt skapar vi samåkning även inom den privata sektorn, och kombinerar det
-med offentliga färdmedel och platser i privata fordon.
+\- If a rental car is driven only from point A to point B but not back, then it needs to be transported back. Through the service Freerider Hertz offers private individuals to drive the rental cars back for free, and thanks to skjutsgruppen several people kan ride together in these rental cars. In this way, we also create car sharing in the private sector, and combine it with public transport and seats in private vehicles.
 
-Öppna data var en förutsättning för att skjutsgruppen.se skulle bli verklighet, både från kollektivtrafikbranschen och
-Hertz. Dessutom har Skjutsgruppen valt att göra samma sak – förse tredjepartsutvecklare med öppen samåkningsdata.
+Open data is necessary for skjutsgruppen.se to become reality, both from the public transport industry and Hertz. In addition, Skjutsgruppen has chosen to do the same thing - provide third-party developers with open carpooling data.
 
-– Öppna data behövs för att skapa hållbara mobilitetstjänster och vi hoppas att andra reseappar ska integrera vår data i
-sina tjänster. Med ökad samåkning får vi färre antal fordon på vägarna, minskade koldioxidutsläpp och billigare
-transporter för privatpersoner. Samhällen blir mer inkluderande genom den närhet grannar, kollegor och vänner får via
-delandet av ett och samma fordon.
+\- Open data is needed to create sustainable mobility services and we hope that other travel apps will integrate our data in their services. With increased car sharing, we get fewer vehicles on the roads, reduced carbon dioxide emissions and reduced travel costs for individuals. Societies become more inclusive through the proximity of neighbors, colleagues and friends that share a vehicle.
 
-Skjutsgruppen och Mattias Jägerskog utsågs till Trafiklabhjälte 2016. En del av motiveringen löd så här: “Mattias har
-genom sitt engagemang drivit frågor om nya sätt att se på mobilitet, delningsekonomi och hur öppna data är en central
-komponent i detta arbete.”
+Skjutsgruppen and Mattias Jägerskog were named Trafiklab hero 2016. Part of the motivation was as follows: “Mattias has through his commitment driven questions about new ways of looking at mobility, shared economy and how open data is a central component of this work. "
 
-**FAKTA OM SKJUTSGRUPPEN.SE**
+**FACTS ABOUT SKJUTSGRUPPEN.SE**
 
-**Lanseringår:**
-Rörelsen 2007, skjutsgruppen.se 2013.
+**Launched in:** The movement 2007, skjutsgruppen.se 2013
 
-**Typ av tjänst:**
-Sökverktyg för samåkning i privatpersoners bussar, båtar, bilar, cyklar och luftballonger, hyrbilar från Hertz Freerider
-samt all kollektivtrafik i hela Sverige.
+**Type of service:** Search tool for co-riding in private vehicles such as cars, boats, buses, bicycles, hot air balloons, rental cars from Hertz and all of Swedens public transportation
 
-**Data från Trafiklab:**
-ResRobots API för reseplanering
+**Data from Trafiklab:** ResRobot's API Route planner
 
-**Antal deltagare:**
-I skrivande stund över 70 000 deltagare.
+**User count:** As of today 70 000 users

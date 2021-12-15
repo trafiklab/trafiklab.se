@@ -1,0 +1,30 @@
+{{ $is_fallback_source_page := (isset .Params "generated_fallback_page_source") }}
+{{ $source_page := . }}
+{{ if $is_fallback_source_page }}
+    {{ $source_page = index .Translations 0 }}
+{{ end }}
+
+<footer class="docs-footer">
+    <div class="docs-footer__container">
+        <h4>{{ i18n "docs-footer-about-this-page" }}</h4>
+        {{ if $source_page.Date }}<p>{{ i18n "docs-footer-published-at" }} {{ $source_page.Date.Format "January 2, 2006" }}.</p>{{ end }}
+        {{ if $source_page.GitInfo }}
+        {{ if or ($source_page.Date.IsZero) (lt $source_page.Date $source_page.GitInfo.AuthorDate)}}<p>{{ i18n "docs-footer-last-modified" }} {{ $source_page.GitInfo.AuthorDate.Format "January 2, 2006" }}.</p>{{ end }}
+        {{ end }}
+        <h4>{{ i18n "docs-footer-something-wrong" }}</h4>
+        {{ if isset $.Site.Params "support" }}
+            <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
+        {{ end }}
+
+        {{ if isset .Site.Params "sourcerepository" }}
+            <p><a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            {{ i18n "docs-footer-view-on-github" }}</a></p>
+            <p><a href="{{ $.Site.Params.sourceRepository }}edit/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            {{ i18n "docs-footer-edit-on-github" }}</a></p>
+            {{ if $is_fallback_source_page }}
+                <p><a href="{{ $.Site.Params.sourceRepository }}tree/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Dir "\\" "/" }}">
+                    {{ i18n "docs-footer-create-translation-on-github" }}</a></p>
+            {{ end }}
+        {{ end }}
+    </div>
+</footer>

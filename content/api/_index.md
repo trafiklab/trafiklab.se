@@ -19,11 +19,12 @@ and datasets.
 
 | API | File format | Scheduled data | Real-time data | Coverage | What is it |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| [GTFS Sverige 2](gtfs/gtfs-sverige-2-static/) | GTFS | ✅ | ❌ | Entire Sweden | All Public Transport Dataset |
-| [GTFS Regional](gtfs/gtfs-regional/) | GTFS(-RT) | ✅ | Some, [see details](gtfs/gtfs-regional/#which-operators-are-covered-by-this-dataset) | [See details](gtfs/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Public Transport Datasets |
+| [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/) | GTFS | ✅ | ❌ | Entire Sweden | Dataset with all public transport, static and historical |
+| [GTFS Regional](/api/trafiklab-apis/gtfs-regional/) | GTFS(-RT) | ✅ | Some, [see details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | [See details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Public Transport Datasets |
+| [KoDa](/api/trafiklab-apis/koda/) | GTFS(-RT) | ✅ | Some, [see GTFS Regional details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Some, [see GTFS Regional details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | High quality historical data |
 | [ResRobot Stolptidstabeller](/api/trafiklab-apis/resrobot-v21/timetables.md) | Json, XML | ✅ | Some, [see details](/api/trafiklab-apis/resrobot-v21/timetables.md) | Entire Sweden | Departure & Arrival board API |
 | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v21/route-planner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
-| [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
+| [SLs APIs ](/api/trafiklab-apis/sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
 | Oxify Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
 | Trafikverkets API | Json, XML |  |  | Road and national rail | Road and rail API |
 

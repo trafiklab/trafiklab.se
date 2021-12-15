@@ -1,0 +1,14 @@
+{{ define "main"}}
+<main class="main-content">
+    <div class="page">
+        <main id="site-content">
+            <h1 id="title">The page you requested could not be found.</h1>
+            <h3 id="title">Maybe you were looking for one of these pages:</h3>
+            <p><a href="{{ "/api" | relURL }}">Our APIs and their documentation</a></p>
+            <p><a href="{{ "/docs" | relURL }}">Information on how you can use our data</a></p>
+            <p><a href="{{ .Site.Params.devPortalUrl }}">Your API keys and projects on our developer portal.</a></p>
+            <p><a href="{{ "/" | relURL }}">Go back to the homepage</a></p>
+        </main>
+    </div>
+</main>
+{{ end }}

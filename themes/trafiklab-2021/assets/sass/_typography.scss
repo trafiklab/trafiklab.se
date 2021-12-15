@@ -1,0 +1,106 @@
+* {
+  font-family: $primary-font;
+}
+
+a, p, ul, ol, li, span{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+code, pre {
+  font-family: $code-font;
+  * {
+    font-family: $code-font;
+  }
+}
+
+body p a,
+body p a:link,
+body p a:visited,
+body table a,
+body table a:link,
+body table a:visited {
+  color: $purple;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $light-purple;
+    border-bottom: 1px dashed $light-purple;
+  }
+}
+
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $alternative-font;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 3.0rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+h1.tl-brand{
+  font-size:50px;
+  font-weight: 500;
+  font-family: $brand-font;
+  text-transform: uppercase;
+  color: #fff !important;
+  background-color: $purple;
+  letter-spacing: 0.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 .5rem;
+}
+
+h5{
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin: 1rem 0 .5rem;
+}
+
+// Helpers
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-top: 0;
+}
+
+.tl-label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+  .tl-label {
+    line-height: 1.375rem;
+  }
+}

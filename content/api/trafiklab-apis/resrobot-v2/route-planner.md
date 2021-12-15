@@ -5,6 +5,8 @@ date: 2015-06-24
 aliases: 
   - /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
   - /api/resrobot-reseplanerare/dokumentation/sokresa
+  - /api/resrobot-reseplanerare/dokumentation/
+  - /api/resrobot-reseplanerare
 ---
 ## What does this API provide?
 
@@ -39,7 +41,7 @@ including a bit of information about each vehicle, such as where it is heading o
 
 {{% info %}}
 Only the most important parameters and response variables are described on this page. Looking for more technical
-details? These can be found in [the OpenAPI specification](api-spec.md).
+details? These can be found in [the OpenAPI specification](api-specification.md).
 {{% /info %}}
 
 {{% warning %}}
