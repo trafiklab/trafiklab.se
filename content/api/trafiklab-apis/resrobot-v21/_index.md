@@ -2,7 +2,8 @@
 title: ResRobot v2.1
 layout: "single"
 weight: 41
-url: "api/resrobot21"
+aliases: 
+  - "api/resrobot21"
 date: 2021-10-12
 ---
 

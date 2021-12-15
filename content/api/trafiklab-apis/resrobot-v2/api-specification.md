@@ -12,8 +12,10 @@ aliases:
 {{% warning %}}
 **New version available**
 
-A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
-build new apps on version 2.0.
+A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version, 
+and it is no longer possible to build new apps on version 2.0.
+
+**Version 2.0, which you are currently looking at, will be discontinued at April 30th, 2022.**   
 {{% /warning %}}
 
 {{% oai-spec url="https://raw.githubusercontent.com/trafiklab/openApi-docs/master/resrobot-v2.yaml" %}}

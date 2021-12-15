@@ -1,5 +1,5 @@
 ---
-title: ResRobot nearby stops
+title: ResRobot Nearby stops
 aliases: /api/trafiklab-apis/resrobot-reseplanerare/narliggande-hallplatser
 weight: 31
 date: 2015-06-24
@@ -19,6 +19,15 @@ See [Combining data and APIs](../../transport-data-formats/combining-data/) for 
 Be aware that the current position of for example a smartphone user is personal data. We do not save this data, but 
 it might be stored for a short time in for example log files. You should probably inform your users and ask for 
 permission before sending their position to 3rd parties.
+{{% /warning %}}
+
+{{% warning %}}
+**New version available**
+
+A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version,
+and it is no longer possible to build new apps on version 2.0.
+
+**Version 2.0, which you are currently looking at, will be discontinued at April 30th, 2022.**   
 {{% /warning %}}
 
 ### Data format

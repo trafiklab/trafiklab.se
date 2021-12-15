@@ -10,6 +10,15 @@ date: 2015-06-24
 ResRobot stop lookup provides information about stops, including their ids and position, by searching based on their
 name.
 
+{{% warning %}}
+**New version available**
+
+A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version,
+and it is no longer possible to build new apps on version 2.0.
+
+**Version 2.0, which you are currently looking at, will be discontinued at April 30th, 2022.**   
+{{% /warning %}}
+
 ### Data format
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.

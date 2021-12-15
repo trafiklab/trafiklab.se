@@ -1,5 +1,5 @@
 ---
-title: ResRobot nearby stops
+title: ResRobot Nearby stops
 weight: 31
 date: 2021-10-12
 ---
