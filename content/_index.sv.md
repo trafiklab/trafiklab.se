@@ -3,7 +3,7 @@ title: "Trafiklab"
 hero: /tl-illustration-map.svg
 cases_section: true
 news_section: true
-highlighted_page: /news/2021/2021-04-16-gtfs-regional-occupancy-data
+highlighted_page: /news/2021/2021-12-14-koda-historical-data
 mc: true
 type: home
 landingRoller:
