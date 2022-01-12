@@ -4,7 +4,6 @@ date: 2014-06-17
 aliases:
 - "/post/89056496573/en-lyckad-meetup-med-åsa-vagland-igår"
 image: "/media/2014/06/2014-06-17-en-lyckad-meetup-med-asa-vagland-igar-1.jpg"
-draft: true
 
 ---
 Igår var det meetup med Näringsdepartementets utredare Åsa Vagland. Hennes uppdrag är som tidigare nämnt att göra en utredning om framtidens biljettsystem.
