@@ -4,7 +4,6 @@ date: 2014-10-31
 aliases:
 - "/post/101420149508/en-höjdartorsdag-–-trafiklabs-meetup-var-fullsatt"
 image: "/media/2014/10/2014-10-31-en-hojdartorsdag-trafiklabs-meetup-var-fullsatt-1.jpg"
-draft: true
 
 ---
 Gårdagens meetup hade över 70 anmälda deltagare och kvällen blev minst sagt lyckad. En ny punkt på agendan denna gång var ”open space” vilket innebar att deltagarna fick möjlighet att ta upp valfritt ämne. Under denna punkt presenterade bland annat företaget Fidesmo nya idéer kring resekort i kollektivtrafiken och biljettköp i mobilen. 
