@@ -3,7 +3,6 @@ title: EastSwedenHack2014
 date: 2014-09-03
 aliases:
 - "/post/96526097233/eastswedenhack2014"
-draft: true
 
 ---
 Under helgen 5-7 september går East Sweden Hack av stapeln i Linköping. Vi från Trafiklab kommer självklart att vara på plats! 
