@@ -36,3 +36,9 @@ other = "This page was published at"
 
 [docs-footer-last-modified]
 other = "This page was last modified at"
+
+[logowall-title]
+other = "Official open data"
+
+[logowall-paragraph]
+other = "At Trafiklab, we provide official open data for all public transport in Sweden. Some of the transport companies which we publish data for are listed below:"

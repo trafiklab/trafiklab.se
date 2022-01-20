@@ -2,10 +2,12 @@
 {{ $logos := $headless.Resources.Match "logowall/*" }}
 {{ if $logos }}
 <div class="home-container__segment home-container__segment--logowall">
-    <h2>Official open data for</h2>
+    <h2>{{ i18n "logowall-title" }}</h2>
+    <p>{{ i18n "logowall-paragraph" }}</p>
     <div class="tl-grid tl-grid__container">
-    {{ range $logos }}
-        <a class="logowall__logo tl-grid tl-grid__item tl-grid--small-6 tl-grid--medium-3">
+    {{ range sort $logos }}
+        <div class="tl-grid__item tl-grid--small-12 tl-grid--medium-6 tl-grid--large-3">
+        <a class="logowall__logo" href="{{ .Params.link }}" title="{{ .Params.Title }}">
             {{ $image := resources.Get (printf "%s" .Params.Image) }}
             {{ if $image }}
             {{ if in .Params.Image ".jpg" }}
@@ -15,6 +17,7 @@
                  title="{{.Title}}">
             {{ end }}
         </a>
+        </div>
     {{ end }}
     </div>
 </div>
