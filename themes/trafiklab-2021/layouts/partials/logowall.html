@@ -1,0 +1,24 @@
+{{ $headless := .Site.GetPage "/headless" }}
+{{ $logos := $headless.Resources.Match "logowall/*" }}
+{{ if $logos }}
+<div class="home-container__segment home-container__segment--logowall">
+    <h2>{{ i18n "logowall-title" }}</h2>
+    <p>{{ i18n "logowall-paragraph" }}</p>
+    <div class="tl-grid tl-grid__container">
+    {{ range sort $logos }}
+        <div class="tl-grid__item tl-grid--small-12 tl-grid--medium-6 tl-grid--large-3">
+        <a class="logowall__logo" href="{{ .Params.link }}" title="{{ .Params.Title }}">
+            {{ $image := resources.Get (printf "%s" .Params.Image) }}
+            {{ if $image }}
+            {{ if in .Params.Image ".jpg" }}
+            {{ $image := $image.Resize "240x webp" }}
+            {{ end }}
+            <img src="{{ $image.Permalink }}" alt="{{.Title}}"
+                 title="{{.Title}}">
+            {{ end }}
+        </a>
+        </div>
+    {{ end }}
+    </div>
+</div>
+{{ end }}

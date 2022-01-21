@@ -5,7 +5,6 @@ aliases:
 - "/post/64951246993/nyatrafiklab"
 
 ---
-
 Efter en längre tids arbete kan vi nu äntligen lansera nya Trafiklab. Det är mycket som är nytt och vi kommer den
 närmaste tiden förbättra tjänsten löpande.
 
@@ -13,12 +12,9 @@ närmaste tiden förbättra tjänsten löpande.
 
 #### Design
 
-Nya Trafiklab har fått en helt ny design, som först och främst förenklar och fokuserar, men som framförallt sätter
-utvecklaren i fokus – där han eller hon finner inspiration, skapar egna projekt och dessutom samarbetar med andra. Vi
-har en ny startsida där vi visar det mest aktuella inom Trafiklabs tre områden; API:er, projekt och medlemmar. Designen
-har blivit luftigare och grafiken har blivit mer färgglad. Vår ambition är att göra Trafiklab till ett roligt verktyg
-som uppmuntrar till experimenterande och skapande. Vi har även en ny uppsättning standardikoner för projekt, API:er och
-medlemmar som är till för att lätta upp och göra Trafiklabs innehåll mer lättöverskådligt.
+Nya Trafiklab har fått en helt ny design, som först och främst förenklar och fokuserar, men som framförallt sätter utvecklaren i fokus – där hen finner inspiration, skapar egna projekt och dessutom samarbetar med andra. Vi har en ny startsida där vi visar det mest aktuella inom Trafiklabs tre områden; API:er, projekt och medlemmar. 
+
+Designen har blivit luftigare och grafiken har blivit mer färgglad. Vår ambition är att göra Trafiklab till ett roligt verktyg som uppmuntrar till experimenterande och skapande. Vi har även en ny uppsättning standardikoner för projekt, API:er och medlemmar som är till för att lätta upp och göra Trafiklabs innehåll mer lättöverskådligt.
 
 #### Dashboard
 
@@ -43,14 +39,11 @@ Profilbilderna har blivit större. Se till att ladda upp en bild som är minst 2
 
 #### Driftstatus
 
-[Ny sida](http://www.trafiklab.se/meddelanden) för översikt av driftstatus. Det går även
-att [prenumera](http://www.trafiklab.se/meddelanden/rss) på dessa med RSS. Sedan tidigare går det även att hålla koll på
-Trafiklabs API:ers upptid via [Pingdom](http://status.trafiklab.se).
+Ny sida för översikt av driftstatus. Det går även att prenumera på dessa med RSS. Sedan tidigare går det även att hålla koll på Trafiklabs API:ers upptid via Pingdom.
 
 #### Bloggen flyttad till Tumblr
 
-Numera finns vi på Tumblr så följ oss gärna om du har ett Tumblr-konto. Det går givetvis även
-att [prenumerera via RSS](http://blogg.trafiklab.se/rss).
+Numera finns vi på Tumblr så följ oss gärna om du har ett Tumblr-konto. Det går givetvis även att prenumerera via RSS.
 
 #### Förslagslådan ersätts av Kundo
 
@@ -87,11 +80,9 @@ Innehållet kring API:erna kommer att gås igenom och göra enklare att använda
 I nuläget använder vi en enkel Google-sökning men vi undersöker möjligheten till att byta till eget sajtsök med
 facetter.
 
-### Ge os feedback
+### Ge oss feedback
 
-Vi är all ears och vill höra vad ni tycker! Det finns en tillfällig feedback-funktion nu iom lanseringen. Där kan ni
-enkelt ge tips, feedback och rapportera fel. Det går givetvis även bra att använda sig av
-vårt [Kundo-forum](http://kundo.se/org/trafiklabse).
+Vi är all ears och vill höra vad ni tycker! Det finns en tillfällig feedback-funktion nu iom lanseringen. Där kan ni enkelt ge tips, feedback och rapportera fel. Det går givetvis även bra att använda sig av vårt [Kundo-forum](http://kundo.se/org/trafiklabse).
 
 ### Nyheter med projektsidorna
 

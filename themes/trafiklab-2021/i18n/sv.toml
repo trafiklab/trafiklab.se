@@ -36,3 +36,9 @@ other = "Sidan först publicerades den"
 
 [docs-footer-last-modified]
 other = "Sidan uppdaterades sist den"
+
+[logowall-title]
+other = "Officiell öppna data"
+
+[logowall-paragraph]
+other = "Trafiklab tillhandahåller officiella öppna data för all kollektivtrafik i Sverige. Några av de trafikföretag som vi publicerar öppna data åt listas här:"
