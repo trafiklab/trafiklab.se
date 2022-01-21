@@ -1,5 +1,5 @@
 ---
 title: "Länstrafiken Norbotten"
-link: ""
+link: "https://ltnbd.se/"
 image: "/media/2021/12/norbotten-lanstrafik.webp"
 ---

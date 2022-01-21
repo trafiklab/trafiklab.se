@@ -1,5 +1,5 @@
 ---
 title: "Västmanland länstrafik"
-link: ""
+link: "https://www.vl.se/"
 image: "/media/2021/12/vastmanland-lanstrafik.webp"
 ---

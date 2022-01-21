@@ -1,5 +1,5 @@
 ---
 title: "Kalmar länstrafik"
-link: ""
+link: "https://www.kalmarlanstrafik.se/"
 image: "/media/2021/12/klt.webp"
 ---

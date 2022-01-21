@@ -1,5 +1,5 @@
 ---
 title: "SJ"
-link: ""
-image: "/media/2021/12/sj.jpg"
+link: "https://sj.se"
+image: "/media/2021/12/sj.png"
 ---
