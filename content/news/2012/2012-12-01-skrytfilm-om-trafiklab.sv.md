@@ -1,11 +1,8 @@
 ---
-title: Skrytfilm om trafiklab
+title: Film om Trafiklab
 date: 2012-12-01
 aliases:
-  - "/post/64945172501/skrytfilm-om-trafiklab"
-draft: true
+- "/post/64945172501/skrytfilm-om-trafiklab"
 
 ---
-
-<iframe frameborder="0" height="281" src="http://player.vimeo.com/video/49773135?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179" width="500"></iframe>
- 
+<iframe title="vimeo-player" src="[https://player.vimeo.com/video/49773135?h=af22262e83](https://player.vimeo.com/video/49773135?h=af22262e83 "https://player.vimeo.com/video/49773135?h=af22262e83")" width="640" height="360" frameborder="0" allowfullscreen></iframe>

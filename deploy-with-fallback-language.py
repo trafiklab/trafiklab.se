@@ -71,6 +71,10 @@ if __name__ == "__main__":
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/cases'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/docs'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/news'), dry_run=args.dry)
+
+    # Logowal logos don't need translations, they have no translateable text
+    generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/headless/logowall'), dry_run=args.dry)
+
     # Continue build
     if os.path.exists("public"):
         os.removedirs("public")
