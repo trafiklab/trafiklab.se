@@ -37,8 +37,7 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **stable** status. This means that we will communicate when fields are added, or changed. When
-breaking changes are made, you will get six months or more to update your implementations.
+This API has the **deprecated** status and will be discontinued on June 30th 2022.
 
 ## Using ResRobot Timetables
 
@@ -118,8 +117,6 @@ https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&key=API_KEY
 | format        | String             | No, default xml          | The response format, json or XML.                                                                                                                                                                                                                                                                                                                                                                                                       | |
 
 ### Response
-
-För en exakt teknisk beskrivning av varje fält i svaret hanvisar vi till vår OpenAPI dokumentation.
 
 {{% note %}} Note that an actual response contains more entries and stops - we removed some from this example
 response since it's only meant to show the structure of the response. {{% /note %}}

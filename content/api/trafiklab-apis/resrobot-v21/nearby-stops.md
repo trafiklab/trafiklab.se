@@ -15,7 +15,7 @@ pair of coordinates.
 Due to technical issues this API will only become accessible from March 24th. Attempts to use this API before that date
 will lead to "invalid API key" errors. Until then, 
 [the current v2 version of this endpoint](../resrobot-v2/nearby-stops.md) can be used instead.
-{{% error %}}
+{{% /error %}}
 
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This
 way you can provide autocomplete and other search functions without internet access. It will make your application more
@@ -41,10 +41,10 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **stable** status. When breaking changes are made, you will get six months or more to update your
-implementations. Examples of breaking changes are the changes to existing fields or query parameters, or in case new
-query parameters are required to keep the results the same. The addition of new fields isn't considered a breaking
-change, and can happen without warning.
+This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
+users to update their implementations. Examples of breaking changes are the changes to existing fields or query
+parameters, or in case new query parameters are required to keep the results the same. The addition of new fields isn't
+considered a breaking change, and can happen without warning.
 
 ## Using ResRobot Nearby stops
 

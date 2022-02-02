@@ -33,10 +33,7 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **stable** status. When breaking changes are made, you will get six months or more to update your
-implementations. Examples of breaking changes are the changes to existing fields or query parameters, or in case new
-query parameters are required to keep the results the same. The addition of new fields isn't considered a breaking
-change, and can happen without warning.
+This API has the **deprecated** status and will be discontinued on June 30th 2022.
 
 ## Using ResRobot Stop lookup
 

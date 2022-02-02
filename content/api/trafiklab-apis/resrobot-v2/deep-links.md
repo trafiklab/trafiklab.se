@@ -23,10 +23,10 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **stable** status. When breaking changes are made, you will get six months or more to update your
-implementations. Examples of breaking changes are the changes to existing fields or query parameters, or in case new
-query parameters are required to keep the results the same. The addition of new fields isn't considered a breaking
-change, and can happen without warning.
+This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
+users to update their implementations. Examples of breaking changes are the changes to existing fields or query
+parameters, or in case new query parameters are required to keep the results the same. The addition of new fields isn't
+considered a breaking change, and can happen without warning.
 
 ## Using ResRobot Deep links
 
@@ -34,12 +34,12 @@ In order to use deep links into ResRobot results, you construct the request URL 
 results for, and redirect the user who needs to see the results to this URL. This allows you to show users
 route-plannings directly from your website or app, without any need to implement your own user-interface. 
 
-{{% warning %}}
-**New version available**
+{{% success %}}
+**Not affected by ResRobot 2.1 upgrade**
 
-A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
-build new apps on version 2.0.
-{{% /warning %}}
+The deep links feature is not affected by the ResRobot 2.1 update, and will continue to function the same under 
+ResRobot v2.1.
+{{% /success %}}
 
 ## Request and response
 
