@@ -1,7 +1,7 @@
 ---
 title: ResRobot Deep Links 
 weight: 200
-date: 2021-10-12
+date: 2022-02-02
 ---
 
 ## What does this API provide?

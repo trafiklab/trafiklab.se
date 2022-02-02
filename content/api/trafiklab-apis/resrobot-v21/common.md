@@ -1,7 +1,7 @@
 ---
 title: ResRobot data types 
 weight: 990
-date: 2021-10-12
+date: 2022-02-02
 ---
 
 The different ResRobot API endpoints have different response structures, but some parts of the response are shared among

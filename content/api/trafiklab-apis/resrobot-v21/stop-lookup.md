@@ -1,13 +1,21 @@
 ---
 title: ResRobot Stop lookup
 weight: 30
-date: 2021-10-12
+date: 2022-02-02
 ---
 
 ## What does this API provide?
 
 ResRobot stop lookup provides information about stops, including their ids and position, by searching based on their
 name.
+
+{{% error %}}
+**This API is not yet available for general usage**
+
+Due to technical issues this API will only become accessible from March 24th. Attempts to use this API before that date
+will lead to "invalid API key" errors. Until then,
+[the current v2 version of this endpoint](../resrobot-v2/stop-lookup.md) can be used instead.
+{{% error %}}
 
 ### Data format
 
@@ -45,6 +53,10 @@ application more responsive and more reliable as you don't have to wait for API 
 See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
 
 ## Example calls
+
+{{% info %}}
+This API endpoint uses a ResRobot Reseplanerare v2.1 API key.
+{{% /info %}}
 
 ### Exact search
 

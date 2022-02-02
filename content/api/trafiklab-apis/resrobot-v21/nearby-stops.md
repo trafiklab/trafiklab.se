@@ -1,23 +1,30 @@
 ---
-title: ResRobot Nearby stops
-weight: 31
-date: 2021-10-12
+title: ResRobot Nearby stops 
+weight: 31 
+date: 2022-02-02
 ---
 
 ## What does this API provide?
 
-ResRobot nearby stops provides information about stops, including their ids and position, by searching for a certain 
+ResRobot nearby stops provides information about stops, including their ids and position, by searching for a certain
 pair of coordinates.
 
-{{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS
-Sverige 2. This way you can provide autocomplete and other search functions without internet access. It will make your
-application more responsive and more reliable as you don't have to wait for API responses.
+{{% error %}}
+**This API is not yet available for general usage**
+
+Due to technical issues this API will only become accessible from March 24th. Attempts to use this API before that date
+will lead to "invalid API key" errors. Until then, 
+[the current v2 version of this endpoint](../resrobot-v2/nearby-stops.md) can be used instead.
+{{% error %}}
+
+{{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This
+way you can provide autocomplete and other search functions without internet access. It will make your application more
+responsive and more reliable as you don't have to wait for API responses.
 See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
 
-{{% warning %}}
-Be aware that the current position of for example a smartphone user is personal data. We do not save this data, but 
-it might be stored for a short time in for example log files. You should probably inform your users and ask for 
-permission before sending their position to 3rd parties.
+{{% warning %}} Be aware that the current position of for example a smartphone user is personal data. We do not save
+this data, but it might be stored for a short time in for example log files. You should probably inform your users and
+ask for permission before sending their position to 3rd parties.
 {{% /warning %}}
 
 ### Data format
@@ -45,12 +52,12 @@ ResRobot Nearby stops takes the search string and the wanted number of results a
 matching stations with their location, name and id. Users can choose between exact matching and approximate matching by
 adding a question mark to the end of the search string.
 
-{{% info %}}
-Only the most important parameters and response variables are described on this page. Looking for more technical
-details? These can be found in [the OpenAPI specification](api-spec.md).
-{{% /info %}}
+{{% info %}} Only the most important parameters and response variables are described on this page. Looking for more
+technical details? These can be found in [the OpenAPI specification](api-spec.md). {{% /info %}}
 
 ## Example calls
+
+{{% info %}} This API endpoint uses a ResRobot Reseplanerare v2.1 API key. {{% /info %}}
 
 ### Call
 

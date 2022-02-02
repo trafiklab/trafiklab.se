@@ -1,7 +1,7 @@
 ---
 title: ResRobot Timetables
 weight: 10
-date: 2021-10-12
+date: 2022-02-02
 ---
 
 ## What does this API provide?
@@ -44,6 +44,10 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-2/).
+
+{{% info %}}
+This API endpoint uses a ResRobot Stolptidtabeller v2.1 API key.
+{{% /info %}}
 
 ### Call
 

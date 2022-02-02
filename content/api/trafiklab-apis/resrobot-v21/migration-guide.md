@@ -1,7 +1,7 @@
 ---
 title: Migration guide 
 weight: 1 
-date: 2021-10-12
+date: 2022-02-02
 ---
 
 This page collects the differences between version 2.0 and version 2.1 of the ResRobot APIs, so you can swiftly adapt
@@ -11,10 +11,15 @@ your application to the updated specification.
 
 Users of all API endpoints for which an API key is needed have to do the following:
 
-### Obtaining a new API key
+### Obtaining new API keys
 
-Instead of 2 API keys, only one API key is now needed for all endpoints. This should simplify development and management
-of your application.
+Similar to the previous versions, there are 2 different API keys required to access all features:
+
+- The departure and arrival board API requires a timetables (ResRobot Stolptidtabeller v2.1) API key
+- Route-planning and stop lookup requires a route-planning (ResRobot Reseplanerare v2.1) API key
+
+In order to aquire these new keys, you need to add them to your existing projects or create a new project with them. In
+order to add them to an existing project, you can follow these steps:
 
 - Login to [the Trafiklab developer portal](https://developer.trafiklab.se)
 - Add the new ResRobot API to their project (Redigera project > Add the new API > Spara). For a more detailed
@@ -27,11 +32,6 @@ of your application.
 
 Across all endpoints, the `key` parameter has been replaced with `accessId`. All requests your application makes should
 be updated with this new parameter.
-
-### Single API key
-
-As mention in _Obtaining a new API key_, only one API key is needed instead of the previous two APIs. The quota for
-different profiles have been increased to ensure you still have access to the same number of API calls.
 
 ### OperatorURL is no longer available
 
