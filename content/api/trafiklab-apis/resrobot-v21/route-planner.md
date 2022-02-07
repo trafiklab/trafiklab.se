@@ -1,7 +1,7 @@
 ---
 title: ResRobot Route planner
 weight: 20
-date: 2022-02-02
+date: 2022-02-07
 ---
 ## What does this API provide?
 

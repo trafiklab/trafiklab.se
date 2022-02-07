@@ -4,7 +4,7 @@ layout: "single"
 weight: 41
 aliases: 
   - "api/resrobot21"
-date: 2022-02-02
+date: 2022-02-07
 ---
 
 ### What is ResRobot?

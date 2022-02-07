@@ -1,7 +1,7 @@
 ---
 title: Migration guide 
 weight: 1 
-date: 2022-02-02
+date: 2022-02-07
 ---
 
 This page collects the differences between version 2.0 and version 2.1 of the ResRobot APIs, so you can swiftly adapt

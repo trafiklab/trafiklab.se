@@ -1,7 +1,7 @@
 ---
 title: ResRobot Stop lookup
 weight: 30
-date: 2022-02-02
+date: 2022-02-07
 ---
 
 ## What does this API provide?
@@ -12,9 +12,9 @@ name.
 {{% error %}}
 **This API is not yet available for general usage**
 
-Due to technical issues this API will only become accessible from March 24th. Attempts to use this API before that date
-will lead to "invalid API key" errors. Until then,
-[the current v2 version of this endpoint](../resrobot-v2/stop-lookup.md) can be used instead.
+Due to technical issues this API is planned to become accessible from March 24th. Attempts to use this API before 
+this date will lead to "invalid API key" errors. Until then, [the current v2 version of this endpoint](../resrobot-v2/stop-lookup.md) 
+can be used instead.
 {{% /error %}}
 
 ### Data format

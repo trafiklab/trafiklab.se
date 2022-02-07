@@ -1,7 +1,7 @@
 ---
 title: ResRobot Timetables
 weight: 10
-date: 2022-02-02
+date: 2022-02-07
 ---
 
 ## What does this API provide?
