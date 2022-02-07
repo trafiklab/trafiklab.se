@@ -56,7 +56,7 @@ The following table shows which operators
 | VL (Västmanlands län) | ✅ | 🕒 Q4-Q1 2022 | 🕒 Q4-Q1 2022 |  |
 | Värmlandstrafik & Karlstadbuss (Värmlands län) | ✅ |✅ | ✅ |  |
 | Västtrafik (Västra götalands län) | ✅ |  |  |  |
-| X-Trafik (Gävleborgs län) | ✅ |  |  |  |
+| X-Trafik (Gävleborgs län) | ✅ | ✅ | ✅ |  |
 | Östgötatrafiken (Östergötlands län)| ✅ | ✅ | ✅ |  |
 | SJ, Tågab, Snälltåget | ✅ |  |  |  |
 

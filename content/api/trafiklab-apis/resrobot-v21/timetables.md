@@ -1,26 +1,14 @@
 ---
 title: ResRobot Timetables
 weight: 10
-date: 2015-06-24
-aliases: 
-  - /api/resrobot-stolptidtabeller-2/documentation
-  - /node/14075/documentation
+date: 2022-02-07
 ---
 
 ## What does this API provide?
 
-ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can for instance specify the stop,
-date, time and transport modes. Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket (All train
-traffic including SJ and MTRX, except for Arlanda Express).
-
-{{% warning %}}
-**New version available**
-
-A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version,
-and it is no longer possible to build new apps on version 2.0.
-
-**Version 2.0, which you are currently looking at, will be discontinued at June 30th, 2022.**   
-{{% /warning %}}
+ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
+transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket (All train traffic
+including SJ, MTRX, .... except for Arlanda Express).
 
 ### Data format
 
@@ -37,8 +25,10 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **deprecated** status and will be discontinued on June 30th 2022.
-
+This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
+users to update their implementations. Examples of breaking changes are the changes to existing fields or query
+parameters, or in case new query parameters are required to keep the results the same. The addition of new fields isn't
+considered a breaking change, and can happen without warning.
 ## Using ResRobot Timetables
 
 ResRobot Timetables consists of two different endpoints, one for departures and one for arrivals. Both endpoints take
@@ -48,20 +38,17 @@ including a bit of information about each vehicle, such as where it is heading o
 
 {{% info %}}
 Only the most important parameters and response variables are described on this page. Looking for more technical 
-details? These can be found in [the OpenAPI specification](api-specification.md).
+details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
-
-{{% warning %}}
-**New version available**
-
-A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
-build new apps on version 2.0.
-{{% /warning %}}
 
 ## Example call
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-2/).
+
+{{% info %}}
+This API endpoint uses a ResRobot Stolptidtabeller v2.1 API key.
+{{% /info %}}
 
 ### Call
 
@@ -70,7 +57,7 @@ from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
+https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -78,7 +65,7 @@ https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&key=API_KEY
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/departureBoard?id=740000002&format=xml&key=API_KEY
+https://api.resrobot.se/v2/departureBoard?id=740000002&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -87,7 +74,7 @@ https://api.resrobot.se/v2/departureBoard?id=740000002&format=xml&key=API_KEY
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=json&key=API_KEY
+https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -95,28 +82,39 @@ https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=json&key=API_KEY
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&key=API_KEY
+https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
 
 #### Request parameters
 
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+- The `key` parameter has been renamed to `accessId`.
+- `maxJourneys` is ignored when making queries in the near past or future, when realtime data is available. We recommend
+  using the new `duration` parameter to consistently limit the results list to a specific time window.
+- `passlist` is now `0` by default.  Set to `1` to keep the responses the same if you need this data.
+{{% /note %}}
+
 | **Name**      | **Data type**      | **Required**             | **Description**                                                                                                                                                                                           |
 | ------------- | ------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key           | String             | Yes                      | Your API key                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| accessId      | String             | Yes                      | Your API key                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | id            | String             | Yes                      | Stop id to search a route from. Can be obtained from the Stop lookup API, Nearby stops API, or GTFS Sverige 2.|
 | direction     | String             | No, default unspecified  | Filter on vehicles heading towards a certain stop. Id of the stop which included vehicles should be heading to.|
 | date          | Date (YYYY-MM-DD)  | No, default today        | Search on a specific date, specified in YYYY-MM-DD format, e.g. 2021-12-31.<br>You can only search for dates within the timetable period.|
 | time          | Time (HH:MM)       | No, default now          | Search on a specific time, specified in HH:MM format, e.g. 19:06.
-| maxJourneys   | Integer            | No, default 20           | The maximum number of results to return.|
+| duration      | Integer            | No, default 60           | Set the interval size in minutes. Only departures or arrivals within this interval, starting from the defined date and time, will be returned..|
+| maxJourneys   | Integer            | No, default -1           | The maximum number of results to return.|
 | operators     | String             | No, default all          | Only include traffic from certain operators<br>Example: operators=275,287<br>(275=SL, 287=Arlanda Express)|
 | products      | Integer            | No, default all          | Only include certain traffic modes, see [common request products](common.md)|
-| passlist      | Integer            | No, default 1            | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.|
+| passlist      | Integer            | No, default 0            | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.|
 | lang          | String (sv/en/de)  | No, default sv           | Language to use in the response. Affects both data (names for different transport types) and error messages.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | format        | String             | No, default xml          | The response format, json or XML.                                                                                                                                                                                                                                                                                                                                                                                                       | |
 
 ### Response
+
+För en exakt teknisk beskrivning av varje fält i svaret hanvisar vi till vår OpenAPI dokumentation.
 
 {{% note %}} Note that an actual response contains more entries and stops - we removed some from this example
 response since it's only meant to show the structure of the response. {{% /note %}}
@@ -418,10 +416,21 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 #### Response data fields
 
-{{% info %}}
-The structure for departure and arrival boards is nearly identical. We list the most commonly used fields for both 
-endpoints in this table. When we write departure/arrival, apply the one that matches the endpoint you're using.
+{{% info %}} The structure for departure and arrival boards is nearly identical. We list the most commonly used fields
+for both endpoints in this table. When we write departure/arrival, apply the one that matches the endpoint you're using.
 {{% /info %}}
+
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The data previously found in `Product` can now be found in `ProductAtStop`
+- `Product` is now wrapped in an array
+- `TransportNumber` is no longer included. Use `ProductAtStop.num` or `ProductAtStop.displayNumber` instead. 
+- `JourneyStatus` and `JourneyDetailRef` have been added
+- `Type` has a different meaning and different possible values. This field used to indicate the type of the departing/arriving journey, but now indicates the type of location for this departure/arrival
+- Any applications which made use of the internal ids (`id` and `stopid`) should switch over to using the public ids (`extId` and `stopExtId`) instead.
+
+{{% /note %}}
 
 | **Name**                       | **Data type**                | **Description**                                                                                                             |
 | ------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
