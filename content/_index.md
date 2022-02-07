@@ -3,7 +3,7 @@ title: "Trafiklab"
 hero: /tl-illustration-map2.svg
 cases_section: true
 news_section: true
-highlighted_page: /news/2021/2021-12-14-koda-historical-data
+highlighted_page: /news/2022/2022-02-07-resrobot-update
 mc: true
 type: home
 landingRoller:
