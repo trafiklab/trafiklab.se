@@ -1,8 +1,7 @@
 ---
 title: ResRobot Deep Links 
 weight: 200
-date: 2015-06-24
-aliases: /api/resrobot-reseplanerare/djuplankning-0
+date: 2022-02-07
 ---
 
 ## What does this API provide?
@@ -15,11 +14,11 @@ You will get a redirect to the page with results.
 
 ### How often is this data updated?
 
-The static data used for this API is updated when changes are made, at most once per day.
+The static data behind the ResRobot web application is updated when changes are made, at most once per day.
 
-### Which operators are covered by this dataset?
+### Which operators are covered by this API?
 
-All operators which operate in Sweden are covered by the ResRobot APIs.
+All operators which operate in Sweden are covered by the ResRobot web application.
 
 ### How often does the data format changes? Do breaking changes happen?
 
@@ -33,13 +32,6 @@ considered a breaking change, and can happen without warning.
 In order to use deep links into ResRobot results, you construct the request URL based on the parameters you want to show
 results for, and redirect the user who needs to see the results to this URL. This allows you to show users
 route-plannings directly from your website or app, without any need to implement your own user-interface. 
-
-{{% success %}}
-**Not affected by ResRobot 2.1 upgrade**
-
-The deep links feature is not affected by the ResRobot 2.1 update, and will continue to function the same under 
-ResRobot v2.1.
-{{% /success %}}
 
 ## Request and response
 
@@ -63,9 +55,9 @@ Example 2: Between coordinates
 
 | Parameter | Required                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                  | Example                                     |
 | --------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| S         | Either `S` or `SID` are required      | _extId_ for the origin stop. This id can be obtained through [the stop lookup API](/api/trafiklab-apis/resrobot-v2/stop-lookup/) or [the nearby stops API](/api/trafiklab-apis/resrobot-v2/nearby-stops/). Can not be used in combination with the `SID` parameter.                                                                                              | 740000044 (for Helsingborgs Centralstation) |
+| S         | Either `S` or `SID` are required      | _extId_ for the origin stop. This id can be obtained through [the stop lookup API](http://localhost:1313/api/trafiklab-apis/resrobot-v2/resrobot-stop-lookup/) or [the nearby stops API](http://localhost:1313/api/trafiklab-apis/resrobot-v2/resrobot-nearby-stops/). Can not be used in combination with the `SID` parameter.                                                                                              | 740000044 (for Helsingborgs Centralstation) |
 | SID       | Either `S` or `SID` are required      | A so-called “triple id” containing the name and coordinates for the place of departure. Syntax: `[A=16@X=<X-coordinate>@Y=<Y-coordinate>@O=<name>`.<br>Coordinates must be in [WGS84 format](https://en.wikipedia.org/wiki/World_Geodetic_System_1984), with 6 digits precision but without comma. Name is the name shown to the user and does not affect the search. Can not be used in combination with the `S` parameter. | A=16@X=17703271@Y=59869065@O=Uppsala        |
-| Z         | Either `Z` or `ZID` are required      | _extId_ for the origin stop. This id can be obtained through [the stop lookup API](/api/trafiklab-apis/resrobot-v2/stop-lookup/) or [the nearby stops API](/api/trafiklab-apis/resrobot-v2/nearby-stops/). Can not be used in combination with the `SID` parameter.                                                                                              | 740000001 (for Stockholm Centralstation)    |
+| Z         | Either `Z` or `ZID` are required      | _extId_ for the origin stop. This id can be obtained through [the stop lookup API](http://localhost:1313/api/trafiklab-apis/resrobot-v2/resrobot-stop-lookup/) or [the nearby stops API](http://localhost:1313/api/trafiklab-apis/resrobot-v2/resrobot-nearby-stops/). Can not be used in combination with the `SID` parameter.                                                                                              | 740000001 (for Stockholm Centralstation)    |
 | ZID       | Either `Z` or `ZID` are required      | A so-called “triple id” containing the name and coordinates for the place of arrival. Syntax: `[A=16@X=<X-coordinate>@Y=<Y-coordinate>@O=<name>`.<br>Coordinates must be in [WGS84 format](https://en.wikipedia.org/wiki/World_Geodetic_System_1984), with 6 digits precision but without comma. Name is the name shown to the user and does not affect the search. Can not be used in combination with the `S` parameter.   | A=16@X=18048505@Y=59340682@O=Home           |
 | timesel   | No, default depart                    | Indicates if the specified time and date are the departure or arrival date/time. Can be `arrive` or `depart`.                                                                                                                                                                                                                                                                                                                | depart                                      |
 | date      | No, default today                     | Date of departure or arrival, in the YYYY-MM-DD format                                                                                                                                                                                                                                                                                                                                                                       | 2020-12-31                                  |

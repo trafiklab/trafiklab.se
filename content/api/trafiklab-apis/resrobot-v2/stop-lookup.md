@@ -10,6 +10,15 @@ date: 2015-06-24
 ResRobot stop lookup provides information about stops, including their ids and position, by searching based on their
 name.
 
+{{% warning %}}
+**New version available**
+
+A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version,
+and it is no longer possible to build new apps on version 2.0.
+
+**Version 2.0, which you are currently looking at, will be discontinued at June 30th, 2022.**   
+{{% /warning %}}
+
 ### Data format
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.
@@ -24,10 +33,7 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **stable** status. When breaking changes are made, you will get six months or more to update your
-implementations. Examples of breaking changes are the changes to existing fields or query parameters, or in case new
-query parameters are required to keep the results the same. The addition of new fields isn't considered a breaking
-change, and can happen without warning.
+This API has the **deprecated** status and will be discontinued on June 30th 2022.
 
 ## Using ResRobot Stop lookup
 
@@ -44,6 +50,13 @@ details? These can be found in [the OpenAPI specification](api-specification.md)
 Sverige 2. This way you can provide autocomplete and other search functions without internet access. It will make your
 application more responsive and more reliable as you don't have to wait for API responses.
 See [Combining data and APIs](docs/using-trafiklab-data/combining-data/) for more information. {{% /info %}}
+
+{{% warning %}}
+**New version available**
+
+A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
+build new apps on version 2.0.
+{{% /warning %}}
 
 ## Example
 

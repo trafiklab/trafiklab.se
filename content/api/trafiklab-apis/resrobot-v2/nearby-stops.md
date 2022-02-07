@@ -1,5 +1,5 @@
 ---
-title: ResRobot nearby stops
+title: ResRobot Nearby stops
 aliases: /api/trafiklab-apis/resrobot-reseplanerare/narliggande-hallplatser
 weight: 31
 date: 2015-06-24
@@ -21,6 +21,15 @@ it might be stored for a short time in for example log files. You should probabl
 permission before sending their position to 3rd parties.
 {{% /warning %}}
 
+{{% warning %}}
+**New version available**
+
+A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version,
+and it is no longer possible to build new apps on version 2.0.
+
+**Version 2.0, which you are currently looking at, will be discontinued at June 30th, 2022.**   
+{{% /warning %}}
+
 ### Data format
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.
@@ -35,10 +44,7 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **stable** status. When breaking changes are made, you will get six months or more to update your
-implementations. Examples of breaking changes are the changes to existing fields or query parameters, or in case new
-query parameters are required to keep the results the same. The addition of new fields isn't considered a breaking
-change, and can happen without warning.
+This API has the **deprecated** status and will be discontinued on June 30th 2022.
 
 ## Using ResRobot Nearby stops
 
@@ -50,6 +56,13 @@ adding a question mark to the end of the search string.
 Only the most important parameters and response variables are described on this page. Looking for more technical
 details? These can be found in [the OpenAPI specification](api-specification.md).
 {{% /info %}}
+
+{{% warning %}}
+**New version available**
+
+A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
+build new apps on version 2.0.
+{{% /warning %}}
 
 ## Example calls
 

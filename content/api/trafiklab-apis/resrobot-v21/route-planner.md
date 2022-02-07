@@ -1,26 +1,12 @@
 ---
 title: ResRobot Route planner
 weight: 20
-date: 2015-06-24
-aliases: 
-  - /api/trafiklab-apis/resrobot-reseplanerare/dokumentation
-  - /api/resrobot-reseplanerare/dokumentation/sokresa
-  - /api/resrobot-reseplanerare/dokumentation/
-  - /api/resrobot-reseplanerare
+date: 2022-02-07
 ---
 ## What does this API provide?
 
 ResRobot Route planner provides routes between two stops or points. Users can specify the start and end point, date,
-time, transport modes, and more.
-
-{{% warning %}}
-**New version available**
-
-A new version, version 2.1, of ResRobot is available. Existing apps should migrate to the new version,
-and it is no longer possible to build new apps on version 2.0.
-
-**Version 2.0, which you are currently looking at, will be discontinued at June 30th, 2022.**   
-{{% /warning %}}
+time, transport modes, ...
 
 ### Data format
 
@@ -36,7 +22,10 @@ All operators which operate in Sweden are covered by the ResRobot APIs.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This API has the **deprecated** status and will be discontinued on June 30th 2022.
+This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
+users to update their implementations. Examples of breaking changes are the changes to existing fields or query
+parameters, or in case new query parameters are required to keep the results the same. The addition of new fields isn't
+considered a breaking change, and can happen without warning.
 
 ## Using ResRobot Route planner
 
@@ -47,41 +36,45 @@ including a bit of information about each vehicle, such as where it is heading o
 
 {{% info %}}
 Only the most important parameters and response variables are described on this page. Looking for more technical
-details? These can be found in [the OpenAPI specification](api-specification.md).
+details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
-
-{{% warning %}}
-**New version available**
-
-A new version of ResRobot is available. Existing apps should migrate to the new version, and it is no longer possible to
-build new apps on version 2.0.
-{{% /warning %}}
 
 ## Example call
 
 This example call retrieves all routes from Stockholm Central Station (740000001) to Malmö Central Station
 (740000003), departing right now (since no specific time or date is specified in the call).
 
+{{% info %}}
+This API endpoint uses a ResRobot Reseplanerare v2.1 API key.
+{{% /info %}}
+
 ### Call
 {{% tabs %}} 
 {{% tab "Json" %}}
 ```text
-https://api.resrobot.se/v2/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&key=API_KEY
+https://api.resrobot.se/v2/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
 ```
 {{% /tab %}}
 {{% tab "Xml" %}}
 ```text
-https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&key
-=API_KEY
+https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
 ```
 {{% /tab %}}
 {{% /tabs %}} 
 
 #### Request parameters
 
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
+
+- The `key` parameter has been renamed to `accessId`.
+- `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
+
+{{% /note %}}
+ 
 | **Name**                        | **Data type**            | **Required**                                                   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------- | ------------------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key                             | String                   | Yes                                                            | Your API key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| accessId                        | String                   | Yes                                                            | Your API key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | lang                            | String (sv/en/de)        | No, default sv                                                 | Language to use in the response. Affects both data (names for different transport types) and error messages.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | date                            | Date (YYYY-MM-DD)        | No, default today                                              | Search on a specific date, specified in YYYY-MM-DD format, e.g. 2021-12-31.<br>You can only search for dates within the timetable period, defined by planningPeriodBegin and planningPeriodEnd which is present in all route-planning responses.                                                                                                                                                                                                                                                                                                                                                                                                |
 | time                            | Time (HH:MM)             | No, default now                                                | Search on a specific time, specified in HH:MM format, e.g. 19:06.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -97,7 +90,7 @@ https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&p
 | maxChange                       | Integer (1-3)            | No, default unlimited                                          | Limits the maximum number of transfers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | products                        | Integer                  | No, default all products                                       | Only include certain traffic modes, see [common request products](common.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | operators                       | comma seperated integers | No, default all operators                                      | Only include traffic from specified operators. Operators are specified by their id, which can be obtained from GTFS Sverige 2<br>Example: operators=275,287<br>(275=SL, 287=Arlanda Express)                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| passlist                        | Integer                  | No, default 1                                                  | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| passlist                        | Integer                  | No, default 0                                                  | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | originWalk                      | comma separated integers | No                                                             | 4 comma separated values: `allow walks`,`minimum walking distance`,`maximum walking distance`,`walking speed in %`<br>`allow walks`: Set to `1` to allow walks to the first stop. Set to `0` to disable this.<br>`minimum walking distance`,`maximum walking distance`: Minimum and maximum distance in meters, between 0 and 10000.<br>`walking speed in %`: walking speed, relative to the default walking speed of 5km/h + 2 minutes to orient. Between 50 and 150%.<br>Walking between 0 and 1000 meters, at 75% of the normal speed look like this: `originWalk=1,0,1000,75`. To disable walking, `originWalk=0` suffices.                 |
 | destWalk                        | comma separated integers | No                                                             | 4 comma separated values: `allow walks`,`minimum walking distance`,`maximum walking distance`,`walking speed in %`<br>`allow walks`: Set to `1` to allow walks from the last stop to the destination. Set to `0` to disable this.<br>`minimum walking distance`,`maximum walking distance`: Minimum and maximum distance in meters, between 0 and 10000.<br>`walking speed in %`: walking speed, relative to the default walking speed of 5km/h + 2 minutes to orient. Between 50 and 150%.<br>Walking between 0 and 1000 meters, at 75% of the normal speed look like this: `destwalk=1,0,1000,75`. To disable walking, `destwalk=0` suffices. |
 | format                          | String                   | No, default XML                                                | The response format, json or XML                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -552,7 +545,15 @@ response since it's only meant to show the structure of the response. {{% /info 
 {{% /tab %}} {{% /tabs %}}
 
 #### Response data fields
+{{% note %}}
+**Changes compared to ResRobot v2.0:**
 
+- `Product` is now wrapped in an array
+- `TransportNumber` is no longer included. Use `ProductAtStop.num` or `ProductAtStop.displayNumber` instead.
+- `JourneyStatus` and `JourneyDetailRef` have been added to each leg
+- Any applications which made use of the internal ids (`id` and `stopid`) should switch over to using the public ids (`extId` and `stopExtId`) instead.
+
+{{% /note %}}
 | **Name**                         | **Data type**     | **Description**                                                                                                                                                                                                                                                                                      |
 | -------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TripList                         | Trip\[\]          | Root element, contains the results as well as some meta-data.                                                                                                                                                                                                                                        |
@@ -567,14 +568,19 @@ response since it's only meant to show the structure of the response. {{% /info 
 | Servicedays.sDaysR               | String            | Automatic attempt to describe days on which this trip is executed, in the chosen language<br>E.g. `Every day`, `Not every day`, `On fridays`                                                                                                                                                         |
 | LegList                          | Leg\[\]           | List of Legs                                                                                                                                                                                                                                                                                         |
 | Leg                              | Object            | Part of the journey, for example travelling with 1 vehicle, walking to or from a stop, or making a transfer.<br>For transfers or walks, only duration and distance are available.                                                                                                                    |
-| Leg.category                     | String            | Category type                                                                                                                                                                                                                                                                                        |
-| Leg.number                       | Integer           | See product.num                                                                                                                                                                                                                                                                                      |
-| Leg.name                         | String            | See product.name                                                                                                                                                                                                                                                                                     |
+| Leg.category                     | String            | Category type, possible values are described in [common data types](common.md)                                                                                                                                                                                                                                                                                        |
+| Leg.number                       | Integer           | See product.num, described in [common data types](common.md)                                                                                                                                                                                                                                                                                      |
+| Leg.name                         | String            | See product.name, described in [common data types](common.md)                                                                                                                                                                                                                                                                                     |
 | Leg.direction                    | String            | Name of the last stop on the vehicle’s trip                                                                                                                                                                                                                                                          |
 | Leg.type                         | String            | `JNY` for public transport. `TRSF` for transfers where the traveller has to walk between stations or where the traveller has to wait for more than 15 minutes. `WALK` for walks to the first stop and from the last stop.                                                                            |
 | Leg.dist                         | Integer           | Distance of this leg in meter. Relevant när type=WALK eller type=BIKE.                                                                                                                                                                                                                               |
 | Leg.Origin                       | Origin            | Information about the departure stop                                                                                                                                                                                                                                                                 |
 | Leg.Destination                  | Origin            | Information about the destination stop                                                                                                                                                                                                                                                               |
+| Leg.JourneyStatus                | Origin            | Information about the vehicle journey status, **P**lanned, **R**eplacement, **A**dditional or **S**pecial.                                                                                                                                                                                                                                                          |
+| Leg.JourneyDetailRef             | Origin            | Contains a reference to this specific vehicle journey. Only when `type` = `JNY`                                                                                                                                                                                                                                                             |
+| Leg.Notes                        | Note\[\]          | A list of notes for a leg                                                                                                                                                                                                                                                                            |
+| Leg.Product                      | Product\[\]       | See [common data types](common.md)                                                                                                                                                                                                       |
+| Leg.Stops                        | Stop\[\]          | The intermediate stops that this vehicle passes on during this leg, if `passlist` = 1.                                                                                                                                                                                                               |
 | Origin.name                      | String            | Name of the departure stop                                                                                                                                                                                                                                                                           |
 | Origin.type                      | String            | `ST` for stop.                                                                                                                                                                                                                                                                                       |
 | Origin.date                      | Date (YYYY-MM-DD) | Departure date in in YYYY-MM-DD format, e.g. 2021-12-31.                                                                                                                                                                                                                                             |
@@ -589,12 +595,9 @@ response since it's only meant to show the structure of the response. {{% /info 
 | Destination.lat, Destination.lon | String            | Latitude and Longitude (WGS84, decimal degree) of the destination stop, e.g. 59.293611 and 18.083056                                                                                                                                                                                                 |
 | Destination.id                   | String            | Internal stop id of the destination stop, do not use                                                                                                                                                                                                                                                 |
 | Destination.extId                | String            | Id of the destination stop                                                                                                                                                                                                                                                                           |
-| Notes                            | Note\[\]          | A list of notes for a leg                                                                                                                                                                                                                                                                            |
 | Note.value                       | String            | Text note containing additional information for (a part of) this leg                                                                                                                                                                                                                                 |
 | Note.routeIdxFrom                | Integer           | Index of the stop at the start of the stretch to which this note applies                                                                                                                                                                                                                             |
 | Note.routeIdxTo                  | Integer           | Index of the stop at the end of the stretch to which this note applies                                                                                                                                                                                                                               |
-| Product                          | Product           | See [common data types](common.md)                                                                                                                                                                                                       |
-| Stops                            | Stop\[\]          | The intermediate stops that this vehicle passes on during this leg                                                                                                                                                                                                                                   |
 | Stop.name                        | String            | Name of the departure stop                                                                                                                                                                                                                                                                           |
 | Stop.type                        | String            | `ST` for stop.                                                                                                                                                                                                                                                                                       |
 | Stop.depDate                     | Date (YYYY-MM-DD) | Departure date in in YYYY-MM-DD format, e.g. 2021-12-31.                                                                                                                                                                                                                                             |
