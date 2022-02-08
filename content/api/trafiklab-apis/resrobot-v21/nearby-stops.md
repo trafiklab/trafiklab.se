@@ -64,7 +64,7 @@ technical details? These can be found in [the OpenAPI specification](api-spec.md
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.nearbystops?input=Göteborg&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -72,7 +72,7 @@ https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=json&acce
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.nearbystops?input=Göteborg&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -90,7 +90,7 @@ https://api.resrobot.se/v2/location.nearbystops?input=Göteborg&format=xml&acces
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "StopLocation": [
     {

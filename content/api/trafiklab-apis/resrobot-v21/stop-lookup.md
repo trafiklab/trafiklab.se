@@ -67,7 +67,7 @@ Exact search returns only stations that match exactly with the search string.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -75,7 +75,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&accessId=AP
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -93,7 +93,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&accessId=API
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "StopLocation": [
     {
@@ -137,7 +137,7 @@ stations which name is an exact or near match to the input string.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg?&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -145,7 +145,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&accessId=A
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg?&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -154,7 +154,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&accessId=AP
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "StopLocation": [
     {

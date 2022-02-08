@@ -52,12 +52,12 @@ This API endpoint uses a ResRobot Reseplanerare v2.1 API key.
 {{% tabs %}} 
 {{% tab "Json" %}}
 ```text
-https://api.resrobot.se/v2/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
+https://api.resrobot.se/v2.1/trip?format=json&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
 ```
 {{% /tab %}}
 {{% tab "Xml" %}}
 ```text
-https://api.resrobot.se/v2/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
+https://api.resrobot.se/v2.1/trip?format=xml&originId=740000001&destId=740000003&passlist=true&showPassingPoints=true&accessId=API_KEY
 ```
 {{% /tab %}}
 {{% /tabs %}} 
@@ -102,7 +102,7 @@ response since it's only meant to show the structure of the response. {{% /info 
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "Trip": [
     {
