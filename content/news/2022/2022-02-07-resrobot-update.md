@@ -1,5 +1,5 @@
 ---
-title: "ResRobot update 2.1 with breaking changes"
+title: "Resrobot update 2.1 with breaking changes"
 date: "2022-02-07"
 image: /media/2021/10/ResRobot-header.png 
 image_credit: Samtrafiken
@@ -26,7 +26,7 @@ update your project before this date.
 
 ## Using our SDK?
 
-If you are using [our ResRobot PHP SDK](https://github.com/trafiklab/resrobot-php-sdk), you only need to update this SDK
+If you are using [our Resrobot PHP SDK](https://github.com/trafiklab/resrobot-php-sdk), you only need to update this SDK
 version in your application in order to start using the new version. Our goal is to make these SDKs available in more
 programming languages in the future.
 
