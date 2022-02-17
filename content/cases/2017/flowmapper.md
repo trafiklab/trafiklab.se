@@ -1,37 +1,33 @@
 +++
-date = 2017-02-16T00:00:00Z
-description = "Skjutsgruppen.se is Swedens only service which combines public transport with carpooling. Skjutsgruppen, the group behind the website, consists today of over 70.000 members."
+date = 2022-02-16T23:00:00Z
+description = "Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon dioxide emissions."
 draft = true
-image = "/media/2017/02/skjutsgruppen_bag.jpg"
+image = ""
 title = "Flowmapper"
 
 +++
-Skjutsgruppen is Sweden's only service combining public transport with carpooling in rental cars and private vehicles. Skjutsgruppen is a non-profit carpooling movement, which today engages over 70,000 participant. The goal is to use existing resources more efficient, which benefits the envorinment while increasing mobility and meeting people.
+Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén**'s foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire process until the service was launched in the Autumn of 2020. She says that the idea for the tool was born out of frustration at how difficult it was to find information about how the traffic system works, while knowing that it exists different types of digital imprints that should be able to provide that information.
 
-Ten years ago, **Mattias Jägerskog** started Skjutsgruppen as a social experiment. Friends invited friends via social media to ride together and the response was huge. On Facebook and Twitter, the hashtag #skjutsgruppen quickly spread, thousands of people used it to give each other a ride. When the Facebook group reached 20,000 participants, it was time to take the next step - develop a search tool for carpooling. And it was not just about carpooling in private vehicles.
+The platform is developed to easily show various aspects of accessibility, such as average speed, proportion of slow-moving vehicles or spread of driving time. The statistics are visualized on 25-meter distances, which provide unique accuracy. Since Flowmapper continuously collects and stores data, it is possible to also study changes over time.
 
-![Skjutsgruppen meetup](/media/2017/02/skjutsgruppen_talking.jpg)
-\- Our association's statutes state that we must “… encourage different kinds of environmentally friendly travel with a focus on travelling together such as carpooling, public transport and similar compatible functions”. Ever since the start we’ve longed to visualize ”the total journey” and when there were open APIs with public transport data, it became doable, says Mattias Jägerskog.
+Above all, Flowmapper offers an opportunity to quantify various accessibility problems. This gives an important basis to implement the measures that have the greatest effect at the lowest cost.
 
-After a crowdfunding campaign that raised SEK 200,000, the project started and a couple of months later they launched the search service on skjutsgruppen.se. In one search, the traveler receives suggestions for places in private individuals cars, boats, buses, bicycles and hot air balloons and public transport throughout Sweden. In addition, the service has been supplemented with carpools from car rental company Hertz.
+All data is retrieved from Trafiklabs APIs. Flowmapper uses the position data that buses, trams and trains in public transport transmit, which is available at Trafiklab in terms of GTFS data.
 
-![Mattias Jägerskog, initiativtagare till Skjutsgruppen.](/media/2017/02/mattias_jagerskog_skjutsgruppen.jpg "Mattias
-Jägerskog, initiativtagare till Skjutsgruppen.")
+“Trafiklab is a great platform that makes it easy to get the data we need. Open and standardized data from both authorities and other organizations is a prerequisite for innovation. In that respect, we really think that Trafiklab is a role model,” says Eva-Marie. She adds that it would be great to have vehicle positions for all public transport authorities, and it would also be very interesting with more occupancy rate data.
 
-\- If a rental car is driven only from point A to point B but not back, then it needs to be transported back. Through the service Freerider Hertz offers private individuals to drive the rental cars back for free, and thanks to skjutsgruppen several people kan ride together in these rental cars. In this way, we also create car sharing in the private sector, and combine it with public transport and seats in private vehicles.
+Flowmapper is for everyone working to improve the accessibility of public transport. The customers are public transport companies, transport authorities and municipalities, i.e., partly those operators who deliver real-time data to Samtrafiken, which is the company behind Trafiklab. The users are primarily traffic planners.
 
-Open data is necessary for skjutsgruppen.se to become reality, both from the public transport industry and Hertz. In addition, Skjutsgruppen has chosen to do the same thing - provide third-party developers with open carpooling data.
+Skånetrafiken has been using Flowmapper since the start in 2020. According to **Hanna Larsson**, who works with accessibility and infrastructure issues for bus operations, it is a very good analysis tool for studying for example average speeds and how driving times vary around the clock for a specific route or intersection.
 
-\- Open data is needed to create sustainable mobility services and we hope that other travel apps will integrate our data in their services. With increased car sharing, we get fewer vehicles on the roads, reduced carbon dioxide emissions and reduced travel costs for individuals. Societies become more inclusive through the proximity of neighbors, colleagues and friends that share a vehicle.
+Eva-Marie sees several development areas for Flowmapper. The ambition is to make it a complete tool for public transport planning. “We are also looking into how to expand geographically, to more countries than Sweden. But it's all about access to data”.
 
-Skjutsgruppen and Mattias Jägerskog were named Trafiklab hero 2016. Part of the motivation was as follows: “Mattias has through his commitment driven questions about new ways of looking at mobility, shared economy and how open data is a central component of this work. "
+**FACTS ABOUT FLOWMAPPER**
 
-**FACTS ABOUT SKJUTSGRUPPEN.SE**
+**Release year**: 2020
 
-**Launched in:** The movement 2007, skjutsgruppen.se 2013
+**Type of service**: An analysis platform for visualizing the accessibility of public transport. Flowmapper combines illustrative maps with graphs that show statistics. There are several different views that show different aspects of accessibility and travel times.
 
-**Type of service:** Search tool for co-riding in private vehicles such as cars, boats, buses, bicycles, hot air balloons, rental cars from Hertz and all of Swedens public transportation
+**Data from Trafiklab**: GTFS (position data)
 
-**Data from Trafiklab:** ResRobot's API Route planner
-
-**User count:** As of today 70 000 users
+**Number of users**: About 60 - including existing and test customers.
