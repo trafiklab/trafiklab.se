@@ -1,7 +1,6 @@
 +++
 date = 2022-02-16T23:00:00Z
 description = "Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon dioxide emissions."
-draft = true
 image = "/media/2022/02/brohult-okt-2020-2021.jpg"
 title = "Flowmapper"
 
