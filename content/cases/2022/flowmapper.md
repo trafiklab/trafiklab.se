@@ -1,10 +1,10 @@
 ---
-date = 2022-02-16T23:00:00Z
-description = "Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon dioxide emissions."
-image = "/media/2022/02/brohult-okt-2020-2021.jpg"
-title = "Flowmapper"
----
+date: 2022-02-16T23:00:00Z
+description: "Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon dioxide emissions."
+image: "/media/2022/02/brohult-okt-2020-2021.jpg"
+title: "Flowmapper"
 
+---
 Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén's** foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire process until the service was launched in the Autumn of 2020. She says that the idea for the tool was born out of frustration at how difficult it was to find information about how the traffic system works, while knowing that it exists different types of digital imprints that should be able to provide that information.
 
 ![Foto på Eva-Marie Wenehed](/media/2022/02/bild-pa-mig-220118.jpg "Eva-Marie Wenehed")
