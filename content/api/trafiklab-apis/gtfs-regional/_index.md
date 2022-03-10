@@ -33,7 +33,11 @@ is updated every 3 seconds.
 
 ### Which operators are covered by this dataset?
 
-The following table shows which operators
+The following table shows which operators are covered by this dataset.
+
+{{% success %}}
+**New!** Realtime data for Västmanlands län is available starting 10/03/2022.
+{{% /success %}}
 
 | Operator | Static data | Real-time data | Vehicle positions | Occupancy data |
 | :--- | :---: | :---: | :---: | :---: |
@@ -53,7 +57,7 @@ The following table shows which operators
 | SL (Stockholms län) | ✅ |✅ | ✅ |  |
 | Sörmlandstrafiken (Södermanlands län) | ✅ |  |  |  |
 | UL (Uppsala län) | ✅ |✅ | ✅ |  |
-| VL (Västmanlands län) | ✅ | 🕒 Q4-Q1 2022 | 🕒 Q4-Q1 2022 |  |
+| VL (Västmanlands län) | ✅ | ✅ | ✅ |  |
 | Värmlandstrafik & Karlstadbuss (Värmlands län) | ✅ |✅ | ✅ |  |
 | Västtrafik (Västra götalands län) | ✅ |  |  |  |
 | X-Trafik (Gävleborgs län) | ✅ | ✅ | ✅ |  |

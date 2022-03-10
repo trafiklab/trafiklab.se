@@ -61,7 +61,7 @@ may be linked to a route instead. {{% /warning %}}
 ### VehiclePositions
 
 The vehiclepositions.pb feed contains the GPS positions for all operators. Depending on the operator, these positions
-are updated every 1 to 3 seconds. The availability of this data is indicated in a separate column
+are updated every 2 seconds. The availability of this data is indicated in a separate column
 in [the GTFS Regional availability table](./_index.md#which-operators-are-covered-by-this-dataset).
 
 ## Using real-time data
