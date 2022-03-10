@@ -27,9 +27,8 @@ This data is also available in the NeTEx format. For the NeTEx format, see the
 
 ### How often is this dataset updated?
 
-The static data in this dataset is updated on a daily basis, typically between 03:00 and 07:00. The real-time data
-(ServiceAlerts.pb and TripUpdates.pb) is updated every 15 seconds. The vehicle position data (VehiclePositions.pb)
-is updated every 3 seconds.
+The static data in this dataset is updated on a daily basis. The real-time data receives multiple updates per minute,
+see [realtime data](realtime) for more information.
 
 ### Which operators are covered by this dataset?
 
