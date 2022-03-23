@@ -9,14 +9,6 @@ date: 2022-02-07
 ResRobot nearby stops provides information about stops, including their ids and position, by searching for a certain
 pair of coordinates.
 
-{{% error %}}
-**This API is not yet available for general usage**
-
-Due to technical issues this API will only become accessible from March 24th. Attempts to use this API before that date
-will lead to "invalid API key" errors. Until then, [the current v2 version of this endpoint](../resrobot-v2/nearby-stops.md) 
-can be used instead.
-{{% /error %}}
-
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This
 way you can provide autocomplete and other search functions without internet access. It will make your application more
 responsive and more reliable as you don't have to wait for API responses.
@@ -56,8 +48,6 @@ adding a question mark to the end of the search string.
 technical details? These can be found in [the OpenAPI specification](api-spec.md). {{% /info %}}
 
 ## Example calls
-
-{{% info %}} This API endpoint uses a ResRobot Reseplanerare v2.1 API key. {{% /info %}}
 
 ### Call
 

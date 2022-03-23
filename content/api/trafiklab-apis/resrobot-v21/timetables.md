@@ -29,6 +29,7 @@ This API has the **stable** status. When breaking changes are made, we strive to
 users to update their implementations. Examples of breaking changes are the changes to existing fields or query
 parameters, or in case new query parameters are required to keep the results the same. The addition of new fields isn't
 considered a breaking change, and can happen without warning.
+
 ## Using ResRobot Timetables
 
 ResRobot Timetables consists of two different endpoints, one for departures and one for arrivals. Both endpoints take
@@ -45,10 +46,6 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-2/).
-
-{{% info %}}
-This API endpoint uses a ResRobot Stolptidtabeller v2.1 API key.
-{{% /info %}}
 
 ### Call
 

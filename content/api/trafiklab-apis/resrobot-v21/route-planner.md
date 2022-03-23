@@ -44,10 +44,6 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 This example call retrieves all routes from Stockholm Central Station (740000001) to Malmö Central Station
 (740000003), departing right now (since no specific time or date is specified in the call).
 
-{{% info %}}
-This API endpoint uses a ResRobot Reseplanerare v2.1 API key.
-{{% /info %}}
-
 ### Call
 {{% tabs %}} 
 {{% tab "Json" %}}
