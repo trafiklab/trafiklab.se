@@ -9,7 +9,8 @@ date: 2019-06-10
 ---
 
 The static GTFS Regional dataset contains files describing all planned public transport data. It can be combined 
-with optional realtime data available in the GTFS Realtime data API.
+with optional realtime data available in the GTFS Realtime data API. 
+The data in this dataset is updated on a daily basis, typically between 03:00 and 07:00.
 
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files. 

@@ -7,22 +7,27 @@ date: 2022-02-07
 This page collects the differences between version 2.0 and version 2.1 of the ResRobot APIs, so you can swiftly adapt
 your application to the updated specification.
 
+{{% success %}}
+On March 24th, 2022, an additional improvement to this API was made. You can now use one API key to use all API 
+endpoints, instead of needing two keys. This does not negatively affect any existing keys. 
+
+If you before this change already created a *ResRobot Routeplanner v2.1* key, this key has been upgraded automatically. 
+If you created a *ResRobot Stoptimes v2.1* API key, you can simply discard 
+this key and use your upgraded route-planner key (if you have one) or create a new *ResRobot 2.1* key.
+{{% /success %}}
+
 ## Changes for all endpoints
 
 Users of all API endpoints for which an API key is needed have to do the following:
 
 ### Obtaining new API keys
 
-Similar to the previous versions, there are 2 different API keys required to access all features:
-
-- The departure and arrival board API requires a timetables (ResRobot Stolptidtabeller v2.1) API key
-- Route-planning and stop lookup requires a route-planning (ResRobot Reseplanerare v2.1) API key
-
-In order to aquire these new keys, you need to add them to your existing projects or create a new project with them. In
+Similar to the previous versions, there is only one API key required to access all features.
+In order to aquire this new key, you need to add them to your existing projects or create a new project with them. In
 order to add them to an existing project, you can follow these steps:
 
 - Login to [the Trafiklab developer portal](https://developer.trafiklab.se)
-- Add the new ResRobot API to their project (Redigera project > Add the new API > Spara). For a more detailed
+- Add the new ResRobot API to your project (Redigera project > Add the new API > Spara). For a more detailed
   description, see [adding APIs to a project](/docs/using-trafiklab/adding-apis-to-a-project.md)
 - Click "Hämta nyckel" to obtain the new API key
 - If you previously had a key with an upgraded usage level, you can request for the same level. We will approve all

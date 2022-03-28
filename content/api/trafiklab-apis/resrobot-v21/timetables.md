@@ -29,6 +29,7 @@ This API has the **stable** status. When breaking changes are made, we strive to
 users to update their implementations. Examples of breaking changes are the changes to existing fields or query
 parameters, or in case new query parameters are required to keep the results the same. The addition of new fields isn't
 considered a breaking change, and can happen without warning.
+
 ## Using ResRobot Timetables
 
 ResRobot Timetables consists of two different endpoints, one for departures and one for arrivals. Both endpoints take
@@ -46,10 +47,6 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../gtfs-sverige-2/).
 
-{{% info %}}
-This API endpoint uses a ResRobot Stolptidtabeller v2.1 API key.
-{{% /info %}}
-
 ### Call
 
 **Departures**
@@ -57,7 +54,7 @@ This API endpoint uses a ResRobot Stolptidtabeller v2.1 API key.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/departureBoard?id=740000002&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -65,7 +62,7 @@ https://api.resrobot.se/v2/departureBoard?id=740000002&format=json&accessId=API_
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/departureBoard?id=740000002&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/departureBoard?id=740000002&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -74,7 +71,7 @@ https://api.resrobot.se/v2/departureBoard?id=740000002&format=xml&accessId=API_K
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/arrivalBoard?id=740000002&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -82,7 +79,7 @@ https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=json&accessId=API_KE
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/arrivalBoard?id=740000002&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -97,20 +94,20 @@ https://api.resrobot.se/v2/arrivalBoard?id=740000002&format=xml&accessId=API_KEY
 - `passlist` is now `0` by default.  Set to `1` to keep the responses the same if you need this data.
 {{% /note %}}
 
-| **Name**      | **Data type**      | **Required**             | **Description**                                                                                                                                                                                           |
-| ------------- | ------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| accessId      | String             | Yes                      | Your API key                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| id            | String             | Yes                      | Stop id to search a route from. Can be obtained from the Stop lookup API, Nearby stops API, or GTFS Sverige 2.|
-| direction     | String             | No, default unspecified  | Filter on vehicles heading towards a certain stop. Id of the stop which included vehicles should be heading to.|
-| date          | Date (YYYY-MM-DD)  | No, default today        | Search on a specific date, specified in YYYY-MM-DD format, e.g. 2021-12-31.<br>You can only search for dates within the timetable period.|
-| time          | Time (HH:MM)       | No, default now          | Search on a specific time, specified in HH:MM format, e.g. 19:06.
-| duration      | Integer            | No, default 60           | Set the interval size in minutes. Only departures or arrivals within this interval, starting from the defined date and time, will be returned..|
-| maxJourneys   | Integer            | No, default -1           | The maximum number of results to return.|
-| operators     | String             | No, default all          | Only include traffic from certain operators<br>Example: operators=275,287<br>(275=SL, 287=Arlanda Express)|
-| products      | Integer            | No, default all          | Only include certain traffic modes, see [common request products](common.md)|
-| passlist      | Integer            | No, default 0            | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.|
-| lang          | String (sv/en/de)  | No, default sv           | Language to use in the response. Affects both data (names for different transport types) and error messages.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| format        | String             | No, default xml          | The response format, json or XML.                                                                                                                                                                                                                                                                                                                                                                                                       | |
+| **Name**    | **Data type**     | **Required**            | **Description**                                                                                                                                 |
+|-------------|-------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| accessId    | String            | Yes                     | Your API key                                                                                                                                    |
+| id          | String            | Yes                     | Stop id to search a route from. Can be obtained from the Stop lookup API, Nearby stops API, or GTFS Sverige 2.                                  |
+| direction   | String            | No, default unspecified | Filter on vehicles heading towards a certain stop. Id of the stop which included vehicles should be heading to.                                 |
+| date        | Date (YYYY-MM-DD) | No, default today       | Search on a specific date, specified in YYYY-MM-DD format, e.g. 2021-12-31.<br>You can only search for dates within the timetable period.       |
+| time        | Time (HH:MM)      | No, default now         | Search on a specific time, specified in HH:MM format, e.g. 19:06.                                                                               |
+| duration    | Integer           | No, default 60          | Set the interval size in minutes. Only departures or arrivals within this interval, starting from the defined date and time, will be returned.. |
+| maxJourneys | Integer           | No, default -1          | The maximum number of results to return.                                                                                                        |
+| operators   | String            | No, default all         | Only include traffic from certain operators<br>Example: operators=275,287<br>(275=SL, 287=Arlanda Express)                                      |
+| products    | Integer           | No, default all         | Only include certain traffic modes, see [common request products](common.md)                                                                    |
+| passlist    | Integer           | No, default 0           | Set to 1 to include a list of the stops which are passed on the route of a vehicle. 0 to leave the list out of the result.                      |
+| lang        | String (sv/en/de) | No, default sv          | Language to use in the response. Affects both data (names for different transport types) and error messages.                                    |
+| format      | String            | No, default xml         | The response format, json or XML.                                                                                                               | |
 
 ### Response
 
@@ -121,7 +118,7 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "Departure": [
     {

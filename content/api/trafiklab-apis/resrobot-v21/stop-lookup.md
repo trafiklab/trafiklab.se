@@ -9,14 +9,6 @@ date: 2022-02-07
 ResRobot stop lookup provides information about stops, including their ids and position, by searching based on their
 name.
 
-{{% error %}}
-**This API is not yet available for general usage**
-
-Due to technical issues this API is planned to become accessible from March 24th. Attempts to use this API before 
-this date will lead to "invalid API key" errors. Until then, [the current v2 version of this endpoint](../resrobot-v2/stop-lookup.md) 
-can be used instead.
-{{% /error %}}
-
 ### Data format
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.
@@ -54,10 +46,6 @@ See [Combining data and APIs](../../transport-data-formats/combining-data/) for 
 
 ## Example calls
 
-{{% info %}}
-This API endpoint uses a ResRobot Reseplanerare v2.1 API key.
-{{% /info %}}
-
 ### Exact search
 
 Exact search returns only stations that match exactly with the search string.
@@ -67,7 +55,7 @@ Exact search returns only stations that match exactly with the search string.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -75,7 +63,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=json&accessId=AP
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -93,7 +81,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg&format=xml&accessId=API
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "StopLocation": [
     {
@@ -137,7 +125,7 @@ stations which name is an exact or near match to the input string.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg?&format=json&accessId=API_KEY
 ```
 
 {{% /tab %}}
@@ -145,7 +133,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=json&accessId=A
 {{% tab "Xml" %}}
 
 ```text
-https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&accessId=API_KEY
+https://api.resrobot.se/v2.1/location.name?input=Göteborg?&format=xml&accessId=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -154,7 +142,7 @@ https://api.resrobot.se/v2/location.name?input=Göteborg?&format=xml&accessId=AP
 
 {{% tabs %}} {{% tab "Json" %}}
 
-```javascript
+```json
 {
   "StopLocation": [
     {

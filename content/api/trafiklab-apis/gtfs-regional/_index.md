@@ -27,13 +27,16 @@ This data is also available in the NeTEx format. For the NeTEx format, see the
 
 ### How often is this dataset updated?
 
-The static data in this dataset is updated on a daily basis, typically between 03:00 and 07:00. The real-time data
-(ServiceAlerts.pb and TripUpdates.pb) is updated every 15 seconds. The vehicle position data (VehiclePositions.pb)
-is updated every 3 seconds.
+The static data in this dataset is updated on a daily basis. The real-time data receives multiple updates per minute,
+see [realtime data](realtime) for more information.
 
 ### Which operators are covered by this dataset?
 
-The following table shows which operators
+The following table shows which operators are covered by this dataset.
+
+{{% success %}}
+**New!** Realtime data for Västmanlands län is available starting 10/03/2022.
+{{% /success %}}
 
 | Operator | Static data | Real-time data | Vehicle positions | Occupancy data |
 | :--- | :---: | :---: | :---: | :---: |
@@ -53,7 +56,7 @@ The following table shows which operators
 | SL (Stockholms län) | ✅ |✅ | ✅ |  |
 | Sörmlandstrafiken (Södermanlands län) | ✅ |  |  |  |
 | UL (Uppsala län) | ✅ |✅ | ✅ |  |
-| VL (Västmanlands län) | ✅ | 🕒 Q4-Q1 2022 | 🕒 Q4-Q1 2022 |  |
+| VL (Västmanlands län) | ✅ | ✅ | ✅ |  |
 | Värmlandstrafik & Karlstadbuss (Värmlands län) | ✅ |✅ | ✅ |  |
 | Västtrafik (Västra götalands län) | ✅ |  |  |  |
 | X-Trafik (Gävleborgs län) | ✅ | ✅ | ✅ |  |
