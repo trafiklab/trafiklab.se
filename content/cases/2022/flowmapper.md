@@ -7,7 +7,11 @@ title: "Flowmapper"
 ---
 Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén's** foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire process until the service was launched in the Autumn of 2020. She says that the idea for the tool was born out of frustration at how difficult it was to find information about how the traffic system works, while knowing that it exists different types of digital imprints that should be able to provide that information.
 
+<div class="right vh50">
+
 ![Foto på Eva-Marie Wenehed](/media/2022/02/bild-pa-mig-220118.jpg "Eva-Marie Wenehed")
+
+</div>
 
 The platform is developed to easily show various aspects of accessibility, such as average speed, proportion of slow-moving vehicles or spread of driving time. The statistics are visualized on 25-meter distances, which provide unique accuracy. Since Flowmapper continuously collects and stores data, it is possible to also study changes over time.
 
