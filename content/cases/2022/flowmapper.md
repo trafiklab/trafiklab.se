@@ -18,13 +18,13 @@ Flowmapper is developed within the company Tyréns innovation program and financ
 
 The platform is developed to easily show various aspects of accessibility, such as average speed, proportion of slow-moving vehicles or spread of driving time. The statistics are visualized on 25-meter distances, which provide unique accuracy. Since Flowmapper continuously collects and stores data, it is possible to also study changes over time.
 
-![](/media/2022/03/vy-passagetid-2022-01-27.jpg)
-
 Above all, Flowmapper offers an opportunity to quantify various accessibility problems. This gives an important basis to implement the measures that have the greatest effect at the lowest cost.
 
-All data is retrieved from Trafiklabs APIs. Flowmapper uses the position data that buses, trams and trains in public transport transmit, which is available at Trafiklab in terms of GTFS data.
+![](/media/2022/03/vy-passagetid-2022-01-27.jpg)
 
 ![](/media/2022/03/hallplatser-211203.jpg)
+
+All data is retrieved from Trafiklabs APIs. Flowmapper uses the position data that buses, trams and trains in public transport transmit, which is available at Trafiklab in terms of GTFS data.
 
 “Trafiklab is a great platform that makes it easy to get the data we need. Open and standardized data from both authorities and other organizations is a prerequisite for innovation. In that respect, we really think that Trafiklab is a role model,” says Eva-Marie. She adds that it would be great to have vehicle positions for all public transport authorities, and it would also be very interesting with more occupancy rate data.
 
