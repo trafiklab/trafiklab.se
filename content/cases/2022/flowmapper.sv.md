@@ -4,18 +4,17 @@ description: "Flowmapper samlar in och lagrar kollektivtrafikdata och kan på s�
 image: "/media/2022/02/flowmapper-speed.jpg"
 title: "Flowmapper"
 --- 
+<div class="right vh30">
+
+![Foto på Eva-Marie Wenehed](/media/2022/02/flowmapper-evamarie.jpg "Eva-Marie Wenehed")
+
+</div>
 
 Flowmapper är framarbetad inom företaget Tyréns innovationsprogram och finansierad av Tyréns ägare, Sven Tyréns
 stiftelse. Eva-Marie Wenehed, som är trafikplanerare och produktägare för Flowmapper på Tyréns, var med under hela
 processen fram tills att tjänsten lanserades under hösten 2020. Hon berättar att idén till verktyget föddes ur en
 frustration kring hur svårt det var att få information om hur trafiksystemet fungerar, samtidigt som man visste att det
 fanns olika typer av digitala avtryck som borde kunna ge den informationen.
-
-<div class="right vh30">
-
-![Foto på Eva-Marie Wenehed](/media/2022/02/flowmapper-evamarie.jpg "Eva-Marie Wenehed")
-
-</div>
 
 Plattformen är utvecklad för att på ett enkelt sätt visa olika aspekter av framkomlighet, som till exempel
 medelhastighet, andel långsamtgående fordon eller spridning av körtid. Statistiken är visualiserad på 25-meters
