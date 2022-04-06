@@ -1,12 +1,12 @@
 +++
 date = 2022-02-16T23:00:00Z
-description = "Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon dioxide emissions."
+description = "Flowmapper samlar in och lagrar kollektivtrafikdata och kan på så sätt visa hur framkomligheten i kollektivtrafiken ser ut. Genom denna analysplattform är det möjligt att effektivisera kollektivtrafiken, förkorta restiden och minska koldioxidutsläppen. "
 draft = true
 image = "/media/2022/02/brohult-okt-2020-2021.jpg"
-title = "Flowmapper-(copy)"
+title = "Flowmapper"
 
 +++
-Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén's** foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire process until the service was launched in the Autumn of 2020. She says that the idea for the tool was born out of frustration at how difficult it was to find information about how the traffic system works, while knowing that it exists different types of digital imprints that should be able to provide that information.
+Flowmapper är framarbetad inom företaget Tyréns innovationsprogram och finansierad av Tyréns ägare, Sven Tyréns stiftelse. Eva-Marie Wenehed, som är trafikplanerare och produktägare för Flowmapper på Tyréns, var med under hela processen fram tills att tjänsten lanserades under hösten 2020. Hon berättar att idén till verktyget föddes ur en frustration kring hur svårt det var att få information om hur trafiksystemet fungerar, samtidigt som man visste att det fanns olika typer av digitala avtryck som borde kunna ge den informationen.
 
 <div class="right vh50">
 
@@ -14,29 +14,29 @@ Flowmapper is developed within the company Tyréns innovation program and financ
 
 </div>
 
-The platform is developed to easily show various aspects of accessibility, such as average speed, proportion of slow-moving vehicles or spread of driving time. The statistics are visualized on 25-meter distances, which provide unique accuracy. Since Flowmapper continuously collects and stores data, it is possible to also study changes over time.
+Plattformen är utvecklad för att på ett enkelt sätt visa olika aspekter av framkomlighet, som till exempel medelhastighet, andel långsamtgående fordon eller spridning av körtid. Statistiken är visualiserad på 25-meters sträckor, vilket ger en unik noggrannhet. Eftersom Flowmapper samlar in och lagrar data löpande är det möjligt att också studera förändringar över tid.
+
+Framför allt erbjuder Flowmapper en möjlighet att kvantifiera olika framkomlighetsproblem. Det är ett viktigt underlag för att kunna genomföra de åtgärder som ger mest effekt till lägst kostnad.
 
 ![](/media/2022/03/vy-passagetid-2022-01-27.jpg)
 
-Above all, Flowmapper offers an opportunity to quantify various accessibility problems. This gives an important basis to implement the measures that have the greatest effect at the lowest cost.
-
-All data is retrieved from Trafiklabs APIs. Flowmapper uses the position data that buses, trams and trains in public transport transmit, which is available at Trafiklab in terms of GTFS data.
-
 ![](/media/2022/03/hallplatser-211203.jpg)
 
-“Trafiklab is a great platform that makes it easy to get the data we need. Open and standardized data from both authorities and other organizations is a prerequisite for innovation. In that respect, we really think that Trafiklab is a role model,” says Eva-Marie. She adds that it would be great to have vehicle positions for all public transport authorities, and it would also be very interesting with more occupancy rate data.
+All data hämtas från Trafiklabs API:er. Flowmapper använder den positionsdata som bussar, spårvagnar och tåg i kollektivtrafiken sänder ifrån sig, vilket finns på Trafiklab i form av GTFS-data.
 
-Flowmapper is for everyone working to improve the accessibility of public transport. The customers are public transport companies, transport authorities and municipalities, i.e., partly those operators who deliver real-time data to Samtrafiken, which is the company behind Trafiklab. The users are primarily traffic planners.
+”Trafiklab är en jättebra plattform som gör det smidigt att få den data vi behöver. Öppen och standardiserad data från såväl myndigheter som andra organisationer är en förutsättning för innovation. I det avseendet tycker vi verkligen att Trafiklab är ett föredöme” säger Eva-Marie. Hon tillägger att det vore önskvärt med fordonspositioner för alla kollektivtrafikhuvudmän, och det vore också mycket intressant med mer beläggningsgradsdata.
 
-Skånetrafiken has been using Flowmapper since the start in 2020. According to **Hanna Larsson**, who works with accessibility and infrastructure issues for bus operations, it is a very good analysis tool for studying for example average speeds and how driving times vary around the clock for a specific route or intersection.
+Flowmapper riktar sig till alla som arbetar med att förbättra kollektivtrafikens framkomlighet. Kunderna är kollektivtrafikföretag, trafikhuvudmän och kommuner, det vill säga delvis de aktörer som levererar realtidsdata till Samtrafiken, som är det företag som står bakom Trafiklab. Användarna är i första hand trafikplanerare.
+
+På Skånetrafiken har man använt Flowmapper ända sedan starten 2020. Enligt Hanna Larsson, som arbetar med framkomlighet och infrastrukturfrågor för bussverksamheten, är det ett mycket bra analysverktyg för att studera bland annat medelhastigheter och hur körtider varierar över dygnet för ett specifikt stråk eller korsning.
 
 ![](/media/2022/03/img_5584.jpg)
 
-Eva-Marie sees several development areas for Flowmapper. The ambition is to make it a complete tool for public transport planning. “We are also looking into how to expand geographically, to more countries than Sweden. But it's all about access to data”.
+Eva-Marie ser flera utvecklingsområden för Flowmapper. Ambitionen är att det ska bli ett komplett verktyg för kollektivtrafikplaneringen. ”Vi tittar också på hur vi skulle kunna expandera geografiskt, till fler länder än Sverige. Men allt handlar om tillgången till data”.
 
-**FACTS ABOUT FLOWMAPPER**
+**FAKTA OM FLOWMAPPER**
 
-**Release year**: 2020  
-**Type of service**: An analysis platform for visualizing the accessibility of public transport. Flowmapper combines illustrative maps with graphs that show statistics. There are several different views that show different aspects of accessibility and travel times.  
-**Data from Trafiklab**: GTFS (position data)  
-**Number of users**: About 60 - including existing and test customers.
+**Lanseringsår:** 2020  
+**Typ av tjänst:** En analysplattform för att visualisera framkomligheten i kollektivtrafiken. Flowmapper kombinerar illustrativa kartor med grafer som visar statistik. Det finns flera olika vyer som visar olika aspekter på framkomlighet och restider.  
+**Data från Trafiklab:** GTFS (positionsdata)  
+**Antal användare:** Ett 60-tal; både befintliga och testkunder.
