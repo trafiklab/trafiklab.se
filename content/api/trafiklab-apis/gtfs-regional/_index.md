@@ -38,30 +38,30 @@ The following table shows which operators are covered by this dataset.
 **New!** Realtime data for Västmanlands län is available starting 10/03/2022.
 {{% /success %}}
 
-| Operator | Static data | Real-time data | Vehicle positions | Occupancy data |
-| :--- | :---: |:--------------:|:-----------------:| :---: |
-| Blekingetrafiken (Blekinge län)| ✅ |                |                   |  |
-| Dalatrafik (Dalarnas län)| ✅ |       ✅        |         ✅         |  |
-| DinTur (Västernorrlands län)| ✅ |                |                   |  |
-| Gotlands kollektivtrafik (Gotlands län)| ✅ |                |                   |  |
-| Hallandstrafiken (Hallands län)| ✅ |                |                   |  |
-| JLT (Jönköpings län)| ✅ |   🕒 Q4 2022   |    🕒 Q4 2022     |  |
-| Kalmar länstrafik (Kalmar län)| ✅ |       ✅        |         ✅         |  |
-| Kronobergs länstrafik (Kronobergs län)| ✅ |                |                   |  |
-| LTR (Jämtlands län)| ✅ |                |                   |  |
-| Länstrafiken Norrbotten| ✅ |                |                   |  |
-| Länstrafiken Västerbotten| ✅ |       🕒       |        🕒         |  |
-| Länstrafiken Örebro| ✅ |       🕒       |                   |  |
-| Skånetrafiken (Skåne län) | ✅ |       ✅        |         ✅         | ✅ |
-| SL (Stockholms län) | ✅ |       ✅        |         ✅         |  |
-| Sörmlandstrafiken (Södermanlands län) | ✅ |                |                   |  |
-| UL (Uppsala län) | ✅ |       ✅        |         ✅         |  |
-| VL (Västmanlands län) | ✅ |       ✅        |         ✅         |  |
+| Operator                                       | Static data | Real-time data | Vehicle positions | Occupancy data |
+|:-----------------------------------------------| :---: |:--------------:|:-----------------:| :---: |
+| Blekingetrafiken (Blekinge län)                | ✅ |                |                   |  |
+| Dalatrafik (Dalarnas län)                      | ✅ |       ✅        |         ✅         |  |
+| DinTur (Västernorrlands län)                   | ✅ |                |                   |  |
+| Gotlands kollektivtrafik (Gotlands län)        | ✅ |                |                   |  |
+| Hallandstrafiken (Hallands län)                | ✅ |                |                   |  |
+| JLT (Jönköpings län)                           | ✅ |   🕒 Q4 2022   |    🕒 Q4 2022     |  |
+| Kalmar länstrafik (Kalmar län)                 | ✅ |       ✅        |         ✅         |  |
+| Kronobergs länstrafik (Kronobergs län)         | ✅ |                |                   |  |
+| Länstrafiken Jämtland (JLT)                    | ✅ |                |                   |  |
+| Länstrafiken Norrbotten                        | ✅ |                |                   |  |
+| Länstrafiken Västerbotten                      | ✅ |       🕒       |        🕒         |  |
+| Länstrafiken Örebro                            | ✅ |       🕒       |                   |  |
+| Skånetrafiken (Skåne län)                      | ✅ |       ✅        |         ✅         | ✅ |
+| SL (Stockholms län)                            | ✅ |       ✅        |         ✅         |  |
+| Sörmlandstrafiken (Södermanlands län)          | ✅ |                |                   |  |
+| UL (Uppsala län)                               | ✅ |       ✅        |         ✅         |  |
+| VL (Västmanlands län)                          | ✅ |       ✅        |         ✅         |  |
 | Värmlandstrafik & Karlstadbuss (Värmlands län) | ✅ |       ✅        |         ✅         |  |
-| Västtrafik (Västra götalands län) | ✅ |                |                   |  |
-| X-Trafik (Gävleborgs län) | ✅ |       ✅        |         ✅         |  |
-| Östgötatrafiken (Östergötlands län)| ✅ |       ✅        |         ✅         |  |
-| SJ, Tågab, Snälltåget | ✅ |                |                   |  |
+| Västtrafik (Västra götalands län)              | ✅ |                |                   |  |
+| X-Trafik (Gävleborgs län)                      | ✅ |       ✅        |         ✅         |  |
+| Östgötatrafiken (Östergötlands län)            | ✅ |       ✅        |         ✅         |  |
+| SJ, Tågab, Snälltåget                          | ✅ |                |                   |  |
 
 ### How often does the data format changes? Do breaking changes happen?
 
