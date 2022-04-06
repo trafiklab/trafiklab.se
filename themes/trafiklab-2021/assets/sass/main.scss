@@ -31,7 +31,37 @@ body a, body a:link, body a:visited {
 }
 
 .page p img {
+  margin: 0 auto;
+  width: auto;
   max-width: 100%;
+}
+
+/* Support for aligning images left, right, and limiting height by wrapping them in a div. Should be fixed by making
+use of the hugo figure shorthand code */
+.page .right {
+  float: right;
+  max-width: 50%;
+}
+
+.page .left {
+  float: left;
+  max-width: 50%;
+}
+
+.vh20 img {
+  max-height: 20vh;
+}
+
+.vh30 img {
+  max-height: 30vh;
+}
+
+.vh40 img {
+  max-height: 40vh;
+}
+
+.vh50 img {
+  max-height: 50vh;
 }
 
 code:not(.highlight code):not(#swagger-ui code) {
