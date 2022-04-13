@@ -21,6 +21,7 @@ and datasets.
 |:-----------------------------------------------------------------------------| :---: | :---: | :---: | :---: | :--- |
 | [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/)                        | GTFS | ✅ | ❌ | Entire Sweden | Dataset with all public transport, static and historical |
 | [GTFS Regional](/api/trafiklab-apis/gtfs-regional/)                          | GTFS(-RT) | ✅ | Some, [see details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | [See details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Public Transport Datasets |
+| [SIRI](/api/trafiklab-apis/siri/)                                            | SIRI | ✅ | ❌ | Entire Sweden | Service Interface for Real Time Information |
 | [KoDa](/api/trafiklab-apis/koda/)                                            | GTFS(-RT) | ✅ | Some, [see GTFS Regional details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | Some, [see GTFS Regional details](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset) | High quality historical data |
 | [ResRobot Stolptidstabeller](/api/trafiklab-apis/resrobot-v21/timetables.md) | Json, XML | ✅ | Some, [see details](/api/trafiklab-apis/resrobot-v21/timetables.md) | Entire Sweden | Departure & Arrival board API |
 | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v21/route-planner.md)  | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
