@@ -31,7 +31,7 @@ and datasets.
 ## Other APIs
 
 While we offer a wide range of APIs and datasets covering public transport, easily accessible through Trafiklab, you
-sometimes need something less focussed on public transport, or data not available on Trafiklab.
+sometimes need something less focused on public transport, or data not available on Trafiklab.
 
 The APIs in the "other" category cannot be accessed through Trafiklab, but might still be valuable additions for your 
 project.
