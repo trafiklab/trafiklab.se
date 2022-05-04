@@ -80,6 +80,8 @@ The following specific breaking changes have been made to the trips request para
 to `accessId` described above:
 
 - `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
+- `numF` should be a value in the range 1-6, where this used to be 0-6 previously.
+- `numB` should be a value in the range 0-5, where this used to be 0-6 previously.
 
 The following breaking changes have been made to the trips responses:
 
