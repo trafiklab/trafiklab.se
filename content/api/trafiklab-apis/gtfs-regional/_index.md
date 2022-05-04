@@ -62,7 +62,6 @@ The following table shows which operators are covered by this dataset.
 | X-Trafik (Gävleborgs län)                      | ✔️ |       ✔️        |         ✔️         |  |
 | Östgötatrafiken (Östergötlands län)            | ✔️ |       ✔️        |         ✔️         |  |
 | Flixtrain                                      | ✔️ |                |                   |  |
-| Inlandsbanan                                   | ✔️ |                |                   |  |
 | Ressel Rederi                                  | ✔️ |                |                   |  |
 | SJ, Tågab, Snälltåget                          | ✔️ |                |                   |  |
 | Sjöstadstrafiken (Stockholm Stad)              | ✔️ |                |                   |  |
