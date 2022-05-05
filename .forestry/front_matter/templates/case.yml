@@ -32,5 +32,4 @@ fields:
     time_format: 
     display_utc: false
 pages:
-- content/cases/2022/flowmapper-copy.md
 - content/cases/2022/flowmapper.md
