@@ -10,7 +10,7 @@ Are you interested in how data can improve the travel experience for your travel
 
 Good collaboration and the right management of data can create real impact in terms of benefits and experiences for travellers. Now, in collaboration with Swiftly and Skånetrafiken, we invite you to a webinar to learn more about how this can be done in practice.
 
-**Programme:**
+##### **Programme:**
 
 Trafiklab.se - the industry's platform for open public transport data
 
@@ -23,6 +23,8 @@ Marta Zamanillo, Swiftly
 How we got happier customers and more reliable timetables
 
 Anastasia Malmros, Skånetrafiken
+
+##### **Information:**
 
 Date: Tuesday 7 June
 
