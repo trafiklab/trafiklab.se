@@ -25,13 +25,20 @@ Om du vill se webbsidan på engelska, [klicka här](/en/).
     with open(filepath, 'r', encoding='utf8') as file:
         content = file.read()
 
+    frontmatter_delimiter = '---'
+    frontmatter_assignment = ': '
+    if content.startswith('+++'):
+        # When editing with Forestry.io, TOML front matter is generated.
+        # Ensure the correct front matter syntax is used when generating fallback pages for Swedish
+        frontmatter_delimiter = '+++'
+        frontmatter_assignment = '='
     # Replace the target string
-    content = content.replace('---', '', 1)  # Remove the top --- marker
+    content = content.replace(frontmatter_delimiter, '', 1)  # Remove the top --- marker
     # Add the warning
-    content = content.replace('---', '---' + warning, 1)
+    content = content.replace(frontmatter_delimiter, frontmatter_delimiter + warning, 1)
     # Add the leading --- back, along with a property to indicate which page acted as the source
     # Remove the leading .../content/ part of the path
-    content = '---\ngenerated_fallback_page_source: true"' + content
+    content = frontmatter_delimiter + '\ngenerated_fallback_page_source' + frontmatter_assignment +  'true' + content
 
     # Write the file out again
     with open(filepath, 'w', encoding='utf8') as file:
