@@ -6,9 +6,9 @@ weight: 20
 date: 2019-06-10
 ---
 
-The realtime GTFS Regional data consists of data feeds describing disturbances, deviations, delays, and even realtime 
-GPS vehicle positions, separated per region or operator. It should be combined with static data available in the GTFS 
-Regional API.
+The realtime GTFS Sweden data consists of data feeds describing disturbances, deviations, delays, and even realtime 
+GPS vehicle positions, separated per region or operator just like the GTFS Regional API (for performance reasons). 
+It should be combined with static data available in the GTFS Sweden API.
 
 In order to retrieve the data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.
@@ -22,9 +22,9 @@ by the operator(s) you are interested in.
 **Where to download**
 
 The dataset can be accessed through the following URLs:
-- [https://opendata.samtrafiken.se/gtfs-rt/{operator}/ServiceAlerts.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/ServiceAlerts.pb?key={apikey})
-- [https://opendata.samtrafiken.se/gtfs-rt/{operator}/TripUpdates.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/TripUpdates.pb?key={apikey})
-- [https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey})
+- [https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/ServiceAlerts.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/ServiceAlerts.pb?key={apikey})
+- [https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/TripUpdates.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/TripUpdates.pb?key={apikey})
+- [https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/VehiclePositions.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/VehiclePositions.pb?key={apikey})
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
 OpenAPI specification, but are also listed on the [static data documentation page](static.md). Replace `{apikey}` with your own API key.
