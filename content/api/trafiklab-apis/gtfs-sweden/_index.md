@@ -1,7 +1,7 @@
 ---
 title: GTFS Sweden 3 (beta)
 layout: "single"
-weight: 30
+weight: 35
 ---
 
 GTFS Sweden 3 is a high quality GTFS feed containing most of the public transport data of Sweden. 
