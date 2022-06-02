@@ -1,10 +1,10 @@
 ---
-title: GTFS Sweden Static data
+title: GTFS Sweden 3 Static data
 weight: 10
 date: 2022-06-01
 ---
 
-The static GTFS Sweden dataset contains files describing all planned public transport data. It can be combined 
+The static GTFS Sweden 3 dataset contains files describing all planned public transport data. It can be combined 
 with optional realtime data available in the GTFS Sweden Realtime data API. 
 The data in this dataset is updated on a daily basis, typically between 10:00 and 13:00.
 

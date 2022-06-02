@@ -1,7 +1,7 @@
 ---
 title: GTFS Sverige 2
 layout: "single"
-weight: 20
+weight: 5
 aliases:
   - "/api/gtfs-sverige-2"
 ---

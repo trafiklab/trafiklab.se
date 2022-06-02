@@ -6,7 +6,7 @@ date: 2022-06-01
 
 The realtime GTFS Sweden data consists of data feeds describing disturbances, deviations, delays, and even realtime 
 GPS vehicle positions, separated per region or operator just like the GTFS Regional API (for performance reasons). 
-It should be combined with static data available in the GTFS Sweden API.
+It should be combined with static data available in the GTFS Sweden 3 API.
 
 In order to retrieve the data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.

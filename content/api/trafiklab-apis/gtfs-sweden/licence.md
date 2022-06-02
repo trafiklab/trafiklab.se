@@ -3,7 +3,7 @@ title: Licence
 weight: 1000
 ---
 
-Data from the GTFS Sweden API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+Data from the GTFS Sweden 3 API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
 
 ## Summary
 
