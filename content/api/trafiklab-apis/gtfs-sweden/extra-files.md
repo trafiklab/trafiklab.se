@@ -7,7 +7,7 @@ Extra files are files which provide additional information about the information
 the GTFS standard, but contain the information which is needed to link the GTFS files to internal operator systems, or
 other data which is delivered by the operator.
 
-The extra files can be fetched by taking the URL to a normal GTFS zip file, and adding \__extra_ in the filename. For
+The extra file can be fetched by taking the URL to the normal GTFS zip file, and adding \__extra_ in the filename. For
 example, the file "sweden.zip" becomes "_sweden\_extra.zip_". These files use the same API key as the static data, and
 count against the same quota.
 
@@ -18,7 +18,7 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 **Where to download**
 
 The dataset can be accessed through the following URL:
-[https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip_extra.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip_extra.zip?key=APIKEY).
+[https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip_extra.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip_extra.zip?key=apikey).
 
 Replace `{apikey}` with your own API key.
 {{% /note %}}

@@ -1,9 +1,7 @@
 ---
 title: Realtime data
-aliases:
-  - "api/gtfs-regional-realtime"
 weight: 20
-date: 2019-06-10
+date: 2022-06-01
 ---
 
 The realtime GTFS Sweden data consists of data feeds describing disturbances, deviations, delays, and even realtime 
@@ -47,8 +45,8 @@ operators are supported (Realtime data column).
 
 {{% info %}} ServiceAlerts can remain unchanged for relatively long periods (for example a couple of
 hours). You can prevent unnecessary downloads by making use
-of [Conditional HTTP requests](/docs/using-trafiklab-data/best-practices/conditional-get-requests.md). {{% 
-/info %}}
+of [Conditional HTTP requests](/docs/using-trafiklab-data/best-practices/conditional-get-requests.md). 
+{{% /info %}}
 
 ### TripUpdates
 

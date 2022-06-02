@@ -1,10 +1,8 @@
 ---
-title: NeTEx Sweden
+title: NeTEx Sweden (beta)
 layout: "single"
 weight: 30
-aliases: 
-  - /api/netex-sweden-static-data
-date: 2019-11-22
+date: 2022-06-01
 ---
 
 NeTEx Sweden is a NeTEx feed of high quality. The feed contains all data present in GTFS Sweden, as 

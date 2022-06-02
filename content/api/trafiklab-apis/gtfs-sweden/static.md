@@ -1,9 +1,7 @@
 ---
-title: GTFS Sweden Static data 
-aliases: 
-  - "/api/gtfs-sweden-static"
+title: GTFS Sweden Static data
 weight: 10
-date: 2019-06-10
+date: 2022-06-01
 ---
 
 The static GTFS Sweden dataset contains files describing all planned public transport data. It can be combined 
@@ -17,7 +15,7 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 **Where to download**
 
 The dataset can be accessed through the following URL:
-[https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip.zip?key=APIKEY).
+[https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip.zip?key=apikey).
 
 Replace `{apikey}` with your own API key. 
 {{% /note %}}

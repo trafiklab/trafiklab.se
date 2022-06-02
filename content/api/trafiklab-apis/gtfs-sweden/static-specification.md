@@ -1,7 +1,7 @@
 ---
 title: GTFS Sweden Static data specification
 weight: 11
-date: 2021-09-24
+date: 2022-06-01
 summary: OpenAPI specification for GTFS Sweden Static data
 ---
 

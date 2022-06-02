@@ -1,9 +1,5 @@
 ---
-title: Static data 
-aliases: 
-  - "/api/gtfs-regional-static"
-  - "/node/26738/documentation"
-  - "/node/26738"
+title: Static data
 weight: 10
 date: 2019-06-10
 ---

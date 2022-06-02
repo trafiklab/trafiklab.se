@@ -1,10 +1,8 @@
 ---
-title: Stops data
+title: Stops data (beta)
 layout: "single"
 weight: 30
-aliases: 
-  - /api/stops-data
-date: 2019-11-22
+date: 2022-06-01
 ---
 
 The stops data API contains detailed data of Sweden's national stops and their mappings to stops from the [GTFS Regional](/api/trafiklab-apis/gtfs-regional/)
@@ -16,7 +14,7 @@ All of Sweden's stops are included in this dataset.
 **Where to download**
 
 The dataset can be accessed through the following URL:
-[https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key=APIKEY).
+[https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key=apikey).
 
 Replace `{apikey}` with your own API key.
 {{% /note %}}
@@ -67,5 +65,4 @@ The data in this dataset is updated on a daily basis, typically between 07:50 an
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **stable** status. This means that the fields can be added without prior warning, but when changes
-to existing fields are made, you will get three months to update your implementations.
+This dataset has the **beta** status. This means that fields may change without prior warning.
