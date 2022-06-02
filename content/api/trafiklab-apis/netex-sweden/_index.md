@@ -3,6 +3,7 @@ title: NeTEx Sweden (beta)
 layout: "single"
 weight: 35
 date: 2022-06-01
+draft: true
 ---
 
 NeTEx Sweden is a NeTEx feed of high quality. The feed contains all data present in GTFS Sweden, as 
