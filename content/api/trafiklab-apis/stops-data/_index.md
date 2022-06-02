@@ -35,14 +35,14 @@ communication between different organizations.
 ### KeyValues explained
 
 Most of the KeyValues refer to DataSource IDs. These IDs can currently be transformed to actual datasources/authorities through the [NeTEx Sweden API](/api/trafiklab-apis/netex-sweden/)
-, by mapping the DataSource IDs to Authority.PrivateCode in the _shared_data.xml file. In the future we are going to provide a better way of matching DataSource IDs to datasources/authorities.  
+, by mapping the DataSource IDs to Authority.PrivateCode in the `_shared_data.xml` file. In the future we are going to provide a better way of matching DataSource IDs to datasources/authorities.  
 
-The Keys that are used for mappings all start with the name "local-" and are pipe symbol separated and then colon symbol separated values.
-For example a StopPlace with the Key "local-number" with the Value "7:64204|12:7051|74:40|8:64204|100:4" should be interpreted as list of five different values, 
-where each part is further interpreted by separating by the colon symbol, "7:64204" meaning datasource=7 and number=64204. The table below explains more about what 
+The Keys that are used for mappings all start with the name `local-` and are pipe symbol separated and then colon symbol separated values.
+For example a StopPlace with the Key `local-number` with the Value `7:64204|12:7051|74:40|8:64204|100:4` should be interpreted as list of five different values, 
+where each part is further interpreted by separating by the colon symbol, `7:64204` meaning datasource=7 and number=64204. The table below explains more about what 
 data each Value contains.
 
-"Gid" matches part of the StopPlace.Id (or Quay.Id) in Netex Regional, and also the stop_id from stops.txt in GTFS Regional.
+"Gid" matches part of the `StopPlace.Id` (or `Quay.Id`) in Netex Regional, and also the `stop_id` from `stops.txt` in GTFS Regional.
 
 | Key                           |                                                                                      Explanation                                                                                      |
 |:------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
