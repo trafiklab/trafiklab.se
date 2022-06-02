@@ -1,14 +1,14 @@
 ---
 title: GTFS Sverige 2
 layout: "single"
-weight: 20
+weight: 5
 aliases:
   - "/api/gtfs-sverige-2"
 ---
 
 GTFS Sverige 2 is a GTFS dataset which covers all public transport in Sweden.
 
-### What does this dataset contains?
+### What does this dataset contain?
 
 GTFS Sverige 2 is our national feed. It contains all public transport in the entire country of Sweden. The data is
 correct, but lacks the details which are included in the GTFS Regional dataset.

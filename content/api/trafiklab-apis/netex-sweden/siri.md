@@ -1,16 +1,17 @@
 ---
 title: Realtime data (SIRI)
 weight: 20
-date: 2022-04-14
-draft: true
+date: 2022-06-01
 ---
 
 Service Interface for Real-time Information (SIRI) is a data-format for real-time data. This data contains updates and real-time changes to the static NeTEx data. The two data formats should be used together, since the real-time data refers to elements defined in the static data.
 
 This SIRI feed is based on version 1.1 of the Norwegian SIRI profile. The profile is based on SIRI 2.0. The full profile documentation can be found here: https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/637370420/Norwegian+SIRI+profile
 
+The realtime files are produced per operator for performance reasons. 
+
 {{% info %}}
-**Availability of regional data** differs per operator. See the [overview page](https://www.trafiklab.se/api/trafiklab-apis/netex-regional/) to see which data is provided
+**Availability of data** differs per operator. See the [overview page of the Regional API](https://www.trafiklab.se/api/trafiklab-apis/netex-regional/) to see which data is provided
 by the operator(s) you are interested in.
 {{% /info %}}
 
@@ -19,9 +20,9 @@ by the operator(s) you are interested in.
 
 The dataset can be accessed through the following URL:
 
-- [https://opendata.samtrafiken.se/siri/{operator}/SituationExchange.xml?key={apikey}](https://opendata.samtrafiken.se/siri/{operator}/SituationExchange.xml?key={apikey})
-- [https://opendata.samtrafiken.se/siri/{operator}/EstimatedTimetable.xml?key={apikey}](https://opendata.samtrafiken.se/siri/{operator}/EstimatedTimetable.xml?key={apikey})
-- [https://opendata.samtrafiken.se/siri/{operator}/VehicleMonitoring.xml?key={apikey}](https://opendata.samtrafiken.se/siri/{operator}/VehicleMonitoring.xml?key={apikey})
+- [https://opendata.samtrafiken.se/siri-sweden/{operator}/SituationExchange.xml?key={apikey}](https://opendata.samtrafiken.se/siri-sweden/{operator}/SituationExchange.xml?key={apikey})
+- [https://opendata.samtrafiken.se/siri-sweden/{operator}/EstimatedTimetable.xml?key={apikey}](https://opendata.samtrafiken.se/siri-sweden/{operator}/EstimatedTimetable.xml?key={apikey})
+- [https://opendata.samtrafiken.se/siri-sweden/{operator}/VehicleMonitoring.xml?key={apikey}](https://opendata.samtrafiken.se/siri-sweden/{operator}/VehicleMonitoring.xml?key={apikey})
 
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the

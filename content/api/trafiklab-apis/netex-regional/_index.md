@@ -11,7 +11,7 @@ date: 2019-11-22
 NeTEx regional is a set of NeTEx feeds of high quality. These feeds contain all data present in GTFS Regional, as 
 well as additional data which can't be represented in GTFS.
 
-### What does this dataset contains?
+### What does this dataset contain?
 
 This dataset contains high quality detailed data, both static and real-time, in the NeTEx format. Each dataset contains
 data for a specific region or operator.
