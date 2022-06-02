@@ -16,7 +16,7 @@ API's OpenAPI specification.
 **Where to download**
 
 The dataset can be accessed through the following URL:
-[https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key=apikey).
+[https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}).
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
 OpenAPI specification, but are also listed on the [GTFS Regional static data documentation page](../gtfs-regional/static.md). Replace `{apikey}` with your own API key.

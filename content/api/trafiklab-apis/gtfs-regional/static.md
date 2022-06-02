@@ -15,7 +15,7 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 **Where to download**
 
 The dataset can be accessed through the following URL:
-[https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key=APIKEY).
+[https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey}).
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the 
 OpenAPI specification, but are also listed below for your convenience. Replace `{apikey}` with your own API key. 
