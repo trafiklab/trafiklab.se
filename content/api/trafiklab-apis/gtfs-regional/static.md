@@ -49,11 +49,10 @@ OpenAPI specification, but are also listed below for your convenience. Replace `
 |       Västtrafik (Västra götalands län)        |        `vt`        |
 |           X-Trafik (Gävleborgs län)            |        `xt`        |
 |      Östgötatrafiken (Östergötlands län)       |      `otraf`       |
-|                   Flixtrain                    |    `flixtrain`️    |
-|                  Inlandsbanan                  |      `inban`       |
+|                   Flixtrain                    |    `flixtrain`     |
 |                 Ressel Rederi                  |      `ressel`      |
 |             SJ, Tågab, Snälltåget              |        `sj`        |
-|       Sjöstadstrafiken (Stockholm Stad)        | `sjöstadstrafiken` |
+|       Sjöstadstrafiken (Stockholm Stad)        | `sjostadstrafiken` |
 |                Stavsnäs båttaxi                |     `battaxi`      |
 |                     Y-Buss                     |      `ybuss`       |
 
