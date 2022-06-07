@@ -2,6 +2,7 @@
 title: Realtime data (SIRI)
 weight: 20
 date: 2022-06-01
+draft: true
 ---
 
 Service Interface for Real-time Information (SIRI) is a data-format for real-time data. This data contains updates and real-time changes to the static NeTEx data. The two data formats should be used together, since the real-time data refers to elements defined in the static data.
