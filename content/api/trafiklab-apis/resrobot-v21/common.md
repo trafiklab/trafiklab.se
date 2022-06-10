@@ -81,20 +81,21 @@ Request category codes for filtering differ from response category codes. These 
 
 **String representation**
 
-|Abbreviation| Name|
-| ------------------- | ----------------------|
-|BLT | Regional bus |
-|BXB | Express bus |
-|ULT | Metro |
-|JAX | Arlanda Express |
-|JLT | Local train |
-|JRE | Regional train |
-|JIC | InterCity train |
-|JPT | PågaTåg |
-|JEX | Express train |
-|SLT | Tram |
-|FLT | Lokal ferry |
-|FUT | International ferry |
+| Abbreviation | Name                                           |
+|--------------|------------------------------------------------|
+| BLT          | Regional bus                                   |
+| BXB          | Express bus                                    |
+| BAX          | Airport Express bus, such as Flygbussarna      |
+| ULT          | Metro                                          |
+| JAX          | Airport Express Train, such as Arlanda Express |
+| JLT          | Local train                                    |
+| JRE          | Regional train                                 |
+| JIC          | InterCity train                                |
+| JPT          | PågaTåg                                        |
+| JEX          | Express train                                  |
+| SLT          | Tram                                           |
+| FLT          | Lokal ferry                                    |
+| FUT          | International ferry                            |
 
 **Numeric representation**
 
