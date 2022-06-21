@@ -1,8 +1,7 @@
 ---
 title: Realtime data (SIRI)
 weight: 20
-date: 2022-04-14
-draft: true
+date: 2022-06-21
 ---
 
 Service Interface for Real-time Information (SIRI) is a data-format for real-time data. This data contains updates and real-time changes to the static NeTEx data. The two data formats should be used together, since the real-time data refers to elements defined in the static data.
@@ -44,6 +43,7 @@ For more information and technical specifications, see [SIRI-ET](https://enturas
 SIRI-SX is used to model textual descriptions of disruptions, or deviations from the planned public transport
 information. The messages can be applied directly to stops, lines, vehicles etc. in the already existing public
 transport data by the use of ID references. For more information and technical specifications, see [SIRI-SX](https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/637370605/SIRI-SX).
+
 ### Vehicle Monitoring (VM)
 
 SIRI-VM is used to model vehicle-movements and their progress compared to a planned timetable. The data is linked to
