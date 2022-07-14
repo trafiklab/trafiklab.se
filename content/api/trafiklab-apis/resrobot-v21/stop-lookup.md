@@ -2,6 +2,8 @@
 title: ResRobot Stop lookup
 weight: 30
 date: 2022-02-07
+aliases:
+  - /api/trafiklab-apis/resrobot-v2/stop-lookup/
 ---
 
 ## What does this API provide?

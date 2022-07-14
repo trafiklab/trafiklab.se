@@ -3,7 +3,13 @@ title: ResRobot v2.1
 layout: "single"
 weight: 41
 aliases: 
-  - "api/resrobot21"
+  - /api/resrobot2
+  - /api/resrobot21
+  - /api/trafiklab-apis/resrobot-reseplanerare
+  - /node/14049
+  - /api/trafiklab-apis/resrobot-stolptidtabeller-2
+  - /node/14075
+  - /api/resrobot
 date: 2022-02-07
 ---
 
