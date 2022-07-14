@@ -14,11 +14,11 @@ When you want to specify a station by its id, you will need at least one of the 
 * A list of all stations, so the user can pick an existing station, for example using autocompletion.
 
 You can
-use the [Resrobot Stop lookup API ](/api/trafiklab-apis/resrobot-v2/stop-lookup.md)
+use the [Resrobot Stop lookup API ](/api/trafiklab-apis/resrobot-v21/stop-lookup.md)
 to find stops which match a given search query.
 
 If you want a list of all stops, you can use the stops.txt file
-from the [GTFS Sverige 2 dataset](/api/trafiklab-apis/gtfs-sverige-2/). Using this
+from the [GTFS Sverige 2 dataset](/api/trafiklab-apis/gtfs-sverige-21/). Using this
 list, you can search locally on the device, which often results in a superior user experience. Furthermore, you can
 choose how your search function will rank stops. You can rank them based on the number of daily departures, distance
 from the user, type of transport, which region or kommun they are or aren't in, ... . The downside is that you need to

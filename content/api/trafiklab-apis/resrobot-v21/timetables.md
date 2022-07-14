@@ -2,6 +2,10 @@
 title: ResRobot Timetables
 weight: 10
 date: 2022-02-07
+aliases:
+  - /api/resrobot-stolptidtabeller-2/documentation
+  - /node/14075/documentation
+  - /api/trafiklab-apis/resrobot-v2/timetables/
 ---
 
 ## What does this API provide?

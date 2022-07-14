@@ -2,6 +2,8 @@
 title: ResRobot Nearby stops 
 weight: 31 
 date: 2022-02-07
+aliases:
+  - /api/trafiklab-apis/resrobot-v2/nearby-stops/
 ---
 
 ## What does this API provide?

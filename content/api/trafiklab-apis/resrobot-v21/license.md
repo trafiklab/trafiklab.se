@@ -2,6 +2,10 @@
 title: License 
 weight: 1000
 date: 2022-02-07
+aliases:
+  - /api/resrobot-reseplanerare/licens
+  - /node/14049/license
+  - /node/14075/license
 ---
 
 Data from the ResRobot API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
