@@ -19,44 +19,29 @@ The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key={apikey}).
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
-OpenAPI specification, but are also listed on the [GTFS Regional static data documentation page](../gtfs-regional/static.md). Replace `{apikey}` with your own API key.
+OpenAPI specification, but are also listed on [the overview page for this API](_index.md). Replace `{apikey}` with your own API key. 
 {{% /note %}}
 
 {{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-regional/netex-regional-specification" %}}
 
-## Download URLs
+## Example download URLs
+
+Below are some example download URLs. For a complete list all operators with data available, check [the overview page for this API](_index.md).
 
 ### Regional operators
 
 | Operator                                            | Static data                                                                                                                                                            |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Blekingetrafiken (Blekinge län)**                 | [https://opendata.samtrafiken.se/netex/blekinge/blekinge.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/blekinge/blekinge.zip?key=<api-nyckel>)                 |
-| **Dalatrafik (Dalarnas län)**                       | [https://opendata.samtrafiken.se/netex/dt/dt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/dt/dt.zip?key=<api-nyckel>)                                         |
-| **DinTur (Västernorrlands län)**                    | [https://opendata.samtrafiken.se/netex/dintur/dintur.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/dintur/dintur.zip?key=<api-nyckel>)                         |
-| **Gotlands kollektivtrafik (Gotlands län)**         | [https://opendata.samtrafiken.se/netex/gotland/gotland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/gotland/gotland.zip?key=<api-nyckel>)                     |
-| **Hallandstrafiken**                                | [https://opendata.samtrafiken.se/netex/halland/halland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/halland/halland.zip?key=<api-nyckel>)                     |
-| **JLT (Jönköpings län)**                            | [https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jlt/jlt.zip?key=<api-nyckel>)                                     |
-| **Kalmar Länstrafik (Kalmar län)**                  | [https://opendata.samtrafiken.se/netex/klt/klt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/klt/klt.zip?key=<api-nyckel>)                                           |
-| **Kronobergs Länstrafik (Kronobergs län)**          | [https://opendata.samtrafiken.se/netex/krono/krono.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/krono/krono.zip?key=<api-nyckel>)                             |
-| **LTR (Jämtlands län)**                             | [https://opendata.samtrafiken.se/netex/jamtland/jamtland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/jamtland/jamtland.zip?key=<api-nyckel>)                 |
-| **Länstrafiken Norrbotten**                         | [https://opendata.samtrafiken.se/netex/norrbotten/norrbotten.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/norrbotten/norrbotten.zip?key=<api-nyckel>)         |
-| **Länstrafiken Västerbotten**                       | [https://opendata.samtrafiken.se/netex/vasterbotten/vasterbotten.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/vasterbotten/vasterbotten.zip?key=<api-nyckel>) |
-| **Länstrafiken Örebro**                             | [https://opendata.samtrafiken.se/netex/orebro/orebro.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/orebro/orebro.zip?key=<api-nyckel>)                         |
 | **Skånetrafiken (Skåne län)**                       | [https://opendata.samtrafiken.se/netex/skane/skane.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/skane/skane.zip?key=<api-nyckel>)                             |
 | **SL (Stockholm län)**                              | [https://opendata.samtrafiken.se/netex/sl/sl.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sl/sl.zip?key=<api-nyckel>)                                         |
-| **Sörmlandstrafiken (Södermanlands län)**           | [https://opendata.samtrafiken.se/netex/sormland/sormland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sormland/sormland.zip?key=<api-nyckel>)                 |
 | **UL (Uppsala län)**                                | [https://opendata.samtrafiken.se/netex/ul/ul.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/ul/ul.zip?key=<api-nyckel>)                                         |
-| **VL (Västmanlands län)**                           | [https://opendata.samtrafiken.se/netex/vastmanland/vastmanland.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/vastmanland/vastmanland.zip?key=<api-nyckel>)     |
-| **Värmlandstrafik + Karlstadsbuss (Värmlands Län)** | [https://opendata.samtrafiken.se/netex/varm/varm.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/varm/varm.zip?key=<api-nyckel>)                                 |
-| **Västtrafik (Västra götalands län)**               | [https://opendata.samtrafiken.se/netex/vt/vt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/vt/vt.zip?key=<api-nyckel>)                                         |
-| **X-trafik (Gävleborgs län)**                       | [https://opendata.samtrafiken.se/netex/xt/xt.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/xt/xt.zip?key=<api-nyckel>)                                         |
 | **Östgötatrafiken (Östergötlands län)**             | [https://opendata.samtrafiken.se/netex/otraf/otraf.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/otraf/otraf.zip?key=<api-nyckel>)                             |
 
 ### Commercial operators
 
 | Operator                                                                                                                             | Planerad trafik | 
 | ------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| ** SJ + Snälltåget + Tågab **  | [https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>) |
+| **SJ + Snälltåget + Tågab**  | [https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>) |
 
 ## File structure
 

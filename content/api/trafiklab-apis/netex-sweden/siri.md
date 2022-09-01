@@ -25,9 +25,8 @@ The dataset can be accessed through the following URL:
 - [https://opendata.samtrafiken.se/siri-sweden/{operator}/EstimatedTimetable.xml?key={apikey}](https://opendata.samtrafiken.se/siri-sweden/{operator}/EstimatedTimetable.xml?key={apikey})
 - [https://opendata.samtrafiken.se/siri-sweden/{operator}/VehicleMonitoring.xml?key={apikey}](https://opendata.samtrafiken.se/siri-sweden/{operator}/VehicleMonitoring.xml?key={apikey})
 
-
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
-OpenAPI specification, but are also listed on the [static data documentation page](static.md). Replace `{apikey}` with your own API key.
+OpenAPI specification, but are also listed on [the overview page for this API](_index.md). Replace `{apikey}` with your own API key.
 {{% /note %}}
 
 {{% page-ref page="/docs/using-trafiklab/getting-api-keys" %}}

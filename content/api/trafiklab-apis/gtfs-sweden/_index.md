@@ -30,7 +30,7 @@ see [realtime data](realtime) for more information.
 
 ### Which operators are covered by this dataset?
 
-As this dataset is an aggregated format of the regional datasets you can see which operators are included in the documentation for the [Regional API](/api/trafiklab-apis/gtfs-regional/#which-operators-are-covered-by-this-dataset)
+{{% include "/headless/stip-data-availability.md" %}}
 
 ### How often does the data format changes? Do breaking changes happen?
 

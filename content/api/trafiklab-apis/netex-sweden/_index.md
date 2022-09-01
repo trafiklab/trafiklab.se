@@ -28,7 +28,7 @@ The static data in this dataset is updated on a daily basis, typically between 1
 
 ### Which operators are covered by this dataset?
 
-See the documentation in the [Netex Regional API](/api/trafiklab-apis/netex-regional/#which-operators-are-covered-by-this-dataset).
+{{% include "/headless/stip-data-availability.md" %}}
 
 ### How often does the data format changes? Do breaking changes happen?
 

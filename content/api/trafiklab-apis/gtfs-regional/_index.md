@@ -32,41 +32,7 @@ see [realtime data](realtime) for more information.
 
 ### Which operators are covered by this dataset?
 
-The following table shows which operators are covered by this dataset.
-
-{{% success %}}
-**New!** Realtime data for Västmanlands län is available starting 10/03/2022.
-{{% /success %}}
-
-| Operator                                       | Static data | Real-time data | Vehicle positions | Occupancy data |
-|:-----------------------------------------------| :---: |:--------------:|:-----------------:| :---: |
-| Blekingetrafiken (Blekinge län)                | ✔️ |                |                   |  |
-| Dalatrafik (Dalarnas län)                      | ✔️ |       ✔️        |         ✔️         |  |
-| DinTur (Västernorrlands län)                   | ✔️ |                |                   |  |
-| Gotlands kollektivtrafik (Gotlands län)        | ✔️ |                |                   |  |
-| Hallandstrafiken (Hallands län)                | ✔️ |                |                   |  |
-| JLT (Jönköpings län)                           | ✔️ |   🕒 Q4 2022   |    🕒 Q4 2022     |  |
-| Kalmar länstrafik (Kalmar län)                 | ✔️ |       ✔️        |         ✔️         |  |
-| Kronobergs länstrafik (Kronobergs län)         | ✔️ |                |                   |  |
-| Länstrafiken Jämtland (JLT)                    | ✔️ |                |                   |  |
-| Länstrafiken Norrbotten                        | ✔️ |                |                   |  |
-| Länstrafiken Västerbotten                      | ✔️ |       🕒       |        🕒         |  |
-| Länstrafiken Örebro                            | ✔️ |       🕒       |                   |  |
-| Skånetrafiken (Skåne län)                      | ✔️ |       ✔️        |         ✔️         | ✔️ |
-| SL (Stockholms län)                            | ✔️ |       ✔️        |         ✔️         |  |
-| Sörmlandstrafiken (Södermanlands län)          | ✔️ |                |                   |  |
-| UL (Uppsala län)                               | ✔️ |       ✔️        |         ✔️         |  |
-| VL (Västmanlands län)                          | ✔️ |       ✔️        |         ✔️         |  |
-| Värmlandstrafik & Karlstadbuss (Värmlands län) | ✔️ |       ✔️        |         ✔️         |  |
-| Västtrafik (Västra götalands län)              | ✔️ |                |                   |  |
-| X-Trafik (Gävleborgs län)                      | ✔️ |       ✔️        |         ✔️         |  |
-| Östgötatrafiken (Östergötlands län)            | ✔️ |       ✔️        |         ✔️         |  |
-| Flixtrain                                      | ✔️ |                |                   |  |
-| Ressel Rederi                                  | ✔️ |                |                   |  |
-| SJ, Tågab, Snälltåget                          | ✔️ |                |                   |  |
-| Sjöstadstrafiken (Stockholm Stad)              | ✔️ |                |                   |  |
-| Stavsnäs båttaxi                               | ✔️ |                |                   |  |
-| Y-Buss                                         | ✔️ |                |                   |  |
+{{% include "/headless/stip-data-availability.md" %}}
 
 ### How often does the data format changes? Do breaking changes happen?
 

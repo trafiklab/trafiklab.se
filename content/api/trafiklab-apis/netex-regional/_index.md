@@ -28,31 +28,7 @@ The static data in this dataset is updated on a daily basis, typically between 0
 
 ### Which operators are covered by this dataset?
 
-The following table shows which operators
-
-| Operator | Static data |
-| :--- | :---: |
-| Blekingetrafiken (Blekinge län)    | ✅ |
-| Dalatrafik (Dalarnas län)    | ✅ |
-| DinTur (Västernorrlands län)    | ✅ |
-| Gotlands kollektivtrafik (Gotlands län)    | ✅ |
-| Hallandstrafiken    | ✅ |
-| JLT (Jönköpings län)    | ✅ |
-| Kalmar Länstrafik (Kalmar län)    | ✅ |
-| Kronobergs Länstrafik (Kronobergs län)    | ✅ |
-| LTR (Jämtlands län)    | ✅ |
-| Länstrafiken Norrbotten    | ✅ |
-| Länstrafiken Västerbotten    | ✅ |
-| Länstrafiken Örebro    | ✅ |
-| Skånetrafiken (Skåne län)    | ✅ |
-| SL (Stockholm län)    | ✅ |
-| Sörmlandstrafiken (Södermanlands län)    | ✅ |
-| UL (Uppsala län)    | ✅ |
-| VL (Västmanlands län)    | ✅ |
-| Värmlandstrafik + Karlstadsbuss (Värmlands Län)    | ✅ |
-| Västtrafik (Västra götalands län)    | ✅ |
-| X-trafik (Gävleborgs län)    | ✅ |
-| Östgötatrafiken (Östergötlands län)| ✅ |
+{{% include "/headless/stip-data-availability.md" %}}
 
 ### How often does the data format changes? Do breaking changes happen?
 

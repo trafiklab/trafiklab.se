@@ -18,43 +18,11 @@ The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey}).
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the 
-OpenAPI specification, but are also listed below for your convenience. Replace `{apikey}` with your own API key. 
+OpenAPI specification, but are also listed on [the overview page for this API](_index.md). Replace `{apikey}` with your own API key. 
 {{% /note %}}
 
 {{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/static-specification" 
 "/docs/using-trafiklab-data/using-gtfs-files"  %}}
-
-**Operator abbreviations used in GTFS Regional**
-
-|                    Operator                    |    Abbreviation    |
-|:----------------------------------------------:|:------------------:|
-|        Blekingetrafiken (Blekinge län)         |     `blekinge`     |
-|           Dalatrafik (Dalarnas län)            |        `dt`        |
-|          DinTur (Västernorrlands län)          |      `dintur`      |
-|    Gotlands kollektivtrafik (Gotlands län)     |     `gotland`      |
-|        Hallandstrafiken (Hallands län)         |     `halland`      |
-|              JLT (Jönköpings län)              |       `jlt`        |
-|         Kalmar länstrafik (Kalmar län)         |       `klt`        |
-|     Kronobergs länstrafik (Kronobergs län)     |      `krono`       |
-|              LTR (Jämtlands län)               |     `jamtland`     |
-|            Länstrafiken Norrbotten             |    `norrbotten`    |
-|           Länstrafiken Västerbotten            |   `vasterbotten`   |
-|              Länstrafiken Örebro               |      `orebro`      |
-|           Skånetrafiken (Skåne län)            |      `skane`       |
-|              SL (Stockholms län)               |        `sl`        |
-|     Sörmlandstrafiken (Södermanlands län)      |     `sormland`     |
-|                UL (Uppsala län)                |        `ul`        |
-|             VL (Västmanlands län)              |   `vastmanland`    |
-| Värmlandstrafik & Karlstadbuss (Värmlands län) |       `varm`       |
-|       Västtrafik (Västra götalands län)        |        `vt`        |
-|           X-Trafik (Gävleborgs län)            |        `xt`        |
-|      Östgötatrafiken (Östergötlands län)       |      `otraf`       |
-|                   Flixtrain                    |    `flixtrain`     |
-|                 Ressel Rederi                  |      `ressel`      |
-|             SJ, Tågab, Snälltåget              |        `sj`        |
-|       Sjöstadstrafiken (Stockholm Stad)        | `sjostadstrafiken` |
-|                Stavsnäs båttaxi                |     `battaxi`      |
-|                     Y-Buss                     |      `ybuss`       |
 
 ## GTFS Extensions
 
