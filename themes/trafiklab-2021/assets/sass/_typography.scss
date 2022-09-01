@@ -35,16 +35,10 @@ body table a:visited {
 
 // Headings
 
+// Headings
 h1, h2, h3, h4, h5, h6 {
   font-family: $alternative-font;
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 2.25rem;
-  line-height: 3.0rem;
   font-weight: 600;
-  margin: 0 0 1rem;
 }
 
 h1.tl-brand{
@@ -57,35 +51,41 @@ h1.tl-brand{
   letter-spacing: 0.1rem;
 }
 
-h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 2.5rem;
+h1 {
+  font-size: 2.25rem;
+  line-height: 3.5rem;
   margin: 0 0 1rem;
+}
+
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  margin: 2rem 0 .5rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 500;
-  margin: 1rem 0 .5rem;
-  line-height: 2rem;
+  line-height: 2.25rem;
+  margin: 1.5rem 0 .5rem;
 }
 
 h4 {
   font-size: 1.25rem;
-  font-weight: 600;
-  margin: 1rem 0 .5rem;
+  line-height: 1.875rem;
+  margin: 1.5rem 0 0;
 }
 
-h5{
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin: 1rem 0 .5rem;
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1.5rem 0 0;
 }
 
 h6 {
-  font-size: 1rem;
-  margin: 1rem 0 .5rem;
+  font-size: .875rem;
+  line-height: 1.375rem;
+  margin: 1.5rem 0 0;
 }
 
 // Helpers
