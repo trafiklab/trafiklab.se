@@ -7,15 +7,6 @@ date: 2022-02-07
 This page collects the differences between version 2.0 and version 2.1 of the ResRobot APIs, so you can swiftly adapt
 your application to the updated specification.
 
-{{% success %}}
-On March 24th, 2022, an additional improvement to this API was made. You can now use one API key to use all API 
-endpoints, instead of needing two keys. This does not negatively affect any existing keys. 
-
-If you before this change already created a *ResRobot Routeplanner v2.1* key, this key has been upgraded automatically. 
-If you created a *ResRobot Stoptimes v2.1* API key, you can simply discard 
-this key and use your upgraded route-planner key (if you have one) or create a new *ResRobot 2.1* key.
-{{% /success %}}
-
 ## Changes for all endpoints
 
 Users of all API endpoints for which an API key is needed have to do the following:
