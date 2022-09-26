@@ -25,21 +25,21 @@ Swiftly has been present in the Swedish market since 2020 and is already partner
 
 **How did your cooperation with Trafiklab start?**
 
-> “We met with two co-workers from Samtrafiken’s dedicated Trafiklab team at the InformNorden conference in Stockholm at the end of 2018. That was the starting point for our cooperation. We started integrating data in 2019” Joaquin tells us.
+“We met with two co-workers from Samtrafiken’s dedicated Trafiklab team at the InformNorden conference in Stockholm at the end of 2018. That was the starting point for our cooperation. We started integrating data in 2019” Joaquin tells us.
 
 We asked Marta and Joaquin about the connection between Swiftly and Trafiklab, and what Trafiklab has meant for the positive development and progress for Swiftly.
 
-> “Trafiklab makes things easier for Swiftly. Having access to data is the key for Swiftly to generate the insightful analytics and accurate real-time information that is needed by our customers. The data in Trafiklab is accessible and robust” says Marta.
+“Trafiklab makes things easier for Swiftly. Having access to data is the key for Swiftly to generate the insightful analytics and accurate real-time information that is needed by our customers. The data in Trafiklab is accessible and robust” says Marta.
 
 Trafiklab is not the only data source for Swiftly. Some data is collected directly from the customers. According to Marta, the benefits of collecting data from an open data platform like Trafiklab are huge.
 
-> “There is a dedicated team behind the Trafiklab platform that we can contact, which also guarantees the data’s quality and stability. In case of an outage, we can communicate quickly and get notifications of any changes. We also know that when there is a new timetable going live, the right data set will always be available. This comfort makes it easier for us to build trust and confidence with our customers.”
+“There is a dedicated team behind the Trafiklab platform that we can contact, which also guarantees the data’s quality and stability. In case of an outage, we can communicate quickly and get notifications of any changes. We also know that when there is a new timetable going live, the right data set will always be available. This comfort makes it easier for us to build trust and confidence with our customers.”
 
 ![](/media/2022/09/swiftly-2.png)
 
 **Finally, is there anything you would ask for from Trafiklab to develop your service even further?**
 
-> “Well, access to more data is always interesting. We would be interested in blocks in the regional static data GTFS file as well as crowding information in real-time in the GTFS-rt feed. We would also advocate for public transport authorities to share vehicles positions” says Marta
+“Well, access to more data is always interesting. We would be interested in blocks in the regional static data GTFS file as well as crowding information in real-time in the GTFS-rt feed. We would also advocate for public transport authorities to share vehicles positions” says Marta.
 
 **FACTS ABOUT FLOWMAPPER**
 
