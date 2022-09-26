@@ -1,59 +1,50 @@
 +++
-date = 2022-02-16T23:00:00Z
-description = "Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon  dioxide emissions."
+date = 2022-09-25T22:00:00Z
+description = "Swiftly is a big-data and insights platform designed to help improve operational efficiency and service reliability in the public transport industry. The platform connects authorities, operators, and municipalities to improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out more about this exciting and promising platform."
 draft = true
-image = "/media/2022/02/flowmapper-speed.jpg"
+image = "/media/2022/09/sw-1.png"
 title = "Swiftly eng"
 
 +++
-<div class="right vh30">
+![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
 
-![Eva-Marie Wenehed](/media/2022/02/flowmapper-evamarie.jpg "Eva-Marie Wenehed")
+Two persons who are deeply involved in Swiftly are **Marta Zamanillo**, Senior Solutions Engineer and **Joaquín Pena**, International Sales Manager. Both have several years of experience from working with public transport authorities and operators and are passionate to improve public transportation with the help of technology. They told us that Swiftly is a great tool for public transport operators and authorities who wish to easily improve operational efficiency and service reliability. In short, with Swiftly, operators can achieve:
 
-</div>
+● Simple collaboration on real-time operations and historical analytics
 
-Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén's**
-foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire
-process until the service was launched in the Autumn of 2020. She says that the idea for the tool was born out of
-frustration at how difficult it was to find information about how the traffic system works, while knowing that it exists
-different types of digital imprints that should be able to provide that information.
+● Increased punctuality by up to 40% by viewing and analyzing historical schedule adherence
 
-The platform is developed to easily show various aspects of accessibility, such as average speed, proportion of
-slow-moving vehicles or spread of driving time. The statistics are visualized on 25-meter distances, which provide
-unique accuracy. Since Flowmapper continuously collects and stores data, it is possible to also study changes over time.
+● Quick analysis of data, since the tool gives a precise, down-to-the-second picture of the whereabouts of every vehicle in the network.
 
-Above all, Flowmapper offers an opportunity to quantify various accessibility problems. This gives an important basis to
-implement the measures that have the greatest effect at the lowest cost.
+A slightly more concrete example of what the system can visualize is where vehicles are usually delayed due to traffic jams. With the help of that information, traffic planners can take congestion into account or plan around it.
 
-All data is retrieved from Trafiklabs APIs. Flowmapper uses the position data that buses, trams and trains in public
-transport transmit, which is available at Trafiklab in terms of GTFS data.
+All together – Swiftly can really improve the passenger experience.
 
-![Passing time view](/media/2022/03/flowmapper-passagetid.jpg)
+Swiftly has been present in the Swedish market since 2020 and is already partnering with Skånetrafiken and X-trafik. In addition to its customers, they are working with several Nordic Authorities operators and authorities like Oulu in Finland and Strætó in Iceland.
 
-“Trafiklab is a great platform that makes it easy to get the data we need. Open and standardized data from both
-authorities and other organizations is a prerequisite for innovation. In that respect, we really think that Trafiklab is
-a role model,” says Eva-Marie. She adds that it would be great to have vehicle positions for all public transport
-authorities, and it would also be very interesting with more occupancy rate data.
+![](/media/2022/09/sw-3.png)
 
-![Stop areas](/media/2022/03/flowmapper-stops.jpg)
+**How did your cooperation with Trafiklab start?**
 
-Flowmapper is for everyone working to improve the accessibility of public transport. The customers are public transport
-companies, transport authorities and municipalities, i.e., partly those operators who deliver real-time data to
-Samtrafiken, which is the company behind Trafiklab. The users are primarily traffic planners.
+> “We met with two co-workers from Samtrafiken’s dedicated Trafiklab team at the InformNorden conference in Stockholm at the end of 2018. That was the starting point for our cooperation. We started integrating data in 2019” Joaquin tells us.
 
-Skånetrafiken has been using Flowmapper since the start in 2020. According to **Hanna Larsson**, who works with
-accessibility and infrastructure issues for bus operations, it is a very good analysis tool for studying for example
-average speeds and how driving times vary around the clock for a specific route or intersection.
+We asked Marta and Joaquin about the connection between Swiftly and Trafiklab, and what Trafiklab has meant for the positive development and progress for Swiftly.
 
-Eva-Marie sees several development areas for Flowmapper. The ambition is to make it a complete tool for public transport
-planning. “We are also looking into how to expand geographically, to more countries than Sweden. But it's all about
-access to data”.
+> “Trafiklab makes things easier for Swiftly. Having access to data is the key for Swiftly to generate the insightful analytics and accurate real-time information that is needed by our customers. The data in Trafiklab is accessible and robust” says Marta.
+
+Trafiklab is not the only data source for Swiftly. Some data is collected directly from the customers. According to Marta, the benefits of collecting data from an open data platform like Trafiklab are huge.
+
+> “There is a dedicated team behind the Trafiklab platform that we can contact, which also guarantees the data’s quality and stability. In case of an outage, we can communicate quickly and get notifications of any changes. We also know that when there is a new timetable going live, the right data set will always be available. This comfort makes it easier for us to build trust and confidence with our customers.”
+
+![](/media/2022/09/swiftly-2.png)
+
+**Finally, is there anything you would ask for from Trafiklab to develop your service even further?**
+
+> “Well, access to more data is always interesting. We would be interested in blocks in the regional static data GTFS file as well as crowding information in real-time in the GTFS-rt feed. We would also advocate for public transport authorities to share vehicles positions” says Marta
 
 **FACTS ABOUT FLOWMAPPER**
 
-**Release year**: 2020  
-**Type of service**: An analysis platform for visualizing the accessibility of public transport. Flowmapper combines
-illustrative maps with graphs that show statistics. There are several different views that show different aspects of
-accessibility and travel times.  
-**Data from Trafiklab**: GTFS (position data)  
-**Number of users**: About 60 - including existing and test customers.
+**Release year**: Founded in 2014, entered the Swedish market 2020.  
+**Type of service**: Big-data and insights platform helping to improve efficiency, punctuality, and service reliability.  
+**Data from Trafiklab**: GTFS regional data is collected daily and real-time positions continuously.  
+**Number of users**: Swiftly is used in more than 120 cities, in eight countries and four continents. There are about 9000 users worldwide, with 250 users in Sweden.
