@@ -1,8 +1,8 @@
 +++
 date = 2022-09-25T22:00:00Z
 description = "Swiftly is a big-data and insights platform designed to help improve operational efficiency and service reliability in the public transport industry. The platform connects authorities, operators, and municipalities to improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out more about this exciting and promising platform."
-image = "/media/2022/09/sw-1.png"
-title = "Swiftly eng"
+image = "/media/2022/09/sw-3.png"
+title = "Swiftly"
 
 +++
 ![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
@@ -21,7 +21,7 @@ All together – Swiftly can really improve the passenger experience.
 
 Swiftly has been present in the Swedish market since 2020 and is already partnering with Skånetrafiken and X-trafik. In addition to its customers, they are working with several Nordic Authorities operators and authorities like Oulu in Finland and Strætó in Iceland.
 
-![](/media/2022/09/sw-3.png)
+![](/media/2022/09/sw-1.png "Swiftly")
 
 **How did your cooperation with Trafiklab start?**
 
@@ -35,7 +35,7 @@ Trafiklab is not the only data source for Swiftly. Some data is collected direct
 
 “There is a dedicated team behind the Trafiklab platform that we can contact, which also guarantees the data’s quality and stability. In case of an outage, we can communicate quickly and get notifications of any changes. We also know that when there is a new timetable going live, the right data set will always be available. This comfort makes it easier for us to build trust and confidence with our customers.”
 
-![](/media/2022/09/swiftly-2.png)
+![](/media/2022/09/swiftly-2.png "Swiftly nr 2")
 
 **Finally, is there anything you would ask for from Trafiklab to develop your service even further?**
 
