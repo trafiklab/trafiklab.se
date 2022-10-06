@@ -15,7 +15,7 @@ def add_missing_translation_warning(filepath: str):
     
 {{% warning %}}
 **Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
-Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://suport.trafiklab.se).
+Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://support.trafiklab.se).
 
 Om du vill se webbsidan på engelska, [klicka här](/en/).
 {{% /warning %}}
@@ -72,7 +72,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.set_defaults(dry=False)
     parser.add_argument('--dry', dest='dry', action='store_true')
-    parser.add_argument('--without-git-fix', dest='git_fix', action='store_false')
     args = parser.parse_args()
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/api'), dry_run=args.dry)
     generate_fallback_pages_if_needed(os.path.join(os.getcwd(), 'content/cases'), dry_run=args.dry)
