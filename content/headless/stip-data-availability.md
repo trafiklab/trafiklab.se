@@ -1,7 +1,7 @@
 The following table shows which operators are covered by this dataset.
 
 {{% success %}}
-**New!** Realtime data for Västmanlands län is available starting 10/03/2022.
+**New!** Realtime data for Kronobergs län is available starting 10th Oct 2022.
 {{% /success %}}
 
 | Operator                                       |    Abbreviation    | Static data | Real-time data | Vehicle positions | Occupancy data |
@@ -13,7 +13,7 @@ The following table shows which operators are covered by this dataset.
 | Hallandstrafiken (Hallands län)                |     `halland`      |     ✔️      |                |                   |                |
 | JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |   🕒 Q4 2022   |    🕒 Q4 2022     |                |
 | Kalmar länstrafik (Kalmar län)                 |       `klt`        |     ✔️      |       ✔️       |        ✔️         |                |
-| Kronobergs länstrafik (Kronobergs län)         |      `krono`       |     ✔️      |                |                   |                |
+| Kronobergs länstrafik (Kronobergs län)         |      `krono`       |     ✔️      |       ✔️       |        ✔️         |                |
 | Länstrafiken Jämtland (JLT)                    |     `jamtland`     |     ✔️      |                |                   |                |
 | Länstrafiken Norrbotten                        |    `norrbotten`    |     ✔️      |                |                   |                |
 | Länstrafiken Västerbotten                      |   `vasterbotten`   |     ✔️      |       🕒       |        🕒         |                |
