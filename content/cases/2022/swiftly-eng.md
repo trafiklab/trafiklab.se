@@ -42,7 +42,7 @@ Trafiklab is not the only data source for Swiftly. Some data is collected direct
 
 “Well, access to more data is always interesting. We would be interested in blocks in the regional static data GTFS file as well as crowding information in real-time in the GTFS-rt feed. We would also advocate for public transport authorities to share vehicles positions” says Marta.
 
-**FACTS ABOUT FLOWMAPPER**
+**FACTS ABOUT SWIFTLY**
 
 **Release year**: Founded in 2014, entered the Swedish market 2020.  
 **Type of service**: Big-data and insights platform helping to improve efficiency, punctuality, and service reliability.  
