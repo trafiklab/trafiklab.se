@@ -21,7 +21,7 @@ A slightly more concrete example of what the system can visualize is where vehic
 
 All together – Swiftly can really improve the passenger experience.
 
-Swiftly has been present in the Swedish market since 2020 and is already partnering with Skånetrafiken and X-trafik. In addition to its customers, they are working with several Nordic Authorities and operators and authorities like Oulu in Finland and Strætó in Iceland.
+Swiftly has been present in the Swedish market since 2020 and is already partnering with Skånetrafiken and X-trafik. In addition to its customers, they are working with several Nordic Authorities and operators like Oulu in Finland and Strætó in Iceland.
 
 ![](/media/2022/09/sw-1.png "Swiftly")
 
