@@ -1,9 +1,6 @@
 +++
 date = 2022-11-06T23:00:00Z
-description = "Swiftly is a big-data and insights platform designed to help improve operational efficiency and service
-reliability in the public transport industry. The platform connects authorities, operators, and municipalities to
-improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out
-more about this exciting and promising platform."
+description = "Swiftly is a big-data and insights platform designed to help improve operational efficiency and service reliability in the public transport industry. The platform connects authorities, operators, and municipalities to improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out more about this exciting and promising platform."
 image = "/media/2022/09/sw-3.png"
 title = "Swiftly"
 

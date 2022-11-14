@@ -1,9 +1,6 @@
 ---
 date: 2022-02-16T23:00:00.000+00:00
-description: Flowmapper collects and stores public transport data and can thus show
-  what the accessibility of public transport looks like. Through this analysis platform,
-  it is possible to streamline public transport, shorten travel time and reduce carbon  dioxide
-  emissions.
+description: Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon dioxide emissions.
 image: "/media/2022/02/flowmapper-speed.jpg"
 title: Flowmapper
 

@@ -1,10 +1,6 @@
 +++
 date = 2022-11-06T23:00:00Z
-description = "Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av
-analyser. Verktyget är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för
-resenärerna. Plattformen kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få
-nöjdare resenärer och kapade kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta
-mer."
+description = "Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av analyser. Verktyget är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för resenärerna. Plattformen kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få nöjdare resenärer och kapade kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta mer."
 image = "/media/2022/09/sw-3.png"
 title = "Swiftly"
 

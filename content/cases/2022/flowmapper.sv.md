@@ -1,9 +1,6 @@
 ---
 date: 2022-02-16T23:00:00.000+00:00
-description: 'Flowmapper samlar in och lagrar kollektivtrafikdata och kan på så sätt
-  visa hur framkomligheten i kollektivtrafiken ser ut. Genom denna analysplattform
-  är det möjligt att effektivisera kollektivtrafiken, förkorta restiden och minska
-  koldioxidutsläppen. '
+description: 'Flowmapper samlar in och lagrar kollektivtrafikdata och kan på så sätt visa hur framkomligheten i kollektivtrafiken ser ut. Genom denna analysplattform är det möjligt att effektivisera kollektivtrafiken, förkorta restiden och minska koldioxidutsläppen.'
 image: "/media/2022/02/flowmapper-speed.jpg"
 title: Flowmapper
 
