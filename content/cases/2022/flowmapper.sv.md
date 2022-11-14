@@ -5,17 +5,16 @@ image: "/media/2022/02/flowmapper-speed.jpg"
 title: Flowmapper
 
 ---
-<div class="right vh30">
-
-![Foto på Eva-Marie Wenehed](/media/2022/02/flowmapper-evamarie.jpg "Eva-Marie Wenehed")
-
-</div>
 
 **Flowmapper samlar in och lagrar kollektivtrafikdata och kan på så sätt visa hur framkomligheten i kollektivtrafiken
 ser ut. Genom denna analysplattform är det möjligt att effektivisera kollektivtrafiken, förkorta restiden och minska
 koldioxidutsläppen.**
 
-<!--more-->
+<div class="right vh30">
+
+![Foto på Eva-Marie Wenehed](/media/2022/02/flowmapper-evamarie.jpg "Eva-Marie Wenehed")
+
+</div>
 
 Flowmapper är framarbetad inom företaget Tyréns innovationsprogram och finansierad av Tyréns ägare, Sven Tyréns
 stiftelse. Eva-Marie Wenehed, som är trafikplanerare och produktägare för Flowmapper på Tyréns, var med under hela

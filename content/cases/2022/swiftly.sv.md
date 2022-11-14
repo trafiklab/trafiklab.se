@@ -5,14 +5,13 @@ image = "/media/2022/09/sw-3.png"
 title = "Swiftly"
 
 +++
-![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
 
 **Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av analyser. Verktyget
 är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för resenärerna. Plattformen
 kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få nöjdare resenärer och kapade
 kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta mer.**
 
-<!--more-->
+![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
 
 Två personer som är engagerade i Swiftly är **Marta Zamanillo**, Senior Solutions Engineer och **Joaquín Pena**,
 International Sales Manager. Båda har flera års erfarenhet av att jobba med kollektivtrafikmyndigheter och operatörer
