@@ -1,15 +1,28 @@
 +++
 date = 2022-11-06T23:00:00Z
-description = "Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av analyser. Verktyget är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för resenärerna. Plattformen kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få nöjdare resenärer och kapade kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta mer."
+description = "Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av
+analyser. Verktyget är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för
+resenärerna. Plattformen kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få
+nöjdare resenärer och kapade kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta
+mer."
 image = "/media/2022/09/sw-3.png"
 title = "Swiftly"
 
 +++
 ![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
 
-**Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av analyser. Verktyget är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för resenärerna. Plattformen kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få nöjdare resenärer och kapade kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta mer.**
+**Swiftly är en plattform som samlar stora datamängder som kan användas för att göra olika typer av analyser. Verktyget
+är utformat för att stötta trafikföretag med att uppnå effektiva och pålitliga tjänster för resenärerna. Plattformen
+kopplar ihop myndigheter, operatörer och kommuner som med hjälp av verktyget både kan få nöjdare resenärer och kapade
+kostnader. Eftersom Swiftly använder data från Trafiklab blev vi nyfikna på att få veta mer.**
 
-Två personer som är engagerade i Swiftly är **Marta Zamanillo**, Senior Solutions Engineer och **Joaquín Pena**, International Sales Manager. Båda har flera års erfarenhet av att jobba med kollektivtrafikmyndigheter och operatörer och de brinner för att förbättra kollektivtrafiken med hjälp av teknik. Enligt dem är Swiftly ett bra verktyg för de kollektivtrafikoperatörer och myndigheter som på ett enkelt sätt vill uppnå en effektivare och pålitligare verksamhet. Med Swiftlys hjälp kan trafikföretag:
+<!--more-->
+
+Två personer som är engagerade i Swiftly är **Marta Zamanillo**, Senior Solutions Engineer och **Joaquín Pena**,
+International Sales Manager. Båda har flera års erfarenhet av att jobba med kollektivtrafikmyndigheter och operatörer
+och de brinner för att förbättra kollektivtrafiken med hjälp av teknik. Enligt dem är Swiftly ett bra verktyg för de
+kollektivtrafikoperatörer och myndigheter som på ett enkelt sätt vill uppnå en effektivare och pålitligare verksamhet.
+Med Swiftlys hjälp kan trafikföretag:
 
 ● Enkelt samarbeta vad gäller drift i realtid och historisk analys av data
 
@@ -17,7 +30,8 @@ Två personer som är engagerade i Swiftly är **Marta Zamanillo**, Senior Solut
 
 ● Få snabba analyser av data. I verktyget kan man få en exakt bild av var varje fordon befinner sig för stunden.
 
-Ett exempel på vad systemet kan visa är var fordon vanligtvis blir försenade på grund av mycket trafik. Med hjälp av den informationen kan trafikplanerare ta hänsyn till trängseln vid den aktuella tidpunkten och planera för att undvika den.
+Ett exempel på vad systemet kan visa är var fordon vanligtvis blir försenade på grund av mycket trafik. Med hjälp av den
+informationen kan trafikplanerare ta hänsyn till trängseln vid den aktuella tidpunkten och planera för att undvika den.
 
 Sammantaget finns goda förutsättningar att uppnå en förbättrad passagerarupplevelse genom användande av Swiftly.
 

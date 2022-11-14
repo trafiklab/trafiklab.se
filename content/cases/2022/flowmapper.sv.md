@@ -14,15 +14,28 @@ title: Flowmapper
 
 </div>
 
-**Flowmapper samlar in och lagrar kollektivtrafikdata och kan på så sätt visa hur framkomligheten i kollektivtrafiken ser ut. Genom denna analysplattform är det möjligt att effektivisera kollektivtrafiken, förkorta restiden och minska koldioxidutsläppen.**
+**Flowmapper samlar in och lagrar kollektivtrafikdata och kan på så sätt visa hur framkomligheten i kollektivtrafiken
+ser ut. Genom denna analysplattform är det möjligt att effektivisera kollektivtrafiken, förkorta restiden och minska
+koldioxidutsläppen.**
 
-Flowmapper är framarbetad inom företaget Tyréns innovationsprogram och finansierad av Tyréns ägare, Sven Tyréns stiftelse. Eva-Marie Wenehed, som är trafikplanerare och produktägare för Flowmapper på Tyréns, var med under hela processen fram tills att tjänsten lanserades under hösten 2020. Hon berättar att idén till verktyget föddes ur en frustration kring hur svårt det var att få information om hur trafiksystemet fungerar, samtidigt som man visste att det fanns olika typer av digitala avtryck som borde kunna ge den informationen.
+<!--more-->
 
-Plattformen är utvecklad för att på ett enkelt sätt visa olika aspekter av framkomlighet, som till exempel medelhastighet, andel långsamtgående fordon eller spridning av körtid. Statistiken är visualiserad på 25-meters sträckor, vilket ger en unik noggrannhet. Eftersom Flowmapper samlar in och lagrar data löpande är det möjligt att också studera förändringar över tid.
+Flowmapper är framarbetad inom företaget Tyréns innovationsprogram och finansierad av Tyréns ägare, Sven Tyréns
+stiftelse. Eva-Marie Wenehed, som är trafikplanerare och produktägare för Flowmapper på Tyréns, var med under hela
+processen fram tills att tjänsten lanserades under hösten 2020. Hon berättar att idén till verktyget föddes ur en
+frustration kring hur svårt det var att få information om hur trafiksystemet fungerar, samtidigt som man visste att det
+fanns olika typer av digitala avtryck som borde kunna ge den informationen.
 
-Framför allt erbjuder Flowmapper en möjlighet att kvantifiera olika framkomlighetsproblem. Det är ett viktigt underlag för att kunna genomföra de åtgärder som ger mest effekt till lägst kostnad.
+Plattformen är utvecklad för att på ett enkelt sätt visa olika aspekter av framkomlighet, som till exempel
+medelhastighet, andel långsamtgående fordon eller spridning av körtid. Statistiken är visualiserad på 25-meters
+sträckor, vilket ger en unik noggrannhet. Eftersom Flowmapper samlar in och lagrar data löpande är det möjligt att också
+studera förändringar över tid.
 
-All data hämtas från Trafiklabs API:er. Flowmapper använder den positionsdata som bussar, spårvagnar och tåg i kollektivtrafiken sänder ifrån sig, vilket finns på Trafiklab i form av GTFS-data.
+Framför allt erbjuder Flowmapper en möjlighet att kvantifiera olika framkomlighetsproblem. Det är ett viktigt underlag
+för att kunna genomföra de åtgärder som ger mest effekt till lägst kostnad.
+
+All data hämtas från Trafiklabs API:er. Flowmapper använder den positionsdata som bussar, spårvagnar och tåg i
+kollektivtrafiken sänder ifrån sig, vilket finns på Trafiklab i form av GTFS-data.
 
 ![](/media/2022/03/flowmapper-passagetid.jpg)
 

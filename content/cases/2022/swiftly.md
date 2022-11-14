@@ -1,23 +1,37 @@
 +++
 date = 2022-11-06T23:00:00Z
-description = "Swiftly is a big-data and insights platform designed to help improve operational efficiency and service reliability in the public transport industry. The platform connects authorities, operators, and municipalities to improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out more about this exciting and promising platform."
+description = "Swiftly is a big-data and insights platform designed to help improve operational efficiency and service
+reliability in the public transport industry. The platform connects authorities, operators, and municipalities to
+improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out
+more about this exciting and promising platform."
 image = "/media/2022/09/sw-3.png"
 title = "Swiftly"
 
 +++
 ![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
 
-**Swiftly is a big-data and insights platform designed to help improve operational efficiency and service reliability in the public transport industry. The platform connects authorities, operators, and municipalities to improve passenger satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out more about this exciting and promising platform.**
+**Swiftly is a big-data and insights platform designed to help improve operational efficiency and service reliability in
+the public transport industry. The platform connects authorities, operators, and municipalities to improve passenger
+satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were curious to find out more about this
+exciting and promising platform.**
 
-Two persons who are deeply involved in Swiftly are **Marta Zamanillo**, Senior Solutions Engineer and **Joaquín Pena**, International Sales Manager. Both have several years of experience from working with public transport authorities and operators and are passionate to improve public transportation with the help of technology. They told us that Swiftly is a great tool for public transport operators and authorities who wish to easily improve operational efficiency and service reliability. In short, with Swiftly, operators can achieve:
+<!--more-->
+
+Two persons who are deeply involved in Swiftly are **Marta Zamanillo**, Senior Solutions Engineer and **Joaquín Pena**,
+International Sales Manager. Both have several years of experience from working with public transport authorities and
+operators and are passionate to improve public transportation with the help of technology. They told us that Swiftly is
+a great tool for public transport operators and authorities who wish to easily improve operational efficiency and
+service reliability. In short, with Swiftly, operators can achieve:
 
 ● Simple collaboration on real-time operations and historical analytics
 
 ● Increased punctuality by up to 40% by viewing and analyzing historical schedule adherence
 
-● Quick analysis of data, since the tool gives a precise, down-to-the-second picture of the whereabouts of every vehicle in the network.
+● Quick analysis of data, since the tool gives a precise, down-to-the-second picture of the whereabouts of every vehicle
+in the network.
 
-A slightly more concrete example of what the system can visualize is where vehicles are usually delayed due to traffic jams. With the help of that information, traffic planners can take congestion into account or plan around it.
+A slightly more concrete example of what the system can visualize is where vehicles are usually delayed due to traffic
+jams. With the help of that information, traffic planners can take congestion into account or plan around it.
 
 All together – Swiftly can really improve the passenger experience.
 

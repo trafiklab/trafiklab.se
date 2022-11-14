@@ -14,7 +14,11 @@ title: Flowmapper
 
 </div>
 
-**Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and reduce carbon  dioxide emissions.**
+**Flowmapper collects and stores public transport data and can thus show what the accessibility of public transport
+looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and
+reduce carbon dioxide emissions.**
+
+<!--more-->
 
 Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén's**
 foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire
