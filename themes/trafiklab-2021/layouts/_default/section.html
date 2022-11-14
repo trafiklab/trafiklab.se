@@ -22,7 +22,11 @@
               {{ end }}
               <div>
                 <h2 class="mt-0 blogpost-overview__title">{{ .Title }}</h2>
-                <div class="blogpost-overview__description">{{ .Summary }}</div>
+                {{ if gt (len .Description) 0 }}
+                <p class="blogpost-overview__description">{{ .Description | markdownify }}</p>
+                {{ else }}
+                <p class="blogpost-overview__description">{{ .Summary }}</p>
+                {{ end }}
               </div>
             </div>
           </div>
