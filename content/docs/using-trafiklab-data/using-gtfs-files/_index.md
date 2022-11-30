@@ -18,7 +18,7 @@ and humans. Each file contains all the instances of a certain type, just like a 
 contains all the routes, another file contains all the stops. The files are linked together through ids, similar to how
 foreign keys work in a database. The image below gives an idea of the structure.
 
-![The structure of a GTFS dataset](/media/2020/05/gtfs-static-model.png)
+![The structure of a GTFS dataset](/media/2020/05/gtfs-model.png)
 
 ### When should I use GTFS?
 
