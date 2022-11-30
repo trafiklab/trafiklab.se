@@ -16,3 +16,6 @@ provide cost us money, and therefore we need to keep control over the number of 
 In order to obtain API keys, you create one or more projects on our website. To do this, you will need an account. The
 following pages will guide you through the account creation process and will help you to set up your first project and
 obtain API keys.
+
+
+{{% page-ref "creating-an-account" %}}

@@ -41,4 +41,6 @@ started, the following list of common Swedish words should help you to get aroun
 * **Nyckel**: (API) key
 * **Nivå**: Level
 * **Konto**: Account
-  {{% /note %}}
+{{% /note %}}
+
+{{% page-ref "creating-a-project" %}}

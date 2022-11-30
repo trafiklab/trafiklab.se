@@ -37,3 +37,5 @@ started, the following list of common Swedish words should help you to get aroun
 * **Nivå**: Level
 * **Konto**: Account
   {{% /note %}}
+
+{{% page-ref "upgrading-api-keys" %}}
