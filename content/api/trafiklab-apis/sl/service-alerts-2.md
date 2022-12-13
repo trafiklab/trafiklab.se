@@ -23,6 +23,57 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 <p>Om ingen av parametrarna ”TransportMode”, ”LineNumber” och ”SiteId” skickas med anropet skickas samtliga avvikelser tillbaks som svar.</p>
 <p>Är du intresserad av Störningar här och nu i SL trafiken se<a href="https://sl.se/sv/find/?query=St%c3%b6rningsinformation">https://sl.se/sv/find/?query=St%c3%b6rningsinformation</a></p>
+
+<h3>API-nyckelnivåer</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Nivå</strong></p>
+</td>
+<td>
+<p><strong>Max anrop/minut</strong></p>
+</td>
+<td>
+<p><strong>Max anrop/månad</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Brons</p>
+</td>
+<td>
+<p>30</p>
+</td>
+<td>
+<p>10 000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Silver</p>
+</td>
+<td>
+<p>60</p>
+</td>
+<td>
+<p>100 000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Guld</p>
+</td>
+<td>
+<p>Efter behov</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</tbody>
+</table>
+
 <h2>Metod deviations</h2>
 <p>URL</p>
 

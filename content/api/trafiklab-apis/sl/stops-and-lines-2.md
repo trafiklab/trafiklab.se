@@ -98,11 +98,39 @@ has therefore not been translated for the new Trafiklab website.{{% /info %}}
 `https://api.sl.se/api2/LineData.json?model=[model]&key=[key]`
 
 <p>Observera att det är extension i anropet som avgör formateringen av svaret.</p>
-<h2>API nycklar, behörighet</h2>
-<p>API nycklar kan införskaffas via Trafiklabs utvecklareportal</p>
-<p>En API nyckel ska användas i URL:en för ett API anrop.</p>
+<h2>API-nycklar, behörighet</h2>
+<p>API-nycklar kan införskaffas via Trafiklabs utvecklareportal</p>
+<p>En API-nyckel ska användas i URL:en för ett API anrop.</p>
 
 `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+
+<h3>Nyckelnivåer</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Nivå</strong></p>
+</td>
+<td>
+<p><strong>Max anrop/minut</strong></p>
+</td>
+<td>
+<p><strong>Max anrop/månad</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Brons</p>
+</td>
+<td>
+<p>5</p>
+</td>
+<td>
+<p>500</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 <h2>Format</h2>
 <p>API:et har support för XML och JSON dataformatering.</p>

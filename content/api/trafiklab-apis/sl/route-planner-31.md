@@ -47,6 +47,56 @@ För version 3.1 av reseplaneraren så har svarsformatet avseende crd-elementen 
 - Recontruction: `api.sl.se/api2/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
 - XSD: `api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`
 
+<h3>API-nyckelnivåer</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Nivå</strong></p>
+</td>
+<td>
+<p><strong>Max anrop/minut</strong></p>
+</td>
+<td>
+<p><strong>Max anrop/månad</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Brons</p>
+</td>
+<td>
+<p>30</p>
+</td>
+<td>
+<p>10 000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Silver</p>
+</td>
+<td>
+<p>60</p>
+</td>
+<td>
+<p>500 000</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Guld</p>
+</td>
+<td>
+<p>Efter behov</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Format
 Json eller Xml enligt ändelse till serviceanropet.
 

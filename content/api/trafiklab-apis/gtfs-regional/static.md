@@ -19,9 +19,19 @@ The dataset can be accessed through the following URL:
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the 
 OpenAPI specification, but are also listed on [the overview page for this API](_index.md). Replace `{apikey}` with your own API key. 
+If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get it.
 {{% /note %}}
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-regional/static-specification" 
+#### API key levels
+
+| Level  | Calls per minute | Calls per month |
+|:-------|:----------------:|:---------------:|
+| Bronze |        10        |       50        |
+| Silver |        10        |       250       |
+| Gold   |        20        |      2500       |
+
+
+{{% page-ref "/api/trafiklab-apis/gtfs-regional/static-specification"
 "/docs/using-trafiklab-data/using-gtfs-files"  %}}
 
 ## GTFS Extensions
@@ -40,14 +50,14 @@ The following list shows the most used transport modes. This is a non-extensive 
 types you should support. You should still be able to handle the other types in a graceful way, as new traffic may make
 use of them without prior warning.
 
-| Code | Name | Example |
-| :--- | :--- | :--- |
-| 100 | Railway Service |  |
-| 401 | Metro Service |  |
-| 700 | Bus Service |  |
-| 717 | Share Taxi Service | Advance order traffic (Förbeställningstrafik) |
-| 900 | Tram Service |  |
-| 1000 | Water Transport Service | Ferry, pendelbåt |
+| Code | Name                    | Example                                       |
+|:-----|:------------------------|:----------------------------------------------|
+| 100  | Railway Service         |                                               |
+| 401  | Metro Service           |                                               |
+| 700  | Bus Service             |                                               |
+| 717  | Share Taxi Service      | Advance order traffic (Förbeställningstrafik) |
+| 900  | Tram Service            |                                               |
+| 1000 | Water Transport Service | Ferry, pendelbåt                              |
 
 ### Trip-to-trip transfers
 
