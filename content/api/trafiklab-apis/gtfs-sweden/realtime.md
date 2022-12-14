@@ -33,9 +33,9 @@ If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys
 
 | Level  | Calls per minute | Calls per month |
 |:-------|:----------------:|:---------------:|
-| Bronze |        50        |     30 000️     |
+| Bronze |        50        |     30 000      |
 | Silver |       250        |    2 000 000    |
-| Gold   |       500        |   22 500 000️   |
+| Gold   |       500        |   22 500 000    |
 
 ## Available real-time data
 

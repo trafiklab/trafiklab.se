@@ -22,55 +22,13 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 `https://api.sl.se/api2/typeahead.<FORMAT>?key=<DIN NYCKEL>%&searchstring=<SÖKORD>%&stationsonly=<ENDAST STATIONER>&maxresults<MAX ANTAL SVAR>`
 
-<h3>API-nyckelnivåer</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><strong>Nivå</strong></p>
-</td>
-<td>
-<p><strong>Max anrop/minut</strong></p>
-</td>
-<td>
-<p><strong>Max anrop/månad</strong></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Brons</p>
-</td>
-<td>
-<p>30</p>
-</td>
-<td>
-<p>10 000</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Silver</p>
-</td>
-<td>
-<p>60</p>
-</td>
-<td>
-<p>100 000</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Guld</p>
-</td>
-<td>
-<p>Efter behov</p>
-</td>
-<td>
-<p></p>
-</td>
-</tr>
-</tbody>
-</table>
+### API-nyckelnivåer
+
+| Nivå   | Max anrop/minut | Max anrop/månad |
+|--------|-----------------|-----------------|
+| Brons  | 30              | 10 000          |
+| Silver | 60              | 100 000         |
+| Guld   |                 | Efter behov     |
 
 <h2>Format</h2>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>

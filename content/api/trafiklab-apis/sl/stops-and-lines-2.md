@@ -104,33 +104,11 @@ has therefore not been translated for the new Trafiklab website.{{% /info %}}
 
 `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
 
-<h3>Nyckelnivåer</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><strong>Nivå</strong></p>
-</td>
-<td>
-<p><strong>Max anrop/minut</strong></p>
-</td>
-<td>
-<p><strong>Max anrop/månad</strong></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Brons</p>
-</td>
-<td>
-<p>5</p>
-</td>
-<td>
-<p>500</p>
-</td>
-</tr>
-</tbody>
-</table>
+### Nyckelnivåer
+
+| Nivå  | Max anrop/minut | Max anrop/månad |
+|-------|-----------------|-----------------|
+| Brons | 5               | 500             |
 
 <h2>Format</h2>
 <p>API:et har support för XML och JSON dataformatering.</p>
