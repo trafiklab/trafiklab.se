@@ -3,286 +3,78 @@ title: SL Stop lookup v1.0 (Platsuppslag)
 weight: 300
 date: 2014-03-14
 aliases:
-  - /api/sl-platsuppslag
-  - /api/sl-platsuppslag/dokumentation
-  - /api/sl-platsuppslag/nivaer
-  - /api/sl-platsuppslag/konsol
-  - /node/12617
-  - /node/12617/dokumentation
-  - /node/12617/nivaer
-  - /node/12617/konsol
+- /api/sl-platsuppslag
+- /api/sl-platsuppslag/dokumentation
+- /api/sl-platsuppslag/nivaer
+- /api/sl-platsuppslag/konsol
+- /node/12617
+- /node/12617/dokumentation
+- /node/12617/nivaer
+- /node/12617/konsol
+
 ---
-<h2>Beskrivning</h2>
-<p>Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara söka efter hållplatsområden eller hållplatser, adresser och platser.</p>
+
+## Beskrivning
+
+Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara
+söka efter hållplatsområden eller hållplatser, adresser och platser.
 
 {{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
 has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
-<h2>URL</h2>
+## URL
 
-`https://api.sl.se/api2/typeahead.<FORMAT>?key=<DIN NYCKEL>%&searchstring=<SÖKORD>%&stationsonly=<ENDAST STATIONER>&maxresults<MAX ANTAL SVAR>`
+`https://api.sl.se/api2/typeahead.<FORMAT>?key=<DIN NYCKEL>&searchstring=<SÖKORD>&stationsonly=<ENDAST STATIONER>&maxresults<MAX ANTAL SVAR>`
 
-### API-nyckelnivåer
+## Format
 
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 100 000         |
-| Guld   |                 | Efter behov     |
+Json eller xml enligt ändelse till serviceanropet.
 
-<h2>Format</h2>
-<p>Json eller xml enligt ändelse till serviceanropet.</p>
-<h2>Parametrar</h2>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Tvingande</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Key</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Din API nyckel.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>SearchString</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Söksträngen. (Max 20 tecken)</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p class="notranslate">StationsOnly</p>
-			</td>
-			<td>
-			<p>Boolean</p>
-			</td>
-			<td>
-			<p>Nej</p>
-			</td>
-			<td>
-			<p>Om ”True” returneras endast hållplatser. True = default.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>MaxResults</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Nej</p>
-			</td>
-			<td>
-			<p>Maximalt antal resultat som önskas. 10 är default, det går inte att få mer än 50.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>type</td>
-			<td>String</td>
-			<td>Nej</td>
-			<td>
-			<p>Typfilter för platser:</p>
-			<p>S: sök efter endast stationer<br />
-			P: Sök efter endast POI<br />
-			A: Sök endast efter adresser<br />
-			SP: Sök efter stationer och POI<br />
-			SA: Sök endas efter stationer och Adresser<br />
-			AP: Sök endast på adresser och POI<br />
-			ALL: adresser, stationer och POI</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h2>Resultat</h2>
-<h3>Svarsstruktur</h3>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p class="notranslate">StatusCode</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Innehåller statuskod för det eventuella meddelandet.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Message</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Innehåller eventuellt anropsrelaterade meddelanden som t.ex. felmeddelanden. Se ”Felmeddelanden” nedan.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ExecutionTime</p>
-			</td>
-			<td>
-			<p>Long</p>
-			</td>
-			<td>
-			<p>Anger hur lång tid (i ms) det tog för servern att generera svaret.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ResponseData</p>
-			</td>
-			<td>
-			<p>Sites</p>
-			</td>
-			<td>
-			<p>Innehåller själva svarsdata från tjänsten. Se ”Svarsdata” nedan.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h3>Svarsdata</h3>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Sites</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista med de platser som hittats. Se ”Site” nedan.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h4>Site</h4>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Name</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namnet på platsen.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>SiteId</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Id för hållplatsområde.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Type</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Typ av plats: ”Station”, ”Address” eller ”Poi” (Point of interest).</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>X</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>X-koordinat för placering.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Y</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Y-koordinat för placering.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h2>Felmeddelanden</h2>
-<p>Än så länge finns inga felmeddelanden.</p>
-<h2 id="support">Support</h2>
-<p>Räcker inte dokumentationen så<a href="http://kundo.se/org/trafiklabse/posts/">sök gärna bland alla de hundratals inlägg som finns på vårt supportforum</a>. Det är troligt att någon redan har hittat och löst samma problem som du har.</p>
-<p>Hittar du fortfarande inte svar på din fråga så<a href="http://kundo.se/org/trafiklabse/">skriv ett eget inlägg på forumet</a>så hjälper vi dig.</p>
+## Parametrar
+
+| Namn         | Datatyp | Tvingande | Beskrivning                                                                                                                                                                                                                                                                                   |
+|--------------|---------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Key          | String  | Ja        | Din API nyckel.                                                                                                                                                                                                                                                                               |
+| SearchString | String  | Ja        | Söksträngen. (Max 20 tecken)                                                                                                                                                                                                                                                                  |
+| StationsOnly | Boolean | Nej       | Om ”True” returneras endast hållplatser. True = default.                                                                                                                                                                                                                                      |
+| MaxResults   | Integer | Nej       | Maximalt antal resultat som önskas. 10 är default, det går inte att få mer än 50.                                                                                                                                                                                                             |
+| type         | String  | Nej       | Typfilter för platser: <ul><li>S: sök efter endast stationer <li>P: Sök efter endast POI <li>A: Sök endast efter adresser <li>SP: Sök efter stationer och POI <li>SA: Sök endas efter stationer och Adresser <li>AP: Sök endast på adresser och POI <li>ALL: adresser, stationer och POI</ul> |
+
+## Resultat
+
+### Svarsstruktur
+
+| Namn          | Datatyp | Beskrivning                                                                                             |
+|---------------|---------|---------------------------------------------------------------------------------------------------------|
+| StatusCode    | Integer | Innehåller statuskod för det eventuella meddelandet.                                                    |
+| Message       | String  | Innehåller eventuellt anropsrelaterade meddelanden som t.ex. felmeddelanden. Se ”Felmeddelanden” nedan. |
+| ExecutionTime | Long    | Anger hur lång tid (i ms) det tog för servern att generera svaret.                                      |
+| ResponseData  | Sites   | Innehåller själva svarsdata från tjänsten. Se ”Svarsdata” nedan.                                        |
+
+### Svarsdata
+
+| Namn  | Datatyp | Beskrivning                                        |
+|-------|---------|----------------------------------------------------|
+| Sites | List    | Lista med de platser som hittats. Se ”Site” nedan. |
+
+#### Site
+
+| Namn   | Datatyp | Beskrivning                                                         |
+|--------|---------|---------------------------------------------------------------------|
+| Name   | String  | Namnet på platsen.                                                  |
+| SiteId | Integer | Id för hållplatsområde.                                             |
+| Type   | String  | Typ av plats: ”Station”, ”Address” eller ”Poi” (Point of interest). |
+| X      | String  | X-koordinat för placering.                                          |
+| Y      | String  | Y-koordinat för placering.                                          |
+
+## Felmeddelanden
+
+Än så länge finns inga felmeddelanden.
+
+## Support
+
+Räcker inte dokumentationen så <a href="http://kundo.se/org/trafiklabse/posts/">sök gärna bland alla de hundratals
+inlägg som finns på vårt supportforum</a>. Det är troligt att någon redan har hittat och löst samma problem som du har.
+
+Hittar du fortfarande inte svar på din fråga så <a href="http://kundo.se/org/trafiklabse/">skriv ett eget inlägg på
+forumet</a> så hjälper vi dig.

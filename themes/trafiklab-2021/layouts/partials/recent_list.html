@@ -5,7 +5,9 @@
         {{ range ( where $args.context.Site.RegularPages "Type" (print $args.type) | first 3 ) }}
         <a class="tl-card-list__item" href="{{ .Permalink }}">
             <h4 class="list-item-title">{{ .Title }}</h4>
-            {{ if gt (len .Summary) 200 }}
+            {{ if gt (len .Description) 0 }}
+            <p class="tl-paragraph mt-0">{{ .Description | markdownify }}</p>
+            {{ else if gt (len .Summary) 300 }}
             <p class="tl-paragraph mt-0">{{ .Summary | markdownify | truncate 300 }}</p>
             {{ else }}
             <p class="tl-paragraph mt-0">{{ .Summary | markdownify }}</p>

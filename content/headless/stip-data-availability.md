@@ -1,7 +1,7 @@
 The following table shows which operators are covered by this dataset.
 
 {{% success %}}
-**New!** Realtime data for Kronobergs län is available starting 10th Oct 2022.
+**New!** Occupancy data is available for Östgötatrafiken starting 14th December 2022.
 {{% /success %}}
 
 | Operator                                       |    Abbreviation    | Static data | Real-time data | Vehicle positions | Occupancy data |
@@ -26,7 +26,7 @@ The following table shows which operators are covered by this dataset.
 | Värmlandstrafik & Karlstadbuss (Värmlands län) |       `varm`       |     ✔️      |       ✔️       |        ✔️         |                |
 | Västtrafik (Västra götalands län)              |        `vt`        |     ✔️      |                |                   |                |
 | X-Trafik (Gävleborgs län)                      |        `xt`        |     ✔️      |       ✔️       |        ✔️         |                |
-| Östgötatrafiken (Östergötlands län)            |      `otraf`       |     ✔️      |       ✔️       |        ✔️         |                |
+| Östgötatrafiken (Östergötlands län)            |      `otraf`       |     ✔️      |       ✔️       |        ✔️         |       ✔️       |
 | Flixtrain                                      |    `flixtrain`     |     ✔️      |                |                   |                |
 | Ressel Rederi                                  |      `ressel`      |     ✔️      |                |                   |                |
 | SJ, Tågab, Snälltåget                          |        `sj`        |     ✔️      |                |                   |                |

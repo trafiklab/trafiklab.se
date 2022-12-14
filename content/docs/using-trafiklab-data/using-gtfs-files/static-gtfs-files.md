@@ -18,7 +18,7 @@ will only discuss the files which are present in the Trafiklab datasets.
 
 ### The general structure
 
-![The GTFS model, as used by Trafiklab. Fields which are always present are marked in bold.](/media/2020/05/gtfs-static-model.svg)
+![The GTFS model, as used by Trafiklab. Fields which are always present are marked in bold.](/media/2020/05/gtfs-model.png)
 
 The GTFS model contains multiple files, which can be required or optional. The fields in these files can be required,
 optionally required, or optional. The diagram above shows which fields are used by Trafiklab. The fields which are

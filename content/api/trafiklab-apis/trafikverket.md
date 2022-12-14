@@ -28,10 +28,6 @@ This API has multiple versions, all using the same API key. You should use the l
 
 ```text
 https://api.trafikinfo.trafikverket.se/v2/data.json
-https://api.trafikinfo.trafikverket.se/v1.3/data.json
-https://api.trafikinfo.trafikverket.se/v1.2/data.json
-https://api.trafikinfo.trafikverket.se/v1.1/data.json
-https://api.trafikinfo.trafikverket.se/v1/data.json
 ```
 
 {{% /tab %}}
@@ -40,10 +36,6 @@ https://api.trafikinfo.trafikverket.se/v1/data.json
 
 ```text
 https://api.trafikinfo.trafikverket.se/v2/data.xml
-https://api.trafikinfo.trafikverket.se/v1.3/data.xml
-https://api.trafikinfo.trafikverket.se/v1.2/data.xml
-https://api.trafikinfo.trafikverket.se/v1.1/data.xml
-https://api.trafikinfo.trafikverket.se/v1/data.xml
 ```
 
 {{% /tab %}} {{% /tabs %}}
