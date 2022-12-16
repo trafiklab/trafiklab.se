@@ -16,14 +16,14 @@ The dataset can be found
 at [https://api.resrobot.se/gtfs/sweden.zip?key={apikey}](https://api.resrobot.se/gtfs/sweden.zip?key={apikey}).
 
 Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) 
-on how to get it. {{% /note %}}
+on how to get one. {{% /note %}}
 
 #### API key levels
 
-| Level             | Calls per minute | Calls per month |
-|:------------------|:----------------:|:---------------:|
-| Bronze            |        1         |       50        |
-| Temporary upgrade |        2         |       200       |
+| Level             | Maximum calls per minute | Maximum calls per month |
+|:------------------|:------------------------:|:-----------------------:|
+| Bronze            |            1             |           50            |
+| Temporary upgrade |            2             |           200           |
 
 ### GTFS Extensions
 

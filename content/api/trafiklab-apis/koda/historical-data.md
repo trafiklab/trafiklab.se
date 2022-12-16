@@ -25,7 +25,7 @@ in `YYYY-MM-DD` format.
 Additionally, you can pass the `hour=[00-23]` parameter to the realtime data endpoint to obtain data for a specific
 hour. {{% /note %}}
 
-| **API key level** |                                                       **Calls**                                                        |
+| **API key level** |                                                   **Maximum calls**                                                    |
 |:-----------------:|:----------------------------------------------------------------------------------------------------------------------:|
 |      General      | No limit but we ask our users to spread out their downloads by not downloading more than 2 or 3 files at the same time |
 

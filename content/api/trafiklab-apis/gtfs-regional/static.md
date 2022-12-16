@@ -19,16 +19,16 @@ The dataset can be accessed through the following URL:
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the 
 OpenAPI specification, but are also listed on [the overview page for this API](_index.md). Replace `{apikey}` with your own API key. 
-If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get it.
+If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
 #### API key levels
 
-| Level  | Calls per minute | Calls per month |
-|:-------|:----------------:|:---------------:|
-| Bronze |        10        |       50        |
-| Silver |        10        |       250       |
-| Gold   |        20        |      2500       |
+| Level  | Maximum calls per minute | Maximum calls per month |
+|:-------|:------------------------:|:-----------------------:|
+| Bronze |            10            |           50            |
+| Silver |            10            |           250           |
+| Gold   |            20            |          2500           |
 
 
 {{% page-ref "/api/trafiklab-apis/gtfs-regional/static-specification"

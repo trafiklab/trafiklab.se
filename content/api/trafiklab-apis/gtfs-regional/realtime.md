@@ -26,16 +26,16 @@ The dataset can be accessed through the following URLs:
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
 OpenAPI specification, but are also listed on the [static data documentation page](static.md). Replace `{apikey}` with your 
-own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get it.
+own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
 #### API key levels
 
-| Level  | Calls per minute | Calls per month |
-|:-------|:----------------:|:---------------:|
-| Bronze |        50        |     30 000      |
-| Silver |       250        |    2 000 000    |
-| Gold   |       500        |   22 500 0000   |
+| Level  | Maximum calls per minute | Maximum calls per month |
+|:-------|:------------------------:|:-----------------------:|
+| Bronze |            50            |         30 000          |
+| Silver |           250            |        2 000 000        |
+| Gold   |           500            |       22 500 0000       |
 
 
 

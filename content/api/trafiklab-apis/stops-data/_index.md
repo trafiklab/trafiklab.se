@@ -16,15 +16,15 @@ All of Sweden's stops are included in this dataset.
 The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key={apikey}).
 
-Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get it.
+Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
 #### API key levels
 
-| Level  | Calls per minute | Calls per month |
-|:-------|:----------------:|:---------------:|
-| Bronze |        10        |       50        |
-| Silver |        10        |       250       |
+| Level  | Maximum calls per minute | Maximum calls per month |
+|:-------|:------------------------:|:-----------------------:|
+| Bronze |            10            |           50            |
+| Silver |            10            |           250           |
 
 ### What does this dataset contain?
 
