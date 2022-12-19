@@ -15,7 +15,7 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 **Availability of regional data** differs per operator. See the [overview page](_index.md) to see which data is provided
 by the operator(s) you are interested in.
 {{% /info %}}
-
+ 
 {{% note %}}
 **Where to download**
 
@@ -25,10 +25,19 @@ The dataset can be accessed through the following URLs:
 - [https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey})
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
-OpenAPI specification, but are also listed on the [static data documentation page](static.md). Replace `{apikey}` with your own API key.
+OpenAPI specification, but are also listed on the [static data documentation page](static.md). Replace `{apikey}` with your 
+own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
-{{% page-ref page="/docs/using-trafiklab/getting-api-keys" %}}
+#### API key levels
+
+| Level  | Maximum calls per minute | Maximum calls per month |
+|:-------|:------------------------:|:-----------------------:|
+| Bronze |            50            |         30 000          |
+| Silver |           250            |        2 000 000        |
+| Gold   |           500            |       22 500 0000       |
+
+
 
 ## Available real-time data
 

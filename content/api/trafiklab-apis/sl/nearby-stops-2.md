@@ -22,6 +22,14 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 `api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
 
+### API-nyckelnivåer
+
+| Nivå   | Max anrop/minut | Max anrop/månad |
+|--------|-----------------|-----------------|
+| Brons  | 30              | 10 000          |
+| Silver | 60              | 500 000         |
+| Guld   |                 | Efter behov     |
+
 <h2>Format</h2>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>
 <h3>Parametrar</h3>

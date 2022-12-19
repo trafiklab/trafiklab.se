@@ -24,6 +24,17 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 `https://api.sl.se/api2/realtimedeparturesV4.<FORMAT>?key=<DIN API NYCKEL>&siteid=<SITEID>&timewindow=<TIMEWINDOW>`
 
+### API-nyckelnivåer
+
+| Nivå     | Max anrop/minut | Max anrop/månad |
+|----------|-----------------|-----------------|
+| Brons    | 30              | 10 000          |
+| Silver   | 60              | 500 000         |
+| Silver + | 60              | 1 500 000       |
+| Guld     |                 | 10 000 000      |
+| Guld +   |                 | 30 000 000      |
+| Platina  |                 | Efter behov     |
+
 <h2>Format</h2>
 <p>Json eller xml enligt ändelse till serviceanropet.</p>
 <h2>Parametrar</h2>

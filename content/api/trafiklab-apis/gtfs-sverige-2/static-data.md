@@ -13,12 +13,17 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 **Where to download**
 
 The dataset can be found
-at [https://api.resrobot.se/gtfs/sweden.zip?key={apikey}](https://api.resrobot.se/gtfs/sweden.zip?key={apikey}). 
+at [https://api.resrobot.se/gtfs/sweden.zip?key={apikey}](https://api.resrobot.se/gtfs/sweden.zip?key={apikey}).
 
-Replace `{apikey}` with your own API key. 
-{{% /note %}}
+Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) 
+on how to get one. {{% /note %}}
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" %}}
+#### API key levels
+
+| Level             | Maximum calls per minute | Maximum calls per month |
+|:------------------|:------------------------:|:-----------------------:|
+| Bronze            |            1             |           50            |
+| Temporary upgrade |            2             |           200           |
 
 ### GTFS Extensions
 
@@ -31,7 +36,7 @@ specific transport modes to be used. GTFS Sverige does not use the standard one 
 extended route types.
 
 The following list shows the most used transport modes. This is a non-extensive list, only meant to give an idea of the
-types you should support. You should still be able to handle the other types in a gracefull way, as new traffic may make
+types you should support. You should still be able to handle the other types in a graceful way, as new traffic may make
 use of them without prior warning.
 
 | Code | Name | Example |

@@ -18,10 +18,17 @@ To see which operators are included in this dataset see the documentation in the
 The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/netex-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/netex-sweden/sweden.zip?key={apikey}).
 
-Replace `{apikey}` with your own API key.
+Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/netex-sweden/netex-sweden-specification" %}}
+#### API key levels
+
+| Level  | Maximum calls per minute | Maximum calls per month |
+|:-------|:------------------------:|:-----------------------:|
+| Bronze |            10            |           50            |
+| Silver |            10            |           250           |
+
+{{% page-ref "/api/trafiklab-apis/netex-sweden/netex-sweden-specification" %}}
 
 ## File structure
 

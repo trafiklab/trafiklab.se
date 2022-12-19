@@ -17,10 +17,17 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip.zip?key={apikey}).
 
-Replace `{apikey}` with your own API key. 
+Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
-{{% page-ref "/docs/using-trafiklab/getting-api-keys" "/api/trafiklab-apis/gtfs-sweden/static-specification" 
+#### API key levels
+
+| Level  | Maximum calls per minute | Maximum calls per month |
+|:-------|:------------------------:|:-----------------------:|
+| Bronze |            10            |           50            |
+| Silver |            10            |           250           |
+
+{{% page-ref "/api/trafiklab-apis/gtfs-sweden/static-specification"
 "/docs/using-trafiklab-data/using-gtfs-files"  %}}
 
 ## GTFS Extensions

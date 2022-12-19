@@ -40,6 +40,14 @@ tillbaks som svar.
 
 `https://api.sl.se/api2/deviations.<FORMAT>?key=<DIN API NYCKEL>&transportMode=<TRANSPORTMODE>&lineNumber=<LINENUMBER>&siteId=<SITEID>&fromDate=<FROMDATE>&toDate=<TODATE>`
 
+### API-nyckelnivåer
+
+| Nivå   | Max anrop/minut | Max anrop/månad |
+|--------|-----------------|-----------------|
+| Brons  | 30              | 10 000          |
+| Silver | 60              | 100 000         |
+| Guld   |                 | Efter behov     |
+
 #### Format
 
 Json eller xml enligt ändelse till serviceanropet.

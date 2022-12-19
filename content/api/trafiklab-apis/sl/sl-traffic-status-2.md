@@ -36,6 +36,14 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 `https://api.sl.se/api2/trafficsituation.<FORMAT>?key=<DIN API NYCKEL>`
 
+### API-nyckelnivåer 
+
+| Nivå   | Max anrop/minut | Max anrop/månad |
+|--------|-----------------|-----------------|
+| Brons  | 30              | 10 000          |
+| Silver | 60              | 100 000         |
+| Guld   |                 | Efter behov     |
+
 ## Format
 
 Json eller xml enligt ändelse till serviceanropet.
