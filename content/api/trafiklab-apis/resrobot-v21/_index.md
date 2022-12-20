@@ -37,6 +37,18 @@ a lot of data from a lot of vehicles is needed.
 | Mobile applications | Building your own route-planner algorithm |
 | Websites and widgets |  |
 
+### API key levels
+There is only one API key required to access all features in ResRobot, the different key levels are specified in the table below. If you don´t have a key yet, 
+read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
+
+| Level    | Maximum calls per minute | Maximum calls per month |
+|:---------|:------------------------:|:-----------------------:|
+| Bronze   |            45            |         30 000          |
+| Silver   |            60            |         200 000         |
+| Gold     |           200            |        1 000 000        |
+| Platinum |           200            |        2 000 000        |
+
+
 {{% warning %}} If you want to do analytics, or if your service will have more than a million active users,
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a
 million API calls. {{% /warning %}}

@@ -24,15 +24,6 @@ order to add them to an existing project, you can follow these steps:
 - If you previously had a key with an upgraded usage level, you can request for the same level. We will approve all
   these requests.
 
-#### API key levels
-
-| Level    | Maximum calls per minute | Maximum calls per month |
-|:---------|:------------------------:|:-----------------------:|
-| Bronze   |            45            |         30 000          |
-| Silver   |            60            |         200 000         |
-| Gold     |           200            |        1 000 000        |
-| Platinum |           200            |        2 000 000        |
-
 ### AccessId instead of key
 
 Across all endpoints, the `key` parameter has been replaced with `accessId`. All requests your application makes should
