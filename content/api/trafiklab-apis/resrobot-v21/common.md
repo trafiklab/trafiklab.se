@@ -54,22 +54,22 @@ collected these common data types here.
 {{% /tab %}}
 {{% /tabs %}}
 
-| **Name**              | **Data type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------------------- | ------------------------- | ----------------------|
-| Product.name          | String                  | Public name, matches catOutL + num |
-| Product.internalName  | String                  | Internal name, matches catOutL + num|
-| Product.displayNumber | String                  | Publicly announced number (train or line number) |
-| Product.num           | String                  | Internal product number (e.g. train number) |
-| Product.line          | String                  | Publicly announced line name, if available |
-| Product.lineId        | String                  | Line id for use in further requests |
-| Product.catCode       | Integer                 | Category code, see _Response product categories > Numeric representation_ below |
-| Product.cls           | String                  | Category class, same codes as used in requests, see below |
-| Product.catIn         | String                  | Transport type code for the vehicle when it arrives, in string format. Typically identical to catOut. |
-| Product.catOut        | String                  | Same as catOutS|
-| Product.catOutS       | String                  | Transport type code for the vehicle when it departs, in string format. See _Response product categories > String representation_ below. |
-| Product.catOutL       | String                  | Transport type name for the vehicle when it departs, depending on language parameter <br>Example: "Buss", "Tåg", "Tunnelbana"                                                                                                                                                                                                                                          |
-| Product.operator      | String                  | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                                                                                                                                                                                                                                                      | |
-| Product.operatorCode  | String                  | Operator code. For example: “256”, "289".                                                                                                                                                                                                                                                                                                                      | |
+| **Name**              | **Data type** | **Description**                                                                                                                         |
+|-----------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Product.name          | String        | Public name, matches catOutL + num                                                                                                      |
+| Product.internalName  | String        | Internal name, matches catOutL + num                                                                                                    |
+| Product.displayNumber | String        | Publicly announced number (train or line number)                                                                                        |
+| Product.num           | String        | Internal product number (e.g. train number)                                                                                             |
+| Product.line          | String        | Publicly announced line name, if available                                                                                              |
+| Product.lineId        | String        | Line id for use in further requests                                                                                                     |
+| Product.catCode       | Integer       | Category code, see _Response product class categories > Numeric representation_ below                                                   |
+| Product.cls           | String        | Category class, same codes as used in requests, see below                                                                               |
+| Product.catIn         | String        | Transport type code for the vehicle when it arrives, in string format. Typically identical to catOut.                                   |
+| Product.catOut        | String        | Same as catOutS                                                                                                                         |
+| Product.catOutS       | String        | Transport type code for the vehicle when it departs, in string format. See _Response product categories > String representation_ below. |
+| Product.catOutL       | String        | Transport type name for the vehicle when it departs, depending on language parameter <br>Example: "Buss", "Tåg", "Tunnelbana"           |
+| Product.operator      | String        | Operator name. For example: “SL”, ”Skånetrafiken”.                                                                                      | |
+| Product.operatorCode  | String        | Operator code. For example: “256”, "289".                                                                                               | |
 
 ### Response product categories
 
@@ -99,19 +99,19 @@ Request category codes for filtering differ from response category codes. These 
 
 **Numeric representation**
 
-|Name| Numeric value|
-| ------------------- | ----------------------|
-|High speed trains, Snabbtåg, Arlanda Express|1|
-|Regional trains, InterCity trains|2| 
-|Express busses, Flygbussar|3| 
-|Local trains Tåg, PågaTåg, Öresundståg|4| 
-|Metro, such as tunnelbanan|5| 
-|Tram such as Spårvagn, Tvärbanan | 6|
-|Busses| 7|
-|Ferries and international ferries | 8|
-|Taxi|9|
+| Name                                         | Numeric value |
+|----------------------------------------------|---------------|
+| High speed trains, Snabbtåg, Arlanda Express | 1             |
+| Regional trains, InterCity trains            | 2             | 
+| Express busses, Flygbussar                   | 3             | 
+| Local trains Tåg, PågaTåg, Öresundståg       | 4             | 
+| Metro, such as tunnelbanan                   | 5             | 
+| Tram such as Spårvagn, Tvärbanan             | 6             |
+| Busses                                       | 7             |
+| Ferries and international ferries            | 8             |
+| Taxi                                         | 9             |
 
-### Request product category codes
+### Request product class category codes
 
 {{% warning %}}
 **Careful!**
@@ -119,17 +119,17 @@ Request category codes for filtering differ from response category codes. These 
 Request category codes for filtering differ from response category codes. These are request product category codes. Response category codes are described in the section above.
 {{% /warning %}}
 
-|Name| Numeric value|
-| ------------------- | ----------------------|
-|Air traffic|1|
-|High speed trains, Snabbtåg, Arlanda Express|2|
-|Local trains Tåg, PågaTåg, Öresundståg|4|
-|Express busses, Flygbussar|8|
-|Regional trains, InterCity trains|16|
-|Metro, such as tunnelbanan|32|
-|Tram such as Spårvagn, Tvärbanan |64|
-|Busses|128|
-|Ferries and international ferries |256|
-|Taxi|512|
+| Name                                         | Numeric value |
+|----------------------------------------------|---------------|
+| Air traffic                                  | 1             |
+| High speed trains, Snabbtåg, Arlanda Express | 2             |
+| Regional trains, InterCity trains            | 4             |
+| Express busses, Flygbussar                   | 8             |
+| Local trains Tåg, PågaTåg, Öresundståg       | 16            |
+| Metro, such as tunnelbanan                   | 32            |
+| Tram such as Spårvagn, Tvärbanan             | 64            |
+| Busses                                       | 128           |
+| Ferries and international ferries            | 256           |
+| Taxi                                         | 512           |
 
 In order to select multiple products, these values can be added up.
