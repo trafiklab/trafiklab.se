@@ -2,7 +2,12 @@
 <main class="main-content">
   <div class="page">
     <main id="site-content">
-      {{ partial "image_header.html" (dict "context" . "src" .Params.image "alt" "Theme image" "credit" .Params.image_credit "date" .Params.date "title" .Title "wide" true) }}
+      {{ if .Params.Image }}
+        {{ partial "image_header.html" (dict "context" . "src" .Params.image "alt" "Theme image" "credit"
+        .Params.image_credit "date" .Params.date "title" .Title "wide" true) }}
+      {{ else }}
+        <h1>{{ .Params.title }}</h1>
+      {{ end }}
       {{ .Content }}
     </main>
     {{ partial "docs-footer.html" . }}
