@@ -1,7 +1,7 @@
 The following table shows which operators are covered by this dataset.
 
 {{% success %}}
-**New!** Occupancy data is available for Östgötatrafiken starting 14th December 2022.
+**New!** Realtime and vehicle position data is available for Länstrafiken Örebro starting 3rd April 2023.
 {{% /success %}}
 
 | Operator                                       |    Abbreviation    | Static data | Real-time data | Vehicle positions | Occupancy data |
@@ -17,7 +17,7 @@ The following table shows which operators are covered by this dataset.
 | Länstrafiken Jämtland (JLT)                    |     `jamtland`     |     ✔️      |                |                   |                |
 | Länstrafiken Norrbotten                        |    `norrbotten`    |     ✔️      |                |                   |                |
 | Länstrafiken Västerbotten                      |   `vasterbotten`   |     ✔️      |       🕒       |        🕒         |                |
-| Länstrafiken Örebro                            |      `orebro`      |     ✔️      |       🕒       |                   |                |
+| Länstrafiken Örebro                            |      `orebro`      |     ✔️      |       ✔️       |        ✔️         |                |
 | Skånetrafiken (Skåne län)                      |      `skane`       |     ✔️      |       ✔️       |        ✔️         |       ✔️       |
 | SL (Stockholms län)                            |        `sl`        |     ✔️      |       ✔️       |        ✔️         |                |
 | Sörmlandstrafiken (Södermanlands län)          |     `sormland`     |     ✔️      |                |                   |                |
