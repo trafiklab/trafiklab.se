@@ -42,7 +42,7 @@ För version 3.1 av reseplaneraren så har svarsformatet avseende crd-elementen 
 <span>>Travelplanner 3.1: <em>&lt;crd&gt;17.973032&lt;/crd&gt;&lt;crd&gt;59.360501&lt;/crd&gt;&lt;crd&gt;9.0E-6&lt;/crd&gt;&lt;crd&gt;1.8E-5&lt;/crd&gt;</em></p>
 <h2>URL</h2>
 
-- Trip: `api.sl.se/api2/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&parametrar`
+- Trip: `api.sl.se/api2/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&amp;<parametrar>`
 - Journey detail: `api.sl.se/api2/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
 - Recontruction: `api.sl.se/api2/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
 - XSD: `api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`

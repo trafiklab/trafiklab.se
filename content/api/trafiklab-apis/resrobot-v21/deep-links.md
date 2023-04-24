@@ -50,7 +50,7 @@ Example 1: Route between specific stops
 
 Example 2: Between coordinates
 
-[https://reseplanerare.resrobot.se/bin/query.exe/sn?&SID=A=16@X=17703271@Y=59869065@O=Uppsala&Z=740000001&time=12:00\&timesel=arrive&start=1](https://reseplanerare.resrobot.se/bin/query.exe/sn?&SID=A=16@X=17703271@Y=59869065@O=Uppsala&Z=740000001&time=12:00&timesel=arrive&start=1)
+[https://reseplanerare.resrobot.se/bin/query.exe/sn?&SID=A=16@X=17703271@Y=59869065@O=Uppsala&Z=740000001&time=12:00&amp;timesel=arrive&start=1](https://reseplanerare.resrobot.se/bin/query.exe/sn?&SID=A=16@X=17703271@Y=59869065@O=Uppsala&Z=740000001&time=12:00&timesel=arrive&start=1)
 
 #### Request parameters
 
