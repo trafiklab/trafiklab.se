@@ -3,28 +3,27 @@ title: "Upgrading API keys"
 weight: 50
 ---
 When your application needs more API calls than your API key quota allow, you can upgrade your keys to a higher level.
-Upgrading API keys is completely free, and only needed to ensure all Trafiklab users can keep using the service for
+Upgrading API keys is completely free of charge, and only needed to ensure all Trafiklab users can keep using the service for
 free.
+![Screenshot of an api key with an upgrade link](/media/2023/upgrade-quota.png)
 
-{{% warning %}}  Disable browser plugins like Google Translate when creating a project. They are known to
-cause issues on the developer portal, when logging in, creating accounts and creating projects. {{% /warning %}}
+In order to upgrade your API key, go to your project and click on the "Upgrade quota" button next to the API key that you want 
+to upgrade. 
 
-![Screenshot of an api key with an upgrade link](/media/2020/05/key-visible.png)
+![Screenshot of the key upgrade dialog](/media/2023/request-key-upgrade.png)
 
-In order to upgrade your API key, click the "Uppgradera" link and fill out the form.
-
-![Screenshot of the key upgrade dialog](/media/2020/05/upgrade-key.png)
-
-Change the level you'd like from the dropdown list. Write a motivation below. Your motivation should include:
+Fill out the request form by choosing which level you would like to have from the dropdown and write a motivation. 
+Your motivation should include:
 
 * A short description of the project
 * An estimate of the number of requests your will need
 * How many users/travelers will use your application
 
 Your request will be approved within one or two workdays. If your request is declined, or if more information is needed,
-you will receive email on your registered email address.
+you will receive email on your registered email address. You can see all your pending and closed requests on the page "My 
+key upgrades" under Projects & Keys.
 
-### Requests which will not approved
+### Requests which will not be approved
 
 We aim to offer transport data to as many users as possible. However, in some cases your upgrade request may be denied.
 The following requests will always be denied:
@@ -41,18 +40,5 @@ The following requests will always be denied:
   be [using GTFS and GTFS-RT instead](../../public-transport-data/our-data-and-apis/gtfs/). As a result, you will be
   able to build better analytics, and they will take less time to generate, so this is a win-win.
 * **Stress tests etc** Are not allowed and will never be approved. Ask us if you have special needs for your application.
-
-{{% note %}} Right now, the developer portal is not available in English yet. While these guides should help you to get
-started, the following list of common Swedish words should help you to get around on the developer portal.
-
-* **Spara**: Save/Submit
-* **Tillbaka**: Back
-* **Radera**: Delete
-* **Hämta**: Fetch
-* **Skapa**: Create
-* **Nyckel**: (API) key
-* **Nivå**: Level
-* **Konto**: Account
-  {{% /note %}}
 
 {{% page-ref "frequently-asked-questions" %}}

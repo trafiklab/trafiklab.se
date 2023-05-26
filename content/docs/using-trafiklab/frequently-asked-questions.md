@@ -17,17 +17,12 @@ Don't worry if you need an upgrade - you'll most likely get it.
 We rarely discontinue APIs. When a change is coming up, users are notified in good time (often multiple months
 before).
 
-### Whenever I try to edit my project, I get a warning about old keys which will be removed. Why is this and what should I do?
-
-You may have old API keys, which can't be used any longer since the API has been shut down. Verify this, and if you're
-okay with their removal, you can remove them.
-
 ## Data
 
 ### Vehicles are appearing in the realtime data, even though they aren't present in the static data. Why is this?
 
 There might be a high load on a certain bus line, in which case the operator may decide to send out one or more extra
-buses. These busesare not associated with a planned trip, but will still show up in the realtime data.
+buses. These buses are not associated with a planned trip, but will still show up in the realtime data.
 
 Vehicle position data can also include parked vehicles, vehicles on their way to their starting point, or on the way
 back after their last stop.
@@ -35,6 +30,10 @@ back after their last stop.
 ### Can I stress test the APIs?
 
 No. If you're wondering if our APIs can handle a certain load, please ask instead.
+
+### Why doesn´t the usage tracker increase when I make requests using my API key? 
+
+Statistics are only updated once a day. Some API´s need up to 48 hours for statistics to become visible for Trafiklab users.
 
 ### Why did my request for an API key upgrade get denied?
 
