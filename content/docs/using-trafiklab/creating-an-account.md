@@ -21,4 +21,4 @@ After filling in your information, you need to accept the terms and conditions.
 Hit the register button at the bottom of the page, and you will receive an email with a link to verify your email address. 
 After verifying you are ready to create your first project.
 
-{{% page-ref "creating-a-project" %}}
+{{% page-ref "projects" %}}

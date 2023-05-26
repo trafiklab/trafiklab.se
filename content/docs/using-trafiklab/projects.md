@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 weight: 20
+description: "A project groups Trafiklab API keys belonging to the same application together. Projects can be shared between users. "
 aliases:
   - "/docs/using-trafiklab/creating-a-project"
 ---
