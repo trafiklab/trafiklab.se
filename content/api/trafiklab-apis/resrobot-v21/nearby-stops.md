@@ -78,6 +78,17 @@ https://api.resrobot.se/v2.1/location.nearbystops?originCoordLat=57.708895&origi
 
 {{% /note %}}
 
+| **Name**        | **Type** | **Required** | **Description**                                                                                              |
+|-----------------|----------|--------------|--------------------------------------------------------------------------------------------------------------|
+| accessId        | String   | Yes          | Your API key                                                                                                 |
+| originCoordLat  | String   | Yes          | Latitude (WGS84, decimal degree), eg 59.293611                                                               |
+| originCoordLong | String   | Yes          | Longitude (WGS84, decimal degree), eg 18.083056                                                              |
+| maxNo           | Integer  | No           | The maximum number of results to return, default 10, maximum 1000                                            |
+| r               | Integer  | No           | Maximum distance between given coordinates and the stop. Default 1000, max 10000                             |
+| lang            | String   | No           | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages. |
+| format          | String   | No           | Json or Xml                                                                                                  |
+
+
 ### Response
 
 {{% tabs %}} {{% tab "Json" %}}

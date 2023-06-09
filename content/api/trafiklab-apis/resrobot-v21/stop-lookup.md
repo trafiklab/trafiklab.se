@@ -78,7 +78,15 @@ https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=xml&accessId=A
 - The `key` parameter has been renamed to `accessId`.
 
 {{% /note %}}
- 
+
+| **Name** | **Type** | **Required** | **Description**                                                                                              |
+|----------|----------|--------------|--------------------------------------------------------------------------------------------------------------|
+| accessId | String   | Yes          | Your API key                                                                                                 |
+| input    | String   | Yes          | The search string. Append a question mark for fuzzy search.                                                  |
+| maxNo    | Integer  | No           | The maximum number of results to return, default 10, maximum 1000                                            |
+| lang     | String   | No           | Language (sv/en/de), default sv. Affects both data (names for different transport types) and error messages. |
+| format   | String   | No           | Json or Xml                                                                                                  |
+
 #### Response
 
 {{% tabs %}} {{% tab "Json" %}}
