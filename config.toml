@@ -16,7 +16,7 @@ refLinksErrorLevel = "WARNING"
 [module.hugoVersion]
 extended = true
 max = ""
-min = "0.87.0"
+min = "0.108.0"
 
 # paths
 [permalinks]
@@ -41,6 +41,14 @@ min = "0.87.0"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+        image = true
 
 [outputFormats]
   [outputFormats.dcat]

@@ -2,7 +2,7 @@
 [module.hugoVersion]
 extended = true
 max = ""
-min = "0.83.0"
+min = "0.108.0"
 
 # Multilingual
 [languages]

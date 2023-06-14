@@ -3,8 +3,8 @@ title: Code fragments
 description: Common code to help you build faster
 layout: "single"
 draft: true
-cascade:
-    draft
+cascade: 
+- draft: true
 ---
 
 There's no need to reinvent the wheel over and over. In this section you can find code fragments from us and our users,
