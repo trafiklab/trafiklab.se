@@ -38,6 +38,10 @@ body a, body a:link, body a:visited {
 
 /* Support for aligning images left, right, and limiting height by wrapping them in a div. Should be fixed by making
 use of the hugo figure shorthand code */
+img {
+  max-width: 100%;
+}
+
 .page .right {
   float: right;
   max-width: 50%;
@@ -48,20 +52,25 @@ use of the hugo figure shorthand code */
   max-width: 50%;
 }
 
-.vh20 img {
+ img.vh20 {
   max-height: 20vh;
 }
 
-.vh30 img {
+img.vh30  {
   max-height: 30vh;
 }
 
-.vh40 img {
+img.vh40  {
   max-height: 40vh;
 }
 
-.vh50 img {
+img.vh50  {
   max-height: 50vh;
+}
+
+img.center{
+  display:block;
+  margin: 0 auto;
 }
 
 code:not(.highlight code):not(#swagger-ui code) {

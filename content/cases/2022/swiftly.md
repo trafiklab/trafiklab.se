@@ -12,6 +12,7 @@ satisfaction and save costs. Since Swiftly is using data from Trafiklab, we were
 exciting and promising platform.**
 
 ![Pictures of Marta Zamanillo and Joaquin Pena](/media/2022/09/namnlos-design-3.png "Marta Zamanillo and Joaquin Pena")
+{.center}
 
 Two persons who are deeply involved in Swiftly are **Marta Zamanillo**, Senior Solutions Engineer and **Joaquín Pena**,
 International Sales Manager. Both have several years of experience from working with public transport authorities and
@@ -34,6 +35,7 @@ All together – Swiftly can really improve the passenger experience.
 Swiftly has been present in the Swedish market since 2020 and is already partnering with Skånetrafiken and X-trafik. In addition to its customers, they are working with several Nordic Authorities and operators like Oulu in Finland and Strætó in Iceland.
 
 ![](/media/2022/09/sw-1.png "Swiftly")
+{.center}
 
 **How did your cooperation with Trafiklab start?**
 
@@ -48,6 +50,7 @@ Trafiklab is not the only data source for Swiftly. Some data is collected direct
 “There is a dedicated team behind the Trafiklab platform that we can contact, which also guarantees the data’s quality and stability. In case of an outage, we can communicate quickly and get notifications of any changes. We also know that when there is a new timetable going live, the right data set will always be available. This comfort makes it easier for us to build trust and confidence with our customers.”
 
 ![](/media/2022/09/swiftly-2.png "Swiftly nr 2")
+{.center}
 
 **Finally, is there anything you would ask for from Trafiklab to develop your service even further?**
 

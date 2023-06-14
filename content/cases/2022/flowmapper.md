@@ -9,11 +9,8 @@ title: Flowmapper
 looks like. Through this analysis platform, it is possible to streamline public transport, shorten travel time and
 reduce carbon dioxide emissions.**
 
-<div class="right vh30">
-
 ![Eva-Marie Wenehed](/media/2022/02/flowmapper-evamarie.jpg "Eva-Marie Wenehed")
-
-</div>
+{.right .vh30}
 
 Flowmapper is developed within the company Tyréns innovation program and financed by Tyréns’ owner, **Sven Tyrén's**
 foundation. **Eva-Marie Wenehed**, traffic planner and product owner of Flowmapper at Tyréns, was involved in the entire
