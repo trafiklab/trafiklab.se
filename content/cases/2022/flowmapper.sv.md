@@ -42,7 +42,7 @@ På Skånetrafiken har man använt Flowmapper ända sedan starten 2020. Enligt H
 
 Eva-Marie ser flera utvecklingsområden för Flowmapper. Ambitionen är att det ska bli ett komplett verktyg för kollektivtrafikplaneringen. ”Vi tittar också på hur vi skulle kunna expandera geografiskt, till fler länder än Sverige. Men allt handlar om tillgången till data”.
 
-**FAKTA OM FLOWMAPPER**
+## FAKTA OM FLOWMAPPER
 
 **Lanseringsår:** 2020  
 **Typ av tjänst:** En analysplattform för att visualisera framkomligheten i kollektivtrafiken. Flowmapper kombinerar illustrativa kartor med grafer som visar statistik. Det finns flera olika vyer som visar olika aspekter på framkomlighet och restider.  

@@ -34,7 +34,7 @@ Swiftly har funnits på den svenska marknaden sedan 2020 och säljer redan sina 
 
 ![](/media/2022/09/sw-1.png "Swiftly")
 
-**Hur startade ert samarbete med Trafiklab?**
+#### Hur startade ert samarbete med Trafiklab?
 
 ”När vi var på InformNorden-konferensen i Stockholm i slutet av 2018 träffade vi två medarbetare som arbetar med Trafiklab hos Samtrafiken. Det blev utgångspunkten för vårt samarbete. Vi började hämta data från Trafiklab 2019” berättar Joaquin.
 
@@ -48,11 +48,11 @@ Trafiklab är inte den enda datakällan Swiftly använder. Vissa data samlas in 
 
 ![](/media/2022/09/swiftly-2.png "Swiftly nr 2")
 
-**Slutligen, finns det något ni skulle önska från Trafiklab för att kunna utveckla Swiftly ytterligare?**
+#### Slutligen, finns det något ni skulle önska från Trafiklab för att kunna utveckla Swiftly ytterligare?
 
 "Tillgång till mer data är alltid intressant. Det skulle vara intressant med mer statiska data om hur olika turer hänger ihop. Data kring nyttjandegraden ombord på fordonen skulle också vara användbart för oss. Sen skulle vi också bli glada om fler kollektivtrafikmyndigheter kunde dela sina fordonspositioner” säger Marta.
 
-**FAKTA OM SWIFTLY**
+## FAKTA OM SWIFTLY
 
 **Lanseringsår:** Grundat 2014, lanserades i Sverige under 2020.  
 **Typ av tjänst:** Stordataplattform som hjälper företag med insikter och analyser som kan bidra till förbättrad punktlighet och tillförlitlighet i trafiken.  

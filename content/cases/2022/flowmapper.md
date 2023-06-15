@@ -49,7 +49,7 @@ Eva-Marie sees several development areas for Flowmapper. The ambition is to make
 planning. “We are also looking into how to expand geographically, to more countries than Sweden. But it's all about
 access to data”.
 
-**FACTS ABOUT FLOWMAPPER**
+## FACTS ABOUT FLOWMAPPER
 
 **Release year**: 2020  
 **Type of service**: An analysis platform for visualizing the accessibility of public transport. Flowmapper combines
