@@ -3,7 +3,7 @@ title: "Trafiklab"
 hero: /tl-illustration-map2.svg
 cases_section: true
 news_section: true
-highlighted_page: /news/2022/2022-02-07-resrobot-update
+highlighted_page: /cases/2023/veridict
 mc: true
 type: home
 landingRoller:
