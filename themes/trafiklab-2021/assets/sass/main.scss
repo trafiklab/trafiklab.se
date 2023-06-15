@@ -52,27 +52,6 @@ img {
   max-width: 50%;
 }
 
- img.vh20 {
-  max-height: 20vh;
-}
-
-img.vh30  {
-  max-height: 30vh;
-}
-
-img.vh40  {
-  max-height: 40vh;
-}
-
-img.vh50  {
-  max-height: 50vh;
-}
-
-img.center{
-  display:block;
-  margin: 0 auto;
-}
-
 code:not(.highlight code):not(#swagger-ui code) {
   background-color: $grey;
   border-radius: $border-radius-default/2;

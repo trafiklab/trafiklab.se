@@ -12,7 +12,7 @@
         <a class="tl-card-list__item blogpost-overview__link" title="{{ .Title }}" href="{{ .Permalink }}">
           <div class="blogpost-overview__post">
             {{ if .Params.Image }}
-              {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "blogpost-overview__image") }}
+              {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "tl-image--full-width blogpost-overview__image") }}
             {{ end }}
             <div class="blogpost-overview__information">
               {{ if or .Lastmod .Date }}

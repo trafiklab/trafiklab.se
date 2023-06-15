@@ -17,8 +17,8 @@
   cursor: pointer;
 }
 
-.blogpost-overview__image {
-  max-height: 28rem;
+div.blogpost-overview__image, div.blogpost-overview__image > img.blogpost-overview__image {
+  max-height: 25rem;
   margin: 0 auto 0.5rem;
   width: 100%;
   object-fit: cover;

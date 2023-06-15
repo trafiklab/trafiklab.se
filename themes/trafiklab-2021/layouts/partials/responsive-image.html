@@ -3,19 +3,24 @@
 {{ $alt := $args.alt }}
 {{ $caption := $args.caption }}
 {{ $class := $args.class }}
+<div class="tl-image {{$class}}">
+    {{ if or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
+    <img src="{{.Destination}}"
+         alt=".PlainText | safeHTML"
+         {{ with $caption}}
+         title="{{ . }}"
+         {{ end }}
+         class="{{$class}}">
+    {{ else }}
 
-{{ if or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
-    <img src="{{.Destination}}" alt=".PlainText | safeHTML">
-{{ else }}
-
-{{ $image := resources.Get (printf "%s" $src) }}
-{{ if $image }}
+    {{ $image := resources.Get (printf "%s" $src) }}
+    {{ if $image }}
     {{ if in $src ".jpg" }}
-        {{ $small := $image.Resize "480x webp" }}
-        {{ $medium := $image.Resize "768x webp" }}
-        {{ $large := $image.Resize "1024x webp" }}
-        {{ $xlarge := $image.Resize  "1600x webp" }}
-        <img sizes="100vw"
+    {{ $small := $image.Resize "480x webp" }}
+    {{ $medium := $image.Resize "768x webp" }}
+    {{ $large := $image.Resize "1024x webp" }}
+    {{ $xlarge := $image.Resize "1600x webp" }}
+    <img sizes="100vw"
              srcset="{{ $small.Permalink }} 480w, {{ $medium.Permalink }} 768w, {{ $large.Permalink }} 1024w, {{ $xlarge.Permalink }} 1200w"
              src="{{ $xlarge.Permalink }}"
              alt="{{ $alt }}"
@@ -25,14 +30,17 @@
              class="{{$class}}"
         />
     {{ else }}
-        <img src="{{ $image.Permalink }}"
-             alt="{{ $alt }}"
-             {{ with $caption}}
-             title="{{ . }}"
-             {{ end }}
-             class="{{$class}}"
-        />
+    <img src="{{ $image.Permalink }}"
+         alt="{{ $alt }}"
+         {{ with $caption}}
+         title="{{ . }}"
+         {{ end }}
+         class="{{$class}}"
+    />
     {{ end }}
-{{ end }}
-
-{{ end }}
+    {{ end }}
+    {{ end }}
+    {{ if $caption}}
+    <span class="tl-caption">{{ $caption }}</span>
+    {{ end }}
+</div>

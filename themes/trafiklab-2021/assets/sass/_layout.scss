@@ -84,3 +84,49 @@ body.type-home #main-content {
     overflow-x: visible;
   }
 }
+
+div.tl-image {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.tl-image--left {
+    align-items: start;
+  }
+
+  &.tl-image--right {
+    align-items: end;
+  }
+
+  img {
+    display: block;
+    max-width: 60%;
+    border-radius: $border-radius-default / 2;
+  }
+
+  img.tl-image--full-width {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tl-caption {
+    color: $gray-dark;
+  }
+
+  img.vh20 {
+    max-height: 20vh;
+  }
+
+  img.vh30 {
+    max-height: 30vh;
+  }
+
+  img.vh40 {
+    max-height: 40vh;
+  }
+
+  img.vh50 {
+    max-height: 50vh;
+  }
+}
