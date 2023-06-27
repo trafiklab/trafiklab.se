@@ -55,7 +55,7 @@ data each Value contains.
 | data-from                     |                                                     Which datasource actually provides the data for this StopPlace and its Quays.                                                     |
 | rikshallplats                 |                                   Samtrafikens Rikshållplatsnummer for this StopPlace, which is used in the GTFS Sverige 2 API (and other places).                                    |
 | trafikverket-name             |                                                                   This StopPlaces name as assigned by Trafikverket.                                                                   |
-| trafikverket-signature        |                                                                This StopPlaces signature as assigned by Trafikverket.                                                                 |
+| trafikverket-signatures       |                     This StopPlaces signature as assigned by Trafikverket. There can be multiple signatures using pipe character "&#124;" between each signature.                     |
 | stip.*                        |                                  Any Keys starting with "stip." refers directly to values found in the "data-from" datasource's corresponding data.                                   |
 | local-name                    |                                                                            Format is DataSource:Gid:Name.                                                                             |
 | local-gid                     |                                                                               Format is DataSource:Gid.                                                                               |
