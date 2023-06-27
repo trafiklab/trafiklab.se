@@ -34,7 +34,7 @@ positioning data, an enriched experience is provided to passengers. A cursory gl
 crucial information, such as the next departure, interchange options, and more. This comes in handy especially in
 stressful situations, when time is critical, and browsing a journey planner or website might be impractical.
 
-![LiveLine in action, sped up to 16x speed](/media/2023/06/liveline-x16.gif "LiveLine in action, sped up to 16x speed")
+![LiveLine™ in action, sped up to 16x speed](/media/2023/06/liveline-x16.gif "LiveLine™ in action, sped up to 16x speed")
 {.tl-image--center}
 
 The value of Live network maps is particularly apparent during delays or traffic disruptions. Passengers can instantly
@@ -44,7 +44,7 @@ transport operators using them.
 The Swedish Public Transport Authority, Östgötatrafiken, currently utilizes a Live network map at the travel center in
 Linköping, courtesy of Veridict.
 
-![LiveLine in Linköping Resecentrum](/media/2023/06/otraf-linkoping-resecentrum-liveline-2.png "LiveLine in Linköping Resecentrum")
+![LiveLine™ in Linköping Resecentrum](/media/2023/06/otraf-linkoping-resecentrum-liveline-2.png "LiveLine™ in Linköping Resecentrum")
 {.tl-image--center}
 
 "We've identified a significant demand for these live maps, and public transport authorities have acknowledged the

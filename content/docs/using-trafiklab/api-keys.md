@@ -1,16 +1,34 @@
 ---
-title: "Upgrading API keys"
+title: "API keys"
 weight: 50
+aliases:
+  - /docs/using-trafiklab/getting-api-keys/
+  - /docs/using-trafiklab/upgrading-api-keys/
 ---
+
+## Creating API keys
+
+In order to create an API key, navigate to the project and select the API to add. Every API can only be added once to a
+project.
+
+![The new key option](/media/2023/create-API-key.png "The 'add key' dropdown")
+
+Keys are created with a default profile, allowing you to test the API and build applications for home use. If you need
+more API requests than allowed in the standard profile, you can create a request to upgrade the key for free.
+
+## Upgrading API keys
+
 When your application needs more API calls than your API key quota allow, you can upgrade your keys to a higher level.
-Upgrading API keys is completely free of charge, and only needed to ensure all Trafiklab users can keep using the service for
+Upgrading API keys is completely free of charge, and only needed to ensure all Trafiklab users can keep using the
+service for
 free.
-![Screenshot of an api key with an upgrade link](/media/2023/upgrade-quota.png)
+![Screenshot of an api key with an upgrade link](/media/2023/upgrade-quota.png "Upgrade buttons can be seen for keys which can be upgrade")
 
-In order to upgrade your API key, go to your project and click on the "Upgrade quota" button next to the API key that you want 
-to upgrade. 
+In order to upgrade your API key, go to your project and click on the "Upgrade quota" button next to the API key that
+you want
+to upgrade.
 
-![Screenshot of the key upgrade dialog](/media/2023/request-key-upgrade.png)
+![Screenshot of the key upgrade dialog](/media/2023/request-key-upgrade.png "The key upgrade request form")
 
 Fill out the request form by choosing which level you would like to have from the dropdown and write a motivation. 
 Your motivation should include:

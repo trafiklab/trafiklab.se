@@ -33,4 +33,4 @@ At the bottom of the page you will see all users connected to the project. A use
 * **Read/Write**: User has same allowance as Read Only user with added permission to modify and change content, e.g. API keys
 * **Project Owner**: User has same allowance as Read/Write user with added permission to delete a project and handle project members
 
-{{% page-ref "upgrading-api-keys" %}}
+{{% page-ref "api-keys" %}}
