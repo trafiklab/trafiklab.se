@@ -56,20 +56,20 @@ explains the meaning of each Key-Value.
 
 "Gid" matches part of the `StopPlace.Id` (or `Quay.Id`) in Netex Regional, as well as the `stop_id` from `stops.txt` in GTFS Regional.
 
-| Key                           |                                                                                      Explanation                                                                                      |
-|:------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Key                           | Explanation                                                                                                                                                                           |
+|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | owner                         | This value indicates which datasource should be considered the owner of this StopPlace and its Quays.<br/>Often this is the county's public authority in which the StopPlace resides. |
-| data-from                     |                                                     Which datasource actually provides the data for this StopPlace and its Quays.                                                     |
-| rikshallplats                 |                                   Samtrafikens Rikshållplatsnummer for this StopPlace, which is used in the GTFS Sverige 2 API (and other places).                                    |
-| trafikverket-name             |                                                                   This StopPlaces name as assigned by Trafikverket.                                                                   |
-| trafikverket-signatures       |                     This StopPlaces signature as assigned by Trafikverket. There can be multiple signatures using pipe character "&#124;" between each signature.                     |
-| stip.*                        |                                  Any Keys starting with "stip." refers directly to values found in the "data-from" datasource's corresponding data.                                   |
-| local-name                    |                                                                            Format is DataSource:Gid:Name.                                                                             |
-| local-gid                     |                                                                               Format is DataSource:Gid.                                                                               |
-| local-number                  |                                                                             Format is DataSource:Number.                                                                              |
-| local-journeypatternpoint-gid |                                                                               Format is DataSource:Gid.                                                                               |
-| local-stoppoint-gid           |                                                                               Format is DataSource:Gid.                                                                               |
-| local-designation             |                                                                           Format is DataSource:Designation.                                                                           |
+| data-from                     | Which datasource actually provides the data for this StopPlace and its Quays.                                                                                                         |
+| rikshallplats                 | Samtrafikens Rikshållplatsnummer for this StopPlace, which is used in the GTFS Sverige 2 API (and other places).                                                                      |
+| trafikverket-name             | This StopPlaces name as assigned by Trafikverket.                                                                                                                                     |
+| trafikverket-signatures       | This StopPlaces signature as assigned by Trafikverket. There can be multiple signatures using pipe character "&#124;" between each signature.                                         |
+| stip.*                        | Any Keys starting with "stip." refers directly to values found in the "data-from" datasource's corresponding data.                                                                    |
+| local-name                    | Format is DataSource:Gid:Name.                                                                                                                                                        |
+| local-gid                     | Format is DataSource:Gid.                                                                                                                                                             |
+| local-number                  | Format is DataSource:Number.                                                                                                                                                          |
+| local-journeypatternpoint-gid | Format is DataSource:Gid.                                                                                                                                                             |
+| local-stoppoint-gid           | Format is DataSource:Gid.                                                                                                                                                             |
+| local-designation             | Format is DataSource:Designation.                                                                                                                                                     |
 
 ### How often is this dataset updated?
 
