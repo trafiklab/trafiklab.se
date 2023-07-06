@@ -41,7 +41,7 @@
         {{ if or $date $credit $link}}
         <span class="image-header__details">
         {{ if $date }}
-        <span class="image-header__date">Published: {{ $date.Format "2006-01-02" }}</span>
+        <span class="image-header__date">{{ i18n "published" }}: {{ $date.Format "2006-01-02" }}</span>
         {{ end }}
         {{ if and $date $credit }} | {{ end }}
         {{ if $credit }}

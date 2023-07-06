@@ -32,7 +32,7 @@ Sammantaget finns goda förutsättningar att uppnå en förbättrad passagerarup
 
 Swiftly har funnits på den svenska marknaden sedan 2020 och säljer redan sina tjänster till Skånetrafiken och X-trafik. Dessutom samarbetar de med flera nordiska kollektivtrafikmyndigheter, som till exempel Uleåborg i Finland och Strætó på Island.
 
-![](/media/2022/09/sw-1.png "Swiftly")
+![](/media/2022/09/sw-1.png "En visualisering gjord i Swiftlys platform")
 
 #### Hur startade ert samarbete med Trafiklab?
 
@@ -46,7 +46,7 @@ Trafiklab är inte den enda datakällan Swiftly använder. Vissa data samlas in 
 
 "Bakom trafiklab.se finns ett dedikerat team som vi alltid kan kontakta. Det ger oss en bra garanti för att datat är stabilt och håller en bra kvalitet. Vid störningar kan vi kommunicera snabbt och få meddelanden om eventuella ändringar. Vi vet också att när en ny tidtabell kommer ut finns rätt datauppsättning alltid tillgänglig för oss. Den tryggheten gör det lättare för oss att bygga förtroende hos våra kunder.”
 
-![](/media/2022/09/swiftly-2.png "Swiftly nr 2")
+![](/media/2022/09/swiftly-2.png "En till visualisering gjord i Swiftlys platform")
 
 #### Slutligen, finns det något ni skulle önska från Trafiklab för att kunna utveckla Swiftly ytterligare?
 

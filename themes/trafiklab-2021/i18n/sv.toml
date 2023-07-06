@@ -32,7 +32,7 @@ other = "Översätt denna sida på Github"
 other = "Rapportera ett problem"
 
 [docs-footer-published-at]
-other = "Sidan först publicerades den"
+other = "Sidan publicerades först den"
 
 [docs-footer-last-modified]
 other = "Sidan uppdaterades sist den"
@@ -42,3 +42,6 @@ other = "Officiell öppna data"
 
 [logowall-paragraph]
 other = "Trafiklab tillhandahåller officiella öppna data för all kollektivtrafik i Sverige. Några av de trafikföretag som vi publicerar öppna data åt listas här:"
+
+[published]
+other = "Publicerad"
