@@ -59,11 +59,9 @@ allt viktigare. Baserat på det ser vi att konceptet med levande linjekartor ver
 **Typ av tjänst:** Levande linjekartor, det vill säga digitala linjekartor som visar hur trafiksituationen ser ut i realtid. Realtidskartor förenklar
 navigeringen, visar aktuell information och underlättar för resenärens reseplanering. Några fördelar:
 
-Anpassas enkelt till traditionella linjekartors design som redan är bekant för resenären
-
-Fungerar för flera format, allt ifrån storbildskärm till mobiltelefoner
-
-Lätta att uppdatera
+- Anpassas enkelt till traditionella linjekartors design som redan är bekant för resenären
+- Fungerar för flera format, allt ifrån storbildskärm till mobiltelefoner
+- Lätta att uppdatera
 
 **Läs mer:** https://www.veridict.com/live-network-maps
 
