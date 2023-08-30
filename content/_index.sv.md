@@ -3,7 +3,7 @@ title: "Trafiklab"
 hero: /tl-illustration-map2.svg
 cases_section: true
 news_section: true
-highlighted_page: /news/2022/2022-02-07-resrobot-update
+highlighted_page: /news/2023/2023-06-20-new-developer-portal.md
 mc: true
 type: home
 landingRoller:

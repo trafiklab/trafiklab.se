@@ -1,7 +1,6 @@
 +++
 date = 2022-05-04T22:00:00Z
 description = "How data can improve the traveller experience"
-draft = true
 image = "/media/2022/05/yoav-aziz-rnvhln12ejo-unsplash.jpg"
 title = "Webinar with Samtrafiken, Swiftly and Skånetrafiken"
 
