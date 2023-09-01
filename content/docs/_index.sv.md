@@ -1,5 +1,5 @@
 ---
-title: Dokumentation
+title: Kunskapsbas
 weight: "5"
 layout: single
 sidebar: true

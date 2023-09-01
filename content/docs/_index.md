@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Knowledge base
 weight: "5"
 layout: single
 sidebar: true
