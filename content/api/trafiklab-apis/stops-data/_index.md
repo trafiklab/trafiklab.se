@@ -1,5 +1,5 @@
 ---
-title: Stops data (beta)
+title: Stops data
 layout: "single"
 weight: 37
 date: 2022-06-01

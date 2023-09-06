@@ -1,5 +1,5 @@
 ---
-title: GTFS Sweden 3 (beta)
+title: GTFS Sweden 3
 layout: "single"
 weight: 35
 ---
