@@ -1,5 +1,5 @@
 ---
-title: Stops data (beta)
+title: Stops data
 layout: "single"
 weight: 37
 date: 2022-06-01
@@ -61,8 +61,9 @@ explains the meaning of each Key-Value.
 | owner                         | This value indicates which datasource should be considered the owner of this StopPlace and its Quays.<br/>Often this is the county's public authority in which the StopPlace resides. |
 | data-from                     | Which datasource actually provides the data for this StopPlace and its Quays.                                                                                                         |
 | rikshallplats                 | Samtrafikens Rikshållplatsnummer for this StopPlace, which is used in the GTFS Sverige 2 API (and other places).                                                                      |
-| trafikverket-name             | This StopPlaces name as assigned by Trafikverket.                                                                                                                                     |
-| trafikverket-signatures       | This StopPlaces signature as assigned by Trafikverket. There can be multiple signatures using pipe character "&#124;" between each signature.                                         |
+| trafikverket-name             | This StopPlace's name as assigned by Trafikverket.                                                                                                                                    |
+| trafikverket-signatures       | This StopPlace's signature as assigned by Trafikverket. There can be multiple signatures using pipe character "&#124;" between each signature.                                        |
+| preliminary                   | Indicates that this StopPlace has not been validated and might be subjected to change.                                                                                                |
 | stip.*                        | Any Keys starting with "stip." refers directly to values found in the "data-from" datasource's corresponding data.                                                                    |
 | local-name                    | Format is DataSource:Gid:Name.                                                                                                                                                        |
 | local-gid                     | Format is DataSource:Gid.                                                                                                                                                             |
@@ -77,4 +78,5 @@ The data in this dataset is updated on a daily basis, typically between 07:50 an
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **beta** status. This means that fields may change without prior warning.
+This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
+breaking changes are made, you will get three months or more to update your implementations.

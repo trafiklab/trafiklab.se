@@ -41,7 +41,7 @@ and [https://github.com/CUTR-at-USF/awesome-transit](https://github.com/CUTR-at-
 ## GTFS at Trafiklab
 
 At Trafiklab, we offer two GTFS feeds. The first is [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2), which
-includes information for entire Sweden. We also offer[ GTFS Regional](/api/trafiklab-apis/gtfs-regional-beta),
+includes information for entire Sweden. We also offer[ GTFS Regional](/api/trafiklab-apis/gtfs-regional),
 which consists of multiple GTFS feeds, each of which covers an operator in Sweden. You can see the difference between
 those two feeds below.
 
