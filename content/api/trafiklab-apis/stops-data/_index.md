@@ -78,4 +78,5 @@ The data in this dataset is updated on a daily basis, typically between 07:50 an
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **beta** status. This means that fields may change without prior warning.
+This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
+breaking changes are made, you will get three months or more to update your implementations.

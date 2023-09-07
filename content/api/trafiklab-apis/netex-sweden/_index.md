@@ -1,5 +1,5 @@
 ---
-title: NeTEx Sweden (beta)
+title: NeTEx Sweden
 layout: "single"
 weight: 35
 date: 2022-06-01

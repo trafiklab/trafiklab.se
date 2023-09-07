@@ -34,4 +34,5 @@ see [realtime data](realtime) for more information.
 
 ### How often does the data format changes? Do breaking changes happen?
 
-Both the static and realtime data feeds are in beta. We may make breaking changes until these feeds are considered as stable.
+These datasets have the **stable** status. This means that we will communicate when fields are added, or changed. When
+breaking changes are made, you will get three months or more to update your implementations.
