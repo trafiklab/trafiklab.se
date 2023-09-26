@@ -71,6 +71,7 @@ explains the meaning of each Key-Value.
 | local-journeypatternpoint-gid | Format is DataSource:Gid.                                                                                                                                                             |
 | local-stoppoint-gid           | Format is DataSource:Gid.                                                                                                                                                             |
 | local-designation             | Format is DataSource:Designation.                                                                                                                                                     |
+| sellable                      | This value will be true if the StopPlace is sellable through samtrafiken systems, and false if not.                                                                                   |
 
 ### How often is this dataset updated?
 
