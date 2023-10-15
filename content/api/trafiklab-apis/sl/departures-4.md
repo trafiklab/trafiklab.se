@@ -789,4 +789,4 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 <h2 id="support">Support</h2>
 <p>Räcker inte dokumentationen så <a href="https://kundo.se/org/trafiklabse/posts/">sök gärna bland alla de 
 hundratals inlägg som finns på vårt supportforum</a>. Det är troligt att någon redan har hittat och löst samma problem som du har.</p>
-<p>Hittar du fortfarande inte svar på din fråga så<a href="https://kundo.se/org/trafiklabse/">skriv ett eget inlägg på forumet</a>så hjälper vi dig.</p>
+<p>Hittar du fortfarande inte svar på din fråga så <a href="https://kundo.se/org/trafiklabse/"> skriv ett eget inlägg på forumet</a>så hjälper vi dig.</p>
