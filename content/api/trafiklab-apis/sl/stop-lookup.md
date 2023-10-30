@@ -3,86 +3,198 @@ title: SL Stop lookup v1.0 (Platsuppslag)
 weight: 300
 date: 2014-03-14
 aliases:
-- /api/sl-platsuppslag
-- /api/sl-platsuppslag/dokumentation
-- /api/sl-platsuppslag/nivaer
-- /api/sl-platsuppslag/konsol
-- /node/12617
-- /node/12617/dokumentation
-- /node/12617/nivaer
-- /node/12617/konsol
+  - /api/sl-platsuppslag
+  - /api/sl-platsuppslag/dokumentation
+  - /api/sl-platsuppslag/nivaer
+  - /api/sl-platsuppslag/konsol
+  - /node/12617
+  - /node/12617/dokumentation
+  - /node/12617/nivaer
+  - /node/12617/konsol
 
 ---
 
-## Beskrivning
+## Description
 
-Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara
-söka efter hållplatsområden eller hållplatser, adresser och platser.
-
-{{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated for the new Trafiklab website. {{% /info %}}
-
-## URL
-
-`https://api.sl.se/api2/typeahead.<FORMAT>?key=<DIN NYCKEL>&searchstring=<SÖKORD>&stationsonly=<ENDAST STATIONER>&maxresults<MAX ANTAL SVAR>`
-
-### API-nyckelnivåer
-
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 100 000         |
-| Guld   |                 | Efter behov     |
+Using this API, you can retrieve information regarding SLs stops by providing a part of the name of a stop. You can opt to only search for stops, or to search
+for both stops, addresses and places.
 
 ## Format
 
-Json eller xml enligt ändelse till serviceanropet.
+Json or xml, as specified in the API request.
 
-## Parametrar
+### API-nyckelnivåer
 
-| Namn         | Datatyp | Tvingande | Beskrivning                                                                                                                                                                                                                                                                                   |
-|--------------|---------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Key          | String  | Ja        | Din API nyckel.                                                                                                                                                                                                                                                                               |
-| SearchString | String  | Ja        | Söksträngen. (Max 20 tecken)                                                                                                                                                                                                                                                                  |
-| StationsOnly | Boolean | Nej       | Om ”True” returneras endast hållplatser. True = default.                                                                                                                                                                                                                                      |
-| MaxResults   | Integer | Nej       | Maximalt antal resultat som önskas. 10 är default, det går inte att få mer än 50.                                                                                                                                                                                                             |
-| type         | String  | Nej       | Typfilter för platser: <ul><li>S: sök efter endast stationer <li>P: Sök efter endast POI <li>A: Sök endast efter adresser <li>SP: Sök efter stationer och POI <li>SA: Sök endas efter stationer och Adresser <li>AP: Sök endast på adresser och POI <li>ALL: adresser, stationer och POI</ul> |
+| Level  | Max requests/month | Max requests/month |
+|--------|--------------------|--------------------|
+| Bronze | 30                 | 10 000             |
+| Silver | 60                 | 100 000            |
+| Gold   |                    | As needed          |
 
-## Resultat
+## Request
 
-### Svarsstruktur
+### URL
 
-| Namn          | Datatyp | Beskrivning                                                                                             |
-|---------------|---------|---------------------------------------------------------------------------------------------------------|
-| StatusCode    | Integer | Innehåller statuskod för det eventuella meddelandet.                                                    |
-| Message       | String  | Innehåller eventuellt anropsrelaterade meddelanden som t.ex. felmeddelanden. Se ”Felmeddelanden” nedan. |
-| ExecutionTime | Long    | Anger hur lång tid (i ms) det tog för servern att generera svaret.                                      |
-| ResponseData  | Sites   | Innehåller själva svarsdata från tjänsten. Se ”Svarsdata” nedan.                                        |
+`https://api.sl.se/api2/typeahead.<FORMAT>?key=<YOUR_KEY>&searchstring=<QUERY>`
 
-### Svarsdata
+### Parameters
 
-| Namn  | Datatyp | Beskrivning                                        |
-|-------|---------|----------------------------------------------------|
-| Sites | List    | Lista med de platser som hittats. Se ”Site” nedan. |
+The following parameters can be provided in the query string:
 
-#### Site
+| **Name**     | **Type** | **Required** | **Description**                                                                                                                                                                                                                          |
+|--------------|----------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Key          | String   | Yes          | Your API key.                                                                                                                                                                                                                            |
+| SearchString | String   | Yes          | The search query, limited to 20 characters.                                                                                                                                                                                              |
+| StationsOnly | Boolean  | No           | Whether to search for stations only, or to even include addresses and places. `true` in order to only search stops. `true` by default.                                                                                                   |
+| MaxResults   | Integer  | No           | The maximum number of result to return. Between 1 and 50, default 10.                                                                                                                                                                    |
+| type         | String   | No           | Type filter for stops: <ul><li>S: Stations only <li>P: Points of interests (POI) only <li>A: Addresses only <li>SP: Stations and POIs <li>SA: Stations and addresses <li>AP: Addresses and POI <li>ALL: Stations, Addresses and POI</ul> |
 
-| Namn   | Datatyp | Beskrivning                                                         |
-|--------|---------|---------------------------------------------------------------------|
-| Name   | String  | Namnet på platsen.                                                  |
-| SiteId | Integer | Id för hållplatsområde.                                             |
-| Type   | String  | Typ av plats: ”Station”, ”Address” eller ”Poi” (Point of interest). |
-| X      | String  | X-koordinat för placering.                                          |
-| Y      | String  | Y-koordinat för placering.                                          |
+### Example call
 
-## Felmeddelanden
+{{% tabs %}} {{% tab "Json" %}}
 
-Än så länge finns inga felmeddelanden.
+```text
+https://api.sl.se/api2/typeahead.json?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
+```
 
+{{% /tab %}} {{% tab "Xml" %}}
+
+```text
+https://api.sl.se/api2/typeahead.xml?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
+```
+
+{{% /tab %}} {{% /tabs %}}
+
+## Results
+
+### Response structure
+
+| **Name**      | **Type** | **Description**                                                                  |
+|---------------|----------|----------------------------------------------------------------------------------|
+| StatusCode    | Integer  | Contains a status code corresponding to the possible message                     |
+| Message       | String   | Contain error messages in case something went wrong. See "Error messages" below. |
+| ExecutionTime | Long     | How long time the server needed to generate the response, in milliseconds.       |
+| ResponseData  | Sites    | The actual response                                                              |
+
+#### Sites
+
+| **Name** | **Type** | **Description**            |
+|----------|----------|----------------------------|
+| Sites    | List     | A list of all found sites. |
+
+### Site
+
+| **Name** | **Type** | **Description**                                                    |
+|----------|----------|--------------------------------------------------------------------|
+| Name     | String   | The name of the stop                                               |
+| SiteId   | Integer  | The id of the stop area.                                           |
+| Type     | String   | The place type: ”Station”, ”Address” or ”Poi” (Point of interest). |
+| X        | String   | X-coordinate in SWEREF format.                                     |
+| Y        | String   | Y-coordinate in SWEREF format.                                     |
+
+### Example response
+
+{{% tabs %}} {{% tab "Json" %}}
+
+```json
+{
+  "StatusCode": 0,
+  "Message": null,
+  "ExecutionTime": 0,
+  "ResponseData": [
+    {
+      "Name": "Odenplan (Stockholm)",
+      "SiteId": "9117",
+      "Type": "Station",
+      "X": "18049099",
+      "Y": "59342901",
+      "Products": null
+    },
+    {
+      "Name": "Odengatan/Valhallavägen (Stockholm)",
+      "SiteId": "1082",
+      "Type": "Station",
+      "X": "18065891",
+      "Y": "59346622",
+      "Products": null
+    },
+    {
+      "Name": "Stockholm Odenplan (Stockholm)",
+      "SiteId": "1079",
+      "Type": "Station",
+      "X": "18045683",
+      "Y": "59343116",
+      "Products": null
+    },
+    {
+      "Name": "Odengatan/Sveavägen (Stockholm)",
+      "SiteId": "1030",
+      "Type": "Station",
+      "X": "18055311",
+      "Y": "59344294",
+      "Products": null
+    },
+    {
+      "Name": "Odenvägen (Lidingö)",
+      "SiteId": "2059",
+      "Type": "Station",
+      "X": "18133795",
+      "Y": "59367396",
+      "Products": null
+    }
+  ]
+}
+```
+
+{{% /tab %}} {{% tab "Xml" %}}
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ResponseOfListOfSite xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StatusCode>0</StatusCode>
+    <ExecutionTime>0</ExecutionTime>
+    <ResponseData>
+        <Site>
+            <Name>Odenplan (Stockholm)</Name>
+            <SiteId>9117</SiteId>
+            <Type>Station</Type>
+            <X>18049099</X>
+            <Y>59342901</Y>
+        </Site>
+        <Site>
+            <Name>Odengatan/Valhallavägen (Stockholm)</Name>
+            <SiteId>1082</SiteId>
+            <Type>Station</Type>
+            <X>18065891</X>
+            <Y>59346622</Y>
+        </Site>
+        <Site>
+            <Name>Stockholm Odenplan (Stockholm)</Name>
+            <SiteId>1079</SiteId>
+            <Type>Station</Type>
+            <X>18045683</X>
+            <Y>59343116</Y>
+        </Site>
+        <Site>
+            <Name>Odengatan/Sveavägen (Stockholm)</Name>
+            <SiteId>1030</SiteId>
+            <Type>Station</Type>
+            <X>18055311</X>
+            <Y>59344294</Y>
+        </Site>
+        <Site>
+            <Name>Odenvägen (Lidingö)</Name>
+            <SiteId>2059</SiteId>
+            <Type>Station</Type>
+            <X>18133795</X>
+            <Y>59367396</Y>
+        </Site>
+    </ResponseData>
+</ResponseOfListOfSite>
+```
+
+{{% /tab %}} {{% /tabs %}}
 ## Support
 
-Räcker inte dokumentationen så <a href="http://kundo.se/org/trafiklabse/posts/">sök gärna bland alla de hundratals
-inlägg som finns på vårt supportforum</a>. Det är troligt att någon redan har hittat och löst samma problem som du har.
-
-Hittar du fortfarande inte svar på din fråga så <a href="http://kundo.se/org/trafiklabse/">skriv ett eget inlägg på
-forumet</a> så hjälper vi dig.
+If you need more help you can search through [existing questions on our support forum](http://kundo.se/org/trafiklabse/posts/). If you don't find the answer to
+your question their, you can create your own post and we'll try to help you as soon as possible.
