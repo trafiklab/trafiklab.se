@@ -23,7 +23,7 @@ for both stops, addresses and places.
 
 Json or xml, as specified in the API request.
 
-### API-nyckelnivåer
+### API key quota levels
 
 | Level  | Max requests/month | Max requests/month |
 |--------|--------------------|--------------------|
@@ -59,13 +59,13 @@ The following parameters can be provided in the query string:
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v1/typeahead..json?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
+https://journeyplanner.integration.sl.se/v1/typeahead.json?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
 ```
 
 {{% /tab %}} {{% tab "Xml" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v1/typeahead..xml?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
+https://journeyplanner.integration.sl.se/v1/typeahead.xml?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
 ```
 
 {{% /tab %}} {{% /tabs %}}
