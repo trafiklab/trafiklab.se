@@ -64,7 +64,7 @@ https://journeyplanner.integration.sl.se/v1/nearbystopsv2.xml?originCoordLat=59.
 
 ## Response
 
-### Struktur
+### Structure
 
 | Name                        | Type         | Description                            |
 |-----------------------------|--------------|----------------------------------------|
