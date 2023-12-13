@@ -171,4 +171,4 @@ The response consists of an array of deviations. Every deviation contains the fo
 
 ## OpenAPI specification
 
-{{% oai-spec url="/assets/openapi/sl-deviations.json" %}}
+{{% oai-spec url="/openapi/sl-deviations.json" %}}
