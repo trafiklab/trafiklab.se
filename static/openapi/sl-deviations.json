@@ -5,8 +5,8 @@
     "description": "deliver deviationinfomation API",
     "version": "v1"
   },
-  "host": "api.integration.sl.se",
-  "basePath": "/open-api-deviation/v1",
+  "host": "deviations.integration.sl.se",
+  "basePath": "/v1",
   "schemes": [
     "https"
   ],

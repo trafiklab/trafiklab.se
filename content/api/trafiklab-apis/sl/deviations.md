@@ -6,7 +6,8 @@ date: 2023-12-12
 
 ## Description
 
-Using this API, you can get information regarding deviations on SLs transport network. This API replaces the older [Service Alerts (Störningsinformation)](service-alerts-2.md) and
+Using this API, you can get information regarding deviations on SLs transport network. This API replaces the
+older [Service Alerts (Störningsinformation)](service-alerts-2.md) and
 [Traffic Status (Trafikläget)](sl-traffic-status-2.md) APIs.
 
 ## URL
@@ -42,35 +43,31 @@ This API does not require API keys, and has no quota levels. Fair use rules appl
 
 These specific headers may be used to alter the response sent by the server.
 
-| Header            | Description                                                                                                                                                                                                                            |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Accept-Encoding   | Controls the compression used by the server. Typically managed by the HTTP client used. Valid values are 'gzip', 'identity' and 'deflate'. When using this header, your client has to have support for the given compression standard. |
-| If-modified-since | The timestamp from the `Date` header returned in a previous request. The server will return an HTTP 304 code if the data has not changed since the given time.                                                                         |
-| If-none-match     | The tag from the `Etag` header returned in a previous request. The server will return an HTTP 304 code if the data does not differ from the given version.                                                                             |
+| Header          | Description                                                                                                                                                                                                                            |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Accept-Encoding | Controls the compression used by the server. Typically managed by the HTTP client used. Valid values are 'gzip', 'identity' and 'deflate'. When using this header, your client has to have support for the given compression standard. |
+| age             | Useful for caching responses. The time in seconds since the cached response was generated at first.                                                                                                                                    |
 
 ## Response
 
 ### Response codes
 
-| Code | Description                                                                                                                                                                      |
-|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 200  | Ok, a valid API response is returned.                                                                                                                                            |
-| 304  | Not modified, meaning the response has not been changed since the time specified in the `if-modified-since` or the `if-none-match` request header. No response body is returned. | 
-| 400  | Bad request, one of the request parameters contains an invalid value.                                                                                                            |
-| 404  | Not found, the URL is incorrect                                                                                                                                                  |
-| 500  | Error on the server side                                                                                                                                                         |
-| 502  | Error on the server side                                                                                                                                                         |
-| 503  | Error on the server side                                                                                                                                                         |
-| 504  | Service temporary unavailable                                                                                                                                                    |
+| Code | Description                                                           |
+|------|-----------------------------------------------------------------------|
+| 200  | Ok, a valid API response is returned.                                 |
+| 400  | Bad request, one of the request parameters contains an invalid value. |
+| 404  | Not found, the URL is incorrect                                       |
+| 500  | Error on the server side                                              |
+| 502  | Error on the server side                                              |
+| 503  | Error on the server side                                              |
+| 504  | Service temporary unavailable                                         |
 
 ### Headers
 
-| Header           | Description                                                                                                   |
-|------------------|---------------------------------------------------------------------------------------------------------------|
-| Content-Encoding | Content-Encoding of response to enable gzip compressed responses for client that accept it                    |
-| Cache-Control    | Useful for caching responses. Cache-Control containing max-age, as described in RFC 7234, 5.2                 |
-| Etag             | Useful for caching responses. Entity Tag, containing a strong validator, as described in RFC 7232, 2.3        |
-| Last-modified    | Useful for caching responses. Timestamp for last modification of the resource, as described in RFC 7232, 2.2I |
+| Header           | Description                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------|
+| Content-Encoding | Content-Encoding of response to enable gzip compressed responses for client that accept it    |
+| Cache-Control    | Useful for caching responses. Cache-Control containing max-age, as described in RFC 7234, 5.2 |
 
 ### Example response
 
@@ -142,10 +139,10 @@ The response consists of an array of deviations. Every deviation contains the fo
 | modified                             | DateTime (Optional) | When the message was last updated, if it has been updated                     | 2022-03-03T19:03:48.713+01:00                                                          |
 | deviation_case_id                    | Integer (Optional)  | The id for the deviation                                                      | 52432153                                                                               |
 | publish.from                         | DateTime            | Start of the period when this deviation message version is valid              | 2022-03-03T19:03:48.700+01:00                                                          |
-| publish.to                           | DateTime (Optional) | End of the period when this deviation message version is valid                | 2022-03-03T19:03:48.700+01:00                                                          |
-| priority.importance_level            | Integer             |                                                                               | 2                                                                                      |
-| priority.influence_level             | Integer             |                                                                               | 3                                                                                      |
-| priority.urgency_level               | Integer             |                                                                               | 1                                                                                      |
+| publish.upto                         | DateTime (Optional) | End of the period when this deviation message version is valid                | 2022-03-03T19:03:48.700+01:00                                                          |
+| priority.importance_level            | Integer             | The importance level of the deviation message                                 | 2                                                                                      |
+| priority.influence_level             | Integer             | The influence level of the deviation message                                  | 3                                                                                      |
+| priority.urgency_level               | Integer             | The urgency level of the deviation message                                    | 1                                                                                      |
 | message_variants                     | Array               | Variants of a message in different languages                                  |                                                                                        |
 | message_variants.header              | String              | The header of the message                                                     | Entré vid Medborgarplatsen stängd                                                      |
 | message_variants.details             | String              | The full contents of the message                                              | Vid Medborgarplatsen är entrén från Folkungagatan stängd på grund av underhållsarbete. |
@@ -159,7 +156,7 @@ The response consists of an array of deviations. Every deviation contains the fo
 | scope.stop_areas.name                | String              | Stop Area name                                                                | Medborgarplatsen                                                                       |
 | scope.stop_areas.type                | String              | Stop Area type                                                                | METROSTN                                                                               |
 | scope.stop_points                    | Array               | The affected stop point(s)                                                    |                                                                                        |
-| scope.stop_points.id                 | Array               | Stop point id                                                                 | 222                                                                                    |
+| scope.stop_points.id                 | Integer             | Stop point id                                                                 | 222                                                                                    |
 | scope.stop_points.name               | String              | Stop point name                                                               | Norrö                                                                                  |
 | scope.lines                          | Array (Optional)    | The affected line(s)                                                          |                                                                                        |
 | scope.lines.id                       | Integer             | Line id                                                                       | 17                                                                                     |
