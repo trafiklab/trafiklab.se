@@ -156,11 +156,6 @@
         "scope"
       ],
       "properties": {
-        "id": {
-          "description": "The message id\n- Id för störningsmeddelande\n",
-          "example": "4050001307440218",
-          "type": "string"
-        },
         "version": {
           "description": "The message version (sequential)\n- Version av störningsmeddelande\n",
           "example": 1,

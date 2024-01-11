@@ -1,7 +1,7 @@
 ---
 title: SL Deviations
 weight: 499
-date: 2023-12-12
+date: 2024-01-12
 ---
 
 ## Description
@@ -32,12 +32,13 @@ This API does not require API keys, and has no quota levels. Fair use rules appl
 
 ### Parameters
 
-| Namn           | Type                             | Required | Default value     | Description                                                                                             |
-|----------------|----------------------------------|----------|-------------------|---------------------------------------------------------------------------------------------------------|
-| future         | Boolean                          | No       | False             | Include future deviations                                                                               |
-| site           | Comma separated list of integers | No       | Empty (all sites) | Only include results with these site ids                                                                |
-| line           | Comma separated list of integers | No       | Empty (all lines) | Only include results with these line ids                                                                |
-| transport_mode | Comma separated list of values   | No       | Empty (all modes) | Only include results with this transport mode. Valid values: BUS, METRO, TRAM, TRAIN, SHIP, FERRY, TAXI |
+| Namn                | Type                             | Required | Default value                     | Description                                                                                             |
+|---------------------|----------------------------------|----------|-----------------------------------|---------------------------------------------------------------------------------------------------------|
+| future              | Boolean                          | No       | False                             | Include future deviations                                                                               |
+| site                | Comma separated list of integers | No       | Empty (all sites)                 | Only include results with these site ids                                                                |
+| line                | Comma separated list of integers | No       | Empty (all lines)                 | Only include results with these line ids                                                                |
+| transport_authority | integer                          | No       | Empty (all transport authorities) | Only include results with this transport authority                                                      |
+| transport_mode      | Comma separated list of values   | No       | Empty (all modes)                 | Only include results with this transport mode. Valid values: BUS, METRO, TRAM, TRAIN, SHIP, FERRY, TAXI |
 
 ### Headers
 
@@ -74,7 +75,6 @@ These specific headers may be used to alter the response sent by the server.
 ```json
 [
   {
-    "id": "4050001307440218",
     "version": 1,
     "created": "2022-03-03T19:03:48.713+01:00",
     "modified": "2022-03-03T19:03:48.713+01:00",
@@ -133,7 +133,6 @@ The response consists of an array of deviations. Every deviation contains the fo
 
 | Name                                 | Type                | Description                                                                   | Example value                                                                          |
 |--------------------------------------|---------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| id                                   | String              | The message id                                                                | 4050001307440218                                                                       |
 | version                              | Integer             | The message version (sequential)                                              | 1                                                                                      |
 | created                              | DateTime            | When the message was created                                                  | 2022-03-03T19:03:48.713+01:00                                                          |
 | modified                             | DateTime (Optional) | When the message was last updated, if it has been updated                     | 2022-03-03T19:03:48.713+01:00                                                          |
