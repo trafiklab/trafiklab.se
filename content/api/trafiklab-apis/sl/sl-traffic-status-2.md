@@ -13,6 +13,11 @@ aliases:
   - /node/12603/console
 ---
 
+{{% error %}}
+Due to technical reasons, this API is being replaced by [SLs Deviations API](deviations.md) and [GTFS Service alerts](../gtfs-regional/realtime.md). It will
+stop working in the near future.
+{{% /error %}}
+
 ## Beskrivning
 
 Med detta API kan du få information om den aktuella statusen för SLs trafikläge. Detta är information på en övergripande
@@ -36,7 +41,7 @@ has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 `https://api.sl.se/api2/trafficsituation.<FORMAT>?key=<DIN API NYCKEL>`
 
-### API-nyckelnivåer 
+### API-nyckelnivåer
 
 | Nivå   | Max anrop/minut | Max anrop/månad |
 |--------|-----------------|-----------------|

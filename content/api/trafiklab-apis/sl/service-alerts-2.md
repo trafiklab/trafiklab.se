@@ -16,6 +16,11 @@ aliases:
 - /node/12605/konsol
 
 ---
+
+{{% error %}}
+Due to technical reasons, this API is being replaced by [SLs Deviations API](deviations.md) and will completely stop working in the near future.
+{{% /error %}}
+
 <h2>Beskrivning</h2>
 Med detta API kan du få fram information om aktuella och planerade störningar i SL-trafiken. Med API ‘et kan du ställa 
 frågor om störningar på till exempel en viss linje eller ett visst trafikslag. Svaret består av störningsmeddelanden med 
@@ -24,9 +29,6 @@ viss metainformation.
 För att se informationen som returneras av detta API, se <a href="https://api.sl.se/ta">https://api.sl.se/ta</a> 
 (detta är en störningsinformationssida som är anpassad för SL:s interna behov och inte avsedd att användas av 
 resenärerna).
-
-{{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 Om ingen av parametrarna ”TransportMode”, ”LineNumber” och ”SiteId” skickas med anropet skickas samtliga avvikelser 
 tillbaks som svar.
