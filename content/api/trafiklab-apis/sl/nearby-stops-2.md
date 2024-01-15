@@ -28,11 +28,11 @@ Json or xml, as specified in the API request.
 
 ### API key quota levels
 
-| Level  | Max requests/month | Max requests/month |
-|--------|--------------------|--------------------|
-| Bronze | 30                 | 10 000             |
-| Silver | 60                 | 500 000            |
-| Gold   |                    | As needed          |
+| Level  | Max requests/minute | Max requests/month |
+|--------|---------------------|--------------------|
+| Bronze | 30                  | 10 000             |
+| Silver | 60                  | 500 000            |
+| Gold   |                     | As needed          |
 
 ### Parameters
 
