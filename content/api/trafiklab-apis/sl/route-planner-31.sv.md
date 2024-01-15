@@ -35,10 +35,17 @@ Travelplanner 3.1: *<crd>17.973032</crd><crd>59.360501</crd><crd>9.0E-6</crd><cr
 
 ## URL
 
-- Trip: `api.sl.se/api2/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&amp;<parametrar>`
-- Journey detail: `api.sl.se/api2/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
-- Recontruction: `api.sl.se/api2/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
-- XSD: `api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`
+- Trip: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&amp;<parametrar>`
+- Journey detail: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
+- Recontruction: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
+- Gisroute: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=<DIN APINYCKEL>&<parametrar>
+- TTI: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
+- XSD: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`
+
+{{% warning %}}
+Den tidigare domänen och bas-URL:en `https://api.sl.se/api2/TravelplannerV3_1/` har ändrats den 15:e januari, och kommer sluta fungera den 15e mars 2024.
+Parametrar, svarsstrukturer och API nycklar är oförändrade.
+{{% /warning %}}
 
 ### API-nyckelnivåer
 
@@ -755,7 +762,7 @@ med trip ger rekomenderas att sätta passlist=1 i trip. Detta är en utökning f
 Exempel:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/journeydetail.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;id=1|3598|0|74|13062017
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;id=1|3598|0|74|13062017
 ```
 
 # Realtid
@@ -821,7 +828,7 @@ Värdet i ref i objektet GisRef är det som används som input till gisroute
 Exempel:
 
 ```text
-http://api.sl.se/api2/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;DIN APINYCKEL&gt;&amp;ctx=G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C&amp;lang=sv&amp;poly=1
+http://https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;DIN APINYCKEL&gt;&amp;ctx=G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C&amp;lang=sv&amp;poly=1
 ```
 
 ### Svarsstruktur
@@ -900,7 +907,7 @@ Värdet i ctxRecon är det som används som input till reconstruction
 Exempel:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
 ```
 
 ## Svarsstruktur
@@ -918,7 +925,7 @@ Inga specifika parametrar används för denna tjänst.
 Exempel:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
 ```
 
 ## TTI – Time table info
@@ -933,7 +940,7 @@ Inga specifika parametrar används för denna tjänst.
 Exempel:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
 ```
 
 ### Svarsstruktur

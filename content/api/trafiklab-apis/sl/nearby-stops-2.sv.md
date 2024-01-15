@@ -2,7 +2,7 @@
 title: SL Nearby stops v2.0 (Närliggande hållplatser 2)
 weight: 310
 date: 2019-01-14
-aliases: 
+aliases:
   - /api/sl-narliggande-hallplatser-2
   - /api/sl-narliggande-hallplatser-2/dokumentation
   - /api/sl-narliggande-hallplatser-2/nivaer
@@ -12,6 +12,7 @@ aliases:
   - /node/25595/nivaer
   - /node/25595/konsol
 ---
+
 ## Beskrivning
 
 Med detta API kan du få information om närliggande hållplatser till en försedd plats baserad på lat och long.
@@ -21,7 +22,9 @@ Med detta API kan du få information om närliggande hållplatser till en förse
 `https://journeyplanner.integration.sl.se/v1/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
 
 {{% warning %}}
-Den tidigare länken `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>` har ändrats den december, och kommer sluta fungera den 15e mars 2024.
+Den tidigare
+länken `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
+har ändrats den 4:e december, och kommer sluta fungera den 15e mars 2024.
 Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
 

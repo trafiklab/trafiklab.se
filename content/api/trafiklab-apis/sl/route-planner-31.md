@@ -44,10 +44,17 @@ Travelplanner 3.1: `<crd>17.973032</crd><crd>59.360501</crd><crd>9.0E-6</crd><cr
 
 ## URL
 
-- **Trip:** `api.sl.se/api2/TravelplannerV3_1/trip.<FORMAT>?key=<YOUR API KEY>&amp;<parameters>`
-- **JourneyDetail:** `api.sl.se/api2/TravelplannerV3_1/journeydetail.<FORMAT>?key=<YOUR API KEY>&<reference parameter>`
-- **Reconstruction:** `api.sl.se/api2/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<YOUR API KEY>&<reference parameter>`
-- **XSD:** `api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<YOUR API KEY>`
+- **Trip:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=<YOUR API KEY>&<parameters>`
+- **JourneyDetail:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=<YOUR API KEY>&<parameters>`
+- **Reconstruction:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<YOUR API KEY>&<parameters>`
+- **Gisroute**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=<YOUR API KEY>&<parameters>
+- **TTI**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<YOUR API KEY>
+- **XSD:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<YOUR API KEY>`
+
+{{% warning %}}
+The old domain and base URL `https://api.sl.se/api2/TravelplannerV3_1/` has changed on January 15th, and will stop working on March 15th.
+Query parameters, response bodies and API keys remain unchanged.
+{{% /warning %}}
 
 ### API Key Levels
 
@@ -96,7 +103,7 @@ JSON or XML according to the extension of the service call.
 | Context           | Earlier or later journeys                    | Optional. Parameter that specifies the starting point for searching for later or earlier journeys. The value is obtained from the result value srcF or srcB in a call to the trip service. See 2.4.2                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Poly              | 0 or 1                                       | Optional. Specifies whether detailed routes should be calculated for the results. For a description of the polyline, see 2.4.5. Default is 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Passlist          | 0 or 1                                       | Optional. Specifies whether stops/stations passed during the journey should be retrieved. Default is 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| originWalk        | 0 or 1 + detailing                           | Optional, Default 1 Specifies whether a journey can start with a walking distance. For detailing distance, min and max number of meters can be specified as `1,[min distance],[max distance],[speed],[as the crow flies]` Speed is specified as follows: &lt; 100: faster = 100: normal (default) &gt; 100: slower As the crow flies: 1= on 0= off Example: `1,0,1000,0,1` Allows fast walking but a maximum of 1000 meters as the crow flies.                                                                                                                                                              |
+| originWalk        | 0 or 1 + detailing                           | Optional, Default 1 Specifies whether a journey can start with a walking distance. For detailing distance, min and max number of meters can be specified as `1,[min distance],[max distance],[speed],[as the crow flies]` Speed is specified as follows: &lt; 100: faster = 100: normal (default) &gt; 100: slower As the crow flies: 1= on 0= off Example: `1,0,1000,0,1` Allows fast walking but a maximum of 1000 meters as the crow flies.                                                                                                                                                          |
 | destWalk          | 0 or 1 + detailing                           | Optional. Similar to originWalk but for destination.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | originBike        |                                              | Optional. Similar to originWalk Comment: To get accurate results, you need to disable walking search, i.e., set the parameter originWalk=0                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | destBike          |                                              | Optional. Similar to originWalk Comment: To get accurate results, you need to disable walking search, i.e., set the parameter destWalk=0                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -755,7 +762,7 @@ that a search with trip provides, it is recommended to set passlist=1 in trip. T
 Example:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/journeydetail.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;id=1|3598|0|74|13062017
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;id=1|3598|0|74|13062017
 ```
 
 # Real-time
@@ -822,7 +829,7 @@ The value in the "ref" in the GisRef object is used as input for gisroute.
 Example:
 
 ```text
-http://api.sl.se/api2/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;YOUR API KEY&gt;&amp;ctx=G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C&amp;lang=sv&amp;poly=1
+http://https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;YOUR API KEY&gt;&amp;ctx=G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C&amp;lang=sv&amp;poly=1
 ```
 
 ### Response Structure
@@ -901,7 +908,7 @@ The value in ctxRecon is used as input for reconstruction
 Example:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
 ```
 
 ## Response Structure
@@ -919,7 +926,7 @@ No specific parameters are used for this service.
 Example:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
 ```
 
 ## TTI – Time Table Info
@@ -934,7 +941,7 @@ No specific parameters are used for this service.
 Example:
 
 ```text
-api.sl.se/api2/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
 ```
 
 ### Response Structure
