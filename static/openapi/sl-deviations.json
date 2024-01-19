@@ -39,6 +39,7 @@
             "description": "Only include results with these site ids \n- Filtrera på siter genom att ange ett eller flera site-nummer\n",
             "in": "query",
             "type": "array",
+            "collectionFormat": "multi",
             "items": {
               "type": "integer"
             }
@@ -48,6 +49,7 @@
             "description": "Only include results with these line ids\n- Filtrera på Linjer genom att ange ett eller flera linjenummer\n",
             "in": "query",
             "type": "array",
+            "collectionFormat": "multi",
             "items": {
               "type": "integer"
             }
@@ -57,6 +59,7 @@
             "description": "Only include results with this transport mode\n- Filtrera på trafikslag genom att ange ett eller flera trafikslag\n",
             "in": "query",
             "type": "array",
+            "collectionFormat": "multi",
             "items": {
               "enum": [
                 "BUS",

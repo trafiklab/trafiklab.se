@@ -32,13 +32,13 @@ This API does not require API keys, and has no quota levels. Fair use rules appl
 
 ### Parameters
 
-| Namn                | Type                             | Required | Default value                     | Description                                                                                             |
-|---------------------|----------------------------------|----------|-----------------------------------|---------------------------------------------------------------------------------------------------------|
-| future              | Boolean                          | No       | False                             | Include future deviations                                                                               |
-| site                | Comma separated list of integers | No       | Empty (all sites)                 | Only include results with these site ids                                                                |
-| line                | Comma separated list of integers | No       | Empty (all lines)                 | Only include results with these line ids                                                                |
-| transport_authority | integer                          | No       | Empty (all transport authorities) | Only include results with this transport authority                                                      |
-| transport_mode      | Comma separated list of values   | No       | Empty (all modes)                 | Only include results with this transport mode. Valid values: BUS, METRO, TRAM, TRAIN, SHIP, FERRY, TAXI |
+| Namn                | Type                                     | Required | Default value                     | Description                                                                                             |
+|---------------------|------------------------------------------|----------|-----------------------------------|---------------------------------------------------------------------------------------------------------|
+| future              | Boolean                                  | No       | False                             | Include future deviations                                                                               |
+| site                | Integer, can be specified multiple times | No       | Empty (all sites)                 | Only include results with these site ids                                                                |
+| line                | Integer, can be specified multiple times | No       | Empty (all lines)                 | Only include results with these line ids                                                                |
+| transport_authority | integer                                  | No       | Empty (all transport authorities) | Only include results with this transport authority                                                      |
+| transport_mode      | String, can be specified multiple times  | No       | Empty (all modes)                 | Only include results with this transport mode. Valid values: BUS, METRO, TRAM, TRAIN, SHIP, FERRY, TAXI |
 
 ### Headers
 
