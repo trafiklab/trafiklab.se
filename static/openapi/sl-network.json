@@ -1,0 +1,1542 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "open-api-transport",
+    "version": "v1",
+    "description": "Public transport API"
+  },
+  "servers": [
+    {
+      "url": "https://integration.sl.se/open-api-transport/v1"
+    }
+  ],
+  "paths": {
+    "/lines": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "A list of all lines within Region Stockholm",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/lineResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/trait_jsonResponsive_400"
+          },
+          "401": {
+            "$ref": "#/components/responses/trait_jsonResponsive_401"
+          },
+          "403": {
+            "$ref": "#/components/responses/trait_jsonResponsive_403"
+          },
+          "404": {
+            "$ref": "#/components/responses/trait_jsonResponsive_404"
+          },
+          "405": {
+            "$ref": "#/components/responses/trait_jsonResponsive_405"
+          },
+          "406": {
+            "$ref": "#/components/responses/trait_jsonResponsive_406"
+          },
+          "415": {
+            "$ref": "#/components/responses/trait_jsonResponsive_415"
+          },
+          "429": {
+            "$ref": "#/components/responses/trait_jsonResponsive_429"
+          },
+          "499": {
+            "$ref": "#/components/responses/trait_jsonResponsive_499"
+          },
+          "500": {
+            "$ref": "#/components/responses/trait_jsonResponsive_500"
+          },
+          "501": {
+            "$ref": "#/components/responses/trait_jsonResponsive_501"
+          },
+          "502": {
+            "$ref": "#/components/responses/trait_jsonResponsive_502"
+          },
+          "503": {
+            "$ref": "#/components/responses/trait_jsonResponsive_503"
+          },
+          "504": {
+            "$ref": "#/components/responses/trait_jsonResponsive_504"
+          }
+        },
+        "description": "List all lines within Region Stockholm",
+        "operationId": "Lines",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
+          },
+          {
+            "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
+          },
+          {
+            "$ref": "#/components/parameters/trait_query.filterTransportAuthIdRequired_transport_authority_id"
+          }
+        ]
+      }
+    },
+    "/sites": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "A list of all sites within Region Stockholm",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/siteResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/trait_jsonResponsive_400"
+          },
+          "401": {
+            "$ref": "#/components/responses/trait_jsonResponsive_401"
+          },
+          "403": {
+            "$ref": "#/components/responses/trait_jsonResponsive_403"
+          },
+          "404": {
+            "$ref": "#/components/responses/trait_jsonResponsive_404"
+          },
+          "405": {
+            "$ref": "#/components/responses/trait_jsonResponsive_405"
+          },
+          "406": {
+            "$ref": "#/components/responses/trait_jsonResponsive_406"
+          },
+          "415": {
+            "$ref": "#/components/responses/trait_jsonResponsive_415"
+          },
+          "429": {
+            "$ref": "#/components/responses/trait_jsonResponsive_429"
+          },
+          "499": {
+            "$ref": "#/components/responses/trait_jsonResponsive_499"
+          },
+          "500": {
+            "$ref": "#/components/responses/trait_jsonResponsive_500"
+          },
+          "501": {
+            "$ref": "#/components/responses/trait_jsonResponsive_501"
+          },
+          "502": {
+            "$ref": "#/components/responses/trait_jsonResponsive_502"
+          },
+          "503": {
+            "$ref": "#/components/responses/trait_jsonResponsive_503"
+          },
+          "504": {
+            "$ref": "#/components/responses/trait_jsonResponsive_504"
+          }
+        },
+        "description": "List all sites within Region Stockholm",
+        "operationId": "Sites",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
+          },
+          {
+            "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
+          },
+          {
+            "$ref": "#/components/parameters/trait_query.expandReferencesOptional_expand"
+          }
+        ]
+      }
+    },
+    "/sites/{id}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/siteResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/trait_jsonResponsive_400"
+          },
+          "401": {
+            "$ref": "#/components/responses/trait_jsonResponsive_401"
+          },
+          "403": {
+            "$ref": "#/components/responses/trait_jsonResponsive_403"
+          },
+          "404": {
+            "$ref": "#/components/responses/trait_jsonResponsive_404"
+          },
+          "405": {
+            "$ref": "#/components/responses/trait_jsonResponsive_405"
+          },
+          "406": {
+            "$ref": "#/components/responses/trait_jsonResponsive_406"
+          },
+          "415": {
+            "$ref": "#/components/responses/trait_jsonResponsive_415"
+          },
+          "429": {
+            "$ref": "#/components/responses/trait_jsonResponsive_429"
+          },
+          "499": {
+            "$ref": "#/components/responses/trait_jsonResponsive_499"
+          },
+          "500": {
+            "$ref": "#/components/responses/trait_jsonResponsive_500"
+          },
+          "501": {
+            "$ref": "#/components/responses/trait_jsonResponsive_501"
+          },
+          "502": {
+            "$ref": "#/components/responses/trait_jsonResponsive_502"
+          },
+          "503": {
+            "$ref": "#/components/responses/trait_jsonResponsive_503"
+          },
+          "504": {
+            "$ref": "#/components/responses/trait_jsonResponsive_504"
+          }
+        },
+        "description": "Fetch a specific Site by siteId",
+        "operationId": "Site",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/siteId"
+          },
+          "description": "Id of Site"
+        }
+      ]
+    },
+    "/sites/{id}/departures": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Realtime departures from the location type and related deviation information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/siteDeparturesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/trait_jsonResponsive_400"
+          },
+          "401": {
+            "$ref": "#/components/responses/trait_jsonResponsive_401"
+          },
+          "403": {
+            "$ref": "#/components/responses/trait_jsonResponsive_403"
+          },
+          "404": {
+            "$ref": "#/components/responses/trait_jsonResponsive_404"
+          },
+          "405": {
+            "$ref": "#/components/responses/trait_jsonResponsive_405"
+          },
+          "406": {
+            "$ref": "#/components/responses/trait_jsonResponsive_406"
+          },
+          "415": {
+            "$ref": "#/components/responses/trait_jsonResponsive_415"
+          },
+          "429": {
+            "$ref": "#/components/responses/trait_jsonResponsive_429"
+          },
+          "499": {
+            "$ref": "#/components/responses/trait_jsonResponsive_499"
+          },
+          "500": {
+            "$ref": "#/components/responses/trait_jsonResponsive_500"
+          },
+          "501": {
+            "$ref": "#/components/responses/trait_jsonResponsive_501"
+          },
+          "502": {
+            "$ref": "#/components/responses/trait_jsonResponsive_502"
+          },
+          "503": {
+            "$ref": "#/components/responses/trait_jsonResponsive_503"
+          },
+          "504": {
+            "$ref": "#/components/responses/trait_jsonResponsive_504"
+          }
+        },
+        "description": "Get upcoming departures and deviations starting from time of the request (a maximum of 3 departures for each line & direction)",
+        "operationId": "Departures",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
+          },
+          {
+            "$ref": "#/components/parameters/trait_query.filterTransportModeOptional_transport"
+          },
+          {
+            "$ref": "#/components/parameters/trait_query.filterDirectionOptional_direction"
+          },
+          {
+            "$ref": "#/components/parameters/trait_query.filterLineOptional_line"
+          },
+          {
+            "$ref": "#/components/parameters/trait_query.forcastNextMinutesOptional_forecast"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/siteId"
+          },
+          "description": "Id of Site"
+        }
+      ]
+    },
+    "/stop-points": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "A list of all stop-points within Region Stockholm",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/stopPointResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/trait_jsonResponsive_400"
+          },
+          "401": {
+            "$ref": "#/components/responses/trait_jsonResponsive_401"
+          },
+          "403": {
+            "$ref": "#/components/responses/trait_jsonResponsive_403"
+          },
+          "404": {
+            "$ref": "#/components/responses/trait_jsonResponsive_404"
+          },
+          "405": {
+            "$ref": "#/components/responses/trait_jsonResponsive_405"
+          },
+          "406": {
+            "$ref": "#/components/responses/trait_jsonResponsive_406"
+          },
+          "415": {
+            "$ref": "#/components/responses/trait_jsonResponsive_415"
+          },
+          "429": {
+            "$ref": "#/components/responses/trait_jsonResponsive_429"
+          },
+          "499": {
+            "$ref": "#/components/responses/trait_jsonResponsive_499"
+          },
+          "500": {
+            "$ref": "#/components/responses/trait_jsonResponsive_500"
+          },
+          "501": {
+            "$ref": "#/components/responses/trait_jsonResponsive_501"
+          },
+          "502": {
+            "$ref": "#/components/responses/trait_jsonResponsive_502"
+          },
+          "503": {
+            "$ref": "#/components/responses/trait_jsonResponsive_503"
+          },
+          "504": {
+            "$ref": "#/components/responses/trait_jsonResponsive_504"
+          }
+        },
+        "description": "List all stop-points within Region Stockholm",
+        "operationId": "StopPoints",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
+          },
+          {
+            "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
+          }
+        ]
+      }
+    },
+    "/transport-authorities": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "A list of all transport-authorities within Region Stockholm",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/transportAuthorityResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/trait_jsonResponsive_400"
+          },
+          "401": {
+            "$ref": "#/components/responses/trait_jsonResponsive_401"
+          },
+          "403": {
+            "$ref": "#/components/responses/trait_jsonResponsive_403"
+          },
+          "404": {
+            "$ref": "#/components/responses/trait_jsonResponsive_404"
+          },
+          "405": {
+            "$ref": "#/components/responses/trait_jsonResponsive_405"
+          },
+          "406": {
+            "$ref": "#/components/responses/trait_jsonResponsive_406"
+          },
+          "415": {
+            "$ref": "#/components/responses/trait_jsonResponsive_415"
+          },
+          "429": {
+            "$ref": "#/components/responses/trait_jsonResponsive_429"
+          },
+          "499": {
+            "$ref": "#/components/responses/trait_jsonResponsive_499"
+          },
+          "500": {
+            "$ref": "#/components/responses/trait_jsonResponsive_500"
+          },
+          "501": {
+            "$ref": "#/components/responses/trait_jsonResponsive_501"
+          },
+          "502": {
+            "$ref": "#/components/responses/trait_jsonResponsive_502"
+          },
+          "503": {
+            "$ref": "#/components/responses/trait_jsonResponsive_503"
+          },
+          "504": {
+            "$ref": "#/components/responses/trait_jsonResponsive_504"
+          }
+        },
+        "description": "List all transport-authorities within Region Stockholm",
+        "operationId": "TransportAuthorities",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
+          },
+          {
+            "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "common.decimalDegree": {
+        "minimum": 0,
+        "maximum": 360,
+        "multipleOf": 0.1,
+        "example": 342.3,
+        "type": "number"
+      },
+      "common.localDatetime": {
+        "description": "Local datetime as 'yyyy-MM-ddTHH:mm:ss' (ISO8601:2004)",
+        "example": "2024-01-01T01:00:00",
+        "type": "string"
+      },
+      "common.coordLatitude": {
+        "minimum": -90,
+        "maximum": 90,
+        "description": "WGS84 latitude in decimal degrees",
+        "example": 59.4474618783708,
+        "type": "number"
+      },
+      "common.coordLongitude": {
+        "minimum": -180,
+        "maximum": 180,
+        "description": "WGS84 longitude in decimal degrees",
+        "example": 17.8376900105886,
+        "type": "number"
+      },
+      "stopAreaTypeEnum": {
+        "description": "Describes the type of stop area",
+        "enum": [
+          "BUSTERM",
+          "METROSTN",
+          "TRAMSTN",
+          "RAILWSTN",
+          "SHIPBER",
+          "FERRYBER",
+          "AIRPORT",
+          "TAXITERM",
+          "UNKNOWN"
+        ],
+        "type": "string"
+      },
+      "stopPointTypeEnum": {
+        "description": "Describes the type of stop point",
+        "enum": [
+          "PLATFORM",
+          "BUSSTOP",
+          "ENTRANCE",
+          "EXIT",
+          "GATE",
+          "REFUGE",
+          "PIER",
+          "TRACK",
+          "UNKNOWN"
+        ],
+        "type": "string"
+      },
+      "transportModeEnum": {
+        "description": "Transport mode for a line",
+        "example": "BUS",
+        "enum": [
+          "BUS",
+          "TRAM",
+          "METRO",
+          "TRAIN",
+          "FERRY",
+          "SHIP",
+          "TAXI"
+        ],
+        "type": "string"
+      },
+      "departureStateEnum": {
+        "description": "State of the departure",
+        "enum": [
+          "NOTEXPECTED",
+          "NOTCALLED",
+          "EXPECTED",
+          "CANCELLED",
+          "INHIBITED",
+          "ATSTOP",
+          "BOARDING",
+          "BOARDINGCLOSED",
+          "DEPARTED",
+          "PASSED",
+          "MISSED",
+          "REPLACED",
+          "ASSUMEDDEPARTED"
+        ],
+        "type": "string"
+      },
+      "journeyStateEnum": {
+        "description": "State of the journey <li>NOTEXPECTED - Do not show departure at all. Some systems might instead indicate that this departure is available only if ordered</li> <li>NOTRUN - If a not expected dated vehicle journey is never run, it should at some point in time be considered as not run</li> <li>EXPECTED - Normally show target time for departure</li> <li>ASSIGNED - A symbol or text indicating that the vehicle journey is not yet in progress could be added depending on presentation system configuration</li> <li>CANCELLED - Show departure as cancelled</li> <li>SIGNEDON - If the presentation system only shows vehicles that are in progress, do not show the departure</li> <li>ATORIGIN - Normally show target time for departure. A symbol or text indicating that the vehicle journey is at origin, but not yet in progress could be added depending on presentation system configuration. If the presentation system only shows vehicles that are in progress, do not show the departure</li> <li>FASTPROGRESS - Present the current vehicle journey position, i.e. \"has left station X Z minutes ago\" or \"currently at station Y\". Systems that cannot present texts of that size should use a symbol or text indicating that the vehicle journey prediction is unreliable</li> <li>NORMALPROGRESS - Present the current vehicle journey position, i.e. \"has left station X Z minutes ago\" or \"currently at station Y\"</li> <li>SLOWPROGRESS - Present the current vehicle journey position, i.e. \"has left station X Z minutes ago\" or \"currently at station Y\" and information that \"traffic moves slowly\". Systems that cannot present texts of that size should use a symbol or text indicating that the vehicle journey prediction is unreliable</li> <li>NOPROGRESS - Present the current vehicle journey position, i.e. \"has left station X Z minutes ago\" or \"currently at station Y\" and information that there is a \"stop in traffic\". Systems that cannot present texts of that size should use a symbol or text indicating that the vehicle journey prediction is unreliable</li> <li>OFFROUTE - If the vehicle system detects that a vehicle is not following the expected route, it can change the state to off route</li> <li>ABORTED - If the vehicle finally reaches its destination, the vehicle journey receives the state completed, else it is aborted. Once in progress, a cancellation or sign off will be regarded as the monitored vehicle journey has been aborted. If an aborted dated vehicle journey is resumed again, PubTrans will create a new instance of a monitored vehicle journey</li> <li>COMPLETED - If the vehicle finally reaches its destination, the vehicle journey receives the state completed, else it is aborted</li> <li>ASSUMEDCOMPLETED - If an expected vehicle journey is not cancelled and never becomes in progress, it should at some point in time be considered as assumed completed</li>",
+        "enum": [
+          "NOTEXPECTED",
+          "NOTRUN",
+          "EXPECTED",
+          "ASSIGNED",
+          "CANCELLED",
+          "SIGNEDON",
+          "ATORIGIN",
+          "FASTPROGRESS",
+          "NORMALPROGRESS",
+          "SLOWPROGRESS",
+          "NOPROGRESS",
+          "OFFROUTE",
+          "ABORTED",
+          "COMPLETED",
+          "ASSUMEDCOMPLETED"
+        ],
+        "type": "string"
+      },
+      "journeyPredictStateEnum": {
+        "description": "The state of predictions for the journey",
+        "enum": [
+          "NORMAL",
+          "LOSTCONTACT",
+          "UNRELIABLE"
+        ],
+        "type": "string"
+      },
+      "journeyPassengerLevelEnum": {
+        "description": "Describes the level of passangers the journey",
+        "enum": [
+          "EMPTY",
+          "SEATSAVAILABLE",
+          "STANDINGPASSENGERS",
+          "PASSENGERSLEFTBEHIND",
+          "UNKNOWN"
+        ],
+        "type": "string"
+      },
+      "siteId": {
+        "description": "Unique identifier of a site",
+        "example": 1002,
+        "type": "integer"
+      },
+      "siteGid": {
+        "description": "Global unique site identifier",
+        "example": 9001,
+        "type": "integer"
+      },
+      "siteName": {
+        "description": "The name of the site generaly known to the public",
+        "example": "Odenplan",
+        "type": "string"
+      },
+      "transportAuthorityId": {
+        "description": "Unique identifier of a transport authority",
+        "example": 1,
+        "type": "integer"
+      },
+      "transportAuthorityGid": {
+        "description": "Global unique identifikation number that identifies the transport authority",
+        "example": 9010001000000000,
+        "type": "integer"
+      },
+      "transportAuthorityName": {
+        "description": "Name of the the transport authority",
+        "example": "Storstockholms Lokaltrafik",
+        "type": "string"
+      },
+      "stopAreaId": {
+        "description": "Unique identifier of a stop area (In journey endpoint, 0 means no stop area found)",
+        "example": 41483,
+        "type": "integer"
+      },
+      "stopAreaGid": {
+        "description": "Global unique stop area identifier",
+        "example": 9021001041483000,
+        "type": "integer"
+      },
+      "stopPointId": {
+        "description": "Unique identifier of a stop point",
+        "example": 41483,
+        "type": "integer"
+      },
+      "stopPointGid": {
+        "description": "Global unique identifier of a stop point",
+        "example": 9022001041483002,
+        "type": "integer"
+      },
+      "stopAreaName": {
+        "description": "Name of a stop area (In journey endpoint, UNKNOWN is returned the field is blank)",
+        "example": "Abborrkroksvägen",
+        "type": "string"
+      },
+      "patternPointGid": {
+        "description": "Global unique identifier of a pattern point",
+        "example": 9025001000041484,
+        "type": "integer"
+      },
+      "stopPointName": {
+        "description": "Name of a stop point (In journey endpoint, UNKNOWN is returned the field is blank)",
+        "example": "Universitetet",
+        "type": "string"
+      },
+      "stopPointDesignation": {
+        "description": "Designation of a stop point",
+        "example": "D",
+        "type": "string"
+      },
+      "entrancePointId": {
+        "maximum": 999999999,
+        "description": "Unique identifier of an entrance point",
+        "example": 2531001,
+        "type": "integer"
+      },
+      "entrancePointGid": {
+        "description": "Global unique stop area entrance identifier",
+        "example": 9021001041483000,
+        "type": "integer"
+      },
+      "entrancePointName": {
+        "description": "Name of an entrance point",
+        "example": "Högalidsparken",
+        "type": "string"
+      },
+      "lineId": {
+        "description": "Unique identifier of a line within a transport authority",
+        "example": 13,
+        "type": "integer"
+      },
+      "lineGid": {
+        "description": "Global unique identifier of a line",
+        "example": 9025001000041484,
+        "type": "integer"
+      },
+      "lineDesignation": {
+        "description": "Additional identifier for the line for example number for trains",
+        "example": "13X",
+        "type": "string"
+      },
+      "lineDirectionCode": {
+        "minimum": 0,
+        "maximum": 2,
+        "description": "The direction code, 1 or 2 back & forth directions and 0 for unidentified direction",
+        "type": "integer"
+      },
+      "lineName": {
+        "description": "Line name generally known to the public",
+        "example": "19",
+        "type": "string"
+      },
+      "deviationCaseId": {
+        "description": "Unique identifier of a deviation case",
+        "example": 26170662,
+        "type": "integer"
+      },
+      "journeyId": {
+        "minimum": 0,
+        "maximum": 9999999999999,
+        "description": "Unique identifier of a journey within a line and a transport authority",
+        "example": 2020062310015,
+        "type": "number"
+      },
+      "contractorId": {
+        "description": "Unique identifikation number that identifies a contractor within Region Stockholm",
+        "example": 1,
+        "type": "integer"
+      },
+      "contractorName": {
+        "description": "Name of the contractor",
+        "example": "Arriva",
+        "type": "string"
+      },
+      "contractorReference": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/contractorId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/contractorName"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "validityPeriod": {
+        "description": "The period for which the object is valid.",
+        "additionalProperties": false,
+        "properties": {
+          "from": {
+            "description": "From when the object is valid.",
+            "example": "2024-01-19T01:00:00",
+            "$ref": "#/components/schemas/common.localDatetime"
+          },
+          "to": {
+            "description": "Object is valid until this datetime. When missing, the object is valid until further notice.",
+            "example": "2025-03-27T01:00:00",
+            "$ref": "#/components/schemas/common.localDatetime"
+          }
+        },
+        "required": [
+          "from"
+        ],
+        "type": "object"
+      },
+      "deviationScope": {
+        "description": "Scope of the deviation",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "description": "A textual description of the deviation scope",
+            "type": "string"
+          },
+          "lines": {
+            "description": "Lines affected by the deviation",
+            "type": "string"
+          },
+          "stop_areas": {
+            "description": "Stop areas affected by the deviation",
+            "type": "string"
+          },
+          "stop_points": {
+            "description": "Stop points affected by the deviation",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "departureDeviation": {
+        "additionalProperties": false,
+        "properties": {
+          "importance": {
+            "description": "The priority importance level of deviation message",
+            "example": 5,
+            "type": "integer"
+          },
+          "consequence": {
+            "description": "The consequence category for the deviation message",
+            "example": "INFORMATION",
+            "type": "string"
+          },
+          "message": {
+            "description": "The deviation message text",
+            "example": "Resa förbi Arlanda C kräver både UL- och SL- biljett.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "importance",
+          "consequence",
+          "message"
+        ],
+        "type": "object"
+      },
+      "shortName": {
+        "description": "Short name",
+        "type": "string"
+      },
+      "stopPoint": {
+        "description": "A point where passengers can board or alight from vehicles",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/stopPointId"
+          },
+          "gid": {
+            "$ref": "#/components/schemas/stopPointGid"
+          },
+          "pattern_point_gid": {
+            "$ref": "#/components/schemas/patternPointGid"
+          },
+          "name": {
+            "$ref": "#/components/schemas/stopPointName"
+          },
+          "sname": {
+            "$ref": "#/components/schemas/shortName"
+          },
+          "designation": {
+            "$ref": "#/components/schemas/stopPointDesignation"
+          },
+          "local_num": {
+            "description": "The local number of the stop point",
+            "type": "integer"
+          },
+          "type": {
+            "$ref": "#/components/schemas/stopPointTypeEnum"
+          },
+          "has_entrance": {
+            "description": "You have to pass an entrance to get to the stop point",
+            "type": "boolean"
+          },
+          "lat": {
+            "$ref": "#/components/schemas/common.coordLatitude"
+          },
+          "lon": {
+            "$ref": "#/components/schemas/common.coordLongitude"
+          },
+          "door_orientation": {
+            "description": "The vehicle door orientation. The direction the passenger faces when boarding a vehicle from this stop point (0=South, 90=East, 180=North, 270=West).",
+            "$ref": "#/components/schemas/common.decimalDegree"
+          },
+          "transport_authority": {
+            "$ref": "#/components/schemas/transportAuthorityReference"
+          },
+          "stop_area": {
+            "$ref": "#/components/schemas/stopAreaReference"
+          },
+          "valid": {
+            "$ref": "#/components/schemas/validityPeriod"
+          }
+        },
+        "required": [
+          "id",
+          "gid",
+          "pattern_point_gid",
+          "local_num",
+          "type",
+          "has_entrance",
+          "transport_authority",
+          "valid"
+        ],
+        "type": "object"
+      },
+      "stopAreaEntrance": {
+        "description": "An entrance to a place where passengers can board or alight from vehicles from one mode of transport, for example a terminal or a station entrance",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/entrancePointId"
+          },
+          "gid": {
+            "$ref": "#/components/schemas/entrancePointGid"
+          },
+          "local_num": {
+            "description": "The local number of the stop area entrance",
+            "example": 1,
+            "type": "integer"
+          },
+          "name": {
+            "$ref": "#/components/schemas/entrancePointName"
+          },
+          "stop_area": {
+            "$ref": "#/components/schemas/stopAreaReference"
+          },
+          "lat": {
+            "$ref": "#/components/schemas/common.coordLatitude"
+          },
+          "lon": {
+            "$ref": "#/components/schemas/common.coordLongitude"
+          },
+          "valid": {
+            "$ref": "#/components/schemas/validityPeriod"
+          }
+        },
+        "required": [
+          "id",
+          "gid",
+          "local_num",
+          "name",
+          "valid"
+        ],
+        "type": "object"
+      },
+      "stopArea": {
+        "description": "A place where passengers can board or alight from vehicles from one mode of transport same transport mode that is located close to each other, for example a terminal or a station",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/stopAreaId"
+          },
+          "gid": {
+            "$ref": "#/components/schemas/stopAreaGid"
+          },
+          "name": {
+            "$ref": "#/components/schemas/stopAreaName"
+          },
+          "sname": {
+            "$ref": "#/components/schemas/shortName"
+          },
+          "abbreviation": {
+            "description": "An abbreviation for the stop area",
+            "example": "TCE",
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/stopAreaTypeEnum"
+          },
+          "lat": {
+            "$ref": "#/components/schemas/common.coordLatitude"
+          },
+          "lon": {
+            "$ref": "#/components/schemas/common.coordLongitude"
+          },
+          "valid": {
+            "$ref": "#/components/schemas/validityPeriod"
+          },
+          "sites": {
+            "type": "string"
+          },
+          "stops": {
+            "type": "string"
+          },
+          "entrancies": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "gid",
+          "name",
+          "type",
+          "valid"
+        ],
+        "type": "object"
+      },
+      "departure": {
+        "additionalProperties": false,
+        "properties": {
+          "direction": {
+            "description": "Name of the direction",
+            "type": "string"
+          },
+          "direction_code": {
+            "$ref": "#/components/schemas/lineDirectionCode"
+          },
+          "via": {
+            "description": "Name of secondary destination",
+            "type": "string"
+          },
+          "destination": {
+            "description": "Name of the destination (not always the same as the name of the destination stop point name)",
+            "type": "string"
+          },
+          "state": {
+            "$ref": "#/components/schemas/departureStateEnum"
+          },
+          "scheduled": {
+            "description": "The officially scheduled departure time. This represents the planned departure time as per the transport schedule",
+            "$ref": "#/components/schemas/common.localDatetime"
+          },
+          "expected": {
+            "description": "The estimated real-time departure time, reflecting any delays or changes from the scheduled time",
+            "$ref": "#/components/schemas/common.localDatetime"
+          },
+          "display": {
+            "description": "A user-friendly, formatted string of the departure time, intended for display purposes",
+            "type": "string"
+          },
+          "journey": {
+            "$ref": "#/components/schemas/departureJourney"
+          },
+          "stop_area": {
+            "$ref": "#/components/schemas/stopAreaReference"
+          },
+          "stop_point": {
+            "$ref": "#/components/schemas/stopPointReference"
+          },
+          "line": {
+            "$ref": "#/components/schemas/lineReference"
+          },
+          "deviations": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "direction",
+          "direction_code",
+          "state",
+          "scheduled",
+          "display",
+          "journey",
+          "stop_area",
+          "stop_point",
+          "line",
+          "deviations"
+        ],
+        "type": "object"
+      },
+      "Line": {
+        "description": "A group of stop point patterns that are displayed to riders as a single service that generally known to the public by a name or number",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/lineId"
+          },
+          "gid": {
+            "$ref": "#/components/schemas/lineGid"
+          },
+          "name": {
+            "$ref": "#/components/schemas/lineName"
+          },
+          "designation": {
+            "$ref": "#/components/schemas/lineDesignation"
+          },
+          "transport_mode": {
+            "$ref": "#/components/schemas/transportModeEnum"
+          },
+          "group_of_lines": {
+            "description": "Name used to group lines",
+            "example": "tunnelbanans gröna linje",
+            "type": "string"
+          },
+          "transport_authority": {
+            "$ref": "#/components/schemas/transportAuthorityReference"
+          },
+          "contractor": {
+            "$ref": "#/components/schemas/contractorReference"
+          },
+          "valid": {
+            "$ref": "#/components/schemas/validityPeriod"
+          }
+        },
+        "required": [
+          "id",
+          "gid",
+          "name",
+          "valid"
+        ],
+        "type": "object"
+      },
+      "stopAreaReference": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/stopAreaId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/stopAreaName"
+          },
+          "sname": {
+            "$ref": "#/components/schemas/shortName"
+          },
+          "type": {
+            "description": "Type of stop area",
+            "$ref": "#/components/schemas/stopAreaTypeEnum"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "siteReference": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/siteId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/siteName"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "transportAuthorityReference": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/transportAuthorityId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/transportAuthorityName"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "lineReference": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/lineId"
+          },
+          "designation": {
+            "$ref": "#/components/schemas/lineDesignation"
+          },
+          "transport_mode": {
+            "$ref": "#/components/schemas/transportModeEnum"
+          },
+          "group_of_lines": {
+            "description": "Name used to group lines",
+            "example": "tunnelbanans gröna linje",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      },
+      "stopPointReference": {
+        "description": "Stop point reference",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/stopPointId"
+          },
+          "name": {
+            "$ref": "#/components/schemas/stopPointName"
+          },
+          "designation": {
+            "$ref": "#/components/schemas/stopPointDesignation"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      },
+      "lineResponse": {
+        "description": "A group of stop point patterns that are displayed to riders as a single service that generally known to the public by a name or number",
+        "properties": {
+          "metro": {
+            "description": "List of lines for metro",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          },
+          "tram": {
+            "description": "List of lines for tram",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          },
+          "train": {
+            "description": "List of lines for train",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          },
+          "bus": {
+            "description": "List of lines for buses",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          },
+          "ship": {
+            "description": "List of lines for ship",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          },
+          "ferry": {
+            "description": "List of lines for ferry",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          },
+          "taxi": {
+            "description": "List of lines for taxi",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Line"
+            }
+          }
+        },
+        "required": [
+          "metro",
+          "tram",
+          "train",
+          "bus",
+          "ship",
+          "ferry",
+          "taxi"
+        ],
+        "type": "object"
+      },
+      "siteResponse": {
+        "description": "One or more stop areas, all transport modes. A well known place to which passengers may refer to indicate the origin or a destination of a trip.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/siteId"
+          },
+          "gid": {
+            "$ref": "#/components/schemas/siteGid"
+          },
+          "name": {
+            "$ref": "#/components/schemas/siteName"
+          },
+          "alias": {
+            "description": "Alias names that describes the same place but with a different name",
+            "type": "string"
+          },
+          "abbreviation": {
+            "description": "An abbreviation for the site",
+            "example": "CEN",
+            "type": "string"
+          },
+          "note": {
+            "description": "Additional note related to the site",
+            "example": "vid Sandhamn",
+            "type": "string"
+          },
+          "lat": {
+            "$ref": "#/components/schemas/common.coordLatitude"
+          },
+          "lon": {
+            "$ref": "#/components/schemas/common.coordLongitude"
+          },
+          "valid": {
+            "$ref": "#/components/schemas/validityPeriod"
+          },
+          "stop_areas": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "gid",
+          "name",
+          "valid"
+        ],
+        "type": "object"
+      },
+      "siteDeparturesResponse": {
+        "description": "Response model for the resource path /sites/{id}/departures",
+        "additionalProperties": false,
+        "properties": {
+          "departures": {
+            "description": "List of departures from the site",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/departure"
+            }
+          },
+          "stop_deviations": {
+            "description": "List of stop deviations related to the site",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/departureDeviation"
+            }
+          }
+        },
+        "required": [
+          "stop_deviations"
+        ],
+        "type": "object"
+      },
+      "stopPointResponse": {
+        "$ref": "#/components/schemas/stopPoint"
+      },
+      "transportAuthorityResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/transportAuthorityId"
+          },
+          "gid": {
+            "$ref": "#/components/schemas/transportAuthorityGid"
+          },
+          "name": {
+            "$ref": "#/components/schemas/transportAuthorityName"
+          },
+          "formal_name": {
+            "example": "AB Storstockholms Lokaltrafik",
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "street": {
+            "description": "The street address",
+            "example": "Lindhagensgatan 100",
+            "type": "string"
+          },
+          "postal_code": {
+            "description": "Postal code",
+            "example": 10573,
+            "type": "integer"
+          },
+          "city": {
+            "description": "City (Municipality, village or town)",
+            "example": "Stockholm",
+            "type": "string"
+          },
+          "country": {
+            "example": "Sweden",
+            "type": "string"
+          },
+          "valid": {
+            "$ref": "#/components/schemas/validityPeriod"
+          }
+        },
+        "required": [
+          "id",
+          "gid",
+          "name",
+          "code",
+          "valid"
+        ],
+        "type": "object"
+      },
+      "stopDeviation": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/deviationCaseId"
+          },
+          "level": {
+            "description": "The priority importance level of deviation message",
+            "example": 5,
+            "type": "integer"
+          },
+          "message": {
+            "description": "The deviation message text",
+            "type": "string",
+            "example": "Tack för att du följer Folkhälsomyndighetens rekommendationer och visar hänsyn när du reser!"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/deviationScope"
+          }
+        },
+        "required": [
+          "id",
+          "level",
+          "message",
+          "scope"
+        ],
+        "type": "object"
+      },
+      "departureJourney": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/journeyId"
+          },
+          "state": {
+            "$ref": "#/components/schemas/journeyStateEnum"
+          },
+          "prediction_state": {
+            "$ref": "#/components/schemas/journeyPredictStateEnum"
+          },
+          "passenger_level": {
+            "$ref": "#/components/schemas/journeyPassengerLevelEnum"
+          }
+        },
+        "required": [
+          "id",
+          "state"
+        ],
+        "type": "object"
+      }
+    },
+    "responses": {
+      "trait_jsonResponsive_400": {
+        "description": "Bad request"
+      },
+      "trait_jsonResponsive_401": {
+        "description": "Unauthorized"
+      },
+      "trait_jsonResponsive_403": {
+        "description": ""
+      },
+      "trait_jsonResponsive_404": {
+        "description": "Resource not found"
+      },
+      "trait_jsonResponsive_405": {
+        "description": "Method not allowed"
+      },
+      "trait_jsonResponsive_406": {
+        "description": "Not acceptable"
+      },
+      "trait_jsonResponsive_415": {
+        "description": "Unsupported media type"
+      },
+      "trait_jsonResponsive_429": {
+        "description": ""
+      },
+      "trait_jsonResponsive_499": {
+        "description": ""
+      },
+      "trait_jsonResponsive_500": {
+        "description": "Internal server error"
+      },
+      "trait_jsonResponsive_501": {
+        "description": "Not implemented"
+      },
+      "trait_jsonResponsive_502": {
+        "description": "Bad gateway"
+      },
+      "trait_jsonResponsive_503": {
+        "description": ""
+      },
+      "trait_jsonResponsive_504": {
+        "description": "Gateway Timeout"
+      }
+    },
+    "parameters": {
+      "trait_jsonResponsive_Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": true,
+        "description": "This response header describe the content type of the response.",
+        "schema": {
+          "default": "application/json",
+          "type": "string"
+        }
+      },
+      "trait_gzipResponsive_Accept-Encoding": {
+        "name": "Accept-Encoding",
+        "in": "header",
+        "description": "Resource support compressed response",
+        "schema": {
+          "default": "identity",
+          "type": "string"
+        }
+      },
+      "trait_query.forcastNextMinutesOptional_forecast": {
+        "name": "forecast",
+        "in": "query",
+        "description": "Defines the window of time, in minutes, for which to fetch upcoming departures and deviations starting from now. A value of 30 means departures and deviations for the next 30 minutes will be included.",
+        "schema": {
+          "default": 60,
+          "minimum": 5,
+          "maximum": 1200,
+          "type": "integer"
+        }
+      },
+      "trait_query.expandReferencesOptional_expand": {
+        "name": "expand",
+        "in": "query",
+        "description": "Expand the referenced objects in the response when enabled. For some resources this will affect the response time and size of the response, significantly.",
+        "schema": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "trait_query.filterTransportModeOptional_transport": {
+        "name": "transport",
+        "in": "query",
+        "description": "Optional filtering by transportModeEnum",
+        "schema": {
+          "$ref": "#/components/schemas/transportModeEnum"
+        }
+      },
+      "trait_query.filterTransportAuthIdRequired_transport_authority_id": {
+        "name": "transport_authority_id",
+        "in": "query",
+        "required": true,
+        "description": "Required filtering by transportAuthorityId",
+        "schema": {
+          "$ref": "#/components/schemas/transportAuthorityId"
+        }
+      },
+      "trait_query.filterLineOptional_line": {
+        "name": "line",
+        "in": "query",
+        "description": "Optional filtering by lineId",
+        "schema": {
+          "$ref": "#/components/schemas/lineId"
+        }
+      },
+      "trait_query.filterDirectionOptional_direction": {
+        "name": "direction",
+        "in": "query",
+        "description": "Optional filtering by lineDirectionCode",
+        "schema": {
+          "$ref": "#/components/schemas/lineDirectionCode"
+        }
+      }
+    },
+    "examples": {},
+    "requestBodies": {},
+    "headers": {},
+    "securitySchemes": {},
+    "links": {},
+    "callbacks": {}
+  }
+}
