@@ -54,7 +54,11 @@
                               {{- end -}}
                             </ul>
                           {{ else }}
-                            <a class="tl-side-navigation__click-target child-title{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">{{ .Title }}</a>
+                            <a class="tl-side-navigation__click-target child-title{{ if eq $currentPage.Permalink .Permalink }} tl-side-navigation__click-target--active{{end}}" href="{{ .Permalink }}">{{ .Title }}
+                              {{ if .Params.badge }}
+                                  {{ partial "badge-new.html" .Params.badge }}
+                              {{ end }}
+                            </a>
                           {{ end }}
                         </li>
                       {{ end }}

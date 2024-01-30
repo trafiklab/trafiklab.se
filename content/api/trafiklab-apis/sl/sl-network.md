@@ -2,7 +2,7 @@
 title: SL Network API
 weight: 10
 date: 2024-01-30
-
+badge: new
 ---
 
 ## Description

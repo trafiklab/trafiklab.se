@@ -2,6 +2,7 @@
 title: SL Deviations
 weight: 20
 date: 2024-01-12
+badge: new
 ---
 
 ## Description
