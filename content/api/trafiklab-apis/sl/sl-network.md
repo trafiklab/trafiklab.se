@@ -400,4 +400,4 @@ For details regarding the response structure, please see the OpenApi specificati
 
 ## OpenAPI specification
 
-{{% oai-spec url="/openapi/sl-transport.json" %}}
+{{% oai-spec url="/openapi/sl-network.json" %}}
