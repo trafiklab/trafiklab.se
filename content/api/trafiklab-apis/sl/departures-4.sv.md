@@ -5,6 +5,10 @@ date: 2016-11-30
 
 ---
 
+{{% error %}}
+Denna API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya network API](sl-network.md).
+{{% /error %}}
+
 ## Beskrivning
 
 Realtidsinformation gällande buss, tunnelbana, pendeltåg och lokalbana.

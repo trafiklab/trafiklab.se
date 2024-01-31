@@ -18,6 +18,10 @@ aliases:
 
 Real-time information regarding buses, subways, commuter trains, and local trains.
 
+{{% error %}}
+This API will be shut down at the end of March 2024. It is replaced by [SL's new network API](sl-network.md).
+{{% /error %}}
+
 ## URL
 
 `https://api.sl.se/api2/realtimedeparturesV4.<FORMAT>?key=<YOUR API KEY>&siteid=<SITEID>&timewindow=<TIMEWINDOW>`
