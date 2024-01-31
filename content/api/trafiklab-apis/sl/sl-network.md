@@ -1,5 +1,5 @@
 ---
-title: SL Network API
+title: SL Transport Network
 weight: 10
 date: 2024-01-30
 badge: new
