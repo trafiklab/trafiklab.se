@@ -1,11 +1,8 @@
 <script type="text/javascript">
-    $('.dropdown-list').hide();
-    $('.tl-side-navigation__click-target--active').parents('.dropdown-list').show();
-    $('.tl-side-navigation__click-target--active').siblings('.dropdown-list').show();
-    $('.tl-side-navigation__click-target--active').find('.dropdown-toggle').addClass('active');
-    $('.dropdown-toggle').click(function(e) {
-        e.preventDefault();
-        $(this).toggleClass('active');
-        $(this).parent().parent().find('> .dropdown-list').slideToggle();
-    });
+  $('.dropdown-toggle').click(function (e) {
+    e.preventDefault();
+    let listElement = $(this).parent().parent();
+    listElement.toggleClass('tl-side-navigation__item--open-list');
+    listElement.find('> .tl-side-navigation__dropdown-list').slideToggle();
+  });
 </script>

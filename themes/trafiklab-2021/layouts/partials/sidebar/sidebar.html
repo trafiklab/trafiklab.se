@@ -1,0 +1,27 @@
+<div class="site-sidebar-wrapper">
+  <div class="menu" role="navigation" aria-label="section">
+    <div class="menu__top">
+      <div class="tl-form-control-wrapper tl-form-control-wrapper--size-medium">
+        <div class="tl-form-control__prepend">
+          <svg viewBox="0 0 16 16" width="1em" height="1em" class="tl-icon  tl-icon--inline" color="currentColor"><path fill="currentColor" fill-rule="evenodd" d="M6.795 1a5.795 5.795 0 014.548 9.388L15 14.044l-.956.956-3.656-3.657A5.795 5.795 0 116.796 1zm0 1.352a4.443 4.443 0 100 8.885 4.443 4.443 0 000-8.885z" clip-rule="evenodd"></path></svg>
+        </div>
+        <input aria-invalid="false" class="tl-form-control fuzzy-search" aria-labelledby="tl-textfield-7376805771428288"
+               width="fluid"
+               value="" onchange="this.setAttribute('value', this.value);">
+        <label class="" id="tl-textfield-7376805771428288" for="tl-textfield-7376805771428288">
+          <span class="tl-input-group__label">Search... </span>
+        </label>
+      </div>
+    </div>
+    {{ $currentPage := . }}
+    {{ $root := .FirstSection }}
+    <ul class="tl-side-navigation tl-side-navigation--root">
+      {{ if not $root.Params.headless }}
+        {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $root "currentPage" $currentPage) }}
+      {{ end }}
+      {{- range $i, $e := $root.Pages -}}
+        {{ partial "sidebar/sidebar-page-tree.html" (dict "targetPage" . "currentPage" $currentPage) }}
+      {{- end -}}
+    </ul>
+  </div>
+</div>

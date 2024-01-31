@@ -9,7 +9,7 @@
     {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
     <div id="page-content">
       {{ if $sidebar }}
-      {{ block "sidebar" . }}{{ partial "sidebar.html" .}}{{ end }}
+      {{ block "sidebar" . }}{{ partial "sidebar/sidebar.html" .}}{{ end }}
       {{ block "main" . }} {{ end }}
     </div>
     {{ else }}
