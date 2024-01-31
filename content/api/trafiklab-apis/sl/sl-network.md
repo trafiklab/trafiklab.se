@@ -7,9 +7,20 @@ badge: new
 
 ## Description
 
-This API provides information about the lines, stops, and next departures on the SL network.
+This API provides information about the lines, stops, and next departures on the SL network. It replaces the existing SL Departures v4 and SL Stops and lines v2
+APIs.
+
+### Concepts
+
+| Concept   | Description                                                                                                                                                             |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Site      | A Site is a grouping of StopAreas used to simplify searching in the journey planner.                                                                                    |
+| StopArea  | A StopArea is a grouping of StopPoints with the same traffic type and name within a defined geographic area, such as a terminal.                                        |
+| StopPoint | A StopPoint is a stopping point, also known as quay, and is part of a StopArea. A stop area for busses may for example contain one stop point on each side of the road. |
 
 ## URL
+
+This API consists of 6 endpoints, each with their own URL.
 
 {{% tabs %}} {{% tab "Lines" %}}
 
@@ -58,7 +69,8 @@ https://integration.sl.se/open-api-transport/v1/transport-authorities
 
 ### API Key Levels
 
-This API does not require the use of an API key.
+This API does not require the use of an API key. You should however not make excessive requests (more than 12 requests per minute), to ensure the availability
+and performance of the API for everyone.
 
 ## Format
 
@@ -66,7 +78,7 @@ This API returns data in the JSON format
 
 ## Request Parameters
 
-When searching for a specific
+When searching for a specific site, or departures from a specific site, the site ID is required. Other API calls do not have any parameters.
 
 | Parameters | Data Type | Mandatory | Description                                                                                                                                                                                                   |
 |------------|-----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
