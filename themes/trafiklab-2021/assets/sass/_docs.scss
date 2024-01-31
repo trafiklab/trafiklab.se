@@ -115,7 +115,7 @@ ul.tl-side-navigation--root > li > ul.tl-side-navigation {
 }
 
 li.tl-side-navigation__item--open-list > a > .dropdown-toggle{
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 
 .tl-side-navigation .tl-side-navigation {
