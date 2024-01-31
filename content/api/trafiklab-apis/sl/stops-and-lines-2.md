@@ -14,111 +14,112 @@ aliases:
 
 ---
 
-Listning av hållplatser och linjer i Stockholms län.
+# List of Stops and Lines in Stockholm County
 
-För att kunna beskriva trafikinformation på ett konsekvent sätt, är det nödvändigt att ingående begrepp och definitioner är klara och tydliga. De viktigaste
-begreppen för denna tjänst presenteras nedan.
+To describe traffic information consistently, it is necessary that the terms and definitions used are clear and precise. The key concepts for this service are
+presented below.
 
 {{% error %}}
-Denna API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya network API](sl-network.md).
+This API will be shut down at the end of March 2024. It is replaced by [SL's new network API](sl-network.md).
 {{% /error %}}
 
-## Begrepp
+## Concepts
 
-| Begrepp                   | Beskrivning                                                                                                                          |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Site                      | Site är en gruppering av StopAreas som används för att förenkla sökningen i reseplaneraren.                                          |
-| StopArea                  | StopArea är en gruppering av StopPoints med samma trafikslag och namn inom ett avgränsat geografiskt område, exempelvis en terminal. |
-| StopPoint                 | En StopPoint är ett stoppställe och ingår i en StopArea                                                                              |
-| Line                      | Linje annonserad mot resenär                                                                                                         |
-| JourneyPattern            | En unik körväg för en linje                                                                                                          |
-| JourneyPatternPointOnLine | Innehåller samtliga stoppställen som trafikeras av en viss linje                                                                     |
-| Transportmode             | Trafikslag                                                                                                                           |
+| Concept                   | Description                                                                                                                      |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Site                      | A Site is a grouping of StopAreas used to simplify searching in the journey planner.                                             |
+| StopArea                  | A StopArea is a grouping of StopPoints with the same traffic type and name within a defined geographic area, such as a terminal. |
+| StopPoint                 | A StopPoint is a stopping point and is part of a StopArea                                                                        |
+| Line                      | Line advertised to the traveler                                                                                                  |
+| JourneyPattern            | A unique route for a line                                                                                                        |
+| JourneyPatternPointOnLine | Contains all stopping points served by a particular line                                                                         |
+| Transportmode             | Traffic type                                                                                                                     |
 
 ## API
 
-### Åtkomst
+### Access
 
-URL:er för anrop finns specificerade nedan:
+URLs for calls are specified below:
 
-- Produktion: `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
-- Produktion (JSON): `https://api.sl.se/api2/LineData.json?model=[model]&key=[key]`
+- Production: `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+- Production (JSON): `https://api.sl.se/api2/LineData.json?model=[model]&key=[key]`
 
-Observera att det är extension i anropet som avgör formateringen av svaret.
+Note that it is the extension in the call that determines the formatting of the response.
 
-### API-nycklar, behörighet
+### API Keys, Authorization
 
-API-nycklar kan införskaffas via Trafiklabs utvecklarportal.
+API keys can be obtained through the Trafficlab developer portal.
 
-En API-nyckel ska användas i URL:en för ett API anrop.
+An API key should be used in the URL for an API call.
 
-- Exempel: `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+- Example: `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
 
-#### Nyckelnivåer
+#### Key Levels
 
-| Nivå  | Max anrop/minut | Max anrop/månad |
-|-------|-----------------|-----------------|
-| Brons | 5               | 500             |
+| Level  | Max calls/minute | Max calls/month |
+|--------|------------------|-----------------|
+| Bronze | 5                | 500             |
 
 ### Format
 
-API:et har support för XML och JSON dataformatering.
+The API supports XML and JSON data formatting.
 
-Önskad formatering anges i URL:en för ett API anrop.
+Desired formatting is specified in the URL for an API call.
 
-- Exempel: `api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
+- Example: `api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
 
-## Datatyper
+## Data Types
 
-Alla datatyper representeras alltid i strängform för respektive format.
+All data types are always represented in string form for their respective formats.
 
-Typen angiven vid beskrivningar av modeller anger endast en lämplig datatyp att konvertera värdet till i ett givet programmeringsspråk.
+The type specified in model descriptions only indicates a suitable data type to convert the value to in a given programming language.
 
-| Typ | Exempel | Beskrivning                                                                                                                          |
-|-----|---------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Int | 123     | Alla datatyper representeras alltid i strängform. Kan dock konverteras till datatypen Int om programmeringsspråket har stöd till det |
+| Type | Example | Description                                                                                                                                        |
+|------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Int  | 123     | All data types are always represented in string form. However, they can be converted to the Int data type if the programming language supports it. |
 
-## Filtrering av data
+## Data Filtering
 
-För modellerna line och jour är det önskvärt att kunna särskilja vilken trafiktyp datat avser. Detta kan åstadkommas genom att skicka med den valfria parametern
-DefaultTransportModeCode som kan innehålla någon av de Transportmode-värdena som returneras vid anrop till modellen transportmode, ex ”BUS” eller ”METRO”
+For the line and jour models, it is desirable to distinguish the traffic type to which the data refers. This can be accomplished by including the optional
+parameter DefaultTransportModeCode, which can contain any of the TransportMode values returned by a call to the transportmode model, such as "BUS" or "METRO".
 
-Exempel:
+Examples:
 
-`https://api.sl.se/api2/linedata.xml?key=[nyckel]&model=line&DefaultTransportModeCode=METRO`
-`https://api.sl.se/api2/linedata.xml?key=[nyckel]&model=jour&DefaultTransportModeCode=BUS`
+`https://api.sl.se/api2/linedata.xml?key=[key]&model=line&DefaultTransportModeCode=METRO`
+`https://api.sl.se/api2/linedata.xml?key=[key]&model=jour&DefaultTransportModeCode=BUS`
 
-## Teckenkodning
+## Character Encoding
 
-UTF-8 används för både XML och Json.
+UTF-8 is used for both XML and JSON.
 
-## Prestanda
+## Performance
 
-Eftersom anrop returnerar relativ stor datamängd är det starkt rekommenderat att anropet innehåller följande HEADER parameter för att möjliggöra GZIP
-komprimering i svaret.
+Since calls return a relatively large amount of data, it is strongly recommended that the call includes the following HEADER parameter to enable GZIP
+compression in the response.
 
-| Nyckel          | Värde         |
+| Key             | Value         |
 |-----------------|---------------|
 | Accept-Encoding | gzip, deflate |
 
-## Uppdateringsfrekvens
+## Update Frequency
 
-API portalen uppdaterar data en gång per dygn mellan klockan 0.00-2.00 varje dag.
+The API portal updates data once per day between 0:00-2:00 every day.
 
-## API modell
+## API Model
 
-Anrop till [https://api.sl.se/api2/LineData](https://api.sl.se/api2/LineData) returnerar alltid en API modell (basmodell) tillbaka, oavsett vilken specifik
-datamodell man har begärt i anropet.
+Calls to [https://api.sl.se/api2/LineData](https://api.sl.se/api2/LineData) always return an API model (base model), regardless of the specific data model
+requested in the call.
 
-| Nyckel        | Typ    | Exempel                 | Beskrivning                                                                                                        |
-|---------------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|
-| StatusCode    | Int    | 0                       | 0 om anropet har gått bra, annars en felkod som inte kan åtgärdas via tex ett modifierat anrop                     |
-| ExecutionTime | Int    | 267                     | Antal millisekunder som det har tagit att generera ett svar på servern                                             |
-| ResponseData  | Objekt |                         | Container-objekt som innehåller attribut och data                                                                  |
-| Version       | String | 2014-06-27 14:03:39.103 | Senast ändrad. Uppdateras normalt sett bara en gång per dygn                                                       |
-| Type          | String | DataModelType           | Anger typen av datamodellen som svaret innehåller: Site, StopPoint, Line, JourneyPatternPointOfLine, TransportMode |
+| Key           | Type   | Example                 | Description                                                                                                                  |
+|---------------|--------|-------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| StatusCode    | Int    | 0                       | 0 if the call was successful, otherwise an error code that cannot be fixed via, for example, a modified call                 |
+| ExecutionTime | Int    | 282                     | Number of milliseconds it took to generate a response on the server                                                          |
+| ResponseData  | Object |                         | Container object containing attributes and data                                                                              |
+| Version       | String | 2014-06-27 14:03:39.103 | Last modified. Normally only updated once per day                                                                            |
+| Type          | String | DataModelType           | Indicates the type of data model that the response contains: Site, StopPoint, Line, JourneyPatternPointOfLine, TransportMode |
 
-### API modell
+### API Model
+
 {{% tabs %}} {{% tab "Json" %}}
 
 ```json
@@ -153,43 +154,43 @@ datamodell man har begärt i anropet.
 
 {{% /tab %}} {{% /tabs %}}
 
-# Specifikation för datamodeller
+# Specification for Data Models
 
-API:et tillhandahåller följande datamodeller:
+The API provides the following data models:
 
-| Nyckel | Värde    | Beskrivning                                          |
-|--------|----------|------------------------------------------------------|
-| model  | **site** | Returnerar svar med Site objekt                      |
-| model  | **stop** | Returnerar svar med StopPoint objekt                 |
-| model  | **line** | Returnerar svar med Line objekt                      |
-| model  | **jour** | Returnerar svar med JourneyPatternPointOnLine objekt |
-| model  | **tran** | Returnerar svar med TransportMode objekt             |
+| Key   | Value    | Description                                              |
+|-------|----------|----------------------------------------------------------|
+| model | **site** | Returns response with a Site object                      |
+| model | **stop** | Returns response with a StopPoint object                 |
+| model | **line** | Returns response with a Line object                      |
+| model | **jour** | Returns response with a JourneyPatternPointOnLine object |
+| model | **tran** | Returns response with a TransportMode object             |
 
-Önskad datamodell anges i URL:en för ett API-anrop.
+The desired data model is specified in the URL for an API call.
 
 `api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
 
-## Exempel
+## Example
 
 `https://api.sl.se/api2/LineData.xml?model=site`
 
 ## Site
 
-### Beskrivning
+### Description
 
-Site är en gruppering av StopAreas som används för att förenkla sökningen i reseplaneraren.
+Site is a grouping of StopAreas used to simplify the search in the trip planner.
 
-### Egenskaper
+### Properties
 
-| Egenskap                | Kan konverteras till | Exempel                 | Beskrivning                               |
-|-------------------------|----------------------|-------------------------|-------------------------------------------|
-| SiteId                  | Int                  | 1002                    | Unikt identifikationsnummer för en Site   |
-| SiteName                | String               | Centralen               | Benämning på området                      |
-| StopAreaNumber          | Int                  | 1051                    | Unikt identifikationsnummer för hållplats |
-| LastModifiedUtcDateTime | DateTime             | 2014-06-27 14:03:39.103 | Senast ändrad                             |
-| ExistsFromDate          | DateTime             | 2014-06-28 00:00:00.000 | Gäller fr.o.m. datum                      |
+| Property                | Convertible to | Example                 | Description                                  |
+|-------------------------|----------------|-------------------------|----------------------------------------------|
+| SiteId                  | Int            | 1002                    | Unique identification number for a Site      |
+| SiteName                | String         | Centralen               | Name of the area                             |
+| StopAreaNumber          | Int            | 1051                    | Unique identification number for a stop area |
+| LastModifiedUtcDateTime | DateTime       | 2014-06-27 14:03:39.103 | Last modified                                |
+| ExistsFromDate          | DateTime       | 2014-06-28 00:00:00.000 | Effective from date                          |
 
-### Objektstruktur
+### Object Structure
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -219,25 +220,25 @@ Site är en gruppering av StopAreas som används för att förenkla sökningen i
 
 ## StopPoint
 
-### Beskrivning
+### Description
 
-StopPoints (Stoppställen) ingår i en StopArea.
+StopPoints are part of a StopArea.
 
-### Egenskaper
+### Properties
 
-| Egenskap                   | Kan konverteras till | Exempel                 | Beskrivning                                                                              |
-|----------------------------|----------------------|-------------------------|------------------------------------------------------------------------------------------|
-| StopPointNumber            | Int                  | 1051                    | Unikt identifikationsnummer för stoppställe                                              |
-| StopPointName              | String               | T-Centralen             | Namn på stoppställe                                                                      |
-| StopAreaNumber             | Int                  | 1051                    | Number för StopArea. Ett stoppställe ingår endast i en StopArea                          |
-| LocationNorthingCoordinate | Double               | 59.3313179695028        | Koordinat i WGS84-format                                                                 |
-| LocationEastingCoordinate  | Double               | 18.0616773959365        | Koordinat i WGS84-format                                                                 |
-| ZoneShortName              | String               | A                       | Taxezon. A, B eller C. Om SLs taxa inte gäller är taxezon null                           |
-| StopAreaTypeCode           | String               | METROSTN                | Användning av hållplatsen. BUSSTERM, TRAMSTN, METROSTN, RAILWSTN, SHIPBER eller FERRYBER |
-| LastModifiedUtcDateTime    | DateTime             | 2014-06-03 00:00:00.000 | Senast ändrad                                                                            |
-| ExistsFromDate             | DateTime             | 2014-06-03 00:00:00.000 | Gäller fr.o.m. datum                                                                     |
+| Property                   | Convertible to | Example                 | Description                                                                        |
+|----------------------------|----------------|-------------------------|------------------------------------------------------------------------------------|
+| StopPointNumber            | Int            | 1051                    | Unique identification number for a stop point                                      |
+| StopPointName              | String         | T-Centralen             | Name of the stop point                                                             |
+| StopAreaNumber             | Int            | 1051                    | Number for StopArea; a stop point belongs to only one StopArea                     |
+| LocationNorthingCoordinate | Double         | 59.3313179695028        | Coordinate in WGS84 format                                                         |
+| LocationEastingCoordinate  | Double         | 18.0616773959365        | Coordinate in WGS84 format                                                         |
+| ZoneShortName              | String         | A                       | Fare zone; A, B, or C. If SL's fare does not apply, the zone is null               |
+| StopAreaTypeCode           | String         | METROSTN                | Use of the stop point. BUSSTERM, TRAMSTN, METROSTN, RAILWSTN, SHIPBER, or FERRYBER |
+| LastModifiedUtcDateTime    | DateTime       | 2014-06-03 00:00:00.000 | Last modified                                                                      |
+| ExistsFromDate             | DateTime       | 2014-06-03 00:00:00.000 | Effective from date                                                                |
 
-### Objektstruktur
+### Object Structure
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -276,22 +277,22 @@ StopPoints (Stoppställen) ingår i en StopArea.
 
 ## Line
 
-### Beskrivning
+### Description
 
-Returnerar beskrivning av en linje. Innehåller referenser till trafikslag.
+Returns a description of a line, including references to transport modes.
 
-### Egenskaper
+### Properties
 
-| Egenskap                 | Kan konverteras till | Exempel                 | Beskrivning                           |
-|--------------------------|----------------------|-------------------------|---------------------------------------|
-| LineNumber               | Int                  | 3                       | Unikt identifikationsnummer för linje |
-| LineDesignation          | String               | 3                       | Linjebeteckning                       |
-| DefaultTransportMode     | String               | blåbuss                 | Gruppering av linjer för presentation |
-| DefaultTransportModeCode | String               | BUS                     | Trafikslag                            |
-| LastModifiedUtcDateTime  | DateTime             | 2007-08-24 00:00:00.000 | Senast ändrad                         |
-| ExistsFromDate           | DateTime             | 2007-08-24 00:00:00.000 | Gäller fr.o.m. datum                  |
+| Property                 | Convertible to | Example                 | Description                             |
+|--------------------------|----------------|-------------------------|-----------------------------------------|
+| LineNumber               | Int            | 3                       | Unique identification number for a line |
+| LineDesignation          | String         | 3                       | Line designation                        |
+| DefaultTransportMode     | String         | blåbuss                 | Grouping of lines for presentation      |
+| DefaultTransportModeCode | String         | BUS                     | Transport mode                          |
+| LastModifiedUtcDateTime  | DateTime       | 2007-08-24 00:00:00.000 | Last modified                           |
+| ExistsFromDate           | DateTime       | 2007-08-24 00:00:00.000 | Effective from date                     |
 
-### Objektstruktur
+### Object Structure
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -323,21 +324,21 @@ Returnerar beskrivning av en linje. Innehåller referenser till trafikslag.
 
 ## JourneyPatternPointOnLine
 
-### Beskrivning
+### Description
 
-Returnerar kopplingen mellan stoppställe och linje. Innehåller samtliga stoppställen som trafikeras av en viss linje.
+Returns the connection between a stop point and a line, including all stop points served by a specific line.
 
-### Egenskaper
+### Properties
 
-| Egenskap                  | Kan konverteras till | Exempel                 | Beskrivning                                 |
-|---------------------------|----------------------|-------------------------|---------------------------------------------|
-| LineNumber                | Int                  | 1                       | Unikt identifikationsnummer för linje       |
-| DirectionCode             | Int                  | 1                       | Linjeriktning                               |
-| JourneyPatternPointNumber | Int                  | 10008                   | Unikt identifikationsnummer för stoppställe |
-| LastModifiedUtcDateTime   | DateTime             | 2012-06-23 00:00:00.000 | Senast ändrad                               |
-| ExistsFromDate            | DateTime             | 2012-06-23 00:00:00.000 | Gäller fr.o.m. datum                        |
+| Property                  | Convertible to | Example                 | Description                                   |
+|---------------------------|----------------|-------------------------|-----------------------------------------------|
+| LineNumber                | Int            | 1                       | Unique identification number for a line       |
+| DirectionCode             | Int            | 1                       | Line direction                                |
+| JourneyPatternPointNumber | Int            | 10008                   | Unique identification number for a stop point |
+| LastModifiedUtcDateTime   | DateTime       | 2012-06-23 00:00:00.000 | Last modified                                 |
+| ExistsFromDate            | DateTime       | 2012-06-23 00:00:00.000 | Effective from date                           |
 
-### Objektstruktur
+### Object Structure
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -350,6 +351,7 @@ Returnerar kopplingen mellan stoppställe och linje. Innehåller samtliga stopps
   "ExistsFromDate": "2012-06-23 00:00:00.000"
 }
 ```
+
 {{% /tab %}} {{% tab "Xml" %}}
 
 ```xml
@@ -364,14 +366,13 @@ Returnerar kopplingen mellan stoppställe och linje. Innehåller samtliga stopps
 
 {{% /tab %}} {{% /tabs %}}
 
-
 ## TransportMode
 
-### Beskrivning
+### Description
 
-Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via egenskapen DefaultTransportModeCode.
+Returns available transport modes. Line data refers to the transport mode through the property DefaultTransportModeCode.
 
-### Samband mellan TransportModeCode och StopAreaCode
+### Relationship between TransportModeCode and StopAreaCode
 
 | DefaultTransportModeCode | StopAreaTypeCode |
 |--------------------------|------------------|
@@ -382,17 +383,17 @@ Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via 
 | SHIP                     | SHIPBER          |
 | FERRY                    | FERRYBER         |
 
-### Objektegenskaper
+### Object Properties
 
-| Egenskap                 | Kan konverteras till | Exempel                 | Beskrivning             |
-|--------------------------|----------------------|-------------------------|-------------------------|
-| DefaultTransportModeCode | String               | BUS                     | Unik kod för trafikslag |
-| DefaultTransportMode     | String               | buss                    | Benämning på trafikslag |
-| StopAreaTypeCode         | String               | BUSTERM                 | Typkod för hållplatsen  |
-| LastModifiedUtcDateTime  | DateTime             | 2007-08-24 00:00:00.000 | Senast ändrad           |
-| ExistsFromDate           | DateTime             | 2007-08-24 00:00:00.000 | Gäller fr.o.m. datum    |
+| Property                 | Convertible to | Example                 | Description                    |
+|--------------------------|----------------|-------------------------|--------------------------------|
+| DefaultTransportModeCode | String         | BUS                     | Unique code for transport mode |
+| DefaultTransportMode     | String         | bus                     | Name of the transport mode     |
+| StopAreaTypeCode         | String         | BUSTERM                 | Type code for the stop area    |
+| LastModifiedUtcDateTime  | DateTime       | 2007-08-24 00:00:00.000 | Last modified                  |
+| ExistsFromDate           | DateTime       | 2007-08-24 00:00:00.000 | Effective from date            |
 
-### Objektstruktur
+### Object Structure
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -420,7 +421,7 @@ Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via 
 
 {{% /tab %}} {{% /tabs %}}
 
-## Fullständiga trafikslag exempel
+## Complete Transport Modes Example
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -448,6 +449,7 @@ Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via 
 {{% /tab %}} {{% tab "Xml" %}}
 
 ```xml
+
 <ResponseOfPwsResult xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
     <StatusCode>0</StatusCode>
     <ExecutionTime>277</ExecutionTime>
@@ -475,10 +477,9 @@ Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via 
 
 {{% /tab %}} {{% /tabs %}}
 
-
 ## Support
 
-Räcker inte dokumentationen så [sök gärna bland alla de hundratals inlägg som finns på vårt supportforum](http://kundo.se/org/trafiklabse/posts/). Det är
-troligt att någon redan har hittat och löst samma problem som du har.
+If you need more help you can [search through the hundreds of posts on our support forum](http://kundo.se/org/trafiklabse/posts/). It's likely that someone has
+already encountered and solved the same problem you have.
 
-Hittar du fortfarande inte svar på din fråga så [skriv ett eget inlägg på forumet](http://kundo.se/org/trafiklabse/) så hjälper vi dig.
+If you still can't find the answer to your question, [please write a new post on the forum,](http://kundo.se/org/trafiklabse/) and we will assist you.
