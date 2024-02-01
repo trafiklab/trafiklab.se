@@ -20,7 +20,7 @@ APIs.
 
 ## URL
 
-This API consists of 6 endpoints, each with their own URL.
+This API consists of 5 endpoints, each with their own URL.
 
 {{% tabs %}} {{% tab "Lines" %}}
 
@@ -33,13 +33,6 @@ https://integration.sl.se/open-api-transport/v1/lines
 
 ```text
 https://integration.sl.se/open-api-transport/v1/sites
-```
-
-{{% /tabs %}}
-{{% tab "Site by id" %}}
-
-```text
-https://integration.sl.se/open-api-transport/v1/sites/{SiteId}
 ```
 
 {{% /tabs %}}
@@ -272,27 +265,6 @@ For details regarding the response structure, please see the OpenApi specificati
     "stop_areas": "string"
   }
 ]
-```
-
-{{% /tabs %}}
-{{% tab "Site by id" %}}
-
-```json
-{
-  "id": 1002,
-  "gid": 9001,
-  "name": "Odenplan",
-  "alias": "string",
-  "abbreviation": "CEN",
-  "note": "vid Sandhamn",
-  "lat": 59.4474618783708,
-  "lon": 17.8376900105886,
-  "valid": {
-    "from": "2024-01-01T01:00:00",
-    "to": "2024-01-01T01:00:00"
-  },
-  "stop_areas": "string"
-}
 ```
 
 {{% /tabs %}}
