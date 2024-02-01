@@ -2,15 +2,6 @@
 title: SL Traffic status v2.0 (Trafikläget 2)
 weight: 600
 date: 2014-03-14
-aliases:
-  - /api/sl-trafiklaget-2
-  - /api/sl-trafiklaget-2/documentation
-  - /api/sl-trafiklaget-2/nivaer
-  - /api/sl-trafiklaget-2/console
-  - /node/12603
-  - /node/12603/documentation
-  - /node/12603/nivaer
-  - /node/12603/console
 ---
 
 {{% error %}}
@@ -33,9 +24,6 @@ fler) händelser. Det finns 3 olika status som händelser kan ha:
 
 En händelse påverkar sitt trafikslag, så att trafikslagets sammanfattande status är lika med den sämsta statusen som
 finns ibland just nu aktiva händelser tillhörande trafikslaget. En händelse kan utöver statusen dessutom vara planerad.
-
-{{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated for the new Trafiklab website. {{% /info %}}
 
 ## URL
 
