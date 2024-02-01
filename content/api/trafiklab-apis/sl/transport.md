@@ -1,5 +1,5 @@
 ---
-title: SL Transport Network
+title: SL Transport
 weight: 10
 date: 2024-01-30
 badge: new
@@ -384,4 +384,4 @@ For details regarding the response structure, please see the OpenApi specificati
 
 ## OpenAPI specification
 
-{{% oai-spec url="/openapi/sl-network.json" %}}
+{{% oai-spec url="/openapi/sl-transport.json" %}}
