@@ -2,19 +2,16 @@
 title: SL Hållplatser och linjer 2
 weight: "400"
 date: 2015-03-02
-aliases:
 ---
 
 Listning av hållplatser och linjer i Stockholms län.
 
-För att kunna beskriva trafikinformation på ett konsekvent sätt, är det nödvändigt att ingående begrepp och definitioner är klara och tydliga. De viktigaste
-begreppen för denna tjänst presenteras nedan.
-
 {{% error %}}
-Denna API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya network API](sl-network.md).
+Detta API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya network API](sl-network.md).
 {{% /error %}}
 
-## Begrepp
+För att kunna beskriva trafikinformation på ett konsekvent sätt, är det nödvändigt att ingående begrepp och definitioner är klara och tydliga. De viktigaste
+begreppen för denna tjänst presenteras nedan.
 
 | Begrepp                   | Beskrivning                                                                                                                          |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,43 +23,47 @@ Denna API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya 
 | JourneyPatternPointOnLine | Innehåller samtliga stoppställen som trafikeras av en viss linje                                                                     |
 | Transportmode             | Trafikslag                                                                                                                           |
 
-## API
+# API
 
-### Åtkomst
+## Åtkomst
 
 URL:er för anrop finns specificerade nedan:
 
-- Produktion: `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
-- Produktion (JSON): `https://api.sl.se/api2/LineData.json?model=[model]&key=[key]`
+{{% tabs %}} {{% tab "Json" %}}
+
+```text
+https://api.sl.se/api2/LineData.json?model=[model]&key=[key]
+```
+
+{{% /tab %}} {{% tab "XML" %}}
+
+```text
+https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]
+```
+
+{{% /tab %}} {{% /tabs %}}
 
 Observera att det är extension i anropet som avgör formateringen av svaret.
 
-### API-nycklar, behörighet
+## API-nycklar, behörighet
 
-API-nycklar kan införskaffas via Trafiklabs utvecklarportal.
-
+API-nycklar kan införskaffas via Trafiklabs utvecklareportal.
 En API-nyckel ska användas i URL:en för ett API anrop.
 
-- Exempel: `https://api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
-
-#### Nyckelnivåer
+### Nyckelnivåer
 
 | Nivå  | Max anrop/minut | Max anrop/månad |
 |-------|-----------------|-----------------|
 | Brons | 5               | 500             |
 
-### Format
+## Format
 
 API:et har support för XML och JSON dataformatering.
-
 Önskad formatering anges i URL:en för ett API anrop.
-
-- Exempel: `api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
 
 ## Datatyper
 
 Alla datatyper representeras alltid i strängform för respektive format.
-
 Typen angiven vid beskrivningar av modeller anger endast en lämplig datatyp att konvertera värdet till i ett givet programmeringsspråk.
 
 | Typ | Exempel | Beskrivning                                                                                                                          |
@@ -73,8 +74,7 @@ Typen angiven vid beskrivningar av modeller anger endast en lämplig datatyp att
 
 För modellerna line och jour är det önskvärt att kunna särskilja vilken trafiktyp datat avser. Detta kan åstadkommas genom att skicka med den valfria parametern
 DefaultTransportModeCode som kan innehålla någon av de Transportmode-värdena som returneras vid anrop till modellen transportmode, ex ”BUS” eller ”METRO”
-
-Exempel:
+Ex:
 
 `https://api.sl.se/api2/linedata.xml?key=[nyckel]&model=line&DefaultTransportModeCode=METRO`
 `https://api.sl.se/api2/linedata.xml?key=[nyckel]&model=jour&DefaultTransportModeCode=BUS`
@@ -104,15 +104,18 @@ datamodell man har begärt i anropet.
 | Nyckel        | Typ    | Exempel                 | Beskrivning                                                                                                        |
 |---------------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|
 | StatusCode    | Int    | 0                       | 0 om anropet har gått bra, annars en felkod som inte kan åtgärdas via tex ett modifierat anrop                     |
-| ExecutionTime | Int    | 267                     | Antal millisekunder som det har tagit att generera ett svar på servern                                             |
+| ExecutionTime | Int    | 267                     | Antal millisekunder som det har tagit att genererar ett svar på servern                                            |
 | ResponseData  | Objekt |                         | Container-objekt som innehåller attribut och data                                                                  |
 | Version       | String | 2014-06-27 14:03:39.103 | Senast ändrad. Uppdateras normalt sett bara en gång per dygn                                                       |
 | Type          | String | DataModelType           | Anger typen av datamodellen som svaret innehåller: Site, StopPoint, Line, JourneyPatternPointOfLine, TransportMode |
+| ResponseData  | Objekt |                         | Container-objekt som innehåller typad data                                                                         |
 
 ### API modell
+
 {{% tabs %}} {{% tab "Json" %}}
 
 ```json
+
 {
   "StatusCode": 0,
   "ExecutionTime": 282,
@@ -120,43 +123,48 @@ datamodell man har begärt i anropet.
     "Version": "2014-10-09 01:05",
     "Type": "DataModelType",
     "Result": [
-      /* DataModel, ..., DataModel */
+      DataModel,
+      ...,
+      DataModel
     ]
   }
 }
 ```
 
-{{% /tab %}} {{% tab "Xml" %}}
+{{% /tab %}} {{% tab "XML" %}}
 
 ```xml
-<ResponseOfPwsResult xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
-    <StatusCode>0</StatusCode>
-    <ExecutionTime>267</ExecutionTime>
-    <ResponseData>
-        <Version xmlns="https://api.sl.se/api/pws">2014-10-09 01:05</Version>
-        <Type xmlns="https://api.sl.se/api/pws">DataModelType</Type>
-        <!-- DataModel></DataModel -->
-        <!-- ... -->
-        <!-- <DataModel></DataModel -->
-    </ResponseData>
-</ResponseOfPwsResult>
+
+<ResponseOfPwsResult>"https://www.w3.org/2001/XMLSchema"</strong> xmlns:xsi=<strong>"https://www.w3.org/2001/XMLSchema-instance"</strong>> <StatusCode>
+<strong>0</strong>
+</StatusCode> <ExecutionTime>
+<strong>267</strong>
+</ExecutionTime> <ResponseData>
+<Version xmlns=
+<strong>"https://api.sl.se/api/pws"</strong>>
+<strong>2014-10-09 01:05</strong>
+</Version> <Type xmlns=<strong>"https://api.sl.se/api/pws"</strong>><strong>DataModelType
+</strong></Type> <strong><!--DataModel></DataModel></strong> <strong>...</strong> <strong> <DataModel></DataModel--></strong> </ResponseData> </ResponseOfPwsResult>
+
 ```
 
 {{% /tab %}} {{% /tabs %}}
 
-# Specifikation för datamodeller
+### API modell för JSON
 
-API:et tillhandahåller följande datamodeller:
+Specifikation för datamodeller
 
-| Nyckel | Värde    | Beskrivning                                          |
-|--------|----------|------------------------------------------------------|
-| model  | **site** | Returnerar svar med Site objekt                      |
-| model  | **stop** | Returnerar svar med StopPoint objekt                 |
-| model  | **line** | Returnerar svar med Line objekt                      |
-| model  | **jour** | Returnerar svar med JourneyPatternPointOnLine objekt |
-| model  | **tran** | Returnerar svar med TransportMode objekt             |
+API:et tillhandahåller följande datamodeller
 
-Önskad datamodell anges i URL:en för ett API-anrop.
+| Nyckel | Värde | Beskrivning                                          |
+|--------|-------|------------------------------------------------------|
+| model  | site  | Returnerar svar med Site objekt                      |
+| model  | stop  | Returnerar svar med StopPoint objekt                 |
+| model  | line  | Returnerar svar med Line objekt                      |
+| model  | jour  | Returnerar svar med JourneyPatternPointOnLine objekt |
+| model  | tran  | Returnerar svar med TransportMode objekt             |
+
+Önskad datamodell anges i URL:en för ett API anrop.
 
 `api.sl.se/api2/LineData.xml?model=[model]&key=[key]`
 
@@ -194,9 +202,10 @@ Site är en gruppering av StopAreas som används för att förenkla sökningen i
 }
 ```
 
-{{% /tab %}} {{% tab "Xml" %}}
+{{% /tab %}} {{% tab "XML" %}}
 
 ```xml
+
 <Site xmlns="https://api.sl.se/api/pws">
     <SiteId>1002</SiteId>
     <SiteName>Centralen</SiteName>
@@ -220,10 +229,10 @@ StopPoints (Stoppställen) ingår i en StopArea.
 |----------------------------|----------------------|-------------------------|------------------------------------------------------------------------------------------|
 | StopPointNumber            | Int                  | 1051                    | Unikt identifikationsnummer för stoppställe                                              |
 | StopPointName              | String               | T-Centralen             | Namn på stoppställe                                                                      |
-| StopAreaNumber             | Int                  | 1051                    | Number för StopArea. Ett stoppställe ingår endast i en StopArea                          |
+| StopAreaNumber             | Int                  | 1051                    | Number för StopArea                                                                      |
 | LocationNorthingCoordinate | Double               | 59.3313179695028        | Koordinat i WGS84-format                                                                 |
 | LocationEastingCoordinate  | Double               | 18.0616773959365        | Koordinat i WGS84-format                                                                 |
-| ZoneShortName              | String               | A                       | Taxezon. A, B eller C. Om SLs taxa inte gäller är taxezon null                           |
+| ZoneShortName              | String               | A                       | Taxezon. A, B eller C                                                                    |
 | StopAreaTypeCode           | String               | METROSTN                | Användning av hållplatsen. BUSSTERM, TRAMSTN, METROSTN, RAILWSTN, SHIPBER eller FERRYBER |
 | LastModifiedUtcDateTime    | DateTime             | 2014-06-03 00:00:00.000 | Senast ändrad                                                                            |
 | ExistsFromDate             | DateTime             | 2014-06-03 00:00:00.000 | Gäller fr.o.m. datum                                                                     |
@@ -244,12 +253,12 @@ StopPoints (Stoppställen) ingår i en StopArea.
   "LastModifiedUtcDateTime": "2014-06-03 00:00:00.000",
   "ExistsFromDate": "2014-06-03 00:00:00.000"
 }
-
 ```
 
-{{% /tab %}} {{% tab "Xml" %}}
+{{% /tab %}} {{% tab "XML" %}}
 
 ```xml
+
 <StopPoint xmlns="https://api.sl.se/api/pws">
     <StopPointNumber>1051</StopPointNumber>
     <StopPointName>T-Centralen</StopPointName>
@@ -297,9 +306,10 @@ Returnerar beskrivning av en linje. Innehåller referenser till trafikslag.
 }
 ```
 
-{{% /tab %}} {{% tab "Xml" %}}
+{{% /tab %}} {{% tab "XML" %}}
 
 ```xml
+
 <Line xmlns="https://api.sl.se/api/pws">
     <LineNumber>3</LineNumber>
     <LineDesignation>3</LineDesignation>
@@ -308,6 +318,7 @@ Returnerar beskrivning av en linje. Innehåller referenser till trafikslag.
     <LastModifiedUtcDateTime>2007-08-24 00:00:00.000</LastModifiedUtcDateTime>
     <ExistsFromDate>2007-08-24 00:00:00.000</ExistsFromDate>
 </Line>
+
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -328,7 +339,7 @@ Returnerar kopplingen mellan stoppställe och linje. Innehåller samtliga stopps
 | LastModifiedUtcDateTime   | DateTime             | 2012-06-23 00:00:00.000 | Senast ändrad                               |
 | ExistsFromDate            | DateTime             | 2012-06-23 00:00:00.000 | Gäller fr.o.m. datum                        |
 
-### Objektstruktur
+### XML objektstruktur
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -340,78 +351,25 @@ Returnerar kopplingen mellan stoppställe och linje. Innehåller samtliga stopps
   "LastModifiedUtcDateTime": "2012-06-23 00:00:00.000",
   "ExistsFromDate": "2012-06-23 00:00:00.000"
 }
+
 ```
-{{% /tab %}} {{% tab "Xml" %}}
+
+{{% /tab %}} {{% tab "XML" %}}
 
 ```xml
+
 <JourneyPatternPointOnLine xmlns="https://api.sl.se/api/pws">
     <LineNumber>1</LineNumber>
     <DirectionCode>1</DirectionCode>
     <JourneyPatternPointNumber>10008</JourneyPatternPointNumber>
     <LastModifiedUtcDateTime>2012-06-23 00:00:00.000</LastModifiedUtcDateTime>
-    <ExistsFromDate>2012-06-23 00:00:00.000</ExistsFromDate>
+    <ExistsFromDate>2012-06-23 00:00:00. "000"</ExistsFromDate>
 </JourneyPatternPointOnLine>
 ```
 
-{{% /tab %}} {{% /tabs %}}
+{{% /tab %}}{{% /tabs %}}
 
-
-## TransportMode
-
-### Beskrivning
-
-Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via egenskapen DefaultTransportModeCode.
-
-### Samband mellan TransportModeCode och StopAreaCode
-
-| DefaultTransportModeCode | StopAreaTypeCode |
-|--------------------------|------------------|
-| BUS                      | BUSTERM          |
-| METRO                    | METROSTN         |
-| TRAM                     | TRAMSTN          |
-| TRAIN                    | RAILWSTN         |
-| SHIP                     | SHIPBER          |
-| FERRY                    | FERRYBER         |
-
-### Objektegenskaper
-
-| Egenskap                 | Kan konverteras till | Exempel                 | Beskrivning             |
-|--------------------------|----------------------|-------------------------|-------------------------|
-| DefaultTransportModeCode | String               | BUS                     | Unik kod för trafikslag |
-| DefaultTransportMode     | String               | buss                    | Benämning på trafikslag |
-| StopAreaTypeCode         | String               | BUSTERM                 | Typkod för hållplatsen  |
-| LastModifiedUtcDateTime  | DateTime             | 2007-08-24 00:00:00.000 | Senast ändrad           |
-| ExistsFromDate           | DateTime             | 2007-08-24 00:00:00.000 | Gäller fr.o.m. datum    |
-
-### Objektstruktur
-
-{{% tabs %}} {{% tab "Json" %}}
-
-```json
-{
-  "DefaultTransportModeCode": "BUS",
-  "DefaultTransportMode": "buss",
-  "StopAreaTypeCode": "BUSTERM",
-  "LastModifiedUtcDateTime": "2007-08-24 00:00:00.000",
-  "ExistsFromDate": "2007-08-24 00:00:00.000"
-}
-```
-
-{{% /tab %}} {{% tab "Xml" %}}
-
-```xml
-<TransportMode xmlns="https://api.sl.se/api/pws">
-    <DefaultTransportModeCode>BUS</DefaultTransportModeCode>
-    <DefaultTransportMode>buss</DefaultTransportMode>
-    <StopAreaTypeCode>BUSTERM</StopAreaTypeCode>
-    <LastModifiedUtcDateTime>2007-08-24 00:00:00.000</LastModifiedUtcDateTime>
-    <ExistsFromDate>2007-08-24 00:00:00.000</ExistsFromDate>
-</TransportMode>
-```
-
-{{% /tab %}} {{% /tabs %}}
-
-## Fullständiga trafikslag exempel
+## Fullständiga exempel
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -430,21 +388,23 @@ Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via 
         "LastModifiedUtcDateTime": "2007-08-24 00:00:00.000",
         "ExistsFromDate": "2007-08-24 00:00:00.000"
       }
-      // ... other TransportMode examples ...
+      // Additional result objects for different modes
     ]
   }
 }
 ```
 
-{{% /tab %}} {{% tab "Xml" %}}
+{{% /tab %}} {{% tab "XML" %}}
 
 ```xml
-<ResponseOfPwsResult xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
+
+<ResponseOfPwsResult xmlns="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
     <StatusCode>0</StatusCode>
     <ExecutionTime>277</ExecutionTime>
     <ResponseData>
         <Version xmlns="https://api.sl.se/api/pws">2014-10-09 18:05</Version>
         <Type xmlns="https://api.sl.se/api/pws">TransportMode</Type>
+
         <TransportMode xmlns="https://api.sl.se/api/pws">
             <DefaultTransportModeCode>BUS</DefaultTransportModeCode>
             <DefaultTransportMode>buss</DefaultTransportMode>
@@ -452,20 +412,14 @@ Returnerar tillgängliga trafikslag. Linjedatan refererar till trafikslaget via 
             <LastModifiedUtcDateTime>2007-08-24 00:00:00.000</LastModifiedUtcDateTime>
             <ExistsFromDate>2007-08-24 00:00:00.000</ExistsFromDate>
         </TransportMode>
-        <TransportMode xmlns="https://api.sl.se/api/pws">
-            <DefaultTransportModeCode>FERRY</DefaultTransportModeCode>
-            <DefaultTransportMode>färja</DefaultTransportMode>
-            <StopAreaTypeCode>FERRYBER</StopAreaTypeCode>
-            <LastModifiedUtcDateTime>2007-08-24 00:00:00.000</LastModifiedUtcDateTime>
-            <ExistsFromDate>2007-08-24 00:00:00.000</ExistsFromDate>
-        </TransportMode>
-        <!-- ... other TransportMode examples ... -->
+
+        <!-- Additional TransportMode elements for different modes -->
+
     </ResponseData>
 </ResponseOfPwsResult>
 ```
 
-{{% /tab %}} {{% /tabs %}}
-
+{{% /tab %}}{{% /tabs %}}
 
 ## Support
 

@@ -1,5 +1,5 @@
 ---
-title: SL Route-planner v3.1 (Reseplanerare 3.1)
+title: SL Route-planner v3.1
 weight: 100
 date: 2019-01-14
 aliases:

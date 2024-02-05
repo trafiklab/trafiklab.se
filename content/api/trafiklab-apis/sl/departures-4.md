@@ -1,5 +1,5 @@
 ---
-title: SL Departures v4.0 (Realtidsinformation 4)
+title: SL Departures 4
 weight: 200
 date: 2016-11-30
 aliases:

@@ -1,5 +1,5 @@
 ---
-title: SL Nearby stops v2.0 (Närliggande hållplatser 2)
+title: SL Nearby stops 2
 weight: 310
 date: 2019-01-14
 

@@ -1,5 +1,5 @@
 ---
-title: SL Stop lookup v1.0 (Platsuppslag)
+title: SL Stop lookup
 weight: 300
 date: 2014-03-14
 aliases:
@@ -199,6 +199,7 @@ https://journeyplanner.integration.sl.se/v1/typeahead.xml?searchstring=Oden&stat
 ```
 
 {{% /tab %}} {{% /tabs %}}
+
 ## Support
 
 If you need more help you can search through [existing questions on our support forum](http://kundo.se/org/trafiklabse/posts/). If you don't find the answer to
