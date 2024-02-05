@@ -1,5 +1,5 @@
 ---
-title: SL Service alerts v2.0 (Störningsinformation 2)
+title: SL Service alerts 2
 weight: 500
 date: 2014-03-14
 aliases:

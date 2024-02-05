@@ -1,5 +1,5 @@
 ---
-title: SL Traffic status v2.0 (Trafikläget 2)
+title: SL Traffic status 2
 weight: 600
 date: 2014-03-14
 aliases:
