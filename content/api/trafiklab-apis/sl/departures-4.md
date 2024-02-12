@@ -1,5 +1,5 @@
 ---
-title: SL Departures v4.0 (Realtidsinformation 4)
+title: SL Departures 4
 weight: 200
 date: 2016-11-30
 aliases:
@@ -14,779 +14,136 @@ aliases:
   - /node/15754/konsol
 ---
 
-<h2>Beskrivning</h2>
-<p lang="sv-SE">Realtidsinformation gällande buss, tunnelbana, pendeltåg och lokalbana.</p>
+## Description
 
-{{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated for the new Trafiklab website. {{% /info %}}
+Real-time information regarding buses, subways, commuter trains, and local trains.
 
-<h2>URL</h2>
+## URL
 
-`https://api.sl.se/api2/realtimedeparturesV4.<FORMAT>?key=<DIN API NYCKEL>&siteid=<SITEID>&timewindow=<TIMEWINDOW>`
+`https://api.sl.se/api2/realtimedeparturesV4.<FORMAT>?key=<YOUR API KEY>&siteid=<SITEID>&timewindow=<TIMEWINDOW>`
 
-### API-nyckelnivåer
+### API Key Levels
 
-| Nivå     | Max anrop/minut | Max anrop/månad |
-|----------|-----------------|-----------------|
-| Brons    | 30              | 10 000          |
-| Silver   | 60              | 500 000         |
-| Silver + | 60              | 1 500 000       |
-| Guld     |                 | 10 000 000      |
-| Guld +   |                 | 30 000 000      |
-| Platina  |                 | Efter behov     |
+| Level    | Max calls/minute | Max calls/month |
+|----------|------------------|-----------------|
+| Bronze   | 30               | 10,000          |
+| Silver   | 60               | 500,000         |
+| Silver + | 60               | 1,500,000       |
+| Gold     |                  | 10,000,000      |
+| Gold +   |                  | 30,000,000      |
+| Platinum |                  | On demand       |
 
-<h2>Format</h2>
-<p>Json eller xml enligt ändelse till serviceanropet.</p>
-<h2>Parametrar</h2>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Parametrar</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Tvingande</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Format</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Format på svarsdatat. Giltiga värden är “json” eller “xml”.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>SiteId</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Unikt identifikationsnummer för den plats som aktuella avgångar skall hämtas för, t.ex. 9192 för Slussen.Detta id fås från tjänsten SL Platsuppslag.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>TimeWindow</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Hämta avgångar inom önskat tidsfönster. Där tidsfönstret är antalet minuter från och med nu. Max 60.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Key</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>En giltig API-nyckel.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Bus</p>
-			</td>
-			<td>Boolean</td>
-			<td>Nej</td>
-			<td>Default = true. Om false, så exkluderas trafikslaget från svaret.</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Metro</p>
-			</td>
-			<td>Boolean</td>
-			<td>Nej</td>
-			<td>Default = true. Om false, så exkluderas trafikslaget från svaret.</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Train</p>
-			</td>
-			<td>Boolean</td>
-			<td>Nej</td>
-			<td>Default = true. Om false, så exkluderas trafikslaget från svaret.</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Tram</p>
-			</td>
-			<td>Boolean</td>
-			<td>Nej</td>
-			<td>Default = true. Om false, så exkluderas trafikslaget från svaret.</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Ship</p>
-			</td>
-			<td>Boolean</td>
-			<td>Nej</td>
-			<td>Default = false. Om true inkluderas information om osäker prognos.</td>
-		</tr>
-		<tr>
-			<td>
-			<p>EnablePrediction</p>
-			</td>
-			<td>Boolean</td>
-			<td>Nej</td>
-			<td>Default = true. Om false, så exkluderas trafikslaget från svaret.</td>
-		</tr>
-	</tbody>
-</table>
-<h2>Resultat</h2>
-<p lang="sv-SE">Resultat från realtidssökning. Vid xml-format är rotelementets namn ResponseOfDepartures.</p>
-<p>Svarsstruktur</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StatusCode</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Innehåller statuskod för det eventuella meddelandet.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Message</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Innehåller eventuellt anropsrelaterade meddelanden som t.ex. felmeddelanden. Se ”Felmeddelanden” nedan.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ExecutionTime</p>
-			</td>
-			<td>
-			<p>Long</p>
-			</td>
-			<td>
-			<p>Anger hur lång tid (i ms) det tog för servern att generera svaret.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ResponseData</p>
-			</td>
-			<td>
-			<p>Departure</p>
-			</td>
-			<td>
-			<p>Innehåller själva svarsdata från tjänsten. Se ”Svarsdata” nedan.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<p>Svarsdata/ResponseData</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>LatestUpdate</p>
-			</td>
-			<td>
-			<p>DateTime</p>
-			</td>
-			<td>
-			<p>Anger när realtidsinformationen (DPS) senast uppdaterades.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>DataAge</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Antal sekunder sedan tidsstämpeln LatestUpdate.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Buses</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista över samtliga bussavgångar för givet siteId, se svarsstruktur</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Metros</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista över samtliga tunnelbaneavgångar för givet siteId, se svarsstruktur</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Trains</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista över samtliga pendeltågsavgångar för givet siteId, se svarsstruktur.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Trams</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista över samtliga lokalbaneavgångar för givet siteId, se svarsstruktur</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Ships</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista över samtliga båtavgångar för givet siteId, se svarsstruktur</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopPointDeviations</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Lista över hållplatsområdesspecifika avvikelser/störningar. D.v.s. störningar som inte är knutna till en specifik avgång</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>TransportMode</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Trafikslag: ”BUS”,"METRO", ”TRAIN”, ”TRAM” eller ”SHIP”.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>LineNumber</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Linjebeteckning/nummer.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Destination</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namn på linjens ändhållplats.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>JourneyDirection</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Reseriktnings-id. 0 vid okänd riktning, annars 1 eller 2.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>GroupOfLine</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p><strong>För buss:</strong> Anger om det är en blå buss. Om det är en blå buss står det ”blåbuss”, annars saknas elementet(xml) eller är null(json).</p>
-			<p><strong>För lokalbana:</strong> Linjegrupp, t.ex. “Tvärbanan” eller “Roslagsbanan”.</p>
-			<p><strong>För tunnelbana:</strong> Linjegruppering. Röd/grön/blå linje.</p>
-			<p><strong>För båt:</strong> Anger om det är pendlarbåt eller Waxholmsbolaget.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopAreaName</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Hållplatsnamn.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopAreaNumber</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Id för aktuell hållplats.</p>
-			<p>Tunnelbana före övergång: 0</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopPointNumber</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Id för aktuellt stoppställe.</p>
-			<p>Tunnelbana före övergång: 0</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopPointDesignation</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ytterligare identifierare för stoppställe, t.ex. bokstav för busskur eller spår för pendeltåg.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>TimeTabledDateTime</p>
-			</td>
-			<td>
-			<p>DateTime</p>
-			</td>
-			<td>
-			<p>Avgångstid enligt tidtabell.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ExpectedDateTime</p>
-			</td>
-			<td>
-			<p>DateTime</p>
-			</td>
-			<td>
-			<p>Förväntad avgångstid. Om det finns tillhörande störning med tillräckligt hög prioritet så kan denna ha null/tomt värde. Detta fram till ett par minuter innan avgång.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>DisplayTime</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Avgångstid för presentation. Kan anta formaten x min, HH:mm eller Nu. Om det finns tillhörande störning med tillräckligt hög prioritet så kan denna ha värdet ”-”. Detta fram till ett par minuter innan avgång.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>JourneyNumber</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Turnummer för avgången.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Deviations</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Innehåller typen ”Deviation” nedan. Denna kan vara tom, eller innehålla 1 till flera avvikelser.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>SecondaryDestinationName</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p><strong>Finns bara för:</strong>Pendeltåg.</p>
-			<p>Namn på delmål</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>PredictionState</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p><strong>Kan ha tre olika värden, NORMAL, UNRELIABLE, UNKNOWN. UNRELIABLE betecknar en osäker prognos</strong></p>
-			<p>Namn på delmål</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<p>Deviation</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Consequence</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Konsekvensbeskrivning för aktuell avvikelse.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ImportanceLevel</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Signifikationsnivå för aktuell avvikelse. 0-9 där 9 är mest allvarlig.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Text</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Beskrivning av aktuell avvikelse.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<p>StopPointDeviations</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopInfo</p>
-			</td>
-			<td>
-			<p>StopInfo</p>
-			</td>
-			<td>
-			<p>StopInfo. Kan vara tom. Se StopInfo</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Deviation</p>
-			</td>
-			<td>
-			<p>Deviation</p>
-			</td>
-			<td>
-			<p>Deviation. Kan vara tom. Se Deviation.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<p>StopInfo</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>GroupOfLine</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Om TransportMode är ”TRAM” så innehåller noden något av följande värden: ”Lidingöbanan”, ”Nockebybanan”, ”Roslagsbanan”, ”Saltsjöbanan”, ”Spårväg City”, ”Tvärbanan”. Annars blankt (kan komma att ändras).</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopAreaName</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namn på hållplatsen som avvikelsen gäller.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopAreaNumber</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Id för hållplatsen som avvikelsen gäller. Är noll om TransportMode inte är BUS.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>TransportMode</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>”METRO”, ”BUS”, ”TRAIN”, ”TRAM” eller ospecificerat.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h2>Felmeddelanden</h2>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Statuskod</strong></p>
-			</td>
-			<td>
-			<p><strong>Meddelande</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1001</p>
-			</td>
-			<td>
-			<p>problem with request: Key is undefined</p>
-			<p>Nyckel hare ej skickats med.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1002</p>
-			</td>
-			<td>
-			<p>problem with request: Key is invalid</p>
-			<p>Nyckel är ogiltig</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1003</p>
-			</td>
-			<td>
-			<p>Invalid api</p>
-			<p>Ogiltigt api</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1004</p>
-			</td>
-			<td>
-			<p>problem with request: This api is currently not available for keys with priority above 2</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1005</p>
-			</td>
-			<td>
-			<p>Nyckel finns, men ej för detta api</p>
-			<p>problem with request: Invalid api for key</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1006</p>
-			</td>
-			<td>
-			<p>To many requests per minute</p>
-			<p>För många anrop per minut, för den profil som används</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1007</p>
-			</td>
-			<td>
-			<p>To many requests per month</p>
-			<p>För många anrop per månad, för den profil som används</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>4001</p>
-			</td>
-			<td>
-			<p>SiteId måste gå att konvertera till heltal.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>5321</p>
-			</td>
-			<td>
-			<p>Kunde varken hämta information från TPI (tunnelbanan) eller DPS (övriga trafikslag).</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>5322</p>
-			</td>
-			<td>
-			<p>Kunde inte hämta information från DPS.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>5323</p>
-			</td>
-			<td>
-			<p>Kunde inte hämta information från TPI.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>5324</p>
-			</td>
-			<td>
-			<p>Kunde varken hämta information från TPI (tunnelbanan) eller DPS (övriga trafikslag) p.g.a. inaktuell DPS-data. Detta uppstår om DPS-datan är äldre än 2 minuter vid svarstillfället.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h2 id="support">Support</h2>
-<p>Räcker inte dokumentationen så <a href="https://kundo.se/org/trafiklabse/posts/">sök gärna bland alla de 
-hundratals inlägg som finns på vårt supportforum</a>. Det är troligt att någon redan har hittat och löst samma problem som du har.</p>
-<p>Hittar du fortfarande inte svar på din fråga så <a href="https://kundo.se/org/trafiklabse/"> skriv ett eget inlägg på forumet</a>så hjälper vi dig.</p>
+## Format
+
+JSON or XML according to the extension in the service call.
+
+## Parameters
+
+| Parameters       | Data Type | Mandatory | Description                                                                                                                                                         |
+|------------------|-----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Format           | String    | Yes       | Format of the response data. Valid values are “json” or “xml”.                                                                                                      |
+| SiteId           | Integer   | Yes       | Unique identification number for the location for which current departures should be fetched, e.g., 9192 for Slussen. Obtained from the SL Location Lookup service. |
+| TimeWindow       | Integer   | Yes       | Fetch departures within the desired time window. The time window is the number of minutes from now. Max 60.                                                         |
+| Key              | String    | Yes       | A valid API key.                                                                                                                                                    |
+| Bus              | Boolean   | No        | Default = true. If false, excludes bus data from the response.                                                                                                      |
+| Metro            | Boolean   | No        | Default = true. If false, excludes metro data from the response.                                                                                                    |
+| Train            | Boolean   | No        | Default = true. If false, excludes train data from the response.                                                                                                    |
+| Tram             | Boolean   | No        | Default = true. If false, excludes tram data from the response.                                                                                                     |
+| Ship             | Boolean   | No        | Default = false. If true, includes information about uncertain prognosis.                                                                                           |
+| EnablePrediction | Boolean   | No        | Default = true. If false, excludes prediction data from the response.                                                                                               |
+
+## Result
+
+Results from real-time search. For XML format, the root element name is "ResponseOfDepartures."
+
+### Response Structure
+
+| Name          | Data Type | Description                                                                            |
+|---------------|-----------|----------------------------------------------------------------------------------------|
+| StatusCode    | Integer   | Contains the status code for the possible message.                                     |
+| Message       | String    | Contains any call-related messages such as error messages. See “Error Messages” below. |
+| ExecutionTime | Long      | Indicates how long (in ms) it took for the server to generate the response.            |
+| ResponseData  | Departure | Contains the actual response data from the service. See “Response Data” below.         |
+
+### Response Data/ResponseData
+
+| Name                | Data Type | Description                                                                                                      |
+|---------------------|-----------|------------------------------------------------------------------------------------------------------------------|
+| LatestUpdate        | DateTime  | Indicates when the real-time information (DPS) was last updated.                                                 |
+| DataAge             | Integer   | Number of seconds since the LatestUpdate timestamp.                                                              |
+| Buses               | List      | List of all bus departures for the given siteId, see response structure.                                         |
+| Metros              | List      | List of all subway departures for the given siteId, see response structure.                                      |
+| Trains              | List      | List of all commuter train departures for the given siteId, see response structure.                              |
+| Trams               | List      | List of all local train departures for the given siteId, see response structure.                                 |
+| Ships               | List      | List of all boat departures for the given siteId, see response structure.                                        |
+| StopPointDeviations | List      | List of stop area-specific deviations/disruptions. In other words, disruptions not tied to a specific departure. |
+
+#### Departure
+
+| Name                     | Data Type | Description                                                                                                                                                                                                                                                                                                               |
+|--------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TransportMode            | String    | Mode of transport: "BUS", "METRO", "TRAIN", "TRAM", or "SHIP".                                                                                                                                                                                                                                                            |
+| LineNumber               | String    | Line designation/number.                                                                                                                                                                                                                                                                                                  |
+| Destination              | String    | Name of the line's end station.                                                                                                                                                                                                                                                                                           |
+| JourneyDirection         | Integer   | Journey direction ID. 0 for unknown direction, otherwise 1 or 2.                                                                                                                                                                                                                                                          |
+| GroupOfLine              | String    | For bus: Specifies if it is a blue bus. If it is a blue bus, it says "bluebus", otherwise the element is missing (XML) or null (JSON). For local train: Line group, e.g., "Tvärbanan" or "Roslagsbanan". For subway: Line grouping. Red/green/blue line. For boat: Specifies if it is a commuter boat or Waxholmsbolaget. |
+| StopAreaName             | String    | Stop area name.                                                                                                                                                                                                                                                                                                           |
+| StopAreaNumber           | Integer   | ID for the current stop area. Subway before transfer: 0.                                                                                                                                                                                                                                                                  |
+| StopPointNumber          | Integer   | ID for the current stopping point. Subway before transfer: 0.                                                                                                                                                                                                                                                             |
+| StopPointDesignation     | String    | Additional identifier for stopping point, e.g., letter for bus shelter or track for commuter train.                                                                                                                                                                                                                       |
+| TimeTabledDateTime       | DateTime  | Departure time according to the timetable.                                                                                                                                                                                                                                                                                |
+| ExpectedDateTime         | DateTime  | Expected departure time. If there is an associated disruption with sufficiently high priority, this may be null/empty. This is the case until a few minutes before departure.                                                                                                                                             |
+| DisplayTime              | String    | Departure time for presentation. Can take formats like x min, HH:mm, or Now. If there is an associated disruption with sufficiently high priority, this may be set to "-". This is the case until a few minutes before departure.                                                                                         |
+| JourneyNumber            | Integer   | Journey number for the departure.                                                                                                                                                                                                                                                                                         |
+| Deviations               | List      | Contains the type "Deviation" below. This can be empty or contain 1 to several deviations.                                                                                                                                                                                                                                |
+| SecondaryDestinationName | String    | Only for: Commuter train. Name of the intermediate destination.                                                                                                                                                                                                                                                           |
+| PredictionState          | String    | Can have three different values: NORMAL, UNRELIABLE, UNKNOWN. UNRELIABLE indicates an uncertain prognosis. Name of the intermediate destination.                                                                                                                                                                          |
+
+#### Deviation
+
+| Name            | Data Type | Description                                                              |
+|-----------------|-----------|--------------------------------------------------------------------------|
+| Consequence     | String    | Description of the consequence for the current deviation.                |
+| ImportanceLevel | Integer   | Significance level of the current deviation. 0-9 where 9 is most severe. |
+| Text            | String    | Description of the current deviation.                                    |
+
+#### StopPointDeviations
+
+| Name      | Data Type | Description                                         |
+|-----------|-----------|-----------------------------------------------------|
+| StopInfo  | StopInfo  | Stop information. May be empty. See StopInfo.       |
+| Deviation | Deviation | Deviation information. May be empty. See Deviation. |
+
+#### StopInfo
+
+| Name           | Data Type | Description                                                                                                                                                                                                   |
+|----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GroupOfLine    | String    | If TransportMode is "TRAM", this node contains one of the following values: "Lidingöbanan", "Nockebybanan", "Roslagsbanan", "Saltsjöbanan", "Spårväg City", "Tvärbanan". Otherwise blank (subject to change). |
+| StopAreaName   | String    | Name of the stop area affected by the deviation.                                                                                                                                                              |
+| StopAreaNumber | Integer   | ID of the stop area affected by the deviation. Is zero if TransportMode is not BUS.                                                                                                                           |
+| TransportMode  | String    | "METRO", "BUS", "TRAIN", "TRAM", or unspecified.                                                                                                                                                              |
+
+## Error Messages
+
+| Status Code | Message                                                                                                                                                                                          |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1001        | Key not provided.                                                                                                                                                                                |
+| 1002        | Invalid key.                                                                                                                                                                                     |
+| 1003        | Invalid API.                                                                                                                                                                                     |
+| 1004        | Problem with request: This API is currently not available for keys with priority above 2.                                                                                                        |
+| 1005        | Key exists, but not for this API.                                                                                                                                                                |
+| 1006        | Too many requests per minute for the profile being used.                                                                                                                                         |
+| 1007        | Too many requests per month for the profile being used.                                                                                                                                          |
+| 4001        | SiteId must be convertible to an integer.                                                                                                                                                        |
+| 5321        | Couldn't retrieve information from TPI (subway) or DPS (other modes of transportation).                                                                                                          |
+| 5322        | Couldn't retrieve information from DPS.                                                                                                                                                          |
+| 5323        | Couldn't retrieve information from TPI.                                                                                                                                                          |
+| 5324        | Couldn't retrieve information from TPI (subway) or DPS (other modes of transportation) due to outdated DPS data. This occurs if the DPS data is more than 2 minutes old at the time of response. |
+
+## Support
+
+If the documentation is insufficient, please [search through the hundreds of posts on our support forum](https://kundo.se/org/trafiklabse/posts/). It's likely
+that someone has already encountered and solved the same problem you're facing.
+
+If you still can't find an answer to your question, [create a new post on the forum](https://kundo.se/org/trafiklabse/) and we'll assist you.
+

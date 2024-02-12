@@ -1,135 +1,126 @@
 ---
-title: SL Route-planner v3.1
+title: SL Reseplanerare 3.1
 weight: 100
 date: 2019-01-14
-aliases:
-  - /api/sl-reseplanerare
-  - /api/sl-reseplanerare-31
-  - /api/sl-reseplanerare-31/documentation
-  - /api/sl-reseplanerare-31/console
-  - /api/sl-reseplanerare-31/nivaer
-  - /node/25593
-  - /node/25593/documentation
-  - /node/25593/console
-  - /node/25593/nivaer
 ---
 
-## Description
+## Beskrivning
 
-With this API, you can get travel proposals from point A to point B within Stockholm County using SL's traffic. Waxholmsbolaget's traffic is also included in
-SL's journey planner. The API can be used to calculate travel proposals between any combination of positions and/or stops. The API returns travel proposals
-based on the "best match" for the input.
+Med detta API kan du få reseförslag från A till B inom Stockholms län med SLs trafik. I SLs reseplanerare finns även Waxholmsbolagets trafik. APIet kan användas
+för att beräkna reseförslag mellan valfri kombination av position och/eller stoppställe. APIet returnerar reseförslag från ”bästa matchning” av det som läggs
+in.
 
-In the journey planner, there are four different functions that can be called:
+I reseplaneraren finns det fyra olika funktioner som kan anropas:</p>
 
-- **Trip:** Calculates a journey from a starting point to a destination. These can be station IDs or coordinates based on addresses or "points of interest."
-- **JourneyDetail:** Returns detailed information about part of a journey with a vehicle. It returns a list of all stops/stations, including all arrival and
-  departure times with real-time data (if available).
-- **Reconstruction:** Used to recreate a copy of a Trip using a reconstruction context. The result will be a complete copy given that the underlying data has
-  not changed.
-- **GisRoute:** Provides detailed information about the route.
-- **XSD:** Returns an XSD containing definitions for all the input parts of the response structures for the services in SL Reseplanerare 3.
+- Trip: Räknar ut en resa från en startpunkt till en destination. Dessa kan vara stations-id eller
+  koordinater baserade på adresser eller ”intressepunkter.
+- JourneyDetail: Returnerar detaljerad information om en del av en resa med ett fordon.
+  Den returnerar en lista på alla stop/stationer inklusive alla ankomst- och avgångstider med realtidsdata(om det finns tillgängligt).<
+- Reconstruction: Används för att återskapa en kopia av en Trip med hjälp av ett rekonstruktionskontext. Resultatet
+  kommer att vara en fullständig kopia givet att underliggande data inte har ändrats.<
+- GisRoute: Tjänsten används för att få detaljerad information om färdväg.
+- XSD: Returnerar en xsd för ovanstående service-svar.
 
-The journey planner is invoked with a GET request per service with UTF-8 URL-encoded GET parameters.
+Reseplaneraren anropas med en GET-request per tjänst med UTF-8 url-kodade GET-parametrar.
 
-## Changes Since the Previous Version
+## Förändringar sedan tidigare version
 
-A change has been made that may affect implemented applications. For version 3.1 of the journey planner, the response format regarding the "crd" elements in the
-polyline describing the detailed route has changed. The points in this version are represented by double values compared to version 3.0, which represented them
-as integers.
+En ändring har genomförts som kan påverka implementerande applikationer. För version 3.1 av reseplaneraren så har svarsformatet avseende crd-elementen i den
+polyline som beskriver detaljerad färdväg ändrats. Punkterna representeras i denna version av double-tal jämfört med version 3.0 som representerade dem som
+heltal.
 
-Previous version (3.0): `<crd>17973032</crd><crd>59360501</crd><crd>9</crd> <crd>18</crd>`
+Tidigare version (3.0): *<crd>17973032</crd><crd>59360501</crd><crd>9</crd> <crd>18</crd>*
 
-Travelplanner 3.1: `<crd>17.973032</crd><crd>59.360501</crd><crd>9.0E-6</crd><crd>1.8E-5</crd>`
+Travelplanner 3.1: *<crd>17.973032</crd><crd>59.360501</crd><crd>9.0E-6</crd><crd>1.8E-5</crd>*
 
 ## URL
 
-- **Trip:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=<YOUR API KEY>&<parameters>`
-- **JourneyDetail:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=<YOUR API KEY>&<parameters>`
-- **Reconstruction:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<YOUR API KEY>&<parameters>`
-- **Gisroute**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=<YOUR API KEY>&<parameters>
-- **TTI**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<YOUR API KEY>
-- **XSD:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<YOUR API KEY>`
+- Trip: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&amp;<parametrar>`
+- Journey detail: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
+- Recontruction: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
+- Gisroute: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=<DIN APINYCKEL>&<parametrar>
+- TTI: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
+- XSD: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`
 
 {{% warning %}}
-The old domain and base URL `https://api.sl.se/api2/TravelplannerV3_1/` has changed on January 15th, and will stop working on March 15th.
-Query parameters, response bodies and API keys remain unchanged.
+Den tidigare domänen och bas-URL:en `https://api.sl.se/api2/TravelplannerV3_1/` har ändrats den 15:e januari, och kommer sluta fungera den 15e mars 2024.
+Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
 
-### API Key Levels
+### API-nyckelnivåer
 
-| Level  | Max Requests/Minute | Max Requests/Month |
-|--------|---------------------|--------------------|
-| Bronze | 30                  | 10,000             |
-| Silver | 60                  | 500,000            |
-| Gold   |                     | As needed          |
+| Nivå   | Max anrop/minut | Max anrop/månad |
+|--------|-----------------|-----------------|
+| Brons  | 30              | 10 000          |
+| Silver | 60              | 500 000         |
+| Guld   |                 | Efter behov     |
 
 ## Format
 
-JSON or XML according to the extension of the service call.
+Json eller Xml enligt ändelse till serviceanropet.
 
 ## Trip
 
-### Parameters
+### Parametrar
 
-| Name              | Description                                  | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|-------------------|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Lang              | Language (en/sv/de)                          | Language in the response, default is de.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| originId          | Internal ID for the starting point,          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| originExtId       | Starting point, ID                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| originCoordLat    | Latitude for the starting point              | Must be provided together with originCoordLong.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| originCoordLong   | Longitude for the starting point             | Must be provided together with originCoordLat.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| destId            | Intent ID for the destination.               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| destExtId         | Destination, ID.                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| destCoordLat      | Latitude for the destination.                | Must be provided together with destCoordLong.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| destCoordLong     | Longitude for the destination.               | Must be provided together with destCoordLat                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Via               | List of specifications for stations to pass. | Optional Separated by ; in the following format: `viaId\|waitTime\|status\|products` <ul><li>viaId, internal or external ID of the stop/station to pass</li><li>waitTime, minutes to stop at the passed stop/station (optional)</li><li>status, one of EXR (boarding and alighting required), NER (boarding not required), NXR (alighting not required), NEXR (boarding and alighting not required). Optional, EXT is default.</li><li>products, transport modes for via, see Product</li></ul> Ex1. via two stops, 9001;9117 Ex2, via two stops with 15 and 10 minutes waiting time, 9001\|15;9117\|10 |
-| viaId             | ID for station to pass.                      | Optional Single ID for a stop/station to pass, e.g., 9001.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| viaWaitTime       | Waiting time for the passed station          | Optional Number of minutes to spend at the via-station specified with viaId.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Avoid             | List of stations to avoid passing.           | Optional Separated by ; in the following format: `avoidId\|avoidStatus` <ul><li>avoidId, internal or external ID for stop/station to avoid</li><li>avoidStatus, one of NPAVO (do not pass), NCAVO (do not change at)</li></ul> Optional.                                                                                                                                                                                                                                                                                                                                                                |
-| avoidID           | ID for station to avoid.                     | Optional Internal or external ID for stop/station to avoid for changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| changeTimePercent | Extended change time, percentage (100-500)   | Optional Percentage extension of the originally calculated time to manage a change. For example, 200 doubles the time that the system will use for the traveler to make a change. Default 100.                                                                                                                                                                                                                                                                                                                                                                                                          |
-| minChangeTime     | Minimum change time (min)                    | Optional Minimum number of minutes to be used when changing.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| maxChangeTime     | Maximum change time                          | Optional Maximum number of minutes to be used when changing.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| addChangeTime     | Extended change time                         | Optional Number of minutes added to the calculated change time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| maxChange         | Maximum number of changes (0-11)             | Optional Maximum number of changes on suggested journeys.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Date              | Date YYYY-MM-DD                              | Optional. Date for the journey. Default is today's date (server time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Time              | Time HH:MM                                   | Optional Time for the journey. Default is the current time (server time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| searchForArrival  | 0 or 1                                       | Optional. If 1, use the specified date and time for arrival instead of departure.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| numF              | 0-6                                          | Optional Minimum number of journeys after the specified start time, default is 4. numF and numB together cannot exceed 6.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| numB              | 0-6                                          | Optional. Minimum number of journeys before the specified start time, default is 1. numF and numB together cannot exceed 6.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Products          | Transport modes, integer                     | Optional Combination value of desired transport modes if not all should be used in the search for journeys. Bitmask as follows: Commuter train (1) Metro (2) Local train/tram (4) Bus (8) Not in use (16) Not in use (32) Boat type (64) Local traffic (128) The value is given as the integer value of the combined bitmask, e.g., Bus and boat, 8+64 = 72                                                                                                                                                                                                                                             |
-| Lines             | Included line filtering.                     | Line or lines, separated by commas, to be used to filter results, exclamation mark is used for exclusion of lines. E.g.: lines=55,122 (only lines 55 and 122) lines=!19 (Not line 19)                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Context           | Earlier or later journeys                    | Optional. Parameter that specifies the starting point for searching for later or earlier journeys. The value is obtained from the result value srcF or srcB in a call to the trip service. See 2.4.2                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Poly              | 0 or 1                                       | Optional. Specifies whether detailed routes should be calculated for the results. For a description of the polyline, see 2.4.5. Default is 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Passlist          | 0 or 1                                       | Optional. Specifies whether stops/stations passed during the journey should be retrieved. Default is 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| originWalk        | 0 or 1 + detailing                           | Optional, Default 1 Specifies whether a journey can start with a walking distance. For detailing distance, min and max number of meters can be specified as `1,[min distance],[max distance],[speed],[as the crow flies]` Speed is specified as follows: &lt; 100: faster = 100: normal (default) &gt; 100: slower As the crow flies: 1= on 0= off Example: `1,0,1000,0,1` Allows fast walking but a maximum of 1000 meters as the crow flies.                                                                                                                                                          |
-| destWalk          | 0 or 1 + detailing                           | Optional. Similar to originWalk but for destination.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| originBike        |                                              | Optional. Similar to originWalk Comment: To get accurate results, you need to disable walking search, i.e., set the parameter originWalk=0                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| destBike          |                                              | Optional. Similar to originWalk Comment: To get accurate results, you need to disable walking search, i.e., set the parameter destWalk=0                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| originCar         |                                              | Not used at the moment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| destCar           |                                              | Not used at the moment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| originTaxi        |                                              | Not used at the moment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| destTaxi          |                                              | Not used at the moment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| originPark        |                                              | Not used at the moment Enables "Park and Ride" at the beginning of a journey. To fine-tune the distance to the next station, see originWalk                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| destPark          |                                              | Not used at the moment Enables "Park and Ride" at the end of a journey. To fine-tune the distance to the next station, see originWalk                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Namn              | Beskrivning                                      | Kommentar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|-------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lang              | Språk (en/sv/de)                                 | Språk i svar, default de.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| originId          | Internt id för startpunkt,                       |
+| originExtId       | Startpunkt, id                                   | Kan antingen vara siteid eller ett alias, site eller akronym. Exempel: 300109001, 9001, TCE En startpunkt måste anges med ett av originId, originExtId eller orgiginCoordLat/originCoordLong                                                                                                                                                                                                                                                                                                                                                                                                    |
+| originCoordLat    | Latitud för startpunkt                           | Måste anges tillsammans med originCoordLong.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| originCoordLong   | Longitud för startpunkt                          | Måste anges tillsammans med originCoordLat.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| destId            | Intent id för destination.                       |
+| destExtId         | Destination, id.                                 | Kan antingen vara siteid eller ett alias, site eller akronym. Exempel: 300109001, 9001, TCE. En destination måste anges med ett av originId, originExtId eller orgiginCoordLat/originCoordLong                                                                                                                                                                                                                                                                                                                                                                                                  |
+| destCoordLat      | Latitud för destination                          | Måste anges tillsammans med destinationCoordLong.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| destCoordLong     | Longitud för destination                         | Måste anges tillsammans med destinationCoordLat                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Via               | Lista av specification av stationer att passera. | Valfritt Separeras av ; i följande format: `viaId\|vänttid\|status\|produkter` <ul><li>viaId, internt eller extert id på hållplats/station att passera</li><li>vänttid, minuter att stanna på passerad hållplats/station (valfritt)</li><li>status, ett av EXR (av- och påstigning krävs), NER (påstigning krävs ej), NXR (avstigning krävs ej), NEXR (av och påstigning krävs ej). Valfritt, EXT är default.</li><li>produkter, trafikslag för via, se Produkt</li></ul> Ex1. via två hållplatser, 9001;9117 Ex2, via två hållpatser med 15 respektive 10 minuters väntetid, 9001\|15;9117\|10 |
+| viaId             | Id för station att passera                       | Valfritt Enskilt id för en hållplats/station att resa via, ex 9001.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| viaWaitTime       | Vänttid för passerad station                     | Valfritt Antal minuter som ska spenderas på via-station angiven med viaId.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Avoid             | Lista av stationer att undvika att resa via.     | Valfritt Separeras av ; i följande format: `avoidId\|avoidStatus` <ul><li>avoidId, internt eller externt id för hållplats/ station att undvika</li><li>avoidStatus, ett av NPAVO (passera ej), NCAVO (byt ej vid)</li></ul> Valfritt.                                                                                                                                                                                                                                                                                                                                                           |
+| avoidID           | Id för station att undvika                       | Valfritt Internt eller externt id för hållplats/station att undvika för byten                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| changeTimePercent | Utökad bytestid, procentuell (100-500)           | Valfritt Procentuell utökning av ursprungligt beräknad tid för att hantera ett byte. Ex, 200 dubblar tiden som systemet kommer använda för att resenären ska hinna med ett byte. Default 100.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| minChangeTime     | Minsta bytestid (min)                            | Valfritt Minsta antal minuter som ska användas vid byten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| maxChangeTime     | Högsta bytestid                                  | Valfritt Flest antal minuter som ska användas vid byten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| addChangeTime     | Utökad bytestid                                  | Valfritt Antal minuter som läggs till beräknad bytestid.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| maxChange         | Max antal byten (0-11)                           | Högst antal byten på föreslagna resor.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Date              | Datum åååå-MM-DD                                 | Valfritt. Datum för resa. Default är dagens datum (servertid)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Time              | Klockslag TT:MM                                  | Valfritt Klockslag för resa. Default är aktuellt klockslag (servertid)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| searchForArrival  | 0 eller 1                                        | Valfritt. Om 1 används angivna date och time för ankomsttid istället för avgångstid.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| numF              | 0-6                                              | Valfritt Min antal resor efter angiven starttid, default 4. numF och numB tillsammans kan ej överstiga 6.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| numB              | 0-6                                              | Valfritt. Min antal resor före angiven starttid, default 1. numF och numB tillsammans kan ej överstiga 6.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Products          | Trafikslag, heltal                               | Valfritt Kombinationsvärde av önskade trafikslag om inte alla ska användas vid utsökning av resor. Bitmask enligt följande: Pendeltåg (1) Tunnelbana (2) Lokalbana/spårvagn (4) Buss (8) Ej i bruk (16) Ej i bruk (32) Båt typ (64) Närtrafik (128) Värdes anges som heltalsvärdet av den kombinerade bitmasken, ex Buss och båt, 8+64 = 72                                                                                                                                                                                                                                                     |
+| Lines             | Inkluderade filtrering av linjer.                | Linje eller linjer, separerade med kommatecken som ska användas för att filtrera resultat, utropstecken används för exkludering av linjer. Ex: lines=55,122 (endast linje 55 och 122) lines=!19 (Ej linje 19)                                                                                                                                                                                                                                                                                                                                                                                   |
+| Context           | Tidigare eller senare resor                      | Valfritt. Parameter som anger startpunkt för att söka senare eller tidigare resor. Värdet fås av resultatvärdet srcF eller srcB i ett anrop till trip-tjänsten. Se 2.4.2                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Poly              | 0 eller 1                                        | Valfritt. Anger om detaljerade färdvägar ska beräknas för resultaten. För beskrivning av polyline se 2.4.5. Default 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Passlist          | 0 eller 1                                        | Valfritt Anger om hållplatser/stationer som passeras på resan ska hämtas. Default 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| originWalk        | 0 eller 1 + detaljering                          | Valfritt, Default 1 Anger om en resa ska kunna inledas med en gångsträcka. För detaljering av avstånd kan min och max antal metrar och anges som `1,[minavstånd],[maxavstånd],[hastighet],[fågelväg]` Hastighet anges som följande: &lt; 100: snabbare = 100: normalt (default) &gt; 100: lågsammare Fågelväg: 1= på 0= av Ex. `1,0,1000,0,1` Tillåt snabb gång men maximalt 1000 meter med fågelväg.                                                                                                                                                                                           |
+| destWalk          | 0 eller 1 + detaljering                          | Valfritt. Som originWalk fast för destination.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| originBike        |                                                  | Valfritt. Som originWalk Kommentar: För att få ut korrekt resultat så behöver man inaktivera sökning med gång, dvs sätta parametern originWalk=0                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| destBike          |                                                  | Valfritt. Som originWalk Kommentar: För att få ut korrekt resultat så behöver man inaktivera sökning med gång, dvs sätta parametern destWalk=0                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| originCar         |                                                  | Används ej i dagsläget                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| destCar           |                                                  | Används ej i dagsläget                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| originTaxi        |                                                  | Används ej i dagsläget                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| destTaxi          |                                                  | Används ej i dagsläget                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| originPark        |                                                  | Används ej i dagsläget Möjliggör &ldquo;Parkera och åk&rdquo; I början av en resa. För att finjustera avståndet till nästa station, se originWalk                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| destPark          |                                                  | Används ej i dagsläget Möjliggör &ldquo;Parkera och åk&rdquo; I slutet av en resa. För att finjustera avståndet till nästa station, se originWalk                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-### Search for Earlier or Later Journeys
+### Sökning efter tidigare eller senare resor
 
-In the result from the trip, two output parameters, scrB and scrF, can be used to search for earlier (scrB) or later (scrF) departures. This is done by sending
-the same search to the trip with the _context_ parameter set to the value of the one to be used.
+I resultat från trip kommer två utdataparametrar, scrB och scrF, som kan användas för att söka tidigare (scrB) eller senare (scrF) avgångar. Detta görs genom
+att skicka in samma sökning till trip med parametern _context_ satt till värdet av den av de två som vill användas.
 
-### Notes
+### Anmärkningar
 
-In the search results, there are different types of notes.
+I sökresultaten finns olika typer av anmärkningar.
 
-Fixed notes are entered as "notes". Fixed notes are notes linked to the departure in the timetable, such as pre-booking by phone.
+Fasta anmärkningar är inlagda som ”notes”. Fasta anmärkningar är anmärkningar kopplade till avgången i tidtabellen, som tex förhandsbokning på telefon.
 
-Disruption messages are entered as "Messages".
+Störningsmeddelanden ligger inlagda som ”Messages”.
 
-### Prices
+### Priser
 
-Prices for a journey come in "TariffResult," and the prices are specified as integers in öre. For example:
+Priser för en resa kommer i ”TariffResult”, priserna är angivna som heltal i ören. Exempelvis:
 
 ```xml
 
@@ -145,9 +136,9 @@ Prices for a journey come in "TariffResult," and the prices are specified as int
 </TariffResult>
 ```
 
-### Detailed Routes
+### Detaljerade färdvägar
 
-Trip and journeyDetail can provide a detailed route for the result in "Polyline", for example:
+Trip och journeyDetail kan leverera en detaljerad färdväg för resultatet i ”Polyline”, exempelvis:
 
 ```xml
 
@@ -161,43 +152,51 @@ Trip and journeyDetail can provide a detailed route for the result in "Polyline"
 </Polyline>
 ```
 
-The coordinate list consists of a starting longitude and latitude, and the following differences from the previous point. In the example above, a line
-consisting of points (longitude, latitude):
+Koordinatlistan består av en startlongitud och latitud, och följande differenser från föregående punkt. Dvs i exemplet ovan en linje bestående av punkterna (
+longitud, latitud):  
 (18.061711,59.331331),( 18.062017, 59.332446),( 18.061999, 59.332455)
 
-### Real-time
+### Realtid
 
-Real-time is currently available for buses, commuter trains, tram and Roslagsbanan.
+Realtid finns för nuvarande för bussar, pendeltåg, tvärbanan och roslagsbanan.
 
-Real-time is a forecast, i.e., it is approximate.
+Realtiden är en prognos, dvs, den är ungefärlig.
 
-If there is real-time, this is indicated in separate fields. For real-time in the travel proposal, "rtTime" and "rtDate" are added to the response. The old
-fields "time" and
-"date" are still there so that you know what has changed from/to.
+Om det finns realtid så anges detta i separata fält. För realtidstider i reseförslaget så läggs ”rtTime” och ”rtDate” till i svaret. De gamla fälten ”time” och
+”date” är kvar så att man vet vad det ändrats från/till.
 
-In this version of the API, real-time is not parameter-driven but is always delivered if data is available.
+I denna version av api:et är realtid inte parameterstyrt utan levereras alltid om data finns tillgängligt.
 
-### Response Format
+### Svarsformat
 
-The API can return both XML and JSON.
-The JSON content is automatically converted from XML according to the following rules:
+API:et kan returnera både xml och json.  
+Json-innehållet är automatiskt konverterat från xml enligt följande regler:
 
-- Element names become object properties
-- Text (PCDATA) becomes an object property with the name `$`: <a>foo</a> becomes `{ "a": { "$" : "foo" } }`
-- Nested elements become nested properties: `<a><b>foo</b><c>foo</c></a>` becomes `{ "a": { "b" : { "$": "foo" }, "c": { "$": "foo"} } }`
-- If there are multiple elements with the same name, it is translated into a JSON array, e.g.: `<a><b>foo1</b><b>foo2</b></a>`
-  becomes `{ "a": { "b" : [{"$": foo1" }, {"$": "foo2" }] } }`
-- Attribute names become object properties: `<a atb="foo1">foo2</a>` becomes `{ "a": { "atb" : "foo1", "$" : "foo2" } }`
+* Elementnamn blir objektegenskaper
+* Text (PCDATA) blir en objektegenskap med namnet "$"  
+  <a>foo</a> blir { "a": { "$" : "foo" } }
+* Nestlade element blir nestlade egenskaper:  
+  <a><b>foo</b><c>foo</c></a>  
+  blir  
+  { "a": { "b" : { "$": "foo" }, "c": { "$": "foo"} } }
+* Om det finns multipla element med samma namn så översätts det till en json array ex:  
+  <a><b>foo1</b><b>foo2</b></a>  
+  blir  
+  { "a": { "b" : \[{"$": foo1" }, {"$": "foo2" }\] } }
+* Attributnamn blir objektegenskaper  
+  <a atb="foo1">foo2</a>  
+  blir  
+  { "a": { "atb" : "foo1", "$" : "foo2" } }
 
-### Response Structure
+### Svarsstruktur
 
-In the table below, the XML structure is described. Some obvious attributes are not included as it becomes very much otherwise, such as Lat and Lon, to give an
-easier overview of what is less obvious.
-For more information about various attributes and elements so there is also xsd'n hafasRestTrip.xsd.
+I nedan tabell beskrivs den xml struktur som finns. Vissa uppenbara attribut är inte med då det blir väldigt mycket annars, som t.ex. Lat och Lon för att ge en
+lättare överblick av det som är mindre självklart.  
+För mer information om olika attribut och element så finns också xsd’n hafasRestTrip.xsd.
 
-Example explanation of the structure in the table below:
-element1/element2 => element2 is a sub-element to element1.
-element1.attribut1 => attribut1 is an attribute of element1.
+**Exempel förklaring av nedan struktur i tabellen:**  
+element1/element2 => element2 är ett underelement till element1.  
+element1.attribut1 => attribut1 är ett attribut till element1.
 
 | Element                                       | Notes                                                                                                                                                                                                                                                                        |
 |-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -739,38 +738,39 @@ element1.attribut1 => attribut1 is an attribute of element1.
 
 ## JourneyDetail
 
-JourneyDetail is used to obtain detailed information about a journey/leg.
-This is based on first calling trip. (See 2.4)
-In the response from trip, you get a reference, for example,
+<p>Journeydetail används för att få detaljerad information kring en resa/delresa (<em>Leg</em>)</p>
+<p>Detta bygger på att man först anropat trip. (Se 2.4)</p>
+<p>I svaret från trip får man en referens, t.ex.</p>
 
 ```xml
-<JourneyDetailRef ref="1|3598|0|74|13062017">...</JourneyDetailRef>
+
+<JourneyDetailRef ref="1|3598|0|74|13062017">
 ```
 
-This reference is used when calling JourneyDetail for the specific journey. The entire line stretch
-for the specified journey is returned. If you only want information about stops in the part of the journey
-that a search with trip provides, it is recommended to set passlist=1 in trip. This is an extension from api-version 2.
+Denna referens använder man när man ska anropa Journeydetail för den specifika resan. Hela linjesträckningen
+för angiven resa returneras, önskar man bara information om hållplatser i den del av resa som en sökning
+med trip ger rekomenderas att sätta passlist=1 i trip. Detta är en utökning från api-version 2.
 
-### Parameters
+### Parametrar
 
-| Name | Description                    | Comment                                                                                                                                       |
-|------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| id   | Reference from Trip, see above | It may be necessary to escape the \| character by its URL encoding %7C.                                                                       |
-| date | yyyy-MM-DD                     | Optional<br>Provides the corresponding journey on another day, if possible                                                                    |
-| poly | 0 or 1                         | Optional.<br>Indicates whether detailed routes should be calculated for the results. For a description of the polyline, see 2.4.5. Default 0. |
+| Namn | Beskrivning                   | Kommentar                                                                                                                 |
+|------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| id   | Referensen från Trip, se ovan | It may be necessary to escape the \| character by its URL encoding %7C.                                                   |
+| date | åååå-MM-DD                    | Valfritt<br>Ger motsvarande resa annan dag, om möjligt                                                                    |
+| poly | 0 eller 1                     | Valfritt.<br>Anger om detaljerade färdvägar ska beräknas för resultaten. För beskrivning av polyline se 2.4.5. Default 0. |
 
-Example:
+Exempel:
 
 ```text
 https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;id=1|3598|0|74|13062017
 ```
 
-# Real-time
+# Realtid
 
 If there is real-time information, it is indicated in separate extra fields. For real-time times in JourneyDetail, "rtArrTime," "rtArrDate," "rtDepTime," and "
 rtDepDate" are added to the response. The old fields "arrTime," "arrDate," "depTime," and "depDate" are retained to track changes.
 
-# Response Structure
+# Svarsstruktur
 
 In the table below, the XML structure is described. Some obvious attributes are not included to keep it concise, such as Lat and Lon for a clearer overview of
 less obvious elements.
@@ -780,9 +780,9 @@ less obvious elements.
 - element1/element2 => element2 is a sub-element to element1.
 - element1.attribut1 => attribut1 is an attribute of element1.
 
-| Name                     | Data Type | Description                                                                                                                     |
+| Namn                     | Datatyp   | Beskrivning                                                                                                                     |
 |--------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------|
-| JourneyDetail            | Element   | Root element.                                                                                                                   |
+| JourneyDetail            | Element   | Rootelement.                                                                                                                    |
 | JourneyDetail/Notes      | Element   | Contains notes to be displayed for the journey.                                                                                 |
 | JourneyDetail/Stops      | List      | List of stops for this journey.                                                                                                 |
 | Stops/Stop               | Element   | Stop contains the name of the stop, route index, latitude, longitude, departure date and time, arrival date and time.           |
@@ -798,8 +798,8 @@ less obvious elements.
 
 ## GisRoute
 
-This service is used to obtain detailed information about the route. Since Trip does not return a polyline for walking and cycling, this is mainly used to draw
-the cycling and walking path on the map. In the response from trip, a leg is obtained:
+Tjänsten används för att få detaljerad information om färdväg. Eftersom Trip inte returnerar polyline för gångväg och cykel så används detta framför allt för
+att rita ut cykel och gångväg på karta. I svaret från trip fås en delresa:
 
 ```xml
 
@@ -813,29 +813,28 @@ the cycling and walking path on the map. In the response from trip, a leg is obt
                  time="08:51:00"/>
     <GisRef ref="G|1|G@F|A=1@O=Stockholm City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm, Drottninggatan 22@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§|"/>
 </Leg>
-
 ```
 
-The value in the "ref" in the GisRef object is used as input for gisroute.
+Värdet i ref i objektet GisRef är det som används som input till gisroute
 
-### Parameters
+### Parametrar
 
-| Name | Description                    | Description                                                                                  |
-|------|--------------------------------|----------------------------------------------------------------------------------------------|
-| ctx  |                                | The value in ctxRecon obtained in the response from trip.                                    |
-| lang | sv = Swedish<br />en = English |                                                                                              |
-| poly | 0 or 1                         | Optional. Specifies whether detailed routes should be calculated for the results. Default 0. |
+| Namn | Beskrivning                     | Description                                                                      |
+|------|---------------------------------|----------------------------------------------------------------------------------|
+| ctx  |                                 | Värdet i ctxRecon som fås i svaret från trip.                                    |
+| lang | sv = svenska<br />en = engelska |                                                                                  |
+| poly | 0 eller 1                       | Valfritt. Anger om detaljerade färdvägar ska beräknas för resultaten. Default 0. |
 
-Example:
+Exempel:
 
 ```text
-http://https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;YOUR API KEY&gt;&amp;ctx=G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C&amp;lang=sv&amp;poly=1
+http://https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;DIN APINYCKEL&gt;&amp;ctx=G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C&amp;lang=sv&amp;poly=1
 ```
 
-### Response Structure
+### Svarsstruktur
 
-The response from gisroute is the same as for the result from trip, with the difference that there is only one journey in the result. It also includes an object
-to describe the route, GisRoute:
+Svaret från gisroute är detsamma som för resultatet från trip, med skillnad att det bara är en resa med i resultatet. Det tillkommer även ett objekt för att
+beskriva färdvägen, GisRoute:
 
 ```xml
 
@@ -881,72 +880,72 @@ to describe the route, GisRoute:
 </GisRoute>
 ```
 
-The segments describe parts of the journey, and the polyline describes coordinates in the same way documented in the Trip.
+Segmenten beskriver delar ur resan och polyline beskriver koordinater på samma sätt som dokumenteras i Trip.
 
 ## Reconstruction
 
-To reconstruct a journey retrieved via the trip service, the reconstruction service can be used (for example, for sharing functions or similar).
+För att återskapa en resa framsökt via tjänsten trip kan tjänsten reconstruction användas (exempelvis för delningsfunktion eller liknande)
 
-In the response from trip, you get:
+I svaret från trip fås:
 
 ```xml
 
 <Trip idx="0" ctxRecon="T$A=1@O=T-Centralen@L=400101052@a=128@$A=1@O=Slussen@L=400101012@a=128@$201706140859$201706140902$ $" checksum="774B67E9_4" tripId="C-0"
-      duration="PT3M">...</Trip>
+      duration="PT3M">
 ```
 
-The value in ctxRecon is used as input for reconstruction
+Värdet i ctxRecon är det som används som input till reconstruction
 
-### Parameters
+### Parametrar
 
-| Name | Description        | Description                                                                       |
-|------|--------------------|-----------------------------------------------------------------------------------|
-| ctx  |                    | The value in ctxRecon obtained in the response from trip.                         |
-| poly | 0 or 1             | Optional. Specifies whether detailed routes should be calculated for the results. |
-| date | Date< (YYYY-MM-DD) | Optional. Tries to reconstruct a journey on the specified date, if possible.      |
+| Namn | Beskrivning         | Description                                                                |
+|------|---------------------|----------------------------------------------------------------------------|
+| ctx  |                     | Värdet i ctxRecon som fås i svaret från trip.                              |
+| poly | 0 eller 1           | Valfritt. Anger om detaljerade färdvägar ska beräknas för resultaten.      |
+| date | Datum< (ÅÅÅÅ-MM-DD) | Valfritt. Försöker rekonstruera en resa på specificerat datum, om möjligt. |
 
-Example:
+Exempel:
 
 ```text
 https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
 ```
 
-## Response Structure
+## Svarsstruktur
 
-The response from reconstruction is the same as the result from trip, with the difference that there is only one journey in the result.
+Svaret från reconstruction är detsamma som för resultatet från trip, med skillnad att det bara är en resa med i resultatet.
 
 ## XSD
 
-Returns an XSD containing definitions for all the components of the response structures for the services in SL Reseplanerare 3.
+Returnerar en xsd innehållandes definioner för alla de ingående delarna av svarsstrukturerna för tjänsterna i SL Reseplanerare 3.
 
-### Parameters
+### Parametrar
 
-No specific parameters are used for this service.
+Inga specifika parametrar används för denna tjänst.
 
-Example:
+Exempel:
 
 ```text
 https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
 ```
 
-## TTI – Time Table Info
+## TTI – Time table info
 
-The Time Table Info service shows for which time period timetable data is available in the journey planner. The information can, for example, be used to
-highlight a searchable time period in a calendar.
+Time table info service visar för vilken tidsperiod det finns tidtabellsdata tillgängligt i reseplaneraren. Informationen kan t ex användas för att markera
+sökbar tidsperiod i en kalender.
 
-### Parameters
+### Parametrar
 
-No specific parameters are used for this service.
+Inga specifika parametrar används för denna tjänst.
 
-Example:
+Exempel:
 
 ```text
 https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
 ```
 
-### Response Structure
+### Svarsstruktur
 
-The response contains information about the valid search period, in the example below, the date interval is from 2016-12-11 to 2018-12-08.
+Svaret innehåller information om mellan vilka datum som sökning är giltig, i nedanstående fall är datumintervallet 2016-12-11 till 2018-12-08.
 
 ```xml
 
@@ -959,23 +958,22 @@ The response contains information about the valid search period, in the example 
 </TimetableInfoList>
 ```
 
-## Error Messages
+## Felmeddelanden
 
-| Status Code | Message                                                                                      |
-|-------------|----------------------------------------------------------------------------------------------|
-| 1001        | Problem with the request: Key is not present in the requests                                 |
-| 1002        | Problem with the request: Key is invalid                                                     |
-| 1003        | Invalid API.                                                                                 |
-| 1004        | Problem with the request: This API is currently not available for keys with priority above 2 |
-| 1005        | Key exists but not for this API<br>Problem with the request: Invalid API for key             |
-| 1006        | Too many requests per minute for the used profile.                                           |
-| 1007        | Too many requests per month for the used profile.                                            |
+| Statuskod | Meddelande                                                                      |
+|-----------|---------------------------------------------------------------------------------|
+| 1001      | Nyckel har ej skickats med.                                                     |
+| 1002      | Nyckel är ogiltig                                                               |
+| 1003      | Ogiltigt api                                                                    |
+| 1004      | Api tillfälligt inte tillgängligt                                               |
+| 1005      | Nyckel finns, men ej för detta api<br>problem with request: Invalid api for key |
+| 1006      | För många anrop per minut, för den profil som används                           |
+| 1007      | För många anrop per månad, för den profil som används                           |
 
-## Differences compared to TravelPlannerV3
+## Skillnader jämfört med TravelPlannerV3
 
-The XSD has been updated, but apart from the changes listed below, the existing functions are not affected.
+Xsd:n är uppdaterad, men förutom nedanstående ändring så påverkas inte de befintliga funktionerna.
 
-**Changes:**
+**Ändringar:**
 
-- The format of coordinates in the polyline in the Trip request has been modified. They are now described using double values, and difference values are
-  indicated with exponents.
+- Formatet på koordinater i polyline i Trip-anropet har ändrats. Numera beskrivs de med double-värden och differensvärden anges med exponent.

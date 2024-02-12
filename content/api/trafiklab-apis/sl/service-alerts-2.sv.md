@@ -1,24 +1,13 @@
 ---
-title: SL Service alerts 2
+title: SL Service alerts v2.0 (Störningsinformation 2)
 weight: 500
 date: 2014-03-14
 aliases:
 
-- /api/sl-storningsinformation-2
-- /api/sl-storningsinformation-2/documentation
-- /api/sl-storningsinformation-2/nivaer
-- /api/sl-storningsinformation-2/console
-- /api/sl-storningsinformation-2/konsol
-- /node/12605
-- /node/12605/documentation
-- /node/12605/nivaer
-- /node/12605/console
-- /node/12605/konsol
-
 ---
 
 {{% error %}}
-Due to technical reasons, this API is being replaced by [SLs Deviations API](deviations.md) and will completely stop working in the near future.
+Av tekniska anledningar ersätts detta API med [SLs Deviations API](deviations.md). API:et kommer sluta funka i den nära framtiden.
 {{% /error %}}
 
 <h2>Beskrivning</h2>

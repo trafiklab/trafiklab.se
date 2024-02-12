@@ -1,0 +1,397 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "open-api-deviation",
+    "description": "deliver deviationinfomation API",
+    "version": "v1"
+  },
+  "host": "deviations.integration.sl.se",
+  "basePath": "/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/messages": {
+      "get": {
+        "description": "Returns a list of active or future deviation messages (the latest version of publishable deviation messages)\n- Returnerar information om nu gällande, eller framtida störningar (den senaste publicerade versionen)\n",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "future",
+            "description": "Include future deviations\n- Inkludera framtida störningar\n",
+            "in": "query",
+            "default": false,
+            "type": "boolean"
+          },
+          {
+            "name": "transport_authority",
+            "description": "Filter on a specific transport authority id\n- Filtrera på trafikhuvudman genom att ange ett id för en trafikhuvudman\n",
+            "in": "query",
+            "type": "integer"
+          },
+          {
+            "name": "site",
+            "description": "Only include results with these site ids \n- Filtrera på siter genom att ange ett eller flera site-nummer\n",
+            "in": "query",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "line",
+            "description": "Only include results with these line ids\n- Filtrera på Linjer genom att ange ett eller flera linjenummer\n",
+            "in": "query",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "transport_mode",
+            "description": "Only include results with this transport mode\n- Filtrera på trafikslag genom att ange ett eller flera trafikslag\n",
+            "in": "query",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "enum": [
+                "BUS",
+                "METRO",
+                "TRAM",
+                "TRAIN",
+                "SHIP",
+                "FERRY",
+                "TAXI"
+              ],
+              "example": "METRO",
+              "type": "string"
+            }
+          },
+          {
+            "name": "AcceptEncoding",
+            "description": "Compression algorithm the user can process in the response to this request (to enable gzip compressed responses for client that accept it)",
+            "in": "header",
+            "default": "gzip",
+            "enum": [
+              "gzip",
+              "identity",
+              "deflate"
+            ],
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "headers": {
+              "Content-Encoding": {
+                "description": "Content-Encoding of response to enable gzip compressed responses for client that accept it",
+                "enum": [
+                  "gzip"
+                ],
+                "type": "string"
+              },
+              "Cache-Control": {
+                "description": "Cache-Control containing max-age, as described in RFC 7234, 5.2",
+                "type": "string"
+              },
+              "ETag": {
+                "description": "Entity Tag, containing a strong validator, as described in RFC 7232, 2.3",
+                "type": "string"
+              },
+              "Last-Modified": {
+                "description": "Timestamp for last modification of the resource, as described in RFC 7232, 2.2",
+                "type": "string"
+              }
+            },
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DeviationMessageVersion"
+              }
+            }
+          },
+          "304": {
+            "description": "Not Modified"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "502": {
+            "description": "Bad Gateway"
+          },
+          "503": {
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "description": "Gateway Timeout"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "DeviationMessageVersion": {
+      "description": "A message version in a deviation case\n- Störningsmeddelandeversion\n",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "created",
+        "priority",
+        "scope"
+      ],
+      "properties": {
+        "version": {
+          "description": "The message version (sequential)\n- Version av störningsmeddelande\n",
+          "example": 1,
+          "type": "integer"
+        },
+        "created": {
+          "description": "When the message was created\n- Tidpunkt för skapande av störningsmeddelande\n",
+          "example": "2022-03-03T19:03:48.713+01:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "modified": {
+          "description": "When the message was last modified\n- Tidpunkt för senaste uppdateringen av störningsmeddelande\n",
+          "example": "2022-03-03T19:03:48.713+01:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "deviation_case_id": {
+          "description": "Deviation case id\n- Id för störning\n",
+          "example": 52432153,
+          "type": "integer"
+        },
+        "publish": {
+          "description": "Period when this deviation message version is valid\n- Tidsinterval som störningsmeddelande är giltigt\n",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "from"
+          ],
+          "properties": {
+            "from": {
+              "description": "This message version is valid from this time\n- Störningsmeddelandet är giltigt från denna tidpunkt\n",
+              "example": "2022-03-03T19:03:48.700+01:00",
+              "type": "string",
+              "format": "date-time"
+            },
+            "upto": {
+              "description": "This message version is not valid after this time\n- Störningsmeddelandet är giltigt till denna tidpunkt\n",
+              "example": "2022-03-03T20:03:00.000+01:00",
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "priority": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "importance_level": {
+              "example": 2,
+              "type": "integer"
+            },
+            "influence_level": {
+              "example": 3,
+              "type": "integer"
+            },
+            "urgency_level": {
+              "example": 1,
+              "type": "integer"
+            }
+          }
+        },
+        "message_variants": {
+          "description": "List of message variants.\n- Meddelandevarianter\n",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MessageVariant"
+          }
+        },
+        "scope": {
+          "$ref": "#/definitions/Scope"
+        }
+      }
+    },
+    "Scope": {
+      "description": "Entities affected by the deviation\n- Scope för störningen\n",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "stop_areas": {
+          "description": "List of stop areas.\n- Hållplatser\n",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StopArea"
+          }
+        },
+        "lines": {
+          "description": "List of lines.\n- Linjer\n",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Line"
+          }
+        }
+      }
+    },
+    "MessageVariant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "header",
+        "details"
+      ],
+      "properties": {
+        "header": {
+          "example": "Entré vid Medborgarplatsen stängd",
+          "type": "string"
+        },
+        "details": {
+          "example": "Vid Medborgarplatsen är entrén från Folkungagatan stängd på grund av underhållsarbete.",
+          "type": "string"
+        },
+        "scope_alias": {
+          "description": "Scope description summary\n- Annat namn för scope\n",
+          "example": "tunnelbanans röda linje 13",
+          "type": "string"
+        },
+        "weblink": {
+          "example": "https://sl.se",
+          "type": "string"
+        },
+        "language": {
+          "example": "sv",
+          "type": "string"
+        }
+      }
+    },
+    "StopArea": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "transport_authority",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "description": "Stop Area Id\n- Id för hållplats\n",
+          "example": 1511,
+          "type": "integer"
+        },
+        "transport_authority": {
+          "description": "Transport Authority Id\n- Id för trafikhuvudman\n",
+          "example": 1,
+          "type": "integer"
+        },
+        "name": {
+          "example": "Medborgarplatsen",
+          "type": "string"
+        },
+        "type": {
+          "description": "Type of stop area.\n- Hållplatstyp\n",
+          "example": "METROSTN",
+          "type": "string"
+        },
+        "stop_points": {
+          "description": "List of stop points.\n- Stopställen\n",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StopPoint"
+          }
+        }
+      }
+    },
+    "Line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "transport_authority",
+        "transport_mode"
+      ],
+      "properties": {
+        "id": {
+          "description": "Line Id\n- Id för linje\n",
+          "example": 17,
+          "type": "integer"
+        },
+        "transport_authority": {
+          "description": "Transport Authority Id\n- Id för trafikhuvudman\n",
+          "example": 1,
+          "type": "integer"
+        },
+        "designation": {
+          "description": "Designation\n- Beteckning\n",
+          "example": "17",
+          "type": "string"
+        },
+        "transport_mode": {
+          "$ref": "#/definitions/TransportMode"
+        },
+        "name": {
+          "description": "Line Name\n- Linjenamn\n",
+          "example": "Gröna linjen",
+          "type": "string"
+        },
+        "group_of_lines": {
+          "description": "Name used to group lines\n- Namn på grupp av linjer\n",
+          "example": "Tunnelbanans gröna linje",
+          "type": "string"
+        }
+      }
+    },
+    "StopPoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "description": "Stop Point Id\nId för stopställe\n",
+          "example": 222,
+          "type": "integer"
+        },
+        "name": {
+          "example": "Norrö",
+          "type": "string"
+        }
+      }
+    },
+    "TransportMode": {
+      "enum": [
+        "BUS",
+        "METRO",
+        "TRAM",
+        "TRAIN",
+        "SHIP",
+        "FERRY",
+        "TAXI"
+      ],
+      "example": "METRO",
+      "type": "string"
+    }
+  }
+}

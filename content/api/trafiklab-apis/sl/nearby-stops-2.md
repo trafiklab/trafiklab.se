@@ -1,673 +1,261 @@
 ---
-title: SL Nearby stops v2.0 (Närliggande hållplatser 2)
+title: SL Nearby stops 2
 weight: 310
 date: 2019-01-14
-aliases: 
-  - /api/sl-narliggande-hallplatser-2
-  - /api/sl-narliggande-hallplatser-2/dokumentation
-  - /api/sl-narliggande-hallplatser-2/nivaer
-  - /api/sl-narliggande-hallplatser-2/konsol
-  - /node/25595
-  - /node/25595/dokumentation
-  - /node/25595/nivaer
-  - /node/25595/konsol
+
 ---
-<h2>Beskrivning</h2>
-<p>Med detta API kan du få information om närliggande hållplatser till en försedd plats baserad på lat och long.</p>
 
-{{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated for the new Trafiklab website. {{% /info %}}
+## Description
 
-<h2>URL</h2>
+Using this API, you can find SL stops near a pair of coordinates.
 
-`api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
+## URL
 
-### API-nyckelnivåer
+`https://journeyplanner.integration.sl.se/v1/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
 
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 500 000         |
-| Guld   |                 | Efter behov     |
+{{% warning %}}
+The old
+URL `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>` has
+changed on December 4rd, and will stop working on March 15th.
+Query parameters, response bodies and API keys remain unchanged.
+{{% /warning %}}
 
-<h2>Format</h2>
-<p>Json eller xml enligt ändelse till serviceanropet.</p>
-<h3>Parametrar</h3>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Tvingande</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Key</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Din API nyckel.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>originCoordLat</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Lat</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>originCoordLong</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>Long</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>maxNo</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Nej</p>
-			</td>
-			<td>
-			<p>Maximalt antal resultat som önskas. 9 är default, max är 1000.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>r</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Nej</p>
-			</td>
-			<td>
-			<p>Radius runt försedd koordinat som närliggande hållplatser skall hämtas ut för. 1000 är default, max är 2000.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>products</p>
-			</td>
-			<td>
-						</td>
-			<td>
-			<p>Nej</p>
-			</td>
-			<td>
-			<p>Produktfilter, Kombinationsvärde av önskade trafikslag om inte alla ska användas vid utsökning av resor.</p>
-			<p>Bitmask enligt följande:<br />
-			Pendeltåg (1)<br />
-			Tunnelbana (2)<br />
-			Lokalbana/spårvagn (4)<br />
-			Buss (8)<br />
-			Ej i bruk (16)<br />
-			Ej i bruk (32)<br />
-			Båt typ (64)<br />
-			Närtrafik (128)</p>
-			<p>Värdes anges som heltalsvärdet av den kombinerade bitmasken, ex Buss och båt, 8+64 = 72</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>type</p>
-			</td>
-			<td>
-						</td>
-			<td>
-			<p>Nej</p>
-			</td>
-			<td>
-			<p>Typfilter för platser,<br />
-			S: sök efter endast stationer,<br />
-			P: Sök efter endast POI<br />
-			SP: Sök efter stationer och POI</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h2>Resultat</h2>
-<h3>Svarsstruktur</h3>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>serverVersion</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Versionsinformation.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>dialectVersion</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Versionsinformation.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>requestId</p>
-			</td>
-			<td>
-			<p>Long</p>
-			</td>
-			<td>
-			<p>En id som identifierar anropen.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>stopLocationOrCoordLocation</p>
-			</td>
-			<td>
-			<p>StopLocation</p>
-			</td>
-			<td>
-			<p>Innehåller själva svarsdata från tjänsten. Se ”Svarsdata” nedan.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h3>Svarsdata</h3>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>stopLocationOrCoordLocation</p>
-			</td>
-			<td>
-			<p>Lista av element</p>
-			</td>
-			<td>
-			<p>Lista med de platser som hittats. Se ”StopLocation” och ”CoordLocation” nedan.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-						</td>
-			<td>
-						</td>
-			<td>
-						</td>
-		</tr>
-	</tbody>
-</table>
-<h4>StopLocation</h4>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Id</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Reconstruction Id, se reseplanerarens dokumentation</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Name</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namn för hållplats.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>extId</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>HafasId för hållplatsen. Läs mer om HafasId i sektionen HafasId och SiteId.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Lat</p>
-			</td>
-			<td>Double</td>
-			<td>
-			<p>Lat.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Lon</p>
-			</td>
-			<td>
-			<p>Double</p>
-			</td>
-			<td>
-			<p>Long.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Weight</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Anger hur mycket en station används, ju högre värde desto större användning.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Dist</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Distans i meter från försedd koordinat i anropet.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Products</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Se beskrivning för anropsparametrar</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h4>CoordLocation</h4>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Id</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Reseplanerar reconstruction Id, se reseplanerarens documentation</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Name</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namn för POI.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Lat</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Lat.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Lon</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Long.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Dist</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Distans i meter från försedd koordinat i anropet.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Type</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Visar i nuläget endast ”POI”</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>LocationNotes</p>
-			</td>
-			<td>
-			<p>Lista av element</p>
-			</td>
-			<td>
-			<p>Se nedan</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h4>LocationNote</h4>
-<p>Namn/värde lista.</p>
-<p>Dessa värden gäller för närvarande men kan komma att ändras utan att information skickas i förväg.</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Key</strong></p>
-			</td>
-			<td>
-			<p><strong>Value</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>PI</p>
-			</td>
-			<td>
-			<p>Unikt id</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>PC</p>
-			</td>
-			<td>
-			<p>POI kategori:<br />
-			Amenity, Historic, Leisure, Shop eller Tourism<br />
-			</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>PT</p>
-			</td>
-			<td>
-			<p>POI typ: Hospital, School, Theatre, University, Castle, Park, Library, Mall, Attraction, Chalet, Museum, Viewpoint eller Zoo</p>
-						</td>
-		</tr>
-		<tr>
-			<td>
-			<p>CN</p>
-			</td>
-			<td>
-			<p>Namnet på kommunen som POI:en befinner sig i.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h3>HafasId och SiteId</h3>
-<p>Information om hur HafasId byggs på SiteId, StopId och StopAreaId.<br />
-HafasId nyttjas bland annat i Reseplanerar api’et.</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Typ</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-			<td>
-			<p><strong>Exempel</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>SiteId</p>
-			</td>
-			<td>
-			<p>3FG1EDCBA där där FGEDCBA är de 7 sista sifforna i site.number utfyllt med nollor.</p>
-			</td>
-			<td>
-			<p>SiteId: 9600</p>
-			<p>HafasId: 300109600</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopId</p>
-			</td>
-			<td>
-			<p>4FG1EDCBA där GFEDCBA är journeyPatternPoint utfyllt med nollor.</p>
-			</td>
-			<td>
-			<p>JourneyPatternPoint.Number: 56789</p>
-			<p>HafasId: 400156789</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StopAreaId</p>
-			</td>
-			<td>
-			<p>2FG1EDCBA där FEDCBA är stopArea.number utfyllt med nollor</p>
-			</td>
-			<td>
-			<p>StopArea.number: 81025</p>
-			<p>HafasId: 200181025</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h3>XSD</h3>
-<h4>Url</h4>
-<p>Exempel:<br />
-https://api.sl.se/api2/nearbystops/xsd.xml?key=&lt;DIN API NYCKEL&gt;&amp;xsdname= hafasRestLocation.xsd</p>
-<h2>Felmeddelanden</h2>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Statuskod</strong></p>
-			</td>
-			<td>
-			<p><strong>Meddelande</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1001</p>
-			</td>
-			<td>
-			<p>problem with request: Key is undefined</p>
-			<p>Nyckel har ej skickats med.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1002</p>
-			</td>
-			<td>
-			<p>problem with request: Key is invalid</p>
-			<p>Nyckel är ogiltig</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1003</p>
-			</td>
-			<td>
-			<p>Invalid api</p>
-			<p>Ogiltigt api</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1004</p>
-			</td>
-			<td>
-			<p>problem with request: This api is currently not available for keys with priority above 2</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1005</p>
-			</td>
-			<td>
-			<p>Nyckel finns, men ej för detta api</p>
-			<p>problem with request: Invalid api for key</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1006</p>
-			</td>
-			<td>
-			<p>To many requests per minute</p>
-			<p>För många anrop per minut, för den profil som används</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>1007</p>
-			</td>
-			<td>
-			<p>To many requests per month</p>
-			<p>För många anrop per månad, för den profil som används</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<h2>Övriga felmeddelanden</h2>
-<p>Felmeddelanden från api’et är idag på svenska eller engelska beroende på vilket språk som efterfrågats i urlanropet.</p>
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Statuskod</strong></p>
-			</td>
-			<td>
-			<p><strong>Meddelande</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>R0001</p>
-			</td>
-			<td>
-			<p>Unknown service method</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>R0002</p>
-			</td>
-			<td>
-			<p>Invalid or missing request parameters.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>R0007</p>
-			</td>
-			<td>
-			<p>Internal communication error.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+## Format
+
+Json or xml, as specified in the API request.
+
+## Request
+
+### API key quota levels
+
+| Level  | Max requests/minute | Max requests/month |
+|--------|---------------------|--------------------|
+| Bronze | 30                  | 10 000             |
+| Silver | 60                  | 500 000            |
+| Gold   |                     | As needed          |
+
+### Parameters
+
+| Namn            | Type    | Required | Description                                                                                                                                                                                                                                                                                                                                  |
+|-----------------|---------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Key             | String  | Yes      | Your API key                                                                                                                                                                                                                                                                                                                                 |
+| originCoordLat  | String  | Yes      | Latitude                                                                                                                                                                                                                                                                                                                                     |
+| originCoordLong | String  | Yes      | Longitude                                                                                                                                                                                                                                                                                                                                    |
+| maxNo           | Integer | No       | The desired number of results. Default 9, maximum value 1000.                                                                                                                                                                                                                                                                                |
+| r               | Integer | No       | Radius defining how far to search from the given coordinate, in meters. 1000 is default, 2000 is the maximum value..                                                                                                                                                                                                                         |
+| products        | Integer | No       | Product filter specifying which stations to include. The value is obtained by summing the desired values: <ul><li>Commuter train (1)</li><li><li>Underground (2)</li><li>Tram and light rail (4)</li><li>Bus (8)</li><li>Boat/Ferry typ (64)</li><li>Nearby traffic (Närtafik) (128)</li></ul>For example, bus and boat results in 8+64 = 72 |
+| type            | String  | No       | Type filter for stops: <ul><li>S: Stations only <li>P: Points of interests (POI) only <li>A: Addresses only <li>SP: Stations and POIs <li>SA: Stations and addresses <li>AP: Addresses and POI <li>ALL: Stations, Addresses and POI</ul>                                                                                                     |
+
+### Example call
+
+{{% tabs %}} {{% tab "Json" %}}
+
+```text
+https://journeyplanner.integration.sl.se/v1/nearbystopsv2.json?originCoordLat=59.328284&originCoordLong=18.016154&key=<YOUR KEY>
+```
+
+{{% /tab %}} {{% tab "Xml" %}}
+
+```text
+https://journeyplanner.integration.sl.se/v1/nearbystopsv2.xml?originCoordLat=59.328284&originCoordLong=18.016154&key=<YOUR KEY>
+```
+
+{{% /tab %}} {{% /tabs %}}
+
+## Response
+
+### Structure
+
+| Name                        | Type         | Description                            |
+|-----------------------------|--------------|----------------------------------------|
+| serverVersion               | String       | Technical version information          |
+| dialectVersion              | String       | Technical version information          |
+| requestId                   | Long         | A technical id identifying the request |
+| stopLocationOrCoordLocation | StopLocation | Contains the actual response data      |
+
+#### stopLocationOrCoordLocation
+
+| Name                        | Type | Description                                                                                            |
+|-----------------------------|------|--------------------------------------------------------------------------------------------------------|
+| stopLocationOrCoordLocation | List | List of the found places. All items are either a ”StopLocation” or a ”CoordLocation”, described below. |
+
+#### StopLocation
+
+| Name     | Type    | Description                                                         |
+|----------|---------|---------------------------------------------------------------------|
+| Id       | String  | Reconstruction Id, see travel planner API                           |
+| Name     | String  | Stop name                                                           |
+| extId    | String  | HafasId for this stop. See "HafasId and SiteId" below.              |
+| Lat      | Double  | Latitude                                                            |
+| Lon      | Double  | Longitude                                                           |
+| Weight   | Integer | How trafficed a station is. Higher means more traffic.              |
+| Dist     | Integer | Distance between the requested coordinate and this stop, in meters. |
+| Products | Integer | See description for request parameters                              |
+
+#### Coordlocation
+
+| Name          | Type             | Description                                                      |
+|---------------|------------------|------------------------------------------------------------------|
+| Id            | String           | Reseplanerar reconstruction Id, se reseplanerarens documentation |
+| Name          | String           | Namn för POI.                                                    |
+| Lat           | String           | Lat.                                                             |
+| Lon           | String           | Long.                                                            |
+| Dist          | String           | Distans i meter från försedd koordinat i anropet.                |
+| Type          | String           | Visar i nuläget endast ”POI”                                     |
+| LocationNotes | Lista av element | Se nedan                                                         |
+
+#### LocationNote
+
+These values are examples and subject to change.
+
+| Key | Value                                                                                                                         |
+|-----|-------------------------------------------------------------------------------------------------------------------------------|
+| PI  | Unique id                                                                                                                     |
+| PC  | POI type:Amenity, Historic, Leisure, Shop or Tourism                                                                          |
+| PT  | POI type: Hospital, School, Theatre, University, Castle, Park, Library, Mall, Attraction, Chalet, Museum, Viewpoint eller Zoo |
+| CN  | Name of the municipality in which the POI is located                                                                          |
+
+### HafasId och SiteId
+
+Information regarding how ids relate to Hafas ids used in the route planner API.
+
+| Type       | Description                                                                               | Example                                                |
+|------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| SiteId     | 3xx1xxxxx where `xx` and `xxxxx` are the 7 last digits of site.number padded with zeroes. | SiteId: 9600 → HafasId: 300109600                      |
+| StopId     | 4xx1xxxxx where `xx` and `xxxxx` is JourneyPatternPoint.number padded with zeroes.        | JourneyPatternPoint.Number: 56789 → HafasId: 400156789 |
+| StopAreaId | 2xx1xxxxx where `xx` and `xxxxx` is StopArea.number padded with zeroes.                   | StopArea.number: 81025 → HafasId: 200181025            |
+
+### Example response
+
+{{% tabs %}} {{% tab "Json" %}}
+
+```json
+{
+  "stopLocationOrCoordLocation": [
+    {
+      "StopLocation": {
+        "id": "A=1@O=Marieberg@X=18016154@Y=59328284@u=0@U=74@L=400110905@",
+        "extId": "400110905",
+        "hasMainMast": true,
+        "mainMastId": "A=1@O=Marieberg (Stockholm)@X=18015533@Y=59328410@U=74@L=300101273@",
+        "mainMastExtId": "300101273",
+        "name": "Marieberg",
+        "lon": 18.016154,
+        "lat": 59.328284,
+        "weight": 388,
+        "dist": 0,
+        "products": 8
+      }
+    },
+    {
+      "StopLocation": {
+        "id": "A=1@O=Wennerbergsgatan@X=18014140@Y=59328347@u=0@U=74@L=400110903@",
+        "extId": "400110903",
+        "hasMainMast": true,
+        "mainMastId": "A=1@O=Wennerbergsgatan (Stockholm)@X=18013061@Y=59328518@U=74@L=300101263@",
+        "mainMastExtId": "300101263",
+        "name": "Wennerbergsgatan",
+        "lon": 18.01414,
+        "lat": 59.328347,
+        "weight": 388,
+        "dist": 114,
+        "products": 8
+      }
+    },
+    {
+      "StopLocation": {
+        "id": "A=1@O=Fria Ukrainas plats@X=18017871@Y=59327286@u=0@U=74@L=400110729@",
+        "extId": "400110729",
+        "hasMainMast": true,
+        "mainMastId": "A=1@O=Fria Ukrainas plats (Stockholm)@X=18017592@Y=59327124@U=74@L=300101271@",
+        "mainMastExtId": "300101271",
+        "name": "Fria Ukrainas plats",
+        "lon": 18.017871,
+        "lat": 59.327286,
+        "weight": 1465,
+        "dist": 147,
+        "products": 8
+      }
+    },
+    {
+      "StopLocation": {
+        "id": "A=1@O=Västerbroplan@X=18020109@Y=59328302@u=0@U=74@L=400110727@",
+        "extId": "400110727",
+        "hasMainMast": true,
+        "mainMastId": "A=1@O=Västerbroplan (Stockholm)@X=18021125@Y=59328176@U=74@L=300101270@",
+        "mainMastExtId": "300101270",
+        "name": "Västerbroplan",
+        "lon": 18.020109,
+        "lat": 59.328302,
+        "weight": 1465,
+        "dist": 224,
+        "products": 8
+      }
+    },
+    {
+      "StopLocation": {
+        "id": "A=1@O=Wivalliusgatan@X=18013205@Y=59326558@u=0@U=74@L=400110450@",
+        "extId": "400110450",
+        "hasMainMast": true,
+        "mainMastId": "A=1@O=Wivalliusgatan (Stockholm)@X=18013196@Y=59326540@U=74@L=300101272@",
+        "mainMastExtId": "300101272",
+        "name": "Wivalliusgatan",
+        "lon": 18.013205,
+        "lat": 59.326558,
+        "weight": 1465,
+        "dist": 254,
+        "products": 8
+      }
+    }
+  ],
+  "serverVersion": "1.4",
+  "dialectVersion": "1.23",
+  "requestId": "1701701254662"
+}
+```
+
+{{% /tab %}} {{% tab "Xml" %}}
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<LocationList serverVersion="1.4" dialectVersion="1.23" requestId="1701701276854" xmlns="hafas_rest">
+    <StopLocation id="A=1@O=Marieberg@X=18016154@Y=59328284@u=0@U=74@L=400110905@" extId="400110905" name="Marieberg" hasMainMast="true"
+                  mainMastId="A=1@O=Marieberg (Stockholm)@X=18015533@Y=59328410@U=74@L=300101273@" mainMastExtId="300101273" lon="18.016154" lat="59.328284"
+                  weight="388" products="8" dist="0"/>
+    <StopLocation id="A=1@O=Wennerbergsgatan@X=18014140@Y=59328347@u=0@U=74@L=400110903@" extId="400110903" name="Wennerbergsgatan" hasMainMast="true"
+                  mainMastId="A=1@O=Wennerbergsgatan (Stockholm)@X=18013061@Y=59328518@U=74@L=300101263@" mainMastExtId="300101263" lon="18.01414"
+                  lat="59.328347" weight="388" products="8" dist="114"/>
+    <StopLocation id="A=1@O=Fria Ukrainas plats@X=18017871@Y=59327286@u=0@U=74@L=400110729@" extId="400110729" name="Fria Ukrainas plats" hasMainMast="true"
+                  mainMastId="A=1@O=Fria Ukrainas plats (Stockholm)@X=18017592@Y=59327124@U=74@L=300101271@" mainMastExtId="300101271" lon="18.017871"
+                  lat="59.327286" weight="1465" products="8" dist="147"/>
+    <StopLocation id="A=1@O=Västerbroplan@X=18020109@Y=59328302@u=0@U=74@L=400110727@" extId="400110727" name="Västerbroplan" hasMainMast="true"
+                  mainMastId="A=1@O=Västerbroplan (Stockholm)@X=18021125@Y=59328176@U=74@L=300101270@" mainMastExtId="300101270" lon="18.020109" lat="59.328302"
+                  weight="1465" products="8" dist="224"/>
+    <StopLocation id="A=1@O=Wivalliusgatan@X=18013205@Y=59326558@u=0@U=74@L=400110450@" extId="400110450" name="Wivalliusgatan" hasMainMast="true"
+                  mainMastId="A=1@O=Wivalliusgatan (Stockholm)@X=18013196@Y=59326540@U=74@L=300101272@" mainMastExtId="300101272" lon="18.013205"
+                  lat="59.326558" weight="1465" products="8" dist="254"/>
+</LocationList>
+```
+
+{{% /tab %}} {{% /tabs %}}
+
+### XSD
+
+`https://api.sl.se/api2/nearbystops/xsd.xml?key=<DIN API NYCKEL>&xsdname=hafasRestLocation.xsd</p>`
+
+## Error messages
+
+The language in the response matches the language in the request.
+
+| Statuskod | Meddelande                                                                               |
+|-----------|------------------------------------------------------------------------------------------|
+| 1001      | problem with request: Key is undefinedNyckel har ej skickats med.                        |
+| 1002      | problem with request: Key is invalidNyckel är ogiltig                                    |
+| 1003      | Invalid apiOgiltigt api                                                                  |
+| 1004      | problem with request: This api is currently not available for keys with priority above 2 |
+| 1005      | Nyckel finns, men ej för detta apiproblem with request: Invalid api for key              |
+| 1006      | To many requests per minuteFör många anrop per minut, för den profil som används         |
+| 1007      | To many requests per monthFör många anrop per månad, för den profil som används          |
+| R0001     | Unknown service method                                                                   |
+| R0002     | Invalid or missing request parameters.                                                   |
+| R0007     | Internal communication error.                                                            |

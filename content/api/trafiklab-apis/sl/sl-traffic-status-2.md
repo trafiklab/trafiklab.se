@@ -1,5 +1,5 @@
 ---
-title: SL Traffic status v2.0 (Trafikläget 2)
+title: SL Traffic status 2
 weight: 600
 date: 2014-03-14
 aliases:
@@ -13,398 +13,100 @@ aliases:
   - /node/12603/console
 ---
 
-## Beskrivning
+{{% error %}}
+Due to technical reasons, this API is being replaced by [SLs Deviations API](deviations.md) and [GTFS Service alerts](../gtfs-regional/realtime.md). It will
+stop working in the near future.
+{{% /error %}}
 
-Med detta API kan du få information om den aktuella statusen för SLs trafikläge. Detta är information på en övergripande
-nivå om aktuell status för respektive trafikslag. Den information som ligger till grund för detta API hittar du på
-startsidan av sl.se under rubriken "Trafikläget kl. xx:xx". API’et har endast en metod som returnerar en översiktlig
-bild över hur trafiksituationen ser ut just nu, med avseende på störningar som kan påverka resenärerna. Det som
-returneras är en lista med ett antal trafikslag, varje trafikslag har en sammanfattande status och ett antal (0 eller
-fler) händelser. Det finns 3 olika status som händelser kan ha:
+## Description
 
-- ”Inga större störningar”
-- ”Stor påverkan”
-- ”Avstängt”
+This API provides information about the current status of SL's traffic situation. It offers an overview
+of the current status for each type of traffic. The information used by this API can be found on the
+front page of sl.se under the heading "Trafikläget kl. xx:xx" ("Traffic situation at xx:xx"). The API has only one method that returns a summary
+of the current traffic situation, considering disruptions that may affect passengers. The response is a list of different traffic types, each with a summary
+status and a number of events (0 or more). There are three possible statuses for events:
 
-En händelse påverkar sitt trafikslag, så att trafikslagets sammanfattande status är lika med den sämsta statusen som
-finns ibland just nu aktiva händelser tillhörande trafikslaget. En händelse kan utöver statusen dessutom vara planerad.
+- "No major disruptions"
+- "Major impact"
+- "Closed"
 
-{{% info %}}SL will replace this API with a new, similar API in the near future. The documentation for the current API
-has therefore not been translated for the new Trafiklab website. {{% /info %}}
+An event affects its traffic type, so that the traffic type's summary status is equal to the worst status among currently active events belonging to that
+traffic type. In addition to the status, an event may also be planned.
+
+*SL will replace this API with a new, similar API in the near future. The documentation for the current API
+has therefore not been translated for the new Trafiklab website.*
 
 ## URL
 
-`https://api.sl.se/api2/trafficsituation.<FORMAT>?key=<DIN API NYCKEL>`
+`https://api.sl.se/api2/trafficsituation.<FORMAT>?key=<YOUR API KEY>`
 
-### API-nyckelnivåer 
+### API Key Levels
 
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 100 000         |
-| Guld   |                 | Efter behov     |
+| Level  | Max requests/minute | Max requests/month |
+|--------|---------------------|--------------------|
+| Bronze | 30                  | 10,000             |
+| Silver | 60                  | 100,000            |
+| Gold   |                     | As needed          |
 
 ## Format
 
-Json eller xml enligt ändelse till serviceanropet.
+JSON or XML according to the format specified in the service call.
 
-## Parametrar
+## Parameters
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Parametrar</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Tvingande</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Key</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Ja</p>
-			</td>
-			<td>
-			<p>En giltig API-nyckel.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+| Parameters | Data Type | Mandatory | Description      |
+|------------|-----------|-----------|------------------|
+| Key        | String    | Yes       | A valid API key. |
 
-## Resultat
+## Result
 
-### Svarsstruktur
+### Response Structure
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StatusCode</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Innehåller statuskod för det eventuella meddelandet.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Message</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Innehåller eventuellt anropsrelaterade meddelanden som t.ex. felmeddelanden. Se ”Felmeddelanden” nedan.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ExecutionTime</p>
-			</td>
-			<td>
-			<p>Long</p>
-			</td>
-			<td>
-			<p>Anger hur lång tid (i ms) det tog för servern att generera svaret.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ResponseData</p>
-			</td>
-			<td>
-			<p>TrafficStatus</p>
-			</td>
-			<td>
-			<p>Innehåller själva svarsdata från tjänsten. Se ”Svarsdata” nedan.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+| Name          | Data Type     | Description                                                                             |
+|---------------|---------------|-----------------------------------------------------------------------------------------|
+| StatusCode    | Integer       | Contains the status code for the potential message.                                     |
+| Message       | String        | Contains any call-related messages, such as error messages. See "Error Messages" below. |
+| ExecutionTime | Long          | Indicates the time it took for the server to generate the response (in ms).             |
+| ResponseData  | TrafficStatus | Contains the actual response data from the service. See "Response Data" below.          |
 
-### Svarsdata
+### Response Data
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>TrafficTypes</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Ett TrafficType objekt för varje trafikslag.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+| Name         | Data Type | Description                                    |
+|--------------|-----------|------------------------------------------------|
+| TrafficTypes | List      | A TrafficType object for each type of traffic. |
 
 ### TrafficType
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Name</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namn på trafikslag: "Tunnelbana", "Pendeltåg", etc.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Type</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>"metro", "train", "local", "tram", "bus" eller "fer".</p>
-			<p>fer = Båt</p>
-			<p>local = Lokalbana</p>
-			<p>tram = Spårvagn</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StatusIcon</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Hjälpinformation som indikerar vilken ikon som ska visas i webben.</p>
-			<p>Möjliga värden:</p>
-			<ul>
-				<li>EventMajor: "Avstängt"</li>
-				<li>EventMinor: "Stor påverkan"</li>
-				<li>EventGood: "Inga större störningar"</li>
-				<li>EventPlanned: "Planerad händelse"</li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Expanded</p>
-			</td>
-			<td>
-			<p>Boolean</p>
-			</td>
-			<td>
-			<p>Hjälpinformation som indikerar om informationen har hög prioritet eller inte.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>HasPlannedEvent</p>
-			</td>
-			<td>
-			<p>Boolean</p>
-			</td>
-			<td>
-			<p>Hjälpinformation som indikerar om det finns planerade händelser.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Events</p>
-			</td>
-			<td>
-			<p>List</p>
-			</td>
-			<td>
-			<p>Ett TrafficEvent objekt för varje händelse.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+| Name            | Data Type | Description                                                                                                                                                                                            |
+|-----------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name            | String    | Name of the traffic type: "Tunnelbana", "Pendeltåg", etc.                                                                                                                                              |
+| Type            | String    | "metro", "train", "local", "tram", "bus" or "fer". fer = Boat, local = Local train, tram = Tram                                                                                                        |
+| StatusIcon      | String    | Assistive information indicating which icon to display on the web. Possible values: EventMajor: "Closed", EventMinor: "Major impact", EventGood: "No major disruptions", EventPlanned: "Planned event" |
+| Expanded        | Boolean   | Assistive information indicating whether the information has high priority or not.                                                                                                                     |
+| HasPlannedEvent | Boolean   | Assistive information indicating whether there are planned events.                                                                                                                                     |
+| Events          | List      | A TrafficEvent object for each event.                                                                                                                                                                  |
 
 ### TrafficEvent
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-			<p><strong>Namn</strong></p>
-			</td>
-			<td>
-			<p><strong>Datatyp</strong></p>
-			</td>
-			<td>
-			<p><strong>Beskrivning</strong></p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>EventId</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Löpnummer på händelsen.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Message</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Meddelande gällande störningen/händelsen.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Expanded</p>
-			</td>
-			<td>
-			<p>Boolean</p>
-			</td>
-			<td>
-			<p>Hjälpinformation som indikerar om informationen har hög prioritet eller inte.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Planned</p>
-			</td>
-			<td>
-			<p>Boolean</p>
-			</td>
-			<td>
-			<p>Hjälpinformation som indikerar om händelsen är planerad eller inte.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>SortIndex</p>
-			</td>
-			<td>
-			<p>Integer</p>
-			</td>
-			<td>
-			<p>Sorteringsordning på händelsen.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>StatusIcon</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Hjälpinformation som indikerar vilken ikon som ska visas i webben.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>LineNumbers</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Linjenummer som händelsen berör, en kommaseparerad String t.ex. ”177, 69K, 508”.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>LineNumbers/InputDataIsOptional</p>
-			</td>
-			<td>
-			<p>Boolean</p>
-			</td>
-			<td>
-			<p>Är alltid satt till True och indikerar att linjenummer är frivilligt.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>TrafficLine</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Namn på den bana som händelsen påverkar. Kan saknas, om händelsen påverkar hela trafikslaget eller banor inte finns (typ bussar).</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>EventInfoUrl</p>
-			</td>
-			<td>
-			<p>String</p>
-			</td>
-			<td>
-			<p>Länk till storningsinformation.sl.se, eller till specifik sida med information om händelsen.</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+| Name                            | Data Type | Description                                                                                                                                |
+|---------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| EventId                         | Integer   | Event number.                                                                                                                              |
+| Message                         | String    | Message regarding the disruption/event.                                                                                                    |
+| Expanded                        | Boolean   | Assistive information indicating whether the information has high priority or not.                                                         |
+| Planned                         | Boolean   | Assistive information indicating whether the event is planned or not.                                                                      |
+| SortIndex                       | Integer   | Sorting order of the event.                                                                                                                |
+| StatusIcon                      | String    | Assistive information indicating which icon to display on the web.                                                                         |
+| LineNumbers                     | String    | Line numbers affected by the event, a comma-separated string e.g., "177, 69K, 508".                                                        |
+| LineNumbers/InputDataIsOptional | Boolean   | Always set to True, indicating that line numbers are optional.                                                                             |
+| TrafficLine                     | String    | Name of the line affected by the event. May be absent if the event affects the entire traffic type or if lines do not exist (e.g., buses). |
+| EventInfoUrl                    | String    | Link to storningsinformation.sl.se, or to a specific page with information about the event.                                                |
 
-### Felmeddelanden
+### Error Messages
 
-Än så länge finns inga felmeddelanden.
+No error messages are available at this time.
 
 ## Support
 
-Räcker inte dokumentationen så<a href="https://kundo.se/org/trafiklabse/posts/">sök gärna bland alla de hundratals
-inlägg som finns på vårt supportforum</a>. Det är troligt att någon redan har hittat och löst samma problem som du har.
-Hittar du fortfarande inte svar på din fråga så<a href="https://kundo.se/org/trafiklabse/">skriv ett eget inlägg på
-forumet</a>så hjälper vi dig.
+If the documentation is not sufficient, please [search among the hundreds of posts on our support forum](https://kundo.se/org/trafiklabse/posts/). It is likely
+that someone has already encountered and solved the same problem you have. If you still cannot find an answer to your
+question, [post your own thread on the forum](https://kundo.se/org/trafiklabse/) and we will assist you.
