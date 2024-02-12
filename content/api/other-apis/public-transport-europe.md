@@ -19,7 +19,7 @@ If you're interested in data outside of sweden, this list will help you get on t
 |🇪🇪 Estonia | http://www.peatus.ee/|
 |🇫🇮 Finland | http://www.finap.fi/ |
 |🇫🇷 France | https://transport.data.gouv.fr/ |
-|🇩🇪 Germany | https://service.mdm-portal.de/ |
+|🇩🇪 Germany | https://mobilithek.info/ |
 |🇬🇷 Greece | http://www.nap.gov.gr/ |
 |🇭🇺 Hungary | https://napportal.kozut.hu/ |
 |🇮🇪 Ireland | https://data.gov.ie/ |
