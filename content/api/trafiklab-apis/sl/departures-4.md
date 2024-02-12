@@ -101,7 +101,49 @@ Results from real-time search. For XML format, the root element name is "Respons
 
 #### Deviation
 
-| Name            | Data Type | Description                                                               |
-|-----------------|-----------|---------------------------------------------------------------------------|
-| Consequence     | String    | Description of the consequence for the current deviation.                 |
-| ImportanceLevel | Integer   | Significance level for the current deviation. 0-9 where 9 is most severe. |
+| Name            | Data Type | Description                                                              |
+|-----------------|-----------|--------------------------------------------------------------------------|
+| Consequence     | String    | Description of the consequence for the current deviation.                |
+| ImportanceLevel | Integer   | Significance level of the current deviation. 0-9 where 9 is most severe. |
+| Text            | String    | Description of the current deviation.                                    |
+
+#### StopPointDeviations
+
+| Name      | Data Type | Description                                         |
+|-----------|-----------|-----------------------------------------------------|
+| StopInfo  | StopInfo  | Stop information. May be empty. See StopInfo.       |
+| Deviation | Deviation | Deviation information. May be empty. See Deviation. |
+
+#### StopInfo
+
+| Name           | Data Type | Description                                                                                                                                                                                                   |
+|----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GroupOfLine    | String    | If TransportMode is "TRAM", this node contains one of the following values: "Lidingöbanan", "Nockebybanan", "Roslagsbanan", "Saltsjöbanan", "Spårväg City", "Tvärbanan". Otherwise blank (subject to change). |
+| StopAreaName   | String    | Name of the stop area affected by the deviation.                                                                                                                                                              |
+| StopAreaNumber | Integer   | ID of the stop area affected by the deviation. Is zero if TransportMode is not BUS.                                                                                                                           |
+| TransportMode  | String    | "METRO", "BUS", "TRAIN", "TRAM", or unspecified.                                                                                                                                                              |
+
+## Error Messages
+
+| Status Code | Message                                                                                                                                                                                          |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1001        | Key not provided.                                                                                                                                                                                |
+| 1002        | Invalid key.                                                                                                                                                                                     |
+| 1003        | Invalid API.                                                                                                                                                                                     |
+| 1004        | Problem with request: This API is currently not available for keys with priority above 2.                                                                                                        |
+| 1005        | Key exists, but not for this API.                                                                                                                                                                |
+| 1006        | Too many requests per minute for the profile being used.                                                                                                                                         |
+| 1007        | Too many requests per month for the profile being used.                                                                                                                                          |
+| 4001        | SiteId must be convertible to an integer.                                                                                                                                                        |
+| 5321        | Couldn't retrieve information from TPI (subway) or DPS (other modes of transportation).                                                                                                          |
+| 5322        | Couldn't retrieve information from DPS.                                                                                                                                                          |
+| 5323        | Couldn't retrieve information from TPI.                                                                                                                                                          |
+| 5324        | Couldn't retrieve information from TPI (subway) or DPS (other modes of transportation) due to outdated DPS data. This occurs if the DPS data is more than 2 minutes old at the time of response. |
+
+## Support
+
+If the documentation is insufficient, please [search through the hundreds of posts on our support forum](https://kundo.se/org/trafiklabse/posts/). It's likely
+that someone has already encountered and solved the same problem you're facing.
+
+If you still can't find an answer to your question, [create a new post on the forum](https://kundo.se/org/trafiklabse/) and we'll assist you.
+
