@@ -25,21 +25,21 @@ This API consists of 5 endpoints, each with their own URL.
 {{% tabs %}} {{% tab "Lines" %}}
 
 ```text
-https://integration.sl.se/open-api-transport/v1/lines
+https://transport.integration.sl.se/v1/lines
 ```
 
 {{% /tab %}}
 {{% tab "Sites" %}}
 
 ```text
-https://integration.sl.se/open-api-transport/v1/sites
+https://transport.integration.sl.se/v1/sites
 ```
 
 {{% /tabs %}}
 {{% tab "Departures from site" %}}
 
 ```text
-https://integration.sl.se/open-api-transport/v1/sites/{SiteId}/departures
+https://transport.integration.sl.se/v1/sites/{SiteId}/departures
 ```
 
 {{% /tab %}}
@@ -47,14 +47,14 @@ https://integration.sl.se/open-api-transport/v1/sites/{SiteId}/departures
 {{% tab "Stop Points" %}}
 
 ```text
-https://integration.sl.se/open-api-transport/v1/stop-points
+https://transport.integration.sl.se/v1/stop-points
 ```
 
 {{% /tab %}}
 {{% tab "Transport Authorities" %}}
 
 ```text
-https://integration.sl.se/open-api-transport/v1/transport-authorities
+https://transport.integration.sl.se/v1/transport-authorities
 ```
 
 {{% /tab %}}
