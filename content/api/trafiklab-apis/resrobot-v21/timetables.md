@@ -11,8 +11,7 @@ aliases:
 ## What does this API provide?
 
 ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
-transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket (All train traffic
-including SJ, MTRX, .... except for Arlanda Express).
+transport modes, ... . Realtime data is available for SL and Trafikverket (All train traffic including SJ, MTRX, .... except for Arlanda Express).
 
 ### Data format
 
@@ -42,7 +41,7 @@ some other parameters to fine-tune the results. It returns a list of departures 
 including a bit of information about each vehicle, such as where it is heading or where it comes from.
 
 {{% info %}}
-Only the most important parameters and response variables are described on this page. Looking for more technical 
+Only the most important parameters and response variables are described on this page. Looking for more technical
 details? These can be found in [the OpenAPI specification](api-spec.md).
 {{% /info %}}
 
@@ -92,11 +91,12 @@ https://api.resrobot.se/v2.1/arrivalBoard?id=740000002&format=xml&accessId=API_K
 
 {{% note %}}
 **Changes compared to ResRobot v2.0:**
+
 - The `key` parameter has been renamed to `accessId`.
 - `maxJourneys` is ignored when making queries in the near past or future, when realtime data is available. We recommend
   using the new `duration` parameter to consistently limit the results list to a specific time window.
-- `passlist` is now `0` by default.  Set to `1` to keep the responses the same if you need this data.
-{{% /note %}}
+- `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
+  {{% /note %}}
 
 | **Name**    | **Data type**     | **Required**            | **Description**                                                                                                                                 |
 |-------------|-------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -426,15 +426,16 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 
 - The data previously found in `Product` can now be found in `ProductAtStop`
 - `Product` is now wrapped in an array
-- `TransportNumber` is no longer included. Use `ProductAtStop.num` or `ProductAtStop.displayNumber` instead. 
+- `TransportNumber` is no longer included. Use `ProductAtStop.num` or `ProductAtStop.displayNumber` instead.
 - `JourneyStatus` and `JourneyDetailRef` have been added
-- `Type` has a different meaning and different possible values. This field used to indicate the type of the departing/arriving journey, but now indicates the type of location for this departure/arrival
+- `Type` has a different meaning and different possible values. This field used to indicate the type of the departing/arriving journey, but now indicates the
+  type of location for this departure/arrival
 - Any applications which made use of the internal ids (`id` and `stopid`) should switch over to using the public ids (`extId` and `stopExtId`) instead.
 
 {{% /note %}}
 
 | **Name**                       | **Data type**                | **Description**                                                                                                             |
-| ------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | DepartureBoard or ArrivalBoard | Departure\[\] or Arrival\[\] | List of departures or arrivals.                                                                                             |
 | Departure or Arrival           | Object                       |                                                                                                                             |
 | time                           | String                       | Scheduled departure/arrival time, formatted as HH:MM:SS.                                                                    |
@@ -450,7 +451,7 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 | transportCategory              | String                       | See product.catOutL                                                                                                         |
 | name                           | String                       | TransportCategory + transportNumber<br>Example: ”ULT 19” (Tunnelbana linje 19)                                              |
 | direction                      | String                       | Name of the last stop on the vehicle’s trip                                                                                 |
-| Product                        | Product                      | See [common data types](common.md)                                                                                 |
+| Product                        | Product                      | See [common data types](common.md)                                                                                          |
 | Stops                          | Stop\[\]                     | List of upcoming stops for the vehicle at this at this departure/arrival. Enabled/disabled through the `passlist` parameter |
 | Stop.name                      | String                       | Name of the stop                                                                                                            |
 | Stop.arrTime                   | String                       | Arrival time at this stop, formatted as HH:MM                                                                               |
