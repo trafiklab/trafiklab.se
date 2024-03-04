@@ -1,12 +1,12 @@
 ---
 title: SL Realtidsinformation 4
-weight: 200
+weight: 310
 date: 2016-11-30
 
 ---
 
 {{% error %}}
-Detta API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya network API](sl-network.md).
+Detta API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya transport API](transport.md).
 {{% /error %}}
 
 ## Beskrivning

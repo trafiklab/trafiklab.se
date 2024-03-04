@@ -1,6 +1,6 @@
 ---
 title: SL Departures 4
-weight: 200
+weight: 310
 date: 2016-11-30
 aliases:
   - /api/sl-realtidsinformation-4/sl-realtidsinformation-4
@@ -19,7 +19,7 @@ aliases:
 Real-time information regarding buses, subways, commuter trains, and local trains.
 
 {{% error %}}
-This API will be shut down at the end of March 2024. It is replaced by [SL's new network API](sl-network.md).
+This API will be shut down at the end of March 2024. It is replaced by [SL's new transport API](transport.md).
 {{% /error %}}
 
 ## URL

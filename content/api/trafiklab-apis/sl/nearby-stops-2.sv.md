@@ -1,6 +1,6 @@
 ---
 title: SL Nearby stops v2.0 (Närliggande hållplatser 2)
-weight: 310
+weight: 300
 date: 2019-01-14
 aliases:
   - /api/sl-narliggande-hallplatser-2

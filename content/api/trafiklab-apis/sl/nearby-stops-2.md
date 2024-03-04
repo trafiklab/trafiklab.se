@@ -1,6 +1,6 @@
 ---
 title: SL Nearby stops 2
-weight: 310
+weight: 300
 date: 2019-01-14
 
 ---

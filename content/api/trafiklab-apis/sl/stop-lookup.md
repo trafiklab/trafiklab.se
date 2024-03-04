@@ -1,6 +1,6 @@
 ---
 title: SL Stop lookup
-weight: 300
+weight: 200
 date: 2014-03-14
 aliases:
   - /api/sl-platsuppslag
