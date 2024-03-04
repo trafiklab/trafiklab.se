@@ -1,7 +1,8 @@
 ---
 title: SL Deviations
-weight: 499
+weight: 20
 date: 2024-01-12
+badge: new
 ---
 
 ## Description

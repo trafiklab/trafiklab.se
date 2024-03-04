@@ -18,6 +18,10 @@ Listing of Stops and Lines in Stockholm County
 
 To describe traffic information consistently, clear and distinct concepts and definitions are necessary. The key terms for this service are presented below.
 
+{{% error %}}
+This API will be shut down at the end of March 2024. It is replaced by [SL's new network API](sl-network.md).
+{{% /error %}}
+
 | Term                      | Description                                                                                                                           |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Site                      | A Site is a grouping of StopAreas used to simplify searches in the journey planner.                                                   |

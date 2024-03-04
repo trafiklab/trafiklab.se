@@ -6,6 +6,10 @@ date: 2015-03-02
 
 Listning av hållplatser och linjer i Stockholms län.
 
+{{% error %}}
+Detta API kommer stängas ned vid slutet av mars 2024. Den ersätts av [SLs nya network API](sl-network.md).
+{{% /error %}}
+
 För att kunna beskriva trafikinformation på ett konsekvent sätt, är det nödvändigt att ingående begrepp och definitioner är klara och tydliga. De viktigaste
 begreppen för denna tjänst presenteras nedan.
 

@@ -2,21 +2,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{{ block "title" . }}{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.RelPermalink }}" />
+
 <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
 {{ $pagelang := .Language.Lang }} {{/*  Include links to translated versions, for better SEO */}}
 {{ range .Translations }}{{ if (not (eq .Lang $pagelang)) }}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
 {{ end }}{{ end }}
+
 <link rel="canonical" href="{{ .Permalink }}" />
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 {{ if .Params.Description }}
 <meta name="description" content="{{ .Params.Description }}">
 {{ end }}
@@ -24,9 +31,6 @@
 {{ if .Params.hidden }}
 <meta name="robots" content="noindex">
 {{ end }}
-
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.RelPermalink }}" />
 
 {{ partial "linked-data/breadcrumbs.html" . }}
 {{ partial "linked-data/news-publish-date.html" . }}
