@@ -8,7 +8,7 @@ badge: new
 ## Description
 
 This API provides information about the lines, stops, and next departures on the SL network. It replaces the existing SL Departures v4 and SL Stops and lines v2
-APIs.
+APIs. No API key is required to use this API. 
 
 ### Concepts
 
@@ -20,7 +20,7 @@ APIs.
 
 ## URL
 
-This API consists of 5 endpoints, each with their own URL.
+This API consists of 5 endpoints, each with their own URL. No API key is required to use this API.
 
 {{% tabs %}} {{% tab "Lines" %}}
 
@@ -71,7 +71,7 @@ This API returns data in the JSON format
 
 ## Request Parameters
 
-When searching for a specific site, or departures from a specific site, the site ID is required. Other API calls do not have any parameters.
+When searching for a specific site, or departures from a specific site, the site ID is required. Other API calls do not have any mandatory parameters. For complete list of all parameters, including optional parameters, please see the openAPI specification below.
 
 | Parameters | Data Type | Mandatory | Description                                                                                                                                                                                                   |
 |------------|-----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
