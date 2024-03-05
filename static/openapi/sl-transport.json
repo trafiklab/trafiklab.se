@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://integration.sl.se/open-api-transport/v1"
+      "url": "https://transport.integration.sl.se/v1/"
     }
   ],
   "paths": {
