@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://transport.integration.sl.se/v1/"
+      "url": "https://transport.integration.sl.se/v1"
     }
   ],
   "paths": {
