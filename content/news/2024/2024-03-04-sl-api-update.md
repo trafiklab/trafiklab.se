@@ -15,7 +15,7 @@ of 7 APIs.
 The new API does not require API keys, and can be used without a Trafiklab account. While there are no quota, you should still not make more requests than
 required and aim for efficient solutions.
 
-Users of _SL Departures v4_, as well as users of _Stops and Lines v2_ need to switch to the new API before **March 31th 2024**. We regret the short migration
+Users of _SL Departures v4_, as well as users of _Stops and Lines v2_ need to switch to the new API before **March 31st 2024**. We regret the short migration
 period, which is caused by the large changes behind the scenes in SL's data flows. For users of _SL Departures v4_, the new endpoint to look for is _Departures
 from site_.
 
