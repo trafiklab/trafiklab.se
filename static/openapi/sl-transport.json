@@ -400,7 +400,7 @@
         "type": "number"
       },
       "common.localDatetime": {
-        "description": "Local datetime as 'yyyy-MM-ddTHH:mm:ss' (ISO8601:2004)",
+        "description": "Local datetime as 'yyyy-MM-ddTHH:mm:ss' (ISO8601:2004) in the local Europe/Stockholm timezone",
         "example": "2024-01-01T01:00:00",
         "type": "string"
       },
@@ -644,7 +644,8 @@
         "maximum": 9999999999999,
         "description": "Unique identifier of a journey within a line and a transport authority",
         "example": 2020062310015,
-        "type": "number"
+        "type": "integer",
+        "format": "int64"
       },
       "contractorId": {
         "description": "Unique identifikation number that identifies a contractor within Region Stockholm",
@@ -947,7 +948,10 @@
             "$ref": "#/components/schemas/lineReference"
           },
           "deviations": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/departureDeviation"
+            }
           }
         },
         "required": [
@@ -984,7 +988,7 @@
           },
           "group_of_lines": {
             "description": "Name used to group lines",
-            "example": "tunnelbanans gröna linje",
+            "example": "Tunnelbanans gröna linje",
             "type": "string"
           },
           "transport_authority": {
@@ -1224,7 +1228,7 @@
             "description": "List of stop deviations related to the site",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/departureDeviation"
+              "$ref": "#/components/schemas/stopDeviation"
             }
           }
         },
@@ -1405,7 +1409,7 @@
       "trait_query.forcastNextMinutesOptional_forecast": {
         "name": "forecast",
         "in": "query",
-        "description": "Defines the window of time, in minutes, for which to fetch upcoming departures and deviations starting from now. A value of 30 means departures and deviations for the next 30 minutes will be included.",
+        "description": "Defines the window of time, in minutes, for which to fetch upcoming departures and deviations starting from now. A value of 30 means departures and deviations for the next 30 minutes will be included. Note that there will not be shown more than 3 departures for a line direction, even if the forecast window is larger.",
         "schema": {
           "default": 60,
           "minimum": 5,
