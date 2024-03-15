@@ -2,6 +2,7 @@
 title: SL Traffic status v2.0 (Trafikläget 2)
 weight: 600
 date: 2014-03-14
+expiryDate: 2024-03-14
 ---
 
 {{% error %}}

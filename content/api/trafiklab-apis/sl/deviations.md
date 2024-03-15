@@ -3,6 +3,25 @@ title: SL Deviations
 weight: 20
 date: 2024-01-12
 badge: new
+aliases:
+  - /api/sl-storningsinformation-2
+  - /api/sl-storningsinformation-2/documentation
+  - /api/sl-storningsinformation-2/nivaer
+  - /api/sl-storningsinformation-2/console
+  - /api/sl-storningsinformation-2/konsol
+  - /node/12605
+  - /node/12605/documentation
+  - /node/12605/nivaer
+  - /node/12605/console
+  - /node/12605/konsol
+  - /api/sl-trafiklaget-2
+  - /api/sl-trafiklaget-2/documentation
+  - /api/sl-trafiklaget-2/nivaer
+  - /api/sl-trafiklaget-2/console
+  - /node/12603
+  - /node/12603/documentation
+  - /node/12603/nivaer
+  - /node/12603/console
 ---
 
 ## Description
