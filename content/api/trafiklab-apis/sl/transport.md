@@ -8,7 +8,7 @@ badge: new
 ## Description
 
 This API provides information about the lines, stops, and next departures on the SL network. It replaces the existing SL Departures v4 and SL Stops and lines v2
-APIs. No API key is required to use this API. 
+APIs. No API key is required to use this API.
 
 ### Concepts
 
@@ -63,7 +63,8 @@ https://transport.integration.sl.se/v1/transport-authorities
 ### API Key Levels
 
 This API does not require the use of an API key. You should however not make excessive requests, to ensure the availability
-and performance of the API for everyone. If you need large amounts of data, for example all departures from all stops, [GTFS Regional](../gtfs-regional/_index.md) might be better suited for your application.
+and performance of the API for everyone. If you need large amounts of data, for example all departures from all
+stops, [GTFS Regional](../gtfs-regional/_index.md) might be better suited for your application.
 
 ## Format
 
@@ -71,11 +72,22 @@ This API returns data in the JSON format
 
 ## Request Parameters
 
-When searching for a specific site, or departures from a specific site, the site ID is required. Other API calls do not have any mandatory parameters. For complete list of all parameters, including optional parameters, please see the openAPI specification below.
+When searching for a specific site, or departures from a specific site, the site ID is required. Other API calls do not have any mandatory parameters. For
+complete list of all parameters, including optional parameters, please see the openAPI specification below.
 
 | Parameters | Data Type | Mandatory | Description                                                                                                                                                                                                   |
 |------------|-----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SiteId     | Integer   | Yes       | Unique identification number for the location for which current departures should be fetched, e.g., 9192 for Slussen. Can be obtained from a search through the list of all sites, or the SL stop lookup api. |
+
+{{% note %}}
+**SiteId and SL Stop Lookup**
+
+The SiteId parameter used in the `Departure from site` endpoint match the site ids present in the SL Transport API. They do not match the ids in the SL Stop
+Lookup API!
+
+In order to use values returned by the SL Stop Lookup API, you should convert the values returned by the SL Stop Lookup API, in the form of `3BA1CDEFG`, into a
+number `ABCDEFG`. It is however strongly recommended to keep to the site ids returned by the `/sites` endpoint
+{{% /note %}}
 
 ## Response
 
