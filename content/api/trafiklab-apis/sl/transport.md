@@ -86,7 +86,8 @@ The SiteId parameter used in the `Departure from site` endpoint match the site i
 Lookup API!
 
 In order to use values returned by the SL Stop Lookup API, you should convert the values returned by the SL Stop Lookup API, in the form of `3BA1CDEFG`, into a
-number `ABCDEFG`. It is however strongly recommended to keep to the site ids returned by the `/sites` endpoint
+number `ABCDEFG`. It is however recommended to keep to the site ids returned by the `/sites` endpoint where possible, as this removes the need for conversion
+altogether.
 {{% /note %}}
 
 ## Response

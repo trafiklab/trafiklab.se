@@ -104,7 +104,7 @@ The SiteId value returned by the SL Transport API matches the SiteId value expec
 still match (given that both APIs are accessed through the integration.sl.se domain).
 
 In order to use values returned by the SL Stop Lookup API, you should convert the values returned by the SL Stop Lookup API, in the form of `3BA1CDEFG`, into a
-number `ABCDEFG`. It is however strongly recommended to use the site ids returned by the Transport Api `/lines` endpoint instead of combining APIs.
+number `ABCDEFG`. It is however recommended to use the site ids returned by the Transport Api `/lines` endpoint if possible instead of combining APIs.
 {{% /note %}}
 
 ### Example response
