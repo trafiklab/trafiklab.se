@@ -119,11 +119,11 @@ These values are examples and subject to change.
 
 Information regarding how ids relate to Hafas ids used in the route planner API.
 
-| Type       | Description                                                                               | Example                                                |
-|------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| SiteId     | 3xx1xxxxx where `xx` and `xxxxx` are the 7 last digits of site.number padded with zeroes. | SiteId: 9600 → HafasId: 300109600                      |
-| StopId     | 4xx1xxxxx where `xx` and `xxxxx` is JourneyPatternPoint.number padded with zeroes.        | JourneyPatternPoint.Number: 56789 → HafasId: 400156789 |
-| StopAreaId | 2xx1xxxxx where `xx` and `xxxxx` is StopArea.number padded with zeroes.                   | StopArea.number: 81025 → HafasId: 200181025            |
+| Type       | Description                                                                                                                      | Example                                                |
+|------------|----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| SiteId     | 3BA1CDEFG where `ABCDEFG` are the 7 last digits of site.number padded with zeroes. Note the first two digits which change place! | SiteId: 9600 → HafasId: 300109600                      |
+| StopId     | 4BA1CDEFG where `ABCDEFG` are the 7 last digits of JourneyPatternPoint.number padded with zeroes.                                | JourneyPatternPoint.Number: 56789 → HafasId: 400156789 |
+| StopAreaId | 2BA1CDEFG where `ABCDEFG` are the 7 last digits of StopArea.number padded with zeroes.                                           | StopArea.number: 81025 → HafasId: 200181025            |
 
 ### Example response
 
