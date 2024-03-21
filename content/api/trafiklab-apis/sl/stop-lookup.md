@@ -103,8 +103,9 @@ https://journeyplanner.integration.sl.se/v1/typeahead.xml?searchstring=Oden&stat
 The SiteId value returned by the SL Transport API matches the SiteId value expected by the SL Routeplanner 3.1 API. These values changed in february but do
 still match (given that both APIs are accessed through the integration.sl.se domain).
 
-In order to use values returned by the SL Stop Lookup API, you should convert the values returned by the SL Stop Lookup API, in the form of `3BA1CDEFG`, into a
-number `ABCDEFG`. It is however recommended to use the site ids returned by the Transport Api `/lines` endpoint if possible instead of combining APIs.
+In order to use values returned by the SL Stop Lookup API in combination with the SL Transport API, you should convert the values returned by the SL Stop Lookup
+API, in the form of `3BA1CDEFG`, into a number `ABCDEFG`. It is however recommended to use the site ids returned by the Transport Api `/lines` endpoint if
+possible instead of combining APIs.
 {{% /note %}}
 
 ### Example response
