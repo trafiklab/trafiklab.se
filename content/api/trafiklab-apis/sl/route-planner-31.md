@@ -78,8 +78,8 @@ JSON or XML according to the extension of the service call.
 After an unexpected breaking change in february 2024 the SiteId value expected by the SL Routeplanner 3.1 API has changed.
 These values changed in february but do still match (given that both APIs are accessed through the integration.sl.se domain).
 
-If you are using site-ids you stored previously, you should convert 4-7 digits site-ids in the form
-of `ABCDEFG` (padding with zeroes on the left side) into `3BA1CDEFG`.
+If you are using site-ids you stored previously, you should convert short (4-7 digits) site-ids in the form
+of `ABCDEFG` (padding with zeroes on the left side) into `3BA1CDEFG`. For example 9001 becomes 300109001.
 {{% /warning %}}
 
 | Name              | Description                                                                     | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |

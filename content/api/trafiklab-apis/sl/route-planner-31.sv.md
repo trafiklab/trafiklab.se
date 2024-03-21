@@ -69,8 +69,8 @@ Json eller Xml enligt ändelse till serviceanropet.
 Efter en oväntad brytande förändring i februari 2024 har värdet för SiteId som förväntas av SL Routeplanner 3.1 API ändrats.
 Dessa värden ändrades i februari men matchar fortfarande (förutsatt att båda API:erna nås genom domänen integration.sl.se).
 
-Om du använder webbplats-ID:n som du tidigare lagrat bör du konvertera 4–7 siffrors webbplats-ID:n i form av ABCDEFG (fyllt med nollor på vänster sida) till
-3BA1CDEFG.
+Om du använder webbplats-ID:n som du tidigare lagrat bör du konvertera korta (4–7 siffror) webbplats-ID:n i form av ABCDEFG (fyllt med nollor på vänster sida) till
+3BA1CDEFG. Till exempel 9001 blir 300109001.
 {{% /warning %}}
 
 | Namn              | Beskrivning                                      | Kommentar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
