@@ -82,11 +82,11 @@ complete list of all parameters, including optional parameters, please see the o
 {{% note %}}
 **SiteId and SL Stop Lookup**
 
-The SiteId parameter used in the `Departure from site` endpoint match the site ids present in the SL Transport API. They do not match the ids in the SL Stop
+The SiteId parameter used in the `Departure from site` endpoint match the site ids present in the `/sites` endpoint. They do not match the ids in the SL Stop
 Lookup API!
 
-In order to use values returned by the SL Stop Lookup API, you should convert the values returned by the SL Stop Lookup API, in the form of `3BA1CDEFG`, into a
-number `ABCDEFG`. It is however recommended to keep to the site ids returned by the `/sites` endpoint where possible, as this removes the need for conversion
+In order to use values returned by the SL Stop Lookup API, you should convert the returned SiteId values, that come in the form of `3BA1CDEFG`, into a
+number `ABCDEFG`. For example 300109001 becomes 9001. It is however recommended to keep to the site ids returned by the `/sites` endpoint where possible, as this removes the need for conversion
 altogether.
 {{% /note %}}
 

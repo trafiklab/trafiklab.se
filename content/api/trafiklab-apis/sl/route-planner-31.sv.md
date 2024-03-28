@@ -64,12 +64,12 @@ Json eller Xml enligt ändelse till serviceanropet.
 ### Parametrar
 
 {{% warning %}}
-**Ändring av webbplats-ID som används som sökparameter**
+**Ändring av Site-ID som används som sökparameter**
 
-Efter en oväntad brytande förändring i februari 2024 har värdet för SiteId som förväntas av SL Routeplanner 3.1 API ändrats.
-Dessa värden ändrades i februari men matchar fortfarande (förutsatt att båda API:erna nås genom domänen integration.sl.se).
+Efter en oväntad brytande förändring i februari 2024 så har värdet för SiteId, som förväntas av SL Reseplanerare 3.1 API, ändrats.
+Dessa värden ändrades i februari men matchar fortfarande med SiteId-värden som returneras från SL Stop lookup APIet (förutsatt att båda API:erna nås genom domänen integration.sl.se).
 
-Om du använder webbplats-ID:n som du tidigare lagrat bör du konvertera korta (4–7 siffror) webbplats-ID:n i form av ABCDEFG (fyllt med nollor på vänster sida) till
+Om du använder site-ID:n som du tidigare lagrat bör du konvertera dessa korta (4–7 siffror) site-ID:n i form av ABCDEFG (utfyllt med nollor på vänster sida) till
 3BA1CDEFG. Till exempel 9001 blir 300109001.
 {{% /warning %}}
 

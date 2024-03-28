@@ -81,16 +81,17 @@ https://journeyplanner.integration.sl.se/v1/nearbystopsv2.xml?originCoordLat=59.
 
 #### StopLocation
 
-| Name     | Type    | Description                                                         |
-|----------|---------|---------------------------------------------------------------------|
-| Id       | String  | Reconstruction Id, see travel planner API                           |
-| Name     | String  | Stop name                                                           |
-| extId    | String  | HafasId for this stop. See "HafasId and SiteId" below.              |
-| Lat      | Double  | Latitude                                                            |
-| Lon      | Double  | Longitude                                                           |
-| Weight   | Integer | How trafficed a station is. Higher means more traffic.              |
-| Dist     | Integer | Distance between the requested coordinate and this stop, in meters. |
-| Products | Integer | See description for request parameters                              |
+| Name          | Type    | Description                                                           |
+|---------------|---------|-----------------------------------------------------------------------|
+| Id            | String  | Reconstruction Id, see travel planner API                             |
+| Name          | String  | Stop name                                                             |
+| extId         | String  | HafasId for this stop. See "HafasId and SiteId" below.                |
+| mainMastExtId | Integer | SiteId for use with SL Route-planner. See "HafasId and SiteId" below. |
+| Lat           | Double  | Latitude                                                              |
+| Lon           | Double  | Longitude                                                             |
+| Weight        | Integer | How trafficked a station is. Higher means more traffic.               |
+| Dist          | Integer | Distance between the requested coordinate and this stop, in meters.   |
+| Products      | Integer | See description for request parameters                                |
 
 #### Coordlocation
 

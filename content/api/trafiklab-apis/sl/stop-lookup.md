@@ -100,11 +100,11 @@ https://journeyplanner.integration.sl.se/v1/typeahead.xml?searchstring=Oden&stat
 {{% note %}}
 **SL Stop Lookup in combination with other APIs**
 
-The SiteId value returned by the SL Transport API matches the SiteId value expected by the SL Routeplanner 3.1 API. These values changed in february but do
-still match (given that both APIs are accessed through the integration.sl.se domain).
+The SiteId value returned by the SL Stop lookup API matches the SiteId value expected by the SL Routeplanner 3.1 API. These values changed in february but do
+still match each other (given that both APIs are accessed through the integration.sl.se domain).
 
 In order to use values returned by the SL Stop Lookup API in combination with the SL Transport API, you should convert the values returned by the SL Stop Lookup
-API, in the form of `3BA1CDEFG`, into a number `ABCDEFG`. It is however recommended to use the site ids returned by the Transport Api `/lines` endpoint if
+API, in the form of `3BA1CDEFG`, into a number `ABCDEFG`. It is however recommended to use the site ids returned by the Transport Api `/sites` endpoint if
 possible instead of combining APIs.
 {{% /note %}}
 
@@ -120,7 +120,7 @@ possible instead of combining APIs.
   "ResponseData": [
     {
       "Name": "Odenplan (Stockholm)",
-      "SiteId": "9117",
+      "SiteId": "300109117",
       "Type": "Station",
       "X": "18049099",
       "Y": "59342901",
@@ -128,7 +128,7 @@ possible instead of combining APIs.
     },
     {
       "Name": "Odengatan/Valhallavägen (Stockholm)",
-      "SiteId": "1082",
+      "SiteId": "300101082",
       "Type": "Station",
       "X": "18065891",
       "Y": "59346622",
@@ -136,7 +136,7 @@ possible instead of combining APIs.
     },
     {
       "Name": "Stockholm Odenplan (Stockholm)",
-      "SiteId": "1079",
+      "SiteId": "300101079",
       "Type": "Station",
       "X": "18045683",
       "Y": "59343116",
@@ -144,7 +144,7 @@ possible instead of combining APIs.
     },
     {
       "Name": "Odengatan/Sveavägen (Stockholm)",
-      "SiteId": "1030",
+      "SiteId": "300101030",
       "Type": "Station",
       "X": "18055311",
       "Y": "59344294",
@@ -152,7 +152,7 @@ possible instead of combining APIs.
     },
     {
       "Name": "Odenvägen (Lidingö)",
-      "SiteId": "2059",
+      "SiteId": "300102059",
       "Type": "Station",
       "X": "18133795",
       "Y": "59367396",
@@ -172,35 +172,35 @@ possible instead of combining APIs.
     <ResponseData>
         <Site>
             <Name>Odenplan (Stockholm)</Name>
-            <SiteId>9117</SiteId>
+            <SiteId>300109117</SiteId>
             <Type>Station</Type>
             <X>18049099</X>
             <Y>59342901</Y>
         </Site>
         <Site>
             <Name>Odengatan/Valhallavägen (Stockholm)</Name>
-            <SiteId>1082</SiteId>
+            <SiteId>300101082</SiteId>
             <Type>Station</Type>
             <X>18065891</X>
             <Y>59346622</Y>
         </Site>
         <Site>
             <Name>Stockholm Odenplan (Stockholm)</Name>
-            <SiteId>1079</SiteId>
+            <SiteId>300101079</SiteId>
             <Type>Station</Type>
             <X>18045683</X>
             <Y>59343116</Y>
         </Site>
         <Site>
             <Name>Odengatan/Sveavägen (Stockholm)</Name>
-            <SiteId>1030</SiteId>
+            <SiteId>300101030</SiteId>
             <Type>Station</Type>
             <X>18055311</X>
             <Y>59344294</Y>
         </Site>
         <Site>
             <Name>Odenvägen (Lidingö)</Name>
-            <SiteId>2059</SiteId>
+            <SiteId>300102059</SiteId>
             <Type>Station</Type>
             <X>18133795</X>
             <Y>59367396</Y>

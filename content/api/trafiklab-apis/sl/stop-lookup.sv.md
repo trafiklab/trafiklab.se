@@ -68,6 +68,17 @@ Json eller xml enligt ändelse till serviceanropet.
 | X      | String  | X-koordinat för placering.                                          |
 | Y      | String  | Y-koordinat för placering.                                          |
 
+{{% note %}}
+**SL Stop Lookup i kombination med andra APIer**
+
+SiteId-värden som returneras av SL Stop lookup API matchar med SiteId-värden som förväntas av SL Reseplanerare 3.1 API som parameter. Dessa värden förändrades i februari
+men matchar fortfarande varandra (förutsatt att båda API:erna nås genom domänen integration.sl.se).
+
+För att kunna använda värdena som returneras av SL Stop Lookup APIet i kombination med SL Transport API så måste du konvertera returvärdet från SL Stop Lookup
+API. Detta värde kommer i formen `3BA1CDEFG`, och ska konverteras till ett nummer `ABCDEFG`. Vi rekommenderar dock att använda de siteId-värden som returneras av 
+Transport Api `/sites` om möjligt, istället för att kombinera APIer.
+{{% /note %}}
+
 ## Felmeddelanden
 
 Än så länge finns inga felmeddelanden.

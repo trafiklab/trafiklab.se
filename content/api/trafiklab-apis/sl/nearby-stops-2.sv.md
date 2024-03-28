@@ -71,16 +71,17 @@ Json eller xml enligt ändelse till serviceanropet.
 
 #### StopLocation
 
-| Namn     | Datatyp | Beskrivning                                                                  |
-|----------|---------|------------------------------------------------------------------------------|
-| Id       | String  | Reconstruction Id, se reseplanerarens dokumentation                          |
-| Name     | String  | Namn för hållplats.                                                          |
-| extId    | String  | HafasId för hållplatsen. Läs mer om HafasId i sektionen HafasId och SiteId.  |
-| Lat      | Double  | Lat.                                                                         |
-| Lon      | Double  | Long.                                                                        |
-| Weight   | Integer | Anger hur mycket en station används, ju högre värde desto större användning. |
-| Dist     | Integer | Distans i meter från försedd koordinat i anropet.                            |
-| Products | Integer | Se beskrivning för anropsparametrar                                          |
+| Namn          | Datatyp | Beskrivning                                                                                             |
+|---------------|---------|---------------------------------------------------------------------------------------------------------|
+| Id            | String  | Reconstruction Id, se reseplanerarens dokumentation                                                     |
+| Name          | String  | Namn för hållplats.                                                                                     |
+| extId         | String  | HafasId för hållplatsen. Läs mer om HafasId i sektionen HafasId och SiteId.                             |
+| mainMastExtId | Integer | SiteId att användas tillsammans med SL Route-planner. Läs mer om SiteId i sektionen HafasId och SiteId. |                                                                              |
+| Lat           | Double  | Lat.                                                                                                    |
+| Lon           | Double  | Long.                                                                                                   |
+| Weight        | Integer | Anger hur mycket en station används, ju högre värde desto större användning.                            |
+| Dist          | Integer | Distans i meter från försedd koordinat i anropet.                                                       |
+| Products      | Integer | Se beskrivning för anropsparametrar                                                                     |
 
 #### CoordLocation
 
