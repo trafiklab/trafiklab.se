@@ -52,6 +52,15 @@ Below are some example download URLs. For a complete list all operators with dat
 | ------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
 | **SJ + Snälltåget + Tågab**  | [https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>) |
 
+## Data format
+
+The data is in the NeTEx (**Ne**twork and **T**imetable **Ex**change) format. This is a format in which all European
+operators have to publish their data. The data is aimed at both operator-to-traveller communication and internal
+communication between different organizations. Samtrafiken
+follows [the Nordic NeTEx Profile, which is documented by Entur](https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/728891481/Nordic+NeTEx+Profile).
+
+For more technical information about Stops data, please visit [Samtrafiken Open Data - NeTEx](https://samtrafiken.atlassian.net/wiki/spaces/SamtrafikenOpenData/pages/989233182/Samtrafiken+NeTEx+export).
+
 ## File structure
 
 Each archive contains three types of files:
