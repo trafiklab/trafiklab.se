@@ -74,9 +74,6 @@
         "operationId": "Lines",
         "parameters": [
           {
-            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
-          },
-          {
             "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
           },
           {
@@ -148,9 +145,6 @@
         "operationId": "Sites",
         "parameters": [
           {
-            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
-          },
-          {
             "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
           },
           {
@@ -218,9 +212,6 @@
         "description": "Get upcoming departures and deviations starting from time of the request (a maximum of 3 departures for each line & direction)",
         "operationId": "Departures",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
-          },
           {
             "$ref": "#/components/parameters/trait_query.filterTransportModeOptional_transport"
           },
@@ -310,9 +301,6 @@
         "operationId": "StopPoints",
         "parameters": [
           {
-            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
-          },
-          {
             "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
           }
         ]
@@ -380,9 +368,6 @@
         "description": "List all transport-authorities within Region Stockholm",
         "operationId": "TransportAuthorities",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/trait_jsonResponsive_Content-Type"
-          },
           {
             "$ref": "#/components/parameters/trait_gzipResponsive_Accept-Encoding"
           }
@@ -1387,16 +1372,6 @@
       }
     },
     "parameters": {
-      "trait_jsonResponsive_Content-Type": {
-        "name": "Content-Type",
-        "in": "header",
-        "required": true,
-        "description": "This response header describe the content type of the response.",
-        "schema": {
-          "default": "application/json",
-          "type": "string"
-        }
-      },
       "trait_gzipResponsive_Accept-Encoding": {
         "name": "Accept-Encoding",
         "in": "header",
