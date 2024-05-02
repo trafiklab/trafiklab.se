@@ -17,6 +17,7 @@ The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key={apikey}](https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key={apikey}).
 
 Replace `{apikey}` with your own `stops data` API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
+
 {{% /note %}}
 
 #### API key levels
@@ -41,6 +42,9 @@ The data is in the NeTEx (**Ne**twork and **T**imetable **Ex**change) format. Th
 operators have to publish their data. The data is aimed at both operator-to-traveller communication and internal
 communication between different organizations. Samtrafiken
 follows [the Nordic NeTEx Profile, which is documented by Entur](https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/728891481/Nordic+NeTEx+Profile).
+
+For more technical information about Stops data, please visit [Samtrafiken Open Data - Stops data](https://samtrafiken.atlassian.net/wiki/spaces/SamtrafikenOpenData/pages/3701309442/Samtrafiken+Stops+NeTEx+export).
+
 
 ### KeyValues explained
 
