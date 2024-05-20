@@ -48,16 +48,6 @@ at a later date:
 
 The KoDA API provides raw GTFS and GTFS-RT data downloads, which are organized per operator, feed, and date.
 
-### Jupyter hub and Cassandra database
-
-The raw GTFS and GTFS-RT data has not only been stored in its raw original GTFS format but has also been imported into
-a [Cassandra](https://cassandra.apache.org/) database.
-
-To access the structured database a user has to get an account for the KoDa JupyterHub server. To request an account
-please contact 'koda(at)ri.se'.
-
-This API will later on be extended with more information and code examples on how to use the data in Jupyter notebooks.
-
 ## Data format
 
 The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the GTFS-Realtime
