@@ -11,7 +11,7 @@ The following table shows which operators are covered by this dataset.
 | DinTur (Västernorrlands län)                   |      `dintur`      |     ✔️      |                |                   |                |
 | Gotlands kollektivtrafik (Gotlands län)        |     `gotland`      |     ✔️      |                |                   |                |
 | Hallandstrafiken (Hallands län)                |     `halland`      |     ✔️      |                |                   |                |
-| JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |       🕒       |        🕒         |                |
+| JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |       ✔️       |        ✔️         |                |
 | Kalmar länstrafik (Kalmar län)                 |       `klt`        |     ✔️      |       ✔️       |        ✔️         |                |
 | Kronobergs länstrafik (Kronobergs län)         |      `krono`       |     ✔️      |       ✔️       |        ✔️         |                |
 | Länstrafiken Jämtland (JLT)                    |     `jamtland`     |     ✔️      |                |                   |                |
