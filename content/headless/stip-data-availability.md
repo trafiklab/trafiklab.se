@@ -1,7 +1,7 @@
 The following table shows which operators are covered by this dataset.
 
 {{% success %}}
-**New!** Realtime and vehicle position data is available for Länstrafiken Örebro starting 3rd April 2023.
+**New!** Realtime and vehicle position data is available for Jönköpings Länstrafik starting June 3rd 2024.
 {{% /success %}}
 
 | Operator                                       |    Abbreviation    | Static data | Real-time data | Vehicle positions | Occupancy data |
