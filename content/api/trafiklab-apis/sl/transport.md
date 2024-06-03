@@ -3,6 +3,17 @@ title: SL Transport
 weight: 10
 date: 2024-01-30
 badge: new
+aliases:
+  - "/api/trafiklab-apis/sl/stops-and-lines-2/"
+  - "/sv/api/trafiklab-apis/sl/stops-and-lines-2/"
+  - "/api/sl-hallplatser-och-linjer-2"
+  - "/api/sl-hallplatser-och-linjer-2/documentation"
+  - "/api/sl-hallplatser-och-linjer-2/nivaer"
+  - "/api/sl-hallplatser-och-linjer-2/console"
+  - "/node/13609"
+  - "/node/13609/documentation"
+  - "/node/13609/nivaer"
+  - "/node/13609/console"
 ---
 
 ## Description
@@ -32,7 +43,7 @@ https://transport.integration.sl.se/v1/lines
 {{% tab "Sites" %}}
 
 ```text
-https://transport.integration.sl.se/v1/sites
+https://transport.integration.sl.se/v1/sites?expand=true
 ```
 
 {{% /tabs %}}
@@ -263,19 +274,20 @@ For details regarding the response structure, please see the OpenApi specificati
 ```json
 [
   {
-    "id": 1002,
-    "gid": 9001,
-    "name": "Odenplan",
-    "alias": "string",
-    "abbreviation": "CEN",
-    "note": "vid Sandhamn",
-    "lat": 59.4474618783708,
-    "lon": 17.8376900105886,
+    "id": 1079,
+    "gid": 9091001000001080,
+    "name": "Stockholm Odenplan",
+    "abbreviation": "SOD",
+    "lat": 59.3431180362708,
+    "lon": 18.0456865578456,
+    "stop_areas": [
+      1131,
+      10151,
+      5320
+    ],
     "valid": {
-      "from": "2024-01-01T01:00:00",
-      "to": "2024-01-01T01:00:00"
-    },
-    "stop_areas": "string"
+      "from": "2018-08-10T00:00:00"
+    }
   }
 ]
 ```
