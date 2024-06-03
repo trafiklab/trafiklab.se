@@ -14,7 +14,7 @@ SL has updated their API's. 7 API's has become 5:
 <li>SL Stop lookup (updated: new url)
 <li>SL Nearby stops 2 (updated: new url)
 </ul>
-{{% /warning %}}
+{{% /info %}}
 
 | Well suited for | Not so suited for |
 | :--- | :--- |
