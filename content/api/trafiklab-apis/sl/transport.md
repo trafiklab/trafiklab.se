@@ -61,7 +61,7 @@ https://transport.integration.sl.se/v1/sites?expand=true
 {{% tab "Departures from site" %}}
 
 ```text
-https://transport.integration.sl.se/v1/sites/{SiteId}/departures
+https://transport.integration.sl.se/v1/sites/{siteId}/departures
 ```
 
 {{% /tab %}}
@@ -99,7 +99,7 @@ complete list of all parameters, including optional parameters, please see the o
 
 | Parameters | Data Type | Mandatory | Description                                                                                                                                                                                                   |
 |------------|-----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SiteId     | Integer   | Yes       | Unique identification number for the location for which current departures should be fetched, e.g., 9192 for Slussen. Can be obtained from a search through the list of all sites, or the SL stop lookup api. |
+| siteId     | Integer   | Yes       | Unique identification number for the location for which current departures should be fetched, e.g., 9192 for Slussen. Can be obtained from a search through the list of all sites, or the SL stop lookup api. |
 | expand     | Boolean   | No        | Used in sites endpoint in order to include stop area ids.                                                                                                                                                     |
 
 {{% note %}}
