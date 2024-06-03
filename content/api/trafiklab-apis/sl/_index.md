@@ -5,11 +5,11 @@ weight: 80
 ---
 SL's APIs is a collection of 7 APIs which provide information about planned and realtime traffic.
 
-{{% warning %}}
-SL are currently updating and renewing their API's. 7 API's will become 5:
+{{% info %}}
+SL has updated their API's. 7 API's has become 5:
 <ul>
-<li>SL Transport (new: replaces Departures v4 & Stops and lines v2) 
-<li>SL Deviations (new: replaces Service Alerts & Traffic Status)
+<li>SL Transport (new: has replaced Departures v4 & Stops and lines v2) 
+<li>SL Deviations (new: has replaced Service Alerts & Traffic Status)
 <li>SL Route-planner v3.1 (updated: new url) 
 <li>SL Stop lookup (updated: new url)
 <li>SL Nearby stops 2 (updated: new url)
