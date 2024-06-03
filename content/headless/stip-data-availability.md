@@ -1,7 +1,7 @@
 The following table shows which operators are covered by this dataset.
 
 {{% success %}}
-**New!** Realtime and vehicle position data is available for Länstrafiken Örebro starting 3rd April 2023.
+**New!** Realtime and vehicle position data is available for Jönköpings Länstrafik starting June 3rd 2024.
 {{% /success %}}
 
 | Operator                                       |    Abbreviation    | Static data | Real-time data | Vehicle positions | Occupancy data |
@@ -11,7 +11,7 @@ The following table shows which operators are covered by this dataset.
 | DinTur (Västernorrlands län)                   |      `dintur`      |     ✔️      |                |                   |                |
 | Gotlands kollektivtrafik (Gotlands län)        |     `gotland`      |     ✔️      |                |                   |                |
 | Hallandstrafiken (Hallands län)                |     `halland`      |     ✔️      |                |                   |                |
-| JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |       🕒       |        🕒         |                |
+| JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |       ✔️       |        ✔️         |                |
 | Kalmar länstrafik (Kalmar län)                 |       `klt`        |     ✔️      |       ✔️       |        ✔️         |                |
 | Kronobergs länstrafik (Kronobergs län)         |      `krono`       |     ✔️      |       ✔️       |        ✔️         |                |
 | Länstrafiken Jämtland (JLT)                    |     `jamtland`     |     ✔️      |                |                   |                |
