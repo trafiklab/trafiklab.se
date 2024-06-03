@@ -4,16 +4,27 @@ weight: 10
 date: 2024-01-30
 badge: new
 aliases:
-  - "/api/trafiklab-apis/sl/stops-and-lines-2/"
-  - "/sv/api/trafiklab-apis/sl/stops-and-lines-2/"
-  - "/api/sl-hallplatser-och-linjer-2"
-  - "/api/sl-hallplatser-och-linjer-2/documentation"
-  - "/api/sl-hallplatser-och-linjer-2/nivaer"
-  - "/api/sl-hallplatser-och-linjer-2/console"
-  - "/node/13609"
-  - "/node/13609/documentation"
-  - "/node/13609/nivaer"
-  - "/node/13609/console"
+  - /api/trafiklab-apis/sl/stops-and-lines-2/
+  - /sv/api/trafiklab-apis/sl/stops-and-lines-2/
+  - /api/sl-hallplatser-och-linjer-2
+  - /api/sl-hallplatser-och-linjer-2/documentation
+  - /api/sl-hallplatser-och-linjer-2/nivaer
+  - /api/sl-hallplatser-och-linjer-2/console
+  - /node/13609
+  - /node/13609/documentation
+  - /node/13609/nivaer
+  - /node/13609/console
+  - /api/trafiklab-apis/sl/departures-4/
+  - /sv/api/trafiklab-apis/sl/departures-4/
+  - /api/sl-realtidsinformation-4/sl-realtidsinformation-4
+  - /api/sl-realtidsinformation-4
+  - /api/sl-realtidsinformation-4/dokumentation
+  - /api/sl-realtidsinformation-4/nivaer
+  - /api/sl-realtidsinformation-4/konsol
+  - /node/15754
+  - /node/15754/dokumentation
+  - /node/15754/nivaer
+  - /node/15754/konsol
 ---
 
 ## Description
