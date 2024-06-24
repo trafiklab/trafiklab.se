@@ -83,33 +83,39 @@ Request category codes for filtering differ from response category codes. These 
 
 | Abbreviation | Name                                           |
 |--------------|------------------------------------------------|
-| BLT          | Regional bus                                   |
+| BLT          | Local bus                                      |
+| BRE          | Regional bus                                   |
 | BXB          | Express bus                                    |
 | BAX          | Airport Express bus, such as Flygbussarna      |
-| ULT          | Metro                                          |
+| BBL          | Bus                                            |
+| BRB          | Replacement bus                                |
+| FLT          | Lokal ferry                                    |
 | JAX          | Airport Express Train, such as Arlanda Express |
 | JLT          | Local train                                    |
 | JRE          | Regional train                                 |
 | JIC          | InterCity train                                |
-| JPT          | PågaTåg                                        |
+| JST          | High speed train                               |
 | JEX          | Express train                                  |
+| JBL          | Train                                          |
+| JEN          | EuroNight train                                |
+| JNT          | Night train                                    |
 | SLT          | Tram                                           |
-| FLT          | Lokal ferry                                    |
-| FUT          | International ferry                            |
+| TLT          | Taxi                                           |
+| ULT          | Metro                                          |
 
 **Numeric representation**
 
-| Name                                         | Numeric value |
-|----------------------------------------------|---------------|
-| High speed trains, Snabbtåg, Arlanda Express | 1             |
-| Regional trains, InterCity trains            | 2             | 
-| Express busses, Flygbussar                   | 3             | 
-| Local trains Tåg, PågaTåg, Öresundståg       | 4             | 
-| Metro, such as tunnelbanan                   | 5             | 
-| Tram such as Spårvagn, Tvärbanan             | 6             |
-| Busses                                       | 7             |
-| Ferries and international ferries            | 8             |
-| Taxi                                         | 9             |
+| Name                                            | Numeric value |
+|-------------------------------------------------|---------------|
+| High speed trains, Snabbtåg, Arlanda Express    | 1             |
+| Regional trains, InterCity trains, Night trains | 2             | 
+| Express busses, Flygbussar                      | 3             | 
+| Local trains, Öresundståg                       | 4             | 
+| Metro, such as tunnelbanan                      | 5             | 
+| Tram such as Spårvagn, Tvärbanan                | 6             |
+| Busses                                          | 7             |
+| Ferries                                         | 8             |
+| Taxi                                            | 9             |
 
 ### Request product class category codes
 
