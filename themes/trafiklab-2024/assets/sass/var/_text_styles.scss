@@ -1,0 +1,139 @@
+/**
+ * This file contains text style definitions, which are reused throughout the theme. This keeps all font and font-size definitions and usages near each other,
+ * and helps to keep the same text styles throughout the site. Typically only font, font weight and font size are set here, although some header definitions
+ * also include some other stylistic elements
+ */
+
+@import "colors";
+
+/* Only the following 5 font sizes may be used throughout the site */
+$font-size-smaller: 14px;
+$font-size-normal: 16px;
+$font-size-larger: 24px;
+$font-size-large: 32px;
+$font-size-hero: 64px; /* Only for landing page hero text */
+
+@mixin font-league-gothic {
+  font-family: "League Gothic", sans-serif; /* Logo font */
+}
+
+@mixin font-ibm-plex-sans-condensed {
+  font-family: "IBM Plex Sans Condensed", "Noto Display Light", sans-serif; /* Main body text */
+}
+
+@mixin font-ibm-plex-sans {
+  font-family: "IBM Plex Sans", "Noto Display Light", sans-serif;
+}
+
+@mixin font-monospace {
+  font-family: "IBM Plex Mono", "JetBrains Mono", sans-serif; /* Code fragments */
+}
+
+@mixin text-body {
+  @include font-ibm-plex-sans-condensed;
+  font-size: $font-size-normal;
+  color: var(--color-text);
+}
+
+@mixin text-block-quote {
+  @include font-ibm-plex-sans-condensed;
+  font-size: $font-size-normal;
+  color: var(--color-quote);
+}
+
+@mixin text-code-block {
+  @include font-monospace;
+  font-size: $font-size-normal;
+}
+
+@mixin text-code-inline {
+  @include font-monospace;
+  font-size: $font-size-normal;
+}
+
+@mixin text-h1-background {
+  background-color: var(--color-h1-background);
+  color: var(--color-h1-foreground);
+  padding: 0 4px;
+}
+
+@mixin text-h1 {
+  @include font-league-gothic;
+  @include text-h1-background;
+  font-size: $font-size-large;
+  text-transform: uppercase;
+  margin: 64px 0 16px;
+}
+
+@mixin text-h2 {
+  @include font-league-gothic;
+  font-size: $font-size-larger;
+  color: var(--color-h2-foreground);
+  border: (5 * $font-size-larger / 6) solid var(--color-h2-accent);
+  padding-bottom: ($font-size-larger / 3);
+  margin: 32px 0 16px;
+}
+
+@mixin text-h3 {
+  @include font-ibm-plex-sans;
+  font-size: $font-size-normal;
+  color: var(--color-h3-foreground);
+  margin: 24px 0 8px;
+}
+
+@mixin text-h4 {
+  @include font-ibm-plex-sans;
+  font-size: $font-size-normal;
+  color: var(--color-h456-foreground);
+  margin: 16px 0 8px;
+}
+
+@mixin text-h5 {
+  @include font-ibm-plex-sans;
+  font-size: $font-size-normal;
+  color: var(--color-h456-foreground);
+  margin: 12px 0 8px;
+}
+
+@mixin text-h6 {
+  @include font-ibm-plex-sans;
+  font-size: $font-size-normal;
+  color: var(--color-h456-foreground);
+  margin: 12px 0 8px;
+}
+
+@mixin text-subtext {
+  @include font-ibm-plex-sans-condensed;
+  font-size: $font-size-normal;
+  text-transform: uppercase;
+}
+
+/* Page header */
+@mixin nav-header-item {
+  @include font-ibm-plex-sans-condensed;
+  font-size: $font-size-normal;
+}
+
+/* Navigation sidebar (left sidebar) */
+@mixin sidebar-header-item {
+  @include font-ibm-plex-sans-condensed;
+  font-weight: bold;
+  font-size: $font-size-smaller;
+}
+
+@mixin sidebar-list-item {
+  @include font-ibm-plex-sans-condensed;
+  font-size: $font-size-smaller;
+}
+
+/* Table of contents (right sidebar) */
+@mixin toc-header-item {
+  @include font-ibm-plex-sans-condensed;
+  font-weight: bold;
+  font-size: $font-size-smaller;
+}
+
+@mixin toc-list-item {
+  @include font-ibm-plex-sans-condensed;
+  font-size: $font-size-smaller;
+}

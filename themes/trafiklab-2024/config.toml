@@ -1,0 +1,15 @@
+[module]
+[module.hugoVersion]
+extended = true
+max = ""
+min = "0.117.0"
+
+# Multilingual
+[languages]
+    [languages.en]
+    languageName = "English"
+    weight = 2
+
+    [languages.sv]
+    languageName = "Svenska"
+    weight = 1
