@@ -3,8 +3,7 @@ defaultContentLanguage  = "en"
 
 title = "Trafiklab"
 
-# Theme is loaded through a git submodule
-theme = "trafiklab-2021"
+theme = "trafiklab-2024"
 
 enableEmoji = true
 enableGitInfo = true
@@ -16,7 +15,7 @@ refLinksErrorLevel = "WARNING"
 [module.hugoVersion]
 extended = true
 max = ""
-min = "0.108.0"
+min = "0.131.0"
 
 # paths
 [permalinks]

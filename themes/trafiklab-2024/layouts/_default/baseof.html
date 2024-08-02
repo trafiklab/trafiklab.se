@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{.Language.Lang}}">
+<head>
+    {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
+</head>
+{{ $sidebar := eq (.FirstSection.Param "sidebar") true }}
+<body class="type-{{ .Type }} {{ if $sidebar }} with-sidebar {{ end }}  {{ if not $sidebar }} with-footer {{ end }}">
+
+{{ block "header" . }}{{ partial "header.html" .}}{{ end }}
+<main id="content">
+{{ if $sidebar }}
+    <div class="content-left-wrapper">
+    {{ block "sidebar-left" . }}{{ partial "sidebar/sidebar.html" .}}{{ end }}
+    </div>
+    <div class="content-center-wrapper">
+    {{ block "main" . }} {{ end }}
+    </div>
+    <div class="content-right-wrapper">
+        {{ block "sidebar-right" . }}{{ partial "toc/toc.html" .}}{{ end }}
+    </div>
+{{ else }}
+    {{ block "main" . }} {{ end }}
+    {{ block "footer" . }}
+        {{ partial "footer.html" .}}
+    {{ end }}
+{{ end }}
+</main>
+
+<script src="/scripts/jquery.2.2.4.min.js"></script>
+{{ block "page-script" . }}{{ end }}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".mobile-menu-button").click(function () {
+      $(this).toggleClass("is-open");
+      $(".mobile-navigation").toggleClass("is-open");
+    });
+  });
+</script>
+</body>
+</html>

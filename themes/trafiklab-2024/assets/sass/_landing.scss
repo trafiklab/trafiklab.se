@@ -1,0 +1,84 @@
+main.landing {
+
+  font-size: $font-size-larger;
+
+  section.page:first-of-type {
+    min-height: calc(100vh - #{$header-content-height + 2 * $header-padding});
+  }
+
+  section.page {
+    min-height: 100vh;
+  }
+
+  h1 {
+    display: flex;
+    width: 100%;
+    text-align: justify;
+    height: $font-size-hero + 12;
+
+    span {
+      display: inline-block;
+
+      text-align: justify;
+      font-size: $font-size-hero;
+      flex-grow: 1;
+      // Equal padding is needed on every part so the inverted bits can matched without alignment issues
+      height: $font-size-hero + 12;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    span.hero-text--inverted {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+
+  aside.recent-posts {
+    .recent-posts__item {
+      margin-bottom: 32px;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    .recent-posts__item__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recent-posts__item__image img {
+      max-width: 100%;
+    }
+  }
+
+  aside.newsletter-signup {
+    background-color: $color-pink-hint;
+    padding: 16px;
+
+    label {
+      display: block;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    input[type=email] {
+      color: $color-purple-dark;
+      background-color: $color-pink-hint-whitened;
+      border: none;
+      border-bottom: 4px solid $color-purple-muted;
+      padding: 8px 16px;
+    }
+
+    button[type=submit] {
+
+    }
+  }
+
+
+  .partnerlist__logo img {
+    max-height: 40px;
+  }
+}

@@ -1,0 +1,25 @@
+{{ $args := . }}
+{{ $currentPage := $args.currentPage }}
+{{ $targetPage := $args.targetPage }}
+
+<li class="tl-side-navigation__item
+           {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__item--active {{end}}
+           {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__item--open-list {{end}}">
+    {{ if $targetPage.Page.Params.headless }}
+      <div class="tl-side-navigation__click-target tl-side-navigation-group">{{ $targetPage.Title }}</div>
+    {{ else }}
+        {{ if ($targetPage.Data) }}
+            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage "hasChildren" true) }}
+        {{ else }}
+            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage) }}
+        {{ end }}
+    {{ end }}
+    {{ if ($targetPage.Data) }}
+        <ul class="tl-side-navigation tl-side-navigation__dropdown-list
+                   {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__dropdown-list--active {{end}}">
+            {{- range $i, $e := $targetPage.Data.Pages -}}
+              {{ partial "sidebar/sidebar-page-tree.html" (dict "targetPage" . "currentPage" $currentPage) }}
+            {{ end }}
+        </ul>
+    {{ end }}
+</li>

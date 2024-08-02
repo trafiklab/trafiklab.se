@@ -1,0 +1,13 @@
+<nav class="sidebar" role="navigation" aria-label="navigation">
+    {{ $currentPage := . }}
+    {{ $root := .FirstSection }}
+    <ul class="tl-side-navigation tl-side-navigation--root">
+        {{ if not $root.Params.headless }}
+        {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $root "currentPage" $currentPage) }}
+        {{ end }}
+        {{- range $i, $e := $root.Pages -}}
+        {{ partial "sidebar/sidebar-page-tree.html" (dict "targetPage" . "currentPage" $currentPage) }}
+        {{- end -}}
+    </ul>
+</nav>
+

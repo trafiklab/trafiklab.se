@@ -1,0 +1,46 @@
+{{ define "main" }}
+<main class="landing">
+    <section class="page page-first">
+        <div class="container">
+            <h1><span>The home of</span><span class="h1--tl-inverted">swedish public transport data</span></h1>
+            <p>{{ .Content}}</p>
+            <div class="tl-row tl-row--large-gap">
+                <div class="btn btn--large btn--primary tl-col--6 tl-col--xs-12">
+                    Getting Started
+                </div>
+                <div class="btn btn--large btn--primary tl-col--6 tl-col--xs-12">
+                    API Overview
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ if or .Params.news_count_max .Params.cases_count_max }}
+    <section class="page">
+            {{ partial "home/news-cases.html" (dict
+            "context" .
+            "max_news" .Params.news_count_max
+            "max_cases" .Params.cases_count_max
+            "max_combined" .Params.combined_news_case_count_max
+            )
+            }}
+    </section>
+    {{end}}
+
+    <section class="page">
+            {{ if .Params.Mc }}
+            {{ partial "home/newsletter-signup.html" .}}
+            {{ end }}
+
+        {{ partial "home/partner-list.html" .}}
+    </section>
+
+
+</main>
+{{ end }}
+
+{{- define "page-script" -}}
+<script type="text/javascript">
+
+</script>
+{{- end -}}

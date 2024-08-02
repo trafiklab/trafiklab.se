@@ -1,29 +1,17 @@
 ---
 title: "Trafiklab"
-hero: /tl-illustration-map2.svg
-cases_section: true
-news_section: true
-highlighted_page: /news/2024/2024-03-04-sl-api-update.md
+news_count_max: 3
+case_count_max: 3
+combined_news_case_count_max: 4
 mc: true
 type: home
-landingRoller:
-    - dataName: "APIs"
-      dataLink: "/api/"
-      caseName: "route-planners"
-      caseLink: "/cases"
-    - dataName: "GTFS-RT"
-      dataLink: "/api/"
-      caseName: "delay predictions"
-      caseLink: "/cases"
-    - dataName: "APIs"
-      dataLink: "/api/"
-      caseName: "digital signage"
-      caseLink: "/cases"
-    - dataName: "historical data"
-      dataLink: "/api/"
-      caseName: "research"
-      caseLink: "/cases"
+links:
+  - text: "Getting Started"
+    link: "/docs/using-trafiklab/getting-started/"
+  - text: "API Overview"
+    link: "/api/"
 description: "Trafiklab is an initiative for open data related to public transport. We publish high quality data, make it simpler to access APIs from public transport companies, easier to find data and more interesting to talk about possibilities. Here you can find information, see what others have done, and read about what's happening."
 ---
-<p>We publish <a class="landing-roller" href="/api/trafiklab-apis/gtfs-regional/realtime/">vehicle positions</a></p>
-<p>so you can create <a class="landing-roller" href="/cases">visualizations</a></p>
+At Trafiklab, we provide official open data for all public transport in Sweden
+
+Public transport data is available as both scheduled and realtime data, and it is continuously updated. We are constantly working with opening up more data sources and improving the existing ones.

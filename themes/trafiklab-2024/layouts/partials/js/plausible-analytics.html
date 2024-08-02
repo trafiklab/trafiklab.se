@@ -1,0 +1,4 @@
+{{ if .Site.Params.plausibleAnalyicsDomain }}
+<!-- /api/event through server-side redirect -->
+<script defer data-domain="{{ .Site.Params.plausibleAnalyicsDomain }}" src="https://developer.trafiklab.se/js/init.js"></script>
+{{ end }}

@@ -1,0 +1,76 @@
+$container-width: 860px;
+
+$left-sidebar-width: 320px;
+$right-sidebar-width: $left-sidebar-width;
+$sidebar-container-gap: 40px;
+
+$article-image-height: 360px;
+$article-pullup-over-image: 140px;
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+body.with-sidebar {
+
+  .content-center-wrapper {
+    position: relative;
+  }
+
+  .content-left-wrapper, .content-right-wrapper {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+  }
+
+  main#content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main#content .background-image {
+    position: absolute;
+    z-index: -1;
+    left: - $sidebar-container-gap;
+    background-color: red;
+    height: $article-image-height;
+    width: $container-width + $sidebar-container-gap + $right-sidebar-width;
+  }
+
+  article.page {
+    margin-top: $article-image-height - $article-pullup-over-image;
+    background-color: var(--color-background);
+  }
+
+  nav.right-sidebar-toc {
+    position: sticky;
+    top: $header-content-height + 2 * $header-padding;
+    width: $right-sidebar-width;
+    margin-top: $article-image-height;
+    background-color: purple;
+    height: 40vh;
+  }
+
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    // Position right in the area left of the content, to be beside the centered content
+    justify-self: right;
+    margin-left: auto;
+    margin-right: $sidebar-container-gap;
+    // End of positioning
+
+    width: $left-sidebar-width;
+    background-color: blue;
+    height: 100vh;
+  }
+}
+
+article.page {
+  padding: 32px 96px;
+}

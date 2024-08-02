@@ -4,8 +4,6 @@
  * also include some other stylistic elements
  */
 
-@import "colors";
-
 /* Only the following 5 font sizes may be used throughout the site */
 $font-size-smaller: 14px;
 $font-size-normal: 16px;
@@ -30,8 +28,9 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 }
 
 @mixin text-body {
-  @include font-ibm-plex-sans-condensed;
+  @include font-ibm-plex-sans;
   font-size: $font-size-normal;
+  font-weight: normal;
   color: var(--color-text);
 }
 
@@ -54,35 +53,48 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-h1-background {
   background-color: var(--color-h1-background);
   color: var(--color-h1-foreground);
-  padding: 0 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 @mixin text-h1 {
   @include font-league-gothic;
-  @include text-h1-background;
   font-size: $font-size-large;
   text-transform: uppercase;
   margin: 64px 0 16px;
+
+  text-wrap: nowrap;
 }
 
 @mixin text-h2 {
-  @include font-league-gothic;
+  @include font-ibm-plex-sans-condensed;
+  display: inline-block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: $font-size-larger;
+  width: auto;
+
   font-size: $font-size-larger;
   color: var(--color-h2-foreground);
-  border: (5 * $font-size-larger / 6) solid var(--color-h2-accent);
-  padding-bottom: ($font-size-larger / 3);
+  border-bottom: (5 * $font-size-larger / 6) solid var(--color-h2-accent);
+  padding-bottom: ($font-size-larger * 2 / 3);
+  padding-left: 8px;
+  padding-right: 8px;
   margin: 32px 0 16px;
 }
 
 @mixin text-h3 {
-  @include font-ibm-plex-sans;
+  @include font-ibm-plex-sans-condensed;
   font-size: $font-size-normal;
   color: var(--color-h3-foreground);
   margin: 24px 0 8px;
 }
 
 @mixin text-h4 {
-  @include font-ibm-plex-sans;
+  @include font-ibm-plex-sans-condensed;
   font-size: $font-size-normal;
   color: var(--color-h456-foreground);
   margin: 16px 0 8px;
@@ -112,6 +124,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin nav-header-item {
   @include font-ibm-plex-sans-condensed;
   font-size: $font-size-normal;
+  font-weight: 400;
 }
 
 /* Navigation sidebar (left sidebar) */

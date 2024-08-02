@@ -7,3 +7,21 @@
 /* Load variables and styles */
 @import "var/colors";
 @import "var/text_styles";
+
+$breakpoint-mobile: 760px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1100px;
+
+/* Start design */
+
+// Header, sidebars, containers
+@import "grid";
+@import "header";
+@import "layout";
+@import "footer";
+
+// Typographic elements
+@import "typography";
+
+// Landing page
+@import "landing";

@@ -1,0 +1,141 @@
+$next-element-spacing: 8px;
+
+html, body {
+  // Apply default font
+  @include text-body;
+}
+
+a, p, span, ul, li, label, input {
+  @include text-body;
+}
+
+a {
+  color: var(--color-text-accent);
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 8px;
+}
+
+blockquote {
+  color: var(--color-text-accent);
+  padding: 24px;
+  border-left: 2px var(--color-purple-muted-accent);
+}
+
+blockquote, p, ul, ol {
+  margin-bottom: $next-element-spacing;
+}
+
+h1 {
+  @include text-h1;
+  display: inline-block;
+
+  &.h1--no-top-margin {
+    margin-top: 0;
+  }
+
+  &.h1--tl-inverted {
+    @include text-h1-background;
+  }
+
+  & .h1--tl-inverted {
+    @include text-h1-background;
+    margin-left: 8px;
+  }
+
+}
+
+h1 > span {
+  @include text-h1;
+  margin: 0;
+}
+
+span.subtext {
+  @include text-subtext;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  @include text-h2;
+
+  &:nth-of-type(odd) {
+    --color-h2-accent: #{$color-yellow};
+  }
+
+  &:nth-of-type(even) {
+    --color-h2-accent: #{$color-pink-hint};
+  }
+
+  /* Allow setting a specific color, which overrides the default alternating color */
+  &.h2--yellow-accent {
+    --color-h2-accent: #{$color-yellow};
+  }
+
+  &.h2--pink-accent {
+    --color-h2-accent: #{$color-pink-hint};
+  }
+}
+
+h3 {
+  @include text-h3;
+}
+
+h4 {
+  @include text-h4;
+}
+
+h5 {
+  @include text-h4;
+}
+
+h6 {
+  @include text-h4;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  font-size: $font-size-normal;
+  line-height: 1.5 * $font-size-normal;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  border: none; // Reset for some elements such as form submits, which may use
+  padding: 8px 32px 8px 16px;
+
+  background-color: var(--color-button-background);
+  color: var(--color-button-foreground);
+
+  &::after {
+    content: url("data:image/svg+xml,%3Csvg width='12' height='17' viewBox='0 0 12 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.92898 1.42893L9.00005 8.5L1.92898 15.5711' stroke='%23232323' stroke-width='3'/%3E%3C/svg%3E%0A");
+    vertical-align: center;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -9px;
+  }
+
+  &.btn--large {
+    height: 64px;
+    font-size: $font-size-larger;
+    padding: 16px 48px 16px 32px;
+
+    &::after {
+      right: 24px;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+
+  &.btn--primary {
+    --color-button-foreground: var(--color-cta-foreground);
+    --color-button-background: var(--color-cta-background);
+
+    &::after {
+      content: url("data:image/svg+xml,%3Csvg width='12' height='17' viewBox='0 0 12 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.92898 1.42893L9.00005 8.5L1.92898 15.5711' stroke='%23FFFFFF' stroke-width='3'/%3E%3C/svg%3E%0A");
+    }
+  }
+}

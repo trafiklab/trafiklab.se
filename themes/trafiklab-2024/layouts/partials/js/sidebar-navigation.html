@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  $('.dropdown-toggle').click(function (e) {
+    e.preventDefault();
+    let listElement = $(this).parent().parent();
+    listElement.toggleClass('tl-side-navigation__item--open-list');
+    listElement.find('> .tl-side-navigation__dropdown-list').slideToggle();
+  });
+</script>
