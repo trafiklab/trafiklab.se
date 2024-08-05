@@ -29,5 +29,11 @@ $breakpoint-lg: 1100px;
 @import "section";
 // Navigation sidebar
 @import "sidebar_left_nav";
-// Terms of content sidebar
+// Table of content sidebar
 @import "sidebar_right_toc";
+
+// Shortcodes
+@import "shortcodes/admoniton";
+@import "shortcodes/highlight";
+@import "shortcodes/tabs";
+@import "shortcodes/swagger_ui";

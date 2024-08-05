@@ -1,0 +1,15 @@
+#swagger-ui {
+  .swagger-ui {
+    p,a {
+      // This is the standard value for Swagger-UI, but it gets overridden by the default paragraph style included on the website.
+      font-size: 14px;
+      line-height: 1.25em;
+    }
+
+    pre, pre > *, code, code > * {
+      font-size: 14px;
+      line-height: 1.25em;
+      font-weight: 300;
+    }
+  }
+}

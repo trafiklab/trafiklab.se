@@ -1,0 +1,64 @@
+// Admonition
+.admonition {
+  display: flex;
+  margin: 16px 0;
+  .admonition-icon {
+    padding: .75rem;
+  }
+
+  .content {
+    margin: .75rem;
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+
+    p:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+
+  svg {
+    margin-top: 4px; // TODO: Check if this is a good fix to align the admonition icon with the first content line
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.admonition.success {
+  background-color: #d9f3cb;
+  .admonition-icon {
+    color: #58c11d;
+  }
+}
+
+.admonition.error {
+  background-color: #fbdae6;
+
+  .admonition-icon {
+    color: #b33261;
+  }
+}
+
+.admonition.warning {
+  background-color: #fffae6;
+  .admonition-icon {
+    color: #ff991f;
+  }
+}
+
+.admonition.info {
+  background-color: #deebff;
+
+  .admonition-icon {
+    color: #2e8fce;
+  }
+}
+
+.admonition.note {
+  background-color: #eae6ff;
+
+  .admonition-icon {
+    color: #9d95fd;
+  }
+}
