@@ -147,6 +147,6 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 }
 
 @mixin toc-list-item {
-  @include font-ibm-plex-sans-condensed;
+  @include font-ibm-plex-sans;
   font-size: $font-size-smaller;
 }

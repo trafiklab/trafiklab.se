@@ -1,15 +1,17 @@
 [module]
 [module.hugoVersion]
 extended = true
-max = ""
-min = "0.131.0"
+max = "0.122.0"
+min = "0.122.0"
 
 # Multilingual
 [languages]
     [languages.en]
     languageName = "English"
+    languageCode = "en"
     weight = 2
 
     [languages.sv]
     languageName = "Svenska"
+    languageCode = "sv"
     weight = 1

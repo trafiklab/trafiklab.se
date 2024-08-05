@@ -1,24 +1,30 @@
 {{ $args := . }}
 {{ $currentPage := $args.currentPage }}
 {{ $targetPage := $args.targetPage }}
+{{ $level := $args.level }}
 
 <li class="tl-side-navigation__item
+           tl-side-navigation__item--level-{{$level}}
            {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__item--active {{end}}
-           {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__item--open-list {{end}}">
+           {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__item--open-list {{ else if ($targetPage.Data)}} tl-side-navigation__item--closed-list {{end}}">
     {{ if $targetPage.Page.Params.headless }}
-      <div class="tl-side-navigation__click-target tl-side-navigation-group">{{ $targetPage.Title }}</div>
+      <a class="tl-side-navigation__click-target tl-side-navigation__click-target--disabled"><span>{{ $targetPage.Title }}</span></a>
     {{ else }}
         {{ if ($targetPage.Data) }}
-            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage "hasChildren" true) }}
+            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage "level" $level "hasChildren" true) }}
         {{ else }}
-            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage) }}
+            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage "level" $level ) }}
         {{ end }}
     {{ end }}
     {{ if ($targetPage.Data) }}
-        <ul class="tl-side-navigation tl-side-navigation__dropdown-list
-                   {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__dropdown-list--active {{end}}">
+        <ul class="tl-side-navigation
+                   {{ if gt $level 0 }} tl-side-navigation__dropdown-list tl-side-navigation__dropdown-list--level-{{(math.Add $level 1)}}
+                       {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__dropdown-list--active {{end}}
+                   {{else}}
+                      tl-side-navigation__fixed-list tl-side-navigation__fixed-list--level-{{(math.Add $level 1)}}
+                   {{end}}">
             {{- range $i, $e := $targetPage.Data.Pages -}}
-              {{ partial "sidebar/sidebar-page-tree.html" (dict "targetPage" . "currentPage" $currentPage) }}
+              {{ partial "sidebar/sidebar-page-tree.html" (dict "targetPage" . "currentPage" $currentPage "level" (math.Add $level 1)) }}
             {{ end }}
         </ul>
     {{ end }}

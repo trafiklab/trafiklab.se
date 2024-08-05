@@ -1,9 +1,10 @@
-$header-padding: 48px;
+$header-padding: 32px;
 $header-content-height: 32px;
+$header-height: 2 * $header-padding + $header-content-height;
 
 header.site-header {
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   background-color: white;
@@ -14,15 +15,12 @@ header.site-header {
   }
 
   .site-header__desktop {
-    padding: $header-padding 0;
-    height: $header-content-height;
     display: flex;
 
     align-items: center;
     transition: margin-left .1s ease-out;
     z-index: 20;
 
-    font-size: 0.875rem;
     justify-content: space-between;
     margin: 0 auto;
 
@@ -33,11 +31,12 @@ header.site-header {
       z-index: 40;
 
       ul {
+        height: $header-content-height;
         list-style: none;
         display: flex;
-        gap: 32px;
+        gap: 16px;
         padding: 0;
-        margin: 32px 0;
+        margin: $header-padding 0 $header-padding;
 
         li.tl-top-navigation-item a {
           @include nav-header-item;

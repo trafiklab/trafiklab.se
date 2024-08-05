@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+
+<article class="section container">
+    <div class="section__header">
+        <h1 class="h1--tl-inverted">{{ .Title }}</h1>
+        <div class="tl-lead-paragraph" style="margin-top:0">{{ .Content }}</div>
+    </div>
+
+    {{ range .Pages }}
+    <a class="blogpost__item" title="{{ .Title }}" href="{{ .Permalink }}">
+        {{ if .Params.Image }}
+        {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "tl-image") }}
+        {{ end }}
+        <div class="blogpost-overview__information">
+            {{ if or .Lastmod .Date }}
+            <div class="blogpost-overview__date">
+                <label class="tl-label">{{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
+            </div>
+            {{ end }}
+            <div>
+                <h2 class="mt-0 blogpost-overview__title">{{ .Title }}</h2>
+                {{ if gt (len .Description) 0 }}
+                <p class="blogpost-overview__description">{{ .Description | markdownify }}</p>
+                {{ else }}
+                <p class="blogpost-overview__description">{{ .Summary }}</p>
+                {{ end }}
+            </div>
+        </div>
+    </a>
+    {{ end }}
+</article>
+
+{{ end }}
+
+{{- define "page-script" -}}
+{{ partial "js/code-blocks.html" .}}
+{{ partial "js/sidebar-navigation.html" .}}
+{{ partial "js/sidebar-search.html" .}}
+{{- end -}}
+

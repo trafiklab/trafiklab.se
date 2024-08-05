@@ -1,13 +1,8 @@
-
-    <nav class="right-sidebar-toc" role="navigation" aria-label="Table of contents">
-        {{ $currentPage := . }}
-        {{ $root := .FirstSection }}
-        <ul class="tl-side-navigation tl-side-navigation--root">
-            {{ if not $root.Params.headless }}
-            {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $root "currentPage" $currentPage) }}
-            {{ end }}
-            {{- range $i, $e := $root.Pages -}}
-            {{ partial "sidebar/sidebar-page-tree.html" (dict "targetPage" . "currentPage" $currentPage) }}
-            {{- end -}}
-        </ul>
-    </nav>
+<nav class="right-sidebar-toc" role="navigation" aria-label="Table of contents">
+    <ul>
+        <li class="right-sidebar-toc__header"><a href="#top">{{ .Title }}</a></li>
+        {{ range .Fragments.HeadingsMap }}
+        <li><a href="#{{ .ID }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</nav>

@@ -1,19 +1,18 @@
 {{ $args := . }}
 {{ $currentPage := $args.currentPage }}
 {{ $targetPage := $args.targetPage }}
+{{ $level := $args.level }}
 {{ $hasChildren := (isSet $args "hasChildren") }}
 
-<a class="tl-side-navigation__click-target child-title
+<a class="tl-side-navigation__click-target
+          tl-side-navigation__click-target--level-{{$level}}
       {{ if $hasChildren }} dropdown {{end}}
       {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__click-target--active {{end}}"
    href="{{ $targetPage.Permalink }}">
+
     <span>{{ $targetPage.Title }}</span>
 
     {{ if $targetPage.Params.badge }}
 
     {{ end }}
-
-    {{ if $hasChildren }}
-    <span class="dropdown-toggle"></span>
-    {{end}}
 </a>

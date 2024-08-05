@@ -7,7 +7,7 @@
         <ul>
           <li class="tl-top-navigation-item brand">
             {{- $logoUrl := resources.Get "images/logo.png" -}}
-            <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="brand" alt="{{ i18n "brand" }}" /></a>
+            <a href='{{ ref . "/" }}' id="#top"><img src="{{ $logoUrl.Permalink }}" class="brand" alt="{{ i18n "brand" }}" /></a>
           </li>
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}

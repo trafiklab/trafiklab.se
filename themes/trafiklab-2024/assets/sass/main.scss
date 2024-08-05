@@ -25,3 +25,9 @@ $breakpoint-lg: 1100px;
 
 // Landing page
 @import "landing";
+// Section overview pages (news, use cases)
+@import "section";
+// Navigation sidebar
+@import "sidebar_left_nav";
+// Terms of content sidebar
+@import "sidebar_right_toc";

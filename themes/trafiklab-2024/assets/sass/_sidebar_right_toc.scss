@@ -1,0 +1,28 @@
+nav.right-sidebar-toc {
+  // Positioning on page is already handled in _layout.scss, only contents have to be defined
+  color: var(--color-sidebar-active);
+  background-color: var(--color-background);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+  }
+
+  li > a {
+    @include toc-list-item;
+    display: block;
+    padding: 4px;
+    line-height: 24px;
+    padding-left: 16px;
+    border-left: 2px solid var(--color-sidebar-level1);
+  }
+
+  li.right-sidebar-toc__header > a {
+    @include toc-header-item;
+    border-left: 4px solid var(--color-sidebar-level1);
+  }
+}

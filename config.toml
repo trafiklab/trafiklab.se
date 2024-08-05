@@ -15,7 +15,7 @@ refLinksErrorLevel = "WARNING"
 [module.hugoVersion]
 extended = true
 max = ""
-min = "0.131.0"
+min = "0.122.0"
 
 # paths
 [permalinks]

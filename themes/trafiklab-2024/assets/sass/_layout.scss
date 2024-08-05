@@ -16,6 +16,10 @@ html, body {
   margin: 0 auto;
 }
 
+body {
+  padding-top: $header-height;
+}
+
 body.with-sidebar, body:not(.type-home).with-footer {
 
   .content-center-wrapper {
@@ -51,15 +55,14 @@ body.with-sidebar, body:not(.type-home).with-footer {
   }
 
   nav.right-sidebar-toc {
+    z-index: 20;
     position: sticky;
     top: $header-content-height + 2 * $header-padding;
     width: $right-sidebar-width;
-    margin-top: $article-image-height;
-    background-color: purple;
-    height: 40vh;
+    margin-top: $article-image-height + 60px;
   }
 
-  nav.sidebar {
+  nav.left-sidebar {
     position: sticky;
     top: 0;
     // Position right in the area left of the content, to be beside the centered content
@@ -69,11 +72,13 @@ body.with-sidebar, body:not(.type-home).with-footer {
     // End of positioning
 
     width: $left-sidebar-width;
-    background-color: lightblue;
-    height: 100vh;
   }
 }
 
 article.page {
   padding: 32px 96px;
+}
+
+img.tl-image {
+  max-width: 100%;
 }
