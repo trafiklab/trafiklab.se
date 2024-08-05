@@ -20,7 +20,7 @@ period, which is caused by the large changes behind the scenes in SL's data flow
 from site_.
 
 This new API is released shortly after the _SL Deviations_ API. Using this API, you can get information regarding deviations on SLs transport network. _SL
-Deviations_ replaces the older [Service Alerts](service-alerts-2.md) and [Traffic Status](sl-traffic-status-2.md) APIs. Keep
+Deviations_ replaces the older _Service Alerts_ and _Traffic Status_ APIs. Keep
 in mind that even other SL APIs have received updated URLs. [A list of all changes to SL APIs can be found here](/api/trafiklab-apis/sl/_index.md).
 
 [The new documentation can be found here](/api/trafiklab-apis/sl/transport.md). For suggestions and feedback, feel free to contact us through Kundo
