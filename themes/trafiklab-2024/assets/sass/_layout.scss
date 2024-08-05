@@ -4,7 +4,7 @@ $left-sidebar-width: 320px;
 $right-sidebar-width: $left-sidebar-width;
 $sidebar-container-gap: 40px;
 
-$article-image-height: 360px;
+$article-image-height: 380px;
 $article-pullup-over-image: 140px;
 
 html, body {
@@ -16,7 +16,7 @@ html, body {
   margin: 0 auto;
 }
 
-body.with-sidebar {
+body.with-sidebar, body:not(.type-home).with-footer {
 
   .content-center-wrapper {
     position: relative;
@@ -37,9 +37,12 @@ body.with-sidebar {
     position: absolute;
     z-index: -1;
     left: - $sidebar-container-gap;
-    background-color: red;
+
     height: $article-image-height;
     width: $container-width + $sidebar-container-gap + $right-sidebar-width;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
   }
 
   article.page {
@@ -66,7 +69,7 @@ body.with-sidebar {
     // End of positioning
 
     width: $left-sidebar-width;
-    background-color: blue;
+    background-color: lightblue;
     height: 100vh;
   }
 }

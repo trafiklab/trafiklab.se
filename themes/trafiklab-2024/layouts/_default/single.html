@@ -1,8 +1,6 @@
 {{ define "main" }}
 
-<div class="background-image">
-
-</div>
+<div class="background-image" style="background-image: url('/backdrop/backdrop.png')"></div>
 <article class="page container">
     <div class="page__header">
         <h1 class="h1--tl-inverted">{{ .Title }}
@@ -17,10 +15,9 @@
     <div class="page__content">
         {{ .Content }}
     </div>
-</article>
-<div class="container">
+    <hr>
     {{ partial "docs-footer.html" .}}
-</div>
+</article>
 
 {{ end }}
 

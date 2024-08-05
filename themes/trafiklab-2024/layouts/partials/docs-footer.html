@@ -13,18 +13,20 @@
         {{ end }}
         <h4>{{ i18n "docs-footer-something-wrong" }}</h4>
         {{ if isset $.Site.Params "support" }}
-            <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a></p>
-        {{ end }}
+            <p><a href="{{ $.Site.Params.support }}">{{ i18n "docs-footer-report-issue" }}</a>
+
 
         {{ if isset .Site.Params "sourcerepository" }}
-            <p><a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
-            {{ i18n "docs-footer-view-on-github" }}</a></p>
-            <p><a href="{{ $.Site.Params.sourceRepository }}edit/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
-            {{ i18n "docs-footer-edit-on-github" }}</a></p>
+            | <a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            {{ i18n "docs-footer-view-on-github" }}</a> |
+            <a href="{{ $.Site.Params.sourceRepository }}edit/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace $source_page.File.Path "\\" "/" }}">
+            {{ i18n "docs-footer-edit-on-github" }}</a>
             {{ if $is_fallback_source_page }}
-                <p><a href="{{ $.Site.Params.sourceRepository }}tree/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Dir "\\" "/" }}">
-                    {{ i18n "docs-footer-create-translation-on-github" }}</a></p>
+                | <a href="{{ $.Site.Params.sourceRepository }}tree/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Dir "\\" "/" }}">
+                    {{ i18n "docs-footer-create-translation-on-github" }}</a>
             {{ end }}
+            </p>
+        {{ end }}
         {{ end }}
     </div>
 </footer>

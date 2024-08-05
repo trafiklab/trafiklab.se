@@ -12,19 +12,26 @@
     <div class="content-left-wrapper">
     {{ block "sidebar-left" . }}{{ partial "sidebar/sidebar.html" .}}{{ end }}
     </div>
-    <div class="content-center-wrapper">
-    {{ block "main" . }} {{ end }}
-    </div>
-    <div class="content-right-wrapper">
-        {{ block "sidebar-right" . }}{{ partial "toc/toc.html" .}}{{ end }}
-    </div>
 {{ else }}
-    {{ block "main" . }} {{ end }}
-    {{ block "footer" . }}
-        {{ partial "footer.html" .}}
-    {{ end }}
+    <div class="spacer"></div>
 {{ end }}
+
+<div class="content-center-wrapper">
+{{ block "main" . }} {{ end }}
+</div>
+
+    {{ if not (eq .Type "home") }}
+<div class="content-right-wrapper">
+    {{ block "sidebar-right" . }}{{ partial "toc/toc.html" .}}{{ end }}
+</div>
+    {{ end }}
 </main>
+
+{{ if not $sidebar }}
+{{ block "footer" . }}
+{{ partial "footer.html" .}}
+{{ end }}
+{{ end }}
 
 <script src="/scripts/jquery.2.2.4.min.js"></script>
 {{ block "page-script" . }}{{ end }}
