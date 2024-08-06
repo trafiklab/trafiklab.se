@@ -2,12 +2,14 @@ main.landing {
 
   font-size: $font-size-larger;
 
-  section.page:first-of-type {
-    min-height: calc(100vh - #{$header-content-height + 2 * $header-padding});
-  }
-
   section.page {
     min-height: 100vh;
+  }
+
+  section.page__first {
+    min-height: unset;
+    height: calc(100vh - #{$header-height});
+    padding-bottom: $header-height;
   }
 
   h1 {

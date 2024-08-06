@@ -71,11 +71,21 @@
   }
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .flex-row-right {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.spacer {
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-spacer {
   flex-grow: 1;
 }

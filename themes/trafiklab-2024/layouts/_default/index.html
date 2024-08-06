@@ -1,9 +1,16 @@
 {{ define "main" }}
 <main class="landing">
-    <section class="page page-first">
-        <div class="container">
+    <section class="page page__first flex-col">
+        <div class="container page__first__header">
             <h1><span>The home of</span><span class="h1--tl-inverted">swedish public transport data</span></h1>
-            <p>{{ .Content}}</p>
+        </div>
+        <div class="landing-demo flex-spacer flex-row">
+            <div class="landing-demo-left flex-spacer"></div>
+            <div class="landing-demo-middle container"></div>
+            <div class="landing-demo-right flex-spacer"></div>
+        </div>
+        <div class="container page__first__bottom">
+            <div>{{ .Content}}</div>
             <div class="tl-row tl-row--large-gap">
                 <div class="btn btn--large btn--primary tl-col--6 tl-col--xs-12">
                     Getting Started
