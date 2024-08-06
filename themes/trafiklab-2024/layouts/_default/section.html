@@ -8,23 +8,30 @@
     </div>
 
     {{ range .Pages }}
-    <a class="blogpost__item" title="{{ .Title }}" href="{{ .Permalink }}">
-        {{ if .Params.Image }}
-        {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "tl-image") }}
-        {{ end }}
-        <div class="blogpost-overview__information">
+    <a class="section__item" title="{{ .Title }}" href="{{ .Permalink }}">
+        <div class="tl-row">
+            <h2>{{ .Title }}</h2>
             {{ if or .Lastmod .Date }}
-            <div class="blogpost-overview__date">
+            <div class="section__item__info__date">
                 <label class="tl-label">{{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
             </div>
             {{ end }}
-            <div>
-                <h2 class="mt-0 blogpost-overview__title">{{ .Title }}</h2>
-                {{ if gt (len .Description) 0 }}
-                <p class="blogpost-overview__description">{{ .Description | markdownify }}</p>
-                {{ else }}
-                <p class="blogpost-overview__description">{{ .Summary }}</p>
-                {{ end }}
+        </div>
+
+        {{ if .Params.Image }}
+        {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "tl-image section__item__image") }}
+        {{ end }}
+        <div class="section__item__info">
+            <div class="section__item__info__head">
+
+            </div>
+            {{ if gt (len .Description) 0 }}
+            <p class="section__item__info__description">{{ .Description | markdownify }}</p>
+            {{ else }}
+            <p class="section__item__info__description">{{ .Summary }}</p>
+            {{ end }}
+            <div class="flex-row-right">
+                <div class="btn">Read more</div>
             </div>
         </div>
     </a>

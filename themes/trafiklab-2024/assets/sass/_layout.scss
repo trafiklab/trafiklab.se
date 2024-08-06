@@ -7,8 +7,20 @@ $sidebar-container-gap: 40px;
 $article-image-height: 380px;
 $article-pullup-over-image: 140px;
 
-html, body {
+html {
   height: 100%;
+}
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  main#content {
+    flex-grow: 1;
+  }
 }
 
 .container {

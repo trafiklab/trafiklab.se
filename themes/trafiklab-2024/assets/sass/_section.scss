@@ -1,3 +1,26 @@
-.page.section {
+article.section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+
+  .section__header, .section__item {
+    position: relative;
+  }
+  
+  .section__item__image {
+    max-height: 560px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  .section__item__info__date{
+    margin-top: 48px;
+  }
+
+  h2 {
+    width: 100%;
+  }
 
 }
