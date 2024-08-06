@@ -3,7 +3,8 @@
 <div class="background-image" style="background-image: url('/backdrop/backdrop.png')"></div>
 <article class="page container">
     <div class="page__header">
-        <h1 class="h1--tl-inverted">{{ .Title }}
+        <span class="subtext">{{.Parent.Title}}</span>
+        <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}
             <!--{{ if isset .Site.Params "sourcerepository" }}
             <a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Path "\\" "/" }}" class="docs-header-vcs">
             {{- $githubLogoUrl := resources.Get "images/github.svg" -}}

@@ -49,8 +49,16 @@ h1 > span {
 
 span.subtext {
   @include text-subtext;
+  display: block;
   padding: 0;
   margin: 0;
+  height: 22px;
+
+  &:has(+ h1) {
+    // If followed by an h1 element, this span should take care of the negative space
+    // The h1 element should not have any top margin
+    margin-top: 42px;
+  }
 }
 
 h2, .tl-h2 {
