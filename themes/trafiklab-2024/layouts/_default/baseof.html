@@ -10,7 +10,11 @@
 <main id="content">
 {{ if $sidebar }}
     <div class="content-left-wrapper">
-    {{ block "sidebar-left" . }}{{ partial "sidebar/sidebar.html" .}}{{ end }}
+        <div class="left-sidebar--top-space metro-divider-top"></div>
+        <div class="sidebar-sticky">
+            {{ block "sidebar-left" . }}{{ partial "sidebar/sidebar.html" .}}{{ end }}
+        </div>
+        <div class="metro-divider-mid"></div>
     </div>
 {{ else }}
     <div class="spacer"></div>

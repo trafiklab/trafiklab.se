@@ -18,16 +18,20 @@ html, body {
 
 @media screen and (max-width: $container-width) {
   .container {
+    // When the container no longer has whitespace on the side through centering, margins need to be added
     width: auto;
     margin: 0 16px;
   }
 }
 
 body {
+  // Leave room for fixed or absolute positioned header
   padding-top: $header-height;
 }
 
 @media screen and (max-width: $breakpoint-sm){
+  // The header is not fixed below the small breakpoint.
+  // When the header is no longer fixed, the padding is no longer needed
   body {
     padding-top: 0;
   }
@@ -40,9 +44,9 @@ body.with-sidebar, body:not(.type-home).with-footer {
   }
 
   .content-left-wrapper, .content-right-wrapper {
+    position: relative;
     flex-grow: 1;
     flex-basis: 0;
-    display: flex;
   }
 
   main#content {
@@ -75,14 +79,19 @@ body.with-sidebar, body:not(.type-home).with-footer {
     margin-top: $article-image-height + 60px;
   }
 
-  nav.left-sidebar {
+  .sidebar-sticky {
+    // The sticky div for the sidebar
     position: sticky;
-    top: 0;
+    top: $header-height;
     // Position right in the area left of the content, to be beside the centered content
     justify-self: right;
     margin-left: auto;
     margin-right: $sidebar-container-gap;
     // End of positioning
+
+    // Flex for inner layout
+    display: flex;
+    flex-direction: column;
 
     width: $left-sidebar-width;
   }
@@ -95,3 +104,25 @@ article.page {
 img.tl-image {
   max-width: 100%;
 }
+
+@media screen and (max-width: $container-width) {
+  body.with-sidebar, body:not(.type-home).with-footer {
+    nav.left-sidebar {
+      // Margins to prevent sticking to the side on small screens
+      margin-left: 16px;
+    }
+
+    .content-right-wrapper {
+      display: none; // Not present on mobile
+    }
+
+    main#content .background-image {
+      width: 100%; // Auto width instead of fixed width
+    }
+
+    article.page {
+      padding: 24px 64px;
+    }
+  }
+}
+
