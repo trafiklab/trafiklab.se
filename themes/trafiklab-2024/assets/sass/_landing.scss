@@ -14,7 +14,8 @@ main.landing {
     display: flex;
     width: 100%;
     text-align: justify;
-    height: $font-size-hero + 12;
+    height: $font-size-hero + 8px;
+    gap: 8px;
 
     span {
       display: inline-block;
@@ -23,7 +24,7 @@ main.landing {
       font-size: $font-size-hero;
       flex-grow: 1;
       // Equal padding is needed on every part so the inverted bits can matched without alignment issues
-      height: $font-size-hero + 12;
+      height: $font-size-hero;
       padding-top: 4px;
       padding-bottom: 4px;
     }
@@ -65,11 +66,12 @@ main.landing {
     }
 
     input[type=email] {
-      color: $color-purple-dark;
+      color: $color-purple-extra-dark;
       background-color: $color-pink-hint-whitened;
       border: none;
       border-bottom: 4px solid $color-purple-muted;
       padding: 8px 16px;
+      font-weight: 500;
     }
 
     button[type=submit] {
@@ -80,5 +82,20 @@ main.landing {
 
   .partnerlist__logo img {
     max-height: 40px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  main.landing {
+    h1 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+
+      span {
+        margin-left: 0;
+      }
+    }
   }
 }

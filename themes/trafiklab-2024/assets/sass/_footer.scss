@@ -36,7 +36,7 @@ body #footer {
       margin-top: 0;
     }
 
-    a {
+    a, span {
       color: #fff;
       text-decoration: none;
     }
@@ -77,8 +77,14 @@ body #footer {
   margin-bottom: 1rem;
 }
 
-@media (min-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-sm) {
   .footer-text {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  footer#footer {
+    padding: 0 16px;
   }
 }

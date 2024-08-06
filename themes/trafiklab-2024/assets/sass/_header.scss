@@ -14,7 +14,7 @@ header.site-header {
     background-color: #000;
   }
 
-  .site-header__desktop {
+  .site-header__navbar {
     display: flex;
 
     align-items: center;
@@ -25,31 +25,118 @@ header.site-header {
     margin: 0 auto;
 
     .header-left {
-      align-items: center;
       display: flex;
+      align-items: center;
       position: relative;
       z-index: 40;
+    }
 
-      ul {
+    ul {
+      height: $header-content-height;
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      padding: 0;
+      margin: $header-padding 0 $header-padding;
+
+      li.tl-top-navigation-item a {
+        @include nav-header-item;
+        color: var(--color-text);
+        display: inline-block;
         height: $header-content-height;
-        list-style: none;
-        display: flex;
-        gap: 16px;
-        padding: 0;
-        margin: $header-padding 0 $header-padding;
+        line-height: $header-content-height;
+      }
+    }
 
-        li.tl-top-navigation-item a {
-          @include nav-header-item;
-          color: var(--color-text);
-          display: inline-block;
-          height: $header-content-height;
-          line-height: $header-content-height;
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    button.mobile-menu-button {
+      height: 24px;
+      width: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      .burger-menu-button__icon {
+        background-color: $color-purple;
+        height: 0.125rem;
+        margin: 0.25rem 0;
+        transition: 0.25s transform ease-in-out, 0.5s color ease-in-out, 0.25s opacity ease-in-out;
+        width: 1.25rem;
+      }
+
+      &.is-open {
+        .burger-menu-button__icon__1 {
+          -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+          transform: rotate(-45deg) translate(-4.8px, 3.8px);
+        }
+
+        .burger-menu-button__icon__2 {
+          opacity: 0;
+        }
+
+        .burger-menu-button__icon__3 {
+          -webkit-transform: rotate(45deg) translate(-6px, -6px);
+          transform: rotate(45deg) translate(-4.9px, -3px);
         }
       }
     }
   }
 
   .site-header__mobile {
+    margin: 0;
+    padding: 0;
+
+
+    nav.mobile-navigation {
+      // display: none;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .25s ease-in-out;
+
+      &.is-open {
+        display: block;
+        max-height: 2000px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: block;
+          width: 100%;
+          border-top: 1px solid $color-purple-extra-muted;
+          padding: 12px 16px;
+        }
+
+        li:last-of-type {
+          border-bottom: 1px solid $color-purple-extra-muted;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  header.site-header {
+    width: 100vw;
+    position: relative;
+
+    .site-header__navbar {
+      padding: 0 16px;
+
+      ul {
+        margin: $header-padding/2 0 $header-padding/2;
+      }
+
+    }
 
   }
+
 }

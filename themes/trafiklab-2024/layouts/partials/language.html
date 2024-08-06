@@ -10,14 +10,14 @@
     {{ range $currentPage.Translations }}
       {{ if (eq .Lang $specificLang) }}
         <a class="tl-icon-button" href="{{ .Permalink }}" aria-label="{{ i18n "header-aria-change-language" }}">
-            <span class="l-lang">{{ if (eq .Lang "en") }} 🇬🇧 {{ else }} 🇸🇪 {{ end }}{{ .Language.LanguageName }}</span>
+            <span class="l-lang">{{ if (eq .Lang "en") }} 🇬🇧 {{ else }} 🇸🇪 {{ end }}</span>
         </a>
       {{ end }}
     {{ end }}
   {{ else }}
     {{ if ne .Lang $pagelang }}
       <a class="tl-icon-button" href="{{ .Permalink }}" aria-label="{{ i18n "header-aria-change-language" }}">
-        <span class="l-lang">{{ if (eq .Lang "en") }} 🇬🇧 {{ else }} 🇸🇪 {{ end }}{{ .Language.LanguageName }}</span>
+        <span class="l-lang">{{ if (eq .Lang "en") }} 🇬🇧 {{ else }} 🇸🇪 {{ end }}</span>
       </a>
     {{ end }}
   {{ end }}

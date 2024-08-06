@@ -16,8 +16,21 @@ html, body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: $container-width) {
+  .container {
+    width: auto;
+    margin: 0 16px;
+  }
+}
+
 body {
   padding-top: $header-height;
+}
+
+@media screen and (max-width: $breakpoint-sm){
+  body {
+    padding-top: 0;
+  }
 }
 
 body.with-sidebar, body:not(.type-home).with-footer {

@@ -36,13 +36,8 @@ h1 {
     margin-top: 0;
   }
 
-  &.h1--tl-inverted {
+  &.h1--tl-inverted, & .h1--tl-inverted {
     @include text-h1-background;
-  }
-
-  & .h1--tl-inverted {
-    @include text-h1-background;
-    margin-left: 8px;
   }
 
 }

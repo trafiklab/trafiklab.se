@@ -19,7 +19,7 @@
     }
   }
 
-  @media screen and (max-width: $breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-sm) {
     @for $i from 1 through 12 {
       .tl-col--xs-#{$i} {
         flex-grow: 1;
@@ -47,15 +47,27 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-mobile) {
-  .mobile-hidden {
-    display: none;
+@media screen and (max-width: $breakpoint-sm) {
+  .desktop-only {
+    display: none !important;
   }
 }
 
-@media screen and (min-width: $breakpoint-mobile) {
+@media screen and (max-width: $breakpoint-xs) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $breakpoint-xs) {
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 }
 

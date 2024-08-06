@@ -1,7 +1,5 @@
 <header class="site-header">
-
-  <div class="site-header__desktop mobile-hidden container">
-
+  <div class="site-header__navbar container">
     <div class="header-left">
       <nav aria-label="main">
         <ul>
@@ -11,11 +9,11 @@
           </li>
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-            <li class="tl-top-navigation-item {{ if $currentPage.IsMenuCurrent "main" . }} tl-top-navigation-item--active{{ end }}">
+          <li class="tl-top-navigation-item desktop-only {{ if $currentPage.IsMenuCurrent "main" . }} tl-top-navigation-item--active {{ end }}">
               {{ if .Page.Params.absolute }}
                 <a href="{{ .Page.Params.link }}" target="_blank">
                   {{ .Title }}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                   </svg>
@@ -34,19 +32,17 @@
 
     <div class="header-right" aria-roledescription="">
       {{ partial "language.html" .}}
-      <a href="{{ .Site.Params.devPortalUrl }}" class="tl-button tl-button--variant-primary user-link">{{ i18n "header-cta-keys" }}</a>
-      <button class="mobile-menu-button" aria-haspopup="true" aria-label="Open mobile menu" aria-hidden="true">
-        <div class="burger-menu-button__icons">
+      <a href="{{ .Site.Params.devPortalUrl }}" class="tl-button desktop-only">{{ i18n "header-cta-keys" }}</a>
+      <button class="mobile-menu-button desktop-hidden" aria-haspopup="true" aria-label="Open mobile menu" aria-hidden="true">
           <div class="burger-menu-button__icon burger-menu-button__icon__1"></div>
           <div class="burger-menu-button__icon burger-menu-button__icon__2"></div>
           <div class="burger-menu-button__icon burger-menu-button__icon__3"></div>
-        </div>
       </button>
     </div>
 
   </div>
 
-  <div class="site-header__mobile mobile-only container" aria-hidden="true">
+  <div class="site-header__mobile desktop-hidden container" aria-hidden="true">
     <nav class="mobile-navigation">
       <ul>
         {{ $currentPage := . }}
@@ -55,7 +51,7 @@
             {{ if .Page.Params.absolute }}
               <a href="{{ .Page.Params.Link }}" target="_blank">
                 {{ .Title }}
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                   <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                 </svg>
@@ -68,9 +64,15 @@
             {{ end }}
           </li>
         {{ end }}
+        <li class="tl-mobile-navigation-item">
+          <a href="{{ .Site.Params.devPortalUrl }}" target="_blank">{{ i18n "header-cta-keys" }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+              <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+            </svg>
+          </a>
+        </li>
       </ul>
-      <a href="{{ .Site.Params.devPortalUrl }}">{{ i18n "header-cta-keys" }}</a>
-      {{ partial "language.html" .}}
     </nav>
   </div>
 </header>
