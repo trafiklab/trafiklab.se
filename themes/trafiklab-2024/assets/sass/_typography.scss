@@ -53,7 +53,7 @@ span.subtext {
   margin: 0;
 }
 
-h2 {
+h2, .tl-h2 {
   @include text-h2;
 
   &:nth-of-type(odd) {
@@ -72,6 +72,10 @@ h2 {
   &.h2--pink-accent {
     --color-h2-accent: #{$color-pink-hint};
   }
+}
+
+.tl-h2--small {
+  @include text-h2-small;
 }
 
 h3 {
@@ -111,6 +115,11 @@ h6 {
     right: 12px;
     top: 50%;
     margin-top: -9px;
+  }
+
+  &.btn--text{
+    background-color: unset;
+
   }
 
   &.btn--large {

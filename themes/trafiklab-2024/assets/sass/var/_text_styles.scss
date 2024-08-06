@@ -78,12 +78,22 @@ $font-size-hero: 64px; /* Only for landing page hero text */
   width: auto;
 
   font-size: $font-size-larger;
+  font-weight: 700;
   color: var(--color-h2-foreground);
   border-bottom: (5 * $font-size-larger / 6) solid var(--color-h2-accent);
   padding-bottom: ($font-size-larger * 2 / 3);
   padding-left: 8px;
   padding-right: 8px;
   margin: 32px 0 16px;
+}
+
+@mixin text-h2-small {
+  @include text-h2;
+  height: $font-size-normal;
+  font-size: $font-size-normal;
+  border-bottom: (5 * $font-size-normal / 6) solid var(--color-h2-accent);
+  padding-bottom: ($font-size-normal * 2 / 3);
+  margin: 16px 0 8px;
 }
 
 @mixin text-h3 {

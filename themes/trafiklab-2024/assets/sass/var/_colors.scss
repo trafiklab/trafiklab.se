@@ -65,4 +65,6 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   /* Table of contents sidebar */
   --color-toc-inactive: #{$color-purple-extra-muted};
   --color-toc-active: #{$color-purple};
+  /* Page reference cards */
+  --color-pageref-background: #{$color-purple-hint}
 }
