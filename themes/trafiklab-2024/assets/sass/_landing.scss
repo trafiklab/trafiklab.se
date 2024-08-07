@@ -17,7 +17,7 @@ main.landing {
     width: 100%;
     text-align: justify;
     height: $font-size-hero + 8px;
-    gap: 8px;
+    gap: $vertical-spacing-unit;
 
     span {
       display: inline-block;
@@ -40,7 +40,7 @@ main.landing {
 
   aside.recent-posts {
     .recent-posts__item {
-      margin-bottom: 32px;
+      margin-bottom: 4 * $vertical-spacing-unit;
 
       h3 {
         margin-top: 0;
@@ -64,7 +64,7 @@ main.landing {
     label {
       display: block;
       width: 100%;
-      margin-bottom: 16px;
+      margin-bottom: 2 * $vertical-spacing-unit;
     }
 
     input[type=email] {

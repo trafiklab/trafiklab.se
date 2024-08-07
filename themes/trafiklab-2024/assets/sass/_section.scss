@@ -12,11 +12,12 @@ article.section {
     max-height: 560px;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 16px;
+    margin-bottom: 2 * $vertical-spacing-unit;
   }
 
   .section__item__info__date{
-    margin-top: 48px;
+    margin-top: 44px;
+    min-width: fit-content; // Fix for chrome, edge
   }
 
   h2 {

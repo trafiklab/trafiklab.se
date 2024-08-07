@@ -1,3 +1,5 @@
+$vertical-spacing-unit: 8px;
+
 $container-width: 860px;
 
 $left-sidebar-width: 320px;
@@ -140,7 +142,7 @@ article.page {
 }
 
 div.tl-image {
-  margin-bottom: 16px;
+  margin-bottom: 2 * $vertical-spacing-unit;
 
   img {
     display: block;

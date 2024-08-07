@@ -30,6 +30,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-body {
   @include font-ibm-plex-sans;
   font-size: $font-size-normal;
+  line-height: 1.5;
   font-weight: normal;
   color: var(--color-text);
 }
