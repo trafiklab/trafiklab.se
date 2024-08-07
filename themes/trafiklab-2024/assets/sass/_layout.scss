@@ -70,6 +70,7 @@ body.with-sidebar, body:not(.type-home).with-footer {
   }
 
   main#content .background-image {
+    background-color: $color-pink-hint-whitened; // Fallback color to see the image region if the image fails to load
     position: absolute;
     z-index: -1;
     left: - $sidebar-container-gap;
