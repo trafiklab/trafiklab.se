@@ -17,7 +17,9 @@ table {
   }
 
   thead > tr {
-    @include table-header;
+    th {
+      @include table-header;
+    }
     border-bottom: solid 2px var(--color-table-border);
   }
 

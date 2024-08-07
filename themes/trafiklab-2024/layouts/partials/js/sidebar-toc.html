@@ -1,0 +1,23 @@
+<script type="text/javascript">
+const anchors = $('body').find('h2, h3');
+
+function updateTocScrollPosition() {
+  const scrollTop = $(document).scrollTop();
+
+  // highlight the last scrolled-to: set everything inactive first
+  $('.right-sidebar-toc__item').removeClass('right-sidebar-toc__item--active');
+
+  // then iterate backwards, on the first match highlight it and break
+  for (let i = anchors.length - 1; i >= 0; i--) {
+    if (scrollTop > $(anchors[i]).offset().top - 32) {
+      $('.right-sidebar-toc__item:has(a[href="#' + $(anchors[i]).attr('id') + '"])').addClass('right-sidebar-toc__item--active');
+      break;
+    }
+  }
+}
+
+$(window).scroll(function () {
+  updateTocScrollPosition();
+});
+updateTocScrollPosition(); // Initial update before any scroll, in case someone visited through anchor link
+</script>

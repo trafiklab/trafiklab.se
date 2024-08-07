@@ -37,6 +37,20 @@ blockquote, p, ul, ol {
   margin-bottom: $next-element-spacing;
 }
 
+code, pre {
+  @include font-monospace;
+  font-size: $font-size-smaller;
+  span {
+    @include font-monospace;
+    font-size: $font-size-smaller;
+  }
+}
+
+code {
+  background-color: var(--color-code-inline-background);
+  padding: 3px 4px; // 3px becomes a total of 6 when on top + bottom, matching the difference in a 2px smaller font + 2px on each side
+}
+
 h1 {
   @include text-h1;
   display: inline-block;

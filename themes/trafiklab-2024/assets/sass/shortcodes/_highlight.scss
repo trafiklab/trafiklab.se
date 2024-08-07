@@ -1,5 +1,10 @@
 .highlight-wrapper {
 
+  span {
+    // Default color when no highlighting is used
+    color: $color-white;
+  }
+
   &:not(.code-tabs .highlight-wrapper) {
     overflow: hidden;
   }
@@ -15,6 +20,7 @@
     padding: 1rem;
     line-height: 1;
     background-color: $color-black !important;
+    color: $color-white;
     max-height: 800px;
     overflow: scroll;
   }

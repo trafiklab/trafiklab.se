@@ -2,6 +2,7 @@ nav.right-sidebar-toc {
   // Positioning on page is already handled in _layout.scss, only contents have to be defined
   color: var(--color-sidebar-active);
   background-color: var(--color-background);
+  padding-bottom: 128px;
 
   ul {
     list-style: none;
@@ -9,10 +10,7 @@ nav.right-sidebar-toc {
     margin: 0;
   }
 
-  li {
-  }
-
-  li > a {
+  li.right-sidebar-toc__header a, li.right-sidebar-toc__item a {
     @include toc-list-item;
     display: block;
     padding: 4px;
@@ -21,8 +19,25 @@ nav.right-sidebar-toc {
     border-left: 2px solid var(--color-sidebar-level1);
   }
 
-  li.right-sidebar-toc__header > a {
-    @include toc-header-item;
+  li.right-sidebar-toc__item--h3 > a {
+    padding-left: 32px;
+  }
+
+  li.right-sidebar-toc__header {
     border-left: 4px solid var(--color-sidebar-level1);
+
+    > a {
+      @include toc-header-item;
+      padding-left: 12px;
+    }
+  }
+
+  li.right-sidebar-toc__item--active {
+    border-left: 4px solid var(--color-sidebar-active);
+
+    > a {
+      padding-left: 12px;
+      font-weight: bold;
+    }
   }
 }

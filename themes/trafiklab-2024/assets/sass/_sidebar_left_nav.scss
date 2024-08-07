@@ -104,7 +104,8 @@ nav.tl-side-navigation {
     display: block;
   }
 
-  .tl-side-navigation__item--active {
+  a.tl-side-navigation__click-target--active span {
+    color: var(--color-sidebar-active) !important;
     font-weight: bold;
   }
 }
