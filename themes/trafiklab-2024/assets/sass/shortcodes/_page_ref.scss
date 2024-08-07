@@ -1,7 +1,16 @@
 .tl-page-ref {
   background-color: var(--color-pageref-background);
-padding: 0 0 8px;
+  margin: 8px 0;
+  padding-bottom: 8px;
+  display: inline-flex;
+  flex-direction: column;
+
+  .tl-h2 {
+    max-width: fit-content;
+  }
+
   .tl-page-ref--preview {
     padding: 0 8px;
+    margin: 0;
   }
 }

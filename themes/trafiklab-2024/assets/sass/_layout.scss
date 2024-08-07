@@ -51,6 +51,9 @@ body {
 
 body.with-sidebar, body:not(.type-home).with-footer {
 
+  --article-padding-x: 96px;
+  --article-padding-y: 32px;
+
   .content-center-wrapper {
     position: relative;
   }
@@ -110,11 +113,21 @@ body.with-sidebar, body:not(.type-home).with-footer {
 }
 
 article.page {
-  padding: 32px 96px;
+  padding: var(--article-padding-y) var(--article-padding-x);
 }
 
-img.tl-image {
-  max-width: 100%;
+div.tl-image {
+  margin-bottom: 16px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.page__content div.wide {
+  margin-left: calc(-2 / 3 * var(--article-padding-x));
+  margin-right: calc(-2 / 3 * var(--article-padding-x));
 }
 
 @media screen and (max-width: $container-width) {
@@ -133,7 +146,8 @@ img.tl-image {
     }
 
     article.page {
-      padding: 24px 64px;
+      --article-padding-x: 64px;
+      --article-padding-y: 24px;
     }
   }
 }

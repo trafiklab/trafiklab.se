@@ -160,3 +160,16 @@ $font-size-hero: 64px; /* Only for landing page hero text */
   @include font-ibm-plex-sans;
   font-size: $font-size-smaller;
 }
+
+
+
+/* Table of contents (right sidebar) */
+@mixin table-header {
+  @include font-ibm-plex-sans;
+  font-size: $font-size-smaller;
+}
+
+@mixin table-cell {
+  @include font-ibm-plex-sans;
+  font-size: $font-size-normal;
+}

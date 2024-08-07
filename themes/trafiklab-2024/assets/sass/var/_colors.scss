@@ -34,7 +34,9 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
 
   /* Accents, links and quotes */
   --color-text-accent: #{$color-purple};
-  --color-purple-muted-accent: #{$color-purple-muted};
+  --color-muted-accent: #{$color-purple-muted};
+  --color-text-accent-background: #{$color-pink-hint};
+  --color-text-selection: #{$color-yellow};
 
   /* Buttons */
   --color-cta-foreground: #{$color-white};
@@ -65,6 +67,10 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   /* Table of contents sidebar */
   --color-toc-inactive: #{$color-purple-extra-muted};
   --color-toc-active: #{$color-purple};
+
   /* Page reference cards */
-  --color-pageref-background: #{$color-purple-hint}
+  --color-pageref-background: #{$color-purple-hint};
+
+  /* Tables */
+  --color-table-border: #{$color-purple-extra-muted};
 }

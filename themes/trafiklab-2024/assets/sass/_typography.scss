@@ -14,14 +14,23 @@ a {
   text-decoration: none;
 }
 
+p a:link:hover {
+  transition: background-color 0.25s ease-in-out;
+  background-color: var(--color-text-accent-background);
+}
+
 p {
   margin: 0 0 8px;
+}
+
+::selection {
+  background-color: var(--color-text-selection);
 }
 
 blockquote {
   color: var(--color-text-accent);
   padding: 24px;
-  border-left: 2px var(--color-purple-muted-accent);
+  border-left: 2px var(--color-muted-accent);
 }
 
 blockquote, p, ul, ol {
@@ -127,7 +136,19 @@ h6 {
 
   &.btn--text{
     background-color: unset;
+  }
 
+
+  &.btn--text--compact{
+    background-color: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &::after {
+      right: 12px;
+      top: 50%;
+      margin-top: -9px;
+    }
   }
 
   &.btn--large {

@@ -1,0 +1,46 @@
+$table-cell-height: 40px;
+
+table {
+  position: relative;
+  table-layout: auto;
+  width: 100%;
+
+  margin-bottom: 8px;
+  border-collapse: collapse;
+
+  tr {
+    height: $table-cell-height;
+  }
+
+  td {
+    padding: 4px 8px;
+  }
+
+  thead > tr {
+    @include table-header;
+    border-bottom: solid 2px var(--color-table-border);
+  }
+
+  th {
+    text-align: left;
+    padding: 4px 16px 4px 8px;
+  }
+
+  tbody {
+    @include table-cell;
+
+    tr {
+      border-bottom: solid 1px var(--color-table-border);
+
+      td {
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+.table--wide-col-3 table {
+  td:nth-of-type(3) {
+    min-width: 50%;
+  }
+}
