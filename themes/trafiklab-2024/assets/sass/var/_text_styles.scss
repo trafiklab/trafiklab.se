@@ -44,11 +44,13 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-code-block {
   @include font-monospace;
   font-size: $font-size-normal;
+  line-height: 1.15;
 }
 
 @mixin text-code-inline {
   @include font-monospace;
   font-size: $font-size-normal;
+  line-height: 1.15;
 }
 
 @mixin text-h1-background {
@@ -63,6 +65,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-h1 {
   @include font-league-gothic;
   font-size: $font-size-large;
+  line-height: 1;
   text-transform: uppercase;
   margin: 64px 0 16px;
 
@@ -80,6 +83,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
   width: auto;
 
   font-size: $font-size-larger;
+  line-height: 1;
   font-weight: 700;
   color: var(--color-h2-foreground);
   border-bottom: (5 * $font-size-larger / 6) solid var(--color-h2-accent);
@@ -130,6 +134,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-subtext {
   @include font-ibm-plex-sans-condensed;
   font-size: $font-size-normal;
+  line-height: 1;
   text-transform: uppercase;
 }
 
