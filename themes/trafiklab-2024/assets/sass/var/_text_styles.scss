@@ -12,11 +12,11 @@ $font-size-large: 32px;
 $font-size-hero: 64px; /* Only for landing page hero text */
 
 @mixin font-league-gothic {
-  font-family: "League Gothic", sans-serif; /* Logo font */
+  font-family: "League Gothic", sans-serif; // Logo font
 }
 
 @mixin font-ibm-plex-sans-condensed {
-  font-family: "IBM Plex Sans Condensed", "Noto Display Light", sans-serif; /* Main body text */
+  font-family: "IBM Plex Sans Condensed", "Noto Display Light", sans-serif; // Main body text
 }
 
 @mixin font-ibm-plex-sans {
