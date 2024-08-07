@@ -46,7 +46,7 @@ code, pre {
   }
 }
 
-code {
+:not(pre) > code {
   background-color: var(--color-code-inline-background);
   padding: 3px 4px; // 3px becomes a total of 6 when on top + bottom, matching the difference in a 2px smaller font + 2px on each side
 }
