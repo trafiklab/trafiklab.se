@@ -5,6 +5,7 @@ $right-sidebar-width: $left-sidebar-width;
 $sidebar-container-gap: 40px;
 
 $article-image-height: 380px;
+$article-image-height-no-sidebar: 480px;
 $article-pullup-over-image: 140px;
 
 html {
@@ -49,7 +50,7 @@ body {
   }
 }
 
-body.with-sidebar, body:not(.type-home).with-footer {
+body.with-sidebar, body:not(.type-home).without-sidebar {
 
   --article-padding-x: 96px;
   --article-padding-y: 32px;
@@ -113,6 +114,27 @@ body.with-sidebar, body:not(.type-home).with-footer {
   }
 }
 
+body:not(.type-home).without-sidebar  {
+  // When the left sidebar is not present, the image should stretch to both sides
+  // The image can also be higher in these cases
+  main#content .background-image {
+    // The table of contents makes the right side of the image seem smaller. Reduce left side extension a bit (making it asymmetric) to make it seem symmetrical
+    $weight-imbalance-compensation: 24px;
+    left: - $right-sidebar-width + $weight-imbalance-compensation;
+    height: $article-image-height-no-sidebar;
+    width: $container-width + 2 * $right-sidebar-width - $weight-imbalance-compensation;
+  }
+
+  nav.right-sidebar-toc {
+    margin-top: $article-image-height-no-sidebar + 60px;
+  }
+
+
+  article.page {
+    margin-top: $article-image-height-no-sidebar - $article-pullup-over-image;
+  }
+}
+
 article.page {
   padding: var(--article-padding-y) var(--article-padding-x);
 }
@@ -132,7 +154,7 @@ div.tl-image {
 }
 
 @media screen and (max-width: $container-width) {
-  body.with-sidebar, body:not(.type-home).with-footer {
+  body.with-sidebar, body:not(.type-home).without-sidebar {
     nav.left-sidebar {
       // Margins to prevent sticking to the side on small screens
       margin-left: 16px;
