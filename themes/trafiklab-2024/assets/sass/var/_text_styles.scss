@@ -67,7 +67,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 
 @mixin text-h1 {
   @include font-league-gothic;
-  font-size: $font-size-large;
+  font-size: $font-size-h1;
   line-height: 1;
   text-transform: uppercase;
   margin: 64px 0 16px;
