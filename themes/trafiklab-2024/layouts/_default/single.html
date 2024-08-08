@@ -16,6 +16,9 @@
             {{ end }}-->
         </h1>
     </div>
+    <div class="page__toc">
+        {{ partial "toc/mobile-toc.html" .}}
+    </div>
     <div class="page__content">
         {{ .Content }}
     </div>

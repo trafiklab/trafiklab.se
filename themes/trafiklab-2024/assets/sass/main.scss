@@ -33,6 +33,7 @@ $breakpoint-lg: 1400px;
 @import "sidebar_left_nav";
 // Table of content sidebar
 @import "sidebar_right_toc";
+@import "single_page_toc"; // Alternative table of contents when sidebar is invisible
 
 // Shortcodes
 @import "shortcodes/admoniton";

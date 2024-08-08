@@ -100,6 +100,10 @@ body.with-sidebar, body:not(.type-home).without-sidebar {
     margin-top: $article-image-height + 60px;
   }
 
+  .page__toc {
+    display: none; // inline table of contents should be hidden when sidebar toc is visible
+  }
+
   .sidebar-sticky {
     // The sticky div for the sidebar
     position: sticky;
@@ -215,6 +219,10 @@ div.tl-image {
 
     .content-right-wrapper {
       display: none; // Not present on small screens
+    }
+
+    .page__toc {
+      display: block; // inline table of contents should take over from sidebar
     }
 
     main#content .background-image {

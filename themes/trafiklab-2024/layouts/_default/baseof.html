@@ -26,7 +26,7 @@
 
 {{ if and (not (eq .Type "home")) (not (eq .Layout "section")) }}
     <div class="content-right-wrapper">
-        {{ block "sidebar-right" . }}{{ partial "toc/toc.html" .}}{{ end }}
+        {{ block "sidebar-right" . }}{{ partial "toc/sidebar-toc.html" .}}{{ end }}
     </div>
 {{ else }}
     <div class="content-right-wrapper flex-spacer"></div>

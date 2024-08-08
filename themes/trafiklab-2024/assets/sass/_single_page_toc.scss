@@ -1,0 +1,34 @@
+nav.inline-toc {
+  // Positioning on page is already handled in _layout.scss, only contents have to be defined
+  color: var(--color-sidebar-active);
+  background-color: var(--color-background);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li.inline-toc__header a, li.inline-toc__item a {
+    @include toc-list-item;
+    display: block;
+    padding: 4px;
+    line-height: 24px;
+  }
+
+  li.inline-toc__item a {
+    padding-left: 16px;
+    border-left: 2px solid var(--color-sidebar-level1);
+  }
+
+  li.inline-toc__item--h3 > a {
+    padding-left: 32px;
+  }
+
+  li.inline-toc__header > a {
+    @include toc-header-item;
+    margin-bottom: 8px;
+    padding: 4px 0;
+  }
+
+}
