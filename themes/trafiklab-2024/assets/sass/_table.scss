@@ -5,7 +5,16 @@ table {
   table-layout: auto;
   width: 100%;
 
-  margin: 4 * $vertical-spacing-unit 0;
+  margin: 2 * $vertical-spacing-unit 0 4 * $vertical-spacing-unit;
+
+  &:has(+h2){
+    margin-bottom: 0; // compensate for tables not having collapsing margins
+  }
+
+  &:has(+h3){
+    margin-bottom: 8px; // compensate for tables not having collapsing margins
+  }
+
   border-collapse: collapse;
 
   tr {
