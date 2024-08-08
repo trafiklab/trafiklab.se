@@ -105,7 +105,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-h3 {
   @include font-ibm-plex-sans-condensed;
   text-rendering: optimizeLegibility;
-  font-size: $font-size-normal;
+  font-size: $font-size-larger;
   color: var(--color-h3-foreground);
   margin: 24px 0 8px;
 }
