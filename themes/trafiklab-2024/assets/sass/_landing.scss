@@ -15,14 +15,11 @@ main.landing {
   h1 {
     display: flex;
     width: 100%;
-    text-align: justify;
     height: $font-size-hero + 8px;
     gap: $vertical-spacing-unit;
 
     span {
       display: inline-block;
-
-      text-align: justify;
       font-size: $font-size-hero;
       flex-grow: 1;
       // Equal padding is needed on every part so the inverted bits can matched without alignment issues
@@ -220,6 +217,7 @@ main.landing {
 
   }
 }
+
 @media screen and (max-width: $breakpoint-sm) {
   main.landing {
     h1 {
@@ -230,7 +228,13 @@ main.landing {
 
       span {
         margin-left: 0;
+        text-wrap: balance;
+        height: auto;
       }
+    }
+
+    .recent-posts__item {
+      flex-direction: row-reverse;
     }
   }
 }
