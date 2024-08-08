@@ -81,7 +81,7 @@ main.landing {
     }
   }
 
-  .landing-partners {
+  .landing-partners.landing-partners--desktop {
     height: 600px;
     gap: 0;
 
@@ -129,6 +129,7 @@ main.landing {
       margin-left: -180px;
 
       .landing-partners__item__stop {
+        display: block;
         width: 32px;
         height: 32px;
       }
@@ -152,6 +153,7 @@ main.landing {
 
     .landing-partners__top-row {
       position: relative;
+      flex-wrap: nowrap;
       bottom: calc(-50% + 138px);
       padding-left: 80px;
       margin-left: 54px;
@@ -159,6 +161,7 @@ main.landing {
 
     .landing-partners__bottom-row {
       padding-left: 167px;
+      flex-wrap: nowrap;
     }
 
     .landing-partners__bottom-row .landing-partners__item {
@@ -175,8 +178,48 @@ main.landing {
       }
     }
   }
+
+  .landing-partners.landing-partners--mobile {
+    display: inline-flex;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .landing-partners__item {
+      height: 80px;
+      width: 200px;
+      margin-left: 0;
+      align-content: center;
+
+      a {
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+      }
+
+      .landing-partners__item__stop {
+        display: none;
+      }
+
+      img {
+        max-height: 36px;
+        max-width: 160px;
+        display: inline-block;
+      }
+    }
+  }
+
+
 }
 
+@media screen and (min-width: $breakpoint-sm) {
+  main.landing {
+
+  }
+}
 @media screen and (max-width: $breakpoint-sm) {
   main.landing {
     h1 {
