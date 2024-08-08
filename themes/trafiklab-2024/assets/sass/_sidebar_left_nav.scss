@@ -9,7 +9,7 @@ nav.tl-side-navigation {
   ul.tl-side-navigation--root {
     // Margin for the complete sidebar
     // The margin at the parent nav element is needed for the page layout, this margin is for the sidebar layout
-    margin: 0 32px 0 0;
+    margin: 0 32px 0 16px;
   }
 
   ul.tl-side-navigation--root, li.tl-side-navigation__item--level-0 {

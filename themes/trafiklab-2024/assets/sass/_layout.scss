@@ -59,6 +59,8 @@ body.with-sidebar, body:not(.type-home).without-sidebar {
 
   .content-center-wrapper {
     position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
   }
 
   .content-left-wrapper, .content-right-wrapper {
@@ -94,7 +96,7 @@ body.with-sidebar, body:not(.type-home).without-sidebar {
     z-index: 20;
     position: sticky;
     top: $header-content-height + 2 * $header-padding;
-    width: $right-sidebar-width;
+    max-width: $right-sidebar-width;
     margin-top: $article-image-height + 60px;
   }
 
@@ -112,7 +114,7 @@ body.with-sidebar, body:not(.type-home).without-sidebar {
     display: flex;
     flex-direction: column;
 
-    width: $left-sidebar-width;
+    max-width: $left-sidebar-width;
   }
 }
 
@@ -173,6 +175,52 @@ div.tl-image {
     article.page {
       --article-padding-x: 64px;
       --article-padding-y: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  body.with-sidebar {
+    .site-header__navbar {
+      // The navbar would be centered between the sidebar and the content. Stretch it to full width instead on documentation pages
+      margin: 0 16px;
+      width: auto;
+    }
+
+    .content-left-wrapper {
+      max-width: 320px;
+
+
+      .sidebar-sticky {
+        margin: 0; // no longer needed to compensate for metro lines
+      }
+
+      .metro-divider-mid {
+        display: none;
+      }
+
+      .left-sidebar--top-space {
+        display: none;
+      }
+    }
+  }
+
+  body:not(.type-home).without-sidebar {
+    .content-left-wrapper {
+      display: none;
+    }
+  }
+
+  body.with-sidebar, body:not(.type-home).without-sidebar {
+
+    .content-right-wrapper {
+      display: none; // Not present on small screens
+    }
+
+    main#content .background-image {
+      left: 0;
+      height: $article-image-height;
+      width: 100%;
     }
   }
 }
