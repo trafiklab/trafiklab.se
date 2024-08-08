@@ -4,11 +4,14 @@
  * also include some other stylistic elements
  */
 
-/* Only the following 5 font sizes may be used throughout the site */
+/* Only the following 4 font sizes may be used throughout the site */
 $font-size-smaller: 14px;
 $font-size-normal: 16px;
+$font-size-medium: 18px;
 $font-size-larger: 24px;
-$font-size-large: 32px;
+
+/** The following font size should be used with caution */
+$font-size-h1: 32px; /* Only for at most 1 H1 element on each page */
 $font-size-hero: 64px; /* Only for landing page hero text */
 
 @mixin font-league-gothic {
@@ -105,7 +108,7 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-h3 {
   @include font-ibm-plex-sans-condensed;
   text-rendering: optimizeLegibility;
-  font-size: $font-size-larger;
+  font-size: $font-size-medium;
   color: var(--color-h3-foreground);
   margin: 24px 0 8px;
 }
