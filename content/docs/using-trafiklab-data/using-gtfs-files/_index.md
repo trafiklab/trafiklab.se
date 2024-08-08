@@ -40,8 +40,8 @@ and [https://github.com/CUTR-at-USF/awesome-transit](https://github.com/CUTR-at-
 
 ## GTFS at Trafiklab
 
-At Trafiklab, we offer two GTFS feeds. The first is [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2), which
-includes information for entire Sweden. We also offer[ GTFS Regional](/api/trafiklab-apis/gtfs-regional),
+At Trafiklab, we offer two GTFS feeds. The first is [GTFS Sverige 2](/api/gtfs-datasets/gtfs-sverige-2), which
+includes information for entire Sweden. We also offer[ GTFS Regional](/api/gtfs-datasets/gtfs-regional),
 which consists of multiple GTFS feeds, each of which covers an operator in Sweden. You can see the difference between
 those two feeds below.
 
@@ -53,7 +53,6 @@ those two feeds below.
 | Real-time data | Only static data | Static + Real-time + GPS positions |
 | Historical data (static) | Since 2012 | Not available |
 
-{{% page-ref static-gtfs-files realtime-gtfs-files %}}
 
 {{% info %}} You can find the complete GTFS reference
 at [https://developers.google.com/transit/gtfs/reference/](https://developers.google.com/transit/gtfs/reference/).

@@ -6,7 +6,7 @@ expiryDate: 2024-03-14
 ---
 
 {{% error %}}
-Due to technical reasons, this API is being replaced by [SLs Deviations API](deviations.md) and [GTFS Service alerts](../gtfs-regional/realtime.md). It will
+Due to technical reasons, this API is being replaced by [SLs Deviations API](deviations.md) and [GTFS Service alerts](../../gtfs-datasets/gtfs-regional/realtime.md). It will
 stop working in the near future.
 {{% /error %}}
 

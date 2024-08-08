@@ -31,6 +31,6 @@ Read the API documentation for more information about the parameters and respons
 
 Larger websites or apps that need to handle a lot of traffic, it might be easier to create your own, local API. This can
 be done either through a self-hosted [OpenTripPlanner](https://github.com/opentripplanner) instance, fed
-with [GTFS Sverige 2](/api/trafiklab-apis/gtfs-sverige-2/)
-or [GTFS Regional](/api/trafiklab-apis/gtfs-regional/) data, or by creating your own
+with [GTFS Sverige 2](/api/gtfs-datasets/gtfs-sverige-2/)
+or [GTFS Regional](/api/gtfs-datasets/gtfs-regional/) data, or by creating your own
 wrapper around our GTFS data.

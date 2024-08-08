@@ -12,7 +12,7 @@ This SIRI feed is based on version 1.1 of the Norwegian SIRI profile. The profil
 The realtime files are produced per operator for performance reasons. 
 
 {{% info %}}
-**Availability of data** differs per operator. See the [overview page of the Regional API](https://www.trafiklab.se/api/trafiklab-apis/netex-regional/) to see which data is provided
+**Availability of data** differs per operator. See the [overview page of the Regional API](https://www.trafiklab.se/api/netex-datasets/netex-regional/) to see which data is provided
 by the operator(s) you are interested in.
 {{% /info %}}
 

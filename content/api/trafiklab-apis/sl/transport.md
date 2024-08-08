@@ -86,7 +86,7 @@ https://transport.integration.sl.se/v1/transport-authorities
 
 This API does not require the use of an API key. You should however not make excessive requests, to ensure the availability
 and performance of the API for everyone. If you need large amounts of data, for example all departures from all
-stops, [GTFS Regional](../gtfs-regional/_index.md) might be better suited for your application.
+stops, [GTFS Regional](../../gtfs-datasets/gtfs-regional/_index.md) might be better suited for your application.
 
 ## Format
 

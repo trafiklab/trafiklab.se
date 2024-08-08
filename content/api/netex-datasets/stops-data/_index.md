@@ -5,10 +5,28 @@ weight: 37
 date: 2022-06-01
 ---
 
-The stops data API contains detailed data of Sweden's national stops and their mappings to stops from the [GTFS Regional](/api/trafiklab-apis/gtfs-regional/)
-and [Netex Regional](/api/trafiklab-apis/netex-regional/) APIs.
+The stops data API contains detailed data of Sweden's national stops and their mappings to stops from the [GTFS Regional](/api/gtfs-datasets/gtfs-regional/)
+and [Netex Regional](/api/netex-datasets/netex-regional/) APIs.
 
 All of Sweden's stops are included in this dataset.
+
+## What does this dataset contain?
+
+This dataset contains all of Sweden's stops in the NeTEx format. There are multiple different KeyValue-elements for each StopPlace and Quay which
+contain information that does not fit into any standard Netex elements. Many of these extra KeyValue-elements are mostly useful for operators consuming the
+data.
+
+This data is based on the data available in the regional data feeds ([GTFS Regional](/api/gtfs-datasets/gtfs-regional/), [Netex Regional](/api/netex-datasets/netex-regional/)) and enriched by Samtrafiken. If you are interested in the
+original data for a specific PTA, please see the regional datasets.
+
+### Data format
+
+The data is in the NeTEx (**Ne**twork and **T**imetable **Ex**change) format. This is a format in which all European
+operators have to publish their data. The data is aimed at both operator-to-traveller communication and internal
+communication between different organizations. Samtrafiken
+follows [the Nordic NeTEx Profile, which is documented by Entur](https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/728891481/Nordic+NeTEx+Profile).
+
+For more technical information about Stops data, please visit [Samtrafiken Open Data - Stops data](https://samtrafiken.atlassian.net/wiki/spaces/SamtrafikenOpenData/pages/3701309442/Samtrafiken+Stops+NeTEx+export).
 
 {{% note %}}
 **Where to download**
@@ -27,29 +45,11 @@ Replace `{apikey}` with your own `stops data` API key. If you don´t have a key 
 | Bronze |            10            |           50            |
 | Silver |            10            |           250           |
 
-### What does this dataset contain?
-
-This dataset contains all of Sweden's stops in the NeTEx format. There are multiple different KeyValue-elements for each StopPlace and Quay which
-contain information that does not fit into any standard Netex elements. Many of these extra KeyValue-elements are mostly useful for operators consuming the
-data.
-
-This data is based on the data available in the regional data feeds ([GTFS Regional](/api/trafiklab-apis/gtfs-regional/), [Netex Regional](/api/trafiklab-apis/netex-regional/)) and enriched by Samtrafiken. If you are interested in the
-original data for a specific PTA, please see the regional datasets.
-
-### Data format
-
-The data is in the NeTEx (**Ne**twork and **T**imetable **Ex**change) format. This is a format in which all European
-operators have to publish their data. The data is aimed at both operator-to-traveller communication and internal
-communication between different organizations. Samtrafiken
-follows [the Nordic NeTEx Profile, which is documented by Entur](https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/728891481/Nordic+NeTEx+Profile).
-
-For more technical information about Stops data, please visit [Samtrafiken Open Data - Stops data](https://samtrafiken.atlassian.net/wiki/spaces/SamtrafikenOpenData/pages/3701309442/Samtrafiken+Stops+NeTEx+export).
-
 
 ### KeyValues explained
 
 Most of the KeyValues refer to DataSource IDs. These IDs can currently be transformed to actual datasources/authorities through
-the [NeTEx Sweden API](/api/trafiklab-apis/netex-sweden/)
+the [NeTEx Sweden API](/api/netex-datasets/netex-sweden/)
 , by mapping the DataSource IDs to Authority.PrivateCode in the `_shared_data.xml` file. In the future we are going to provide a better way of matching
 DataSource IDs to datasources/authorities.
 
@@ -85,3 +85,28 @@ The data in this dataset is updated on a daily basis, typically between 07:50 an
 
 This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
 breaking changes are made, you will get three months or more to update your implementations.
+
+## Licence
+
+Data from the Stops API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+
+### Summary
+
+The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her
+rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by
+law.
+
+### Other Information
+
+In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may
+have in the work or in how the work is used, such as publicity or privacy rights.
+
+Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work,
+and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law.
+
+When using or citing the work, you should not imply endorsement by the author or the affirmer.
+
+{{% info %}}
+More information, as well as the complete license text, can be found at
+[the creative commons website](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
+{{% /info %}} 
