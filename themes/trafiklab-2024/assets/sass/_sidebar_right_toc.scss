@@ -24,11 +24,8 @@ nav.right-sidebar-toc {
   }
 
   li.right-sidebar-toc__header {
-    border-left: 4px solid var(--color-sidebar-level1);
-
     > a {
       @include toc-header-item;
-      padding-left: 12px;
     }
   }
 
