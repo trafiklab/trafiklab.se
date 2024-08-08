@@ -9,11 +9,12 @@ function updateTocScrollPosition() {
 
   // then iterate backwards, on the first match highlight it and break
   for (let i = anchors.length - 1; i >= 0; i--) {
-    if (scrollTop > $(anchors[i]).offset().top - 32) {
+    if (scrollTop + 384 > $(anchors[i]).offset().bottom) { // require contents to be at least a bit on the screen, which matches expectations a bit more
       $('.right-sidebar-toc__item:has(a[href="#' + $(anchors[i]).attr('id') + '"])').addClass('right-sidebar-toc__item--active');
-      break;
+      return;
     }
   }
+  $('.right-sidebar-toc__item:first').addClass('right-sidebar-toc__item--active');
 }
 
 $(window).scroll(function () {
