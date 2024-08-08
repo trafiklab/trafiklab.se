@@ -26,6 +26,9 @@ nav.right-sidebar-toc {
   li.right-sidebar-toc__header {
     > a {
       @include toc-header-item;
+      border: none;
+      padding-left: 18px;
+      margin-bottom: 8px;
     }
   }
 
