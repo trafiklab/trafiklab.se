@@ -4,6 +4,7 @@ menu: "main"
 weight: 1
 layout: "single"
 sidebar: true
+image: '/backdrop/backdrop.png'
 ---
 
 ## Trafiklabs APIs

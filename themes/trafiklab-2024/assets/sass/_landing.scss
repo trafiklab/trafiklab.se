@@ -4,12 +4,20 @@ main.landing {
 
   section.page {
     min-height: 100vh;
+    margin-bottom: 4 * $vertical-spacing-unit;
   }
 
   section.page__first {
-    min-height: unset;
-    height: calc(100vh - #{$header-height});
-    padding-bottom: $header-height;
+    min-height: calc(100vh - #{$header-height});
+    padding-bottom: 64px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='81' height='80' viewBox='0 0 81 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='40.5' x2='40.5' y2='80' stroke='%23F6F0F7'/%3E%3Cline x1='0.420898' y1='39.4956' x2='80.4209' y2='39.4956' stroke='%23F6F0F7'/%3E%3C/svg%3E%0A");
+    background-repeat: repeat;
+    box-shadow: 0 0 32px 16px rgba(255, 255, 255, 0.68) inset;
+
+    p {
+      font-size: 24px;
+    }
   }
 
   h1 {
@@ -31,6 +39,139 @@ main.landing {
     span.hero-text--inverted {
       flex-grow: 1;
       text-align: center;
+    }
+  }
+
+  .page__first__content {
+    margin-bottom: 32px;
+  }
+
+  .landing-demo {
+    position: relative;
+    padding-top: 256px;
+    padding-bottom: 32px;
+
+    .landing-demo-middle {
+      position: relative;
+
+      .landing-demo-stop .marker {
+        width: 48px;
+        height: 48px;
+        background-color: #fff;
+        border: 12px solid $color-black;
+        border-radius: 24px;
+      }
+
+      .landing-demo-stop--double .marker {
+        height: 108px;
+      }
+
+      .landing-demo-stop__station-name {
+        @include font-ibm-plex-sans-condensed;
+        font-size: $font-size-h1;
+        font-weight: bold;
+        position: absolute;
+        display: block;
+        width: fit-content;
+        text-wrap: nowrap;
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+        top: -48px;
+        left: 36px;
+      }
+
+      .landing-demo-stop {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: -12px;
+      }
+
+      .landing-demo-stop--double {
+        top: -24px;
+      }
+
+      .landing-demo-stop:first-of-type {
+        position: absolute;
+        left: 0;
+        right: unset;
+      }
+
+      .vehicle-position {
+        position: absolute;
+        z-index: 30;
+        top: -14px;
+        left: 80px;
+
+
+        .marker {
+          background-color: $color-pink;
+          height: 48px;
+          width: 48px;
+          border-radius: 32px;
+          top: -24px;
+          left: 50px;
+
+          &::after {
+            display: block;
+            width: 120px;
+            height: 2px;
+            transform: rotate(-45deg);
+            transform-origin: bottom left;
+            content: '';
+            background-color: $color-pink;
+            position: relative;
+            left: 24px;
+            bottom: -24px;
+          }
+        }
+
+        .label {
+          display: block;
+          position: absolute;
+          left: 64px;
+          bottom: 64px;
+          background-color: $color-pink;
+          padding: 8px;
+          width: fit-content;
+
+          span:first-of-type {
+            font-weight: bold;
+          }
+
+          span {
+            display: block;
+            text-wrap: nowrap;
+          }
+        }
+
+      }
+    }
+
+
+    .landing-demo-left .metro-lines {
+      background-image: url("data:image/svg+xml, %3Csvg width='300' height='60' viewBox='0 0 300 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M300 10L0 10' stroke='%23F4BFFF' stroke-width='20'/%3E%3Cpath d='M300 50L0 50' stroke='%23FFF199' stroke-width='20'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      height: 60px;
+    }
+
+    .landing-demo-middle .metro-lines {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-image: url("data:image/svg+xml, %3Csvg height='60' viewBox='0 0 300 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M300 10L0 10' stroke='%23F4BFFF' stroke-width='20'/%3E%3Cpath d='M300 50L0 50' stroke='%23FFF199' stroke-width='20'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      height: 60px;
+    }
+
+    .landing-demo-right .metro-lines {
+      background-image: url("data:image/svg+xml,%3Csvg width='10307' height='364' viewBox='0 0 10307 364' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10307 10L0 10' stroke='%23F4BFFF' stroke-width='20'/%3E%3Cpath d='M10306.5 354L312 350L12 50H0' stroke='%23FFF199' stroke-width='20'/%3E%3C/svg%3E%0A");
+      height: 364px;
+      background-size: cover;
+      background-position: bottom left;
+      overflow: visible;
+      margin-bottom: - #{364px - 60px - 32px}; // Don't reserve space for the downward metro branch, text can still fit in the container.
     }
   }
 
@@ -83,8 +224,10 @@ main.landing {
   }
 
   .landing-partners.landing-partners--desktop {
+    width: 100%;
     height: 600px;
     gap: 0;
+    overflow: hidden; // Prevent issues on smaller screens which don't fit the entire metro line side divs
 
     .landing-partners-left, .landing-partners-right, .landing-partners-middle {
       position: relative;

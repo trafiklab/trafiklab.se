@@ -5,12 +5,27 @@
             <h1><span>The home of</span><span class="h1--tl-inverted">swedish public transport data</span></h1>
         </div>
         <div class="landing-demo flex-spacer flex-row">
-            <div class="landing-demo-left flex-spacer"></div>
-            <div class="landing-demo-middle container"></div>
-            <div class="landing-demo-right flex-spacer"></div>
+            <div class="landing-demo-left flex-spacer">
+                <div class="metro-lines"></div>
+            </div>
+            <div class="landing-demo-middle container">
+                <div class="landing-demo-stop landing-demo-stop--double"><div class="marker"></div><span class="landing-demo-stop__station-name">Station 1</span></div>
+                <div class="landing-demo-stop landing-demo-stop"><div class="marker"></div><span class="landing-demo-stop__station-name">Station 1</span></div>
+                <div class="metro-lines"></div>
+                <div class="vehicle-position">
+                    <div class="marker"></div>
+                    <div class="label">
+                        <span>Metro 14, on time</span>
+                        <span>Last position update: 2 seconds ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="landing-demo-right flex-spacer">
+                <div class="metro-lines"></div>
+            </div>
         </div>
         <div class="container page__first__bottom">
-            <div>{{ .Content}}</div>
+            <div class="page__first__content">{{ .Content}}</div>
             <div class="tl-row tl-row--large-gap">
                 <div class="btn btn--large btn--primary tl-col--6 tl-col--xs-12">
                     Getting Started
