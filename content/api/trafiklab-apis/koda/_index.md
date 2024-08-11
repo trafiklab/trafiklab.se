@@ -52,15 +52,15 @@ at a later date:
 The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the GTFS-Realtime
 (GTFS-RT) standard, and is stored in the protobuf format.
 
-### How often is this dataset updated?
+### Updates
 
 Data is being stored as soon as it becomes public, and is accessible from the next day.
 
-### Which operators are covered by this dataset?
+### Operators covered by this dataset
 
 All operators covered by the GTFS Regional dataset are covered by KoDA.
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 The data in this feed will change according to any changes in the GTFS static or GTFS realtime data.
 

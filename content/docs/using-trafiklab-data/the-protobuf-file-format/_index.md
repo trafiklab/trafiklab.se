@@ -1,7 +1,7 @@
 ---
 title: The protobuf file format
-description: How to use binary protocol buffer files in your application
-weight: 30
+description: How to use binary protocol buffer files in your application 
+layout: "single"
 ---
 
 ### What is the protobuf file format

@@ -13,7 +13,7 @@ format. Each dataset contains data for a specific region or operator. While the 
 regional public transport operators, and some private companies as well, each feed uses their own ids for each stop. If 
 you are looking for an aggregated national feed, please look at GTFS Sverige 2.
 
-### What does this dataset contain?
+## What does this dataset contain?
 
 This dataset contains high quality detailed data, both static and real-time, in the NeTEx format. Each dataset contains
 data for a specific region or operator.
@@ -24,16 +24,16 @@ The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime d
 GTFS-Realtime(GTFS-RT) standard, and is stored in the protobuf format. This data is also available in the NeTEx format.
 For the NeTEx format, see the [NeTEx regional API](/api/netex-datasets/netex-regional/).
 
-### How often is this dataset updated?
+### Updates
 
 The static data in this dataset is updated on a daily basis. The real-time data receives multiple updates
-per minute, see [realtime data](realtime) for more information.
+per minute, see [realtime data](#realtime-data) for more information.
 
-### Which operators are covered by this dataset?
+### Operators covered by this dataset
 
 {{% include "/headless/stip-data-availability.md" %}}
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 Both the static and realtime data feeds are stable. While we add new data all the time, we don't
 make breaking changes. Should we need to make a breaking change, we'll inform users first, and you'll have around
@@ -55,9 +55,9 @@ The dataset can be accessed through the following URL:
 [https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key={apikey})
 
 Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
-
-OpenAPI specification, but are also listed at the [top of this page](#). Replace `{apikey}` with your own API key.
-If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
+OpenAPI specification, but are also listed here [above](#operators-covered-by-this-dataset).
+Replace `{apikey}` with your own API key. If you don´t have a key yet,
+read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
 <div style="max-width: 270px">
@@ -76,7 +76,7 @@ If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys
 "/api/gtfs-datasets"  %}}
 <br>
 
-## Notes and known issues
+### Notes and known issues
 
 - Since GTFS defines vehicle types on a route-level, the vehicle-type for some trips might be incorrect if those
   trips deviate from the route's most common vehicle type. This can for example happen when some trips on a bus
@@ -100,7 +100,8 @@ In order to retrieve the data you need an API key. Technical details for fetchin
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.
 
 {{% info %}}
-**Availability of regional data** differs per operator. See the [overview page](_index.md) to see which data is provided
+**Availability of regional data** differs per operator. See the [top of this page](#operators-covered-by-this-dataset)
+to see which data is provided
 by the operator(s) you are interested in.
 {{% /info %}}
 
@@ -112,9 +113,9 @@ The dataset can be accessed through the following URLs:
 - [https://opendata.samtrafiken.se/gtfs-rt/{operator}/TripUpdates.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/TripUpdates.pb?key={apikey})
 - [https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey}](https://opendata.samtrafiken.se/gtfs-rt/{operator}/VehiclePositions.pb?key={apikey})
 
-Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in the
-OpenAPI specification, but are also listed on the [static data documentation page](#). Replace `{apikey}` with your 
-own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
+Replace `{operator}` with the abbreviation of the operator you want to download. These abbreviations can be found in
+the OpenAPI specification, but are also listed at the [top of this page](#operators-covered-by-this-dataset).
+Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
 <div style="max-width: 270px">
@@ -125,11 +126,11 @@ own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/get
 |:-------|:------------------------:|:-----------------------:|
 | Bronze |            50            |         30 000          |
 | Silver |           250            |        2 000 000        |
-| Gold   |           500            |       22 500 0000       |
+| Gold   |           500            |       22 500 000        |
 
 </div>
 
-## Available real-time data
+### Available real-time data
 
 #### ServiceAlerts
 
@@ -139,7 +140,7 @@ are broad and general information. Trafiklab's serviceAlerts are updated every 1
 
 Delays and cancellations of individual trips are usually communicated
 using [Trip updates](#tripupdates).
-See [the table on the GTFS Regional overview page](./_index.md#which-operators-are-covered-by-this-dataset) to find out which
+See [the GTFS Regional availability table](#operators-covered-by-this-dataset) to find out which
 operators are supported (Realtime data column).
 
 {{% info %}} ServiceAlerts can remain unchanged for relatively long periods (for example a couple of
@@ -151,7 +152,7 @@ of [Conditional HTTP requests](/docs/using-trafiklab-data/best-practices/conditi
 
 Trip updates contain real-time departure and arrival times for individual trips. This means you can get the current,
 estimated delay for each vehicle on each stop. Trafiklab's tripUpdates are updated every 15 seconds.
-See [the table on the GTFS Regional overview page](./_index.md#which-operators-are-covered-by-this-dataset) to find out which
+See [the GTFS Regional availability table](#operators-covered-by-this-dataset) to find out which
 operators are supported (Real-time data column).
 
 {{% warning %}} In some cases it isn't possible to link certain delays to a specific trip. In this case, they
@@ -161,9 +162,9 @@ may be linked to a route instead. {{% /warning %}}
 
 The vehiclepositions.pb feed contains the GPS positions for all operators. Depending on the operator, Trafiklab's
 vehiclepositions are updated every 2 seconds. The availability of this data is indicated in a separate column
-in [the GTFS Regional availability table](./_index.md#which-operators-are-covered-by-this-dataset).
+in [the GTFS Regional availability table](#operators-covered-by-this-dataset).
 
-## Using real-time data
+### Using real-time data
 
 You can read more about how to use real-time data in our GTFS format documentation:
 
@@ -199,9 +200,7 @@ Replace `{operator}` with the abbreviation of the operator you want to download.
 [//]: # (OpenAPI specification, but are also listed on the [static data documentation page]&#40;static.md&#41;. Replace `{apikey}` with your own API key.)
 {{% /note %}}
 
-### Included data
-
-#### trips\_dated\_vehicle\_journey.txt
+### trips\_dated\_vehicle\_journey.txt
 
 This file links every GTFS trip\_id to their source GID in the Noptis data. This file is meant for those who want to
 combine or integrate their systems with internal systems of transport agencies. Note that this data is only correct for

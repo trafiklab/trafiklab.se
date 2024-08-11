@@ -38,6 +38,8 @@ Replace `{apikey}` with your own `stops data` API key. If you don´t have a key 
 
 {{% /note %}}
 
+<div style="max-width: 270px">
+
 #### API key levels
 
 | Level  | Maximum calls per minute | Maximum calls per month |
@@ -45,6 +47,7 @@ Replace `{apikey}` with your own `stops data` API key. If you don´t have a key 
 | Bronze |            10            |           50            |
 | Silver |            10            |           250           |
 
+</div>
 
 ### KeyValues explained
 
@@ -77,11 +80,11 @@ explains the meaning of each Key-Value.
 | local-designation             | Format is DataSource:Designation.                                                                                                                                                     |
 | sellable                      | This value will be true if the StopPlace is sellable through samtrafiken systems, and false if not.                                                                                   |
 
-### How often is this dataset updated?
+### Updates
 
 The data in this dataset is updated on a daily basis, typically between 07:50 and 9:00.
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 This dataset has the **stable** status. This means that we will communicate when fields are added, or changed. When
 breaking changes are made, you will get three months or more to update your implementations.
@@ -90,13 +93,13 @@ breaking changes are made, you will get three months or more to update your impl
 
 Data from the Stops API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
 
-### Summary
+#### Summary
 
 The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her
 rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by
 law.
 
-### Other Information
+#### Other Information
 
 In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may
 have in the work or in how the work is used, such as publicity or privacy rights.

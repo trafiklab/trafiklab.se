@@ -15,15 +15,15 @@ name.
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.
 
-### How often is this data updated?
+### Updates
 
 The static data used for this API is updated when changes are made, at most once per day.
 
-### Which operators are covered by this dataset?
+### Operators covered by this datasey
 
 All operators which operate in Sweden are covered by the ResRobot APIs.
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
 users to update their implementations. Examples of breaking changes are the changes to existing fields or query

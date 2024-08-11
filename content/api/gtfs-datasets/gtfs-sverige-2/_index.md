@@ -6,20 +6,27 @@ aliases:
   - "/api/gtfs-sverige-2"
 ---
 
-GTFS Sverige 2 is a GTFS dataset which covers all public transport in Sweden. GTFS Sverige 2 is our national feed. It 
-contains all public transport in the entire country of Sweden. The data is correct, but lacks the details which are 
+GTFS Sverige 2 is a GTFS dataset which covers all public transport in Sweden. GTFS Sverige 2 is our national feed. 
+
+## What does this dataset contain?
+It contains all public transport in the entire country of Sweden. The data is correct, but lacks the details which are 
 included in the GTFS Regional dataset.
 
-**Data format:** The data is in the GTFS format, and makes use of the GTFS Extensions.
+### Data format 
+The data is in the GTFS format, and makes use of the GTFS Extensions.
 
-**Updates:** The static data in this dataset is updated when changes are made, at most one time per day.
+### Updates
+The static data in this dataset is updated when changes are made, at most one time per day.
 
-**Operators:** All operators which operate in Sweden are covered by GTFS Sverige 2.
+### Operators covered by this dataset
+All operators which operate in Sweden are covered by GTFS Sverige 2.
 
-**Breaking changes:** This dataset has the **stable** status. This means that we will communicate when fields are added, 
+### Breaking changes 
+This dataset has the **stable** status. This means that we will communicate when fields are added, 
 or changed. When breaking changes occur, you will get three months or more to update your implementations.
 
-**Historical data:** The historical data contains information for a period of more than 5 years. It is an excellent 
+### Historical data 
+The historical data contains information for a period of more than 5 years. It is an excellent 
 dataset to analyse evolutions over time.
 
 ## Static data
@@ -115,7 +122,7 @@ agency_id,stop_id,agency_stop_id
 One or more operators have a local id for each national id. Not every local id corresponds to a national id.
 
 {{% info %}} The local stop id for SL (id 275, Stockholms Lokaltrafik) is used by SL for _Stop-Area_. You
-can use SLs API [SL Hållplatser och Linjer 2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2/dokumentation) to
+can use SLs API [SL Transport](https://www.trafiklab.se/api/trafiklab-apis/sl/transport) to
 translate it to a SiteID used in other SL APIs**.**
 {{% /info %}}
 

@@ -23,11 +23,11 @@ The data is in the NeTEx (**Ne**twork and **T**imetable **Ex**change) format. Th
 operators have to publish their data. The data is aimed at both operator-to-traveller communication and internal
 communication between different organizations.
 
-### How often is this dataset updated?
+### Updates
 
 The static data in this dataset is updated on a daily basis, typically between 10:00 and 13:00.
 
-### Which operators are covered by this dataset?
+### Operators covered by this dataset
 
 | Operator                                       |    Abbreviation    | Static data |
 |:-----------------------------------------------|:------------------:|:-----------:|
@@ -70,7 +70,7 @@ The static data in this dataset is updated on a daily basis, typically between 1
 | Uddevalla Turism AB                            |    `uddevalla`     |     ✔️      |
 | Y-Buss                                         |      `ybuss`       |     ✔️      |
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 This dataset has the **stable** status. This means that the fields can be added without prior warning, but when changes
 to existing fields are made, you will get three months to update your implementations.
@@ -83,7 +83,7 @@ details compared to the GTFS Sweden feed but with the overall same timetable dat
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification.
 
-To see which operators are included in this dataset see the documentation in the [Netex Regional API](/api/netex-datasets/netex-regional/#which-operators-are-covered-by-this-dataset).
+To see which operators are included in this dataset see the [table above](#operators-covered-by-this-dataset).
 
 {{% note %}}
 **Where to download**
@@ -94,6 +94,8 @@ The dataset can be accessed through the following URL:
 Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
 
+<div style="max-width: 270px">
+
 #### API key levels
 
 | Level  | Maximum calls per minute | Maximum calls per month |
@@ -101,19 +103,21 @@ Replace `{apikey}` with your own API key. If you don´t have a key yet, read [he
 | Bronze |            10            |           50            |
 | Silver |            10            |           250           |
 
+</div>
+
 {{% page-ref "/api/netex-datasets/netex-sweden/netex-sweden-specification" %}}
 
 ## Licence
 
 Data from the NeTEx Sweden API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
 
-### Summary
+#### Summary
 
 The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her
 rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by
 law.
 
-### Other Information
+#### Other Information
 
 In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may
 have in the work or in how the work is used, such as publicity or privacy rights.

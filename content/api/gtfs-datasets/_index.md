@@ -339,7 +339,7 @@ at [https://developers.google.com/transit/gtfs-realtime/](https://developers.goo
 order to create realtime timetables. {{% /warning %}}
 
 The GTFS Realtime standard uses
-the [protobuf format](/docs/using-trafiklab-data/using-gtfs-files/the-protobuf-file-format) to transfer compact messages
+the [protobuf format](/docs/using-trafiklab-data/the-protobuf-file-format) to transfer compact messages
 which describe deviations between the
 real world and the schedules for a public transport network. There are 3 different feeds, each of which provides their
 own type of information.
@@ -367,7 +367,7 @@ located, along with its speed and bearing. These can be used to show vehicles on
 
 ### Continue reading
 
-{{% page-ref page="/docs/using-trafiklab-data/using-gtfs-files/the-protobuf-file-format" %}}
+{{% page-ref page="/docs/using-trafiklab-data/the-protobuf-file-format/" %}}
 
 <br>
 
@@ -402,7 +402,7 @@ required by the GTFS standard, the blue ones are optional files used in the Traf
 these CSV files directly into a new database to run queries on them. One example is
 the [csv2db](https://csv2db.github.io/) tool, but there are many other ways to achieve this. {{% /info %}}
 
-### How it's linked together
+### How it is linked together
 
 Before diving deeper into what each field means, it's important to understand how transport data is described in the 7
 required files.

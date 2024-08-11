@@ -7,9 +7,9 @@ sidebar: true
 
 ## NeTEx at Trafiklab
 
-At Trafiklab, we offer three different NeTEx datasets. NeTEx regioanl and NeTEx Sweden offer the same coverage as
-GTFS regional and GTFS Sweden, but are not fully complete. If you are looking for 100% coverage we recommend
-GTFS Sverige 2, which is much less detailed but does contain all of the public transport data of Sweden.
+At Trafiklab, we offer three different NeTEx datasets. NeTEx regional and NeTEx Sweden offer the same coverage as
+GTFS regional and GTFS Sweden, which is not full coverage. If you are looking for 100% coverage we recommend
+GTFS Sverige 2, which is much less detailed but does contain all the public transport data of Sweden.
 
 Our three datasets:
 

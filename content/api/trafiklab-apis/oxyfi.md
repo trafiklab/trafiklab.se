@@ -59,7 +59,7 @@ This is a sample message:
 $GPRMC,142937,A,5948.7028,N,01307.9771,E,49.53,349.7,101212,1.8,E*
 3A,,1421.trains.se,,8955.public.trains.se@2012-12-10;8957.public.trains.se@2012-12-10,oxyfi
 
-### **Table 1 message Specification**
+### Table 1 message Specification
 
 |No|Field example|Explanation|
 |--- |--- |--- |
@@ -84,7 +84,7 @@ $GPRMC,142937,A,5948.7028,N,01307.9771,E,49.53,349.7,101212,1.8,E*
 up in section "A Note on Train Numbers".|
 |18|oxyfi|Data origin|
 
-### **A Note on Train Numbers**
+### A Note on Train Numbers
 
 A train-set or carriage may carry more than one train number at a time, each being either announced (public) or
 technical (internal). The string in the message field that carries train number is therefore built up like domain-names
@@ -101,7 +101,7 @@ To give subscribers a head start, the train number is applied 5 minutes before t
 
 ## How to Subscribe
 
-### **Subscribe to stream**
+### Subscribe to stream
 
 wss://api.oxyfi.com/trainpos/listen?v=1&key=YOUR-KEY-HERE
 
