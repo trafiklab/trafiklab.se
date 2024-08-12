@@ -9,26 +9,25 @@
 
     {{ range .Pages }}
     <a class="section__item" title="{{ .Title }}" href="{{ .Permalink }}">
+        <div class="section__item__header">
+            <h2 class="tl-col">{{ .Title }}</h2>
+            {{ if or .Lastmod .Date }}
+            <div class="tl-col section__item__header__date">
+                <label class="tl-label">{{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
+            </div>
+            {{ end }}
+        </div>
+
         {{ if .Params.Image }}
         {{ partial "responsive-image.html" (dict "context" . "src" (.Params.Image | safeURL) "alt" "Theme image" "class" "tl-image section__item__image") }}
         {{ end }}
         <div class="section__item__info">
-            <div class="section__item__info__head">
-                <h2>{{ .Title }}</h2>
-                {{ if or .Lastmod .Date }}
-                <div class="section__item__info__date">
-                    <label class="tl-label">{{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
-                </div>
-                {{ end }}
-            </div>
             {{ if gt (len .Description) 0 }}
             <p class="section__item__info__description">{{ .Description | markdownify }}</p>
             {{ else }}
             <p class="section__item__info__description">{{ .Summary }}</p>
             {{ end }}
-            <div class="flex-row-right">
-                <div class="btn">Read more</div>
-            </div>
+            <div class="btn section__item__info__btn">Read more</div>
         </div>
     </a>
     {{ end }}
