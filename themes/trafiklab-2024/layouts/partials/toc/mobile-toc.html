@@ -1,3 +1,4 @@
+{{ if (gt (.Fragments.HeadingsMap | len) 0) }}
 <nav class="inline-toc" role="navigation" aria-label="Table of contents">
     <ul>
         <li class="inline-toc__header"><a href="#top">On this page</a></li>
@@ -15,3 +16,4 @@
     {{ end }}
     </ul>
 </nav>
+{{ end }}
