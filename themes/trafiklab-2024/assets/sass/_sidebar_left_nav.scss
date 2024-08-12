@@ -1,4 +1,10 @@
 nav.tl-side-navigation {
+
+  max-height: calc(100vh - #{$header-height});
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: $color-purple $color-purple-hint;
+
   ul {
     // No list styles, no default margins or paddings
     list-style: none;
@@ -33,10 +39,19 @@ nav.tl-side-navigation {
     padding: 4px 0 0;
   }
 
+  .tl-side-navigation__item a {
+    padding: 4px 0;
+    display: block;
+  }
+
+  li.tl-side-navigation__item--active {
+    background-color: $color-purple-hint;
+  }
+
   li.tl-side-navigation__item--level-1 {
     // No indent, only space for the open/collapse icon when needed
     // Little space between items to keep clear visual grouping
-    padding: 4px 0;
+    display: block;
 
     > a {
       @include sidebar-list-item;
@@ -50,12 +65,13 @@ nav.tl-side-navigation {
   }
 
   .tl-side-navigation__dropdown-list--level-2 {
-    padding: 4px 0 0;
+    padding: 0;
   }
+
   .tl-side-navigation__item--level-2 {
     // No indent, only space for the open/collapse icon when needed
     // Little space between items to keep clear visual grouping
-    padding: 4px 24px;
+    padding: 0 24px;
 
     > a {
       @include sidebar-list-item;
