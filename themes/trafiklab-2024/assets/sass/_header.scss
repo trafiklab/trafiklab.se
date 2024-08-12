@@ -33,6 +33,14 @@ header.site-header {
       z-index: 40;
     }
 
+    a {
+      @include nav-header-item;
+      color: var(--color-text);
+      display: inline-block;
+      height: $header-content-height;
+      line-height: $header-content-height;
+    }
+
     ul {
       height: $header-content-height;
       list-style: none;
@@ -40,14 +48,6 @@ header.site-header {
       gap: 16px;
       padding: 0;
       margin: $header-padding 0 $header-padding;
-
-      li.tl-top-navigation-item a {
-        @include nav-header-item;
-        color: var(--color-text);
-        display: inline-block;
-        height: $header-content-height;
-        line-height: $header-content-height;
-      }
     }
 
     .tl-top-navigation-item {
@@ -65,7 +65,7 @@ header.site-header {
       transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
     }
 
-    .tl-top-navigation-item:not(.tl-top-navigation-item--active):hover::after {
+    .tl-top-navigation-item:not(.tl-top-navigation-item--active):not(.brand):hover::after {
       width: 100%;
       left: 0;
     }
@@ -80,11 +80,24 @@ header.site-header {
       display: flex;
       align-items: center;
       gap: 16px;
+
+      .tl-button {
+        padding: 0 16px;
+        height: $header-content-height;
+        line-height: $header-content-height - 2px;
+        padding-bottom: 2px; // optical alignment correction
+        color: $color-purple;
+        border: 1px solid $color-purple;
+      }
     }
 
     span.tl-lang {
-      display: inline-block;
-      width: 16px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      padding: 8px;
     }
 
     button.mobile-menu-button {
