@@ -17,7 +17,6 @@
 
   @for $i from 1 through 12 {
     .tl-col--#{$i} {
-      flex-grow: 1;
       flex-shrink: 0;
       flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
     }
@@ -26,7 +25,6 @@
   @media screen and (max-width: $breakpoint-xs) {
     @for $i from 1 through 12 {
       .tl-col--xs-#{$i} {
-        flex-grow: 1;
         flex-shrink: 0;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }
@@ -35,7 +33,6 @@
   @media screen and (min-width: $breakpoint-xs) {
     @for $i from 1 through 12 {
       .tl-col--sm-#{$i} {
-        flex-grow: 1;
         flex-shrink: 0;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }
@@ -44,7 +41,6 @@
   @media screen and (min-width: $breakpoint-sm) {
     @for $i from 1 through 12 {
       .tl-col--md-#{$i} {
-        flex-grow: 1;
         flex-shrink: 0;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }
@@ -54,7 +50,6 @@
   @media screen and (min-width: $breakpoint-md) {
     @for $i from 1 through 12 {
       .tl-col--lg-#{$i} {
-        flex-grow: 1;
         flex-shrink: 0;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }
@@ -62,8 +57,7 @@
   }
   @media screen and (min-width: $breakpoint-lg) {
     @for $i from 1 through 12 {
-      .tl-col--xlg-#{$i} {
-        flex-grow: 1;
+      .tl-col--xl-#{$i} {
         flex-shrink: 0;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }

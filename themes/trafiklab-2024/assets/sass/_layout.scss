@@ -143,6 +143,10 @@ div.tl-image {
   }
 }
 
+.tl-image--center {
+  margin: 0 auto;
+}
+
 .page__content div.wide {
   margin-left: calc(-2 / 3 * var(--article-padding-x));
   margin-right: calc(-2 / 3 * var(--article-padding-x));

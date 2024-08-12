@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ $image_class := "page--without-image" }}
+{{ with .Params.image }}
+{{ $image_class = "page--with-image" }}
+<div class="background-image" style="background-image: url('{{ . }}')"></div>
+{{ end }}
+<article class="page {{ $image_class }} container">
+    <div class="page__header">
+        <span class="subtext">{{.Parent.Title }}</span>
+        <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}</h1>
+    </div>
+    <div class="page__toc">
+        {{ partial "toc/mobile-toc.html" .}}
+    </div>
+    <div class="page__content">
+        {{ .Content }}
+    </div>
+
+    <aside class="info-extras">
+        {{ $directory := trim .File.Dir "\\/" }}
+        {{ $headless := .Site.GetPage "/headless" }}
+        {{ $infoBlocks := $headless.Resources.Match (print $directory "/*") }}
+        {{ if $infoBlocks }}
+        {{ $title := (index $infoBlocks 0) }}
+        <h2>{{ $title.Params.Heading }}</h2>
+        <div class="tl-row">
+            {{ range $infoBlocks }}
+            <div class="tl-col--sm-12 tl-col--md-6 tl-col--lg-6 tl-col--xl-4 about-tl__card">
+                {{ if .Params.Image }}
+
+                    <img src="{{ .Params.Image }}" alt="{{ .Title }}">
+
+                {{ end }}
+                <div class="about-tl__card__info">
+                    <h3>{{ .Title }}</h3>
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </aside>
+
+</article>
+
+{{ end }}
+
+{{- define "page-script" -}}
+{{ partial "js/code-blocks.html" .}}
+{{ partial "js/sidebar-toc.html" .}}
+{{- end -}}

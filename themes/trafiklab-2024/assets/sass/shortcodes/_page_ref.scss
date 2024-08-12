@@ -1,6 +1,6 @@
 .tl-page-ref {
   background-color: var(--color-pageref-background);
-  margin: 8px 0;
+
   padding-bottom: 8px;
   display: inline-flex;
   flex-direction: column;
@@ -13,4 +13,10 @@
     padding: 0 8px;
     margin: 0;
   }
+}
+
+.tl-page-ref__wrapper {
+  // By putting the vertical margin on the wrapper row, margins will collapse with neighbouring margins
+  // This is otherwise blocked by the pageref being a flex element
+  margin: 8px 0;
 }

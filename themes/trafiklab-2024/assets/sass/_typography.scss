@@ -186,3 +186,16 @@ h6 {
     }
   }
 }
+
+.tl-caption {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: $color-purple-extra-dark
+}
+
+.tl-image--center .tl-caption {
+  // caption under a centered image should be centered
+  width: 100%;
+  text-align: center;
+}
