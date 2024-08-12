@@ -1,6 +1,8 @@
 $header-padding: 32px;
+$header-padding-sm: 16px;
 $header-content-height: 32px;
 $header-height: 2 * $header-padding + $header-content-height;
+$header-height-sm: 2 * $header-padding-sm + $header-content-height;
 
 header.site-header {
   width: 100%;
@@ -163,7 +165,7 @@ header.site-header {
       padding: 0 16px;
 
       ul {
-        margin: $header-padding/2 0 $header-padding/2;
+        margin: $header-padding-sm 0 $header-padding-sm;
       }
 
     }

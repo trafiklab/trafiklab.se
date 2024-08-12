@@ -233,3 +233,35 @@ div.tl-image {
   }
 }
 
+
+@media screen and (max-width: $breakpoint-sm) {
+  body.with-sidebar main#content {
+    position: relative;
+
+    .content-left-wrapper {
+      display: block;
+      position: absolute;
+      background-color: $color-white;
+      left: -100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      max-width: unset;
+      width: 100vw;
+      height: calc(100vh - #{$header-padding-sm});
+      transition: 1s right ease-in-out;
+      z-index: 100;
+
+
+    }
+
+    .metro-divider-mid {
+      display: none;
+    }
+
+    .left-sidebar--top-space {
+      display: none;
+    }
+  }
+}
+
