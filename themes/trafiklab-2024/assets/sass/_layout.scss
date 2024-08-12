@@ -31,19 +31,11 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: $container-width) {
+@media screen and (max-width: $breakpoint-sm){
   .container {
     // When the container no longer has whitespace on the side through centering, margins need to be added
     width: auto;
     margin: 0 16px;
-  }
-}
-
-@media screen and (max-width: $breakpoint-sm){
-  // The header is not fixed below the small breakpoint.
-  // When the header is no longer fixed, the padding is no longer needed
-  body {
-    padding-top: 0;
   }
 }
 
