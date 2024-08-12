@@ -1,27 +1,26 @@
 article.section {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 32px;
+ padding: 0 96px;
 
-  .section__header, .section__item {
-    position: relative;
-  }
-  
-  .section__item__image {
-    max-height: 560px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 2 * $vertical-spacing-unit;
-  }
+.section__item__image + .section__item__info {
+  position: relative;
+  top: -84px;
 
-  .section__item__info__date{
-    margin-top: 44px;
-    min-width: fit-content; // Fix for chrome, edge
-  }
+  .section__item__info__head {
+    display: inline-block;
+    background-color: $color-white;
+    padding: 0 32px 0 0;
 
-  h2 {
-    width: 100%;
+    h2 {
+      display: block;
+      width: 100%;
+    }
   }
+}
+
+.section__item__image img {
+  max-height: 380px;
+  width: 100%;
+  object-fit: cover;
+}
 
 }
