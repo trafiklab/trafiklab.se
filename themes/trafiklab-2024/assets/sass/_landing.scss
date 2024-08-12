@@ -32,6 +32,7 @@ main.landing {
       flex-grow: 1;
       // Equal padding is needed on every part so the inverted bits can matched without alignment issues
       height: $font-size-hero;
+      line-height: $font-size-hero - 8px; // account for padding
       padding-top: 4px;
       padding-bottom: 4px;
     }
@@ -78,13 +79,16 @@ main.landing {
         transform-origin: bottom left;
         top: -48px;
         left: 36px;
+        z-index: 30;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
       }
 
       .landing-demo-stop {
         position: absolute;
         z-index: 2;
         right: 0;
-        top: -12px;
+        top: -14px;
       }
 
       .landing-demo-stop--double {
@@ -102,15 +106,21 @@ main.landing {
         z-index: 30;
         top: -14px;
         left: 80px;
+        transition: left 5s ease-in-out;
 
+        &.vehicle-position--no-transition {
+          // used when resetting a position using javascript
+          -webkit-transition: none !important;
+          -moz-transition: none !important;
+          -o-transition: none !important;
+          transition: none !important;
+        }
 
         .marker {
           background-color: $color-pink;
           height: 48px;
           width: 48px;
           border-radius: 32px;
-          top: -24px;
-          left: 50px;
 
           &::after {
             display: block;
@@ -134,6 +144,7 @@ main.landing {
           background-color: $color-pink;
           padding: 8px;
           width: fit-content;
+          z-index: 20;
 
           span:first-of-type {
             font-weight: bold;
@@ -145,6 +156,16 @@ main.landing {
           }
         }
 
+        &.vehicle-position--label-right {
+          .marker::after {
+            transform: rotate(-135deg);
+          }
+
+          .label {
+            left: unset;
+            right: 68px;
+          }
+        }
       }
     }
 
