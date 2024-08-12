@@ -39,11 +39,6 @@ body {
   }
 }
 
-body {
-  // Leave room for fixed or absolute positioned header
-  padding-top: $header-height;
-}
-
 @media screen and (max-width: $breakpoint-sm){
   // The header is not fixed below the small breakpoint.
   // When the header is no longer fixed, the padding is no longer needed
