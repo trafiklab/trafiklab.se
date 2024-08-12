@@ -267,7 +267,6 @@ from_stop_id,to_stop_id,transfer_type,min_transfer_time,from_trip_id,to_trip_id
 ```
 
 </div>
-<br>
 
 ## GTFS Extensions
 
@@ -326,9 +325,10 @@ specified, the transfer will only apply to the arriving trip with the given trip
 `to_trip_id` is specified, the transfer will only apply to the departing trip with the given trip id, at the given
 `to_stop_id`.
 
-<br>
 
 ## Realtime GTFS files
+Realtime data refers to elements defined in the [static data](#static-gtfs-files). You therefore need to download both 
+the static dataset and the realtime files if you want to make use of Realtime GTFS.  
 
 {{% info %}} We will only discuss the general working and contents of GTFS Realtime feeds. You can find the
 complete technical specification

@@ -14,7 +14,7 @@ pair of coordinates.
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This
 way you can provide autocomplete and other search functions without internet access. It will make your application more
 responsive and more reliable as you don't have to wait for API responses.
-See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
+See [Combining data and APIs](/docs/using-trafiklab-data/combining-data/) for more information. {{% /info %}}
 
 {{% warning %}} Be aware that the current position of for example a smartphone user is personal data. We do not save
 this data, but it might be stored for a short time in for example log files. You should probably inform your users and

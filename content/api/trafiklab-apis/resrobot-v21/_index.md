@@ -53,4 +53,4 @@ read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a
 million API calls. {{% /warning %}}
 
-{{% page-ref "/api/gtfs-datasets/gtfs-regional/" "/api/gtfs-datasets/gtfs-sverige-2/" %}}
+{{% page-ref "/api/gtfs-datasets/gtfs-regional/" "/api/gtfs-datasets/gtfs-sverige-2" %}}

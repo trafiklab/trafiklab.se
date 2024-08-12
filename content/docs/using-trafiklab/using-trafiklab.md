@@ -47,7 +47,7 @@ After verifying you are ready to create your first project.
 ## Projects
 
 {{% info %}}  You need an account in order to create projects. Haven't created an account
-yet? [Get started here](./_index.md#creating-an-account). {{% /info %}}
+yet? [Get started here](#creating-an-account). {{% /info %}}
 
 ## Creating a project
 
@@ -74,6 +74,8 @@ At the bottom of the page you will see all users connected to the project. A use
 * **Project Owner**: User has same allowance as Read/Write user with added permission to delete a project and handle project members
 
 ## API keys
+In order to access the APIs at Trafiklab you need an API key. If you want to read more about the different APIs and 
+datasets that are provided, check out the [**APIs**](/api/) page.
 
 ### Creating API keys
 
@@ -127,6 +129,8 @@ The following requests will always be denied:
   be [using GTFS and GTFS-RT instead](../../public-transport-data/our-data-and-apis/gtfs/). As a result, you will be
   able to build better analytics, and they will take less time to generate, so this is a win-win.
 * **Stress tests etc** Are not allowed and will never be approved. Ask us if you have special needs for your application.
+
+{{% page-ref page="/api/" %}}
 
 ## Frequently asked questions
 
