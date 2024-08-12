@@ -1,3 +1,4 @@
+
 #swagger-ui {
   .swagger-ui {
 
@@ -28,6 +29,10 @@
     .btn.authorize span {
         line-height: 20px;
       padding: 0 24px 0 16px;
+    }
+
+    code span {
+      color: #fff;
     }
 
     div.info .info__tos, div.info .info__contact, div.info .info__license, div.info .info__extdocs, {
@@ -61,6 +66,10 @@
 
     .parameter__in, .prop-format {
       display: none;
+    }
+
+    td:first-of-type {
+      width: auto; // remove hardcoded width by swaggerui
     }
 
 
