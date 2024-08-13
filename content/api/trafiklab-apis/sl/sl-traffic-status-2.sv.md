@@ -6,7 +6,7 @@ expiryDate: 2024-03-14
 ---
 
 {{% error %}}
-Av tekniska anledningar ersätts detta API med  [SLs Deviations API](deviations.md) och [GTFS Service alerts](../gtfs-regional/realtime.md). API:et kommer sluta
+Av tekniska anledningar ersätts detta API med  [SLs Deviations API](deviations.md) och [GTFS Service alerts](../../gtfs-datasets/gtfs-regional/realtime.md). API:et kommer sluta
 funka i den nära framtiden.
 {{% /error %}}
 

@@ -13,15 +13,15 @@ ResRobot deep links allow you to create links that point directly to specific re
 
 You will get a redirect to the page with results.
 
-### How often is this data updated?
+### Updates
 
 The static data behind the ResRobot web application is updated when changes are made, at most once per day.
 
-### Which operators are covered by this API?
+### Operators covered by this API
 
 All operators which operate in Sweden are covered by the ResRobot web application.
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
 users to update their implementations. Examples of breaking changes are the changes to existing fields or query

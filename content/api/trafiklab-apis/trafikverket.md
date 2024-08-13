@@ -14,11 +14,11 @@ aliases:
 ---
 
 
-### What is Trafikverkets open API?
+## What is Trafikverkets open API?
 
 Trafikverkets open API is an API to fetch information regarding road and rail traffic.
 
-### How do I use Trafikverkets open API?
+## How do I use Trafikverkets open API?
 
 A valid API key is required. This key can be obtained from the [Trafiklab developer portal](https://developer.trafiklab.se).
 

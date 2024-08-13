@@ -11,7 +11,7 @@ dynamiska data för att omvandla traditionella tryckta linjekartor till realtids
 
 Veridict är ett svenskt teknikbolag verksamt inom Intelligenta transportsystem (ITS). Företaget utvecklar produkter för transport- och trafiksektorn med fokus
 på persontransportrelaterad ITS och geografiska informationssystem (GIS). Hos Veridict har man använt data från Trafiklab sedan 2015 och man hämtar i första
-hand [realtidsdata (GTFS-RT)](/api/trafiklab-apis/gtfs-regional/).
+hand [realtidsdata (GTFS-RT)](/api/gtfs-datasets/gtfs-regional/).
 
 #### Historik kring linjekartor
 
