@@ -129,7 +129,7 @@ nav.tl-side-navigation {
 .metro-divider-top {
   // Top has absolute positioning to fit over header etc
   position: absolute;
-  z-index: 100;
+  z-index: 200;
   height: $header-height;
   width: 56px;
   top: -$header-height;

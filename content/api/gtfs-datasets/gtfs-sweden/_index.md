@@ -33,7 +33,7 @@ added, or changed. When breaking changes are made, you will get three months or 
 ## Static data
 The static GTFS Sweden 3 dataset contains files describing all planned public transport data. It can be combined
 with optional realtime data available in the GTFS Sweden Realtime data API.
-The data in this dataset is updated on a daily basis, typically between 10:00 and 13:00.
+The data in this dataset is updated on a daily basis, typically between 05:00 and 06:00.
 
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.

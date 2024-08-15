@@ -51,10 +51,28 @@ main.landing {
   .landing-demo {
     position: relative;
     padding-top: 256px;
-    padding-bottom: 32px;
+    padding-bottom: 268px;
+    margin-bottom: -256px;
+    overflow: hidden;
 
     .landing-demo-middle {
       position: relative;
+      z-index: 1; // Common stacking index root for marker, stops, and metro lines
+
+      .landing-demo-stop {
+        position: absolute;
+        right: 0;
+        top: -14px;
+        z-index: 30;
+        transition: left 1s ease-in-out;
+        transform: translate3d(0,0,0); // cause firefox to prepare for this element moving
+      }
+
+      .landing-demo-stop:first-of-type {
+        position: absolute;
+        left: 0;
+        right: unset;
+      }
 
       .landing-demo-stop .marker {
         width: 48px;
@@ -62,10 +80,11 @@ main.landing {
         background-color: #fff;
         border: 12px solid $color-black;
         border-radius: 24px;
+        transition: height 0.5s ease-in-out;
       }
 
       .landing-demo-stop--double .marker {
-        height: 108px;
+        height: 88px;
       }
 
       .landing-demo-stop__station-name {
@@ -81,47 +100,29 @@ main.landing {
         top: -48px;
         left: 36px;
         z-index: 30;
-        opacity: 1;
-        transition: opacity 1s ease-in-out;
         background-color: $color-white;
       }
 
-      .landing-demo-stop {
-        position: absolute;
-        z-index: 2;
-        right: 0;
-        top: -14px;
-      }
-
-      .landing-demo-stop--double {
-        top: -24px;
-      }
-
-      .landing-demo-stop:first-of-type {
-        position: absolute;
-        left: 0;
-        right: unset;
+      .no-transition, .no-transition * {
+        // used when resetting a position or station names using javascript
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
       }
 
       .vehicle-position {
         position: absolute;
         z-index: 30;
-        top: -14px;
+        top: -12px;
         left: 80px;
         transition: left 5s ease-in-out;
-
-        &.vehicle-position--no-transition {
-          // used when resetting a position using javascript
-          -webkit-transition: none !important;
-          -moz-transition: none !important;
-          -o-transition: none !important;
-          transition: none !important;
-        }
+        transform: translate3d(0,0,0); // cause firefox to prepare for this element moving
 
         .marker {
           background-color: $color-pink;
-          height: 48px;
-          width: 48px;
+          height: 44px;
+          width: 44px;
           border-radius: 32px;
 
           &::after {
@@ -134,7 +135,7 @@ main.landing {
             background-color: $color-pink;
             position: relative;
             left: 24px;
-            bottom: -24px;
+            bottom: -22px;
           }
         }
 
@@ -180,6 +181,7 @@ main.landing {
 
     .landing-demo-middle .metro-lines {
       position: absolute;
+      z-index: 0;
       left: 0;
       right: 0;
       top: 0;
@@ -335,6 +337,7 @@ main.landing {
 
     .landing-partners__bottom-row .landing-partners__item {
       transform-origin: top right;
+
       .landing-partners__item__stop {
         margin-left: 54px;
       }

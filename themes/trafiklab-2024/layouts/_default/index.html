@@ -43,20 +43,20 @@
 
     {{ if or .Params.news_count_max .Params.cases_count_max }}
     <section class="page">
-            {{ partial "home/news-cases.html" (dict
-            "context" .
-            "max_news" .Params.news_count_max
-            "max_cases" .Params.cases_count_max
-            "max_combined" .Params.combined_news_case_count_max
-            )
-            }}
+        {{ partial "home/news-cases.html" (dict
+        "context" .
+        "max_news" .Params.news_count_max
+        "max_cases" .Params.cases_count_max
+        "max_combined" .Params.combined_news_case_count_max
+        )
+        }}
     </section>
     {{end}}
 
     <section>
-            {{ if .Params.Mc }}
-            {{ partial "home/newsletter-signup.html" .}}
-            {{ end }}
+        {{ if .Params.Mc }}
+        {{ partial "home/newsletter-signup.html" .}}
+        {{ end }}
 
         {{ partial "home/partner-list.html" .}}
     </section>
@@ -67,13 +67,16 @@
 
 {{- define "page-script" -}}
 <script type="text/javascript">
-  let isFirstDisplay = true;
   let lastOffset = 1000;
   let active_operator = undefined;
   let active_operator_name = undefined;
   let active_trip_id = undefined;
   let active_destination_id = undefined;
   let update_handle = undefined;
+  let width = 820; // will be overwritten when the right marker position is determined by the right name length
+
+  let containerWidth = $("#landingContainer").width();
+
   let transportModes = {
     100: "Train",
     401: "Metro",
@@ -90,12 +93,50 @@
     'skane': 'Skånetrafiken'
   };
 
+  function disableAnimations() {
+    $("#landingVehicleMarker").addClass("no-transition");
+    $(".landing-demo-stop").addClass("no-transition");
+  }
+
+  function enableAnimations() {
+    $("#landingVehicleMarker").removeClass("no-transition");
+    $(".landing-demo-stop").removeClass("no-transition");
+  }
+
+  function animateSegmentChange(json) {
+    let bodyWidth = $("body").width();
+    setMarkerOffset(bodyWidth) // move completely right, animated
+    setOriginStopOffset(-(bodyWidth - containerWidth / 2)) // move stops completely left, animated
+    setDestinationStopOffset(-(bodyWidth - containerWidth / 2)) // move stops completely left, animated
+
+    clearInterval(update_handle); // disable updates while animating change
+
+    setTimeout(() => disableAnimations(), 1000)
+    setTimeout(function () {
+      setOriginStopOffset(bodyWidth)
+      setDestinationStopOffset(bodyWidth)
+      let landingFromStopName = $("#landingFromStopName");
+      let landingToStopName = $("#landingToStopName");
+      landingFromStopName.text(json[active_trip_id].from.name)
+      landingToStopName.text(json[active_trip_id].to.name)
+    }, 1050);
+    setTimeout(() => enableAnimations(), 2100)
+    // Time for animations to enable again
+    setTimeout(function () {
+      setOriginStopOffset(0)
+      width = containerWidth - ($("#landingToStopName").width() / 1.41) - 38
+      setDestinationStopOffset(width);
+      update() // update positions again
+      update_handle = setInterval(update, 3000)
+    }, 2200);
+  }
+
   function update() {
     fetch("https://staging.developer.trafiklab.se/api/trafiklab-se/realtime-samples/" + active_operator).then(
       data => data.json().then(json => {
           if (active_trip_id === undefined) {
             const trip_ids = Object.keys(json);
-            while (active_trip_id == undefined || json[active_trip_id].from.name.length > 18 || json[active_trip_id].to.name.length > 18) {
+            while (active_trip_id === undefined || json[active_trip_id].from.name.length > 18 || json[active_trip_id].to.name.length > 18) {
               active_trip_id = trip_ids[Math.floor(Math.random() * trip_ids.length)]
             }
           }
@@ -111,25 +152,8 @@
           // put the marker left without going backwards
           if (json[active_trip_id].to.id !== active_destination_id) {
             console.log("Trip " + active_trip_id + " moved on to the next segment")
-            setMarkerOffset(10000) // move completely right, animated
-
-            if (isFirstDisplay) {
-              setMarkerOffset(0) // don't come flying in from the side on page load
-              isFirstDisplay = false;
-            } else {
-              setMarkerOffset(-2000)
-            }
-            let landingFromStopName = $("#landingFromStopName");
-            let landingToStopName = $("#landingToStopName");
-            // change the stop while fading
-            landingFromStopName.css('opacity', 0)
-            landingToStopName.css('opacity', 0)
-            landingFromStopName.text(json[active_trip_id].from.name)
-            landingToStopName.text(json[active_trip_id].to.name)
-            landingFromStopName.css('opacity', 1)
-            landingToStopName.css('opacity', 1)
-
-            active_destination_id = json[active_trip_id].to.id;
+            active_destination_id = json[active_trip_id].to.id; // update field to prevent future update calls from going in here again
+            animateSegmentChange(json);
           }
 
           let transportMode = transportModes[json[active_trip_id].trip.vehicleType].toLowerCase();
@@ -145,11 +169,11 @@
           }
 
           let speed = Math.floor(json[active_trip_id].vehicle.speed * 3.6);
-          $("#landingVehicleLabelSecondRow").text(timeStr + (speed ? ", " + speed + " km/h" : ""))
+          let hasVehicleCoordinates = json[active_trip_id].vehicle.lat !== undefined;
+          $("#landingVehicleLabelSecondRow").text(timeStr + (hasVehicleCoordinates ? ", " + speed + " km/h" : ""))
 
-          let containerWidth = $("#landingContainer").width();
-          let offset = ((Date.now() / 1000) - json[active_trip_id].from.time) / (json[active_trip_id].to.time - json[active_trip_id].from.time) * containerWidth;
-          if (json[active_trip_id].vehicle.lat) {
+          let offset = ((Date.now() / 1000) - json[active_trip_id].from.time) / (json[active_trip_id].to.time - json[active_trip_id].from.time) * width;
+          if (hasVehicleCoordinates) {
             let x1 = json[active_trip_id].from.lon;
             let x2 = json[active_trip_id].to.lon;
             let y1 = json[active_trip_id].from.lat;
@@ -158,10 +182,8 @@
             let y = json[active_trip_id].vehicle.lat
             let distFromStart = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1))
             let distFromEnd = Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2))
-            offset = containerWidth * (distFromStart / (distFromStart + distFromEnd))
+            offset = width * (distFromStart / (distFromStart + distFromEnd))
           }
-
-          offset = Math.min(offset, containerWidth - 48);
 
           setMarkerOffset(offset);
 
@@ -175,6 +197,14 @@
         }
       )
     );
+  }
+
+  function setOriginStopOffset(offset) {
+    $(".landing-demo-stop:first").css("left", offset);
+  }
+
+  function setDestinationStopOffset(offset) {
+    $(".landing-demo-stop:last").css("left", offset);
   }
 
   function setMarkerOffset(offset) {
@@ -200,8 +230,7 @@
     active_operator_name = landing_operators[active_operator];
 
     update();
-
-    update_handle = setInterval(update, 5000); // update every 5 seconds
+    update_handle = setInterval(update, 3000); // update every 3 seconds
   }
 
   init();
