@@ -1,3 +1,5 @@
+$landing-stop-change-animation-time: 1s;
+
 main.landing {
 
   font-size: $font-size-larger;
@@ -64,8 +66,8 @@ main.landing {
         right: 0;
         top: -14px;
         z-index: 30;
-        transition: left 1s ease-in-out;
-        transform: translate3d(0,0,0); // cause firefox to prepare for this element moving
+        opacity: 1;
+        transition: transform $landing-stop-change-animation-time ease-in-out, opacity $landing-stop-change-animation-time easy-in-out;
       }
 
       .landing-demo-stop:first-of-type {
@@ -115,9 +117,13 @@ main.landing {
         position: absolute;
         z-index: 30;
         top: -12px;
-        left: 80px;
-        transition: left 5s ease-in-out;
-        transform: translate3d(0,0,0); // cause firefox to prepare for this element moving
+        left: 0;
+        transform: translateX(80px); // initial offset before javaascript sets a position
+        transition: transform 3s ease-in-out;
+
+        &.vehicle-position--transition-fast{
+          transition: transform $landing-stop-change-animation-time ease-in-out; // same transition speed as stations being swapped
+        }
 
         .marker {
           background-color: $color-pink;
@@ -148,6 +154,7 @@ main.landing {
           padding: 8px;
           width: fit-content;
           z-index: 20;
+          transition: opacity $landing-stop-change-animation-time ease-in-out;
 
           span:first-of-type {
             font-weight: bold;

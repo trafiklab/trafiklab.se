@@ -73,9 +73,11 @@
   let active_trip_id = undefined;
   let active_destination_id = undefined;
   let update_handle = undefined;
-  let width = 820; // will be overwritten when the right marker position is determined by the right name length
-
-  let containerWidth = $("#landingContainer").width();
+  let destinationMarkerWidthOffset = 44; // ofset for the destination marker, to ensure the position dot won't move past
+  let destinationNameWidthOffset = 0; //offset of the destination marker to the right to fit name inside container
+  const containerWidth = $("#landingContainer").width();
+  const landingVehicleMarker = $("#landingVehicleMarker");
+  const changeAnimationDurationMs = 1000; // animation duration when switching stops, 2 animations are used so twice this time for a complete stop change
 
   let transportModes = {
     100: "Train",
@@ -103,32 +105,51 @@
     $(".landing-demo-stop").removeClass("no-transition");
   }
 
+  const updateIntervalMs = 3000;
+
   function animateSegmentChange(json) {
     let bodyWidth = $("body").width();
-    setMarkerOffset(bodyWidth) // move completely right, animated
-    setOriginStopOffset(-(bodyWidth - containerWidth / 2)) // move stops completely left, animated
-    setDestinationStopOffset(-(bodyWidth - containerWidth / 2)) // move stops completely left, animated
+    let sideWidth = (bodyWidth - containerWidth) / 2;
+    //  Keep container width on offset to ensure equal distance during fly-in and fly-out. 300px to ensure text is off-screen
+    let flyoutOffset = sideWidth + containerWidth + 300;
+    landingVehicleMarker.addClass("vehicle-position--transition-fast"); // move dot at same speed as stations
+    setMarkerOffset(flyoutOffset) // move completely right, animated
+    setOriginStopOffset(-flyoutOffset, 0) // move stops completely left, animated.
+    setDestinationStopOffset(-flyoutOffset, 0) // move stops completely left, animated
 
     clearInterval(update_handle); // disable updates while animating change
 
-    setTimeout(() => disableAnimations(), 1000)
+    // Switch to changes without animations
+    setTimeout(() => disableAnimations(), changeAnimationDurationMs)
+
+    // not animated
     setTimeout(function () {
+      setMarkerOffset(-(sideWidth + 400)) // move completely left and ensure label is no longer visible, to fly in from left afterwards
       setOriginStopOffset(bodyWidth)
       setDestinationStopOffset(bodyWidth)
       let landingFromStopName = $("#landingFromStopName");
       let landingToStopName = $("#landingToStopName");
       landingFromStopName.text(json[active_trip_id].from.name)
       landingToStopName.text(json[active_trip_id].to.name)
-    }, 1050);
-    setTimeout(() => enableAnimations(), 2100)
-    // Time for animations to enable again
+    }, changeAnimationDurationMs + 50);
+
+    // Back to normal move
+    setTimeout(() => {
+      landingVehicleMarker.removeClass("vehicle-position--transition-fast"); // move dot at same speed as stations
+      enableAnimations()
+    }, changeAnimationDurationMs + 100
+    )
+
+    // After enabling animations again, move in the stops and new position
     setTimeout(function () {
-      setOriginStopOffset(0)
-      width = containerWidth - ($("#landingToStopName").width() / 1.41) - 38
-      setDestinationStopOffset(width);
+      setOriginStopOffset(0, 1)
+      // move destination so the name fits in the container
+      destinationNameWidthOffset = $("#landingToStopName").width() / 1.41 - 10;
+      setDestinationStopOffset(-destinationNameWidthOffset, 1);
+
       update() // update positions again
-      update_handle = setInterval(update, 3000)
-    }, 2200);
+      update_handle = setInterval(update, updateIntervalMs)
+    }, changeAnimationDurationMs + 150);
   }
 
   function update() {
@@ -136,13 +157,13 @@
       data => data.json().then(json => {
           if (active_trip_id === undefined) {
             const trip_ids = Object.keys(json);
-            while (active_trip_id === undefined || json[active_trip_id].from.name.length > 18 || json[active_trip_id].to.name.length > 18) {
+            while (active_trip_id === undefined || json[active_trip_id].from.name.length > 16 || json[active_trip_id].to.name.length > 16) {
               active_trip_id = trip_ids[Math.floor(Math.random() * trip_ids.length)]
             }
           }
 
           // Even if the trip id didnt change, the segment may have changed to one with long station names
-          if (!json[active_trip_id] || json[active_trip_id].from.name.length > 18 || json[active_trip_id].to.name.length > 18) {
+          if (!json[active_trip_id] || json[active_trip_id].to.name.length > 16) {
             console.log("Picking new trip for display, " + active_trip_id + " no longer active")
             init();
             return
@@ -154,6 +175,7 @@
             console.log("Trip " + active_trip_id + " moved on to the next segment")
             active_destination_id = json[active_trip_id].to.id; // update field to prevent future update calls from going in here again
             animateSegmentChange(json);
+            return
           }
 
           let transportMode = transportModes[json[active_trip_id].trip.vehicleType].toLowerCase();
@@ -172,7 +194,8 @@
           let hasVehicleCoordinates = json[active_trip_id].vehicle.lat !== undefined;
           $("#landingVehicleLabelSecondRow").text(timeStr + (hasVehicleCoordinates ? ", " + speed + " km/h" : ""))
 
-          let offset = ((Date.now() / 1000) - json[active_trip_id].from.time) / (json[active_trip_id].to.time - json[active_trip_id].from.time) * width;
+        let offsetRange = containerWidth - destinationMarkerWidthOffset - destinationNameWidthOffset;
+        let offset = ((Date.now() / 1000) - json[active_trip_id].from.time) / (json[active_trip_id].to.time - json[active_trip_id].from.time) * offsetRange;
           if (hasVehicleCoordinates) {
             let x1 = json[active_trip_id].from.lon;
             let x2 = json[active_trip_id].to.lon;
@@ -182,15 +205,17 @@
             let y = json[active_trip_id].vehicle.lat
             let distFromStart = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1))
             let distFromEnd = Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2))
-            offset = width * (distFromStart / (distFromStart + distFromEnd))
+            offset = offsetRange * (distFromStart / (distFromStart + distFromEnd))
           }
 
-          setMarkerOffset(offset);
+          if (offset > lastOffset){
+            setMarkerOffset(offset);
+          }
 
-          if (offset > containerWidth / 2) {
-            $("#landingVehicleMarker").addClass("vehicle-position--label-right");
+          if (offset > (containerWidth - destinationMarkerWidthOffset - destinationNameWidthOffset) / 2) {
+            landingVehicleMarker.addClass("vehicle-position--label-right");
           } else {
-            $("#landingVehicleMarker").removeClass("vehicle-position--label-right");
+            landingVehicleMarker.removeClass("vehicle-position--label-right");
           }
           console.log("Offset " + offset)
           return json;
@@ -199,24 +224,16 @@
     );
   }
 
-  function setOriginStopOffset(offset) {
-    $(".landing-demo-stop:first").css("left", offset);
+  function setOriginStopOffset(offset, opacity) {
+    $(".landing-demo-stop:first").css({"transform": "translateX(" + offset + "px)", "opacity": opacity});
   }
 
-  function setDestinationStopOffset(offset) {
-    $(".landing-demo-stop:last").css("left", offset);
+  function setDestinationStopOffset(offset, opacity) {
+    $(".landing-demo-stop:last").css({"transform": "translateX(" + offset + "px)", "opacity": opacity});
   }
 
   function setMarkerOffset(offset) {
-    let marker = $("#landingVehicleMarker");
-    if (offset < lastOffset) {
-      marker.addClass("vehicle-position--no-transition");
-    }
-    marker.css("left", offset)
-    if (offset < lastOffset) {
-      marker[0].offsetHeight; // force reflow, applying the style change, before enabling transitions again
-      marker.removeClass("vehicle-position--no-transition");
-    }
+    landingVehicleMarker.css("transform", "translateX(" + offset + "px)");
     lastOffset = offset
   }
 
@@ -230,7 +247,7 @@
     active_operator_name = landing_operators[active_operator];
 
     update();
-    update_handle = setInterval(update, 3000); // update every 3 seconds
+    update_handle = setInterval(update, updateIntervalMs); // update every 3 seconds
   }
 
   init();
