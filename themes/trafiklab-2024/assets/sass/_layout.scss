@@ -4,7 +4,8 @@ $container-width: 860px;
 
 $left-sidebar-width: 320px;
 $right-sidebar-width: $left-sidebar-width;
-$sidebar-container-gap: 40px;
+$sidebar-container-gap: 64px;
+$sidebar-image-gap: 32px;
 
 $article-image-height: 380px;
 $article-image-height-no-sidebar: 480px;
@@ -20,9 +21,11 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  min-width: fit-content;
 
   main#content {
     flex-grow: 1;
+    min-width: fit-content;
   }
 }
 
@@ -65,10 +68,10 @@ body.with-sidebar, body:not(.type-home).without-sidebar {
     background-color: $color-pink-hint-whitened; // Fallback color to see the image region if the image fails to load
     position: absolute;
     z-index: -1;
-    left: - $sidebar-container-gap;
+    left: - ($sidebar-container-gap - $sidebar-image-gap);
 
     height: $article-image-height;
-    width: $container-width + $sidebar-container-gap + $right-sidebar-width;
+    width: $container-width + ($sidebar-container-gap - $sidebar-image-gap) + $right-sidebar-width;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

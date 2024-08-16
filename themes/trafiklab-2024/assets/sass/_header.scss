@@ -11,8 +11,19 @@ header.site-header {
   z-index: 200;
   background-color: white;
 
-  img.brand {
+  li.brand {
+    width: 80px;
+    background-color: #000;
     height: $header-content-height;
+
+    a {
+      padding: 4px;
+    }
+  }
+
+  img.brand {
+    max-height: $header-content-height;
+    max-width: 72px;
     background-color: #000;
   }
 

@@ -1,9 +1,11 @@
 nav.tl-side-navigation {
 
-  max-height: calc(100vh - #{$header-height});
+  max-height: calc(100vh - #{2 * $header-height});
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: $color-purple $color-purple-hint;
+  scrollbar-color: $color-purple-muted $color-purple-hint;
+  scrollbar-gutter: stable;
+  margin-bottom: $header-height;
 
   ul {
     // No list styles, no default margins or paddings
@@ -15,7 +17,12 @@ nav.tl-side-navigation {
   ul.tl-side-navigation--root {
     // Margin for the complete sidebar
     // The margin at the parent nav element is needed for the page layout, this margin is for the sidebar layout
-    margin: 0 32px 0 16px;
+    margin: 0 16px 0 16px;
+  }
+
+  a.tl-side-navigation__click-target {
+    padding: 4px 16px;
+    display: block;
   }
 
   ul.tl-side-navigation--root, li.tl-side-navigation__item--level-0 {
@@ -37,11 +44,6 @@ nav.tl-side-navigation {
   ul.tl-side-navigation__fixed-list--level-1 {
     // matching padding with the li items ensures consistent padding between items and at the top/bottom of the list
     padding: 4px 0 0;
-  }
-
-  .tl-side-navigation__item a {
-    padding: 4px 0;
-    display: block;
   }
 
   li.tl-side-navigation__item--active {
@@ -107,6 +109,10 @@ nav.tl-side-navigation {
     margin-top: -9px;
   }
 
+  .tl-side-navigation__fixed-list--level-1 a:not(.dropdown) {
+    padding-left: 16px + 24px;
+  }
+
 
   li.tl-side-navigation__item--open-list {
     > a.dropdown::before {
@@ -124,31 +130,4 @@ nav.tl-side-navigation {
     color: var(--color-sidebar-active) !important;
     font-weight: bold;
   }
-}
-
-.metro-divider-top {
-  // Top has absolute positioning to fit over header etc
-  position: absolute;
-  z-index: 200;
-  height: $header-height;
-  width: 56px;
-  top: -$header-height;
-  right: 26px;
-  background-image: url("data:image/svg+xml,%3Csvg width='49' height='313' viewBox='0 0 49 313' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33 289L33 0' stroke='%23F4BFFF' stroke-width='8'/%3E%3Cpath d='M17.0085 289L17.0195 0.0249023' stroke='%23FFF199' stroke-width='8'/%3E%3Crect x='3.97157' y='292' width='42' height='18' rx='9' fill='%23FCFCFC' stroke='%231E1E1E' stroke-width='6'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.metro-divider-mid {
-  background-image: url("data:image/svg+xml,%3Csvg width='25' height='677' viewBox='0 0 25 677' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 677L21 0' stroke='%23F4BFFF' stroke-width='8'/%3E%3Cpath d='M4.97443 677L5 0' stroke='%23FFF199' stroke-width='8'/%3E%3C/svg%3E%0A");
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  bottom: 0;
-  background-repeat: repeat-y;
-  background-position: right;
-  margin-top: 0;
-  height: 100%;
-  width: 40px;
-  right: 40px;
 }
