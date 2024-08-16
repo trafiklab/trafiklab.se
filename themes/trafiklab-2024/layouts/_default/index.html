@@ -19,8 +19,8 @@
                 <div class="vehicle-position" id="landingVehicleMarker">
                     <div class="marker"></div>
                     <div class="label">
-                        <span id="landingVehicleLabelFirstRow">Metro 14, on time</span>
-                        <span id="landingVehicleLabelSecondRow">Last position update: 2 seconds ago</span>
+                        <span id="landingVehicleLabelFirstRow">Realtime data</span>
+                        <span id="landingVehicleLabelSecondRow">Check out our GTFS-RT feeds</span>
                     </div>
                 </div>
             </div>
@@ -31,12 +31,11 @@
         <div class="container page__first__bottom">
             <div class="page__first__content">{{ .Content}}</div>
             <div class="tl-row tl-row--large-gap">
-                <div class="btn btn--large btn--primary tl-col--6 tl-col--xs-12">
-                    Getting Started
-                </div>
-                <div class="btn btn--large btn--primary tl-col--6 tl-col--xs-12">
-                    API Overview
-                </div>
+                {{ range .Params.links }}
+                <a class="btn btn--large btn--primary tl-col--6 tl-col--xs-12" href="{{ .link }}">
+                    {{ .text }}
+                </a>
+                {{ end }}
             </div>
         </div>
     </section>
