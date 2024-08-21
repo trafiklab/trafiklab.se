@@ -5,18 +5,14 @@ header.site-header {
   background-color: white;
 
   li.brand {
-    width: 80px;
+    margin-right: 16px;
     background-color: #000;
     height: $header-content-height;
-
-    a {
-      padding: 4px;
-    }
+    overflow-y: hidden;
   }
 
   img.brand {
-    max-height: $header-content-height;
-    max-width: 72px;
+    width: 96px;
     background-color: #000;
   }
 
