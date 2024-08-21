@@ -6,7 +6,9 @@ layout: "single"
 url: "/typography"
 ---
 
-# Headings
+## Headings
+
+A first title. Note that H1 is only ever used for the page title.
 
 # The quick brown fox jumps over the lazy dog
 
@@ -32,8 +34,9 @@ This is a paragraph under heading five. In this paragraph, the quick brown fox j
 
 This is a paragraph under heading six. In this paragraph, the quick brown fox jumps over the lazy dog.
 
+## Text
 
-# Paragraphs
+### Paragraphs
 
 Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id
 dolore laborum. Do laboris laboris minim incididunt qui consectetur exercitation adipisicing dolore et magna consequat
@@ -50,19 +53,19 @@ anim et deserunt deserunt Lorem laborum quis. Enim aute anim labore proident lab
 labore nulla velit officia ullamco Lorem Lorem id do. Dolore ullamco ipsum magna dolor pariatur voluptate ipsum id
 occaecat ipsum. Dolore tempor quis duis commodo quis quis enim.
 
-# Blockquotes
+### Blockquotes
 
 This is a quote:
 
 > Ipsum et cupidatat mollit exercitation enim duis sunt irure aliqua reprehenderit mollit. Pariatur Lorem pariatur laboris do culpa do elit irure. Eiusmod amet nulla voluptate velit culpa et aliqua ad reprehenderit sit ut.
 
-# Emphasis
+### Emphasis
 
 Text can be **bold**, in _italics_, or you can use ~~strikethrough~~.
 
-# Lists
+## Lists
 
-## Ordered List
+### Ordered List
 
 1. One
 2. Two
@@ -72,7 +75,7 @@ Text can be **bold**, in _italics_, or you can use ~~strikethrough~~.
     - Three C
 4. Four
 
-## Unordered List
+### Unordered List
 
 - Train
 - Bus
@@ -106,14 +109,14 @@ Some text before a table
 
 Some text after a table
 
-# Code
+## Code
 
-## Inline code
+### Inline code
 
 We can show  `code in text` using single backticks. You can even show HTML tags `<strong>in culpa qui officia</strong>`
 this way.
 
-## Highlighted
+### Highlighted
 
 It is possible to show a code snippet with syntax highlighting
 
@@ -137,7 +140,7 @@ func main() {
 
 Some text after the code so you can see the margins.
 
-## Tabs
+### Tabs
 
 {{% tabs %}} {{% tab "Json" %}}
 
@@ -735,7 +738,7 @@ Some text after the code so you can see the margins.
 
 {{% /tab %}} {{% /tabs %}}
 
-# Inline elements
+## Inline elements
 
 Images can be included in pages.
 
@@ -745,7 +748,7 @@ The previous image was super wide, the following image isn't as wide.
 
 ![Not so big](http://placekitten.com/480/400)
 
-# Info boxes
+## Info boxes
 
 {{% info %}} This is information{{% /info %}} {{% info %}}
 **Information**
@@ -753,3 +756,116 @@ The previous image was super wide, the following image isn't as wide.
 By using bold text and a paragraph, a caption can be added. {{% /info %}} {{% note %}} This is a note {{% /note %}} {{%
 success %}} This is a success {{% /success %}} {{% warning %}} This is a warning {{% /warning %}} {{% error %}} This is
 an error {{% /error %}}
+
+{{% page-ref page="/api/_index.md" %}}
+
+{{% inverted %}}
+## Invert everything
+
+### Paragraphs
+
+Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id
+dolore laborum. Do laboris laboris minim incididunt qui consectetur exercitation adipisicing dolore et magna consequat
+magna anim sunt. Officia fugiat Lorem sunt pariatur incididunt Lorem reprehenderit proident irure. Dolore ipsum aliqua
+mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse. Voluptate anim ex dolore
+deserunt ea ex eiusmod irure. Occaecat excepteur aliqua exercitation aliquip dolor esse eu eu.
+
+Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna
+id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum
+quis ex.
+
+Officia irure in non voluptate adipisicing sit amet tempor duis dolore deserunt enim ut. Reprehenderit incididunt in ad
+anim et deserunt deserunt Lorem laborum quis. Enim aute anim labore proident laboris voluptate elit excepteur in. Ex
+labore nulla velit officia ullamco Lorem Lorem id do. Dolore ullamco ipsum magna dolor pariatur voluptate ipsum id
+occaecat ipsum. Dolore tempor quis duis commodo quis quis enim.
+
+### Blockquotes
+
+This is a quote:
+
+> Ipsum et cupidatat mollit exercitation enim duis sunt irure aliqua reprehenderit mollit. Pariatur Lorem pariatur laboris do culpa do elit irure. Eiusmod amet nulla voluptate velit culpa et aliqua ad reprehenderit sit ut.
+
+### Emphasis
+
+Text can be **bold**, in _italics_, or you can use ~~strikethrough~~.
+
+## Lists
+
+### Ordered List
+
+1. One
+2. Two
+3. Three
+    - Three A
+    - Three B
+    - Three C
+4. Four
+
+### Unordered List
+
+- Train
+- Bus
+    - Red bus
+    - Blue bus
+- Boat
+- A train is a form of rail transport consisting of a series of connected vehicles that generally run along a railroad (
+  or railway) track to transport passengers or cargo (also known as "freight" or "goods"). The word train comes from the
+  Old French trahiner, derived from the Latin trahere meaning 'to pull, to draw'
+
+### Horizontal rule
+
+A horizontal rule is shown between this paragraph and the next one.
+
+***
+
+
+A horizontal rule is shown between the previous paragraph and this one.
+
+## Table
+
+Some text before a table
+
+| Table Heading 1 | Table Heading 2 | Center align    | Right align     | Table Heading 5 |
+| :-------------- | :-------------- | :-------------: | --------------: | :-------------- |
+| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
+| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
+| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
+| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
+| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
+
+Some text after a table
+
+## Code
+
+### Inline code
+
+We can show  `code in text` using single backticks. You can even show HTML tags `<strong>in culpa qui officia</strong>`
+this way.
+
+### Highlighted
+
+It is possible to show a code snippet with syntax highlighting
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+}
+
+func main() {
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":8080", nil)
+}
+```
+
+Some text after the code so you can see the margins.
+
+{{% page-ref page="/api/_index.md" %}}
+
+{{% /inverted %}}

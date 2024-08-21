@@ -30,11 +30,20 @@ p {
 blockquote {
   color: var(--color-text-accent);
   padding: 24px;
-  border-left: 2px var(--color-muted-accent);
+  margin-left: 0;
+  border-left: 2px solid var(--color-muted-accent);
+
+  span, p {
+    color: var(--color-text-accent);
+  }
 }
 
 blockquote, p, ul, ol {
   margin-bottom: $next-element-spacing;
+}
+
+hr {
+  color: var(--color-text);
 }
 
 code, pre {
@@ -86,6 +95,7 @@ span.subtext {
 
 h2, .tl-h2 {
   @include text-h2;
+  color: var(--color-h2-foreground);
 
   &:nth-of-type(odd) {
     --color-h2-accent: #{$color-yellow};
@@ -140,6 +150,7 @@ h6 {
   color: var(--color-button-foreground);
 
   &::after {
+    stroke: var(--color-button-foreground);
     content: url("data:image/svg+xml,%3Csvg width='12' height='17' viewBox='0 0 12 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.92898 1.42893L9.00005 8.5L1.92898 15.5711' stroke='%23232323' stroke-width='3'/%3E%3C/svg%3E%0A");
     vertical-align: center;
     position: absolute;
@@ -149,6 +160,8 @@ h6 {
   }
 
   &.btn--text{
+    color: var(--color-button-text-foreground);
+    stroke: var(--color-button-text-foreground);
     background-color: unset;
   }
 
