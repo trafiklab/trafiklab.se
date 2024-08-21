@@ -1,4 +1,5 @@
 .inverted {
+  margin: 16px 0;
   padding: 16px;
   background-color: var(--color-background);
 
@@ -6,9 +7,9 @@
   --color-text: #{$color-white};
 
   /* Accents, links and quotes */
-  --color-text-accent: #{$color-purple-hint};
+  --color-text-accent: #{$color-pink};
   --color-muted-accent: #{$color-purple-hint};
-  --color-text-accent-background: #{$color-pink-hint};
+  --color-text-accent-background: #{$color-purple-dark};
   --color-text-selection: #{$color-purple-muted};
   --color-code-inline-background: #{$color-purple-muted};
 

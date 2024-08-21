@@ -44,7 +44,7 @@ magna anim sunt. Officia fugiat Lorem sunt pariatur incididunt Lorem reprehender
 mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse. Voluptate anim ex dolore
 deserunt ea ex eiusmod irure. Occaecat excepteur aliqua exercitation aliquip dolor esse eu eu.
 
-Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna
+[Text can contain links like this one.](#) Enim aliquip magna
 id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum
 quis ex.
 
@@ -757,7 +757,9 @@ By using bold text and a paragraph, a caption can be added. {{% /info %}} {{% no
 success %}} This is a success {{% /success %}} {{% warning %}} This is a warning {{% /warning %}} {{% error %}} This is
 an error {{% /error %}}
 
-{{% page-ref page="/api/_index.md" %}}
+{{% page-ref "/api/_index.md"  %}}
+
+{{% page-ref "/cases/_index.md" "/news/_index.md"  %}}
 
 {{% inverted %}}
 ## Invert everything
@@ -770,7 +772,7 @@ magna anim sunt. Officia fugiat Lorem sunt pariatur incididunt Lorem reprehender
 mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse. Voluptate anim ex dolore
 deserunt ea ex eiusmod irure. Occaecat excepteur aliqua exercitation aliquip dolor esse eu eu.
 
-Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna
+[Text can contain links like this one.](#) Enim aliquip magna
 id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum
 quis ex.
 
