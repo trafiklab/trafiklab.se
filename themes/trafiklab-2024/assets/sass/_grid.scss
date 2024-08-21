@@ -18,6 +18,7 @@
   @for $i from 1 through 12 {
     .tl-col--#{$i} {
       flex-shrink: 0;
+      flex-grow: 1;
       flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
     }
   }
@@ -26,6 +27,7 @@
     @for $i from 1 through 12 {
       .tl-col--xs-#{$i} {
         flex-shrink: 0;
+        flex-grow: 1;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }
     }
@@ -34,6 +36,7 @@
     @for $i from 1 through 12 {
       .tl-col--sm-#{$i} {
         flex-shrink: 0;
+        flex-grow: 1;
         flex-basis: calc(100% * #{$i} / 12 - var(--col-gap));
       }
     }

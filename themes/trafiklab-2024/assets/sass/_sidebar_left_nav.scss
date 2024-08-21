@@ -17,11 +17,11 @@ nav.tl-side-navigation {
   ul.tl-side-navigation--root {
     // Margin for the complete sidebar
     // The margin at the parent nav element is needed for the page layout, this margin is for the sidebar layout
-    margin: 0 16px 0 16px;
+    margin: 0 16px 0 32px;
   }
 
   a.tl-side-navigation__click-target {
-    padding: 4px 16px;
+    padding: 4px 0;
     display: block;
   }
 
@@ -38,7 +38,7 @@ nav.tl-side-navigation {
   }
 
   li.tl-side-navigation__item--level-0 {
-    padding: 24px 0 0;
+    padding: 16px 0 0;
   }
 
   ul.tl-side-navigation__fixed-list--level-1 {
@@ -73,7 +73,7 @@ nav.tl-side-navigation {
   .tl-side-navigation__item--level-2 {
     // No indent, only space for the open/collapse icon when needed
     // Little space between items to keep clear visual grouping
-    padding: 0 24px;
+    padding: 0 16px;
 
     > a {
       @include sidebar-list-item;
@@ -110,7 +110,7 @@ nav.tl-side-navigation {
   }
 
   .tl-side-navigation__fixed-list--level-1 a:not(.dropdown) {
-    padding-left: 16px + 24px;
+    padding-left: 24px;
   }
 
 
