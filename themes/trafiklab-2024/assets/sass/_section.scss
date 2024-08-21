@@ -9,11 +9,24 @@ article.section {
     position: relative;
   }
 
+  .section__item__header {
+    margin-bottom: 0; // gap already takes care of this
+  }
+
+  .section__item__info, .section__item__image {
+    display: flex;
+    flex-direction: column;
+  }
+
   .section__item__image {
-    max-height: 560px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 2 * $vertical-spacing-unit;
+    min-height: 100%;
+    margin-bottom: 0;
+
+    img {
+      margin-top: 0;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .section__item__header {
@@ -22,8 +35,12 @@ article.section {
   }
 
   .section__item__header__date {
-    margin-top: 44px;
     min-width: fit-content; // Fix for chrome, edge
+    margin-bottom: 16px;
+
+    label {
+      color: $color-purple-muted;
+    }
   }
 
   .section__item__info__btn {
@@ -36,4 +53,10 @@ article.section {
     width: 100%;
   }
 
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .section__item__info {
+    order: 1;
+  }
 }

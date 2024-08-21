@@ -4,6 +4,7 @@ defaultContentLanguage  = "en"
 title = "Trafiklab"
 
 theme = "trafiklab-2024"
+summaryLength = 24
 
 enableEmoji = true
 enableGitInfo = true

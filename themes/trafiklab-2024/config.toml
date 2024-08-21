@@ -4,6 +4,7 @@ extended = true
 max = "0.122.0"
 min = "0.122.0"
 
+
 # Multilingual
 [languages]
     [languages.en]
