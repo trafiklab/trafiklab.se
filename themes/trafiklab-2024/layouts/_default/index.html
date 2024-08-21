@@ -77,6 +77,7 @@
   const containerWidth = $("#landingContainer").width();
   const landingVehicleMarker = $("#landingVehicleMarker");
   const changeAnimationDurationMs = 1000; // animation duration when switching stops, 2 animations are used so twice this time for a complete stop change
+  const updateIntervalMs = 3000;
 
   let transportModes = {
     100: "Train",
@@ -93,18 +94,16 @@
     'varm': 'Värmlandstrafik',
     'skane': 'Skånetrafiken'
   };
-
   function disableAnimations() {
     $("#landingVehicleMarker").addClass("no-transition");
     $(".landing-demo-stop").addClass("no-transition");
-  }
 
+  }
   function enableAnimations() {
     $("#landingVehicleMarker").removeClass("no-transition");
     $(".landing-demo-stop").removeClass("no-transition");
-  }
 
-  const updateIntervalMs = 3000;
+  }
 
   function animateSegmentChange(json) {
     let bodyWidth = $("body").width();

@@ -67,7 +67,7 @@ main.landing {
         top: -14px;
         z-index: 30;
         opacity: 1;
-        transition: transform $landing-stop-change-animation-time ease-in-out, opacity $landing-stop-change-animation-time easy-in-out;
+        transition: transform $landing-stop-change-animation-time ease-in-out, opacity $landing-stop-change-animation-time ease-in-out;
       }
 
       .landing-demo-stop:first-of-type {
