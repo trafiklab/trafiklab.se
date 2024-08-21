@@ -5,6 +5,8 @@ nav.tl-side-navigation {
   scrollbar-width: thin;
   scrollbar-color: $color-purple-muted $color-purple-hint;
   scrollbar-gutter: stable;
+  margin-left: 32px;
+  padding-right: 32px;
   margin-bottom: $header-height;
 
   ul {
@@ -12,12 +14,6 @@ nav.tl-side-navigation {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  ul.tl-side-navigation--root {
-    // Margin for the complete sidebar
-    // The margin at the parent nav element is needed for the page layout, this margin is for the sidebar layout
-    margin: 0 16px 0 32px;
   }
 
   a.tl-side-navigation__click-target {

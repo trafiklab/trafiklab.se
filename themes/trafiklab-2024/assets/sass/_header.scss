@@ -1,11 +1,4 @@
-$header-padding: 32px;
-$header-padding-sm: 16px;
-$header-content-height: 32px;
-$header-height: 2 * $header-padding + $header-content-height;
-$header-height-sm: 2 * $header-padding-sm + $header-content-height;
-
 header.site-header {
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 200;
@@ -34,8 +27,8 @@ header.site-header {
     transition: margin-left .1s ease-out;
     z-index: 20;
 
+    max-width: unset !important;
     justify-content: space-between;
-    margin: 0 auto;
 
     .header-left {
       display: flex;
@@ -148,13 +141,15 @@ header.site-header {
     margin: 0;
     padding: 0;
 
-
     nav.mobile-navigation {
       // display: none;
       overflow: hidden;
       max-height: 0;
       transition: max-height .25s ease-in-out;
-      border-bottom: 1px solid $color-purple-extra-muted;
+
+      > ul {
+        border-bottom: 1px solid $color-purple-extra-muted;
+      }
 
       &.is-open {
         display: block;
@@ -216,14 +211,21 @@ header.site-header {
     position: relative;
 
     .site-header__navbar {
-      padding: 0 16px;
 
       ul {
         margin: $header-padding-sm 0 $header-padding-sm;
       }
 
     }
-
   }
+}
 
+@media screen and (max-width: $breakpoint-lg) {
+  body.with-sidebar {
+    .site-header__navbar {
+      // The navbar would be centered between the sidebar and the content. Stretch it to full width instead on documentation pages
+      margin: 0 32px;
+      width: auto;
+    }
+  }
 }

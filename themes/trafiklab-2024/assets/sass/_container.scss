@@ -1,0 +1,60 @@
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+.container--text {
+  max-width: $container-text-width;
+}
+
+@media screen and (max-width: $container-width + 64px + $left-sidebar-width) {
+  body.with-sidebar .container:not(.container--text) {
+    // When the container no longer has whitespace on the side through centering, margins need to be added
+    margin-left: 32px;
+    margin-right: 32px;
+    max-width: $container-width;
+    width: auto;
+
+    &.container--no-gutter {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: $container-text-width + 128px + $left-sidebar-width) {
+  body.with-sidebar .container--text {
+    margin-left: 32px;
+    margin-right: 32px;
+    width: auto;
+    max-width: $container-text-width;
+  }
+}
+
+
+@media screen and (max-width: $container-width + 64px) {
+  body.without-sidebar .container:not(.container--text) {
+    // When the container no longer has whitespace on the side through centering, margins need to be added
+    margin-left: 32px;
+    margin-right: 32px;
+    width: auto;
+    max-width: $container-width;
+
+    &.container--no-gutter {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $container-text-width + 128px) {
+  body.without-sidebar .container--text {
+    margin-left: 32px;
+    margin-right: 32px;
+    width: auto;
+    max-width: $container-text-width;
+  }
+}
+

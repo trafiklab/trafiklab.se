@@ -1,0 +1,18 @@
+$container-width: 860px;
+$container-text-width: 668px;
+$vertical-spacing-unit: 8px;
+
+$header-padding: 32px;
+$header-padding-sm: 16px;
+$header-content-height: 32px;
+$header-height: 2 * $header-padding + $header-content-height;
+$header-height-sm: 2 * $header-padding-sm + $header-content-height;
+
+$left-sidebar-width: 320px;
+$right-sidebar-width: $left-sidebar-width;
+$sidebar-container-gap: 64px;
+$sidebar-image-gap: 32px;
+
+$article-image-height: 380px;
+$article-image-height-no-sidebar: 480px;
+$article-pullup-over-image: 140px;

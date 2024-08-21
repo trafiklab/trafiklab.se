@@ -1,16 +1,3 @@
-$vertical-spacing-unit: 8px;
-
-$container-width: 860px;
-
-$left-sidebar-width: 320px;
-$right-sidebar-width: $left-sidebar-width;
-$sidebar-container-gap: 64px;
-$sidebar-image-gap: 32px;
-
-$article-image-height: 380px;
-$article-image-height-no-sidebar: 480px;
-$article-pullup-over-image: 140px;
-
 html {
   height: 100%;
 }
@@ -29,22 +16,8 @@ body {
   }
 }
 
-.container {
-  width: $container-width;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: $breakpoint-sm){
-  .container {
-    // When the container no longer has whitespace on the side through centering, margins need to be added
-    width: auto;
-    margin: 0 16px;
-  }
-}
 
 body.with-sidebar, body:not(.type-home).without-sidebar {
-
-  --article-padding-x: 96px;
   --article-padding-y: 32px;
 
   .content-center-wrapper {
@@ -134,7 +107,7 @@ body:not(.type-home).without-sidebar  {
 }
 
 article.page {
-  padding: var(--article-padding-y) var(--article-padding-x);
+  padding: var(--article-padding-y) 0;
 }
 
 div.tl-image {
@@ -169,36 +142,22 @@ div.tl-image {
     main#content .background-image {
       width: 100%; // Auto width instead of fixed width
     }
+  }
+}
 
-    article.page {
-      --article-padding-x: 64px;
-      --article-padding-y: 24px;
-    }
+@media screen and (max-width: $breakpoint-md) {
+  article.page {
+    --article-padding-y: 2px; // don't set to 0, in order to prevent margin collapse on the top
   }
 }
 
 @media screen and (max-width: $breakpoint-lg) {
   body.with-sidebar {
-    .site-header__navbar {
-      // The navbar would be centered between the sidebar and the content. Stretch it to full width instead on documentation pages
-      margin: 0 16px;
-      width: auto;
-    }
-
     .content-left-wrapper {
       max-width: 320px;
 
-
       .sidebar-sticky {
         margin: 0; // no longer needed to compensate for metro lines
-      }
-
-      .metro-divider-mid {
-        display: none;
-      }
-
-      .left-sidebar--top-space {
-        display: none;
       }
     }
   }
@@ -245,17 +204,8 @@ div.tl-image {
       height: calc(100vh - #{$header-padding-sm});
       transition: 1s right ease-in-out;
       z-index: 100;
-
-
     }
 
-    .metro-divider-mid {
-      display: none;
-    }
-
-    .left-sidebar--top-space {
-      display: none;
-    }
   }
 }
 
