@@ -102,7 +102,7 @@ h2, .tl-h2 {
   }
 
   &:nth-of-type(even) {
-    --color-h2-accent: #{$color-pink-hint};
+    // --color-h2-accent: #{$color-pink-hint};
   }
 
   /* Allow setting a specific color, which overrides the default alternating color */

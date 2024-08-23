@@ -39,7 +39,7 @@ The static data in this dataset is updated on a daily basis, typically between 1
 | JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |
 | Kalmar länstrafik (Kalmar län)                 |       `klt`        |     ✔️      |
 | Kronobergs länstrafik (Kronobergs län)         |      `krono`       |     ✔️      |
-| Länstrafiken Jämtland (JLT)                    |     `jamtland`     |     ✔️      |
+| Länstrafiken Jämtland                          |     `jamtland`     |     ✔️      |
 | Länstrafiken Norrbotten                        |    `norrbotten`    |     ✔️      |
 | Länstrafiken Västerbotten                      |   `vasterbotten`   |     ✔️      |
 | Länstrafiken Örebro                            |      `orebro`      |     ✔️      |

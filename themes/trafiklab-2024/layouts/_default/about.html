@@ -5,6 +5,7 @@
 <div class="background-image" style="background-image: url('{{ . }}')"></div>
 {{ end }}
 <article class="page {{ $image_class }} container">
+    <div class="container container--text">
     <div class="page__header">
         <span class="subtext">{{.Parent.Title }}</span>
         <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}</h1>
@@ -40,7 +41,7 @@
         </div>
         {{ end }}
     </aside>
-
+    </div>
 </article>
 
 {{ end }}
