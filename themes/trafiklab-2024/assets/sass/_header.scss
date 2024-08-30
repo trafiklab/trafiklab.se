@@ -201,6 +201,27 @@ header.site-header {
   }
 }
 
+.disruption-banner {
+  background-color: $color-yellow;
+  
+  .disruption-banner__message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: 56px;
+    color: var(--color-text);
+    text-wrap: nowrap;
+    
+    .disruption-banner__message__text{
+      flex-grow: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    
+  }
+}
+
 @media screen and (max-width: $breakpoint-sm) {
   header.site-header {
     width: 100vw;
