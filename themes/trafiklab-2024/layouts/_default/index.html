@@ -151,7 +151,7 @@
   }
 
   function update() {
-    fetch("https://staging.developer.trafiklab.se/api/trafiklab-se/realtime-samples/" + active_operator).then(
+    fetch("{{ .Site.Params.devPortalUrl }}/api/trafiklab-se/realtime-samples/" + active_operator).then(
       data => data.json().then(json => {
           if (active_trip_id === undefined) {
             const trip_ids = Object.keys(json);
