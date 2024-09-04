@@ -208,7 +208,7 @@ header.site-header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 2 * $vertical-spacing-unit;
     height: 56px;
     color: var(--color-text);
     text-wrap: nowrap;
