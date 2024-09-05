@@ -36,7 +36,7 @@
                     let firstAffectedResource = statusReport.affected_resources[0].name;
                     let message;
                     if (numberOfAffectedResources > 1) {
-                        message = firstAffectedResource + " + " + numberOfAffectedResources + " other"
+                        message = firstAffectedResource + " + " + (numberOfAffectedResources - 1) + " other"
                     } else {
                         message = firstAffectedResource;
                     }
