@@ -47,11 +47,11 @@
                 } else {
                     let link = statusReport.href;
 
-                    let affectedResources = statusReport.affected_resources.length;
+                    let numberOfAffectedResources = statusReport.affected_resources.length;
                     let firstAffectedResource = statusReport.affected_resources[0].name;
                     let message;
-                    if (affectedResources > 1) {
-                        message = firstAffectedResource + " + " + affectedResources + " other"
+                    if (numberOfAffectedResources > 1) {
+                        message = firstAffectedResource + " + " + (numberOfAffectedResources - 1) + " other"
                     } else {
                         message = firstAffectedResource;
                     }
