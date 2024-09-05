@@ -3,6 +3,9 @@ title: KoDa
 layout: "single"
 weight: 50 
 date: 2021-12-14
+image: '/media/2024/09/banner_laptop.jpg'
+cascade:
+  - image: '/media/2024/09/banner_laptop.jpg'
 ---
 
 KoDA, short for Kollektivtrafikens Datalabb is a dataset and API created by RISE and Vinnova in cooperation with

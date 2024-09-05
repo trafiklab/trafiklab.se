@@ -2,6 +2,7 @@
 title: "Göteborg open data"
 layout: "single"
 weight: 110
+image: '/media/2024/09/banner_tram_samtrafiken.jpg'
 ---
 Göteborg's open-data portal contains lots of valuable information, such as reports about air quality, bike-sharing and
 traffic noise.

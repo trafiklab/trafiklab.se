@@ -15,14 +15,14 @@
 
     {{ $image := resources.Get (printf "%s" $src) }}
     {{ if $image }}
-    {{ if in $src ".jpg" }}
-    {{ $small := $image.Resize "480x webp" }}
-    {{ $medium := $image.Resize "768x webp" }}
-    {{ $large := $image.Resize "1024x webp" }}
-    {{ $xlarge := $image.Resize "1600x webp" }}
+    {{ if or (in $src ".jpg") (in $src ".png") }}
+    {{ $small := $image.Process "resize 480x webp" }}
+    {{ $medium := $image.Process "resize 768x webp" }}
+    {{ $large := $image.Process "resize 1024x webp" }}
+    {{ $xlarge := $image.Process "resize 1600x webp" }}
     <img sizes="100vw"
              srcset="{{ $small.Permalink }} 480w, {{ $medium.Permalink }} 768w, {{ $large.Permalink }} 1024w, {{ $xlarge.Permalink }} 1200w"
-             src="{{ $xlarge.Permalink }}"
+             src="{{ $large.Permalink }}"
              alt="{{ $alt }}"
              {{ with $caption}}
              title="{{ . }}"

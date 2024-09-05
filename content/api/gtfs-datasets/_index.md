@@ -7,6 +7,9 @@ aliases:
   - /docs/using-trafiklab-data/using-gtfs-files/
   - /docs/using-trafiklab-data/using-gtfs-files/static-gtfs-files/
   - /docs/using-trafiklab-data/using-gtfs-files/realtime-gtfs-files/
+image: '/media/2024/09/banner_building.jpg'
+cascade:
+  - image: '/media/2024/09/banner_building.jpg'
 ---
 
 ## GTFS at Trafiklab

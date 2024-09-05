@@ -4,6 +4,7 @@ layout: "single"
 weight: 90 
 summary: Aktuell trafikinformation från Trafikverket om både tåg- och vägtrafik.
 date: 06-02-2014
+image: '/media/2024/09/banner_inlandsbanan.jpg'
 ---
 Strukturen skiljer sig en hel del från andra APIer på Trafiklab. Hämtning av data görs med ett HTTP-anrop. En fråga
 skickas med i POST-metoden som beskriver vilket data som efterfrågas samt innehållandes eventuella filter.

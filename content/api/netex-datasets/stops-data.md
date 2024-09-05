@@ -3,6 +3,7 @@ title: Stops data
 layout: "single"
 weight: 37
 date: 2022-06-01
+image: '/media/2024/09/banner_gbg_samtrafiken.jpg'
 aliases:
   - /api/trafiklab-apis/stops-data/
   - /api/trafiklab-apis/stops-data/licence/

@@ -4,6 +4,7 @@ description: "Internal test page for testing typography"
 hidden: true 
 layout: "single"
 url: "/typography"
+image: '/media/2024/09/banner_switch.jpg'
 ---
 
 ## Headings

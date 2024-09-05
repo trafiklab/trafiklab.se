@@ -3,6 +3,9 @@ title: NeTEx Datasets
 weight: 2
 layout: "single"
 sidebar: true
+image: '/media/2024/09/banner_building.jpg'
+cascade:
+  - image: '/media/2024/09/banner_building.jpg'
 ---
 
 ## NeTEx at Trafiklab

@@ -11,6 +11,9 @@ aliases:
   - /node/14075
   - /api/resrobot
 date: 2022-02-07
+image: '/media/2024/09/banner_phone.jpg'
+cascade:
+  - image: '/media/2024/09/banner_phone.jpg'
 ---
 
 ### What is ResRobot?

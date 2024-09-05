@@ -7,7 +7,7 @@ layout: about
 menu:
   main:
     weight: 30
-
+image: '/media/2024/09/kollektivtrafikenshus.jpg'
 ---
 **Innovation and new smart services are important to get travelers to choose climate friendly ways to travel, such as public transport instead of cars or planes.**
 

@@ -47,7 +47,18 @@ body.with-sidebar, body:not(.type-home).without-sidebar {
     width: $container-width + ($sidebar-container-gap - $sidebar-image-gap) + $right-sidebar-width;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
+    filter: saturate(90%) contrast(80%);
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top:0;
+      bottom: 0;
+      background-color: rgba($color-purple-hint, .3);
+    }
   }
 
   article.page {

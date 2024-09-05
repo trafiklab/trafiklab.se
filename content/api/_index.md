@@ -4,7 +4,9 @@ menu: "main"
 weight: 1
 layout: "single"
 sidebar: true
-image: '/backdrop/backdrop.png'
+image: '/media/2024/09/banner_varm_tag_Oyvind_Lund.jpg'
+cascade:
+  - image: '/media/2024/09/banner_varm_tag_Oyvind_Lund.jpg'
 ---
 
 ## Trafiklabs APIs

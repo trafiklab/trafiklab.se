@@ -5,6 +5,9 @@ weight: 1
 sidebar: true
 layout: "single"
 is_fallback_source_page: true
+image: '/media/2024/09/banner_varm_tag_Oyvind_Lund.jpg'
+cascade:
+  - image: '/media/2024/09/banner_varm_tag_Oyvind_Lund.jpg'
 ---
 
 {{% warning %}}
