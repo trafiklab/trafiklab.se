@@ -4,8 +4,8 @@
 {{ if eq $mdSize 12}}
 {{ $mdSize = 6 }}
 {{ end }}
-{{ if lt $mdSize 4 }}
-{{ $mdSize = 4 }}
+{{ if lt $mdSize 5 }}
+{{ $mdSize = 5 }}
 {{ end }}
 {{ range $var :=  .Params }}
     {{ with $site.GetPage $var }}

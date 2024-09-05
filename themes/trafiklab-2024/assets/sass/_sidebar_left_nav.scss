@@ -69,14 +69,14 @@ nav.tl-side-navigation {
   .tl-side-navigation__item--level-2 {
     // No indent, only space for the open/collapse icon when needed
     // Little space between items to keep clear visual grouping
-    padding: 0 16px;
+    padding: 0 0 0 16px;
 
-    > a {
+    a {
       @include sidebar-list-item;
       color: var(--color-sidebar-level3);
     }
 
-    > a span {
+    a span {
       @include sidebar-list-item;
       color: var(--color-sidebar-level3);
     }

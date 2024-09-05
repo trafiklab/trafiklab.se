@@ -374,7 +374,7 @@ located, along with its speed and bearing. These can be used to show vehicles on
 
 ### Continue reading
 
-{{% page-ref page="/docs/using-trafiklab-data/the-protobuf-file-format/" %}}
+{{% page-ref page="/docs/using-trafiklab-data/the-protobuf-file-format" %}}
 
 <br>
 
