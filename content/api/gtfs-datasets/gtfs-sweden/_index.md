@@ -2,6 +2,12 @@
 title: GTFS Sweden 3
 layout: "single"
 weight: 35
+aliases:
+  - /api/trafiklab-apis/gtfs-sweden/
+  - /api/trafiklab-apis/gtfs-sweden/static/
+  - /api/trafiklab-apis/gtfs-sweden/realtime/
+  - /api/trafiklab-apis/gtfs-sweden/realtime/
+  - /api/trafiklab-apis/gtfs-sweden/licence/
 ---
 
 GTFS Sweden 3 is a high quality GTFS feed containing most of the public transport data of Sweden. This dataset contains 

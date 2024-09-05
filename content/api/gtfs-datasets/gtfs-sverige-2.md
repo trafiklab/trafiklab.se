@@ -4,6 +4,11 @@ layout: "single"
 weight: 5
 aliases:
   - "/api/gtfs-sverige-2"
+  - "/api/trafiklab-apis/gtfs-sverige-2/"
+  - "/api/trafiklab-apis/gtfs-sverige-2/static-data/"
+  - "/api/trafiklab-apis/gtfs-sverige-2/historical-data/"
+  - "/api/trafiklab-apis/gtfs-sverige-2/extra-files/"
+  - "/api/trafiklab-apis/gtfs-sverige-2/licence/"
 ---
 
 GTFS Sverige 2 is a GTFS dataset which covers all public transport in Sweden. GTFS Sverige 2 is our national feed. 

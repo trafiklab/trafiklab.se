@@ -3,6 +3,10 @@ title: NeTEx Sweden
 layout: "single"
 weight: 35
 date: 2022-06-01
+aliases:
+  - /api/trafiklab-apis/netex-sweden/
+  - /api/trafiklab-apis/netex-sweden/static/
+  - /api/trafiklab-apis/netex-sweden/licence/
 ---
 
 NeTEx Sweden is a NeTEx feed of high quality. The feed contains all data present in GTFS Sweden, as

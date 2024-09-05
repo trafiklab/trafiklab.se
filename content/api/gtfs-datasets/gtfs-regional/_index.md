@@ -5,6 +5,12 @@ weight: 10
 aliases:
   - /api/gtfs-regional-static-data
   - /api/gtfs-regional-realtime
+  - /api/trafiklab-apis/gtfs-regional/
+  - /api/trafiklab-apis/gtfs-regional/static/
+  - /api/trafiklab-apis/gtfs-regional/realtime/
+  - /api/trafiklab-apis/gtfs-regional/historical-data/
+  - /api/trafiklab-apis/gtfs-regional/extra-files/
+  - /api/trafiklab-apis/gtfs-regional/licence/
 ---
 
 GTFS regional is a set of GTFS feeds of high quality, with realtime data and even realtime GPS positions on 

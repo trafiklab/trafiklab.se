@@ -8,6 +8,11 @@ aliases:
   - "/docs/using-trafiklab/creating-a-project"
   - /docs/using-trafiklab/getting-api-keys/
   - /docs/using-trafiklab/upgrading-api-keys/
+  - /docs/using-trafiklab/getting-started/
+  - /docs/using-trafiklab/creating-an-account/
+  - /docs/using-trafiklab/projects/
+  - /docs/using-trafiklab/api-keys/
+  - /docs/using-trafiklab/frequently-asked-questions/
 ---
 
 ## Getting started

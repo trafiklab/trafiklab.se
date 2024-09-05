@@ -3,6 +3,9 @@ title: Stops data
 layout: "single"
 weight: 37
 date: 2022-06-01
+aliases:
+  - /api/trafiklab-apis/stops-data/
+  - /api/trafiklab-apis/stops-data/licence/
 ---
 
 The stops data API contains detailed data of Sweden's national stops and their mappings to stops from the [GTFS Regional](/api/gtfs-datasets/gtfs-regional/)

@@ -5,6 +5,10 @@ weight: 30
 aliases: 
   - /api/netex-regional-static-data
   - /node/27769/documentation
+  - /api/trafiklab-apis/netex-regional/
+  - /api/trafiklab-apis/netex-regional/static/
+  - /api/trafiklab-apis/netex-regional/siri/
+  - /api/trafiklab-apis/netex-regional/licence/
 date: 2019-11-22
 ---
 

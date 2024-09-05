@@ -3,6 +3,10 @@ title: GTFS Datasets
 weight: 1
 layout: "single"
 sidebar: true
+aliases:
+  - /docs/using-trafiklab-data/using-gtfs-files/
+  - /docs/using-trafiklab-data/using-gtfs-files/static-gtfs-files/
+  - /docs/using-trafiklab-data/using-gtfs-files/realtime-gtfs-files/
 ---
 
 ## GTFS at Trafiklab
