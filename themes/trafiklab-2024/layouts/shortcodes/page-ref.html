@@ -2,10 +2,10 @@
 {{ $site := .Site }}
 {{ $mdSize := div 12 (len .Params) }}
 {{ if eq $mdSize 12}}
-{{ $mdSize = 6 }}
+{{ $mdSize = 8 }}
 {{ end }}
-{{ if lt $mdSize 5 }}
-{{ $mdSize = 5 }}
+{{ if lt $mdSize 6 }}
+{{ $mdSize = 6 }}
 {{ end }}
 {{ range $var :=  .Params }}
     {{ with $site.GetPage $var }}

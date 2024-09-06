@@ -152,7 +152,7 @@ in [the GTFS Regional availability table](#operators-covered-by-this-dataset).
 
 You can read more about how to use real-time data in our GTFS format documentation:
 
-{{% page-ref page="/docs/using-trafiklab-data/the-protobuf-file-format/" %}}
+{{% page-ref page="/docs/using-trafiklab-data/the-protobuf-file-format" %}}
 <br>
 
 ## Extra files

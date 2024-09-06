@@ -77,9 +77,7 @@ read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 | Gold   |            20            |          2500           |
 
 </div>
-{{% page-ref "/api/gtfs-datasets/gtfs-regional/static-specification"
-
-"/api/gtfs-datasets"  %}}
+{{% page-ref "/api/gtfs-datasets/gtfs-regional/static-specification" "/api/gtfs-datasets/overview"  %}}
 <br>
 
 ### Notes and known issues
@@ -174,7 +172,7 @@ in [the GTFS Regional availability table](#operators-covered-by-this-dataset).
 
 You can read more about how to use real-time data in our GTFS format documentation:
 
-{{% page-ref page="/api/gtfs-datasets" %}}
+{{% page-ref page="/api/gtfs-datasets/overview" %}}
 <br>
 
 ## Historical data
