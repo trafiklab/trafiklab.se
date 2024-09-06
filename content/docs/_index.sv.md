@@ -7,7 +7,9 @@ url: docs
 menu:
   main:
     weight: 5
-
+image: '/media/2024/09/banner_laptop.jpg'
+cascade:
+  - image: '/media/2024/09/banner_laptop.jpg'
 ---
 ## Introduktion
 

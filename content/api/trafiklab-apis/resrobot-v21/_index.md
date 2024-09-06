@@ -11,6 +11,9 @@ aliases:
   - /node/14075
   - /api/resrobot
 date: 2022-02-07
+image: '/media/2024/09/banner_phone.jpg'
+cascade:
+  - image: '/media/2024/09/banner_phone.jpg'
 ---
 
 ### What is ResRobot?
@@ -53,4 +56,4 @@ read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a
 million API calls. {{% /warning %}}
 
-{{% page-ref "/api/trafiklab-apis/gtfs-regional/" "/api/trafiklab-apis/gtfs-sverige-2/" %}}
+{{% page-ref "/api/gtfs-datasets/gtfs-regional/" "/api/gtfs-datasets/gtfs-sverige-2" %}}

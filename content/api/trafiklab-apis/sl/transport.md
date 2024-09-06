@@ -82,17 +82,19 @@ https://transport.integration.sl.se/v1/transport-authorities
 {{% /tab %}}
 {{% /tabs %}}
 
-### API Key Levels
-
-This API does not require the use of an API key. You should however not make excessive requests, to ensure the availability
-and performance of the API for everyone. If you need large amounts of data, for example all departures from all
-stops, [GTFS Regional](../gtfs-regional/_index.md) might be better suited for your application.
-
 ## Format
 
 This API returns data in the JSON format
 
-## Request Parameters
+## Request
+
+### API Key Levels
+
+This API does not require the use of an API key. You should however not make excessive requests, to ensure the availability
+and performance of the API for everyone. If you need large amounts of data, for example all departures from all
+stops, [GTFS Regional](../../gtfs-datasets/gtfs-regional/_index.md) might be better suited for your application.
+
+### Parameters
 
 When searching for a specific site, or departures from a specific site, the site ID is required. Other API calls do not have any mandatory parameters. For
 complete list of all parameters, including optional parameters, please see the openAPI specification below.

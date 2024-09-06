@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $image_class := "page--without-image" }}
+{{ with .Params.image }}
+{{ $image_class = "page--with-image" }}
+{{ $image := resources.Get (printf "%s" .) }}
+{{ if $image }}
+{{ if or (in . ".jpg") (in . ".png") }}
+{{ $image = $image.Process "resize 1200x webp" }}
+{{ end }}
+<div class="background-image" style="background-image: url('{{ $image.Permalink }}')"></div>
+{{ end }}
+{{ end }}
+<article class="page {{ $image_class }} container">
+    <div class="container container--text">
+        <div class="page__header">
+            <span class="subtext">{{.Parent.Title }}</span>
+            <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}
+                <!--{{ if isset .Site.Params "sourcerepository" }}
+                <a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Path "\\" "/" }}" class="docs-header-vcs">
+                {{- $githubLogoUrl := resources.Get "images/github.svg" -}}
+                <img alt="Edit on Github" src="{{$githubLogoUrl.Permalink}}"/>
+                </a>
+                {{ end }}-->
+            </h1>
+        </div>
+        <div class="page__toc">
+            {{ partial "toc/mobile-toc.html" .}}
+        </div>
+        <div class="page__content">
+            {{ .Content }}
+        </div>
+        {{ partial "docs-footer.html" .}}
+    </div>
+</article>
+
+{{ end }}
+
+{{- define "page-script" -}}
+{{ partial "js/code-blocks.html" .}}
+{{ partial "js/sidebar-navigation.html" .}}
+{{ partial "js/sidebar-toc.html" .}}
+{{- end -}}

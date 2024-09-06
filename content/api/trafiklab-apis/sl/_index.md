@@ -2,6 +2,9 @@
 title: SL's APIs
 layout: "single"
 weight: 80
+image: '/media/2024/09/banner_pendeltag.jpg'
+cascade:
+  - image: '/media/2024/09/banner_pendeltag.jpg'
 ---
 SL's APIs is a collection of 7 APIs which provide information about planned and realtime traffic.
 
@@ -30,4 +33,4 @@ entire Sweden. {{% /info %}}
 {{% info %}} If you want to do analytics, or if your service will have more than a million active users, we
 recommend using GTFS data directly, or hosting your own API based on GTFS data. {{% /info %}}
 
-{{% page-ref "/api/trafiklab-apis/resrobot-v21/" "/api/trafiklab-apis/gtfs-regional/" %}}
+{{% page-ref "/api/trafiklab-apis/resrobot-v21/" "/api/gtfs-datasets/gtfs-regional/" %}}

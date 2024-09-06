@@ -40,7 +40,7 @@ If you're interested in data outside of sweden, this list will help you get on t
 |🇸🇪 Sweden | http://www.trafficdata.se/ |
 
 Source:
-https://ec.europa.eu/transport/sites/default/files/its-national-access-points.pdf
+https://transport.ec.europa.eu/transport-themes/intelligent-transport-systems/road/its-directive-and-action-plan/national-access-points_en
 
 ## GTFS and NeTEx data
 

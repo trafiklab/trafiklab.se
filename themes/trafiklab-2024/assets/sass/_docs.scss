@@ -1,0 +1,11 @@
+.docs-footer {
+
+  hr {
+    display: block;
+    height: 2px;
+    background-color: $color-purple-extra-muted;
+    border: none;
+    margin-top: 4 * $vertical-spacing-unit;
+    margin-bottom: 3 * $vertical-spacing-unit;
+  }
+}

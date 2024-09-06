@@ -2,6 +2,7 @@
 title: 'Fallstudier'
 weight: "20"
 url: fallstudier
+layout: "section"
 menu:
   main:
     weight: 20

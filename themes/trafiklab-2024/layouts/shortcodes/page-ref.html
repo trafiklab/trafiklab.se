@@ -1,0 +1,24 @@
+<div class="tl-row tl-page-ref__wrapper">
+{{ $site := .Site }}
+{{ $mdSize := div 12 (len .Params) }}
+{{ if eq $mdSize 12}}
+{{ $mdSize = 8 }}
+{{ end }}
+{{ if lt $mdSize 6 }}
+{{ $mdSize = 6 }}
+{{ end }}
+{{ range $var :=  .Params }}
+    {{ with $site.GetPage $var }}
+<a class="tl-page-ref tl-col--sm-12 tl-col--md-{{$mdSize}}" href="{{ .Permalink }}">
+    <span class="tl-h2 tl-h2--small h2--pink-accent">Read also: {{ .Title }}</span>
+    <p class="tl-page-ref--preview">{{ .Summary | markdownify | truncate 100 }}</p>
+    <div class="flex-spacer"></div>
+    <div class="flex-row-right">
+        <span class="btn btn--text btn--text--compact">To page</span>
+    </div>
+</a>
+    {{ else }}
+        {{ errorf "Missing page for page-ref: '%s'" (.Get "page") }}
+    {{ end }}
+{{ end }}
+</div>

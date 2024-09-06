@@ -1,0 +1,253 @@
+{{ define "main" }}
+<main class="landing">
+    <section class="page page__first flex-col">
+        <div class="container page__first__header">
+            <h1><span>The home of</span><span class="h1--tl-inverted">swedish public transport data</span></h1>
+        </div>
+        <div class="landing-demo flex-spacer flex-row">
+            <div class="landing-demo-left flex-spacer">
+                <div class="metro-lines"></div>
+            </div>
+            <div class="landing-demo-middle container container--no-gutter" id="landingContainer">
+                <div class="landing-demo-stop landing-demo-stop--double">
+                    <div class="marker"></div>
+                    <span id="landingFromStopName" class="landing-demo-stop__station-name">Gävle</span></div>
+                <div class="landing-demo-stop landing-demo-stop">
+                    <div class="marker"></div>
+                    <span id="landingToStopName" class="landing-demo-stop__station-name">Göteborg</span></div>
+                <div class="metro-lines"></div>
+                <div class="vehicle-position" id="landingVehicleMarker">
+                    <div class="marker"></div>
+                    <div class="label">
+                        <span id="landingVehicleLabelFirstRow">Realtime data</span>
+                        <span id="landingVehicleLabelSecondRow">Check out our GTFS-RT feeds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="landing-demo-right flex-spacer">
+                <div class="metro-lines"></div>
+            </div>
+        </div>
+        <div class="container page__first__bottom">
+            <div class="page__first__content">{{ .Content}}</div>
+            <div class="tl-row tl-row--large-gap">
+                {{ range .Params.links }}
+                <a class="btn btn--large btn--primary tl-col--6 tl-col--xs-12" href="{{ .link }}">
+                    {{ .text }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    {{ if or .Params.news_count_max .Params.cases_count_max }}
+    <section class="page">
+        {{ partial "home/news-cases.html" (dict
+        "context" .
+        "max_news" .Params.news_count_max
+        "max_cases" .Params.cases_count_max
+        "max_combined" .Params.combined_news_case_count_max
+        )
+        }}
+    </section>
+    {{end}}
+
+    <section>
+        {{ if .Params.Mc }}
+        {{ partial "home/newsletter-signup.html" .}}
+        {{ end }}
+
+        {{ partial "home/partner-list.html" .}}
+    </section>
+
+
+</main>
+{{ end }}
+
+{{- define "page-script" -}}
+<script type="text/javascript">
+  let lastOffset = 1000;
+  let active_operator = undefined;
+  let active_operator_name = undefined;
+  let active_trip_id = undefined;
+  let active_destination_id = undefined;
+  let update_handle = undefined;
+  let destinationMarkerWidthOffset = 44; // ofset for the destination marker, to ensure the position dot won't move past
+  let destinationNameWidthOffset = 0; //offset of the destination marker to the right to fit name inside container
+  const containerWidth = $("#landingContainer").width();
+  const landingVehicleMarker = $("#landingVehicleMarker");
+  const changeAnimationDurationMs = 1000; // animation duration when switching stops, 2 animations are used so twice this time for a complete stop change
+  const updateIntervalMs = 3000;
+
+  let transportModes = {
+    100: "Train",
+    401: "Metro",
+    700: "Bus",
+    717: "Taxi",
+    900: "Tram",
+    1000: "Båt"
+  }
+
+  const landing_operators = {
+    'sl': 'SL',
+    'otraf': 'Östgötatrafiken',
+    'varm': 'Värmlandstrafik',
+    'skane': 'Skånetrafiken'
+  };
+  function disableAnimations() {
+    $("#landingVehicleMarker").addClass("no-transition");
+    $(".landing-demo-stop").addClass("no-transition");
+
+  }
+  function enableAnimations() {
+    $("#landingVehicleMarker").removeClass("no-transition");
+    $(".landing-demo-stop").removeClass("no-transition");
+
+  }
+
+  function animateSegmentChange(json) {
+    let bodyWidth = $("body").width();
+    let sideWidth = (bodyWidth - containerWidth) / 2;
+    //  Keep container width on offset to ensure equal distance during fly-in and fly-out. 300px to ensure text is off-screen
+    let flyoutOffset = sideWidth + containerWidth + 300;
+    landingVehicleMarker.addClass("vehicle-position--transition-fast"); // move dot at same speed as stations
+    setMarkerOffset(flyoutOffset) // move completely right, animated
+    setOriginStopOffset(-flyoutOffset, 0) // move stops completely left, animated.
+    setDestinationStopOffset(-flyoutOffset, 0) // move stops completely left, animated
+
+    clearInterval(update_handle); // disable updates while animating change
+
+    // Switch to changes without animations
+    setTimeout(() => disableAnimations(), changeAnimationDurationMs)
+
+    // not animated
+    setTimeout(function () {
+      setMarkerOffset(-(sideWidth + 400)) // move completely left and ensure label is no longer visible, to fly in from left afterwards
+      setOriginStopOffset(bodyWidth)
+      setDestinationStopOffset(bodyWidth)
+      let landingFromStopName = $("#landingFromStopName");
+      let landingToStopName = $("#landingToStopName");
+      landingFromStopName.text(json[active_trip_id].from.name)
+      landingToStopName.text(json[active_trip_id].to.name)
+    }, changeAnimationDurationMs + 50);
+
+    // Back to normal move
+    setTimeout(() => {
+      landingVehicleMarker.removeClass("vehicle-position--transition-fast"); // move dot at same speed as stations
+      enableAnimations()
+    }, changeAnimationDurationMs + 100
+    )
+
+    // After enabling animations again, move in the stops and new position
+    setTimeout(function () {
+      setOriginStopOffset(0, 1)
+      // move destination so the name fits in the container
+      destinationNameWidthOffset = $("#landingToStopName").width() / 1.41 - 10;
+      setDestinationStopOffset(-destinationNameWidthOffset, 1);
+
+      update() // update positions again
+      update_handle = setInterval(update, updateIntervalMs)
+    }, changeAnimationDurationMs + 150);
+  }
+
+  function update() {
+    fetch("{{ .Site.Params.devPortalUrl }}/api/trafiklab-se/realtime-samples/" + active_operator).then(
+      data => data.json().then(json => {
+          if (active_trip_id === undefined) {
+            const trip_ids = Object.keys(json);
+            while (active_trip_id === undefined || json[active_trip_id].from.name.length > 16 || json[active_trip_id].to.name.length > 16) {
+              active_trip_id = trip_ids[Math.floor(Math.random() * trip_ids.length)]
+            }
+          }
+
+          // Even if the trip id didnt change, the segment may have changed to one with long station names
+          if (!json[active_trip_id] || json[active_trip_id].to.name.length > 16) {
+            console.log("Picking new trip for display, " + active_trip_id + " no longer active")
+            init();
+            return
+          }
+
+          // If the stops have changed (can be same or different trip), we should get the vehicle to the left side again
+          // put the marker left without going backwards
+          if (json[active_trip_id].to.id !== active_destination_id) {
+            console.log("Trip " + active_trip_id + " moved on to the next segment")
+            active_destination_id = json[active_trip_id].to.id; // update field to prevent future update calls from going in here again
+            animateSegmentChange(json);
+            return
+          }
+
+          let transportMode = transportModes[json[active_trip_id].trip.vehicleType].toLowerCase();
+          $("#landingVehicleLabelFirstRow").text(active_operator_name + " " + transportMode + " " + json[active_trip_id].trip.routeNumber)
+
+          let timeStr = "On time";
+          if (json[active_trip_id].to.delay > 59) {
+            timeStr = Math.floor(json[active_trip_id].to.delay / 60) + " minute(s) late";
+          }
+
+          if (json[active_trip_id].to.delay < -59) {
+            timeStr = Math.floor(-1 * json[active_trip_id].to.delay / 60) + " minute(s) early";
+          }
+
+          let speed = Math.floor(json[active_trip_id].vehicle.speed * 3.6);
+          let hasVehicleCoordinates = json[active_trip_id].vehicle.lat !== undefined;
+          $("#landingVehicleLabelSecondRow").text(timeStr + (hasVehicleCoordinates ? ", " + speed + " km/h" : ""))
+
+        let offsetRange = containerWidth - destinationMarkerWidthOffset - destinationNameWidthOffset;
+        let offset = ((Date.now() / 1000) - json[active_trip_id].from.time) / (json[active_trip_id].to.time - json[active_trip_id].from.time) * offsetRange;
+          if (hasVehicleCoordinates) {
+            let x1 = json[active_trip_id].from.lon;
+            let x2 = json[active_trip_id].to.lon;
+            let y1 = json[active_trip_id].from.lat;
+            let y2 = json[active_trip_id].to.lat;
+            let x = json[active_trip_id].vehicle.lon
+            let y = json[active_trip_id].vehicle.lat
+            let distFromStart = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1))
+            let distFromEnd = Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2))
+            offset = offsetRange * (distFromStart / (distFromStart + distFromEnd))
+          }
+
+          if (offset > lastOffset){
+            setMarkerOffset(offset);
+          }
+
+          if (offset > (containerWidth - destinationMarkerWidthOffset - destinationNameWidthOffset) / 2) {
+            landingVehicleMarker.addClass("vehicle-position--label-right");
+          } else {
+            landingVehicleMarker.removeClass("vehicle-position--label-right");
+          }
+          console.log("Offset " + offset)
+          return json;
+        }
+      )
+    );
+  }
+
+  function setOriginStopOffset(offset, opacity) {
+    $(".landing-demo-stop:first").css({"transform": "translateX(" + offset + "px)", "opacity": opacity});
+  }
+
+  function setDestinationStopOffset(offset, opacity) {
+    $(".landing-demo-stop:last").css({"transform": "translateX(" + offset + "px)", "opacity": opacity});
+  }
+
+  function setMarkerOffset(offset) {
+    landingVehicleMarker.css("transform", "translateX(" + offset + "px)");
+    lastOffset = offset
+  }
+
+  function init() {
+    if (update_handle !== undefined) {
+      clearInterval(update_handle)
+    }
+    let landing_operator_codes = Object.keys(landing_operators);
+    active_trip_id = undefined; // Will be set later on the first update
+    active_operator = landing_operator_codes[Math.floor(Math.random() * landing_operator_codes.length)]
+    active_operator_name = landing_operators[active_operator];
+
+    update();
+    update_handle = setInterval(update, updateIntervalMs); // update every 3 seconds
+  }
+
+  init();
+</script>
+{{- end -}}

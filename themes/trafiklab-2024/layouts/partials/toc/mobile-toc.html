@@ -1,0 +1,19 @@
+{{ if (gt (.Fragments.HeadingsMap | len) 0) }}
+<nav class="inline-toc" role="navigation" aria-label="Table of contents">
+    <ul>
+        <li class="inline-toc__header"><a href="#top">On this page</a></li>
+    {{ range .Fragments.Headings }}
+        {{ range .Headings }}
+            {{ if not (eq "" .Title) }}
+                <li class="inline-toc__item inline-toc__item--h2"><a href="#{{ .ID }}">{{ .Title }}</a></li>
+            {{ end }}
+            {{ range .Headings }}
+                {{ if not (eq "" .Title) }}
+                    <li class="inline-toc__item inline-toc__item--h3"><a href="#{{ .ID }}">{{ .Title }}</a></li>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    </ul>
+</nav>
+{{ end }}

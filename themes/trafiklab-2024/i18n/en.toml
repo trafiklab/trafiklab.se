@@ -1,0 +1,44 @@
+[brand]
+other = "Trafiklab"
+
+[header-cta-keys]
+other = "My account"
+
+[header-aria-change-language]
+other = "Change language to Swedish"
+
+[read-more-about]
+other = "Read more about"
+
+[docs-footer-about-this-page]
+other = "About this page"
+
+[docs-footer-something-wrong]
+other = "Is there something wrong with this page?"
+
+[docs-footer-view-on-github]
+other = "View this page on Github"
+
+[docs-footer-edit-on-github]
+other = "Edit this page on Github"
+
+[docs-footer-create-translation-on-github]
+other = "Create a translation for this page on Github"
+
+[docs-footer-report-issue]
+other = "Report an issue"
+
+[docs-footer-published-at]
+other = "This page was published at"
+
+[docs-footer-last-modified]
+other = "This page was last modified at"
+
+[partnerlist-title]
+other = "Official open data"
+
+[partnerlist-paragraph]
+other = "At Trafiklab, we provide official open data for all public transport in Sweden. Some of the transport companies which we publish data for are listed below."
+
+[published]
+other = "Published"

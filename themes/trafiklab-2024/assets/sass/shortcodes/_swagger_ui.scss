@@ -1,0 +1,80 @@
+
+#swagger-ui {
+  .swagger-ui {
+
+    .topbar {
+      display: none;
+    }
+
+    p,a {
+      font-size: $font-size-normal;
+      line-height: 1.5;
+    }
+
+    pre, pre > *, code, code > * {
+      font-size: 14px;
+      line-height: 1.25em;
+      font-weight: 300;
+    }
+
+    h2 {
+      display: block;
+      width: fit-content;
+    }
+
+    .btn::after {
+      display: none;
+    }
+
+    .btn.authorize span {
+        line-height: 20px;
+      padding: 0 24px 0 16px;
+    }
+
+    code span {
+      color: #fff;
+    }
+
+    div.info .info__tos, div.info .info__contact, div.info .info__license, div.info .info__extdocs, {
+      display: none;
+    }
+
+    h3.opblock-tag {
+      @include font-ibm-plex-sans;
+      display: table;
+      table-layout: fixed;
+
+      font-size: $font-size-normal !important;
+      line-height: 1.5;
+
+      > a, > div, > small {
+        font-size: $font-size-normal;
+        display: table-cell;
+      }
+
+      small {
+        font-size: $font-size-normal;
+        display: block;
+      }
+    }
+
+    .opblock-summary, .opblock-summary-description {
+      @include font-ibm-plex-sans;
+      font-size: $font-size-normal !important;
+      line-height: 1.5;
+    }
+
+    .parameter__in, .prop-format {
+      display: none;
+    }
+
+    td:first-of-type {
+      width: auto; // remove hardcoded width by swaggerui
+    }
+
+
+    td {
+      padding-left: 8px !important;
+    }
+  }
+}

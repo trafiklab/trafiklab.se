@@ -1,0 +1,49 @@
+/* Reset browser defaults */
+@import 'modern-normalize';
+
+/* Load fonts */
+@import "fonts";
+
+/* Load variables and styles */
+@import "var/colors";
+@import "var/text_styles";
+@import "var/layout";
+
+$breakpoint-xs: 600px;
+$breakpoint-sm: $container-width + 64px; // container width + 32px padding on each side
+$breakpoint-md: 1180px;
+$breakpoint-lg: 1400px;
+
+/* Start design */
+
+// Header, sidebars, containers
+@import "grid";
+@import "container";
+@import "header";
+@import "layout";
+@import "footer";
+
+// Typographic elements
+@import "typography";
+@import "table";
+
+// Landing page
+@import "landing";
+// Section overview pages (news, use cases)
+@import "section";
+@import "docs";
+// About page
+@import "about";
+// Navigation sidebar
+@import "sidebar_left_nav";
+// Table of content sidebar
+@import "sidebar_right_toc";
+@import "single_page_toc"; // Alternative table of contents when sidebar is invisible
+
+// Shortcodes
+@import "shortcodes/admoniton";
+@import "shortcodes/highlight";
+@import "shortcodes/tabs";
+@import "shortcodes/swagger_ui";
+@import "shortcodes/page_ref";
+@import "shortcodes/inverted";

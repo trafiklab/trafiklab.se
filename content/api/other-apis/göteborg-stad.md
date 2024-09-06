@@ -2,8 +2,9 @@
 title: "Göteborg open data"
 layout: "single"
 weight: 110
+image: '/media/2024/09/banner_hisingebron_vasttrafik.jpg'
 ---
-Göteborg's open-data portal contains lots of valuable information, such as reports about air quality , bike-sharing and
+Göteborg's open-data portal contains lots of valuable information, such as reports about air quality, bike-sharing and
 traffic noise.
 
    Open data is information that's available for anyone to use, reuse and share, so that others can develop and create usefulness for even more.

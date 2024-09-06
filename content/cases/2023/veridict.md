@@ -14,7 +14,7 @@ satisfaction.**
 Veridict, the company behind LiveLine™, is a Swedish product company operating within the realm of Intelligent Transport
 Systems (ITS). The company develops global products in the transportation and traffic sector, with a specialization in
 passenger transport related ITS, Traffic Systems, and Geographic Information System (GIS) technology. The company has
-used data from Trafiklab since 2015 for their products and services, mainly [GTFS realtime](/api/trafiklab-apis/gtfs-regional/).
+used data from Trafiklab since 2015 for their products and services, mainly [GTFS realtime](/api/gtfs-datasets/gtfs-regional/).
 
 #### The History of Network maps
 

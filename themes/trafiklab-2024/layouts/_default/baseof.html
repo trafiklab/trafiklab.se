@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{.Language.Lang}}">
+<head>
+    {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
+</head>
+{{ $sidebar := eq (.FirstSection.Param "sidebar") true }}
+<body class="type-{{ .Type }} {{ if $sidebar }} with-sidebar {{ end }}  {{ if not $sidebar }} without-sidebar {{ end }} {{ if .IsSection }} is-section {{ else }} is-single {{ end }} layout-{{.Layout}}">
+
+{{ block "header" . }}{{ partial "header.html" .}}{{ end }}
+<main id="content">
+{{ if $sidebar }}
+    <div class="content-left-wrapper">
+        <div class="sidebar-sticky">
+            {{ block "sidebar-left" . }}{{ partial "sidebar/sidebar.html" .}}{{ end }}
+        </div>
+    </div>
+{{ else }}
+    <div class="content-left-wrapper flex-spacer"></div>
+{{ end }}
+
+<div class="content-center-wrapper">
+{{ block "main" . }} {{ end }}
+</div>
+
+{{ if and (not (eq .Type "home")) (not (eq .Layout "section")) }}
+    <div class="content-right-wrapper">
+        {{ block "sidebar-right" . }}{{ partial "toc/sidebar-toc.html" .}}{{ end }}
+    </div>
+{{ else }}
+    <div class="content-right-wrapper flex-spacer"></div>
+{{ end }}
+</main>
+
+{{ if not $sidebar }}
+{{ block "footer" . }}
+{{ partial "footer.html" .}}
+{{ end }}
+{{ end }}
+
+{{ block "page-script" . }}{{ end }}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".mobile-menu-button").click(function () {
+      $(this).toggleClass("is-open");
+      $(".mobile-navigation").toggleClass("is-open");
+    });
+  });
+</script>
+</body>
+</html>

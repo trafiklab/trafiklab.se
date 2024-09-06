@@ -1,0 +1,222 @@
+html {
+  height: 100%;
+}
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+
+  main#content {
+    flex-grow: 1;
+    min-width: fit-content;
+  }
+}
+
+
+body.with-sidebar, body:not(.type-home).without-sidebar {
+  --article-padding-y: 32px;
+
+  .content-center-wrapper {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .content-left-wrapper, .content-right-wrapper {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  main#content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main#content .background-image {
+    background-color: $color-pink-hint-whitened; // Fallback color to see the image region if the image fails to load
+    position: absolute;
+    z-index: -1;
+    left: - ($sidebar-container-gap - $sidebar-image-gap);
+
+    height: $article-image-height;
+    width: $container-width + ($sidebar-container-gap - $sidebar-image-gap) + $right-sidebar-width;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    filter: saturate(90%) contrast(80%);
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top:0;
+      bottom: 0;
+      background-color: rgba($color-purple-hint, .3);
+    }
+  }
+
+  article.page {
+    margin-top: $article-image-height - $article-pullup-over-image;
+    background-color: var(--color-background);
+  }
+
+  nav.right-sidebar-toc {
+    z-index: 20;
+    position: sticky;
+    top: $header-content-height + 2 * $header-padding;
+    max-width: $right-sidebar-width;
+    margin-top: $article-image-height + 60px;
+  }
+
+  .page__toc {
+    display: none; // inline table of contents should be hidden when sidebar toc is visible
+  }
+
+  .sidebar-sticky {
+    // The sticky div for the sidebar
+    position: sticky;
+    top: $header-height;
+    // Position right in the area left of the content, to be beside the centered content
+    justify-self: right;
+    margin-left: auto;
+    margin-right: $sidebar-container-gap;
+    // End of positioning
+
+    // Flex for inner layout
+    display: flex;
+    flex-direction: column;
+
+    max-width: $left-sidebar-width;
+  }
+}
+
+body:not(.type-home).without-sidebar  {
+  // When the left sidebar is not present, the image should stretch to both sides
+  // The image can also be higher in these cases
+  main#content .background-image {
+    // The table of contents makes the right side of the image seem smaller. Reduce left side extension a bit (making it asymmetric) to make it seem symmetrical
+    $weight-imbalance-compensation: 24px;
+    left: - $right-sidebar-width + $weight-imbalance-compensation;
+    height: $article-image-height-no-sidebar;
+    width: $container-width + 2 * $right-sidebar-width - $weight-imbalance-compensation;
+  }
+
+  nav.right-sidebar-toc {
+    margin-top: $article-image-height-no-sidebar + 60px;
+  }
+
+
+  article.page {
+    margin-top: $article-image-height-no-sidebar - $article-pullup-over-image;
+  }
+}
+
+article.page {
+  padding: var(--article-padding-y) 0;
+}
+
+div.tl-image {
+  margin-bottom: 2 * $vertical-spacing-unit;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.tl-image--center {
+  margin: 0 auto;
+}
+
+.page__content div.wide {
+  margin-left: calc(-2 / 3 * var(--article-padding-x));
+  margin-right: calc(-2 / 3 * var(--article-padding-x));
+}
+
+@media screen and (max-width: $container-width) {
+  body.with-sidebar, body:not(.type-home).without-sidebar {
+    nav.left-sidebar {
+      // Margins to prevent sticking to the side on small screens
+      margin-left: 16px;
+    }
+
+    .content-right-wrapper {
+      display: none; // Not present on mobile
+    }
+
+    main#content .background-image {
+      width: 100%; // Auto width instead of fixed width
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  article.page {
+    --article-padding-y: 2px; // don't set to 0, in order to prevent margin collapse on the top
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  body.with-sidebar {
+    .content-left-wrapper {
+      max-width: 320px;
+
+      .sidebar-sticky {
+        margin: 0; // no longer needed to compensate for metro lines
+      }
+    }
+  }
+
+  body:not(.type-home).without-sidebar {
+    .content-left-wrapper {
+      display: none;
+    }
+  }
+
+  body.with-sidebar, body:not(.type-home).without-sidebar {
+
+    .content-right-wrapper {
+      display: none; // Not present on small screens
+    }
+
+    .page__toc {
+      display: block; // inline table of contents should take over from sidebar
+    }
+
+    main#content .background-image {
+      left: 0;
+      height: $article-image-height;
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: $breakpoint-sm) {
+  body.with-sidebar main#content {
+    position: relative;
+
+    .content-left-wrapper {
+      display: block;
+      position: absolute;
+      background-color: $color-white;
+      left: -100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      max-width: unset;
+      width: 100vw;
+      height: calc(100vh - #{$header-padding-sm});
+      transition: 1s right ease-in-out;
+      z-index: 100;
+    }
+
+  }
+}
+

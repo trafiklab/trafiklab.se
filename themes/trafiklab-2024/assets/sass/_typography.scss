@@ -1,0 +1,214 @@
+$next-element-spacing: 8px;
+
+html, body {
+  // Apply default font
+  @include text-body;
+}
+
+a, p, span, ul, li, label, input {
+  @include text-body;
+}
+
+a {
+  color: var(--color-text-accent);
+  text-decoration: none;
+}
+
+p a:link:hover {
+  transition: background-color 0.25s ease-in-out;
+  background-color: var(--color-text-accent-background);
+}
+
+p {
+  margin: 0 0 $vertical-spacing-unit;;
+}
+
+::selection {
+  background-color: var(--color-text-selection);
+}
+
+blockquote {
+  color: var(--color-text-accent);
+  padding: 24px;
+  margin-left: 0;
+  border-left: 2px solid var(--color-muted-accent);
+
+  span, p {
+    color: var(--color-text-accent);
+  }
+}
+
+blockquote, p, ul, ol {
+  margin-bottom: $next-element-spacing;
+}
+
+hr {
+  color: var(--color-text);
+}
+
+code, pre {
+  @include font-monospace;
+  font-size: $font-size-smaller;
+  span {
+    @include font-monospace;
+    font-size: $font-size-smaller;
+  }
+}
+
+:not(pre) > code {
+  background-color: var(--color-code-inline-background);
+  padding: 3px 4px; // 3px becomes a total of 6 when on top + bottom, matching the difference in a 2px smaller font + 2px on each side
+}
+
+h1 {
+  @include text-h1;
+  display: inline-block;
+
+  &.h1--no-top-margin {
+    margin-top: 0;
+  }
+
+  &.h1--tl-inverted, & .h1--tl-inverted {
+    @include text-h1-background;
+  }
+
+}
+
+h1 > span {
+  @include text-h1;
+  margin: 0;
+}
+
+span.subtext {
+  @include text-subtext;
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 22px;
+
+  &:has(+ h1) {
+    // If followed by an h1 element, this span should take care of the negative space
+    // The h1 element should not have any top margin
+    margin-top: 42px;
+  }
+}
+
+h2, .tl-h2 {
+  @include text-h2;
+  color: var(--color-h2-foreground);
+
+  &:nth-of-type(odd) {
+    --color-h2-accent: #{$color-yellow};
+  }
+
+  &:nth-of-type(even) {
+    // --color-h2-accent: #{$color-pink-hint};
+  }
+
+  /* Allow setting a specific color, which overrides the default alternating color */
+  &.h2--yellow-accent {
+    --color-h2-accent: #{$color-yellow};
+  }
+
+  &.h2--pink-accent {
+    --color-h2-accent: #{$color-pink-hint};
+  }
+}
+
+.tl-h2--small {
+  @include text-h2-small;
+}
+
+h3 {
+  @include text-h3;
+}
+
+h4 {
+  @include text-h4;
+}
+
+h5 {
+  @include text-h4;
+}
+
+h6 {
+  @include text-h4;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  font-size: $font-size-normal;
+  line-height: 1.5 * $font-size-normal;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  border: none; // Reset for some elements such as form submits, which may use
+  padding: 8px 32px 8px 16px;
+
+  background-color: var(--color-button-background);
+  color: var(--color-button-foreground);
+
+  &::after {
+    stroke: var(--color-button-foreground);
+    content: url("data:image/svg+xml,%3Csvg width='12' height='17' viewBox='0 0 12 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.92898 1.42893L9.00005 8.5L1.92898 15.5711' stroke='%23232323' stroke-width='3'/%3E%3C/svg%3E%0A");
+    vertical-align: center;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -9px;
+  }
+
+  &.btn--text{
+    color: var(--color-button-text-foreground);
+    stroke: var(--color-button-text-foreground);
+    background-color: unset;
+  }
+
+
+  &.btn--text--compact{
+    background-color: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &::after {
+      right: 12px;
+      top: 50%;
+      margin-top: -9px;
+    }
+  }
+
+  &.btn--large {
+    height: 64px;
+    font-size: $font-size-larger;
+    padding: 16px 48px 16px 32px;
+
+    &::after {
+      right: 24px;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+
+  &.btn--primary {
+    --color-button-foreground: var(--color-cta-foreground);
+    --color-button-background: var(--color-cta-background);
+
+    &::after {
+      content: url("data:image/svg+xml,%3Csvg width='12' height='17' viewBox='0 0 12 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.92898 1.42893L9.00005 8.5L1.92898 15.5711' stroke='%23FFFFFF' stroke-width='3'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+.tl-caption {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: $color-purple-extra-dark
+}
+
+.tl-image--center .tl-caption {
+  // caption under a centered image should be centered
+  width: 100%;
+  text-align: center;
+}

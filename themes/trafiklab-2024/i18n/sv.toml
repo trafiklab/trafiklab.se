@@ -1,0 +1,44 @@
+[brand]
+other = "Trafiklab"
+
+[header-cta-keys]
+other = "API-nycklar"
+
+[header-aria-change-language]
+other = "Byt språk till Engelska"
+
+[read-more-about]
+other = "Läs mer om"
+
+[docs-footer-about-this-page]
+other = "Om denna sida"
+
+[docs-footer-something-wrong]
+other = "Är det något fel med denna sida?"
+
+[docs-footer-view-on-github]
+other = "Visa denna sida på Github"
+
+[docs-footer-edit-on-github]
+other = "Redigera denna sida på Github"
+
+[docs-footer-create-translation-on-github]
+other = "Översätt denna sida på Github"
+
+[docs-footer-report-issue]
+other = "Rapportera ett problem"
+
+[docs-footer-published-at]
+other = "Sidan publicerades först den"
+
+[docs-footer-last-modified]
+other = "Sidan uppdaterades sist den"
+
+[partnerlist-title]
+other = "Officiell öppna data"
+
+[partnerlist-paragraph]
+other = "Trafiklab tillhandahåller officiella öppna data för all kollektivtrafik i Sverige. Några av de trafikföretag som vi publicerar öppna data åt listas här:"
+
+[published]
+other = "Publicerad"

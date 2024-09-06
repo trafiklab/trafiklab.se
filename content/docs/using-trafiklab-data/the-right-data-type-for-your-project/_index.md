@@ -3,7 +3,6 @@ title: The right data for your project
 layout: "single"
 ---
 
-{{% page-ref "departure-boards.md" "obtaining-stop-ids.md" "route-planning.md" %}}
 
 ### Creating a map with travel times
 
@@ -53,13 +52,4 @@ APIs.
 An alternative would be using GTFS and GTFS-RT. While this allows for more frequent updates within the bronze level, it
 does become more complicated. If you're up for a challenge, this will be a great learning experience.
 
-
-<!-- 
-
-### Creating your own route-planner algorithm
-
-### Tracking delays
-
-### Showing the actual position of a bus, train, ...
-
--->
+{{% page-ref "departure-boards.md" "obtaining-stop-ids.md" "route-planning.md" %}}

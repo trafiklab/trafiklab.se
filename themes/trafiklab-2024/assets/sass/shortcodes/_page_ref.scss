@@ -1,0 +1,22 @@
+.tl-page-ref {
+  background-color: var(--color-pageref-background);
+
+  padding-bottom: 8px;
+  display: inline-flex;
+  flex-direction: column;
+
+  .tl-h2 {
+    max-width: fit-content;
+  }
+
+  .tl-page-ref--preview {
+    padding: 0 8px;
+    margin: 0;
+  }
+}
+
+.tl-page-ref__wrapper {
+  // By putting the vertical margin on the wrapper row, margins will collapse with neighbouring margins
+  // This is otherwise blocked by the pageref being a flex element
+  margin: 16px 0;
+}

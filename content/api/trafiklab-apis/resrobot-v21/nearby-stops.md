@@ -14,7 +14,7 @@ pair of coordinates.
 {{% info %}} Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This
 way you can provide autocomplete and other search functions without internet access. It will make your application more
 responsive and more reliable as you don't have to wait for API responses.
-See [Combining data and APIs](../../transport-data-formats/combining-data/) for more information. {{% /info %}}
+See [Combining data and APIs](/docs/using-trafiklab-data/combining-data/) for more information. {{% /info %}}
 
 {{% warning %}} Be aware that the current position of for example a smartphone user is personal data. We do not save
 this data, but it might be stored for a short time in for example log files. You should probably inform your users and
@@ -25,15 +25,15 @@ ask for permission before sending their position to 3rd parties.
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.
 
-### How often is this data updated?
+### Updates
 
 The static data used for this API is updated when changes are made, at most once per day.
 
-### Which operators are covered by this dataset?
+### Operators covered by this dataset
 
 All operators which operate in Sweden are covered by the ResRobot APIs.
 
-### How often does the data format changes? Do breaking changes happen?
+### Breaking changes
 
 This API has the **stable** status. When breaking changes are made, we strive to have a 6 months transition period for
 users to update their implementations. Examples of breaking changes are the changes to existing fields or query

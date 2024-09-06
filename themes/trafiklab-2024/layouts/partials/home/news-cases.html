@@ -1,0 +1,25 @@
+{{ $args := . }}
+<aside class="container recent-posts">
+    <h2>Latest updates</h2>
+    {{ range ( where $args.context.Site.RegularPages "Type" "in" (slice "news" "use-cases") | first .max_combined ) }}
+    <a class="recent-posts__item tl-row" href="{{ .Permalink }}">
+        <div class="recent-posts__item__text tl-col--6 tl-col--xs-12">
+            <h3>{{ .Title }}</h3>
+            {{ if gt (len .Description) 0 }}
+            <p>{{ .Description | markdownify }}</p>
+            {{ else if gt (len .Summary) 300 }}
+            <p>{{ .Summary | markdownify | truncate 300 }}</p>
+            {{ else }}
+            <p>{{ .Summary | markdownify }}</p>
+            {{ end }}
+            <div class="flex-spacer"></div>
+            <div class="flex-row-right">
+                <div class="btn">Read more</div>
+            </div>
+        </div>
+        <div class="tl-col--6 tl-col--xs-12 recent-posts__item__image">
+            {{ partial "responsive-image.html" (dict "context" . "src" (.Params.image | safeURL)) }}
+        </div>
+    </a>
+    {{end}}
+</aside>

@@ -1,0 +1,45 @@
+.inverted {
+  margin: 16px 0;
+  padding: 16px;
+  background-color: var(--color-background);
+
+  --color-background: #{$color-purple};
+  --color-text: #{$color-white};
+
+  /* Accents, links and quotes */
+  --color-text-accent: #{$color-pink};
+  --color-muted-accent: #{$color-purple-hint};
+  --color-text-accent-background: #{$color-purple-dark};
+  --color-text-selection: #{$color-purple-muted};
+  --color-code-inline-background: #{$color-purple-muted};
+
+  /* Buttons */
+  --color-cta-foreground: #{$color-purple};
+  --color-cta-background: #{$color-white};
+
+  --color-button-foreground: #{$color-purple};
+  --color-button-background: #{$color-white};
+
+  /* Text buttons without background */
+  --color-button-text-foreground: #{$color-white};
+
+  /* Headers */
+  --color-h1-foreground: #{$color-white};
+  --color-h1-background: #{$color-black};
+
+  --color-h2-foreground: #{$color-white};
+
+  h2, .tl-page-ref .tl-h2 {
+    // since this accent is adjusted in multiple places, we need more specific qualifiers on the selector
+    --color-h2-accent: #{$color-purple-dark};
+  }
+
+  --color-h3-foreground: #{$color-white};
+  --color-h456-foreground: #{$color-white};
+
+  /* Page reference cards */
+  --color-pageref-background: #{$color-purple-extra-dark};
+
+  /* Tables */
+  --color-table-border: #{$color-purple-extra-muted};
+}

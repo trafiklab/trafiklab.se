@@ -1,0 +1,77 @@
+/**
+ * All colors are defined here. Colors used throughout the CSS code should only be the exact
+ * colors defined here without translucency. This ensures consistent use of the same colors throughout the site.
+ **/
+
+/* Black / white */
+$color-black: #232323;
+$color-white: #fff;
+
+/* Purple (Hue 290) */
+$color-purple-extra-dark: #3D323F; /* HSB 290, 20, 25 */
+$color-purple-dark: #6F1A80; /* HSB 290, 80, 50 */
+/* $color-purple-og: #9B26B6; /* original trafiklab purple. insufficient white contrast. HSB 289, 79, 71, pantone 2592c */
+$color-purple: #862699; /* HSB 290, 75, 60 */
+$color-purple-muted: #855F8C; /* HSB 290, 32, 55 */
+$color-purple-extra-muted: #BCA8BF; /* HSB 290, 12, 75 */
+$color-purple-hint: #F6F0F7; /* HSB 290, 3, 97 */
+
+/* Pink (Hue 290) */
+$color-pink: #F4BFFF; /* HSB 290, 25, 100 */
+$color-pink-hint: #F8D9FF; /* HSB 290, 15, 100 */
+$color-pink-hint-whitened: #FDF3FF; /* HSB 290, 5, 100 */
+
+/* Yellow (Hue 52) */
+$color-yellow-extra-dark: #4D4200; /* HSB 52, 100, 30 */
+$color-yellow: #FFF6BF; /* HSB 52, 40, 100 */
+$color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
+
+/* By assigning all colors to CSS variables, the color scheme of the site can easily be adjusted for parts of the site */
+/* An inverted block only has to assign new values to the variables and all elements will follow */
+:root {
+  --color-background: #{$color-white};
+  --color-text: #{$color-black};
+
+  /* Accents, links and quotes */
+  --color-text-accent: #{$color-purple};
+  --color-muted-accent: #{$color-purple-muted};
+  --color-text-accent-background: #{$color-pink-hint};
+  --color-text-selection: #{$color-yellow};
+  --color-code-inline-background: #f0f0f0;
+
+  /* Buttons */
+  --color-cta-foreground: #{$color-white};
+  --color-cta-background: #{$color-purple};
+
+  --color-button-foreground: #{$color-black};
+  --color-button-background: #{$color-yellow};
+
+  /* Text buttons without background */
+  --color-button-text-foreground: #{$color-black};
+
+  /* Headers */
+  --color-h1-foreground: #{$color-white};
+  --color-h1-background: #{$color-black};
+
+  --color-h2-foreground: #{$color-purple-extra-dark};
+  --color-h2-accent: #{$color-yellow};
+
+  --color-h3-foreground: #{$color-purple-extra-dark};
+  --color-h456-foreground: #{$color-purple-extra-dark};
+
+  /* Left navigation sidebar */
+  --color-sidebar-level1: #{$color-purple};
+  --color-sidebar-level2: #{$color-purple-muted};
+  --color-sidebar-level3: #{$color-purple-muted};
+  --color-sidebar-active: #{$color-purple};
+
+  /* Table of contents sidebar */
+  --color-toc-inactive: #{$color-purple-extra-muted};
+  --color-toc-active: #{$color-purple};
+
+  /* Page reference cards */
+  --color-pageref-background: #{$color-purple-hint};
+
+  /* Tables */
+  --color-table-border: #{$color-purple-extra-muted};
+}

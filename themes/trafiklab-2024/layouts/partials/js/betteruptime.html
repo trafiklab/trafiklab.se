@@ -1,0 +1,66 @@
+<script type="application/javascript">
+
+    function createHtml(link, title, text) {
+        return '<a href="' + link + '" class="disruption-banner__message">' +
+          '<b class="disruption-banner__message__title">' + title + '</b>' +
+          '<span class="disruption-banner__message__text">' + text + '</span>' +
+          '<span class="btn btn--text">Read more</span>' +
+          '</a>'
+    }
+
+    function formatTimeStamp(startingTimeUtc) {
+        let startingTimeLocal = new Date(startingTimeUtc);
+        let dayPart = startingTimeLocal.toLocaleDateString('en-Se', {weekday: 'short'})
+        let datePart = startingTimeLocal.toLocaleDateString('en-Se', {month: 'short', day: 'numeric'})
+        let timePart = startingTimeLocal.toLocaleTimeString('en-Se', {hour: '2-digit', minute: '2-digit'})
+        return `${dayPart} ${datePart} ${timePart}`
+    }
+
+    fetch("{{ .Site.Params.devPortalUrl }}/api/trafiklab-se/incidents").then(
+        data => data.json().then(json => {
+            let disruptionBanner = $(".disruption-banner .container");
+
+            for (let statusReport of json) {
+                if (statusReport.report_type === "manual") {
+                    let link = statusReport.href;
+                    let message = statusReport.title
+                    let html = createHtml(link, 'Service disruption', message);
+                    disruptionBanner.append(html);
+
+                } else if (statusReport.report_type === "maintenance") {
+                    let link = statusReport.href;
+                    let startingTimeUtc = statusReport.starts_at;
+                    let startingTimeFormatted = formatTimeStamp(startingTimeUtc);
+
+                    let numberOfAffectedResources = statusReport.affected_resources.length;
+                    let firstAffectedResource = statusReport.affected_resources[0].name;
+                    let message;
+                    if (numberOfAffectedResources > 1) {
+                        message = firstAffectedResource + " + " + (numberOfAffectedResources - 1) + " other"
+                    } else {
+                        message = firstAffectedResource;
+                    }
+
+                    let html = createHtml(link, "Scheduled maintenance", startingTimeFormatted + '; ' + message)
+                    disruptionBanner.append(html);
+
+                } else {
+                    let link = statusReport.href;
+
+                    let numberOfAffectedResources = statusReport.affected_resources.length;
+                    let firstAffectedResource = statusReport.affected_resources[0].name;
+                    let message;
+                    if (numberOfAffectedResources > 1) {
+                        message = firstAffectedResource + " + " + (numberOfAffectedResources - 1) + " other"
+                    } else {
+                        message = firstAffectedResource;
+                    }
+
+                    let html = createHtml(link, "Service disruption", message)
+                    disruptionBanner.append(html);
+                }
+            }
+        }));
+
+
+</script>

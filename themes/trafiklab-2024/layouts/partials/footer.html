@@ -1,0 +1,62 @@
+<footer id="footer">
+  <div class="footer-wrapper container">
+    <div class="footer-header">
+      {{- $logoUrl := resources.Get "images/logo.svg" -}}
+      <a href='{{ ref . "/" }}'><img src="{{ $logoUrl.Permalink }}" class="brand" alt="{{ i18n "brand" }} logo" /></a>
+    </div>
+    <div class="tl-row">
+      <div class="tl-col--2 tl-col--xs-12">
+        <nav class="footer-menu" aria-label="main">
+          <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+              <li class="footer-text">
+                {{ if .Page.Params.absolute }}
+                  <a href="{{ .Page.Params.Link }}" target="_blank">
+                    <span>{{ .Title }}</span>
+                  </a>
+                {{ else }}
+                <a href="{{ .URL }}">
+                  {{ .Pre }}
+                  <span>{{ .Name }}</span>
+                </a>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+      <div class="tl-col--10 tl-col--xs-12">
+        {{ $headless := .Site.GetPage "/headless" }}
+        {{ $logos := $headless.Resources.Match "footer/*" }}
+
+        {{ range $logos }}
+          {{ if not .Params.draft }}
+            {{ $.Scratch.Add "heading" (slice .Params.Heading) }}
+          {{ end }}
+        {{ end }}
+
+        {{ range .Scratch.Get "heading" | uniq }}
+        <div class="logo-row">
+          <h4 class="logo-row--header">{{ . }}</h4>
+          {{ $title := . }}
+          {{ range $logos }}
+            {{ if and (eq $title .Params.Heading) (not .Params.draft) }}
+              {{ if .Params.Link }}
+                <a href="{{ .Params.Link }}" target="_blank" class="logo-row--item" aria-label="{{i18n " read-more-about"}} {{ .Title }}">
+                  <img src="{{ .Params.Image }}" title="{{ .Title }}" alt="{{ .Title }} logo">
+                </a>
+              {{ else }}
+                <a href="{{ .URL }}" aria-label="{{i18n "read-more-about"}} {{ .Title }}" class="logo-row--item">
+                  {{ .Pre }}
+                  <img src="{{ .Params.Image }}" title="{{ .Title }}" alt="{{ .Title }} logo">
+                </a>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</footer>

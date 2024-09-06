@@ -1,0 +1,2 @@
+{{ $file_path := .Get 0 }}
+{{ readFile $file_path | markdownify | $.Page.RenderString }}

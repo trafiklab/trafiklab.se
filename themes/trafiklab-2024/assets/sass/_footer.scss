@@ -1,0 +1,90 @@
+// Copied from Trafiklab-2021
+
+$footer-height: 430px;
+
+#footer {
+  width: 100%;
+  min-height: $footer-height;
+}
+
+body #footer {
+  background: $color-black;
+
+  .footer-wrapper {
+    margin: 0 auto;
+    max-width: 86rem;
+    padding: 4rem 0 3rem;
+  }
+
+  .brand {
+    background: $color-black;
+    padding: 5px;
+    width: 100px;
+  }
+
+  .footer-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  nav.footer-menu {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+    }
+
+    a, span {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  h4.logo-row--header {
+    color: $color-white;
+    margin: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: unset;
+    font-size: 1em;
+  }
+
+  .logo-row {
+    margin-bottom: 1rem;
+  }
+
+  .logo-row--item {
+    display: inline-block;
+    flex: 0 0 13%;
+    margin: .5rem;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-height: 40px;
+      max-width: 100%;
+      height: auto;
+      filter: brightness(0) invert(1); /* Force footer logos to be white */
+    }
+  }
+}
+
+.footer-text {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .footer-text {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  footer#footer {
+    padding: 0 16px;
+  }
+}

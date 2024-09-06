@@ -9,4 +9,4 @@ have empty seats, then travel together. Their API allows you to build your own s
 
 GitHub: [https://github.com/skjutsgruppen](https://github.com/skjutsgruppen)
 
-Website: [https://www.skjutsgruppen.nu](https://www.skjutsgruppen.nu)
+Website: [https://www.skjutsgruppen.se](https://skjutsgruppen.se/)
