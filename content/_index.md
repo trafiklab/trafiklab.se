@@ -12,6 +12,6 @@ links:
     link: "/api/"
 description: "Trafiklab is an initiative for open data related to public transport. We publish high quality data, make it simpler to access APIs from public transport companies, easier to find data and more interesting to talk about possibilities. Here you can find information, see what others have done, and read about what's happening."
 ---
-At Trafiklab, we provide official open data for all public transport in Sweden
+Here at Trafiklab, we provide official open data for all public transport in Sweden.
 
-Public transport data is available as both scheduled and realtime data, and it is continuously updated. We are constantly working with opening up more data sources and improving the existing ones.
+We publish high quality data, make it simpler to access APIs from public transport companies, easier to find data and more interesting to talk about possibilities. Our public transport data is available free of charge, includes both scheduled and realtime data, and is continuously updated. 

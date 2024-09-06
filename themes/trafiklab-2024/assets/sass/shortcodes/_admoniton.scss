@@ -3,11 +3,11 @@
   display: flex;
   margin: 16px 0;
   .admonition-icon {
-    padding: .75rem;
+    padding: 16px;
   }
 
   .content {
-    margin: .75rem;
+    margin: 16px 16px 16px 0;
 
     p:first-of-type {
       margin-top: 0;
@@ -56,9 +56,9 @@
 }
 
 .admonition.note {
-  background-color: #eae6ff;
+  background-color: #F6E1FA;
 
   .admonition-icon {
-    color: #9d95fd;
+    color: #6B0C7A;
   }
 }

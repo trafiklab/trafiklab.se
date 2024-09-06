@@ -42,7 +42,7 @@ nav.tl-side-navigation {
     padding: 4px 0 0;
   }
 
-  li.tl-side-navigation__item--active {
+  li.tl-side-navigation__item--active, .tl-side-navigation__item:not(.tl-side-navigation__item--level-0):has(.tl-side-navigation__dropdown-list--active) {
     background-color: $color-purple-hint;
   }
 
