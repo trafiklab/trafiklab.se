@@ -65,6 +65,7 @@ main.landing {
     .landing-demo-middle {
       position: relative;
       z-index: 1; // Common stacking index root for marker, stops, and metro lines
+      overflow: visible;
 
       .landing-demo-stop {
         position: absolute;

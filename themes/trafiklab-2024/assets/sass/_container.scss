@@ -17,7 +17,7 @@ $container-padding-horizontal: 32px;
     padding-right: $container-padding-horizontal;
     width: 100%;
     max-width: 100vw;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     &.container--no-gutter {
       padding-left: 0;
@@ -39,7 +39,7 @@ $container-padding-horizontal: 32px;
 
 
 @media screen and (max-width: $container-width + (2*$container-padding-horizontal)) {
-  body.without-sidebar .container:not(.container--text) {
+  body.without-sidebar .container:not(.container--text), body.home .container {
     // When the container no longer has whitespace on the side through centering, margins need to be added
     margin-left: 0;
     padding-left: $container-padding-horizontal;
@@ -47,7 +47,7 @@ $container-padding-horizontal: 32px;
     padding-right: $container-padding-horizontal;
     width: 100%;
     max-width: 100vw;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     &.container--no-gutter {
       padding-left: 0;
