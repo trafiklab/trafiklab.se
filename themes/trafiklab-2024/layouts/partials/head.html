@@ -3,6 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{{ block "title" . }}{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
+<link rel="preconnect" href="{{ .Site.Params.devPortalUrl }}"/>
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ $style.RelPermalink }}" />
 
@@ -34,4 +35,7 @@
 
 {{ partial "linked-data/breadcrumbs.html" . }}
 {{ partial "linked-data/news-publish-date.html" . }}
+
+<script src="/scripts/jquery.3.7.1.min.js"></script>
+{{ partial "js/betteruptime.html" .}}
 {{ partial "js/plausible-analytics.html" . }}

@@ -1,24 +1,24 @@
 <script type="application/javascript">
 
+    function createHtml(link, title, text) {
+        return '<a href="' + link + '" class="disruption-banner__message">' +
+          '<b class="disruption-banner__message__title">' + title + '</b>' +
+          '<span class="disruption-banner__message__text">' + text + '</span>' +
+          '<span class="btn btn--text">Read more</span>' +
+          '</a>'
+    }
+
+    function formatTimeStamp(startingTimeUtc) {
+        let startingTimeLocal = new Date(startingTimeUtc);
+        let dayPart = startingTimeLocal.toLocaleDateString('en-Se', {weekday: 'short'})
+        let datePart = startingTimeLocal.toLocaleDateString('en-Se', {month: 'short', day: 'numeric'})
+        let timePart = startingTimeLocal.toLocaleTimeString('en-Se', {hour: '2-digit', minute: '2-digit'})
+        return `${dayPart} ${datePart} ${timePart}`
+    }
+
     fetch("{{ .Site.Params.devPortalUrl }}/api/trafiklab-se/incidents").then(
         data => data.json().then(json => {
             let disruptionBanner = $(".disruption-banner .container");
-
-            function createHtml(link, title, text) {
-                return '<a href="' + link + '" class="disruption-banner__message">' +
-                    '<b class="disruption-banner__message__title">' + title + '</b>' +
-                    '<span class="disruption-banner__message__text">' + text + '</span>' +
-                    '<span class="btn btn--text">Read more</span>' +
-                    '</a>'
-            }
-
-            function formatTimeStamp(startingTimeUtc) {
-                let startingTimeLocal = new Date(startingTimeUtc);
-                let dayPart = startingTimeLocal.toLocaleDateString('en-Se', {weekday: 'short'})
-                let datePart = startingTimeLocal.toLocaleDateString('en-Se', {month: 'short', day: 'numeric'})
-                let timePart = startingTimeLocal.toLocaleTimeString('en-Se', {hour: '2-digit', minute: '2-digit'})
-                return `${dayPart} ${datePart} ${timePart}`
-            }
 
             for (let statusReport of json) {
                 if (statusReport.report_type === "manual") {

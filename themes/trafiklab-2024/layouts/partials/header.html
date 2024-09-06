@@ -49,10 +49,10 @@
 
   <div class="site-header__mobile desktop-hidden" aria-hidden="true">
     <nav class="mobile-navigation">
-      <ul>
+      <ul class="tl-mobile-navigation-list">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-          <li class="tl-mobile-navigation-item {{ if $currentPage.IsMenuCurrent "main" . }} tl-mobile-navigation-item--active{{ end }}">
+          <li class="tl-mobile-navigation-item {{ if or ($currentPage.IsDescendant .Page) ($currentPage.IsMenuCurrent "main" .) }} tl-mobile-navigation-item--active tl-mobile-navigation-item--open {{ end }} {{ if and (.Page.Data) (eq .Page.Layout "single") }} tl-mobile-navigation-item--has-children {{ end }}">
             {{ if .Page.Params.absolute }}
               <a href="{{ .Page.Params.Link }}" target="_blank">
                 {{ .Title }}
@@ -76,12 +76,32 @@
             {{ end }}
 
             {{ if and (.Page.Data) (eq .Page.Layout "single") }}
-              <ul class="tl-mobile-navigation-list--level-2">
+              <ul class="tl-mobile-navigation-list tl-mobile-navigation-list--level-2">
               {{- range $i, $e := .Page.Data.Pages -}}
-                <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-2">
-                  <a href="{{ .Permalink }}">
+                <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-2 {{ if or ($currentPage.IsDescendant .) (eq $currentPage.Permalink .Permalink) }} tl-mobile-navigation-item--active  tl-mobile-navigation-item--open {{ end }} {{ if .Page.Data.Pages }} tl-mobile-navigation-item--has-children {{ end }}">
+                  <a href="{{ if .Params.headless }}#{{ else }}{{ .Permalink }}{{ end }}">
+                    {{ if .Page.Data.Pages }}
+                    <span class="tl-mobile-navigation-item__chevron">
+                      <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
+                      </svg>
+                    </span>
+                    {{ end }}
                     {{ .Name }}
                   </a>
+
+                  {{ if .Page.Data.Pages }}
+                  <ul class="tl-mobile-navigation-list tl-mobile-navigation-list--level-3">
+                    {{- range $i, $e := .Page.Data.Pages -}}
+                    <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-3 {{ if or ($currentPage.IsDescendant .) (eq $currentPage.Permalink .Permalink) }} tl-mobile-navigation-item--active {{ end }}">
+                      <a href="{{ .Permalink }}">
+                        {{ .Name }}
+                      </a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                  {{ end }}
+
                 </li>
               {{ end }}
               </ul>
@@ -98,6 +118,19 @@
           </a>
         </li>
       </ul>
+      <script type="text/javascript">
+        $(".tl-mobile-navigation-item--has-children > a > span.tl-mobile-navigation-item__chevron").on("click", function (event) {
+          event.preventDefault();
+          $(this).parent().parent().toggleClass("tl-mobile-navigation-item--open");
+        });
+        $(".tl-mobile-navigation-item--has-children > a").on("click", function (event) {
+          if (this.href == "#") {
+            // Larger click target for folders without own content
+            event.preventDefault();
+            $(this).parent().toggleClass("tl-mobile-navigation-item--open");
+          }
+        });
+      </script>
     </nav>
   </div>
 </header>

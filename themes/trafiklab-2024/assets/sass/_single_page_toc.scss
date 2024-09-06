@@ -2,6 +2,7 @@ nav.inline-toc {
   // Positioning on page is already handled in _layout.scss, only contents have to be defined
   color: var(--color-sidebar-active);
   background-color: var(--color-background);
+  margin-bottom: 2 * $vertical-spacing-unit;
 
   ul {
     list-style: none;
