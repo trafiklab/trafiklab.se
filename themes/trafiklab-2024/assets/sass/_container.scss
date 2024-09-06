@@ -1,4 +1,4 @@
-
+$container-padding-horizontal: 32px;
 .container {
   width: $container-width;
   margin: 0 auto;
@@ -8,53 +8,60 @@
   max-width: $container-text-width;
 }
 
-@media screen and (max-width: $container-width + 64px + $left-sidebar-width) {
+@media screen and (max-width: $container-width + (2*$container-padding-horizontal) + $left-sidebar-width) {
   body.with-sidebar .container:not(.container--text) {
     // When the container no longer has whitespace on the side through centering, margins need to be added
-    margin-left: 32px;
-    margin-right: 32px;
-    max-width: $container-width;
-    width: auto;
+    margin-left: 0;
+    padding-left: $container-padding-horizontal;
+    margin-right: 0;
+    padding-right: $container-padding-horizontal;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: scroll;
 
     &.container--no-gutter {
-      margin-left: 0;
-      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
 }
 
-@media screen and (max-width: $container-text-width + 128px + $left-sidebar-width) {
-  body.with-sidebar .container--text {
-    margin-left: 32px;
-    margin-right: 32px;
+@media screen and (max-width: $container-text-width + (4*$container-padding-horizontal) + $left-sidebar-width) {
+  // 4 * padding since there are two containers in this case
+  body.with-sidebar .container .container--text {
+    margin-left: $container-padding-horizontal;
+    margin-right: $container-padding-horizontal;
     width: auto;
     max-width: $container-text-width;
   }
 }
 
 
-@media screen and (max-width: $container-width + 64px) {
+@media screen and (max-width: $container-width + (2*$container-padding-horizontal)) {
   body.without-sidebar .container:not(.container--text) {
     // When the container no longer has whitespace on the side through centering, margins need to be added
-    margin-left: 32px;
-    margin-right: 32px;
-    width: auto;
-    max-width: $container-width;
+    margin-left: 0;
+    padding-left: $container-padding-horizontal;
+    margin-right: 0;
+    padding-right: $container-padding-horizontal;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: scroll;
 
     &.container--no-gutter {
-      margin-left: 0;
-      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
 
-@media screen and (max-width: $container-text-width + 128px) {
-  body.without-sidebar .container--text {
-    margin-left: 32px;
-    margin-right: 32px;
+@media screen and (max-width: $container-text-width + (4*$container-padding-horizontal)) {
+  // 4 * padding since there are two containers in this case
+  body.without-sidebar .container .container--text, body.with-sidebar .container .container--text {
+    margin-left: 0; // just use the single container padding
+    margin-right: 0; // just use the single container padding
     width: auto;
-    max-width: $container-text-width;
   }
 }
 

@@ -79,6 +79,12 @@ h1 > span {
   margin: 0;
 }
 
+@media screen and (max-width: $breakpoint-xs) {
+  h1 {
+    text-wrap: wrap;
+  }
+}
+
 span.subtext {
   @include text-subtext;
   display: block;

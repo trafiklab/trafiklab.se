@@ -4,7 +4,8 @@
     {{ block "head" . }}{{ partial "head.html" .}}{{ end }}
 </head>
 {{ $sidebar := eq (.FirstSection.Param "sidebar") true }}
-<body class="type-{{ .Type }} {{ if $sidebar }} with-sidebar {{ end }}  {{ if not $sidebar }} without-sidebar {{ end }} {{ if .IsSection }} is-section {{ else }} is-single {{ end }} layout-{{.Layout}}">
+{{ $home := eq .Type "home" }}
+<body class="type-{{ .Type }} {{ if not $home }}{{ if $sidebar }} with-sidebar {{ end }}  {{ if not $sidebar }} without-sidebar {{ end }} {{ if .IsSection }} is-section {{ else }} is-single {{ end }} {{ else }} home {{ end }} layout-{{.Layout}}">
 
 {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
 <main id="content">

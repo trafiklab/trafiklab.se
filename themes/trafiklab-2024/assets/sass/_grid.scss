@@ -109,7 +109,7 @@
   }
 }
 
-@media screen and (min-width: $breakpoint-sm) {
+@media screen and (min-width: $breakpoint-sm + 1) {
   .desktop-hidden {
     display: none !important;
   }
