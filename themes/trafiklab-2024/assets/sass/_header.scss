@@ -62,7 +62,7 @@ header.site-header {
       width: 0;
       left: 50%;
       border-bottom: 4px solid $color-purple;
-      transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
+      transition: width 0.33s ease-in-out, left 0.33s ease-in-out;
     }
 
     .tl-top-navigation-item:not(.tl-top-navigation-item--active):not(.brand):hover::after {
@@ -88,6 +88,11 @@ header.site-header {
         padding-bottom: 2px; // optical alignment correction
         color: $color-purple;
         border: 1px solid $color-purple;
+      }
+
+      .tl-button:hover {
+        transition: background-color 0.5s ease-in-out;
+        background-color: $color-pink-hint-whitened;
       }
     }
 
