@@ -26,7 +26,7 @@
             {{ partial "toc/mobile-toc.html" .}}
         </div>
         <div class="page__content">
-            <p>{{ if eq "News" .Parent.Title }}  {{ if .Date }} {{ dateFormat "January 2, 2006" .Date }} {{ end }} {{ end }}</p>
+            <p class="page__content__date">{{ if eq "News" .Parent.Title }}  {{ if .Date }} {{ dateFormat "January 2, 2006" .Date }} {{ end }} {{ end }}</p>
             {{ .Content }}
         </div>
         {{ partial "docs-footer.html" .}}

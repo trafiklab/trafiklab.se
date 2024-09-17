@@ -25,6 +25,9 @@
 
 {{ if and (not (eq .Type "home")) (not (eq .Layout "section")) }}
     <div class="content-right-wrapper">
+        {{ if .Params.image_credit }}
+            <span class="background-image__credit">Image: {{ .Params.image_credit }}</span>
+        {{ end }}
         {{ block "sidebar-right" . }}{{ partial "toc/sidebar-toc.html" .}}{{ end }}
     </div>
 {{ else }}
