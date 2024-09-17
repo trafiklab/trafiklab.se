@@ -7,6 +7,12 @@ other = "My account"
 [header-aria-change-language]
 other = "Change language to Swedish"
 
+[landing-tagline]
+other = "The home of"
+
+[landing-tagline-inverted]
+other = "swedish public transport data"
+
 [read-more-about]
 other = "Read more about"
 

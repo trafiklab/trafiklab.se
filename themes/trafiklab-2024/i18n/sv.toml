@@ -7,6 +7,12 @@ other = "API-nycklar"
 [header-aria-change-language]
 other = "Byt språk till Engelska"
 
+[landing-tagline]
+other = "Öppna data för all "
+
+[landing-tagline-inverted]
+other = "kollektivtrafik i sverige"
+
 [read-more-about]
 other = "Läs mer om"
 

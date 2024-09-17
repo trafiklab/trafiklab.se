@@ -12,6 +12,7 @@ links:
       link: "/sv/api/"
 description: "Trafiklab är ett initiativ för öppen trafikdata. Vi vill göra det enklare att få tillgång till APIer från trafikföretag, lättare att visa upp vad som finns och roligare att prata om vad man skulle kunna göra. Här kan du utforska vad andra gjort, dela bra idéer och hitta information om tillgängliga APIer."
 ---
-At Trafiklab, we provide official open data for all public transport in Sweden
 
-Public transport data is available as both scheduled and realtime data, and it is continuously updated. We are constantly working with opening up more data sources and improving the existing ones.
+Här på Trafiklab tillhandahåller vi officiella öppna data för all kollektivtrafik i Sverige.
+
+Vi publicerar högkvalitativ data, gör det enklare att komma åt API:er från kollektivtrafikföretag, lättare att hitta data och mer intressant att diskutera möjligheter. Våra kollektivtrafikdata är tillgängliga kostnadsfritt, inkluderar både schemalagd och realtidsdata, och uppdateras kontinuerligt.
