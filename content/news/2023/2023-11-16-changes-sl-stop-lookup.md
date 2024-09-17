@@ -2,6 +2,7 @@
 title: "Changes to SL Stop lookup"
 date: "2023-11-16"
 image: /media/2023/11/train-stop-pole.jpg
+image_position: "center"
 image_credit: Samtrafiken
 ---
 

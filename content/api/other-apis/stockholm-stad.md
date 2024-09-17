@@ -3,6 +3,7 @@ title: "Stockholm open data"
 layout: "single"
 weight: 100
 image: '/media/2024/09/banner_pendeltag.jpg'
+image_position: 'bottom'
 ---
 Stockholm's open-data portal was launched in 2011 and contains lots of valuable information, such as environment,
 streets and parking, maps and aerial photography, statistics and surveys.

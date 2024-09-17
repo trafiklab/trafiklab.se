@@ -15,6 +15,7 @@ aliases:
   - /node/16601/konsol
   - /node/16601/licens
 image: '/media/2024/09/banner_varm_tag_vinter2_Øyvind Lund.jpg'
+image_position: 'bottom'
 ---
 
 ## API Overview

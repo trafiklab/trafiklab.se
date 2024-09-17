@@ -3,6 +3,7 @@ layout: "single"
 weight: 50
 title: Västtrafiks API-portal
 image: '/media/2024/09/banner_hisingebron_vasttrafik.jpg'
+image_position: 'bottom'
 aliases:
   - /api/other-apis/västtrafiken
   - /api/other-apis/vasttrafiken

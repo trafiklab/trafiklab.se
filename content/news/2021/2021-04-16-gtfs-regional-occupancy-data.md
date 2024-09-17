@@ -3,6 +3,7 @@ title: "Occupancy data in GTFS Regional"
 date: "2021-04-16"
 
 image: /media/2021/01/sj-x2000-centralen.jpg
+image_position: 'center'
 image_credit: Samtrafiken
 ---
 

@@ -12,6 +12,7 @@ aliases:
   - /node/12475/documentation
   - /node/12475/licens
 image: '/media/2024/09/banner_inlandsbanan.jpg'
+image_position: 'bottom'
 ---
 
 

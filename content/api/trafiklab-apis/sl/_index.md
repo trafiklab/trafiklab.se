@@ -3,8 +3,10 @@ title: SL's APIs
 layout: "single"
 weight: 80
 image: '/media/2024/09/banner_pendeltag.jpg'
+image_position: 'bottom'
 cascade:
   - image: '/media/2024/09/banner_pendeltag.jpg'
+  - image_position: 'bottom'
 ---
 SL's APIs is a collection of 7 APIs which provide information about planned and realtime traffic.
 

@@ -47,8 +47,20 @@ body.with-sidebar, body.without-sidebar {
     width: $container-width + ($sidebar-container-gap - $sidebar-image-gap) + $right-sidebar-width;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     filter: saturate(90%) contrast(80%);
+
+    &.background-image--top {
+      background-position: top;
+    }
+
+    &.background-image--center {
+      background-position: center;
+    }
+
+    &.background-image--bottom {
+      background-position: bottom;
+    }
 
     &::before {
       position: absolute;
