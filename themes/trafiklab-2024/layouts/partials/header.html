@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="disruption-banner">
     <div class="container">
-<!--      javascript in betteruptime.html-->
+<!-- filled by javascript in betteruptime.html-->
     </div>
   </div>
   
@@ -55,6 +55,7 @@
           <li class="tl-mobile-navigation-item {{ if or ($currentPage.IsDescendant .Page) ($currentPage.IsMenuCurrent "main" .) }} tl-mobile-navigation-item--active tl-mobile-navigation-item--open {{ end }} {{ if and (.Page.Data) (eq .Page.Layout "single") }} tl-mobile-navigation-item--has-children {{ end }}">
             {{ if .Page.Params.absolute }}
               <a href="{{ .Page.Params.Link }}" target="_blank">
+                <span class="tl-mobile-navigation-item__chevron_wrapper"></span>
                 {{ .Title }}
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
@@ -63,13 +64,15 @@
               </a>
             {{ else }}
               <a href="{{ .URL }}">
-                {{ if and (.Page.Data) (eq .Page.Layout "single") }}
-                  <span class="tl-mobile-navigation-item__chevron">
-                    <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
-                    </svg>
-                  </span>
-                {{ end }}
+                <span class="tl-mobile-navigation-item__chevron_wrapper">
+                    {{ if and (.Page.Data) (eq .Page.Layout "single") }}
+                    <span class="tl-mobile-navigation-item__chevron">
+                                <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
+                                </svg>
+                              </span>
+                    {{ end }}
+                </span>
                 {{ .Pre }}
                 {{ .Name }}
               </a>
@@ -80,13 +83,15 @@
               {{- range $i, $e := .Page.Data.Pages -}}
                 <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-2 {{ if or ($currentPage.IsDescendant .) (eq $currentPage.Permalink .Permalink) }} tl-mobile-navigation-item--active  tl-mobile-navigation-item--open {{ end }} {{ if .Page.Data.Pages }} tl-mobile-navigation-item--has-children {{ end }}">
                   <a href="{{ if .Params.headless }}#{{ else }}{{ .Permalink }}{{ end }}">
-                    {{ if .Page.Data.Pages }}
-                    <span class="tl-mobile-navigation-item__chevron">
-                      <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
-                      </svg>
-                    </span>
-                    {{ end }}
+                        <span class="tl-mobile-navigation-item__chevron_wrapper">
+                        {{ if .Page.Data.Pages }}
+                        <span class="tl-mobile-navigation-item__chevron">
+                            <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
+                            </svg>
+                          </span>
+                        {{ end }}
+                        </span>
                     {{ .Name }}
                   </a>
 
@@ -95,6 +100,7 @@
                     {{- range $i, $e := .Page.Data.Pages -}}
                     <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-3 {{ if or ($currentPage.IsDescendant .) (eq $currentPage.Permalink .Permalink) }} tl-mobile-navigation-item--active {{ end }}">
                       <a href="{{ .Permalink }}">
+                        <span class="tl-mobile-navigation-item__chevron_wrapper"></span>
                         {{ .Name }}
                       </a>
                     </li>
@@ -110,7 +116,9 @@
           </li>
         {{ end }}
         <li class="tl-mobile-navigation-item">
-          <a href="{{ .Site.Params.devPortalUrl }}" target="_blank">{{ i18n "header-cta-keys" }}
+          <a href="{{ .Site.Params.devPortalUrl }}" target="_blank">
+            <span class="tl-mobile-navigation-item__chevron_wrapper"></span>
+              {{ i18n "header-cta-keys" }}
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
@@ -119,7 +127,7 @@
         </li>
       </ul>
       <script type="text/javascript">
-        $(".tl-mobile-navigation-item--has-children > a > span.tl-mobile-navigation-item__chevron").on("click", function (event) {
+        $(".tl-mobile-navigation-item--has-children > a > span.tl-mobile-navigation-item__chevron_wrapper").on("click", function (event) {
           event.preventDefault();
           $(this).parent().parent().toggleClass("tl-mobile-navigation-item--open");
         });
