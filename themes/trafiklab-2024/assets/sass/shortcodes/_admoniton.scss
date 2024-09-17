@@ -23,6 +23,10 @@
     height: 16px;
     width: 16px;
   }
+
+  a:link:hover {
+    @include text-link-hover
+  }
 }
 
 .admonition.success {

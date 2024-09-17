@@ -10,13 +10,11 @@ a, p, span, ul, li, label, input {
 }
 
 a {
-  color: var(--color-text-accent);
-  text-decoration: none;
+  @include text-link
 }
 
 p a:link:hover {
-  transition: background-color 0.25s ease-in-out;
-  background-color: var(--color-text-accent-background);
+  @include text-link-hover
 }
 
 p {

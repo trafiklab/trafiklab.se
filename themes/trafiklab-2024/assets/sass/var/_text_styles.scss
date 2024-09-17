@@ -142,6 +142,16 @@ $font-size-hero: 64px; /* Only for landing page hero text */
   text-transform: uppercase;
 }
 
+@mixin text-link {
+  color: var(--color-text-accent);
+  text-decoration: none;
+}
+
+@mixin text-link-hover {
+  transition: background-color 0.25s ease-in-out;
+  background-color: var(--color-text-accent-background);
+}
+
 /* Page header */
 @mixin nav-header-item {
   @include font-ibm-plex-sans-condensed;
