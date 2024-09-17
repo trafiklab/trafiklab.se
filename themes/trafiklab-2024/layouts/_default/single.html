@@ -13,7 +13,7 @@
 <article class="page {{ $image_class }} container">
     <div class="container container--text">
         <div class="page__header">
-            <span class="subtext">{{.Parent.Title }}</span>
+            <span class="subtext">{{.Parent.Title }} </span>
             <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}
                 <!--{{ if isset .Site.Params "sourcerepository" }}
                 <a href="{{ $.Site.Params.sourceRepository }}blob/{{ $.Site.Params.sourceRepositoryBranch }}/content/{{ replace .File.Path "\\" "/" }}" class="docs-header-vcs">
@@ -27,6 +27,7 @@
             {{ partial "toc/mobile-toc.html" .}}
         </div>
         <div class="page__content">
+            <p>{{ if eq "News" .Parent.Title }}  {{ if .Date }} {{ dateFormat "January 2, 2006" .Date }} {{ end }} {{ end }}</p>
             {{ .Content }}
         </div>
         {{ partial "docs-footer.html" .}}

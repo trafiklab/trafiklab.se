@@ -32,7 +32,7 @@ other = "Report an issue"
 other = "This page was published at"
 
 [docs-footer-last-modified]
-other = "This page was last modified at"
+other = "and last modified at"
 
 [partnerlist-title]
 other = "Official open data"
