@@ -1,4 +1,9 @@
 {{ if (gt (.Fragments.HeadingsMap | len) 0) }}
+{{ $hasContent := false }}
+{{ range $key, $value := .Fragments.HeadingsMap }}
+{{ $hasContent = or ($hasContent) (lt $value.Level 4) }}
+{{ end }}
+{{ if $hasContent }}
 <nav class="inline-toc" role="navigation" aria-label="Table of contents">
     <ul>
         <li class="inline-toc__header"><a href="#top">On this page</a></li>
@@ -16,4 +21,5 @@
     {{ end }}
     </ul>
 </nav>
+{{ end }}
 {{ end }}
