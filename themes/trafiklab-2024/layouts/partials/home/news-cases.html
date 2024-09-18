@@ -1,7 +1,7 @@
 {{ $args := . }}
 
 <aside class="container recent-posts">
-    <h2>Latest updates</h2>
+    <h2>{{i18n "latest-news-title"}}</h2>
     {{ range ( where $args.context.Site.RegularPages "Type" "in" (slice "news" "use-cases") | first .max_combined ) }}
     <a class="recent-posts__item tl-row" href="{{ .Permalink }}">
         <div class="recent-posts__item__text tl-col--6 tl-col--xs-12">
@@ -16,7 +16,7 @@
             <p>{{ $preview }}</p>
             <div class="flex-spacer"></div>
             <div class="flex-row-right">
-                <div class="btn">Read more</div>
+                <div class="btn">{{i18n "read-more"}}</div>
             </div>
         </div>
         <div class="tl-col--6 tl-col--xs-12 recent-posts__item__image">

@@ -14,7 +14,7 @@
         <div class="section__item__info tl-col--xs-12 tl-col--sm-12 {{ if .Params.Image }} tl-col--md-6 {{ else }} tl-col--md-12 {{ end }}">
             {{ if or .Lastmod .Date }}
             <div class="section__item__header__date">
-                <label class="tl-label">Published {{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
+                <label class="tl-label">{{ i18n "published" }} {{ (default .Lastmod .Date).Format "2006-01-02" }}</label>
             </div>
             {{ end }}
             {{ if gt (len .Description) 0 }}

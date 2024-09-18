@@ -40,6 +40,21 @@ other = "Sidan publicerades först den"
 [docs-footer-last-modified]
 other = "och uppdaterades sist den"
 
+[latest-news-title]
+other = "Senaste nyheter"
+
+[stay-informed-title]
+other = "Håll dig uppdaterad"
+
+[stay-informed-paragraph]
+other = "Prenumerera på vårt nyhetsbrev för att då och då motta uppdateringar angående vår data och evenemang."
+
+[newsletter-email-placeholder]
+other = "Din e-post adress"
+
+[newsletter-email-subscribe]
+other = "Prenumerera"
+
 [partnerlist-title]
 other = "Officiell öppna data"
 
@@ -48,3 +63,6 @@ other = "Trafiklab tillhandahåller officiella öppna data för all kollektivtra
 
 [published]
 other = "Publicerad"
+
+[read-more]
+other = "Fortsätt läsa"

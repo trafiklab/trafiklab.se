@@ -40,6 +40,21 @@ other = "This page was published at"
 [docs-footer-last-modified]
 other = "and last modified at"
 
+[latest-news-title]
+other = "Latest news"
+
+[stay-informed-title]
+other = "Stay informed"
+
+[stay-informed-paragraph]
+other = "Enter your mail address and subscribe to our newsletter in order to receive occasional updates regarding our data and events."
+
+[newsletter-email-placeholder]
+other = "Your email address"
+
+[newsletter-email-subscribe]
+other = "Subscribe"
+
 [partnerlist-title]
 other = "Official open data"
 
@@ -48,3 +63,6 @@ other = "At Trafiklab, we provide official open data for all public transport in
 
 [published]
 other = "Published"
+
+[read-more]
+other = "Read more"
