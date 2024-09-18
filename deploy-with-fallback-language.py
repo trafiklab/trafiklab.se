@@ -24,8 +24,6 @@ def add_missing_translation_warning(filepath: str):
         frontmatter_assignment = '='
     # Replace the target string
     content = content.replace(frontmatter_delimiter, '', 1)  # Remove the top --- marker
-    # Add the warning
-    content = content.replace(frontmatter_delimiter, frontmatter_delimiter + warning, 1)
     # Add the leading --- back, along with a property to indicate which page acted as the source
     # Remove the leading .../content/ part of the path
     content = frontmatter_delimiter + '\ngenerated_fallback_page' + frontmatter_assignment +  'true' + content
