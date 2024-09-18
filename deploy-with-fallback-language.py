@@ -11,16 +11,6 @@ def has_translation(filepath, language_code):
 
 
 def add_missing_translation_warning(filepath: str):
-    warning = """
-    
-{{% warning %}}
-**Obs:** Detta innehåll finns inte tillgängligt på svenska. Därför ser du engelska versionen.
-Om du tycker att denna sida borde översättas till svenska, kan du skriva till oss på [support.trafiklab.se](https://support.trafiklab.se).
-
-Om du vill se webbsidan på engelska, [klicka här](/en/).
-{{% /warning %}}
-    
-    """
     # Read in the file
     with open(filepath, 'r', encoding='utf8') as file:
         content = file.read()
@@ -38,7 +28,7 @@ Om du vill se webbsidan på engelska, [klicka här](/en/).
     content = content.replace(frontmatter_delimiter, frontmatter_delimiter + warning, 1)
     # Add the leading --- back, along with a property to indicate which page acted as the source
     # Remove the leading .../content/ part of the path
-    content = frontmatter_delimiter + '\ngenerated_fallback_page_source' + frontmatter_assignment +  'true' + content
+    content = frontmatter_delimiter + '\ngenerated_fallback_page' + frontmatter_assignment +  'true' + content
 
     # Write the file out again
     with open(filepath, 'w', encoding='utf8') as file:

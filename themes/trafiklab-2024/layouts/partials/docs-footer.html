@@ -1,4 +1,4 @@
-{{ $is_fallback_source_page := (isset .Params "generated_fallback_page_source") }}
+{{ $is_fallback_source_page := (isset .Params "generated_fallback_page") }}
 {{ $source_page := . }}
 {{ if $is_fallback_source_page }}
     {{ $source_page = index .Translations 0 }}
