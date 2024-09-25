@@ -3,12 +3,12 @@
 {{ $targetPage := $args.targetPage }}
 {{ $level := $args.level }}
 
-<li class="tl-side-navigation__item
-           tl-side-navigation__item--level-{{$level}}
-           {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__item--active {{end}}
-           {{ if or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink) }} tl-side-navigation__item--open-list {{ else if ($targetPage.Data)}} tl-side-navigation__item--closed-list {{end}}">
+<li class="tl-side-navigation__block
+           tl-side-navigation__block--level-{{$level}}
+           {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__block--active {{end}}
+           {{ if and ($targetPage.Data) (or ($currentPage.IsDescendant $targetPage) (eq $currentPage.Permalink $targetPage.Permalink)) }} tl-side-navigation__block--open-list {{ else if ($targetPage.Data)}} tl-side-navigation__block--closed-list {{end}}">
     {{ if $targetPage.Page.Params.headless }}
-      <a class="tl-side-navigation__click-target tl-side-navigation__click-target--disabled"><span>{{ $targetPage.Title }}</span></a>
+      <a class="tl-side-navigation__item tl-side-navigation__item--disabled"><span>{{ $targetPage.Title }}</span></a>
     {{ else }}
         {{ if and ($targetPage.Data) (gt $level 0) }}
             {{ partial "sidebar/sidebar-page-row.html" (dict "targetPage" $targetPage "currentPage" $currentPage "level" $level "hasChildren" true) }}

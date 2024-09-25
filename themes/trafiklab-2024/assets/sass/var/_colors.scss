@@ -60,8 +60,8 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   --color-h456-foreground: #{$color-purple-extra-dark};
 
   /* Left navigation sidebar */
-  --color-sidebar-level1: #{$color-purple};
-  --color-sidebar-level2: #{$color-purple-muted};
+  --color-sidebar-group: #{$color-purple};
+  --color-sidebar-item: #{$color-purple-muted};
   --color-sidebar-level3: #{$color-purple-muted};
   --color-sidebar-active: #{$color-purple};
 

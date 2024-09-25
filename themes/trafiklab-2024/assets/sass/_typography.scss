@@ -10,6 +10,10 @@ a, p, span, ul, li, label, input {
 }
 
 a {
+  text-decoration: none;
+}
+
+p a {
   @include text-link
 }
 

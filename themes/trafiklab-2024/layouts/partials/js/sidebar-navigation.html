@@ -1,8 +1,8 @@
 <script type="text/javascript">
-  $('.tl-side-navigation__item a.dropdown::before').click(function (e) {
+  $('.tl-side-navigation__block a.tl-side-navigation__item--has-dropdown::before').click(function (e) {
     e.preventDefault();
     let listElement = $(this).parent().parent();
-    listElement.toggleClass('tl-side-navigation__item--open-list');
+    listElement.toggleClass('tl-side-navigation__block--open-list');
     listElement.find('> .tl-side-navigation__dropdown-list').slideToggle();
   });
 </script>

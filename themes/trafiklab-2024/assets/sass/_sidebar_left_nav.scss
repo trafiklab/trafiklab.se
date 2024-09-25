@@ -1,5 +1,4 @@
 nav.tl-side-navigation {
-
   max-height: calc(100vh - #{2 * $header-height});
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -16,70 +15,80 @@ nav.tl-side-navigation {
     margin: 0;
   }
 
-  a.tl-side-navigation__click-target {
-    padding: 4px 0;
-    display: block;
+  a.tl-side-navigation__item {
+    display: flex;
+
+    span {
+      padding: 8px 0;
+    }
   }
 
-  ul.tl-side-navigation--root, li.tl-side-navigation__item--level-0 {
+  .tl-side-navigation__chevron_wrapper {
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+
+    .tl-side-navigation__chevron {
+      width: 16px;
+      padding-left: 5px;
+      padding-right: 4px;
+    }
+
+    svg {
+      stroke: var(--color-sidebar-item);
+    }
+  }
+
+  .tl-side-navigation__dropdown-list--level-2 .tl-side-navigation__chevron_wrapper {
+    min-width: 36px;
+    padding-left: 18px;
+  }
+
+  .tl-side-navigation__dropdown-list--level-3 .tl-side-navigation__chevron_wrapper {
+    min-width: 56px;
+    padding-left: 32px;
+  }
+
+  li {
+    // No indent, only space for the open/collapse icon when needed
+    // Little space between items to keep clear visual grouping
+    display: block;
+
+    > a {
+      @include sidebar-list-item;
+      color: var(--color-sidebar-item);
+    }
+
+    > a span {
+      @include sidebar-list-item;
+      color: var(--color-sidebar-item);
+    }
+  }
+
+  ul.tl-side-navigation--root, li.tl-side-navigation__block--level-0 {
     > a {
       @include sidebar-header-item;
-      color: var(--color-sidebar-level1);
+      color: var(--color-sidebar-group);
     }
 
     > a span {
       @include sidebar-header-item;
-      color: var(--color-sidebar-level1);
+      color: var(--color-sidebar-group);
     }
-  }
-
-  li.tl-side-navigation__item--level-0 {
-    padding: 16px 0 0;
   }
 
   ul.tl-side-navigation__fixed-list--level-1 {
     // matching padding with the li items ensures consistent padding between items and at the top/bottom of the list
-    padding: 4px 0 0;
-  }
-
-  li.tl-side-navigation__item--active, .tl-side-navigation__item:not(.tl-side-navigation__item--level-0):has(.tl-side-navigation__dropdown-list--active) {
-    background-color: $color-purple-hint;
-  }
-
-  li.tl-side-navigation__item--level-1 {
-    // No indent, only space for the open/collapse icon when needed
-    // Little space between items to keep clear visual grouping
-    display: block;
-
-    > a {
-      @include sidebar-list-item;
-      color: var(--color-sidebar-level2);
-    }
-
-    > a span {
-      @include sidebar-list-item;
-      color: var(--color-sidebar-level2);
-    }
-  }
-
-  .tl-side-navigation__dropdown-list--level-2 {
     padding: 0;
   }
 
-  .tl-side-navigation__item--level-2 {
+  li.tl-side-navigation__block--active, .tl-side-navigation__block:not(.tl-side-navigation__block--level-0):has(.tl-side-navigation__dropdown-list--active) {
+    background-color: $color-purple-hint;
+  }
+
+  .tl-side-navigation__block--level-2 {
     // No indent, only space for the open/collapse icon when needed
     // Little space between items to keep clear visual grouping
-    padding: 0 0 0 16px;
-
-    a {
-      @include sidebar-list-item;
-      color: var(--color-sidebar-level3);
-    }
-
-    a span {
-      @include sidebar-list-item;
-      color: var(--color-sidebar-level3);
-    }
 
     &:last-of-type {
       padding-bottom: 0;
@@ -90,31 +99,15 @@ nav.tl-side-navigation {
     display: none;
   }
 
-  .tl-side-navigation__dropdown-list--level-2, .tl-side-navigation__dropdown-list--level-3 {
-    display: none;
-  }
+  li.tl-side-navigation__block--open-list.tl-side-navigation__block--level-1,
+  li.tl-side-navigation__block--open-list.tl-side-navigation__block--level-2,
+  li.tl-side-navigation__block--open-list.tl-side-navigation__block--level-3 {
+    > a {
+      border-bottom: 1px solid $color-purple-extra-muted;
+    }
 
-  a.dropdown::before {
-    content: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.656854 1.34315L6.31371 7L0.656854 12.6569' stroke='%23855F8C'/%3E%3C/svg%3E%0A");
-    width: 20px;
-    vertical-align: center;
-    display: inline-block;
-    position: relative;
-    left: 4px;
-    top: 0;
-    margin-top: -9px;
-  }
-
-  .tl-side-navigation__fixed-list--level-1 a:not(.dropdown) {
-    padding-left: 24px;
-  }
-
-
-  li.tl-side-navigation__item--open-list {
-    > a.dropdown::before {
+    > a .tl-side-navigation__chevron svg {
       transform: rotate(90deg);
-      top: 8px;
-      left: 0;
     }
   }
 
@@ -122,7 +115,7 @@ nav.tl-side-navigation {
     display: block;
   }
 
-  a.tl-side-navigation__click-target--active span {
+  a.tl-side-navigation__item--active span {
     color: var(--color-sidebar-active) !important;
     font-weight: bold;
   }

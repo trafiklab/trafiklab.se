@@ -4,13 +4,23 @@
 {{ $level := $args.level }}
 {{ $hasChildren := (isSet $args "hasChildren") }}
 
-<a class="tl-side-navigation__click-target
-          tl-side-navigation__click-target--level-{{$level}}
-      {{ if $hasChildren }} dropdown {{end}}
-      {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__click-target--active {{end}}"
+<a class="tl-side-navigation__item
+          tl-side-navigation__item--level-{{$level}}
+      {{ if $hasChildren }} tl-side-navigation__item--has-dropdown {{end}}
+      {{ if eq $currentPage.Permalink $targetPage.Permalink }} tl-side-navigation__item--active {{end}}"
    href="{{ $targetPage.Permalink }}">
-
-    <span>{{ $targetPage.Title }}</span>
+    {{ if gt $level 0 }}
+    <span class="tl-side-navigation__chevron_wrapper">
+    {{ if $hasChildren }}
+    <span class="tl-side-navigation__chevron">
+        <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
+        </svg>
+      </span>
+    {{ end }}
+    </span>
+    {{ end }}
+    <span class="tl-side-navigation__title">{{ $targetPage.Title }}</span>
 
     {{ if $targetPage.Params.badge }}
 
