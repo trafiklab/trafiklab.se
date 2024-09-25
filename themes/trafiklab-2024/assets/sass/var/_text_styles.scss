@@ -145,13 +145,13 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 @mixin text-link {
   color: var(--color-text-accent);
   text-decoration: none;
-  transition: box-shadow 0.25s ease-in-out;
-  box-shadow: 0px 2px 0px 0px var(--color-text-accent-background), inset 0px 0px 0px 0px var(--color-text-accent-background);
+  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  box-shadow: 0px 1px 0px 0px var(--color-text-accent-decoration), inset 0px 0px 0px 0px var(--color-text-accent-decoration);
 }
 
 @mixin text-link-hover {
-  box-shadow: 0px 4px 0px 0px var(--color-text-accent-background),
-  inset 0px -28px 0px 0px var(--color-text-accent-background)
+  background-color: var(--color-text-accent-background);
+  box-shadow: 0px 1px 0px 0px var(--color-text-accent-decoration), inset 0px 0px 0px 0px var(--color-text-accent-decoration);
 }
 
 /* Page header */

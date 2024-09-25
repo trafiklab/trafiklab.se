@@ -12,6 +12,7 @@ $color-purple-extra-dark: #3D323F; /* HSB 290, 20, 25 */
 $color-purple-dark: #6F1A80; /* HSB 290, 80, 50 */
 /* $color-purple-og: #9B26B6; /* original trafiklab purple. insufficient white contrast. HSB 289, 79, 71, pantone 2592c */
 $color-purple: #862699; /* HSB 290, 75, 60 */
+$color-purple-light: #a730bf; /* HSB 290, 75, 80 */
 $color-purple-muted: #855F8C; /* HSB 290, 32, 55 */
 $color-purple-extra-muted: #BCA8BF; /* HSB 290, 12, 75 */
 $color-purple-hint: #F6F0F7; /* HSB 290, 3, 97 */
@@ -34,6 +35,7 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
 
   /* Accents, links and quotes */
   --color-text-accent: #{$color-purple};
+  --color-text-accent-decoration: #{$color-purple-light};
   --color-muted-accent: #{$color-purple-muted};
   --color-text-accent-background: #{$color-pink-hint};
   --color-text-selection: #{$color-yellow};
@@ -71,6 +73,49 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
 
   /* Page reference cards */
   --color-pageref-background: #{$color-purple-hint};
+
+  /* Tables */
+  --color-table-border: #{$color-purple-extra-muted};
+}
+
+@mixin theme-inverted {
+  --color-background: #{$color-purple};
+  --color-text: #{$color-white};
+
+  /* Accents, links and quotes */
+  --color-text-accent: #{$color-pink};
+  --color-muted-accent: #{$color-purple-hint};
+  --color-text-accent-decoration: #{$color-pink};
+  --color-text-accent-background: #{$color-purple-dark};
+  --color-text-selection: #{$color-purple-muted};
+  --color-code-inline-background: #{$color-purple-muted};
+
+  /* Buttons */
+  --color-cta-foreground: #{$color-purple};
+  --color-cta-background: #{$color-white};
+
+  --color-button-foreground: #{$color-purple};
+  --color-button-background: #{$color-white};
+
+  /* Text buttons without background */
+  --color-button-text-foreground: #{$color-white};
+
+  /* Headers */
+  --color-h1-foreground: #{$color-white};
+  --color-h1-background: #{$color-black};
+
+  --color-h2-foreground: #{$color-white};
+
+  h2, .tl-page-ref .tl-h2 {
+    // since this accent is adjusted in multiple places, we need more specific qualifiers on the selector
+    --color-h2-accent: #{$color-purple-dark};
+  }
+
+  --color-h3-foreground: #{$color-white};
+  --color-h456-foreground: #{$color-white};
+
+  /* Page reference cards */
+  --color-pageref-background: #{$color-purple-extra-dark};
 
   /* Tables */
   --color-table-border: #{$color-purple-extra-muted};

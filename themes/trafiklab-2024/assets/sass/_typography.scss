@@ -17,7 +17,7 @@ p a {
   @include text-link
 }
 
-p a:link:hover {
+p a:hover {
   @include text-link-hover
 }
 
