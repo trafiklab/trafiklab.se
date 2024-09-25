@@ -30,7 +30,7 @@
 }
 
 .admonition.success {
-  background-color: #d9f3cb;
+  background-color: #e8f7df;
   .admonition-icon {
     color: #58c11d;
   }
@@ -60,9 +60,9 @@
 }
 
 .admonition.note {
-  background-color: #F6E1FA;
+  background-color: #{$color-purple-hint};
 
   .admonition-icon {
-    color: #6B0C7A;
+    color: $color-purple-dark;
   }
 }

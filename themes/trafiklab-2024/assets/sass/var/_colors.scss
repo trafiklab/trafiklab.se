@@ -12,13 +12,13 @@ $color-purple-extra-dark: #3D323F; /* HSB 290, 20, 25 */
 $color-purple-dark: #6F1A80; /* HSB 290, 80, 50 */
 /* $color-purple-og: #9B26B6; /* original trafiklab purple. insufficient white contrast. HSB 289, 79, 71, pantone 2592c */
 $color-purple: #862699; /* HSB 290, 75, 60 */
-$color-purple-light: #a730bf; /* HSB 290, 75, 80 */
+$color-purple-light: #a730bf; /* HSB 290, 75, 75 */
+$color-purple-hint: #f5ebf7; /* HSB 290, 5, 97 */
 $color-purple-muted: #855F8C; /* HSB 290, 32, 55 */
 $color-purple-extra-muted: #BCA8BF; /* HSB 290, 12, 75 */
-$color-purple-hint: #F6F0F7; /* HSB 290, 3, 97 */
 
 /* Pink (Hue 290) */
-$color-pink: #F4BFFF; /* HSB 290, 25, 100 */
+$color-pink: #efbbfa; /* HSB 290, 25, 98 */
 $color-pink-hint: #F8D9FF; /* HSB 290, 15, 100 */
 $color-pink-hint-whitened: #FDF3FF; /* HSB 290, 5, 100 */
 
@@ -64,7 +64,6 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   /* Left navigation sidebar */
   --color-sidebar-group: #{$color-purple};
   --color-sidebar-item: #{$color-purple-muted};
-  --color-sidebar-level3: #{$color-purple-muted};
   --color-sidebar-active: #{$color-purple};
 
   /* Table of contents sidebar */
