@@ -32,6 +32,15 @@ certain events, ... . They typically contain similar information as the messages
 Usually a header, description and link are provided, along with a cause and an effect (provided as an enum). Service
 alerts can be limited in time or to certain agencies, trips, stops, transport types, ...
 
+Trafiklab's serviceAlerts are updated every 15 seconds. Delays and cancellations of individual trips are usually communicated
+using [Trip updates](#tripupdates). See the availability table for each GTFS dataset to find out which
+operators are supported (Realtime data column).
+
+{{% info %}} ServiceAlerts can remain unchanged for relatively long periods (for example a couple of
+hours). You can prevent unnecessary downloads by making use
+of [Conditional HTTP requests](/docs/using-trafiklab-data/best-practices/conditional-get-requests.md).
+{{% /info %}}
+
 ### TripUpdates
 
 TripUpdates provide information about deviations between the scheduled timetable of a trip and the real world. This can
@@ -39,7 +48,7 @@ be a delay, a vehicle running early, a partial cancellation, a platform change, 
 multiple TripDescriptors, each of which describes deviations in a trip. If a scheduled trip isn't present in a
 TripUpdates file, this can both mean that there are no delays, or that no information is available.
 
-### VehicleUpdates
+### VehiclePositions
 
 VehicleUpdates contain realtime GPS positions of public transport vehicles. These allow you to see where a vehicle is
 located, along with its speed and bearing. These can be used to show vehicles on a map, to analyze traffic congestion,

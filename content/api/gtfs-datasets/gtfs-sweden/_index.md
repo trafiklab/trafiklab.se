@@ -64,9 +64,6 @@ Replace `{apikey}` with your own API key. If you don´t have a key yet, read [he
 
 </div>
 
-{{% page-ref "/api/gtfs-datasets/gtfs-sweden/static-specification"
-"/docs/using-trafiklab-data/the-protobuf-file-format"  %}}
-
 ### GTFS Extensions
 
 The extensions are the same as in [the GTFS Regional API](/api/gtfs-datasets/#gtfs-extensions).
@@ -119,41 +116,24 @@ If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys
 
 Service alerts allow you to get information about disruptions on the transit network. This can be anything from planned
 roadworks (a certain stop might not get served for a few days) to electricity outages on a rail network. ServiceAlerts
-are broad and general information. Trafiklab's serviceAlerts are updated every 15 seconds.
+are broad and general information. ServiceAlerts for GTFS Sweden 3 are updated every 15 seconds.
 
-Delays and cancellations of individual trips are usually communicated
-using [Trip updates](#tripupdates).
-See [the GTFS Regional availability table](#operators-covered-by-this-dataset) to find out which
-operators are supported (Realtime data column).
-
-{{% info %}} ServiceAlerts can remain unchanged for relatively long periods (for example a couple of
-hours). You can prevent unnecessary downloads by making use
-of [Conditional HTTP requests](/docs/using-trafiklab-data/best-practices/conditional-get-requests.md).
-{{% /info %}}
+Read more about service alerts in [the general service alerts documention](../overview/realtime-data.md#servicealerts)
 
 #### TripUpdates
 
 Trip updates contain real-time departure and arrival times for individual trips. This means you can get the current,
-estimated delay for each vehicle on each stop. Trafiklab's tripUpdates are updated every 15 seconds.
-See [the GTFS Regional availability table](#operators-covered-by-this-dataset) to find out which
-operators are supported (Real-time data column).
+estimated delay for each vehicle on each stop. TripUpdates for GTFS Sweden 3 are updated every 15 seconds.
 
-{{% warning %}} In some cases it isn't possible to link certain delays to a specific trip. In this case, they
-may be linked to a route instead. {{% /warning %}}
+Read more about trip updates in [the general tripupdates documention](../overview/realtime-data.md#tripupdates), 
+and check the realtime data column in [the availability table above for availability per operator](#operators-covered-by-this-dataset) 
 
 #### VehiclePositions
 
 The vehiclepositions.pb feed contains the GPS positions for all operators. Depending on the operator, Trafiklab's
-vehiclepositions are updated every 2 seconds. The availability of this data is indicated in a separate column
-in [the GTFS Regional availability table](#operators-covered-by-this-dataset).
-<br>
-
-### Using real-time data
-
-You can read more about how to use real-time data in our GTFS format documentation:
-
-{{% page-ref page="/docs/using-trafiklab-data/the-protobuf-file-format" %}}
-<br>
+vehiclepositions are typically updated every 2 seconds.
+Read more about trip updates in [the general vehicle positions documention](../overview/realtime-data.md#vehiclepositions),
+and check the vehicle positions column in [the availability table above for availability per operator](#operators-covered-by-this-dataset)
 
 ## Extra files
 Extra files are files which provide additional information about the information in the GTFS files. They are not part of
