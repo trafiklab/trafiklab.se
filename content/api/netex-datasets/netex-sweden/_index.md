@@ -33,46 +33,7 @@ The static data in this dataset is updated on a daily basis, typically between 1
 
 ### Operators covered by this dataset
 
-| Operator                                       |    Abbreviation    | Static data |
-|:-----------------------------------------------|:------------------:|:-----------:|
-| Blekingetrafiken (Blekinge län)                |     `blekinge`     |     ✔️      |
-| Dalatrafik (Dalarnas län)                      |        `dt`        |     ✔️      |
-| DinTur (Västernorrlands län)                   |      `dintur`      |     ✔️      |
-| Gotlands kollektivtrafik (Gotlands län)        |     `gotland`      |     ✔️      |
-| Hallandstrafiken (Hallands län)                |     `halland`      |     ✔️      |
-| JLT (Jönköpings län)                           |       `jlt`        |     ✔️      |
-| Kalmar länstrafik (Kalmar län)                 |       `klt`        |     ✔️      |
-| Kronobergs länstrafik (Kronobergs län)         |      `krono`       |     ✔️      |
-| Länstrafiken Jämtland                          |     `jamtland`     |     ✔️      |
-| Länstrafiken Norrbotten                        |    `norrbotten`    |     ✔️      |
-| Länstrafiken Västerbotten                      |   `vasterbotten`   |     ✔️      |
-| Länstrafiken Örebro                            |      `orebro`      |     ✔️      |
-| Skånetrafiken (Skåne län)                      |      `skane`       |     ✔️      |
-| SL (Stockholms län)                            |        `sl`        |     ✔️      |
-| Sörmlandstrafiken (Södermanlands län)          |     `sormland`     |     ✔️      |
-| UL (Uppsala län)                               |        `ul`        |     ✔️      |
-| VL (Västmanlands län)                          |   `vastmanland`    |     ✔️      |
-| Värmlandstrafik & Karlstadbuss (Värmlands län) |       `varm`       |     ✔️      |
-| Västtrafik (Västra götalands län)              |        `vt`        |     ✔️      |
-| X-Trafik (Gävleborgs län)                      |        `xt`        |     ✔️      |
-| Östgötatrafiken (Östergötlands län)            |      `otraf`       |     ✔️      |
-| BT buss                                        |      `btbuss`      |     ✔️      |
-| Bussbolaget Östergötland                       |     `bussost`      |     ✔️      |
-| Destination Gotland                            |        `dg`        |     ✔️      |
-| Flixtrain                                      |    `flixtrain`     |     ✔️      |
-| Härjedalingen                                  |      `harje`       |     ✔️      |
-| Inlandsbanan                                   |      `inban`       |     ✔️      |
-| Lennakatten                                    |      `lenna`       |     ✔️      |
-| Masexpressen                                   |      `masen`       |     ✔️      |
-| Ressel Rederi                                  |      `ressel`      |     ✔️      |
-| Roslagens sjötrafik                            |     `roslagen`     |     ✔️      |
-| SJ, Tågab, Snälltåget                          |        `sj`        |     ✔️      |
-| Sjöstadstrafiken (Stockholm Stad)              | `sjostadstrafiken` |     ✔️      |
-| Stavsnäs båttaxi                               |     `battaxi`      |     ✔️      |
-| Strömma Turism & Sjöfart AB                    |     `stromma`      |     ✔️      |
-| TJF Smalspåret                                 |       `tjf`        |     ✔️      |
-| Uddevalla Turism AB                            |    `uddevalla`     |     ✔️      |
-| Y-Buss                                         |      `ybuss`       |     ✔️      |
+{{% include "/headless/stip-data-availability.md" %}}
 
 ### Breaking changes
 
