@@ -66,15 +66,13 @@
               <a href="{{ .URL }}">
                 <span class="tl-mobile-navigation-item__chevron_wrapper">
                     {{ if and (.Page.Data) (eq .Page.Layout "single") }}
-                    <span class="tl-mobile-navigation-item__chevron">
-                                <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
-                                </svg>
-                              </span>
+                      <svg class="tl-mobile-navigation-item__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 3L18 12L9 21" stroke="black"/>
+                      </svg>
                     {{ end }}
                 </span>
                 {{ .Pre }}
-                {{ .Name }}
+                <span class="tl-mobile-navigation__title">{{ .Name }}</span>
               </a>
             {{ end }}
 
@@ -83,16 +81,14 @@
               {{- range $i, $e := .Page.Data.Pages -}}
                 <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-2 {{ if or ($currentPage.IsDescendant .) (eq $currentPage.Permalink .Permalink) }} tl-mobile-navigation-item--active  tl-mobile-navigation-item--open {{ end }} {{ if .Page.Data.Pages }} tl-mobile-navigation-item--has-children {{ end }}">
                   <a href="{{ if .Params.headless }}#{{ else }}{{ .Permalink }}{{ end }}">
-                        <span class="tl-mobile-navigation-item__chevron_wrapper">
-                        {{ if .Page.Data.Pages }}
-                        <span class="tl-mobile-navigation-item__chevron">
-                            <svg width="7" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M0.656854 1.34315L6.31371 7L0.656854 12.6569"/>
-                            </svg>
-                          </span>
-                        {{ end }}
-                        </span>
-                    {{ .Name }}
+                    <span class="tl-mobile-navigation-item__chevron_wrapper">
+                    {{ if .Page.Data.Pages }}
+                      <svg class="tl-mobile-navigation-item__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 3L18 12L9 21" stroke="black"/>
+                      </svg>
+                    {{ end }}
+                    </span>
+                    <span class="tl-mobile-navigation__title">{{ .Name }}</span>
                   </a>
 
                   {{ if .Page.Data.Pages }}
@@ -101,7 +97,7 @@
                     <li class="tl-mobile-navigation-item tl-mobile-navigation-item--level-3 {{ if or ($currentPage.IsDescendant .) (eq $currentPage.Permalink .Permalink) }} tl-mobile-navigation-item--active {{ end }}">
                       <a href="{{ .Permalink }}">
                         <span class="tl-mobile-navigation-item__chevron_wrapper"></span>
-                        {{ .Name }}
+                        <span class="tl-mobile-navigation__title">{{ .Name }}</span>
                       </a>
                     </li>
                     {{ end }}

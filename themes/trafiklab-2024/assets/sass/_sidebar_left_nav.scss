@@ -17,25 +17,25 @@ nav.tl-side-navigation {
 
   a.tl-side-navigation__item {
     display: flex;
+    padding-right: 8px;
 
     span {
       padding: 8px 0;
     }
-  }
 
-  .tl-side-navigation__chevron_wrapper {
-    display: inline-block;
-    min-width: 24px;
-    text-align: center;
+    .tl-side-navigation__chevron_wrapper {
+      display: inline-block;
+      min-width: 24px;
+      height: 24px;
+      text-align: center;
 
-    .tl-side-navigation__chevron {
-      width: 16px;
-      padding-left: 5px;
-      padding-right: 4px;
-    }
-
-    svg {
-      stroke: var(--color-sidebar-item);
+      svg {
+        padding: 4px;
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        stroke: var(--color-sidebar-item);
+      }
     }
   }
 
@@ -106,7 +106,7 @@ nav.tl-side-navigation {
       border-bottom: 1px solid $color-purple-extra-muted;
     }
 
-    > a .tl-side-navigation__chevron svg {
+    > a .tl-side-navigation__chevron {
       transform: rotate(90deg);
     }
   }

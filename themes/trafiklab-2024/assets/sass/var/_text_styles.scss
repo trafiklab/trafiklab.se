@@ -150,8 +150,8 @@ $font-size-hero: 64px; /* Only for landing page hero text */
 }
 
 @mixin text-link-hover {
-  background-color: var(--color-text-accent-background);
-  box-shadow: 0px 1px 0px 0px var(--color-text-accent-decoration), inset 0px 0px 0px 0px var(--color-text-accent-decoration);
+  //background-color: var(--color-text-accent-background);
+  box-shadow: 0px 1px 0px 0px var(--color-text-accent-decoration), inset 0px -2px 0px 0px var(--color-text-accent-decoration);
 }
 
 /* Page header */

@@ -143,7 +143,7 @@ header.tl-header {
     padding: 0;
 
     nav.mobile-navigation {
-      // display: none;
+      $mobile-navigation-row-line-height: 24px;
       overflow: hidden;
       max-height: 0;
       transition: max-height .25s ease-in-out;
@@ -163,29 +163,33 @@ header.tl-header {
         padding: 0;
 
         a {
-          display: block;
+          height: $mobile-navigation-row-line-height + 24px; // content + padding
+          line-height: $mobile-navigation-row-line-height;
+          display: flex;
           width: 100%;
           border-top: 1px solid $color-purple-extra-muted;
           padding: 12px 32px 12px 0;
-        }
 
-        .tl-mobile-navigation-item__chevron_wrapper {
-          display: inline-block;
-          width: 32px;
-          text-align: right;
+          span {
+            display: inline-block;
+            height: $mobile-navigation-row-line-height;
+          }
         }
       }
 
-      .tl-mobile-navigation-item__chevron {
+
+      .tl-mobile-navigation-item__chevron_wrapper {
         display: inline-block;
-        height: 16px;
-        width: 16px;
-        stroke: $color-purple;
+        height: $mobile-navigation-row-line-height;
+        min-width: 32px;
+        text-align: right;
+        padding: 0;
 
         svg {
-          height: 12px;
-          display: block;
-          margin: 4px auto 2px;
+          display: inline-block;
+          padding: 4px;
+          height: 24px;
+          width: 24px;
         }
       }
 
@@ -222,7 +226,7 @@ header.tl-header {
         }
       }
 
-      .tl-mobile-navigation-item--open > a > .tl-mobile-navigation-item__chevron_wrapper > span.tl-mobile-navigation-item__chevron {
+      .tl-mobile-navigation-item--open > a > .tl-mobile-navigation-item__chevron_wrapper svg.tl-mobile-navigation-item__chevron {
         transform: rotate(90deg);
       }
 
@@ -235,7 +239,7 @@ header.tl-header {
 
 .disruption-banner {
   background-color: $color-yellow;
-  
+
   .disruption-banner__message {
     display: flex;
     flex-direction: row;
@@ -244,13 +248,13 @@ header.tl-header {
     height: 56px;
     color: var(--color-text);
     text-wrap: nowrap;
-    
+
     .disruption-banner__message__text{
       flex-grow: 1;
       text-overflow: ellipsis;
       overflow: hidden;
     }
-    
+
   }
 }
 
