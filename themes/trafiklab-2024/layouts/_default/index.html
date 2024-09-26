@@ -32,7 +32,7 @@
             <div class="page__first__content">{{ .Content}}</div>
             <div class="tl-row tl-row--large-gap">
                 {{ range .Params.links }}
-                <a class="btn btn--large btn--primary tl-col--6 tl-col--xs-12" href="{{ .link }}">
+                <a class="tl-button tl-button--large tl-button--primary tl-col--6 tl-col--xs-12" href="{{ .link }}">
                     {{ .text }}
                 </a>
                 {{ end }}

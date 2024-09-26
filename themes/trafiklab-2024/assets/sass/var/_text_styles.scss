@@ -63,6 +63,11 @@ $font-size-hero: 64px; /* Only for landing page hero text */
   padding-right: 8px;
   padding-top: 4px;
   padding-bottom: 4px;
+
+  &::selection {
+    color: var(--color-text);
+    background-color: var(--color-text-selection);
+  }
 }
 
 @mixin text-h1 {

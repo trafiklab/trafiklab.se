@@ -16,6 +16,14 @@ header.tl-header {
     background-color: #000;
   }
 
+  a {
+    @include nav-header-item;
+    color: var(--color-text);
+    display: inline-block;
+    height: $header-content-height;
+    line-height: $header-content-height;
+  }
+
   .tl-header__navbar {
     display: flex;
 
@@ -31,14 +39,6 @@ header.tl-header {
       align-items: center;
       position: relative;
       z-index: 40;
-    }
-
-    a {
-      @include nav-header-item;
-      color: var(--color-text);
-      display: inline-block;
-      height: $header-content-height;
-      line-height: $header-content-height;
     }
 
     ul {
@@ -81,13 +81,16 @@ header.tl-header {
       align-items: center;
       gap: 16px;
 
+      // button adjustments
       .tl-button {
         padding: 0 16px;
+        padding-bottom: 2px; // optical alignment correction
         height: $header-content-height;
         line-height: $header-content-height - 2px;
-        padding-bottom: 2px; // optical alignment correction
-        color: $color-purple;
-        border: 1px solid $color-purple;
+
+        &:after {
+          content: none;
+        }
       }
 
       .tl-button:hover {

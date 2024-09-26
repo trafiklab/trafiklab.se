@@ -1,0 +1,82 @@
+.tl-button {
+  --applied-background: var(--color-button-background);
+  --applied-foreground: var(--color-button-foreground);
+
+  position: relative;
+  display: inline-block;
+  font-size: $font-size-normal;
+  line-height: 1.5 * $font-size-normal;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  border: none; // Reset for some elements such as form submits, which may use
+  padding: 8px 32px 8px 16px;
+
+  background-color: var(--applied-background);
+  color: var(--applied-foreground);
+
+  &::after {
+    color: var(--color-button-foreground);
+    stroke: var(--color-button-foreground);
+    content: url("data:image/svg+xml, %3Csvg class='tl-side-navigation__chevron' stroke-width='4' width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 3L18 12L9 21' stroke='%23232323' /%3E%3C/svg%3E");
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+
+  &.tl-button--text {
+    --applied-background: unset;
+    --applied-foreground: var(--color-button-text-foreground);
+  }
+
+  &.tl-button--outlined {
+    color: var(--applied-foreground);
+    border: 1px solid var(--applied-background);
+    background-color: unset;
+  }
+
+  &.tl-button--compact {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &::after {
+      right: 12px;
+      top: 50%;
+      margin-top: -9px;
+    }
+  }
+
+  &.tl-button--large {
+    height: 64px;
+    font-size: $font-size-larger;
+    padding: 16px 48px 16px 32px;
+
+    &::after {
+      right: 24px;
+      top: 50%;
+      margin-top: -12px;
+    }
+  }
+
+  &.tl-button--primary {
+    --applied-foreground: var(--color-cta-foreground);
+    --applied-background: var(--color-cta-background);
+
+    &.tl-button--text {
+      --applied-background: unset;
+      --applied-foreground: var(--color-cta-background);
+    }
+
+    &.tl-button--outlined {
+      color: var(--color-cta-background);
+      border: 1px solid var(--color-cta-background);
+      background-color: var(--color-cta-foreground);
+    }
+
+    &::after {
+      content: url("data:image/svg+xml, %3Csvg class='tl-button__chevron' stroke-width='4' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 3L18 12L9 21' stroke='white'/%3E%3C/svg%3E");
+    }
+  }
+
+}
