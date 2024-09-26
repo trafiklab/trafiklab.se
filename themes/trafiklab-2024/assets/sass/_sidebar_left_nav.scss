@@ -22,20 +22,20 @@ nav.tl-side-navigation {
     span {
       padding: 8px 0;
     }
+  }
 
-    .tl-side-navigation__chevron_wrapper {
+  .tl-side-navigation__chevron_wrapper {
+    display: inline-block;
+    min-width: 24px;
+    height: 24px;
+    text-align: center;
+
+    svg {
+      padding: 4px;
       display: inline-block;
-      min-width: 24px;
       height: 24px;
-      text-align: center;
-
-      svg {
-        padding: 4px;
-        display: inline-block;
-        height: 24px;
-        width: 24px;
-        stroke: var(--color-sidebar-item);
-      }
+      width: 24px;
+      stroke: var(--color-sidebar-item);
     }
   }
 

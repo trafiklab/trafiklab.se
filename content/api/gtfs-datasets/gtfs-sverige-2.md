@@ -35,11 +35,7 @@ The historical data contains information for a period of more than 5 years. It i
 dataset to analyse evolutions over time.
 
 ## Static data
-The static _GTFS Sverige 2_ dataset contains files describing all planned public transport data for Sweden.
-
-{{% note %}}
-File and field explanations can be found [here](/api/gtfs-datasets).
-{{% /note %}}
+The static _GTFS Sverige 2_ dataset contains files describing all planned public transport data for Sweden. File and field explanations can be found [in the GTFS overview](/api/gtfs-datasets).
 
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.
@@ -92,21 +88,21 @@ other data which is delivered by the operator. These files can be downloaded wit
 
 ### feed\_info.txt
 
-URL: [**https://api.resrobot.se/samtrafiken/gtfs/feed\_info.txt**](https://api.resrobot.se/samtrafiken/gtfs/feed_info.txt)
+URL: [https://api.resrobot.se/samtrafiken/gtfs/feed\_info.txt](https://api.resrobot.se/samtrafiken/gtfs/feed_info.txt)
 
 This file is included in the GTFS standard, but is also offered as a separate download. This way you can check if the
 feed has been updated before downloading it.
 
 ### trafikverket\_stops.txt
 
-URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trafikverket\_stops.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trafikverket_stops.txt)
+URL: [https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trafikverket\_stops.txt](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trafikverket_stops.txt)
 
 This file contains a mapping between national stop IDs (rikshållplatser) and Trafikverkets signatures. For example,
 CST -&gt; 740000001. Only for train stations.
 
 ### agency\_stops.txt
 
-URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency\_stops.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency_stops.txt)
+URL: [https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency\_stops.txt](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency_stops.txt)
 
 This file contains a mapping between the operators' local IDs and the national ids (rikshållplatser). For example, the
 following mapping means that operator `275` uses the id `41063` for the stop with national id `740066331`.
@@ -133,21 +129,21 @@ translate it to a SiteID used in other SL APIs**.**
 
 ### agency\_stops\_&lt;AGENCY\_ID&gt;.txt
 
-URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency\_stops\_&lt;AGENCY\_ID&gt;.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency_stops_AGENCY_ID.txt?key=YOUR_API_KEY)
+URL: [https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency\_stops\_&lt;AGENCY\_ID&gt;.txt](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/agency_stops_AGENCY_ID.txt?key=YOUR_API_KEY)
 
 This file contains the same information as the agency\_stops.txt file described above, but is already filtered on a
 given operator. Replace `<agency_id>` with the operator id of your choice.
 
 ### routes\_technical.txt
 
-URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/routes\_technical.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/routes_technical.txt?key=YOUR_API_KEY)
+URL: [https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/routes\_technical.txt](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/routes_technical.txt?key=YOUR_API_KEY)
 
 This file maps route ids to their _technical route number_ used by their operator. A technical route number is unique
 within an agency.
 
 ### trips\_technical.txt
 
-URL: [**https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trips\_technical.txt**](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trips_technical.txt?key=YOUR_API_KEY)
+URL: [https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trips\_technical.txt](https://api.trafiklab.se/v2/samtrafiken/gtfs/extra/trips_technical.txt?key=YOUR_API_KEY)
 
 This file contains a mapping between trip ids and their corresponding technical trip numbers. The technical trip number
 is unique for a route in an agency. In other words, the combination of the 3 values agency\_id, technical\_route\_number

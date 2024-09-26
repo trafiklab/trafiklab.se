@@ -17,6 +17,10 @@ p a {
   @include text-link
 }
 
+strong a, a:has(strong) {
+  box-shadow: none;
+}
+
 p a:hover {
   @include text-link-hover
 }

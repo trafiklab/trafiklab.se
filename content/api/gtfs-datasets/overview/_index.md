@@ -13,12 +13,12 @@ aliases:
 
 At Trafiklab, we offer three GTFS feeds.
 
-[**GTFS Sverige 2**](/api/gtfs-datasets/gtfs-sverige-2) which includes information for entire Sweden
+[GTFS Sverige 2](/api/gtfs-datasets/gtfs-sverige-2) which includes information for entire Sweden
 
-[**GTFS Regional**](/api/gtfs-datasets/gtfs-regional) which consists of multiple GTFS feeds, each of which covers an
+[GTFS Regional](/api/gtfs-datasets/gtfs-regional) which consists of multiple GTFS feeds, each of which covers an
 operator in Sweden
 
-[**GTFS Sweden 3**](/api/gtfs-datasets/gtfs-sweden) which is an aggregated dataset of all the different datasets
+[GTFS Sweden 3](/api/gtfs-datasets/gtfs-sweden) which is an aggregated dataset of all the different datasets
   in GTFS Regional. It gives a single GTFS feed for static data while the realtime feeds are, for performance
   reasons, split up by specific regions or operators
 
