@@ -41,7 +41,6 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   --color-text-accent: #{$color-purple};
   --color-text-accent-decoration: #{$color-purple-light};
   --color-muted-accent: #{$color-purple-muted};
-  --color-text-accent-background: #{$color-pink-hint};
   --color-text-selection: #{$color-yellow};
   --color-code-inline-background: #f0f0f0;
 
@@ -82,14 +81,13 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
 }
 
 @mixin theme-inverted {
-  --color-background: #{$color-purple};
+  --color-background: #{$color-purple-dark};
   --color-text: #{$color-white};
 
   /* Accents, links and quotes */
   --color-text-accent: #{$color-pink};
   --color-muted-accent: #{$color-purple-hint};
   --color-text-accent-decoration: #{$color-pink};
-  --color-text-accent-background: #{$color-purple-dark};
   --color-text-selection: #{$color-purple-muted};
   --color-code-inline-background: #{$color-purple-muted};
 
