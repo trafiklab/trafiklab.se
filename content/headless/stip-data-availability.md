@@ -47,6 +47,7 @@ The following table shows which operators are covered by this dataset.
 | Tåg i Bergslagen                               |        `tib`         |     ✔️      |                |                   |                |
 | Tågab                                          |       `tagab`        |     ✔️      |                |                   |                |
 | Uddevalla Turism AB                            |     `uddevalla`      |     ✔️      |                |                   |                |
+| VR (previously MTRX)                           |         `vr`         |     ✔️      |                |                   |                |
 | Vy Nattåg                                      |     `vy-nattag`      |     ✔️      |                |                   |                |
 | Vy Norrtåg                                     |     `vy-norrtag`     |     ✔️      |                |                   |                |
 | Vy Tåg Värmlandstrafik                         | `vy-varmlandstrafik` |     ✔️      |                |                   |                |
