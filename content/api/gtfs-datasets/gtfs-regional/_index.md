@@ -21,14 +21,15 @@ you are looking for an aggregated national feed, please look at GTFS Sverige 2.
 
 ## What does this dataset contain?
 
-This dataset contains high quality detailed data, both static and real-time, in the NeTEx format. Each dataset contains
+This dataset contains high quality detailed data, both static and real-time, in the GTFS format. Each dataset contains
 data for a specific region or operator.
 
 ### Data format
 
 The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the
-GTFS-Realtime(GTFS-RT) standard, and is stored in the protobuf format. This data is also available in the NeTEx format.
-For the NeTEx format, see the [NeTEx regional API](/api/netex-datasets/netex-regional/).
+GTFS-Realtime(GTFS-RT) standard, and is stored in the protobuf format. 
+
+This data is also available in the NeTEx format. For the NeTEx format, see the [NeTEx regional API](/api/netex-datasets/netex-regional/).
 
 ### Updates
 
