@@ -11,6 +11,7 @@
   font-weight: bold;
   border: none; // Reset for some elements such as form submits, which may use
   padding: 8px 32px 8px 16px;
+  cursor: pointer;
 
   background-color: var(--applied-background);
   color: var(--applied-foreground);

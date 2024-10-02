@@ -1,19 +1,28 @@
 <div class="container">
     <h2 class="h2--pink-accent">{{i18n "stay-informed-title"}}</h2>
     <aside class="newsletter-signup">
-        <form action="https://{{ .Site.Params.mailchimpAccount }}.list-manage.com/subscribe/post?u={{ .Site.Params.mailchimpUser }}&amp;id={{ .Site.Params.mailchimpId }}"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-                <label for="mce-EMAIL">{{i18n "stay-informed-paragraph"}}</label>
-                <div class="tl-row">
-                    <input type="email" value="" name="EMAIL" class="email tl-col--md-9 tl-col--sm-9 tl-col--xs-12" id="mce-EMAIL" placeholder="{{ i18n "newsletter-email-placeholder" }}" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                                                                              name="b_{{ .Site.Params.mailchimpUser }}_{{ .Site.Params.mailchimpId }}"
-                                                                                              tabindex="-1" value=""></div>
-                    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="tl-button tl-button--primary tl-col--md-3 tl-col--sm-3 tl-col--xs-12">{{i18n "newsletter-email-subscribe"}}</button>
-                </div>
+        <form id="newsletter-form">
+            <label for="mce-EMAIL">{{i18n "stay-informed-paragraph"}}</label>
+            <div class="tl-row">
+                <input type="email" value="" name="EMAIL" class="email tl-col--md-9 tl-col--sm-9 tl-col--xs-12" id="mce-EMAIL" placeholder="{{ i18n "newsletter-email-placeholder" }}" required>
+                <button type="submit" value="Subscribe" name="subscribe" id="newsletter-subscribe"
+                        class="tl-button tl-button--primary tl-col--md-3 tl-col--sm-3 tl-col--xs-12">{{i18n "newsletter-email-subscribe"}}
+                </button>
             </div>
         </form>
     </aside>
 </div>
+
+<script type="text/javascript">
+  document.getElementById("newsletter-form").addEventListener('submit', signupForNewsletter)
+
+  async function signupForNewsletter(event) {
+    event.preventDefault();
+    let email = $('#mce-EMAIL').val()
+    let button = document.getElementById("newsletter-subscribe")
+    button.classList.add("tl-button--state-loading")
+    fetch("{{ .Site.Params.devPortalUrl }}/api/trafiklab-se/newsletter/subscribe?email=" + email)
+      .then(      data => button.classList.add("tl-button--state-success"))
+      .catch(exception => button.classList.add("tl-button--state-failed"))
+    }
+</script>
