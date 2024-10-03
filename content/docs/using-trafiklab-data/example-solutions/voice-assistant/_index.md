@@ -2,6 +2,8 @@
 title: Voice assistant
 description: Creating a Google Assistant app to get realtime public transport information
 layout: "single"
+alias:
+  - /docs/example-solutions/voice-assistant/
 ---
 
 Most of us have experienced this before. You wake up in the morning, eat some breakfast, get dressed and run out of the

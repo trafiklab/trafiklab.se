@@ -22,7 +22,7 @@ map from every stop to every stop.This is equal to all ResRobot API traffic for 
 If you're interested in voice assistants, you will only need data when a user asks a question. APIs are a perfect use
 case for this scenario, as you want quick answers on relatively few route-planning questions.
 
-Make sure you check out our [voice assistant tutorial with ResRobot](/docs/example-solutions/voice-assistant) if you
+Make sure you check out our [voice assistant tutorial with ResRobot](/docs/using-trafiklab-data/example-solutions/voice-assistant/) if you
 want to get started with a digital assistant.
 
 ### Showing the next departures on a smart mirror
