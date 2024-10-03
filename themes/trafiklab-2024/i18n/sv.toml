@@ -55,6 +55,12 @@ other = "Din e-post adress"
 [newsletter-email-subscribe]
 other = "Prenumerera"
 
+[newsletter-email-subscribed]
+other = "Prenumererad!"
+
+[newsletter-email-subscribe-failed]
+other = "Fel uppstod"
+
 [partnerlist-title]
 other = "Officiell öppna data"
 

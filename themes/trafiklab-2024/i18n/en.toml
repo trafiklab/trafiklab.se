@@ -55,6 +55,12 @@ other = "Your email address"
 [newsletter-email-subscribe]
 other = "Subscribe"
 
+[newsletter-email-subscribed]
+other = "Subscribed!"
+
+[newsletter-email-subscribe-failed]
+other = "Error occurred"
+
 [partnerlist-title]
 other = "Official open data"
 

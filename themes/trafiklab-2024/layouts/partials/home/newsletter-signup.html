@@ -22,7 +22,7 @@
     let button = document.getElementById("newsletter-subscribe")
     button.classList.add("tl-button--state-loading")
     fetch("{{ .Site.Params.devPortalUrl }}/api/trafiklab-se/newsletter/subscribe?email=" + email)
-      .then(      data => button.classList.add("tl-button--state-success"))
-      .catch(exception => button.classList.add("tl-button--state-failed"))
+      .then(      data => button.textContent="{{i18n "newsletter-email-subscribed"}}")
+      .catch(exception => button.textContent="{{i18n "newsletter-email-subscribe-failed"}}")
     }
 </script>
