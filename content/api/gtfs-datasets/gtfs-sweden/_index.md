@@ -151,7 +151,7 @@ API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get s
 **Where to download**
 
 The dataset can be accessed through the following URL:
-[https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip_extra.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip_extra.zip?key={apikey}).
+[https://opendata.samtrafiken.se/gtfs-sweden/sweden_extra.zip?key={apikey}](https://opendata.samtrafiken.se/gtfs-sweden/sweden_extra.zip?key={apikey}).
 
 Replace `{apikey}` with your own API key.
 {{% /note %}}
