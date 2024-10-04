@@ -23,14 +23,6 @@ for both stops, addresses and places.
 
 Json or xml, as specified in the API request.
 
-### API key quota levels
-
-| Level  | Max requests/minute | Max requests/month |
-|--------|---------------------|--------------------|
-| Bronze | 30                  | 10 000             |
-| Silver | 60                  | 100 000            |
-| Gold   |                     | As needed          |
-
 ## Request
 
 ### URL

@@ -47,14 +47,6 @@ Den tidigare domänen och bas-URL:en `https://api.sl.se/api2/TravelplannerV3_1/`
 Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
 
-### API-nyckelnivåer
-
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 500 000         |
-| Guld   |                 | Efter behov     |
-
 ## Format
 
 Json eller Xml enligt ändelse till serviceanropet.

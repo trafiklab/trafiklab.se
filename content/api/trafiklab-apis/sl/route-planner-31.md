@@ -56,14 +56,6 @@ The old domain and base URL `https://api.sl.se/api2/TravelplannerV3_1/` has chan
 Query parameters, response bodies and API keys remain unchanged.
 {{% /warning %}}
 
-### API Key Levels
-
-| Level  | Max Requests/Minute | Max Requests/Month |
-|--------|---------------------|--------------------|
-| Bronze | 30                  | 10,000             |
-| Silver | 60                  | 500,000            |
-| Gold   |                     | As needed          |
-
 ## Format
 
 JSON or XML according to the extension of the service call.

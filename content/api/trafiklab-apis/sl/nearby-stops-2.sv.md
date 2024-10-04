@@ -28,14 +28,6 @@ har ändrats den 4:e december, och kommer sluta fungera den 15e mars 2024.
 Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
 
-### API-nyckelnivåer
-
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 500 000         |
-| Guld   |                 | Efter behov     |
-
 ## Format
 
 Json eller xml enligt ändelse till serviceanropet.

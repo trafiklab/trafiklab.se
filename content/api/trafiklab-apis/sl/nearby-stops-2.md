@@ -26,14 +26,6 @@ Json or xml, as specified in the API request.
 
 ## Request
 
-### API key quota levels
-
-| Level  | Max requests/minute | Max requests/month |
-|--------|---------------------|--------------------|
-| Bronze | 30                  | 10 000             |
-| Silver | 60                  | 500 000            |
-| Gold   |                     | As needed          |
-
 ### Parameters
 
 | Namn            | Type    | Required | Description                                                                                                                                                                                                                                                                                                                                  |

@@ -19,14 +19,6 @@ Den tidigare länken `https://api.sl.se/api2/typeahead.<FORMAT>?key=TRAFIKLAB-SL
 Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
 
-### API-nyckelnivåer
-
-| Nivå   | Max anrop/minut | Max anrop/månad |
-|--------|-----------------|-----------------|
-| Brons  | 30              | 10 000          |
-| Silver | 60              | 100 000         |
-| Guld   |                 | Efter behov     |
-
 ## Format
 
 Json eller xml enligt ändelse till serviceanropet.
