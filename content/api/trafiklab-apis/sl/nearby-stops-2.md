@@ -11,11 +11,11 @@ Using this API, you can find SL stops near a pair of coordinates.
 
 ## URL
 
-`https://journeyplanner.integration.sl.se/v1/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
+`https://journeyplanner.integration.sl.se/v1/nearbystopsv2.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
 
 {{% warning %}}
 The old
-URL `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>` has
+URL `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>` has
 changed on December 4rd, and will stop working on March 15th.
 Query parameters, response bodies and API keys remain unchanged.
 {{% /warning %}}
@@ -51,13 +51,13 @@ Json or xml, as specified in the API request.
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v1/nearbystopsv2.json?originCoordLat=59.328284&originCoordLong=18.016154&key=<YOUR KEY>
+https://journeyplanner.integration.sl.se/v1/nearbystopsv2.json?originCoordLat=59.328284&originCoordLong=18.016154&key=TRAFIKLAB-SLAPI-INTEGRATION-2024
 ```
 
 {{% /tab %}} {{% tab "Xml" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v1/nearbystopsv2.xml?originCoordLat=59.328284&originCoordLong=18.016154&key=<YOUR KEY>
+https://journeyplanner.integration.sl.se/v1/nearbystopsv2.xml?originCoordLat=59.328284&originCoordLong=18.016154&key=TRAFIKLAB-SLAPI-INTEGRATION-2024
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -242,7 +242,7 @@ Information regarding how ids relate to Hafas ids used in the route planner API.
 
 ### XSD
 
-`https://api.sl.se/api2/nearbystops/xsd.xml?key=<DIN API NYCKEL>&xsdname=hafasRestLocation.xsd</p>`
+`https://api.sl.se/api2/nearbystops/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&xsdname=hafasRestLocation.xsd</p>`
 
 ## Error messages
 

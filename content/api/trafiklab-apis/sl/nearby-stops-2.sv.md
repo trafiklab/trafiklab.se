@@ -19,11 +19,11 @@ Med detta API kan du få information om närliggande hållplatser till en förse
 
 ## URL
 
-`https://journeyplanner.integration.sl.se/v1/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
+`https://journeyplanner.integration.sl.se/v1/nearbystopsv2.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
 
 {{% warning %}}
 Den tidigare
-länken `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=<DIN NYCKEL>&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
+länken `https://api.sl.se/api2/nearbystopsv2.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&originCoordLat=<LAT>&originCoordLong=<LONG>&maxNo=<MAX ANTAL SVAR>&r=<RADIUS I METER>`
 har ändrats den 4:e december, och kommer sluta fungera den 15e mars 2024.
 Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
@@ -124,7 +124,7 @@ HafasId nyttjas bland annat i Reseplanerar api’et.
 #### Url
 
 Exempel:
-https://api.sl.se/api2/nearbystops/xsd.xml?key=<DIN API NYCKEL>&xsdname= hafasRestLocation.xsd
+https://api.sl.se/api2/nearbystops/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&xsdname= hafasRestLocation.xsd
 
 ## Felmeddelanden
 

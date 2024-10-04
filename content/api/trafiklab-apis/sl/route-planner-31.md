@@ -44,12 +44,12 @@ Travelplanner 3.1: `<crd>17.973032</crd><crd>59.360501</crd><crd>9.0E-6</crd><cr
 
 ## URL
 
-- **Trip:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=<YOUR API KEY>&<parameters>`
-- **JourneyDetail:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=<YOUR API KEY>&<parameters>`
-- **Reconstruction:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<YOUR API KEY>&<parameters>`
-- **Gisroute**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=<YOUR API KEY>&<parameters>
-- **TTI**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<YOUR API KEY>
-- **XSD:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<YOUR API KEY>`
+- **Trip:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<parameters>`
+- **JourneyDetail:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<parameters>`
+- **Reconstruction:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<parameters>`
+- **Gisroute**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<parameters>
+- **TTI**: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=TRAFIKLAB-SLAPI-INTEGRATION-2024
+- **XSD:** `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024`
 
 {{% warning %}}
 The old domain and base URL `https://api.sl.se/api2/TravelplannerV3_1/` has changed on January 15th, and will stop working on March 15th.
@@ -918,7 +918,7 @@ The value in ctxRecon is used as input for reconstruction
 Example:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
 ```
 
 ## Response Structure
@@ -936,7 +936,7 @@ No specific parameters are used for this service.
 Example:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024.xsd
 ```
 
 ## TTI – Time Table Info
@@ -951,7 +951,7 @@ No specific parameters are used for this service.
 Example:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=TRAFIKLAB-SLAPI-INTEGRATION-2024
 ```
 
 ### Response Structure

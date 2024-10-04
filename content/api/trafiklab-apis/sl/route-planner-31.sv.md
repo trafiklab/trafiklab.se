@@ -35,12 +35,12 @@ Travelplanner 3.1: *<crd>17.973032</crd><crd>59.360501</crd><crd>9.0E-6</crd><cr
 
 ## URL
 
-- Trip: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=<DIN API NYCKEL>&amp;<parametrar>`
-- Journey detail: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
-- Recontruction: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=<DIN API NYCKEL>&<referensparameter>`
-- Gisroute: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=<DIN APINYCKEL>&<parametrar>
-- TTI: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
-- XSD: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>`
+- Trip: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/trip.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&amp;<parametrar>`
+- Journey detail: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<referensparameter>`
+- Recontruction: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/Reconstruction.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<referensparameter>`
+- Gisroute: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/gisroute.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&<parametrar>
+- TTI: https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=TRAFIKLAB-SLAPI-INTEGRATION-2024
+- XSD: `https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024`
 
 {{% warning %}}
 Den tidigare domänen och bas-URL:en `https://api.sl.se/api2/TravelplannerV3_1/` har ändrats den 15:e januari, och kommer sluta fungera den 15e mars 2024.
@@ -915,7 +915,7 @@ Värdet i ctxRecon är det som används som input till reconstruction
 Exempel:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=<DIN API NYCKEL>&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/reconstruction.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&amp;ctx=T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24
 ```
 
 ## Svarsstruktur
@@ -933,7 +933,7 @@ Inga specifika parametrar används för denna tjänst.
 Exempel:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=<DIN API NYCKEL>.xsd
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024.xsd
 ```
 
 ## TTI – Time table info
@@ -948,7 +948,7 @@ Inga specifika parametrar används för denna tjänst.
 Exempel:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=<DIN API NYCKEL>
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/tti?key=TRAFIKLAB-SLAPI-INTEGRATION-2024
 ```
 
 ### Svarsstruktur

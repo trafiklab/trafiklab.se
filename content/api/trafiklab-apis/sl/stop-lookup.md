@@ -35,10 +35,10 @@ Json or xml, as specified in the API request.
 
 ### URL
 
-`https://journeyplanner.integration.sl.se/v1/typeahead.<FORMAT>?key=<YOUR_KEY>&searchstring=<QUERY>`
+`https://journeyplanner.integration.sl.se/v1/typeahead.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&searchstring=<QUERY>`
 
 {{% warning %}}
-The old URL `https://api.sl.se/api2/typeahead.<FORMAT>?key=<YOUR_KEY>&searchstring=<QUERY>` has changed on November 16th, and will stop working on March 15th.
+The old URL `https://api.sl.se/api2/typeahead.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&searchstring=<QUERY>` has changed on November 16th, and will stop working on March 15th.
 Query parameters, response bodies and API keys remain unchanged.
 {{% /warning %}}
 
@@ -59,13 +59,13 @@ The following parameters can be provided in the query string:
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v1/typeahead.json?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
+https://journeyplanner.integration.sl.se/v1/typeahead.json?searchstring=Oden&stationsonly=true&maxresults=5&key=TRAFIKLAB-SLAPI-INTEGRATION-2024
 ```
 
 {{% /tab %}} {{% tab "Xml" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v1/typeahead.xml?searchstring=Oden&stationsonly=true&maxresults=5&key=<YOUR KEY>
+https://journeyplanner.integration.sl.se/v1/typeahead.xml?searchstring=Oden&stationsonly=true&maxresults=5&key=TRAFIKLAB-SLAPI-INTEGRATION-2024
 ```
 
 {{% /tab %}} {{% /tabs %}}

@@ -12,10 +12,10 @@ söka efter hållplatsområden eller hållplatser, adresser och platser.
 
 ## URL
 
-`https://journeyplanner.integration.sl.se/v1/typeahead.<FORMAT>?key=<YOUR_KEY>&searchstring=<QUERY>`
+`https://journeyplanner.integration.sl.se/v1/typeahead.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&searchstring=<QUERY>`
 
 {{% warning %}}
-Den tidigare länken `https://api.sl.se/api2/typeahead.<FORMAT>?key=<YOUR_KEY>&searchstring=<QUERY>` har ändrats den 16:e november, och kommer sluta fungera den 15e mars 2024. 
+Den tidigare länken `https://api.sl.se/api2/typeahead.<FORMAT>?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&searchstring=<QUERY>` har ändrats den 16:e november, och kommer sluta fungera den 15e mars 2024. 
 Parametrar, svarsstrukturer och API nycklar är oförändrade.
 {{% /warning %}}
 
