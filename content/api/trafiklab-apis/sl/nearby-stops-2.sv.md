@@ -134,4 +134,4 @@ https://api.sl.se/api2/nearbystops/xsd.xml?key=TRAFIKLAB-SLAPI-INTEGRATION-2024&
 | 1006      | To many requests per minute                                                              |
 |           | För många anrop per minut, för den profil som används                                    |
 | 1007      | To many requests per month                                                               |
-|           | För många anrop per månad, för den profil som använd                                     
+|           | För många anrop per månad, för den profil som använd                                     |
