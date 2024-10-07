@@ -86,9 +86,9 @@ check [the top of this page](#operators-covered-by-this-dataset).
 
 #### Commercial operators
 
-| Operator                    | Planerad trafik                                                                                                                      | 
-|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **SJ + Snälltåget + Tågab** | [https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>) |
+| Operator | Static data                                                                                                                          | 
+|----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| **SJ**   | [https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>](https://opendata.samtrafiken.se/netex/sj/sj.zip?key=<api-nyckel>) |
 
 
 ## Realtime data (SIRI)
