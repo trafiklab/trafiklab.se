@@ -29,4 +29,4 @@ Om du ändå tycker att vi borde översätta vissa sidor, för att till exempel 
 
 ### Om du är ny på Trafiklab är det enklast att börja här
 
-[Using Trafiklab.se](/sv/docs/using-trafiklab/)
+[Using Trafiklab.se](/docs/getting-started/using-trafiklab/)

@@ -33,4 +33,4 @@ at the bottom of most pages.
 
 ## New to Trafiklab? Get started here!
 
-[Using Trafiklab.se]({{< ref "using-trafiklab/" >}} "Using Trafiklab.se")
+[Using Trafiklab.se](/docs/getting-started/using-trafiklab/)
