@@ -28,7 +28,7 @@ aliases:
 
 Using this API, you can get information regarding deviations on SLs transport network. This API replaces the
 older [Service Alerts (Störningsinformation)](service-alerts-2.md) and
-[Traffic Status (Trafikläget)](sl-traffic-status-2.md) APIs.
+[Traffic Status (Trafikläget)](sl-traffic-status-2.md) APIs. It does not require an API key.
 
 ## URL
 
