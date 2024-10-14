@@ -19,7 +19,7 @@ The data is formatted as JSON or XML, depending on the `format` query parameter.
 
 The static data used for this API is updated when changes are made, at most once per day.
 
-### Operators covered by this datasey
+### Operators covered by this dataset
 
 All operators which operate in Sweden are covered by the ResRobot APIs.
 
@@ -121,7 +121,7 @@ https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=xml&accessId=A
 {{% /tab %}} {{% /tabs %}}
 
 {{% info %}} All-caps stations, like GÖTEBORG in the example above, are virtual stations. These are a group
-of stations, for example to group stops which are close to eachother or to group several stops serving the same area.
+of stations, for example to group stops which are close to each other or to group several stops serving the same area.
 This is especially useful for people who are not familiar with the environment. Instead of having to choose between
 several stops which they don't know, they can simply search for trips to "Göteborg". {{% /info %}}
 
