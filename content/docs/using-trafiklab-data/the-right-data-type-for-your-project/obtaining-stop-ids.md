@@ -18,7 +18,7 @@ use the [Resrobot Stop lookup API ](/api/trafiklab-apis/resrobot-v21/stop-lookup
 to find stops which match a given search query.
 
 If you want a list of all stops, you can use the stops.txt file
-from the [GTFS Sverige 2 dataset](/api/gtfs-datasets/gtfs-sverige-21/). Using this
+from the [GTFS Sverige 2 dataset](/api/gtfs-datasets/gtfs-sverige-2/). Using this
 list, you can search locally on the device, which often results in a superior user experience. Furthermore, you can
 choose how your search function will rank stops. You can rank them based on the number of daily departures, distance
 from the user, type of transport, which region or kommun they are or aren't in, ... . The downside is that you need to
