@@ -26,6 +26,10 @@ nav.tl-side-navigation {
     &:hover {
       background-color: $color-gray-light;
     }
+
+    &.tl-side-navigation__item--disabled:hover, &.tl-side-navigation__item--level-0:hover {
+      background-color: unset;
+    }
   }
 
   .tl-side-navigation__chevron_wrapper {
