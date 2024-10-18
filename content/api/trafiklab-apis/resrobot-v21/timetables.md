@@ -48,7 +48,7 @@ details? These can be found in [the OpenAPI specification](api-spec.md).
 ## Example call
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
-from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](../../gtfs-datasets/gtfs-sverige-2/).
+from [ResRobot Stop lookup](stop-lookup.md) or [GTFS Sverige 2](/api/gtfs-datasets/gtfs-sverige-2/).
 
 ### Call
 
