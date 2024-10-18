@@ -116,7 +116,7 @@ In the GTFS `agency.txt` file, we find that agency\_id 275 corresponds to SL. In
 stop with national id `740066331` .
 
 ```xml
-agency_id,stop_id,agency_stop_id
+agency_id,agency_name,agency_url,agency_timezone,agency_lang
 275,SL,http://www.sl.se,Europe/Stockholm,sv
 ```
 
