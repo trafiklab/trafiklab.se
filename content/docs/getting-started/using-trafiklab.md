@@ -41,7 +41,7 @@ in which case your email adress will be visible for the other members of this pr
 If you have a GitHub account, you can choose to register and login through GitHub. In order to do so, just click
 the "Register with github" button.
 
-![Screenshot of the e-mail address and username fields](/media/2023/create-account.png)
+![Screenshot of the e-mail address and username fields](/media/2024/10/developer-trafiklab-se-login.png)
 
 After filling in your information, you need to accept the terms and conditions.
 
@@ -57,12 +57,6 @@ open-source repository. Press the save button.
 
 If you need to edit any of the details at a later stage you simply click the edit button in the top right corner.
 
-After creating your project, you can start adding API keys. Select which APIs you want to use in the dropdown list and
-click the "Add API key to project" button. Don't worry if you're still unsure about which ones you need - you can come
-back and add or delete keys and other setting anytime you need.
-
-![Screenshot of the API picking screen](/media/2023/add-api-key.png)
-
 ### Projects with multiple users
 
 You can add or remove users to a project by contacting the Trafiklab team at info@trafiklab.se
@@ -74,10 +68,14 @@ At the bottom of the page you will see all users connected to the project. A use
 
 ## 3. Creating API keys
 
+After creating your project, you can start adding API keys. Select which APIs you want to use in the dropdown list and
+click the "Add API key to project" button. Don't worry if you're still unsure about which ones you need - you can come
+back and add or delete keys and other setting anytime you need.
+
 In order to create an API key, navigate to the project and select the API to add. Every API can only be added once to a
 project.
 
-![The new key option](/media/2023/create-API-key.png "The 'add key' dropdown")
+![The new key option](/media/2024/10/developer-trafiklab-se-add-key.png "The 'add key' dropdown")
 
 Keys are created with a default profile, allowing you to test the API and build applications for home use. If you need
 more API requests than allowed in the standard profile, you can create a request to upgrade the key for free.
@@ -90,13 +88,13 @@ When your application needs more API calls than your API key quota allow, you ca
 Upgrading API keys is completely free of charge, and only needed to ensure all Trafiklab users can keep using the
 service for
 free.
-![Screenshot of an api key with an upgrade link](/media/2023/upgrade-quota.png "Upgrade buttons can be seen for keys which can be upgrade")
+![Screenshot of an api key with an upgrade link](/media/2024/10/developer-trafiklab-se-key.png "Upgrade buttons can be seen for keys which can be upgrade")
 
 In order to upgrade your API key, go to your project and click on the "Upgrade quota" button next to the API key that
 you want
 to upgrade.
 
-![Screenshot of the key upgrade dialog](/media/2023/request-key-upgrade.png "The key upgrade request form")
+![Screenshot of the key upgrade dialog](/media/2024/10/developer-trafiklab-se-key-upgrade.png "The key upgrade request form")
 
 Fill out the request form by choosing which level you would like to have from the dropdown and write a motivation.
 Your motivation should include:
