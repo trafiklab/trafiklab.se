@@ -23,6 +23,8 @@ only meant to give an idea of the
 types you should support. You should still be able to handle the other types in a graceful way, as new traffic may make
 use of them without prior warning.
 
+#### GTFS Sverige 2
+
 | Code | Name                       | Example                                                     |
 |:-----|:---------------------------|:------------------------------------------------------------|
 | 100  | Railway Service            |                                                             |
@@ -32,11 +34,27 @@ use of them without prior warning.
 | 106  | Regional Rail Service      | Commuter trains (Pendeltåg)                                 |
 | 401  | Metro Service              | Tunnelbanan Stockholm                                       |
 | 700  | Bus Service                |                                                             |
-| 702  | Express Bus Service        |                                                             |
-| 717  | Share Taxi Service         | Advance order traffic (Förbeställningstrafik)               |
 | 900  | Tram Service               | Trams in Göteborg                                           |
 | 1000 | Water Transport Service    | SL Pendelbåt, Stockholm-Helsinki                            |
 | 1501 | Communal Taxi Service      | Buses with advance order conditions (Förbeställningstrafik) |
+
+#### GTFS Regional, GTFS Sweden 3
+
+| Code | Name                          | Example                                                     |
+|:-----|:------------------------------|:------------------------------------------------------------|
+| 100  | Railway Service               |                                                             |
+| 101  | High Speed Rail Service       | SJ Snabbtåg, X2000                                          |
+| 102  | Long Distance Rail Service    | International (Utrikes)                                     |
+| 103  | Inter Regional Rail Service   | SJ InterCity                                                |
+| 105  | Sleeper Rail Service          | Night train (Nattåg)                                        |
+| 106  | Regional Rail Service         | County traffic (Länstrafik)                                 |
+| 401  | Metro Service                 | Metro (Tunnelbana)                                          |
+| 700  | Bus Service                   |                                                             |
+| 714  | Rail Replacement Bus Service  | Replacement bus                                             |
+| 900  | Tram Service                  | Trams in Göteborg                                           |
+| 1000 | Water Transport Service       | SL Pendelbåt, Stockholm-Helsinki                            |
+| 1501 | Communal Taxi Service         | Buses with advance order conditions (Förbeställningstrafik) |
+
 
 A complete list of all route types can be found
 at [https://developers.google.com/transit/gtfs/reference/extended-route-types](https://developers.google.com/transit/gtfs/reference/extended-route-types)
