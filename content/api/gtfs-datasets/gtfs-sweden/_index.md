@@ -70,7 +70,11 @@ The extensions are the same as in [the GTFS Regional API](/api/gtfs-datasets/#gt
 
 ### Notes and known issues
 
-See the documentation for [the GTFS Regional API](/api/gtfs-datasets/gtfs-regional/#notes-and-known-issues).
+The same notes and known issues as for [the GTFS Regional API](/api/gtfs-datasets/gtfs-regional/#notes-and-known-issues) apply.
+
+Additionally, not all routes can however be classified in the same level of detail depending on their data source, which 
+leads to some routes using more specific `route_type` values, while other routes still
+may use the more generic `route_type` 100. Routes may change to a more specific route type without prior warning.
 
 ## Realtime data 
 The realtime GTFS Sweden data consists of data feeds describing disturbances, deviations, delays, and even realtime

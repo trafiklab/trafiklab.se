@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-p a {
+p a, .page__content li a {
   @include text-link
 }
 
@@ -21,7 +21,7 @@ strong a, a:has(strong) {
   box-shadow: none;
 }
 
-p a:hover {
+p a:hover, .page__content li a:hover {
   @include text-link-hover
 }
 
