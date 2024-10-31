@@ -53,8 +53,8 @@ agency_id,agency_name,agency_url,agency_timezone,agency_lang
 | `route_url`        | URL                               | None                 | URL of a web page about the particular route. Should be different from the `agency.agency_url` value. Not used.                                                                                                                                                                                                        |
 | `route_desc`       | Text                              | GTFS Regional        | Description of a route that provides useful, quality information. Should not be a duplicate of `route_short_name` or `route_long_name`.                                                                                                                                                                                |
 
-The GTFS standard defines 9 route_types, but all Trafiklab feeds make use
-of [extended route types](https://developers.google.com/transit/gtfs/reference/extended-route-types). Check the
+The GTFS standard defines 9 `route_types`, but all Trafiklab feeds make use
+of [extended route types](/api/gtfs-datasets/overview/extensions/#extended-route-types). Check the
 feed-specific documentation for examples.
 
 The following excerpt shows some example values.

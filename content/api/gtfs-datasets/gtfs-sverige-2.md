@@ -18,7 +18,7 @@ It contains all public transport in the entire country of Sweden. The data is co
 included in the GTFS Regional dataset.
 
 ### Data format 
-The data is in the GTFS format, and makes use of the GTFS Extensions.
+The data is in the GTFS format, and makes use of [GTFS Extensions](/api/gtfs-datasets/overview/extensions/#extended-route-types).
 
 ### Updates
 The static data in this dataset is updated when changes are made, at most one time per day.

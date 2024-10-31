@@ -26,8 +26,8 @@ data for a specific region or operator.
 
 ### Data format
 
-The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime data follows the
-GTFS-Realtime(GTFS-RT) standard, and is stored in the protobuf format. 
+The data is in the GTFS format, and makes use of [GTFS Extensions](/api/gtfs-datasets/overview/extensions/#extended-route-types).
+Realtime data follows the GTFS-Realtime(GTFS-RT) standard, and is stored in the protobuf format.
 
 This data is also available in the NeTEx format. For the NeTEx format, see the [NeTEx regional API](/api/netex-datasets/netex-regional/).
 
@@ -94,6 +94,9 @@ read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
   routes which might be longer in GTFS Sverige 2. This is due to the higher detail of the GTFS Regional Static dataset.
 - GTFS Regional contains transfers between stop points within the same stop, as well as transfers between different
   stop areas and transfers to and from specific trips.
+- [Extended route types are used](/api/gtfs-datasets/overview/extensions/#extended-route-types). Not all routes can however be classified in detail
+  depending on the data source, which may lead to some operators using more specific route_types, while the GTFS feeds for other similar operators still 
+  may use the more generic `route_type` 100.
 
 ## Realtime data
 
