@@ -756,16 +756,16 @@ that a search with trip provides, it is recommended to set passlist=1 in trip. T
 
 | Name | Description                    | Comment                                                                                                                                       |
 |------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| id   | Reference from Trip, see above | It may be necessary to escape the \| character by its URL encoding %7C.                                                                       |
+| id   | Reference from Trip, see above | It is necessary to escape the \| character by its URL encoding %7C.                                                                           |
 | date | yyyy-MM-DD                     | Optional<br>Provides the corresponding journey on another day, if possible                                                                    |
 | poly | 0 or 1                         | Optional.<br>Indicates whether detailed routes should be calculated for the results. For a description of the polyline, see 2.4.5. Default 0. |
 
 Example:
 
 ```text
-https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.&lt;FORMAT&gt;?key=&lt;DIN API NYCKEL&gt;&amp;id=1|3598|0|74|13062017
+https://journeyplanner.integration.sl.se/v1/TravelplannerV3_1/journeydetail.<FORMAT>key=TRAFIKLAB-SLAPI-INTEGRATION-2024&id=1%7C3598%7C0%7C74%7C13062017
 ```
-
+ 
 # Real-time
 
 If there is real-time information, it is indicated in separate extra fields. For real-time times in JourneyDetail, "rtArrTime," "rtArrDate," "rtDepTime," and "
@@ -821,11 +821,11 @@ The value in the "ref" in the GisRef object is used as input for gisroute.
 
 ### Parameters
 
-| Name | Description                    | Description                                                                                  |
-|------|--------------------------------|----------------------------------------------------------------------------------------------|
-| ctx  |                                | The value in ctxRecon obtained in the response from trip.                                    |
-| lang | sv = Swedish<br />en = English |                                                                                              |
-| poly | 0 or 1                         | Optional. Specifies whether detailed routes should be calculated for the results. Default 0. |
+| Name | Description                    | Description                                                                                                    |
+|------|--------------------------------|----------------------------------------------------------------------------------------------------------------|
+| ctx  |                                | The value in ctxRecon obtained in the response from trip. The pipe-symbol '\|' needs to be url-encoded to %7C. |
+| lang | sv = Swedish<br />en = English |                                                                                                                |
+| poly | 0 or 1                         | Optional. Specifies whether detailed routes should be calculated for the results. Default 0.                   |
 
 Example:
 
