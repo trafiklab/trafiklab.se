@@ -703,7 +703,7 @@
       "departureDeviation": {
         "additionalProperties": false,
         "properties": {
-          "importance": {
+          "importance_level": {
             "description": "The priority importance level of deviation message",
             "example": 5,
             "type": "integer"
@@ -720,7 +720,7 @@
           }
         },
         "required": [
-          "importance",
+          "importance_level",
           "consequence",
           "message"
         ],
@@ -1190,7 +1190,7 @@
           "id": {
             "$ref": "#/components/schemas/deviationCaseId"
           },
-          "level": {
+          "importance_level": {
             "description": "The priority importance level of deviation message",
             "example": 5,
             "type": "integer"
