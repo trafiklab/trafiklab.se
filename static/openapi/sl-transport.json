@@ -681,24 +681,78 @@
         "description": "Scope of the deviation",
         "additionalProperties": false,
         "properties": {
-          "description": {
-            "description": "A textual description of the deviation scope",
-            "type": "string"
-          },
           "lines": {
+            "type": "object",
             "description": "Lines affected by the deviation",
-            "type": "string"
+            "$ref": "#/components/schemas/deviationScopeLineEntry"
           },
           "stop_areas": {
+            "type": "object",
             "description": "Stop areas affected by the deviation",
-            "type": "string"
+            "$ref": "#/components/schemas/deviationScopeStopAreaEntry"
           },
           "stop_points": {
+            "type": "object",
             "description": "Stop points affected by the deviation",
-            "type": "string"
+            "$ref": "#/components/schemas/deviationStopPointEntry"
           }
         },
         "type": "object"
+      },
+      "deviationScopeLineEntry": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 17
+          },
+          "designation": {
+            "type": "string",
+            "example": "17"
+          },
+          "transport_mode": {
+            "type": "string",
+            "example": "METRO"
+          },
+          "group_of_lines": {
+            "type": "string",
+            "example": "Tunnelbanans gröna linje"
+          }
+        }
+      },
+      "deviationScopeStopAreaEntry": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1131
+          },
+          "name": {
+            "type": "string",
+            "example": "Odenplan"
+          },
+          "type": {
+            "type": "string",
+            "example": "METROSTN"
+          }
+        }
+      },
+      "deviationStopPointEntry": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1121
+          },
+          "name": {
+            "type": "string",
+            "example": "Rådmansgatan"
+          },
+          "designation": {
+            "type": "string",
+            "example": "1"
+          }
+        }
       },
       "departureDeviation": {
         "additionalProperties": false,
