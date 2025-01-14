@@ -1,13 +1,13 @@
 ---
-title: NeTEx Sales
+title: Samtrafiken Sales data
 layout: "single"
 weight: 35
 date: 2025-01-10
 aliases:
-  - /api/trafiklab-apis/netex-sales/
+  - /api/trafiklab-apis/samtrafiken-sales-data/
 ---
 
-NeTEx Sales is a NeTEx feed with sellable data.
+Samtrafiken Sales data is a NeTEx feed with sellable data.
 This API differ from the NeTEx Sweden API. More details about additional, removed or changed fields can be found through the following url:
 [Samtrafiken sales export](https://samtrafiken.atlassian.net/wiki/spaces/SamA/pages/3448668185/NeTEx+format+adjustments+-+Samtrafiken+sales+export)
 
@@ -15,7 +15,7 @@ This API differ from the NeTEx Sweden API. More details about additional, remove
 
 This API contains data intended for those selling public transport tickets through the Samtrafiken Access platform. 
 It contains only traffic present in the Samtrafiken Access platform, including additional attributes which may be of interest for ticket resellers. 
-Note that the NeTEx Sales API only contains traffic data, to actually sell tickets you need to use the Samtrafiken Access platform.
+Note that the Samtrafiken Sales data API only contains traffic data, to actually sell tickets you need to use the Samtrafiken Access platform.
 
 Are you looking for an unfiltered dataset including quays and platforms we recommend the [NeTEx Sweden](https://trafiklab.se/api/netex-datasets/netex-sweden/) or [NeTEx Regional](https://trafiklab.se/api/netex-datasets/netex-regional/) API.
 
@@ -70,7 +70,7 @@ For more information about Samtrafiken NeTEx exports, see [Samtrafiken NeTEx exp
 
 ## Licence
 
-Data from the NeTEx Sales API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+Data from the Samtrafiken Sales data API is available under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
 
 #### Summary
 
