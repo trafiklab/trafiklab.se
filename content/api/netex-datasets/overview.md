@@ -21,15 +21,15 @@ Our four datasets:
   NeTEx Regional as a single feed. The feed contains all data present in GTFS Sweden, as well as additional data which
   can't be represented in GTFS. Realtime SIRI data is not available for the aggregated static NeTEx data.
 
-[**Samtrafiken sales data**](/api/netex-datasets/samtrafiken-sales-data/) which is a filtered dataset containing sellable data. This
-  API contains data intended for those selling public transport tickets through the Samtrafiken Access platform. 
-  Note that the Samtrafiken Sales data API only contains traffic data, to actually sell tickets you need to use the
-  Samtrafiken Access platform.
-
 [**Stops data**](/api/netex-datasets/stops-data/) which is an API that contains detailed data of Sweden's national stops
   and their mappings to stops from the [GTFS Regional](/api/gtfs-datasets/gtfs-regional/)
   and [Netex Regional](/api/netex-datasets/netex-regional/) APIs. This dataset contains all of
   Sweden's stops in the NeTEx format.
+
+[**Samtrafiken sales data**](/api/netex-datasets/samtrafiken-sales-data/) which is a filtered dataset containing sellable data. This
+API contains data intended for those selling public transport tickets through the Samtrafiken Access platform.
+Note that the Samtrafiken Sales data API only contains traffic data, to actually sell tickets you need to use the
+Samtrafiken Access platform.
 
 You can see the general difference between GTFS Regional and NeTEx Regional data below.
 <div class="wide">

@@ -1,7 +1,7 @@
 ---
 title: Samtrafiken Sales data
 layout: "single"
-weight: 35
+weight: 40
 date: 2025-01-10
 aliases:
   - /api/trafiklab-apis/samtrafiken-sales-data/
