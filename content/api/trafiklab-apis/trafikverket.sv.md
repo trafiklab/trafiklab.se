@@ -18,11 +18,8 @@ Om något värde saknas i svaret returneras inte detta element i svaret.
 
 ## API Nyckel
 
-Det krävs en giltig API nyckel som skickas med anropet. En API nyckel får man genom att skapa ett projekt som använder
-detta API.<a href="http://www.trafiklab.se/api/dokumentation/nycklar">Mer om hur du skapar och använder API nycklar
-hittar du här</a>. För att få en API nyckel så måste man godkänna
-APIets<a href="http://www.trafiklab.se/api/trafikverket-trainexport-api/dokumentation-trafikverket-trainexport#api-license">
-licensvillkor</a>.
+En API nyckel krävs. En API nyckel kan skapas kostnadsfritt i [vårt utvecklarportal](https://developer.trafiklab.se).
+Mer information hittas i [vår snabbstartsguide](https://www.trafiklab.se/docs/getting-started/using-trafiklab/).
 
 ## Metoder
 
@@ -64,7 +61,6 @@ Den detaljerade dokumentationen innehåller bland annat information om:
 Observera att du som är Trafiklabs-medlem **inte** behöver registrera dig på Trafikverkets sida utan kan hämta en nyckel
 direkt här på Trafiklab.
 
-För mer information se ”<a href="http://api.trafikinfo.trafikverket.se/">Trafikverkets öppna API för
-trafikinformation</a>”
+För mer information se ”[Trafikverkets öppna API för trafikinformation](http://api.trafikinfo.trafikverket.se/)”
 
 
