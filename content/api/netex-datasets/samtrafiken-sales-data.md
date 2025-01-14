@@ -8,7 +8,8 @@ aliases:
 ---
 
 Samtrafiken Sales data is a NeTEx feed with sellable data.
-This API differ from the NeTEx Sweden API. More details about additional, removed or changed fields can be found through the following url:
+This API differ from the NeTEx Sweden API, The main difference is that only data for trips sellable through Samtrafiken access is included. 
+More details about additional, removed or changed fields can be found through the following url:
 [Samtrafiken sales export](https://samtrafiken.atlassian.net/wiki/spaces/SamA/pages/3448668185/NeTEx+format+adjustments+-+Samtrafiken+sales+export)
 
 ## What does this dataset contain?
