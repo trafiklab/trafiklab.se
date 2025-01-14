@@ -28,7 +28,7 @@ communication between different organizations.
 
 ### Updates
 
-The static data in this dataset is updated monday to friday, usually between 22.00 and 00.00.
+There will be new datasets available daily, usually between 22.00 and 00.00.
 
 ## Latest
 
