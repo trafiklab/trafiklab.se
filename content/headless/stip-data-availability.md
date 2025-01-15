@@ -14,11 +14,11 @@ The following table shows which operators are covered by this dataset.
 | JLT (Jönköpings län)                           |        `jlt`         |     ✔️      |       ✔️       |        ✔️         |                |
 | Kalmar länstrafik (Kalmar län)                 |        `klt`         |     ✔️      |       ✔️       |        ✔️         |                |
 | Kronobergs länstrafik (Kronobergs län)         |       `krono`        |     ✔️      |       ✔️       |        ✔️         |                |
+| Luleå Lokaltrafik                              |       `lulea`        |     ✔️      |                |                   |                |
 | Länstrafiken Jämtland                          |      `jamtland`      |     ✔️      |                |                   |                |
 | Länstrafiken Norrbotten                        |     `norrbotten`     |     ✔️      |                |                   |                |
 | Länstrafiken Västerbotten                      |    `vasterbotten`    |     ✔️      |       🕒       |        🕒         |                |
 | Länstrafiken Örebro                            |       `orebro`       |     ✔️      |       ✔️       |        ✔️         |                |
-| Luleå Lokaltrafik                              |       `lulea`        |     ✔️      |                |                   |                |
 | Skånetrafiken (Skåne län)                      |       `skane`        |     ✔️      |       ✔️       |        ✔️         |       ✔️       |
 | SL (Stockholms län)                            |         `sl`         |     ✔️      |       ✔️       |        ✔️         |                |
 | Sörmlandstrafiken (Södermanlands län)          |      `sormland`      |     ✔️      |                |                   |                |
