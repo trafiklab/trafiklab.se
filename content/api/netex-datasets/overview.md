@@ -7,11 +7,11 @@ sidebar: true
 
 ## NeTEx at Trafiklab
 
-At Trafiklab, we offer three different NeTEx datasets. NeTEx regional and NeTEx Sweden offer the same coverage as
+At Trafiklab, we offer four different NeTEx datasets. NeTEx regional and NeTEx Sweden offer the same coverage as
 GTFS regional and GTFS Sweden, which is not full coverage. If you are looking for 100% coverage we recommend
 GTFS Sverige 2, which is much less detailed but does contain all the public transport data of Sweden.
 
-Our three datasets:
+Our four datasets:
 
 [**NeTEx Regional**](/api/netex-datasets/netex-regional/) which consists of multiple NeTEx feeds, each feed containing data
   for a specific region or operator. This data contains all details present in GTFS Regional, as well as additional data
@@ -25,6 +25,11 @@ Our three datasets:
   and their mappings to stops from the [GTFS Regional](/api/gtfs-datasets/gtfs-regional/)
   and [Netex Regional](/api/netex-datasets/netex-regional/) APIs. This dataset contains all of
   Sweden's stops in the NeTEx format.
+
+[**Samtrafiken sales data**](/api/netex-datasets/samtrafiken-sales-data/) which is a filtered dataset containing sellable data. This
+API contains data intended for those selling public transport tickets through the Samtrafiken Access platform.
+Note that the Samtrafiken Sales data API only contains traffic data, to actually sell tickets you need to use the
+Samtrafiken Access platform.
 
 You can see the general difference between GTFS Regional and NeTEx Regional data below.
 <div class="wide">
