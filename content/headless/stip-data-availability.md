@@ -14,6 +14,7 @@ The following table shows which operators are covered by this dataset.
 | JLT (Jönköpings län)                           |        `jlt`         |     ✔️      |       ✔️       |        ✔️         |                |
 | Kalmar länstrafik (Kalmar län)                 |        `klt`         |     ✔️      |       ✔️       |        ✔️         |                |
 | Kronobergs länstrafik (Kronobergs län)         |       `krono`        |     ✔️      |       ✔️       |        ✔️         |                |
+| Luleå Lokaltrafik                              |       `lulea`        |     ✔️      |                |                   |                |
 | Länstrafiken Jämtland                          |      `jamtland`      |     ✔️      |                |                   |                |
 | Länstrafiken Norrbotten                        |     `norrbotten`     |     ✔️      |                |                   |                |
 | Länstrafiken Västerbotten                      |    `vasterbotten`    |     ✔️      |       🕒       |        🕒         |                |
@@ -30,6 +31,7 @@ The following table shows which operators are covered by this dataset.
 | BT buss                                        |       `btbuss`       |     ✔️      |                |                   |                |
 | Bussbolaget Östergötland                       |      `bussost`       |     ✔️      |                |                   |                |
 | Destination Gotland                            |         `dg`         |     ✔️      |                |                   |                |
+| Falcks Omnibus AB                              |      `falcks`        |     ✔️      |                |                   |                |
 | Flixtrain                                      |     `flixtrain`      |     ✔️      |                |                   |                |
 | Härjedalingen                                  |       `harje`        |     ✔️      |                |                   |                |
 | Inlandsbanan                                   |       `inban`        |     ✔️      |                |                   |                |
