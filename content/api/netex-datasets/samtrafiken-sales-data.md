@@ -2,7 +2,7 @@
 title: Samtrafiken Sales data
 layout: "single"
 weight: 40
-date: 2025-01-10
+date: 2025-01-16
 aliases:
   - /api/trafiklab-apis/samtrafiken-sales-data/
 ---
@@ -69,7 +69,7 @@ The earliest available historical data is from 2025-01-01.
 
 For more information about Samtrafiken NeTEx exports, see [Samtrafiken NeTEx export](https://samtrafiken.atlassian.net/wiki/spaces/SamtrafikenOpenData/pages/989233182/Samtrafiken+NeTEx+export)
 
-## Changes
+## Extra files
 
 Additional files detecting changes are included in the dataset. 
  
