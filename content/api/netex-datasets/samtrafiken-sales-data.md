@@ -8,7 +8,7 @@ aliases:
 ---
 
 Samtrafiken Sales data is a NeTEx feed with sellable data.
-This API differ from the NeTEx Sweden API, The main difference is that only data for trips sellable through Samtrafiken access is included. 
+This API differ from the NeTEx Sweden API, the main difference is that only data for trips sellable through Samtrafiken access is included. 
 More details about additional, removed or changed fields can be found through the following url:
 [Samtrafiken sales export](https://samtrafiken.atlassian.net/wiki/spaces/SamA/pages/3448668185/NeTEx+format+adjustments+-+Samtrafiken+sales+export)
 
@@ -31,13 +31,13 @@ communication between different organizations.
 
 There will be new datasets available daily, usually between 22.00 and 00.00.
 
-## Latest
+## Latest dataset
 
 {{% note %}}
 **Where to download**
 
 You can access the latest dataset through the following URL:
-[https://opendata.samtrafiken.se/netex-access/samtrafiken_access_netex_latest.zip?key={apikey}]()
+[https://opendata.samtrafiken.se/netex-access/samtrafikensales_latest.zip?key={apikey}]()
 
 Replace `{apikey}` with your own API key. If you don´t have a key yet, read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 {{% /note %}}
@@ -47,7 +47,7 @@ Replace `{apikey}` with your own API key. If you don´t have a key yet, read [he
 {{% note %}}
 **Where to download**
 You can also access historical data for specific dates by following this URL:
-[https://opendata.samtrafiken.se/netex-access/samtrafiken_access_netex_{date}.zip?key={apikey}]()
+[https://opendata.samtrafiken.se/netex-access/samtrafikensales_{date}.zip?key={apikey}]()
 
 Replace `{date}` with a specified date in the format YYYYMMDD.
 
@@ -68,6 +68,18 @@ The earliest available historical data is from 2025-01-01.
 </div>
 
 For more information about Samtrafiken NeTEx exports, see [Samtrafiken NeTEx export](https://samtrafiken.atlassian.net/wiki/spaces/SamtrafikenOpenData/pages/989233182/Samtrafiken+NeTEx+export)
+
+## Changes
+
+Additional files detecting changes are included in the dataset. 
+ 
+#### changes.csv
+This file contains a list of the changed carriers/producers compared to the previously published NeTEx dataset.
+
+#### changeslines.csv 
+This file contains a list of the changed lines compared the previously published NeTEx dataset, so it gives a more detailed view of the changes than the changes.csv file that only shows changes on the producer level.
+
+If you want to make use of the information in the changes files, it is necessary to read the datasets every day. 
 
 ## Licence
 
