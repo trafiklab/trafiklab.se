@@ -30,7 +30,8 @@ The static data in this dataset is updated on a daily basis. The real-time data 
 per minute, see [realtime data](#realtime-data) for more information.
 
 ### Operators covered by this dataset
-{{% include "/headless/stip-data-availability.md" %}}
+
+{{% stip-data-availability %}}
 
 ### Breaking changes
 These datasets have the **stable** status. This means that we will communicate when fields are 

@@ -1,0 +1,34 @@
+{{ $data := slice }}
+{{ $url := "https://prod-stip-pingdom-status-export.s3.eu-central-1.amazonaws.com/data-availability.json" }}
+{{ with resources.GetRemote $url }}
+{{ $data = . | transform.Unmarshal }}
+{{ end }}
+
+The following table shows which operators are covered by this dataset.
+
+<table>
+<thead>
+<tr>
+    <th>Operator</th>
+    <th>Abbreviation</th>
+    <th>Static data</th>
+</tr>
+</thead>
+<tbody>
+{{ range $key, $value := $data }}
+{{ if not (eq (printf "%T" $value) "string") }}
+{{ if eq (index $value "staticData") true }}
+<tr>
+    <td>{{ .name }}</td>
+    <td><code>{{.shortname}}</code></td>
+    <td>{{ if eq (index $value "staticData") true }} ✔️ {{ end }}</td>
+</tr>
+{{ end }}
+{{ end }}
+{{ end }}
+<tr>
+    <td class="tl-muted" colspan="3">Last updated: {{ strings.Substr (index $data "last-update") 0 10 }}</td>
+</tr>
+</tbody>
+</table>
+

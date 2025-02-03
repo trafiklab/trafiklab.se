@@ -32,7 +32,8 @@ visit [Samtrafiken Open Data - NeTEx](https://samtrafiken.atlassian.net/wiki/spa
 The static data in this dataset is updated on a daily basis, typically between 03:00 and 07:00.
 
 ### Operators covered by this dataset
-{{% include "/headless/stip-data-availability.md" %}}
+
+{{% stip-data-availability %}}
 
 ### Breaking changes
 This dataset has the **stable** status. This means that the fields can be added without prior warning, but when changes

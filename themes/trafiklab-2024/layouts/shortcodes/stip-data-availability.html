@@ -1,0 +1,42 @@
+{{ $data := slice }}
+{{ $url := "https://prod-stip-pingdom-status-export.s3.eu-central-1.amazonaws.com/data-availability.json" }}
+{{ $cacheKey := print $url (now.Format "2006-01-02") }}
+{{ $opts := dict "key" $cacheKey }}
+{{ with resources.GetRemote $url $opts }}
+{{ $data = . | transform.Unmarshal }}
+{{ end }}
+
+The following table shows which operators are covered by this dataset.
+
+<table>
+<thead>
+<tr>
+    <th>Operator</th>
+    <th>Abbreviation</th>
+    <th>Static data</th>
+    <th>Real-time data</th>
+    <th>Vehicle positions</th>
+    <th>Occupancy data</th>
+</tr>
+</thead>
+<tbody>
+{{ range $key, $value := $data }}
+{{ if not (eq (printf "%T" $value) "string") }}
+{{ if eq (index $value "staticData") true }}
+<tr>
+    <td>{{ .name }}</td>
+    <td><code>{{.shortname}}</code></td>
+    <td>{{ if eq (index $value "staticData") true }} ✔️ {{ end }}</td>
+    <td>{{ if eq (index $value "tripUpdates") true }} ✔️ {{ end }}</td>
+    <td>{{ if eq (index $value "vehiclePositions") true }} ✔️ {{ end }}</td>
+    <td>{{ if or (eq (index $value "shortname") "skane") (eq (index $value "shortname") "otraf") }} ✔️ {{ end }}</td>
+</tr>
+{{ end }}
+{{ end }}
+{{ end }}
+<tr>
+    <td class="tl-muted" colspan="5">Last updated: {{ strings.Substr (index $data "last-update") 0 10 }}</td>
+</tr>
+</tbody>
+</table>
+
