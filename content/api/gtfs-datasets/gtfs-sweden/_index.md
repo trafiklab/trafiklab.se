@@ -55,7 +55,7 @@ Replace `{apikey}` with your own API key. If you don´t have a key yet, read [he
 
 <div style="max-width: 270px">
 
-#### API key levels
+### API key levels
 
 | Level  | Maximum calls per minute | Maximum calls per month |
 |:-------|:------------------------:|:-----------------------:|
@@ -63,6 +63,13 @@ Replace `{apikey}` with your own API key. If you don´t have a key yet, read [he
 | Silver |            10            |           250           |
 
 </div>
+
+### Stop Areas
+
+The files `stop_areas.txt` and `areas.txt` files are available since February 11th, 2025. These files are only present in GTFS Sweden 3 and contain a mapping
+between stops and so-called "Rikshållplatser", national (groups of) stops which are used in many older systems. Each rikshållplats is represented as an area,
+and can contain one or more stops. For example nearby bus and train stations are often combined into one Rikshållplats. These IDs match with ids in GTFS Sverige
+2 and Resrobot, making it easier to combine different datasets.
 
 ### GTFS Extensions
 

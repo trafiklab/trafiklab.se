@@ -72,9 +72,11 @@ files inside the archive contain Comma Separated Values (CSV) data, meaning they
 and humans. Each file contains all the instances of a certain type, just like a database table. For example, one file
 contains all the routes, another file contains all the stops. The files are linked together through ids, similar to how
 foreign keys work in a database. The image below gives an idea of the structure.
-{{% warning %}} GTFS Sverige 2 does not contain a shapes.txt file {{% /warning %}}
+{{% warning %}} The `areas.txt` and `stop_areas.txt` files are only available in GTFS Sweden 3.
 
-![The GTFS model, as used by Trafiklab. Fields which are always present are marked in bold.](/media/2020/05/gtfs-model.png)
+GTFS Sverige 2 does not contain the `shapes.txt` or `booking_rules.txt` files {{% /warning %}}
+
+![The GTFS model, as used by Trafiklab. Fields which are always present are marked in bold.](/media/2025/01/gtfs-static-model.2025.png)
 The GTFS model contains multiple files, which can be required or optional. The fields in these files can be always
 present, present for certain feed (e.g. only in GTFS Regional) or optional. The diagram above shows which fields are
 used by Trafiklab. The fields which are always present in a file are marked in bold. The tables marked in green are
