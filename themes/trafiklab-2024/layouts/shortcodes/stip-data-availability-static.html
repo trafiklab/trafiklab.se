@@ -1,6 +1,8 @@
 {{ $data := slice }}
 {{ $url := "https://prod-stip-pingdom-status-export.s3.eu-central-1.amazonaws.com/data-availability.json" }}
-{{ with resources.GetRemote $url }}
+{{ $cacheKey := print $url (now.Format "2006-01-02 15:04") }}
+{{ $opts := dict "key" $cacheKey }}
+{{ with resources.GetRemote $url $opts }}
 {{ $data = . | transform.Unmarshal }}
 {{ end }}
 
@@ -15,9 +17,9 @@ The following table shows which operators are covered by this dataset.
 </tr>
 </thead>
 <tbody>
-{{ range $key, $value := $data }}
+{{ range $value := $data }}
 {{ if not (eq (printf "%T" $value) "string") }}
-{{ if eq (index $value "staticData") true }}
+{{ if and (eq (index $value "staticData") true)  (eq (index $value "trafiklabEnabled") true) }}
 <tr>
     <td>{{ .name }}</td>
     <td><code>{{.shortname}}</code></td>
@@ -27,7 +29,7 @@ The following table shows which operators are covered by this dataset.
 {{ end }}
 {{ end }}
 <tr>
-    <td class="tl-muted" colspan="3">Last updated: {{ strings.Substr (index $data "last-update") 0 10 }}</td>
+    <td class="tl-muted" colspan="3">Last updated: {{ now.Format "2006-01-02" }}</td>
 </tr>
 </tbody>
 </table>
