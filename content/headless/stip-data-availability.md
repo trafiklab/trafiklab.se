@@ -1,9 +1,5 @@
 The following table shows which operators are covered by this dataset.
 
-{{% success %}}
-**New!** Realtime and vehicle position data is available for Jönköpings Länstrafik starting June 3rd 2024.
-{{% /success %}}
-
 | Operator                                       |     Abbreviation     | Static data | Real-time data | Vehicle positions | Occupancy data |
 |:-----------------------------------------------|:--------------------:|:-----------:|:--------------:|:-----------------:|:--------------:|
 | Blekingetrafiken (Blekinge län)                |      `blekinge`      |     ✔️      |                |                   |                |
@@ -31,7 +27,8 @@ The following table shows which operators are covered by this dataset.
 | BT buss                                        |       `btbuss`       |     ✔️      |                |                   |                |
 | Bussbolaget Östergötland                       |      `bussost`       |     ✔️      |                |                   |                |
 | Destination Gotland                            |         `dg`         |     ✔️      |                |                   |                |
-| Falcks Omnibus AB                              |      `falcks`        |     ✔️      |                |                   |                |
+| Falcks Omnibus AB                              |       `falcks`       |     ✔️      |                |                   |                |
+| Flixbus                                        |      `flixbus`       |     ✔️      |                |                   |                |
 | Flixtrain                                      |     `flixtrain`      |     ✔️      |                |                   |                |
 | Härjedalingen                                  |       `harje`        |     ✔️      |                |                   |                |
 | Inlandsbanan                                   |       `inban`        |     ✔️      |                |                   |                |
