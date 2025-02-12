@@ -55,7 +55,7 @@ description are provided. Note that not all error messages are actively used by 
 | SVC_DATATIME_PERIOD   | 400       | date/time not in timetable or allowed period    |
 | SVC_PROD              | 400       | product field missing or invalid                |
 | SVC_CTX               | 400       | context invalid                                 |
-| SVC_NO_RESULT         | 400       | no result found                                 |
+| SVC_NO_RESULT         | 200       | no result found                                 |
 | SVC_FAILED_SEARCH     | 500       | unsuccessful search                             |
 | SVC_NO_MATCH          | 422       | no match found                                  |
 | INT_ERR               | 500       | internal error                                  |
