@@ -33,7 +33,7 @@ The static data in this dataset is updated on a daily basis, typically between 1
 
 ### Operators covered by this dataset
 
-{{% include "/headless/stip-data-availability.md" %}}
+{{% stip-data-availability-static %}}
 
 ### Breaking changes
 

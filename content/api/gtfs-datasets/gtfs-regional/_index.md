@@ -38,7 +38,7 @@ per minute, see [realtime data](#realtime-data) for more information.
 
 ### Operators covered by this dataset
 
-{{% include "/headless/stip-data-availability.md" %}}
+{{% stip-data-availability %}}
 
 ### Breaking changes
 
