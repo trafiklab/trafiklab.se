@@ -7,6 +7,11 @@ date: 2019-01-14
 
 ## Description
 
+{{% info %}}
+A new version of this API is currently being developed by SL. In order to ensure that the new version fits the needs of
+all users and use cases, SL wants to hear from you on what must be included in this new version. Please contact us
+at [info@Trafiklab.se](mailto:info@trafiklab.se) to contribute.
+{{% /info %}}
 Using this API, you can find SL stops near a pair of coordinates.
 
 ## URL
