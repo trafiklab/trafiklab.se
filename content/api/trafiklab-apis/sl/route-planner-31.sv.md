@@ -6,6 +6,12 @@ date: 2019-01-14
 
 ## Beskrivning
 
+{{% info %}}
+En ny version av detta API håller för närvarande på att utvecklas av SL. För att säkerställa att den nya versionen
+uppfyller behoven hos alla användare och användningsfall vill SL gärna höra från dig om vad som måste ingå i den nya
+versionen. Vänligen kontakta oss på [info@Trafiklab.se](mailto:info@trafiklab.se) för att bidra.
+{{% /info %}}
+
 Med detta API kan du få reseförslag från A till B inom Stockholms län med SLs trafik. I SLs reseplanerare finns även Waxholmsbolagets trafik. APIet kan användas
 för att beräkna reseförslag mellan valfri kombination av position och/eller stoppställe. APIet returnerar reseförslag från ”bästa matchning” av det som läggs
 in.
