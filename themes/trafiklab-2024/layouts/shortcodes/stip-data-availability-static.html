@@ -1,5 +1,5 @@
 {{ $data := slice }}
-{{ $url := "https://prod-stip-pingdom-status-export.s3.eu-central-1.amazonaws.com/data-availability.json" }}
+{{ $url := "https://prod-stip-betteruptime-status-export.s3.eu-central-1.amazonaws.com/data-availability.json" }}
 {{ $cacheKey := print $url (now.Format "2006-01-02 15:04") }}
 {{ $opts := dict "key" $cacheKey }}
 {{ with resources.GetRemote $url $opts }}
