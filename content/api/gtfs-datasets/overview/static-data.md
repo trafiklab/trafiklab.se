@@ -20,6 +20,23 @@ documentation. {{% /warning %}}
 * In the tables below, the column 'available in dataset' will be bold if the field is always present and not bold if it
   is not always present.
 
+### feed_info.txt
+
+| Field Name            | Type          | Available in dataset | Description                                    |
+|:----------------------|:--------------|:---------------------|:-----------------------------------------------|
+| `feed_id`             | ID            | **All**              | Uniquely identifies a GTFS feed.               |
+| `feed_publisher_name` | Text          | **All**              | Full name of the feed publisher (Samtrafiken). |
+| `feed_publisher_url`  | URL           | **All**              | URL of the feed publisher (Samtrafiken).       |
+| `feed_lang`           | Language code | **All**              | Primary language used in this feed.            |
+| `feed_version`        | Text          | **All**              | The date at which this GTFS file was created.  |
+
+The following excerpt gives some example values for the different fields.
+
+```text
+feed_id,feed_publisher_name,feed_publisher_url,feed_lang,feed_version
+SE-sj,Samtrafiken i Sverige AB,https://www.samtrafiken.se,sv,2025-02-27
+```
+
 ### agency.txt
 
 | Field Name        | Type          | Available in dataset | Description                                                                                                                                                                                                                                                                     |
