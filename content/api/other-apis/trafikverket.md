@@ -11,6 +11,7 @@ aliases:
   - /node/12475
   - /node/12475/documentation
   - /node/12475/licens
+  - /api/trafiklab-apis/trafikverket/
 image: '/media/2024/09/banner_inlandsbanan.jpg'
 image_position: 'bottom'
 ---
@@ -22,7 +23,7 @@ Trafikverkets open API is an API to fetch information regarding road and rail tr
 
 ## How do I use Trafikverkets open API?
 
-A valid API key is required. This key can be obtained from the [Trafiklab developer portal](https://developer.trafiklab.se).
+A valid API key is required. This key can be obtained from the [Trafikverkets own data portal](https://data.trafikverket.se/oauth2/Account/register).
 
 This API has multiple versions, all using the same API key. You should use the latest available endpoint, but can keep using earlier ones if you have an existing application.
 
