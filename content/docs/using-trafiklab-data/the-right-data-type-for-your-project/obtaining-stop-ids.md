@@ -14,7 +14,7 @@ When you want to specify a station by its id, you will need at least one of the 
 * A list of all stations, so the user can pick an existing station, for example using autocompletion.
 
 You can
-use the [Resrobot Stop lookup API ](/api/trafiklab-apis/resrobot-v21/stop-lookup.md)
+use the [Resrobot Stop lookup API ](/api/our-apis/resrobot-v21/stop-lookup.md)
 to find stops which match a given search query.
 
 If you want a list of all stops, you can use the stops.txt file
