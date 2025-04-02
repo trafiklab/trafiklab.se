@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: API for retrieving departure and arrival information based on a specific station and date-time.
 servers:
-  - url: https://departure-board-api.samtrafiken.se/v1
+  - url: https://realtime-api.trafiklab.se/v1
 paths:
   /departures/{stopId}:
     get:

@@ -29,7 +29,7 @@ Replace `{operator}` with the abbreviation of the operator you want to download.
 OpenAPI specification, but are also listed on [the overview page for this API](_index.md). Replace `{apikey}` with your own API key.
 {{% /note %}}
 
-{{% page-ref page="/docs/using-trafiklab/getting-api-keys" %}}
+{{% page-ref page="/docs/getting-started/using-trafiklab.md" %}}
 
 ## Available Siri data
 

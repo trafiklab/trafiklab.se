@@ -28,8 +28,8 @@ $color-gray-dark: #656166;
 
 /* Yellow (Hue 52) */
 $color-yellow-extra-dark: #4D4200; /* HSB 52, 100, 30 */
-$color-yellow: #FFF6BF; /* HSB 52, 40, 100 */
-$color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
+$color-yellow-hint: #FFF6BF; /* HSB 52, 40, 100 */
+$color-yellow: #FFF199; /* HSB 52, 25, 100 */
 
 /* By assigning all colors to CSS variables, the color scheme of the site can easily be adjusted for parts of the site */
 /* An inverted block only has to assign new values to the variables and all elements will follow */
@@ -41,7 +41,7 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   --color-text-accent: #{$color-purple};
   --color-text-accent-decoration: #{$color-purple-light};
   --color-muted-accent: #{$color-purple-muted};
-  --color-text-selection: #{$color-yellow};
+  --color-text-selection: #{$color-yellow-hint};
   --color-code-inline-background: #f0f0f0;
 
   /* Buttons */
@@ -49,7 +49,7 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   --color-cta-background: #{$color-purple};
 
   --color-button-foreground: #{$color-black};
-  --color-button-background: #{$color-yellow};
+  --color-button-background: #{$color-yellow-hint};
 
   /* Text buttons without background */
   --color-button-text-foreground: #{$color-black};
@@ -59,7 +59,7 @@ $color-yellow-hint: #FFF199; /* HSB 52, 25, 100 */
   --color-h1-background: #{$color-black};
 
   --color-h2-foreground: #{$color-purple-extra-dark};
-  --color-h2-accent: #{$color-yellow};
+  --color-h2-accent: #{$color-yellow-hint};
 
   --color-h3-foreground: #{$color-purple-extra-dark};
   --color-h456-foreground: #{$color-purple-extra-dark};

@@ -77,7 +77,15 @@ h1 {
   &.h1--tl-inverted, & .h1--tl-inverted {
     @include text-h1-background;
   }
+}
 
+.h1--badge {
+  @include text-h1;
+  @include text-h1-background;
+  margin: 0 0 0 8px;
+  padding: 2px 8px;
+  background-color: $color-yellow;
+  color: $color-black;
 }
 
 h1 > span {

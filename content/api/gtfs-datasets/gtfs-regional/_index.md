@@ -38,7 +38,7 @@ per minute, see [realtime data](#realtime-data) for more information.
 
 ### Operators covered by this dataset
 
-{{% stip-data-availability %}}
+{{% stip-data-availability abbreviation scheduled realtime vehiclepositions occupancy %}}
 
 ### Breaking changes
 
