@@ -60,11 +60,36 @@ https://rtapi.trafiklab.se/v1/arrivals/740000003/2025-04-01T16:00?key=API_KEY
 
 {{% /tab %}} {{% /tabs %}}
 
+### Stops
+
+When listing departures or arrivals, the API takes an area id. This id matches rikshållplatsnumbers from GTFS Sverige 2 `stops.txt`, `areas.txt` from GTFS
+Sweden 3, and the ids used in the Resrobot APIs.
+Each area contains one or more stops, for example when both metro and busses stop at the same area. How areas are divided in stops depends on how the local
+agencies structure their data.
+
+An example is Slussen, which contains one area for busses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
+departure can be linked to one of these stops.
+
+![2025-04-03-trafiklab-api-stop-hierarchy.png](/media/2025/04/2025-04-03-trafiklab-api-stop-hierarchy.png)
+
 #### Request parameters
 
-| **Name** | **Data type** | **Required** | **Description** |
-|----------|---------------|--------------|-----------------|
-| key      | String        | Yes          | Your API key    |
+This API makes use of path parameters. They are filled in the URL and should be in the correct order.
+
+```text
+https://rtapi.trafiklab.se/v1/departures/{area id}?key={key}
+https://rtapi.trafiklab.se/v1/departures/{area id}/{time}?key={key}
+https://rtapi.trafiklab.se/v1/arrivals/{area id}?key={key}
+https://rtapi.trafiklab.se/v1/arrivals/{area id}/{time}?key={key}
+```
+
+| **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                                 |
+|----------|----------|---------------|--------------|-----------------------------------------------------------------------------------------------------------------|
+| area id  | Path     | String        | Yes          | The area/rikshallplats id for the stop you want to look up.                                                     |
+| time     | Path     | String        | Optional     | The time to look up, in `YYYY-MM-DD\THH:mm` format. For example, 2025-04-01T10:00. Seconds cannot be specified. |
+| key      | Query    | String        | Yes          | Your API key                                                                                                    |
+
+The interval for which to show departures cannot be specified, and is always 60 minutes. Any filtering should be done on the client side.
 
 ### Response
 
@@ -73,7 +98,7 @@ The responses consist of 4 parts:
 - The timestamp at which the response was created
 - Information about the query (which stop was looked up, which time was requested)
 - Information about the stops included in the response
-- The actual departures/arrivals
+- The actual departures/arrivals in the next 60 minutes
 
 Precise technical documentation is available in the form of an OpenAPI specification on the bottom of this page.
 
@@ -401,18 +426,18 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 
 ### DeparturesResponse / ArrivalsResponse
 
-| **Name**              | **Data type**    | **Description**                                         |
-|-----------------------|------------------|---------------------------------------------------------|
-| timetamp              | String           | List of departures or arrivals.                         |
-| query.queryTime       | String           | The time for which departures/arrivals are requested.   |
-| query.query           | String           | The queried rikshallplats id.                           |
-| stops                 | Stop[]           | The stops which are included in the query, one or more. |
-| stop.id               | String           | The stop id.                                            |
-| stop.name             | Datum            | The stop name.                                          |
-| stop.lat              | String           | The stop latitude.                                      |                                                                                                          
-| stop.lon              | String           | The top longitude.                                      |
-| stop.transport_modes  | String           | Transport modes stopping at this stop.                  |
-| departures / arrivals | CallAtLocation[] | Departures or arrivals from the given stop              |
+| **Name**              | **Data type**    | **Description**                                                                                                                                                                                    |
+|-----------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| timetamp              | String           | List of departures or arrivals.                                                                                                                                                                    |
+| query.queryTime       | String           | The time for which departures/arrivals are requested.                                                                                                                                              |
+| query.query           | String           | The queried area/rikshallplats id.                                                                                                                                                                 |
+| stops                 | Stop[]           | The stops which are included in the query, one or more.                                                                                                                                            |
+| stop.id               | String           | The stop id.                                                                                                                                                                                       |
+| stop.name             | Datum            | The stop name.                                                                                                                                                                                     |
+| stop.lat              | String           | The stop latitude.                                                                                                                                                                                 |                                                                                                          
+| stop.lon              | String           | The top longitude.                                                                                                                                                                                 |
+| stop.transport_modes  | String           | Transport modes stopping at this stop. This is based on actual traffic in the current timetable period. If a stop does not have traffic in the current timetable period, this array will be empty. |
+| departures / arrivals | CallAtLocation[] | Departures or arrivals from the given stop                                                                                                                                                         |
 
 ### CallAtLocation
 
