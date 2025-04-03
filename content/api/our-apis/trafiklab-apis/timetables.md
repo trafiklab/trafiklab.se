@@ -35,7 +35,7 @@ exactly the same parameters and have the same response structure. API Calls take
 some other parameters to fine-tune the results. It returns a list of departures or arrivals from the given stop,
 including a bit of information about each vehicle, such as where it is heading or where it comes from.
 
-## Example call
+## Making a request
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [Resrobot Stop lookup](/api/our-apis/resrobot-v21/stop-lookup.md) or [GTFS Sverige 2](/api/gtfs-datasets/gtfs-sverige-2/).
@@ -418,13 +418,13 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 {{% /tab %}} {{% /tabs %}}
 
-## Response data fields
+### Response data fields
 
 {{% info %}} The structure for departure and arrival boards is nearly identical. We list the most commonly used fields
 for both endpoints in this table. When we write departure/arrival, apply the one that matches the endpoint you're using.
 {{% /info %}}
 
-### DeparturesResponse / ArrivalsResponse
+#### DeparturesResponse / ArrivalsResponse
 
 | **Name**              | **Data type**    | **Description**                                                                                                                                                                                    |
 |-----------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -439,7 +439,7 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 | stop.transport_modes  | String           | Transport modes stopping at this stop. This is based on actual traffic in the current timetable period. If a stop does not have traffic in the current timetable period, this array will be empty. |
 | departures / arrivals | CallAtLocation[] | Departures or arrivals from the given stop                                                                                                                                                         |
 
-### CallAtLocation
+#### CallAtLocation
 
 | **Name**                  | **Data type** | **Description**                                                                                                                                                                                                                      |
 |---------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
