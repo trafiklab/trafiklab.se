@@ -37,13 +37,6 @@ https://journeyplanner.integration.sl.se/v2/trips?type_origin=any&type_destinati
 
 {{% /tab %}}
 
-{{% tab "Lines" %}}
-
-```text
-https://journeyplanner.integration.sl.se/v2/line-list?line_list_subnetwork=tfs&merge_dir=true
-```
-
-{{% /tab %}}
 {{% /tabs %}}
 
 ## Format
@@ -52,7 +45,7 @@ This API returns data in the JSON format
 
 ## Request
 
-### API Key Levels
+### API Keys
 
 This API does not require the use of an API key. You should however not make excessive requests, to ensure the availability
 and performance of the API for everyone. If you need large amounts of data, for example all departures from all
@@ -60,6 +53,24 @@ stops, [GTFS Regional](../../gtfs-datasets/gtfs-regional/_index.md) might be bet
 
 ### Parameters
 
+#### Stop Lookup
+
+| Name              | Description                           | Comment                                                                                                                                                                                                              |
+|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name_sf           | The street or stop name to search for | Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
+| type_sf           | The search type                       | `coord` for coordinates, or `any` for street and stop names                                                                                                                                                          |
+| any_obj_filter_sf | What to search for.                   | Bitmask used in combination with `any` in `type_sf`.  <ul><li> 2 = stops<li> 12 = streets and addresses<li> 32 = POI<li> 46 = all above                                                                              |
+
+#### Trip search
+
+| Name                 | Required         | Description                                                                                       | Comment                                                                                                                                                                                                              |
+|----------------------|------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type_origin          | Yes              | The type of input which is used for the origin.                                                   | `coord` for coordinates, or `any` for street and stop names.                                                                                                                                                         |
+| name_origin          | Yes              | The location id or coordinates to depart from. `type_origin` should match the type of input used. | Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
+| type_destination     | Yes              | The type of input which is used for the destination.                                              | `coord` for coordinates, or `any` for street and stop names.                                                                                                                                                         |
+| name_destination     | Yes              | The location id, or coordinates. `type_destination` should match the type of input used.          | Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
+| language             | No, default `sv` | The language to use in the response.                                                              | `sv` or `en`                                                                                                                                                                                                         |
+| calc_number_of_trips | No, default 3    | The number of public transport trips to return. Walk and bike routes are not affected.            |                                                                                                                                                                                                                      |
 
 ## Response
 
@@ -1762,130 +1773,6 @@ For details regarding the response structure, please see the OpenApi specificati
     }
   ]
 }
-```
-
-{{% /tab %}}
-
-{{% tab "Lines" %}}
-
-```json
-{
-  "transportations": [
-    {
-      "id": "tfs:01050: :H:y01",
-      "name": "Buss Buss 50",
-      "disassembledName": "50",
-      "number": "Buss 50",
-      "product": {
-        "id": 3,
-        "class": 5,
-        "name": "Buss",
-        "iconId": 3
-      },
-      "operator": {
-        "id": "1",
-        "name": "Storstockholms Lokaltrafik"
-      },
-      "destination": {
-        "name": "Lektorsstigen, Stockholm",
-        "type": "stop"
-      },
-      "properties": {
-        "tripCode": 0,
-        "timetablePeriod": "Current",
-        "validity": {
-          "from": "2024-06-01",
-          "to": "2025-06-21"
-        },
-        "lineDisplay": "LINE",
-        "globalId": "9011001005000000"
-      }
-    },
-    {
-      "id": "tfs:01053: :H:y01",
-      "name": "Buss Buss 53",
-      "disassembledName": "53",
-      "number": "Buss 53",
-      "product": {
-        "id": 3,
-        "class": 5,
-        "name": "Buss",
-        "iconId": 3
-      },
-      "operator": {
-        "id": "1",
-        "name": "Storstockholms Lokaltrafik"
-      },
-      "destination": {
-        "name": "Henriksdalsberget, Nacka",
-        "type": "stop"
-      },
-      "properties": {
-        "tripCode": 0,
-        "timetablePeriod": "Current",
-        "validity": {
-          "from": "2024-06-01",
-          "to": "2025-06-21"
-        },
-        "lineDisplay": "LINE",
-        "globalId": "9011001005300000"
-      }
-    },
-    {
-      "id": "tfs:01054: :H:y01",
-      "name": "Buss Buss 54",
-      "disassembledName": "54",
-      "number": "Buss 54",
-      "product": {
-        "id": 3,
-        "class": 5,
-        "name": "Buss",
-        "iconId": 3
-      },
-      "operator": {
-        "id": "1",
-        "name": "Storstockholms Lokaltrafik"
-      },
-      "destination": {
-        "name": "Moa Martinsons torg, Stockholm",
-        "type": "stop"
-      },
-      "properties": {
-        "tripCode": 0,
-        "timetablePeriod": "Current",
-        "validity": {
-          "from": "2024-06-01",
-          "to": "2025-06-21"
-        },
-        "lineDisplay": "LINE",
-        "globalId": "9011001005400000"
-      }
-    }
-  ]
-}
-```
-
-{{% /tab %}}
-{{% tab "Transport Authorities" %}}
-
-```json
-[
-  {
-    "id": 1,
-    "gid": 9010001000000000,
-    "name": "Storstockholms Lokaltrafik",
-    "formal_name": "AB Storstockholms Lokaltrafik",
-    "code": "string",
-    "street": "Lindhagensgatan 100",
-    "postal_code": 10573,
-    "city": "Stockholm",
-    "country": "Sweden",
-    "valid": {
-      "from": "2024-01-01T01:00:00",
-      "to": "2024-01-01T01:00:00"
-    }
-  }
-]
 ```
 
 {{% /tab %}}

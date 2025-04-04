@@ -113,6 +113,7 @@
           },
           {
             "name": "any_obj_filter_sf",
+            "description": "",
             "required": true,
             "in": "query",
             "type": "integer"
@@ -352,7 +353,7 @@
           },
           {
             "name": "sel_line",
-            "description": "Enables line filter\n* The parameter can be specified multiple times.\nNote: requires one of the parameter combination\n* must_excl + must_excl_line\n* prefer_excl + prefer_excl_line\n* prefer_incl + prefer_incl_line",
+            "description": "Enables line filter\n* The parameter can be specified multiple times.\nNote: requires one of the parameter combination\n* must_excl + must_excl_line\n* prefer_excl + prefer_excl_line\n* prefer_incl + prefer_incl_line. A line identifier is in the form `tfs:01050: :H:y01`, where 01050 consists of an authority number (01 = SL) and a line number (050 = 50). To filter Waxholmbolaget lines, use numer 06 instead of 01.",
             "required": false,
             "in": "query",
             "type": "array",
@@ -389,7 +390,7 @@
           },
           {
             "name": "must_excl",
-            "description": "Enables definitive exclusion of Operators and Lines.\n * See sel_op and sel_line",
+            "description": "Enables definitive exclusion of Operators and Lines.\n * See sel_op and sel_line. A line identifier is in the form `tfs:01050: :H:y01`, where 01050 consists of an authority number (01 = SL) and a line number (050 = 50). To filter Waxholmbolaget lines, use numer 06 instead of 01.",
             "required": false,
             "in": "query",
             "type": "boolean"
@@ -446,7 +447,7 @@
           },
           {
             "name": "prefer_incl",
-            "description": "Enables preferred inclusion of Operators and Lines (include if possible).\n * See sel_op and sel_line",
+            "description": "Enables preferred inclusion of Operators and Lines (include if possible).\n * See sel_op and sel_line. A line identifier is in the form `tfs:01050: :H:y01`, where 01050 consists of an authority number (01 = SL) and a line number (050 = 50). To filter Waxholmbolaget lines, use numer 06 instead of 01.",
             "required": false,
             "in": "query",
             "type": "boolean"
@@ -615,7 +616,7 @@
           },
           {
             "name": "prefer_incl_line",
-            "description": "Specifies a line that is to be prioritised.\n* The parameter can be specified multiple times in order to prioritise several lines.\n* See must_exclLine for value definition\n* Requires parameters sel_line and prefer_Incl",
+            "description": "Specifies a line that is to be prioritised.\n* The parameter can be specified multiple times in order to prioritise several lines.\n* See must_exclLine for value definition\n* Requires parameters sel_line and prefer_Incl. A line identifier is in the form `tfs:01050: :H:y01`, where 01050 consists of an authority number (01 = SL) and a line number (050 = 50). To filter Waxholmbolaget lines, use numer 06 instead of 01.",
             "required": false,
             "in": "query",
             "type": "array",
@@ -669,7 +670,7 @@
         ],
         "responses": {
           "200": {
-            "description": "A line list search result object containing a filtered list of lines",
+            "description": "A trip search result object containing a list of trips for the given search parameters.",
             "headers": {
               "cache-control": {
                 "description": "This response header will contain a max-age that hint the max time, in seconds, the data is cached for this resource. In case of no cache policy apply then it will also contain the 'no-cache' directive.",
@@ -725,7 +726,7 @@
     },
     "/line-list": {
       "get": {
-        "summary": "Retrieve information for lines. Note that ",
+        "summary": "Retrieve information for lines. Note that the SL transport API (https://www.trafiklab.se/api/trafiklab-apis/sl/transport/) provides the same functionalities in an easier to use way.",
         "produces": [
           "application/json"
         ],
