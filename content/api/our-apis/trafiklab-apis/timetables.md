@@ -471,11 +471,37 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 | scheduled_platform.id     | String        | The scheduled platform id.                                                                                                                                                                                                           |
 | scheduled_platform.name   | String        | The  scheduled platform name.                                                                                                                                                                                                        |
 | realtime_platform         | Platform      | Information about the realtime platform. If no realtime data is available, the scheduled platform data is used, see also `is_realtime`. Null if no platform information is available.                                                |
-| realtime_platform.id      | String        | The realltime platform id.                                                                                                                                                                                                           |
-| realtime_platform.name    | String        | The realltime platform name.                                                                                                                                                                                                         |
+| realtime_platform.id      | String        | The realtime platform id.                                                                                                                                                                                                            |
+| realtime_platform.name    | String        | The realtime platform name.                                                                                                                                                                                                          |
 | alerts                    | Alert[]       | Any messages for this stop, for example regarding roadworks, delays, changed routes etc.                                                                                                                                             |
-| is_realtime               | Boolean       | Indicates wether realtime data is available for this departure/arrival. When false, realtime fields have been filled with scheduled data for easier client-side implementations.                                                     |
+| is_realtime               | Boolean       | Indicates weather realtime data is available for this departure/arrival. When false, realtime fields have been filled with scheduled data for easier client-side implementations.                                                    |
 
 ## OpenAPI specification
 
 {{% oai-spec url="/openapi/trafiklab-apis.yml" %}}
+
+## License
+
+The Trafiklab Timetables API is available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se.
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+- The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+
+- Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner,
+  but not in any way that suggests the licensor endorses you or your use.
+- No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+Notices:
+
+You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or
+limitation .
+
+No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity,
+privacy, or moral rights may limit how you use the material.
+
+https://creativecommons.org/licenses/by/4.0/legalcode.txt

@@ -46,16 +46,42 @@ amounts of data.
 There is only one API key required to access all features in ResRobot, the different key levels are specified in the table below. If you don´t have a key yet,
 read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 
-| Level    | Maximum calls per minute | Maximum calls per month | Example usage                                  |
-|:---------|:------------------------:|:-----------------------:|:-----------------------------------------------|
-| Bronze   |            25            |         100.000         | Departure boards for 2 stops                   |
-| Bronze + |            25            |         500.000         | Departure boards for 10 stops                  |
-| Silver   |           150            |        5.000.000        | Departure boards for 100 stops, mobile apps    |
-| Gold     |          1.200           |       50.000.000        | Departure boards for 1.000 stops, mobile apps  |
-| Platinum |          6.000           |       250.000.000       | Departure boards for 5.000 stops , mobile apps |
+| Level    | Maximum calls per minute | Maximum calls per month | Example usage                                                            |
+|:---------|:------------------------:|:-----------------------:|:-------------------------------------------------------------------------|
+| Bronze   |            25            |         100.000         | Departure boards for 2 stops                                             |
+| Bronze + |            25            |         500.000         | Departure boards for 10 stops                                            |
+| Silver   |           150            |        5.000.000        | Departure boards for 100 stops, mobile apps                              |
+| Gold     |          1.200           |       50.000.000        | Departure boards for 2.000 stops updated every other minute, mobile apps |
+| Platinum |          3.000           |       125.000.000       | Departure boards for 5.000 stops updated every other minute, mobile apps |
 
 {{% warning %}} If you want to analyze data, if your service will have more than a million active users, or if you have strict requirements regarding uptime
 we recommend using GTFS and hosting your own API based on that data. One GTFS file contains all information you possibly can get out of this API, meaning it's
 easier to download this file if you need large amounts of data for analysis. {{% /warning %}}
 
 {{% page-ref "/api/gtfs-datasets/gtfs-regional/" "/api/gtfs-datasets/gtfs-sverige-2" %}}
+
+## License
+
+These Trafiklab APIs are available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se.
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+- The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+
+- Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner,
+  but not in any way that suggests the licensor endorses you or your use.
+- No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+Notices:
+
+You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or
+limitation .
+
+No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity,
+privacy, or moral rights may limit how you use the material.
+
+https://creativecommons.org/licenses/by/4.0/legalcode.txt
