@@ -3,11 +3,25 @@ info:
   title: Departure and Arrival Board API
   version: 1.0.0
   description: API for retrieving departure and arrival information based on a specific station and date-time.
+  contact:
+    name: support.trafiklab.se
+    url: https://support.trafiklab.se
+  license:
+    name: This API is licensed under a CC4.0-BY license.
+    url: https://creativecommons.org/licenses/by/4.0/
 servers:
   - url: https://realtime-api.trafiklab.se/v1
+externalDocs:
+  description: Read the complete documentation on Trafiklab
+  url: https://trafiklab.se/api/our-apis/trafiklab-apis/timetables/
+tags:
+  - name: Departure board
+  - name: Arrival board
 paths:
   /departures/{stopId}:
     get:
+      tags:
+        - Departure board
       summary: Get Departure Information (Current)
       description: Retrieve current departure information for a specific stop.
       parameters:
@@ -16,8 +30,12 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/DeparturesResponse'
+      security:
+        - api_key: [ ]
   /departures/{stopId}/{dateTime}:
     get:
+      tags:
+        - Departure board
       summary: Get Departure Information (Specific Time)
       description: Retrieve departure information for a specific stop and time.
       parameters:
@@ -27,8 +45,12 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/DeparturesResponse'
+      security:
+        - api_key: [ ]
   /arrivals/{stopId}:
     get:
+      tags:
+        - Arrival board
       summary: Get Arrival Information (Current)
       description: Retrieve current arrival information for a specific stop.
       parameters:
@@ -37,8 +59,12 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/ArrivalsResponse'
+      security:
+        - api_key: [ ]
   /arrivals/{stopId}/{dateTime}:
     get:
+      tags:
+        - Arrival board
       summary: Get Arrival Information (Specific Time)
       description: Retrieve arrival information for a specific stop and time.
       parameters:
@@ -48,6 +74,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/ArrivalsResponse'
+      security:
+        - api_key: [ ]
 components:
   parameters:
     StopId:
@@ -337,3 +365,8 @@ components:
         - type
         - title
         - text
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: key
+      in: query

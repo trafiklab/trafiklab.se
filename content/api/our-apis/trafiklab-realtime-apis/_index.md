@@ -1,5 +1,5 @@
 ---
-title: Trafiklab APIs
+title: Trafiklab realtime APIs
 layout: "single"
 weight: 1
 date: 2025-04-01
@@ -9,8 +9,10 @@ cascade:
   - image: '/media/2024/09/banner_phone.jpg'
 ---
 
-Trafiklabs APIs are a collection of APIs which provide information for public transport in entire Sweden. They are developed internally based on our own GTFS
-Sweden 3 data, offering the same data in a way which is more suited for direct consumption.
+Trafiklabs realtime APIs are a collection of APIs which provide information for public transport in entire Sweden. They are developed internally based on our
+own GTFS
+Sweden 3 data, offering the same data in a way which is more suited for direct consumption. They make realtime data more accessible compared to GTFS and
+NeTEx/SIRI, meaning you can use them for applications which can't handle complex GTFS or NeTEx datasets. Examples are mobile apps or digital signage.
 
 {{% note %}}
 **Trafiklabs APIs vs Resrobot**
@@ -22,8 +24,11 @@ users while reducing the costs for Trafiklab.
 
 ## Usage
 
-At this time, the APIs can be used for [looking up departures and arrivals](timetables). In order to find stop ids, or for route planning, use
-the [Resrobot APIs](../resrobot-v21).
+Trafiklabs realtime APIs can be used for
+- [looking up departures and arrivals, using the Trafiklab Timetables endpoint](timetables). 
+- [looking up the ids of stops, using the Trafiklab Stop Lookup endpoint](stop-lookup).
+
+For route planning, you can use the [Resrobot APIs](../resrobot-v21).
 
 ## Use cases
 

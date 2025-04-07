@@ -31,22 +31,50 @@ may occur on short notice. New fields may be added without warning.
 ## Using Trafiklab Timetables
 
 Trafiklab Timetables consists of two different endpoints, one for departures and one for arrivals. Both endpoints take
-exactly the same parameters and have the same response structure. API Calls take the stop id as a parameter, as well as
-some other parameters to fine-tune the results. It returns a list of departures or arrivals from the given stop,
+a stop id and timestamp as parameters, and have the same response structure. They return a list of departures or arrivals from the given stop,
 including a bit of information about each vehicle, such as where it is heading or where it comes from.
+
+### Stops
+
+When listing departures or arrivals, the API takes an area id. This id matches `stop_id` from GTFS Sverige 2 `stops.txt`, `area_id` in GTFS Sweden 3's
+`areas.txt`, and the ids used in the Resrobot APIs.
+Each area contains one or more stops, for example when both metro and busses stop at the same area. How areas are divided in stops depends on how the local
+agencies structure their data.
+
+{{% note %}}
+**Rikshållplatser**
+
+Rikshållplatser, Swedish for "national stops", is the historical name for areas grouping multiple local stops under one name and id. This is done to avoid
+duplicate stops when they are considered to be one stop by travelers. An example are certain multimodal stops, where a bus stop and tram stop may be at the same
+location. Rikshållplatser typically only group stops which are "identical" for travelers, meaning train stops always have their own rikshållplats as you always
+need to walk to another (nearby) stop in case of a bus transfer, as busses does not share platform with trains.
+
+**Meta-stops**
+
+Meta-stops are areas grouping multiple nearby stops. This is done to simplify route-planning for travelers. An example meta stop is "Stockholm" which combines
+train, metro, tram and bus stops in central stockholm. This way, travelers can easily search a route "from Göteborg to Stockholm" without having to know about
+all the local stops. Meta-stops are also used for combining multi-modal stops which are more spread out, such as Sundbyberg Station along with its two bus
+stos (on different sides of the station) as well as its metro stop.
+
+{{% /note %}}
+
+An example is Slussen, which contains one area for busses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
+departure can be linked to one of these stops. The trafiklab realtime APIs take the id of a rikshållplats or meta-stop, **not** the id of underlying stops!
+
+![2025-04-03-trafiklab-api-stop-hierarchy.png](/media/2025/04/2025-04-03-trafiklab-api-stop-hierarchy.png)
 
 ## Making a request
 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
-from [Resrobot Stop lookup](/api/our-apis/resrobot-v21/stop-lookup.md) or [GTFS Sverige 2](/api/gtfs-datasets/gtfs-sverige-2/).
+from [Trafiklab Stop Lookup](stop-lookup), [GTFS Sweden 3 (areas.txt)](/api/gtfs-datasets/gtfs-sweden-3/) or [GTFS Sverige 2 (stops.txt, no meta stops)](/api/gtfs-datasets/gtfs-sverige-2/).
 
 ### Call
 
 {{% tabs %}} {{% tab "Departures" %}}
 
 ```text
-https://rtapi.trafiklab.se/v1/departures/740000002?key=API_KEY
-https://rtapi.trafiklab.se/v1/departures/740000002/2025-04-01T16:00?key=API_KEY
+https://realtime-api.trafiklab.se/v1/departures/740000002?key=API_KEY
+https://realtime-api.trafiklab.se/v1/departures/740000002/2025-04-01T16:00?key=API_KEY
 ```
 
 {{% /tab %}}
@@ -54,33 +82,21 @@ https://rtapi.trafiklab.se/v1/departures/740000002/2025-04-01T16:00?key=API_KEY
 {{% tab "Arrivals" %}}
 
 ```text
-https://rtapi.trafiklab.se/v1/arrivals/740000003?key=API_KEY
-https://rtapi.trafiklab.se/v1/arrivals/740000003/2025-04-01T16:00?key=API_KEY
+https://realtime-api.trafiklab.se/v1/arrivals/740000003?key=API_KEY
+https://realtime-api.trafiklab.se/v1/arrivals/740000003/2025-04-01T16:00?key=API_KEY
 ```
 
 {{% /tab %}} {{% /tabs %}}
-
-### Stops
-
-When listing departures or arrivals, the API takes an area id. This id matches rikshållplatsnumbers from GTFS Sverige 2 `stops.txt`, `areas.txt` from GTFS
-Sweden 3, and the ids used in the Resrobot APIs.
-Each area contains one or more stops, for example when both metro and busses stop at the same area. How areas are divided in stops depends on how the local
-agencies structure their data.
-
-An example is Slussen, which contains one area for busses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
-departure can be linked to one of these stops.
-
-![2025-04-03-trafiklab-api-stop-hierarchy.png](/media/2025/04/2025-04-03-trafiklab-api-stop-hierarchy.png)
 
 #### Request parameters
 
 This API makes use of path parameters. They are filled in the URL and should be in the correct order.
 
 ```text
-https://rtapi.trafiklab.se/v1/departures/{area id}?key={key}
-https://rtapi.trafiklab.se/v1/departures/{area id}/{time}?key={key}
-https://rtapi.trafiklab.se/v1/arrivals/{area id}?key={key}
-https://rtapi.trafiklab.se/v1/arrivals/{area id}/{time}?key={key}
+https://realtime-api.trafiklab.se/v1/departures/{area id}?key={key}
+https://realtime-api.trafiklab.se/v1/departures/{area id}/{time}?key={key}
+https://realtime-api.trafiklab.se/v1/arrivals/{area id}?key={key}
+https://realtime-api.trafiklab.se/v1/arrivals/{area id}/{time}?key={key}
 ```
 
 | **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                                 |
