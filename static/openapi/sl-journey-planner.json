@@ -528,7 +528,7 @@
           },
           {
             "name": "route_type",
-            "description": "Calculate trips with least interchanges, fastest connections (leasttime ) or shortest footpaths (leastwalking).\nPossible values:\n* leastinterchange\n* leasttime\n* leastwalking\nDefault: leasttime",
+            "description": "Calculate trips with least interchanges (leastinterchange), fastest connections (leasttime) or shortest footpaths (leastwalking).\nPossible values:\n* leastinterchange\n* leasttime\n* leastwalking\nDefault: leasttime",
             "required": false,
             "in": "query",
             "enum": [

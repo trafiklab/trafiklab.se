@@ -7,13 +7,17 @@ aliases:
 ---
 ## Description
 
+With this API, you can get travel proposals from point A to point B within Stockholm County using SL’s traffic. Waxholmsbolaget’s traffic is also included in
+SL’s journey planner. The API can be used to calculate travel proposals between any combination of positions and/or stops. The API returns travel proposals
+based on the “best match” for the input.
+
 {{% info %}}
 This API replaces [SL Route planner 3.1](route-planner-31), which will be shut down June 30th, 2025.
 {{% /info %}}
 
 ## URL
 
-This API consists of 4 endpoints, each with their own URL. No API key is required to use this API.
+This API consists of 4 endpoints, each with their own URL.
 
 {{% tabs %}} {{% tab "System info" %}}
 
@@ -32,7 +36,7 @@ https://journeyplanner.integration.sl.se/v2/stop-finder?name_sf=odenplan&any_obj
 {{% tab "Journey planner" %}}
 
 ```text
-https://journeyplanner.integration.sl.se/v2/trips?type_origin=any&type_destination=any&name_origin=9091001000009182&name_destination=9091001000009192&max_length_bicycle=4000&min_length_bicycle=0
+https://journeyplanner.integration.sl.se/v2/trips?type_origin=any&type_destination=any&name_origin=9091001000009182&name_destination=9091001000009192
 ```
 
 {{% /tab %}}
@@ -41,36 +45,56 @@ https://journeyplanner.integration.sl.se/v2/trips?type_origin=any&type_destinati
 
 ## Format
 
-This API returns data in the JSON format
+This API returns data in the JSON format.
 
 ## Request
 
 ### API Keys
 
 This API does not require the use of an API key. You should however not make excessive requests, to ensure the availability
-and performance of the API for everyone. If you need large amounts of data, for example all departures from all
-stops, [GTFS Regional](../../gtfs-datasets/gtfs-regional/_index.md) might be better suited for your application.
+and performance of the API for everyone.
+
+If you need large amounts of data, for example to analyze travel times between all stops, [GTFS Regional](../../gtfs-datasets/gtfs-regional/_index.md) might be better suited for your application.
 
 ### Parameters
 
 #### Stop Lookup
 
-| Name              | Description                           | Comment                                                                                                                                                                                                              |
-|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name_sf           | The street or stop name to search for | Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
-| type_sf           | The search type                       | `coord` for coordinates, or `any` for street and stop names                                                                                                                                                          |
-| any_obj_filter_sf | What to search for.                   | Bitmask used in combination with `any` in `type_sf`.  <ul><li> 2 = stops<li> 12 = streets and addresses<li> 32 = POI<li> 46 = all above                                                                              |
+| Name              | Description                                                                                                                                                                                                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name_sf           | The street or stop name to search for. Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
+| type_sf           | The search . `coord` for coordinates, or `any` for street and stop names                                                                                                                                                                                    |
+| any_obj_filter_sf | What to search for. Bitmask used in combination with `any` in `type_sf`.  <ul><li> 2 = stops<li> 12 = streets and addresses<li> 32 = POI<li> 46 = all above                                                                                                 |
 
 #### Trip search
 
-| Name                 | Required         | Description                                                                                       | Comment                                                                                                                                                                                                              |
-|----------------------|------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| type_origin          | Yes              | The type of input which is used for the origin.                                                   | `coord` for coordinates, or `any` for street and stop names.                                                                                                                                                         |
-| name_origin          | Yes              | The location id or coordinates to depart from. `type_origin` should match the type of input used. | Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
-| type_destination     | Yes              | The type of input which is used for the destination.                                              | `coord` for coordinates, or `any` for street and stop names.                                                                                                                                                         |
-| name_destination     | Yes              | The location id, or coordinates. `type_destination` should match the type of input used.          | Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
-| language             | No, default `sv` | The language to use in the response.                                                              | `sv` or `en`                                                                                                                                                                                                         |
-| calc_number_of_trips | No, default 3    | The number of public transport trips to return. Walk and bike routes are not affected.            |                                                                                                                                                                                                                      |
+For a complete list of all parameters, see the OpenAPI specification on the bottom of this page.
+
+| Name                 | Required                     | Description                                                                                                                                                                                                                                                                                                                                                            |
+|----------------------|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type_origin          | Yes                          | The type of input which is used for the origin. `coord` for coordinates, or `any` for street and stop names.                                                                                                                                                                                                                                                           |
+| name_origin          | Yes                          | The location id or coordinates to depart from. `type_origin` should match the type of input used. Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf".                                                 |
+| type_destination     | Yes                          | The type of input which is used for the destination.                                                                                                                                                                                                                                                                                                                   |
+| name_destination     | Yes                          | The location id, or coordinates. `type_destination` should match the type of input used. Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf".                                                          |
+| type_via             | No, default no via           | The type of input which is used for defining a via stop.                                                                                                                                                                                                                                                                                                               |
+| name_via             | No, default no via           | The location id, or coordinates, to use as an additional stop between the origin and destination. `type_via` should match the type of input used. Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf". |
+| dwell_time           | No, default no via           | The time to wait at the via stop, in `hh:mm` format.                                                                                                                                                                                                                                                                                                                   |
+| type_not_via         | No, default no stop to avoid | The type of input which is used for defining a stop to avoid.                                                                                                                                                                                                                                                                                                          |
+| name_not_via         | No, default no stop to avoid | The location id, or coordinates, to avoid. `type_not_via` should match the type of input used. Name of the locality (e.g. stop name, POI, address) or coordinate. Syntax for coordinates: "<x>:<y>:WGS84\[dd.ddddd]" E.g. "18.013809:59.335104:WGS84\[dd.ddddd]". Note: Type must be stated in parameter "type_sf".                                                    |
+| language             | No, default `sv`             | The language to use in the response. `sv` or `en`.                                                                                                                                                                                                                                                                                                                     |
+| calc_number_of_trips | No, default 3                | The number of public transport trips to return. 0-3. Walk and bike routes are not affected.                                                                                                                                                                                                                                                                            |
+| max_changes          | No, default 9                | The number of changes allowed in results, 0-9.                                                                                                                                                                                                                                                                                                                         |
+| calc_one_direction   | No, default false            | Prevents the journey planner from calculating one result before the requested departure time                                                                                                                                                                                                                                                                           |
+| incl_mot_0           | No, default true             | Whether or not to include commuter trains in trip calculation                                                                                                                                                                                                                                                                                                          |
+| incl_mot_2           | No, default true             | Whether or not to include metro lines in trip calculation                                                                                                                                                                                                                                                                                                              |
+| incl_mot_4           | No, default true             | Whether or not to include trams and local trains (lokalbanor, e.g. lidingöbanan) in trip calculation                                                                                                                                                                                                                                                                   |
+| incl_mot_5           | No, default true             | Whether or not to include busses in trip calculation                                                                                                                                                                                                                                                                                                                   |
+| incl_mot_9           | No, default true             | Whether or not to include ships and ferries in trip calculation                                                                                                                                                                                                                                                                                                        |
+| incl_mot_10          | No, default true             | Whether or not to include on-demand traffic in trip calculation. `incl_mot_5` and `incl_mot_10` should be enabled.                                                                                                                                                                                                                                                     |
+| incl_mot_14          | No, default true             | Whether or not to include national trains in trip calculation                                                                                                                                                                                                                                                                                                          |
+| incl_mot_19          | No, default true             | Whether or not to include accessible bus (närtrafik) in trip calculation                                                                                                                                                                                                                                                                                               |
+| route_type           | No, default `leasttime`      | Calculate trips with the least interchanges (`leastinterchange`) fastest connections (`leasttime`), least walking (`leastwalking`)                                                                                                                                                                                                                                     |
+| gen_c                | No, default true`            | Whether or not to include coordinates for trip legs                                                                                                                                                                                                                                                                                                                    |
 
 ## Response
 
