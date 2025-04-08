@@ -21,7 +21,7 @@ updates.
 
 ### Breaking changes
 
-This API has the **beta** status. We are actively developing this API based on user feedback. While breaking changes are not expected, minor breaking changes
+This API has the **beta** status. We are actively developing this API based on user feedback. Minor breaking changes
 may occur on short notice. New fields may be added without warning.
 
 ### Operators covered by this dataset
@@ -90,7 +90,7 @@ https://realtime-api.trafiklab.se/v1/arrivals/740000003/2025-04-01T16:00?key=API
 
 #### Request parameters
 
-This API makes use of path parameters. They are filled in the URL and should be in the correct order.
+This API makes use of path parameters. They are part of the URL path and must be in the correct order.
 
 ```text
 https://realtime-api.trafiklab.se/v1/departures/{area id}?key={key}
@@ -444,7 +444,7 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 
 | **Name**              | **Data type**    | **Description**                                                                                                                                                                                    |
 |-----------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| timetamp              | String           | List of departures or arrivals.                                                                                                                                                                    |
+| timestamp             | String           | List of departures or arrivals.                                                                                                                                                                    |
 | query.queryTime       | String           | The time for which departures/arrivals are requested.                                                                                                                                              |
 | query.query           | String           | The queried area/rikshallplats id.                                                                                                                                                                 |
 | stops                 | Stop[]           | The stops which are included in the query, one or more.                                                                                                                                            |

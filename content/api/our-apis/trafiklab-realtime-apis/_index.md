@@ -9,15 +9,15 @@ cascade:
   - image: '/media/2024/09/banner_phone.jpg'
 ---
 
-Trafiklabs realtime APIs are a collection of APIs which provide information for public transport in entire Sweden. They are developed internally based on our
+Trafiklab realtime APIs is a collection of APIs which provide information for public transport in entire Sweden. They are developed internally based on our
 own GTFS
-Sweden 3 data, offering the same data in a way which is more suited for direct consumption. They make realtime data more accessible compared to GTFS and
+Sweden 3 data, offering the same data in a way that is more suited for direct consumption. They make realtime data more accessible compared to GTFS and
 NeTEx/SIRI, meaning you can use them for applications which can't handle complex GTFS or NeTEx datasets. Examples are mobile apps or digital signage.
 
 {{% note %}}
-**Trafiklabs APIs vs Resrobot**
+**Trafiklab APIs vs Resrobot**
 
-These APIs are a direct replacement for Resrobot 2.1, except for trip planning, which will remain available in its current form. Compared to Resrobot, they
+These APIs are a direct replacement for Resrobot 2.1 timetables and stop lookup. Compared to Resrobot, they
 contain more detailed data, such as platforms and realtime data. They offer significantly better performance as well, which translates into higher quota for end
 users while reducing the costs for Trafiklab.
 {{% /note %}}
@@ -48,7 +48,7 @@ amounts of data.
 
 ### API key levels
 
-There is only one API key required to access all features in ResRobot, the different key levels are specified in the table below. If you don´t have a key yet,
+There is only one API key required to access all features in Trafiklab APIs, the different key levels are specified in the table below. If you don´t have a key yet,
 read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 
 | Level    | Maximum calls per minute | Maximum calls per month | Example usage                                                            |
