@@ -25,8 +25,8 @@ users while reducing the costs for Trafiklab.
 ## Usage
 
 Trafiklabs realtime APIs can be used for
-- [looking up departures and arrivals, using the Trafiklab Timetables endpoint](timetables). 
-- [looking up the ids of stops, using the Trafiklab Stop Lookup endpoint](stop-lookup).
+- looking up departures and arrivals, using the [Trafiklab Timetables endpoint](timetables). 
+- looking up the ids of stops, using the [Trafiklab Stop Lookup endpoint](stop-lookup).
 
 For route planning, you can use the [Resrobot APIs](../resrobot-v21).
 

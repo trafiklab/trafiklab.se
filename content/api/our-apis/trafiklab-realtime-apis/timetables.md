@@ -36,25 +36,25 @@ including a bit of information about each vehicle, such as where it is heading o
 
 ### Stops
 
-When listing departures or arrivals, the API takes an area id. This id matches `stop_id` from GTFS Sverige 2 `stops.txt`, `area_id` in GTFS Sweden 3's
-`areas.txt`, and the ids used in the Resrobot APIs.
+When listing departures or arrivals, the API takes an area id. This id matches `stop_id` from GTFS Sverige 2 stops.txt, `area_id` in GTFS Sweden 3's
+areas.txt, and the ids used in the Resrobot APIs.
 Each area contains one or more stops, for example when both metro and busses stop at the same area. How areas are divided in stops depends on how the local
 agencies structure their data.
 
 {{% note %}}
 **Rikshållplatser**
 
-Rikshållplatser, Swedish for "national stops", is the historical name for areas grouping multiple local stops under one name and id. This is done to avoid
+Rikshållplatser, Swedish for "national stops", is the historical name for a grouping of multiple local stops under one name and id. This is done to avoid
 duplicate stops when they are considered to be one stop by travelers. An example are certain multimodal stops, where a bus stop and tram stop may be at the same
 location. Rikshållplatser typically only group stops which are "identical" for travelers, meaning train stops always have their own rikshållplats as you always
 need to walk to another (nearby) stop in case of a bus transfer, as busses does not share platform with trains.
 
 **Meta-stops**
 
-Meta-stops are areas grouping multiple nearby stops. This is done to simplify route-planning for travelers. An example meta stop is "Stockholm" which combines
+Meta-stops are groups of multiple nearby stops. This is done to simplify route-planning for travelers. An example meta stop is "Stockholm" which combines
 train, metro, tram and bus stops in central stockholm. This way, travelers can easily search a route "from Göteborg to Stockholm" without having to know about
 all the local stops. Meta-stops are also used for combining multi-modal stops which are more spread out, such as Sundbyberg Station along with its two bus
-stos (on different sides of the station) as well as its metro stop.
+stops (on different sides of the station) as well as its metro stop.
 
 {{% /note %}}
 
