@@ -1260,7 +1260,7 @@
         },
         "required": [
           "id",
-          "level",
+          "importance_level",
           "message",
           "scope"
         ],
