@@ -38,7 +38,7 @@ including a bit of information about each vehicle, such as where it is heading o
 
 When listing departures or arrivals, the API takes an area id. This id matches `stop_id` from GTFS Sverige 2 stops.txt, `area_id` in GTFS Sweden 3's
 areas.txt, and the ids used in the Resrobot APIs.
-Each area contains one or more stops, for example when both metro and busses stop at the same area. How areas are divided in stops depends on how the local
+Each area contains one or more stops, for example when both metro and buses stop at the same area. How areas are divided in stops depends on how the local
 agencies structure their data.
 
 {{% note %}}
@@ -47,7 +47,7 @@ agencies structure their data.
 Rikshållplatser, Swedish for "national stops", is the historical name for a grouping of multiple local stops under one name and id. This is done to avoid
 duplicate stops when they are considered to be one stop by travelers. An example are certain multimodal stops, where a bus stop and tram stop may be at the same
 location. Rikshållplatser typically only group stops which are "identical" for travelers, meaning train stops always have their own rikshållplats as you always
-need to walk to another (nearby) stop in case of a bus transfer, as busses does not share platform with trains.
+need to walk to another (nearby) stop in case of a bus transfer, as buses do not share platforms with trains.
 
 **Meta-stops**
 
@@ -58,7 +58,7 @@ stops (on different sides of the station) as well as its metro stop.
 
 {{% /note %}}
 
-An example is Slussen, which contains one area for busses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
+An example is Slussen, which contains one area for buses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
 departure can be linked to one of these stops. The trafiklab realtime APIs take the id of a rikshållplats or meta-stop, **not** the id of underlying stops!
 
 ![2025-04-03-trafiklab-api-stop-hierarchy.png](/media/2025/04/2025-04-03-trafiklab-api-stop-hierarchy.png)
@@ -470,7 +470,7 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 | route.designation         | String        | Internal id, do not use                                                                                                                                                                                                              |
 | route.transport_mode      | String        | The transport mode for this route, one of <ul><li>BUS<li>METRO<li>TRAIN<li>TRAM<li>TAXI<li>BOAT</ul>                                                                                                                                 |
 | route.transport_mode_code | Integer       | The specific GTFS transport mode code for this route. See [GTFS extended route types](/api/gtfs-datasets/overview/extensions/).                                                                                                      |
-| route.direction           | String        | The direction for this route, which is for example shown on the front of busses. This text may be different for the same route at different stops, for example "A via B" will often change to just "A" after stop B has been passed. |
+| route.direction           | String        | The direction for this route, which is for example shown on the front of buses. This text may be different for the same route at different stops, for example "A via B" will often change to just "A" after stop B has been passed. |
 | route.origin.id           | String        | The id of the first stop on this route.                                                                                                                                                                                              |
 | route.origin.name         | String        | The name of the first stop on this route.                                                                                                                                                                                            |
 | route.destination.id      | String        | The id of the last stop on this route.                                                                                                                                                                                               |

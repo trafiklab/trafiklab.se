@@ -38,7 +38,7 @@ APIs. No API key is required to use this API.
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Site      | A Site is a grouping of StopAreas used to simplify searching in the journey planner.                                                                                    |
 | StopArea  | A StopArea is a grouping of StopPoints with the same traffic type and name within a defined geographic area, such as a terminal.                                        |
-| StopPoint | A StopPoint is a stopping point, also known as quay, and is part of a StopArea. A stop area for busses may for example contain one stop point on each side of the road. |
+| StopPoint | A StopPoint is a stopping point, also known as quay, and is part of a StopArea. A stop area for buses may for example contain one stop point on each side of the road. |
 
 ## URL
 

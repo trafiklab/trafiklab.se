@@ -13,7 +13,7 @@ positions keeps increasing.
 
 ## Which vehicles will share their location?
 
-Right now only busses will share their location, but the goal is to publish data for all of SL's vehicles in traffic.
+Right now only buses will share their location, but the goal is to publish data for all of SL's vehicles in traffic.
 
 ## When will this data be available?
 

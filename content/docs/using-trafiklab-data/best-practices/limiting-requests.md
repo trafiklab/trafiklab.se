@@ -18,7 +18,7 @@ hints below first.
 
 In many cases, you'll have some sort of display showing when the next bus leaves. However, if you never travel between
 midnight and 06:00, you don't need to fetch this data. If you're very unlikely to travel between 22:00 and 23:00, a time
-when busses are unlikely to be delayed as well, it might be enough to fetch their data once every 5 minutes. During rush
+when buses are unlikely to be delayed as well, it might be enough to fetch their data once every 5 minutes. During rush
 hour, when you usually leave for school or work, you want to most accurate data and could update every minute or two. By
 varying the update frequency throughout the day, you can have high update frequencies when needed while saving requests
 when you don't need them. The table below shows an example on how you can vary the number of requests per hour to fit
