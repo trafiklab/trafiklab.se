@@ -39,6 +39,10 @@
       display: none;
     }
 
+    div.wrapper {
+      padding: 0;
+    }
+
     h3.opblock-tag {
       @include font-ibm-plex-sans;
       display: table;
@@ -75,6 +79,17 @@
 
     td {
       padding-left: 8px !important;
+    }
+
+    td.parameters-col_description {
+      word-break: break-word; // Ensure columns don't become too wide based on their content
+    }
+
+    section.models {
+      margin: 0; // override 30px vertical margin, rely on vertical margin from previous element
+      h4 {
+        padding: 8px; // consistent padding with requests
+      }
     }
   }
 }

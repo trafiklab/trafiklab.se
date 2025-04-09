@@ -579,7 +579,7 @@
           },
           {
             "name": "dwell_time",
-            "description": "Adds extra waiting time (in minutes) at a via stop, when using name_via.<br>\n<br>\nAccepted format:<br>\n* **HHMM** - The two-digit hour number is followed by the two-digit minute number separated by a colon.",
+            "description": "Adds extra waiting time (in minutes) at a via stop, when using name_via.<br>Accepted format: **HHMM** - The two-digit hour number is followed by the two-digit minute number separated by a colon.",
             "required": false,
             "in": "query",
             "type": "string",
@@ -726,7 +726,8 @@
     },
     "/line-list": {
       "get": {
-        "summary": "Retrieve information for lines. Note that the SL transport API (https://www.trafiklab.se/api/trafiklab-apis/sl/transport/) provides the same functionalities in an easier to use way.",
+        "summary": "Retrieve information for lines.",
+        "description": "Important! The SL transport API (https://www.trafiklab.se/api/trafiklab-apis/sl/transport/) provides the same functionalities in an easier to use way.",
         "produces": [
           "application/json"
         ],
@@ -2018,7 +2019,7 @@
               "type": "string"
             },
             "RealtimeTripId": {
-              "description": "Presented if the trip is included in planned timetable. Gid including Transport authority/       Trafikhuvudman  (pos 5-7) and Trip number /Turnummer (pos 12-16). Transport authorities: 001 = Storstockholms Lokaltrafik, 002 = Uppsala länstrafik (in SL data), 005 = Färdtjänstnämnden, 006 = Trafikverket, 008 = Waxholmsbolaget\nAVMSTripID Presented if the trip is included in realtime data. If only AVMSTripID is presented, this trip is an extra trip added in realtime data. See RealtimeTripId for description of the information",
+              "description": "Presented if the trip is included in planned timetable. Gid including Transport authority/Trafikhuvudman  (pos 5-7) and Trip number /Turnummer (pos 12-16). Transport authorities: 001 = Storstockholms Lokaltrafik, 002 = Uppsala länstrafik (in SL data), 005 = Färdtjänstnämnden, 006 = Trafikverket, 008 = Waxholmsbolaget\nAVMSTripID Presented if the trip is included in realtime data. If only AVMSTripID is presented, this trip is an extra trip added in realtime data. See RealtimeTripId for description of the information",
               "example": {
                 "strict": false,
                 "value": "9015001001710090"

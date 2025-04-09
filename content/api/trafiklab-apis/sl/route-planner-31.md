@@ -15,11 +15,9 @@ aliases:
 
 ## Description
 
-{{% info %}}
-A new version of this API is currently being developed by SL. In order to ensure that the new version fits the needs of
-all users and use cases, SL wants to hear from you on what must be included in this new version. Please contact us
-at [info@Trafiklab.se](mailto:info@trafiklab.se) to contribute.
-{{% /info %}}
+{{% warning %}}
+This API is being replaced by [SL Journey Planner v2](journey-planner-2.md) and will be shut down on the 30th of june 2025.
+{{% /warning %}}
 
 With this API, you can get travel proposals from point A to point B within Stockholm County using SL's traffic. Waxholmsbolaget's traffic is also included in
 SL's journey planner. The API can be used to calculate travel proposals between any combination of positions and/or stops. The API returns travel proposals

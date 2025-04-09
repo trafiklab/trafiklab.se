@@ -11,9 +11,9 @@ With this API, you can get travel proposals from point A to point B within Stock
 SL’s journey planner. The API can be used to calculate travel proposals between any combination of positions and/or stops. The API returns travel proposals
 based on the “best match” for the input.
 
-{{% info %}}
+{{% success %}}
 This API replaces [SL Route planner 3.1](route-planner-31), which will be shut down June 30th, 2025.
-{{% /info %}}
+{{% /success %}}
 
 ## URL
 
@@ -99,6 +99,9 @@ For a complete list of all parameters, see the OpenAPI specification on the bott
 ## Response
 
 For details regarding the response structure, please see the OpenApi specification below. A few example responses can be seen below.
+
+{{% note %}} Some endpoints return "error" messages in the `systemMessages` structure, even though the request was handled successfully. When the response returns data, error messages can be
+ignored. {{% /note %}}
 
 {{% tabs %}} {{% tab "System info" %}}
 
