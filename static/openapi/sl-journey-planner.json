@@ -113,7 +113,7 @@
           },
           {
             "name": "any_obj_filter_sf",
-            "description": "",
+            "description": "<ul><li> 2 = stops<li> 12 = streets and addresses<li> 32 = POI<li> 46 = all above",
             "required": true,
             "in": "query",
             "type": "integer"
