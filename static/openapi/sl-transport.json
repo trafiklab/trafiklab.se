@@ -682,19 +682,25 @@
         "additionalProperties": false,
         "properties": {
           "lines": {
-            "type": "object",
+            "type": "array",
             "description": "Lines affected by the deviation",
-            "$ref": "#/components/schemas/deviationScopeLineEntry"
+            "items": {
+              "$ref": "#/components/schemas/deviationScopeLineEntry"
+            }
           },
           "stop_areas": {
-            "type": "object",
+            "type": "array",
             "description": "Stop areas affected by the deviation",
-            "$ref": "#/components/schemas/deviationScopeStopAreaEntry"
+            "items": {
+              "$ref": "#/components/schemas/deviationScopeStopAreaEntry"
+            }
           },
           "stop_points": {
-            "type": "object",
+            "type": "array",
             "description": "Stop points affected by the deviation",
-            "$ref": "#/components/schemas/deviationStopPointEntry"
+            "items": {
+              "$ref": "#/components/schemas/deviationStopPointEntry"
+            }
           }
         },
         "type": "object"
