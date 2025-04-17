@@ -743,6 +743,7 @@
           },
           {
             "name": "line_list_branch_code",
+            "description": " Branch code - Description<br>\n              1 - Bus (buss)<br>\n              2 - Metro (tunnelbana)<br>\n              3 - Tram/local train (spårväg/lokalbana)<br>\n              4 - Commuter train (pendeltåg) <br>\n              5 - Road ferry (vägfärja)<br>\n              6 - Vessel service (färja)<br>\n              7 - Taxi<br>\n              8 - Accessible bus (närtrafik)<br>",
             "in": "query",
             "type": "integer"
           },
