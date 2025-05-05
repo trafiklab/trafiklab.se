@@ -32,7 +32,7 @@ may occur on short notice. New fields may be added without warning.
 
 Trafiklab Stop Lookup consists of two different endpoints, one to list all stop groups, and one to search for a specific stop group. 
 Both endpoints have the same response structure. They return a list of stops, including information about each stop, 
-such as name, average departures and child-stops. // Fråga ska det räknas som en endpoint? alltså att stops är endpointen, inte stops/list & stop/name?
+such as name, average departures and child-stops.
 
 {{% note %}}
 **Rikshållplatser**
@@ -59,7 +59,7 @@ departure can be linked to one of these stops. The trafiklab realtime APIs take 
 ## Making a request
 
 This call will show all stop groups that has a name matching the searched value, in this case "sto". 
-The stop groups are sorted by the most frequent daily departures. In this case the meta stop "STOCKHOLM" will show up first, with all associated information.
+The stop groups are sorted by the most frequent daily departures. In this case the meta stop "Stockholm" will show up first, with all associated information.
 
 ### Call
 
@@ -71,9 +71,9 @@ https://realtime-api.trafiklab.se/v1/stops/name/sto/?key=API_KEY
 
 {{% /tab %}}
 
-In order to list all stops, use the following call. This will return all stop groups, sorted by the most frequent daily departures.
+In order to list all stop groups, use the following call. This will return all stop groups, sorted by the most frequent daily departures.
 
-{{% tab "List all stops" %}}
+{{% tab "List all stop groups" %}}
 
 ```text
 https://realtime-api.trafiklab.se/v1/stops/list?key=API_KEY
@@ -90,10 +90,10 @@ https://realtime-api.trafiklab.se/v1/stops/name/{searchValue}?key={key}
 https://realtime-api.trafiklab.se/v1/stops/list/?key={key}
 ```
 
-| **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                                 |
-|----------|----------|---------------|--------------|-----------------------------------------------------------------------------------------------------------------|
-| name     | Path     | String        | Optional     | The search value to match the name for the stop you want to look up. Must be minimum 3 characters long.         |
-| key      | Query    | String        | Yes          | Your API key                                                                                                    |
+| **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                              |
+|----------|----------|---------------|--------------|--------------------------------------------------------------------------------------------------------------|
+| name     | Path     | String        | Optional     | The search value to match the name of the stop group you want to look up. Must be minimum 3 characters long. |
+| key      | Query    | String        | Yes          | Your API key                                                                                                 |
 
 
 
@@ -102,15 +102,15 @@ https://realtime-api.trafiklab.se/v1/stops/list/?key={key}
 The responses consist of 3 parts:
 
 - The timestamp at which the response was created
-- Information about the query (search value to look up the stop, which time was requested)
-- Information about the stops included in the response
+- Information about the query (search value, which time was requested)
+- Information about the stop groups included in the response
 
 Precise technical documentation is available in the form of an OpenAPI specification on the bottom of this page.
 
-{{% note %}} Note that the actual responses contain more entries and stops - we removed some from this example
+{{% note %}} Note that the actual responses contain more entries - we removed some from this example
 response since it's only meant to show the structure of the response. {{% /note %}}
 
-{{% tabs %}} {{% tab "List stops by name" %}}
+{{% tabs %}} {{% tab "List stop groups by name" %}}
 
 ```json
 {
@@ -221,7 +221,7 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 {{% /tab %}}
 
-{{% tab "List all stops" %}}
+{{% tab "List all stop groups" %}}
 
 ```json
 {
@@ -305,17 +305,13 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 ### Response data fields
 
-{{% info %}} The structure for departure and arrival boards is nearly identical. We list the most commonly used fields
-for both endpoints in this table. When we write departure/arrival, apply the one that matches the endpoint you're using.
-{{% /info %}}
-
 #### NationalStopGroupResponse
 
 | **Name**                            | **Data type**       | **Description**                                                                                                                                                                                    |
 |-------------------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| timestamp                           | String              | List of departures or arrivals.                                                                                                                                                                    |
-| query.queryTime                     | String              | The time for which departures/arrivals are requested.                                                                                                                                              |
-| query.query                         | String              | The queried search value to match the stop name.                                                                                                                                                   |
+| timestamp                           | String              | The timestamp.                                                                                                                                                                                     |
+| query.queryTime                     | String              | The time for which the stops are requested.                                                                                                                                                        |
+| query.query                         | String              | The queried search value to match the stop name (null if no search value is given).                                                                                                                |
 | stop_group                          | NationalStopGroup[] | The stop groups which are included in the query, one or more.                                                                                                                                      |
 | stop_group.id                       | String              | The stop group id.                                                                                                                                                                                 |
 | stop_group.name                     | String              | The stop group name.                                                                                                                                                                               |

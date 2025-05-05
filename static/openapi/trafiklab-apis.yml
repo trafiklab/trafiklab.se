@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
-  title: Departure and Arrival Board API
+  title: Departure Board, Arrival Board and Stop lookup API
   version: 1.0.0
-  description: API for retrieving departure and arrival information based on a specific station and date-time.
+  description: API for retrieving departure and arrival information based on a specific station and date-time, or to find information about stop groups.
   contact:
     name: support.trafiklab.se
     url: https://support.trafiklab.se
@@ -17,6 +17,7 @@ externalDocs:
 tags:
   - name: Departure board
   - name: Arrival board
+  - name: Stop lookup
 paths:
   /departures/{stopId}:
     get:
@@ -76,6 +77,33 @@ paths:
           $ref: '#/components/responses/ArrivalsResponse'
       security:
         - api_key: [ ]
+  /stops/name/{searchValue}:
+    get:
+      tags: #kolla upp
+        - Stop lookup
+      summary: List stop groups (matching a name).
+      description: Returns all stop groups that match the given search value, sorted by most frequent daily departures.
+      parameters:
+        - $ref: '#/components/parameters/SearchValue'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/NationalStopGroupResponse'
+      security:
+        - api_key: [ ]        
+  /stops/list:
+    get:
+      tags: 
+        - Stop lookup
+      summary: List all stop groups.
+      description: Returns all stop groups, sorted by most frequent daily departures.
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/NationalStopGroupResponse'
+      security:
+        - api_key: [ ]
 components:
   parameters:
     StopId:
@@ -93,6 +121,14 @@ components:
       schema:
         type: string
         format: date-time
+    SearchValue:
+      name: searchValue
+      in: path
+      required: true
+      description: The name to search for.
+      schema:
+        type: string
+        minLength: 3    
     ApiKey:
       name: key
       in: query
@@ -113,6 +149,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ArrivalsResponse'
+    NationalStopGroupResponse:
+      description: Success response with stop group details.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NationalStopGroupResponse'        
   schemas:
     DeparturesResponse:
       type: object
@@ -150,6 +192,20 @@ components:
           description: A list of arrivals.
           items:
             $ref: '#/components/schemas/TimetableEntry'
+    NationalStopGroupResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp of the response. May be in the past for cached responses.
+        queryDetails:
+          $ref: '#/components/schemas/QueryDetails'
+        stopGroups:
+          type: array
+          description: A list of stop groups.
+          items:
+            $ref: '#/components/schemas/StopGroup'       
     QueryDetails:
       type: object
       properties:
@@ -294,7 +350,6 @@ components:
         - id
         - lat
         - lon
-        - id
         - name
     RealtimeStop:
       type: object
@@ -332,8 +387,39 @@ components:
         - id
         - lat
         - lon
+        - name
+    StopGroup:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "740098000"
+          description: Stop group ID.
+        name:
+          type: string
+          example: "Stockholm"
+          description: Stop name.
+        group_type:
+          type: string
+          example: "META_STOP"
+          description: Describing if the stop group is a meta stop or rikshallplats.
+        transport_modes:
+          type: array
+          items:
+            type: string
+          example: [ "BUS", "METRO" ]
+          description: Transport modes available at the stop.
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/Stop'
+          description: Stops within the stop group.
+      required:
         - id
         - name
+        - group_type
+        - transport_modes
+        - stops 
     Platform:
       type: object
       properties:
