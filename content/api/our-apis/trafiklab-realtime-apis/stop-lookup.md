@@ -363,8 +363,3 @@ No warranties are given. The license may not give you all of the permissions nec
 privacy, or moral rights may limit how you use the material.
 
 https://creativecommons.org/licenses/by/4.0/legalcode.txt---
-title: Trafiklab Stop Lookup 
-weight: 20
-date: 2025-05-02
-badge: beta
----
