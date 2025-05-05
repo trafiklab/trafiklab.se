@@ -1,7 +1,7 @@
 ---
-title: Trafiklab Timetables
-weight: 10
-date: 2025-04-01
+title: Trafiklab Stop Lookup
+weight: 11
+date: 2025-05-02
 badge: beta
 ---
 
