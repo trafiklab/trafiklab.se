@@ -492,10 +492,6 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 | alerts                    | Alert[]       | Any messages for this stop, for example regarding roadworks, delays, changed routes etc.                                                                                                                                             |
 | is_realtime               | Boolean       | Indicates weather realtime data is available for this departure/arrival. When false, realtime fields have been filled with scheduled data for easier client-side implementations.                                                    |
 
-## OpenAPI specification
-
-{{% oai-spec url="/openapi/trafiklab-apis.yml" %}}
-
 ## License
 
 The Trafiklab Timetables API is available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se.

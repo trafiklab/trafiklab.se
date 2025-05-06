@@ -1,13 +1,13 @@
 ---
 title: Trafiklab Stop Lookup
-weight: 11
+weight: 20
 date: 2025-05-02
 badge: beta
 ---
 
 ## What does this API provide?
 
-Trafiklab Stop Lookup provides information about national stop groups.
+Trafiklab Stop Lookup provides information about stops for the [Trafiklab realtime APIs](_index.md).
 
 ### Data format
 
@@ -15,22 +15,16 @@ The data is formatted as JSON.
 
 ### Updates
 
-The static data used for this API is updated when changes are made, at most once per day. Real-time data is updated continuously, 
-but lists with stop groups are cached for one hour. 
-This means that making new requests for the same stops within one hour won't return any updates.
+The static data used for this API is updated when changes are made, at most once per day. 
 
 ### Breaking changes
 
 This API has the **beta** status. We are actively developing this API based on user feedback. Minor breaking changes
 may occur on short notice. New fields may be added without warning.
 
-### Operators covered by this dataset
-
-{{% stip-data-availability scheduled realtime %}}
-
 ## Using Trafiklab Stop Lookup
 
-Trafiklab Stop Lookup consists of two different endpoints, one to list all stop groups, and one to search for a specific stop group. 
+Trafiklab Stop Lookup consists of two different endpoints, one to list all stops and one to search for stops by name. 
 Both endpoints have the same response structure. They return a list of stops, including information about each stop, 
 such as name, average departures and child-stops.
 
@@ -39,8 +33,7 @@ such as name, average departures and child-stops.
 
 Rikshållplatser, Swedish for "national stops", is the historical name for a grouping of multiple local stops under one name and id. This is done to avoid
 duplicate stops when they are considered to be one stop by travelers. An example are certain multimodal stops, where a bus stop and tram stop may be at the same
-location. Rikshållplatser typically only group stops which are "identical" for travelers, meaning train stops always have their own rikshållplats as you always
-need to walk to another (nearby) stop in case of a bus transfer, as buses do not share platforms with trains.
+location.
 
 **Meta-stops**
 
@@ -53,13 +46,16 @@ stops (on different sides of the station) as well as its metro stop.
 
 An example is Slussen, which contains one area for buses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
 departure can be linked to one of these stops. The trafiklab realtime APIs take the id of a rikshållplats or meta-stop, **not** the id of underlying stops!
+In this example, the area (as named in gtfs), represent the National Stop Group you will recieve in the response.
 
 ![2025-04-03-trafiklab-api-stop-hierarchy.png](/media/2025/04/2025-04-03-trafiklab-api-stop-hierarchy.png)
 
 ## Making a request
 
-This call will show all stop groups that has a name matching the searched value, in this case "sto". 
+The first call will show all stop groups that has a name matching the searched value, in this case "sto". 
 The stop groups are sorted by the most frequent daily departures. In this case the meta stop "Stockholm" will show up first, with all associated information.
+
+In order to list all stop groups, use the second call. This will return all stop groups, sorted by the most frequent daily departures.
 
 ### Call
 
@@ -71,7 +67,6 @@ https://realtime-api.trafiklab.se/v1/stops/name/sto/?key=API_KEY
 
 {{% /tab %}}
 
-In order to list all stop groups, use the following call. This will return all stop groups, sorted by the most frequent daily departures.
 
 {{% tab "List all stop groups" %}}
 
@@ -92,7 +87,7 @@ https://realtime-api.trafiklab.se/v1/stops/list/?key={key}
 
 | **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                              |
 |----------|----------|---------------|--------------|--------------------------------------------------------------------------------------------------------------|
-| name     | Path     | String        | Optional     | The search value to match the name of the stop group you want to look up. Must be minimum 3 characters long. |
+| name     | Path     | String        | Yes          | The search value to match the name of the stop group you want to look up. Must be minimum 3 characters long. |
 | key      | Query    | String        | Yes          | Your API key                                                                                                 |
 
 
@@ -307,18 +302,18 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 #### NationalStopGroupResponse
 
-| **Name**                            | **Data type**       | **Description**                                                                                                                                                                                    |
-|-------------------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| timestamp                           | String              | The timestamp.                                                                                                                                                                                     |
-| query.queryTime                     | String              | The time for which the stops are requested.                                                                                                                                                        |
-| query.query                         | String              | The queried search value to match the stop name (null if no search value is given).                                                                                                                |
-| stop_group                          | NationalStopGroup[] | The stop groups which are included in the query, one or more.                                                                                                                                      |
-| stop_group.id                       | String              | The stop group id.                                                                                                                                                                                 |
-| stop_group.name                     | String              | The stop group name.                                                                                                                                                                               |
-| stop_group.area_type                | String              | The stop group area type (metastop or rikshallplats).                                                                                                                                              |                                                                                                          
-| stop_group.avarage_daily_stop_times | Float               | The average daily departures from the stop area.                                                                                                                                                   |
-| stop_group.transport_modes          | String              | Transport modes stopping at this stop. This is based on actual traffic in the current timetable period. If a stop does not have traffic in the current timetable period, this array will be empty. |
-| stop_group.stops                    | Stop[]              | Child stops included in the stop group.                                                                                                                                                            |
+| **Name**                            | **Data type** | **Description**                                                                                                                                                                                    |
+|-------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| timestamp                           | String        | The timestamp.                                                                                                                                                                                     |
+| query.queryTime                     | String        | The time for which the stops are requested.                                                                                                                                                        |
+| query.query                         | String        | The queried search value to match the stop name (null if no search value is given).                                                                                                                |
+| stop_group                          | StopGroup[]   | The stop groups which are included in the query, one or more.                                                                                                                                      |
+| stop_group.id                       | String        | The stop group id.                                                                                                                                                                                 |
+| stop_group.name                     | String        | The stop group name.                                                                                                                                                                               |
+| stop_group.area_type                | String        | The stop group area type (metastop or rikshallplats).                                                                                                                                              |                                                                                                          
+| stop_group.avarage_daily_stop_times | Float         | The average daily departures from the stop area.                                                                                                                                                   |
+| stop_group.transport_modes          | String        | Transport modes stopping at this stop. This is based on actual traffic in the current timetable period. If a stop does not have traffic in the current timetable period, this array will be empty. |
+| stop_group.stops                    | Stop[]        | Child stops included in the stop group.                                                                                                                                                            |
 
 #### Stops
 
@@ -329,10 +324,6 @@ response since it's only meant to show the structure of the response. {{% /note 
 | stop.name                 | String        | The stop name.                                                                                                                                                                        |
 | stop.lat                  | String        | The stop latitude (WGS84, decimal degree).                                                                                                                                            |                                                                                                          
 | stop.lon                  | String        | The stop longitude (WGS84, decimal degree).                                                                                                                                           |
-
-## OpenAPI specification
-
-{{% oai-spec url="/openapi/trafiklab-apis.yml" %}}
 
 ## License
 

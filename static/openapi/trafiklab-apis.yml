@@ -15,10 +15,37 @@ externalDocs:
   description: Read the complete documentation on Trafiklab
   url: https://trafiklab.se/api/our-apis/trafiklab-apis/timetables/
 tags:
+  - name: Stop lookup
   - name: Departure board
   - name: Arrival board
-  - name: Stop lookup
 paths:
+  /stops/name/{searchValue}:
+    get:
+      tags: 
+        - Stop lookup
+      summary: List stop groups (matching a name).
+      description: Returns all stop groups that match the given search value, sorted by most frequent daily departures.
+      parameters:
+        - $ref: '#/components/parameters/SearchValue'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/NationalStopGroupResponse'
+      security:
+        - api_key: [ ]
+  /stops/list:
+    get:
+      tags:
+        - Stop lookup
+      summary: List all stop groups.
+      description: Returns all stop groups, sorted by most frequent daily departures.
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/NationalStopGroupResponse'
+      security:
+        - api_key: [ ]
   /departures/{stopId}:
     get:
       tags:
@@ -75,33 +102,6 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/ArrivalsResponse'
-      security:
-        - api_key: [ ]
-  /stops/name/{searchValue}:
-    get:
-      tags: #kolla upp
-        - Stop lookup
-      summary: List stop groups (matching a name).
-      description: Returns all stop groups that match the given search value, sorted by most frequent daily departures.
-      parameters:
-        - $ref: '#/components/parameters/SearchValue'
-        - $ref: '#/components/parameters/ApiKey'
-      responses:
-        '200':
-          $ref: '#/components/responses/NationalStopGroupResponse'
-      security:
-        - api_key: [ ]        
-  /stops/list:
-    get:
-      tags: 
-        - Stop lookup
-      summary: List all stop groups.
-      description: Returns all stop groups, sorted by most frequent daily departures.
-      parameters:
-        - $ref: '#/components/parameters/ApiKey'
-      responses:
-        '200':
-          $ref: '#/components/responses/NationalStopGroupResponse'
       security:
         - api_key: [ ]
 components:
