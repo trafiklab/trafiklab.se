@@ -52,10 +52,10 @@ In this example, the area (as named in gtfs), represent the National Stop Group 
 
 ## Making a request
 
-The first call will show all stop groups that has a name matching the searched value, in this case "sto". 
-The stop groups are sorted by the most frequent daily departures. In this case the meta stop "Stockholm" will show up first, with all associated information.
+The first call will show all stops that has a name matching the searched value, in this case "sto". 
+The stops are sorted by the most frequent daily departures. In this case the meta stop "Stockholm" will show up first, with all associated information.
 
-In order to list all stop groups, use the second call. This will return all stop groups, sorted by the most frequent daily departures.
+In order to list all stops, use the second call. This will return all stops, sorted by the most frequent daily departures.
 
 ### Call
 
