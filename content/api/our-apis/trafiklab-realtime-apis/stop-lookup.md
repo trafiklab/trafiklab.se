@@ -26,13 +26,13 @@ may occur on short notice. New fields may be added without warning.
 
 Trafiklab Stop Lookup consists of two different endpoints, one to list all stops and one to search for stops by name. 
 Both endpoints have the same response structure. They return a list of stops, including information about each stop, 
-such as name, average departures and child-stops.
+such as name, average departures and child-stops. The stops in the list can be of two different types, rikshållplatser and meta-stops.
 
 {{% note %}}
 **Rikshållplatser**
 
 Rikshållplatser, Swedish for "national stops", is the historical name for a grouping of multiple local stops under one name and id. This is done to avoid
-duplicate stops when they are considered to be one stop by travelers. An example are certain multimodal stops, where a bus stop and tram stop may be at the same
+duplicate stops when they are considered to be one stop by travelers. For example are certain multimodal stops, where a bus stop and tram stop may be at the same
 location.
 
 **Meta-stops**
@@ -44,9 +44,9 @@ stops (on different sides of the station) as well as its metro stop.
 
 {{% /note %}}
 
-An example is Slussen, which contains one area for buses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
-departure can be linked to one of these stops. The trafiklab realtime APIs take the id of a rikshållplats or meta-stop, **not** the id of underlying stops!
-In this example, the area (as named in gtfs), represent the National Stop Group you will recieve in the response.
+One example of a rikshållplats is Slussen, which contains one area for buses and one area for metro traffic. Both are included when looking up slussen by its area id, and each
+departure can be linked to one of these stops. The Trafiklab realtime APIs take the id of a rikshållplats or meta-stop, **not** the id of underlying stops!
+In this example, the area (as named in gtfs), represent the National Stop Group (rikshållplats) you will receive in the response.
 
 ![2025-04-03-trafiklab-api-stop-hierarchy.png](/media/2025/04/2025-04-03-trafiklab-api-stop-hierarchy.png)
 
@@ -108,7 +108,7 @@ The responses consist of 3 parts:
 
 - The timestamp at which the response was created
 - Information about the query (search value, which time was requested)
-- Information about the stop groups included in the response
+- Information about the stops included in the response
 
 Precise technical documentation is available in the form of an OpenAPI specification on the bottom of this page.
 
@@ -222,6 +222,8 @@ response since it's only meant to show the structure of the response. {{% /note 
         }
       ]
     }
+  ]
+}
 ```
 
 {{% /tab %}}
@@ -304,6 +306,8 @@ response since it's only meant to show the structure of the response. {{% /note 
         }
       ]
     }
+  ]
+}
 ```
 
 {{% /tab %}} {{% /tabs %}}
@@ -325,15 +329,14 @@ response since it's only meant to show the structure of the response. {{% /note 
 | stop_group.transport_modes          | String        | Transport modes stopping at this stop. This is based on actual traffic in the current timetable period. If a stop does not have traffic in the current timetable period, this array will be empty. |
 | stop_group.stops                    | Stop[]        | Child stops included in the stop group.                                                                                                                                                            |
 
-#### Stops
+#### Stop
 
-| **Name**                  | **Data type** | **Description**                                                                                                                                                                       |
-|---------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| stop                      | Stop          | Information about the stop within the national stop group.                                                                                                                            |
-| stop.id                   | String        | The stop id.                                                                                                                                                                          |
-| stop.name                 | String        | The stop name.                                                                                                                                                                        |
-| stop.lat                  | String        | The stop latitude (WGS84, decimal degree).                                                                                                                                            |                                                                                                          
-| stop.lon                  | String        | The stop longitude (WGS84, decimal degree).                                                                                                                                           |
+| **Name** | **Data type** | **Description**                             |
+|----------|---------------|---------------------------------------------|
+| id       | String        | The stop id.                                |
+| name     | String        | The stop name.                              |
+| lat      | String        | The stop latitude (WGS84, decimal degree).  |                                                                                                          
+| lon      | String        | The stop longitude (WGS84, decimal degree). |
 
 ## License
 
