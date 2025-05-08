@@ -19,8 +19,7 @@
     </span>
     {{ end }}
     <span class="tl-side-navigation__title">{{ $targetPage.Title }}</span>
-
     {{ if $targetPage.Params.badge }}
-
-    {{ end }}
+    <span class="tl-side-navigation__badge">{{$targetPage.Params.badge}}</span>
+    {{end}}
 </a>

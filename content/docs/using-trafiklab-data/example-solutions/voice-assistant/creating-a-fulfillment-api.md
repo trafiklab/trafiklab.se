@@ -187,9 +187,9 @@ information.
 
 |  | Sweden                                                                      | Stockholm |
 | :--- |:----------------------------------------------------------------------------| :--- |
-| Station lookup | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v21/stop-lookup)      | [SL Platsuppslag](/api/trafiklab-apis/sl/stop-lookup) |
-| Departure boards | [ResRobot Stolptidstabeller 2](/api/trafiklab-apis/resrobot-v21/timetables) | [SL Realtidsinformation 4](/api/trafiklab-apis/sl/departures-4) |
-| Routeplanning | [ResRobot Reseplanerare](/api/trafiklab-apis/resrobot-v21/route-planner)    | [SL Reseplanerare 3.1](/api/trafiklab-apis/sl/route-planner-31) |
+| Station lookup | [ResRobot Reseplanerare](/api/our-apis/resrobot-v21/stop-lookup)      | [SL Platsuppslag](/api/our-apis/sl/stop-lookup) |
+| Departure boards | [ResRobot Stolptidstabeller 2](/api/our-apis/resrobot-v21/timetables) | [SL Realtidsinformation 4](/api/our-apis/sl/departures-4) |
+| Routeplanning | [ResRobot Reseplanerare](/api/our-apis/resrobot-v21/route-planner)    | [SL Reseplanerare 3.1](/api/our-apis/sl/route-planner-31) |
 
 \* ResRobot also works in Stockholm, but the SL APIs might offer better accuracy and realtime data.  
 \*\* API versions are the latest at time of writing. Future versions will be just as suited for this.

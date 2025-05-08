@@ -123,7 +123,7 @@ agency_id,agency_name,agency_url,agency_timezone,agency_lang
 One or more operators have a local id for each national id. Not every local id corresponds to a national id.
 
 {{% info %}} The local stop id for SL (id 275, Stockholms Lokaltrafik) is used by SL for _Stop-Area_. You
-can use SLs API [SL Transport](https://www.trafiklab.se/api/trafiklab-apis/sl/transport) to
+can use SLs API [SL Transport](https://www.trafiklab.se/api/our-apis/sl/transport) to
 translate it to a SiteID used in other SL APIs**.**
 {{% /info %}}
 

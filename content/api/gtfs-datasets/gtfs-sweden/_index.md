@@ -31,7 +31,7 @@ per minute, see [realtime data](#realtime-data) for more information.
 
 ### Operators covered by this dataset
 
-{{% stip-data-availability %}}
+{{% stip-data-availability abbreviation scheduled realtime vehiclepositions occupancy %}}
 
 ### Breaking changes
 These datasets have the **stable** status. This means that we will communicate when fields are 

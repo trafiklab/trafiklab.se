@@ -9,11 +9,7 @@ aliases:
   - /api/oxyfi-realtidspositionering/nivaer
   - /api/oxyfi-realtidspositionering/konsol
   - /api/oxyfi-realtidspositionering/licens
-  - /node/16601
-  - /node/16601/dokumentation
-  - /node/16601/nivaer
-  - /node/16601/konsol
-  - /node/16601/licens
+  - /api/trafiklab-apis/oxyfi/
 image: '/media/2024/09/banner_varm_tag_vinter2_Øyvind Lund.jpg'
 image_position: 'bottom'
 ---

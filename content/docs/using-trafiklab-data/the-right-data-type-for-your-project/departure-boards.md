@@ -11,7 +11,7 @@ finding the station id, and fetching the data.
 
 If you simply want to show the next departures on a digital signage board in shopping mall, on a smartphone, smartwatch,
 smart mirror or similar, you can make use
-of [the ResRobot Stolptidstabeller 2.1 API](/api/trafiklab-apis/resrobot-v21/timetables.md)
+of [the ResRobot Stolptidstabeller 2.1 API](/api/our-apis/resrobot-v21/timetables.md)
 . This API provides an easy way to fetch the departures or arrivals at any stop, either now or in the future.
 
 #### Finding the id of a stop
@@ -24,7 +24,7 @@ below to read about the different methods to obtain the id of a stop for the Res
 #### Getting the departures or arrivals
 
 The departures or arrivals for the chosen id can be obtained by a single request to
-our [ResRobot Stolptidstabeller 2.1 API](/api/trafiklab-apis/resrobot-v21/timetables.md).
+our [ResRobot Stolptidstabeller 2.1 API](/api/our-apis/resrobot-v21/timetables.md).
 Read the API documentation for more information about the parameters and response format.
 
 ### For large websites and analytics

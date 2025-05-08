@@ -127,4 +127,21 @@ nav.tl-side-navigation {
     color: var(--color-sidebar-active) !important;
     font-weight: bold;
   }
+
+
+  .tl-side-navigation__title {
+
+  }
+
+  .tl-side-navigation__badge {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 0;
+    &::before {
+      content: '(';
+    }
+    &::after {
+      content: ')';
+    }
+  }
 }

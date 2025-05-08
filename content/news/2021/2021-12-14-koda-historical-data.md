@@ -10,8 +10,8 @@ feeds, allowing you to analyse delays, traffic flow (for operators with vehicle 
 with occupancy date), and more.
 
 KoDa has been built by researchers at RiSE in cooperation with Trafiklab and
-Savantic. [Documentation](/api/trafiklab-apis/koda/historical-data/), as well
-as [a Swagger API definition](/api/trafiklab-apis/koda/koda-api-specification/), are available on Trafiklab. Over time,
+Savantic. [Documentation](/api/our-apis/koda/historical-data/), as well
+as [a Swagger API definition](/api/our-apis/koda/koda-api-specification/), are available on Trafiklab. Over time,
 we hope to publish some example Jupyter Notebooks showing how you can analyse historical data in python.
 
 Data is being stored continuously, and is always available from the next day. The first realtime data dates back to
@@ -19,7 +19,7 @@ February 2020. If you need data ranging further back in time, we still have GTFS
 to 2012.
 
 All details about the new KoDa API can be
-found [here: https://trafiklab.se/api/trafiklab-apis/koda/](/api/trafiklab-apis/koda/). If you have any more questions,
+found [here: https://trafiklab.se/api/our-apis/koda/](/api/our-apis/koda/). If you have any more questions,
 do not hesitate to contact us at [info@trafiklab.se](mailto:info@trafiklab.se), or to open a support issue
 at [support.trafiklab.se](https://support.trafiklab.se).
 

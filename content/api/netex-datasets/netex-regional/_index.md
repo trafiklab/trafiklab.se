@@ -33,7 +33,7 @@ The static data in this dataset is updated on a daily basis, typically between 0
 
 ### Operators covered by this dataset
 
-{{% stip-data-availability %}}
+{{% stip-data-availability abbreviation scheduled realtime vehiclepositions occupancy %}}
 
 ### Breaking changes
 This dataset has the **stable** status. This means that the fields can be added without prior warning, but when changes

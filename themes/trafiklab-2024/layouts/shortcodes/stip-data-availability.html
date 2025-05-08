@@ -1,3 +1,9 @@
+{{ $show_abbreviations := in .Params "abbreviation" }}
+{{ $show_scheduled := in .Params "scheduled" }}
+{{ $show_realtime := in .Params "realtime" }}
+{{ $show_vehiclepositions := in .Params "vehiclepositions" }}
+{{ $show_occupancy := in .Params "occupancy" }}
+
 {{ $data := slice }}
 {{ $url := "https://prod-stip-betteruptime-status-export.s3.eu-central-1.amazonaws.com/data-availability.json" }}
 {{ $cacheKey := print $url (now.Format "2006-01-02 15:04") }}
@@ -11,12 +17,12 @@ The following table shows which operators are covered by this dataset.
 <table>
 <thead style="position: sticky; top: 92px; background: white;">
 <tr>
-    <th>Operator</th>
-    <th>Abbreviation</th>
-    <th>Static data</th>
-    <th>Real-time data</th>
-    <th>Vehicle positions</th>
-    <th>Occupancy data</th>
+<th>Operator</th>
+{{ if $show_abbreviations }}<th>Abbreviation</th>{{ end }}
+{{ if $show_scheduled }}<th class="tl-table-column--centered">Static data</th>{{ end }}
+{{ if $show_realtime }}<th class="tl-table-column--centered">Real-time data</th>{{ end }}
+{{ if $show_vehiclepositions }}<th class="tl-table-column--centered">Vehicle positions</th>{{ end }}
+{{ if $show_occupancy }}<th class="tl-table-column--centered">Occupancy data</th>{{ end }}
 </tr>
 </thead>
 <tbody>
@@ -24,12 +30,12 @@ The following table shows which operators are covered by this dataset.
 {{ if not (eq (printf "%T" $value) "string") }}
 {{ if and (eq (index $value "staticData") true)  (eq (index $value "trafiklabEnabled") true) }}
 <tr>
-    <td>{{ .name }}</td>
-    <td><code>{{.shortname}}</code></td>
-    <td>{{ if eq (index $value "staticData") true }} ✔️ {{ end }}</td>
-    <td>{{ if eq (index $value "tripUpdates") true }} ✔️ {{ end }}</td>
-    <td>{{ if eq (index $value "vehiclePositions") true }} ✔️ {{ end }}</td>
-    <td>{{ if or (eq (index $value "shortname") "skane") (eq (index $value "shortname") "otraf") }} ✔️ {{ end }}</td>
+<td>{{ .name }}</td>
+{{ if $show_abbreviations }}<td><code>{{.shortname}}</code></td>{{ end }}
+{{ if $show_scheduled }}<td class="tl-table-column--centered">{{ if eq (index $value "staticData") true }} ✔️ {{ end }}</td>{{ end }}
+{{ if $show_realtime }}<td class="tl-table-column--centered">{{ if eq (index $value "tripUpdates") true }} ✔️ {{ end }}</td>{{ end }}
+{{ if $show_vehiclepositions }}<td class="tl-table-column--centered">{{ if eq (index $value "vehiclePositions") true }} ✔️ {{ end }}</td>{{ end }}
+{{ if $show_occupancy }}<td class="tl-table-column--centered">{{ if or (eq (index $value "shortname") "skane") (eq (index $value "shortname") "otraf") }} ✔️ {{ end }}</td>{{ end }}
 </tr>
 {{ end }}
 {{ end }}
