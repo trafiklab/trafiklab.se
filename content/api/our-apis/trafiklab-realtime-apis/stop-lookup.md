@@ -68,7 +68,7 @@ https://realtime-api.trafiklab.se/v1/stops/name/sto/?key=API_KEY
 {{% /tab %}}
 
 
-{{% tab "List all stop groups" %}}
+{{% tab "List all stops" %}}
 
 ```text
 https://realtime-api.trafiklab.se/v1/stops/list?key=API_KEY
@@ -80,10 +80,20 @@ https://realtime-api.trafiklab.se/v1/stops/list?key=API_KEY
 
 This API makes use of path parameters. They are part of the URL path and must be in the correct order.
 
+{{% tabs %}} {{% tab "List stops by name" %}}
+
 ```text
 https://realtime-api.trafiklab.se/v1/stops/name/{searchValue}?key={key}
+```
+{{% /tab %}}
+
+{{% tab "List all stops" %}}
+
+```text
 https://realtime-api.trafiklab.se/v1/stops/list/?key={key}
 ```
+{{% /tab %}} {{% /tabs %}}
+
 
 | **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                              |
 |----------|----------|---------------|--------------|--------------------------------------------------------------------------------------------------------------|
@@ -105,7 +115,7 @@ Precise technical documentation is available in the form of an OpenAPI specifica
 {{% note %}} Note that the actual responses contain more entries - we removed some from this example
 response since it's only meant to show the structure of the response. {{% /note %}}
 
-{{% tabs %}} {{% tab "List stop groups by name" %}}
+{{% tabs %}} {{% tab "List stops by name" %}}
 
 ```json
 {
@@ -216,7 +226,7 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 {{% /tab %}}
 
-{{% tab "List all stop groups" %}}
+{{% tab "List all stops" %}}
 
 ```json
 {
