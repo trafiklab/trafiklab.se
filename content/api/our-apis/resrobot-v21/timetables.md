@@ -7,6 +7,13 @@ aliases:
   - /node/14075/documentation
   - /api/trafiklab-apis/resrobot-v2/timetables/
 ---
+{{% note %}}
+**Trafiklab APIs are now available**
+
+Compared to Resrobot, the Trafiklab APIs contain more detailed data, such as platforms and realtime data.
+They offer significantly better performance as well, which translates into higher quota for end users while reducing the costs for Trafiklab.
+See more information in the [Trafiklab APIs section](../trafiklab-realtime-apis/).
+{{% /note %}}
 
 ## What does this API provide?
 
