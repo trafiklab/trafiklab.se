@@ -26,7 +26,7 @@
           },
           {
             "name": "User-Contact-Information",
-            "description": "Please provide your e-mail information. You will be notified when there is major or minor version changes.",
+            "description": "Provide an e-mail address in order to be notified when there are major or minor version changes. Your e-mail address will be kept for 7 days after your last request.",
             "in": "header",
             "type": "string",
             "pattern": "^[a-zA-Z0-9.*%±]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
