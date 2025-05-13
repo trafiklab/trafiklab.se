@@ -2,7 +2,6 @@
 title: SL Transport
 weight: 10
 date: 2024-01-30
-badge: new
 aliases:
   - /api/trafiklab-apis/sl/stops-and-lines-2/
   - /sv/api/trafiklab-apis/sl/stops-and-lines-2/

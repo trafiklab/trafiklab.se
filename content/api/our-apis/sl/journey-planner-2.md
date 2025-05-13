@@ -1,7 +1,8 @@
 ---
 title: SL Journey-planner v2
 weight: 101
-date: 2025-04-07
+date: 2025-05-12
+badge: new
 aliases:
   - /api/sl-reseplanerare
 ---
