@@ -1,0 +1,458 @@
+openapi: 3.0.3
+info:
+  title: Departure Board, Arrival Board and Stop lookup API
+  version: 1.0.0
+  description: API for retrieving departure and arrival information based on a specific station and date-time, or to find information about stop groups.
+  contact:
+    name: support.trafiklab.se
+    url: https://support.trafiklab.se
+  license:
+    name: This API is licensed under a CC4.0-BY license.
+    url: https://creativecommons.org/licenses/by/4.0/
+servers:
+  - url: https://realtime-api.trafiklab.se/v1
+externalDocs:
+  description: Read the complete documentation on Trafiklab
+  url: https://trafiklab.se/api/our-apis/trafiklab-apis/timetables/
+tags:
+  - name: Stop lookup
+  - name: Departure board
+  - name: Arrival board
+paths:
+  /stops/name/{searchValue}:
+    get:
+      tags: 
+        - Stop lookup
+      summary: List stop groups (matching a name).
+      description: Returns all stop groups that match the given search value, sorted by most frequent daily departures.
+      parameters:
+        - $ref: '#/components/parameters/SearchValue'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/NationalStopGroupResponse'
+      security:
+        - api_key: [ ]
+  /stops/list:
+    get:
+      tags:
+        - Stop lookup
+      summary: List all stop groups.
+      description: Returns all stop groups, sorted by most frequent daily departures.
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/NationalStopGroupResponse'
+      security:
+        - api_key: [ ]
+  /departures/{stopId}:
+    get:
+      tags:
+        - Departure board
+      summary: Get Departure Information (Current)
+      description: Retrieve current departure information for a specific stop.
+      parameters:
+        - $ref: '#/components/parameters/StopId'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/DeparturesResponse'
+      security:
+        - api_key: [ ]
+  /departures/{stopId}/{dateTime}:
+    get:
+      tags:
+        - Departure board
+      summary: Get Departure Information (Specific Time)
+      description: Retrieve departure information for a specific stop and time.
+      parameters:
+        - $ref: '#/components/parameters/StopId'
+        - $ref: '#/components/parameters/DateTime'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/DeparturesResponse'
+      security:
+        - api_key: [ ]
+  /arrivals/{stopId}:
+    get:
+      tags:
+        - Arrival board
+      summary: Get Arrival Information (Current)
+      description: Retrieve current arrival information for a specific stop.
+      parameters:
+        - $ref: '#/components/parameters/StopId'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/ArrivalsResponse'
+      security:
+        - api_key: [ ]
+  /arrivals/{stopId}/{dateTime}:
+    get:
+      tags:
+        - Arrival board
+      summary: Get Arrival Information (Specific Time)
+      description: Retrieve arrival information for a specific stop and time.
+      parameters:
+        - $ref: '#/components/parameters/StopId'
+        - $ref: '#/components/parameters/DateTime'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/ArrivalsResponse'
+      security:
+        - api_key: [ ]
+components:
+  parameters:
+    StopId:
+      name: stopId
+      in: path
+      required: true
+      description: The ID of the stop (e.g., "740020101").
+      schema:
+        type: string
+    DateTime:
+      name: dateTime
+      in: path
+      required: true
+      description: The date and time of the query in ISO 8601 format (e.g., "2025-03-31T16:30").
+      schema:
+        type: string
+        format: date-time
+    SearchValue:
+      name: searchValue
+      in: path
+      required: true
+      description: The name to search for.
+      schema:
+        type: string
+        minLength: 3    
+    ApiKey:
+      name: key
+      in: query
+      required: true
+      description: API key for authentication.
+      schema:
+        type: string
+  responses:
+    DeparturesResponse:
+      description: Success response with departure details.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DeparturesResponse'
+    ArrivalsResponse:
+      description: Success response with arrival details.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArrivalsResponse'
+    NationalStopGroupResponse:
+      description: Success response with stop group details.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NationalStopGroupResponse'        
+  schemas:
+    DeparturesResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp of the response. May be in the past for cached responses.
+        queryDetails:
+          $ref: '#/components/schemas/QueryDetails'
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/RealtimeStop'
+        departures:
+          type: array
+          description: A list of departures.
+          items:
+            $ref: '#/components/schemas/TimetableEntry'
+    ArrivalsResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp of the response. May be in the past for cached responses.
+        queryDetails:
+          $ref: '#/components/schemas/QueryDetails'
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/RealtimeStop'
+        arrivals:
+          type: array
+          description: A list of arrivals.
+          items:
+            $ref: '#/components/schemas/TimetableEntry'
+    NationalStopGroupResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp of the response. May be in the past for cached responses.
+        queryDetails:
+          $ref: '#/components/schemas/QueryDetails'
+        stopGroups:
+          type: array
+          description: A list of stop groups.
+          items:
+            $ref: '#/components/schemas/StopGroup'       
+    QueryDetails:
+      type: object
+      properties:
+        queryTime:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:30:00"
+          description: The time which was queried was made.
+        query:
+          type: string
+          example: "740020101"
+          description: The query parameter which was used for this request (e.g., stop ID or other identifier).
+    TimetableEntry:
+      type: object
+      properties:
+        scheduled:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:30:00"
+          description: Scheduled departure or arrival time.
+        realtime:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:29:14"
+          description: Real-time departure or arrival time, if available.
+        delay:
+          type: integer
+          example: -46
+          description: Delay in seconds. A negative value indicates an early departure or arrival.
+        canceled:
+          type: boolean
+          example: false
+          description: Indicates whether the trip was canceled.
+        route:
+          $ref: '#/components/schemas/Route'
+        trip:
+          $ref: '#/components/schemas/Trip'
+        agency:
+          $ref: '#/components/schemas/Agency'
+        stop:
+          $ref: '#/components/schemas/Stop'
+        scheduled_platform:
+          $ref: '#/components/schemas/Platform'
+        realtime_platform:
+          $ref: '#/components/schemas/Platform'
+        alerts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Alert'
+          description: List of alerts related to this timetable entry.
+        is_realtime:
+          type: boolean
+          example: true
+          description: Indicates if the data is based on real-time information.
+
+    Route:
+      type: object
+      description: Details about the route of the trip.
+      properties:
+        name:
+          type: string
+          nullable: true
+          example: null
+          description: Optional route name.
+        designation:
+          type: string
+          example: "3"
+          description: Route designation (e.g., line number or service).
+        transport_mode_code:
+          type: integer
+          example: 700
+          description: Code representing the mode of transport.
+        transport_mode:
+          type: string
+          example: "BUS"
+          description: Type of transport (e.g., BUS, METRO).
+        direction:
+          type: string
+          example: "Karolinska sjukhuset"
+          description: Direction of the route.
+        origin:
+          $ref: '#/components/schemas/Stop'
+        destination:
+          $ref: '#/components/schemas/Stop'
+
+    Trip:
+      type: object
+      description: Trip-specific details.
+      properties:
+        trip_id:
+          type: string
+          example: "14010000664236480"
+          description: Unique identifier for the trip.
+        start_date:
+          type: string
+          format: date
+          example: "2025-03-31"
+          description: Trip start date in YYYY-MM-DD format.
+        technical_number:
+          type: integer
+          example: 1810
+          description: Technical number associated with the trip.
+
+    Agency:
+      type: object
+      description: Agency operating the service.
+      properties:
+        id:
+          type: string
+          example: "505000000000000001"
+          description: Agency ID.
+        name:
+          type: string
+          example: "AB Storstockholms Lokaltrafik"
+          description: Name of the agency.
+        operator:
+          type: string
+          example: "Keolis"
+          description: Operator responsible for the trip.
+    Stop:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "12799"
+          description: Stop ID.
+        name:
+          type: string
+          example: "Slussen"
+          description: Stop name.
+        lat:
+          type: number
+          format: float
+          example: 59.319522
+          description: Latitude of the stop.
+        lon:
+          type: number
+          format: float
+          example: 18.072027
+          description: Longitude of the stop.
+      required:
+        - id
+        - lat
+        - lon
+        - name
+    RealtimeStop:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "12799"
+          description: Stop ID.
+        name:
+          type: string
+          example: "Slussen"
+          description: Stop name.
+        lat:
+          type: number
+          format: float
+          example: 59.319522
+          description: Latitude of the stop.
+        lon:
+          type: number
+          format: float
+          example: 18.072027
+          description: Longitude of the stop.
+        transport_modes:
+          type: array
+          items:
+            type: string
+          example: [ "BUS", "METRO" ]
+          description: Transport modes available at the stop.
+        alerts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Alert'
+          description: Alerts related to the stop.
+      required:
+        - id
+        - lat
+        - lon
+        - name
+    StopGroup:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "740098000"
+          description: Stop group ID.
+        name:
+          type: string
+          example: "Stockholm"
+          description: Stop name.
+        group_type:
+          type: string
+          example: "META_STOP"
+          description: Describing if the stop group is a meta stop or rikshallplats.
+        transport_modes:
+          type: array
+          items:
+            type: string
+          example: [ "BUS", "METRO" ]
+          description: Transport modes available at the stop.
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/Stop'
+          description: Stops within the stop group.
+      required:
+        - id
+        - name
+        - group_type
+        - transport_modes
+        - stops 
+    Platform:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "9022050012799016"
+          description: Platform ID.
+        designation:
+          type: string
+          example: "H"
+          description: Platform designation (e.g., A, B).
+
+    Alert:
+      type: object
+      properties:
+        type:
+          type: string
+          example: "MAINTENANCE"
+          description: The type/category of the alert.
+        title:
+          type: string
+          example: "Hållplats FMV och Malmen Vakten läggs ner från 20 mars"
+          description: The title or summary of the alert.
+        text:
+          type: string
+          example: "Detta gäller 20 mars - tillsvidare: buss linje 232 trafikerar inte hållplats FMV ..."
+          description: A detailed description of the alert.
+      required:
+        - type
+        - title
+        - text
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: key
+      in: query

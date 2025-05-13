@@ -91,5 +91,14 @@
         padding: 8px; // consistent padding with requests
       }
     }
+
+    .info {
+      margin-bottom: 0;
+    }
+
+    .information-container {
+      display: none;
+    }
+
   }
 }

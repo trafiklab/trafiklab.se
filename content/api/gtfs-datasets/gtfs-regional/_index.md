@@ -38,7 +38,7 @@ per minute, see [realtime data](#realtime-data) for more information.
 
 ### Operators covered by this dataset
 
-{{% stip-data-availability %}}
+{{% stip-data-availability abbreviation scheduled realtime vehiclepositions occupancy %}}
 
 ### Breaking changes
 
@@ -182,7 +182,7 @@ You can read more about how to use real-time data in our GTFS format documentati
 ## Historical data
 Historical GTFS data can be accessed through the KoDa API.
 
-{{% page-ref page="/api/trafiklab-apis/koda" %}}
+{{% page-ref page="/api/our-apis/koda" %}}
 <br>
 
 ## Extra files

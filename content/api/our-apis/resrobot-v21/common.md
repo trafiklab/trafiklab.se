@@ -109,11 +109,11 @@ Request category codes for filtering differ from response category codes. These 
 |-------------------------------------------------|---------------|
 | High speed trains, Snabbtåg, Arlanda Express    | 1             |
 | Regional trains, InterCity trains, Night trains | 2             | 
-| Express busses, Flygbussar                      | 3             | 
+| Express buses, Flygbussar                      | 3             | 
 | Local trains, Öresundståg                       | 4             | 
 | Metro, such as tunnelbanan                      | 5             | 
 | Tram such as Spårvagn, Tvärbanan                | 6             |
-| Busses                                          | 7             |
+| Buses                                          | 7             |
 | Ferries                                         | 8             |
 | Taxi                                            | 9             |
 
@@ -130,11 +130,11 @@ Request category codes for filtering differ from response category codes. These 
 | Air traffic                                  | 1             |
 | High speed trains, Snabbtåg, Arlanda Express | 2             |
 | Regional trains, InterCity trains            | 4             |
-| Express busses, Flygbussar                   | 8             |
+| Express buses, Flygbussar                   | 8             |
 | Local trains Tåg, PågaTåg, Öresundståg       | 16            |
 | Metro, such as tunnelbanan                   | 32            |
 | Tram such as Spårvagn, Tvärbanan             | 64            |
-| Busses                                       | 128           |
+| Buses                                       | 128           |
 | Ferries and international ferries            | 256           |
 | Taxi                                         | 512           |
 

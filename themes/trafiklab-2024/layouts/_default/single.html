@@ -20,7 +20,7 @@
     <div class="container container--text">
         <div class="page__header">
             <span class="subtext">{{.Parent.Title }} </span>
-            <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}</h1>
+            <h1 class="h1--tl-inverted h1--no-top-margin">{{ .Title }}</h1>{{ if .Params.badge }}<span class="h1--badge">{{.Params.badge}}</span>{{end}}
         </div>
         <div class="page__toc">
             {{ partial "toc/mobile-toc.html" .}}

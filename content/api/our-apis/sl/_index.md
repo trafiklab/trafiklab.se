@@ -29,10 +29,10 @@ SL has updated their API's. 7 API's have become 5:
 | Mobile applications | Building your own route-planner algorithm |
 | Websites |  |
 
-{{% info %}} SL's APIs only offer data for SL's traffic. [ResRobot](/api/trafiklab-apis/resrobot-v21/) offers the same data for
+{{% info %}} SL's APIs only offer data for SL's traffic. [ResRobot](/api/our-apis/resrobot-v21/) offers the same data for
 entire Sweden. {{% /info %}}
 
 {{% info %}} If you want to do analytics, or if your service will have more than a million active users, we
 recommend using GTFS data directly, or hosting your own API based on GTFS data. {{% /info %}}
 
-{{% page-ref "/api/trafiklab-apis/resrobot-v21/" "/api/gtfs-datasets/gtfs-regional/" %}}
+{{% page-ref "/api/our-apis/resrobot-v21/" "/api/gtfs-datasets/gtfs-regional/" %}}
