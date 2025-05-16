@@ -335,8 +335,8 @@ response since it's only meant to show the structure of the response. {{% /note 
 |----------|---------------|---------------------------------------------|
 | id       | String        | The stop id.                                |
 | name     | String        | The stop name.                              |
-| lat      | String        | The stop latitude (WGS84, decimal degree).  |                                                                                                          
-| lon      | String        | The stop longitude (WGS84, decimal degree). |
+| lat      | Float         | The stop latitude (WGS84, decimal degree).  |                                                                                                          
+| lon      | Float         | The stop longitude (WGS84, decimal degree). |
 
 ## License
 
