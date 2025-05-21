@@ -230,10 +230,13 @@ main.landing {
 
     .recent-posts__item__image img {
       max-width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     div.tl-image {
       margin-bottom: 0;
+      height: 100%;
     }
   }
 
