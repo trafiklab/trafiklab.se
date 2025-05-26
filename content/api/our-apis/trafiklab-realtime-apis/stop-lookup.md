@@ -340,7 +340,9 @@ response since it's only meant to show the structure of the response. {{% /note 
 
 ## License
 
-The Trafiklab Timetables API is available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se.
+These Trafiklab APIs are available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se, for example through the use of a little
+footnote text on public displays or website widgets. Contact us for exemptions if you're implementing solutions for public transport operators, such as onboard
+displays.
 
 You are free to:
 

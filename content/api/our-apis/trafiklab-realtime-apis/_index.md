@@ -20,6 +20,9 @@ NeTEx/SIRI, meaning you can use them for applications which can't handle complex
 These APIs are a direct replacement for Resrobot 2.1 timetables and stop lookup. Compared to Resrobot, they
 contain more detailed data, such as platforms and realtime data. They offer significantly better performance as well, which translates into higher quota for end
 users while reducing the costs for Trafiklab.
+
+**Note that these APIs are licensed as CC-BY**, allowing you to do whatever you want as long as you include a little "data from Trafiklab.se" attribution on
+screens and website widgets. Read more about this in the license text on the bottom of this page.
 {{% /note %}}
 
 ## Usage
@@ -67,7 +70,9 @@ easier to download this file if you need large amounts of data for analysis. {{%
 
 ## License
 
-These Trafiklab APIs are available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se.
+These Trafiklab APIs are available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se, for example through the use of a little
+footnote text on public displays or website widgets. Contact us for exemptions if you're implementing solutions for public transport operators, such as onboard
+displays.
 
 You are free to:
 

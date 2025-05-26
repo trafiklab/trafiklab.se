@@ -9,6 +9,13 @@ badge: beta
 
 Trafiklab Timetables provides a list of departures or arrivals at a given stop.
 
+{{% note %}}
+**These APIs are licensed as CC-BY**
+
+This allows you to do whatever you want as long as you include a little "data from Trafiklab.se" attribution on
+screens and website widgets. Read more about this in the license text at the bottom of this page.
+{{% /note %}}
+
 ### Data format
 
 The data is formatted as JSON.
@@ -494,7 +501,9 @@ for both endpoints in this table. When we write departure/arrival, apply the one
 
 ## License
 
-The Trafiklab Timetables API is available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se.
+These Trafiklab APIs are available under the CC-BY 4.0 license. You should mention the data is provided by Trafiklab.se, for example through the use of a little
+footnote text on public displays or website widgets. Contact us for exemptions if you're implementing solutions for public transport operators, such as onboard
+displays.
 
 You are free to:
 
