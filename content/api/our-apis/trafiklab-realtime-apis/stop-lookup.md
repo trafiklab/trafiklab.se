@@ -95,10 +95,10 @@ https://realtime-api.trafiklab.se/v1/stops/list/?key={key}
 {{% /tab %}} {{% /tabs %}}
 
 
-| **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                              |
-|----------|----------|---------------|--------------|--------------------------------------------------------------------------------------------------------------|
-| name     | Path     | String        | Yes          | The search value to match the name of the stop group you want to look up. Must be minimum 3 characters long. |
-| key      | Query    | String        | Yes          | Your API key                                                                                                 |
+| **Name** | **Type** | **Data type** | **Required** | **Description**                                                                                         |
+|----------|----------|---------------|--------------|---------------------------------------------------------------------------------------------------------|
+| name     | Path     | String        | Yes          | The search value to match the name of the stop group you want to look up. Must be at least 1 character. |
+| key      | Query    | String        | Yes          | Your API key                                                                                            |
 
 
 
