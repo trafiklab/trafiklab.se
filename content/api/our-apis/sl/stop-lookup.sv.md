@@ -2,16 +2,15 @@
 title: SL Stop lookup v1.0 (Platsuppslag)
 weight: 200
 date: 2014-03-14
+expiryDate: 2025-07-01
 
 ---
 
 ## Beskrivning
 
-{{% info %}}
-En ny version av detta API håller för närvarande på att utvecklas av SL. För att säkerställa att den nya versionen
-uppfyller behoven hos alla användare och användningsfall vill SL gärna höra från dig om vad som måste ingå i den nya
-versionen. Vänligen kontakta oss på [info@Trafiklab.se](mailto:info@trafiklab.se) för att bidra.
-{{% /info %}}
+{{% warning %}}
+Detta API ersätts av [SL Journey Planner v2](journey-planner-2.md) och kommer stängas ner den 30e juni 2025.
+{{% /warning %}}
 
 Med detta API kan du få information om en plats genom att skicka in delar av platsens namn. Du kan välja mellan att bara
 söka efter hållplatsområden eller hållplatser, adresser och platser.

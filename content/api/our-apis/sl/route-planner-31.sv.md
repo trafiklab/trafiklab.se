@@ -2,6 +2,7 @@
 title: SL Reseplanerare 3.1
 weight: 100
 date: 2019-01-14
+expiryDate: 2025-07-01
 ---
 
 ## Beskrivning

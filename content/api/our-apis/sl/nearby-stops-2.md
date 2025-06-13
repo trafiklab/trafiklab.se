@@ -2,16 +2,15 @@
 title: SL Nearby stops 2
 weight: 300
 date: 2019-01-14
+expiryDate: 2025-07-01
 
 ---
 
 ## Description
 
-{{% info %}}
-A new version of this API is currently being developed by SL. In order to ensure that the new version fits the needs of
-all users and use cases, SL wants to hear from you on what must be included in this new version. Please contact us
-at [info@Trafiklab.se](mailto:info@trafiklab.se) to contribute.
-{{% /info %}}
+{{% warning %}}
+This API is being replaced by [SL Journey Planner v2](journey-planner-2.md) and will be shut down on the 30th of june 2025.
+{{% /warning %}}
 Using this API, you can find SL stops near a pair of coordinates.
 
 ## URL

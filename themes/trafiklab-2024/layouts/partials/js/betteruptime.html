@@ -32,13 +32,17 @@
                     let startingTimeUtc = statusReport.starts_at;
                     let startingTimeFormatted = formatTimeStamp(startingTimeUtc);
 
-                    let numberOfAffectedResources = statusReport.affected_resources.length;
-                    let firstAffectedResource = statusReport.affected_resources[0].name;
-                    let message;
-                    if (numberOfAffectedResources > 1) {
-                        message = firstAffectedResource + " + " + (numberOfAffectedResources - 1) + " other"
+                    let numberOfAffectedResources = statusReport.affected_resources?.length;
+                    if (numberOfAffectedResources) {
+                        let firstAffectedResource = statusReport.affected_resources[0].name;
+                        let message;
+                        if (numberOfAffectedResources > 1) {
+                            message = firstAffectedResource + " + " + (numberOfAffectedResources - 1) + " other"
+                        } else {
+                            message = firstAffectedResource;
+                        }
                     } else {
-                        message = firstAffectedResource;
+                        message = statusReport.title;
                     }
 
                     let html = createHtml(link, "Scheduled maintenance", startingTimeFormatted + '; ' + message)

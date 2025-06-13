@@ -2,6 +2,7 @@
 title: SL Route-planner v3.1
 weight: 100
 date: 2019-01-14
+expiryDate: 2025-07-01
 aliases:
   - /api/sl-reseplanerare-31
   - /api/sl-reseplanerare-31/documentation
