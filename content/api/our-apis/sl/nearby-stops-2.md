@@ -9,7 +9,7 @@ expiryDate: 2025-07-01
 ## Description
 
 {{% warning %}}
-This API is being replaced by [SL Journey Planner v2](journey-planner-2.md) and will be shut down on the 30th of june 2025.
+This API is being shut down on the 30th of june 2025. It will not be replaced by any new API.
 {{% /warning %}}
 Using this API, you can find SL stops near a pair of coordinates.
 

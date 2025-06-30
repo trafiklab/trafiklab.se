@@ -17,7 +17,7 @@ aliases:
 ## Beskrivning
 
 {{% warning %}}
-Detta API ersätts av [SL Journey Planner v2](journey-planner-2.md) och kommer stängas ner den 30e juni 2025.
+Detta API stängs ner den 30e juni 2025 och kommer inte att ersättas av något nytt API.
 {{% /warning %}}
 
 Med detta API kan du få information om närliggande hållplatser till en försedd plats baserad på lat och long.
