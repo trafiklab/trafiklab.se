@@ -26,7 +26,7 @@
           },
           {
             "name": "User-Contact-Information",
-            "description": "Provide an e-mail address in order to be notified when there are major or minor version changes. Your e-mail address will be kept for 7 days after your last request.",
+            "description": "Please provide your e-mail information. You will be notified when there is major or minor version changes. Your e-mail address will be kept for 7 days after your last request.\n",
             "in": "header",
             "type": "string",
             "pattern": "^[a-zA-Z0-9.*%±]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
@@ -1194,31 +1194,6 @@
             "$ref": "#/definitions/openapilegobject"
           }
         },
-        "hints": {
-          "description": "Text messages in Swedish from planned timetable regarding the trip",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "providerCode": {
-                "description": "",
-                "example": {
-                  "strict": false,
-                  "value": 100
-                },
-                "type": "string"
-              },
-              "content": {
-                "description": "Information",
-                "example": {
-                  "strict": false,
-                  "value": "Resan måste beställas på sl.se"
-                },
-                "type": "string"
-              }
-            }
-          }
-        },
         "daysOfService": {
           "description": "Not used",
           "type": "object",
@@ -1478,6 +1453,31 @@
                 "value": "9015001001710090"
               },
               "type": "string"
+            }
+          }
+        },
+        "hints": {
+          "description": "Text messages in Swedish from planned timetable regarding the trip",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "providerCode": {
+                "description": "",
+                "example": {
+                  "strict": false,
+                  "value": 100
+                },
+                "type": "string"
+              },
+              "content": {
+                "description": "Information",
+                "example": {
+                  "strict": false,
+                  "value": "Resan måste beställas på sl.se"
+                },
+                "type": "string"
+              }
             }
           }
         }
