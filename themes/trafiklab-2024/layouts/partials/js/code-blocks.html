@@ -34,7 +34,11 @@
     }
 
     async function copyCodeToClipboard(button, highlightDiv) {
-        const codeToCopy = highlightDiv.querySelector(":last-child > pre > code").innerText;
+        let codeToCopy = ""
+        // Copy multiple lines without line numbers by explicitly selecting the code from each line
+        highlightDiv
+          .querySelectorAll(":last-child > pre > code > span > span:last-child")
+          .forEach((row) => {codeToCopy += row.innerText;});
         try {
             result = await navigator.permissions.query({ name: "clipboard-write" });
             if (result.state == "granted" || result.state == "prompt") {
