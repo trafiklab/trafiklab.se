@@ -9,11 +9,6 @@ cascade:
   - image_position: 'bottom'
 ---
 
-{{% warning %}}
-The current versions of SL RoutePlanner, SL Stop Lookup and SL Nearby Stops 2 will be shut down on the 30th of june
-2025. SL RoutePlanner and SL Stop Lookup are being replaced by [SL Journey Planner v2](journey-planner-2.md) while SL Nearby Stops 2 won't be replaced by any new API.
-{{% /warning %}}
-
 SL's APIs is a collection of 3 APIs which provide information about planned and realtime traffic.
 
 {{% info %}}

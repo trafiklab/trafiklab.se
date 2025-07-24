@@ -65,16 +65,6 @@ https://api.resrobot.se/v2.1/trip?format=xml&originId=740000001&destId=740000003
 {{% /tabs %}} 
 
 #### Request parameters
-
-{{% note %}}
-**Changes compared to ResRobot v2.0:**
-
-- The `key` parameter has been renamed to `accessId`.
-- `passlist` is now `0` by default. Set to `1` to keep the responses the same if you need this data.
-- `numF` should be a value in the range 1-6, where this used to be 0-6 previously.
-- `numB` should be a value in the range 0-5, where this used to be 0-6 previously.
-
-{{% /note %}}
  
 | **Name**                        | **Data type**            | **Required**                                                   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---------------------------------|--------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -550,15 +540,6 @@ response since it's only meant to show the structure of the response. {{% /info 
 {{% /tab %}} {{% /tabs %}}
 
 #### Response data fields
-{{% note %}}
-**Changes compared to ResRobot v2.0:**
-
-- `Product` is now wrapped in an array
-- `TransportNumber` is no longer included. Use `ProductAtStop.num` or `ProductAtStop.displayNumber` instead.
-- `JourneyStatus` and `JourneyDetailRef` have been added to each leg
-- Any applications which made use of the internal ids (`id` and `stopid`) should switch over to using the public ids (`extId` and `stopExtId`) instead.
-
-{{% /note %}}
 
 | **Name**                         | **Data type**     | **Description**                                                                                                                                                                                                                                                                                      |
 | -------------------------------- |-------------------| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
