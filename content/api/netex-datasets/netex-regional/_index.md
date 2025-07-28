@@ -11,6 +11,12 @@ aliases:
   - /api/trafiklab-apis/netex-regional/licence/
 date: 2019-11-22
 ---
+{{% warning %}} **NeTEx files on Trafiklab will be upgraded to version 1.0.15.** <br>
+NeTEx version 1.0.11 will be upgraded to version 1.0.15 later this year, most likely in Q4 2025.
+
+Version 1.0.15 includes breaking changes, these breaking changes only require minor adjustments. For example spelling fixes in the enums, such as `WHEECHAIR_ASSISTANCE` now corrected to `WHEELCHAIR_ASSISTANCE`
+
+{{% /warning %}}
 
 NeTEx regional is a set of NeTEx feeds of high quality. These feeds contain all data present in GTFS Regional, as 
 well as additional data which can't be represented in GTFS.
