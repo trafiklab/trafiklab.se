@@ -13,6 +13,7 @@ NeTEx version 1.0.11 will be upgraded to version 1.0.15 later this year, most li
 
 Version 1.0.15 includes breaking changes, these breaking changes only require minor adjustments. For example spelling fixes in the enums, such as `WHEECHAIR_ASSISTANCE` now corrected to `WHEELCHAIR_ASSISTANCE`
 
+Stay tuned, more information will be sent by email to all users with an active NeTEx or Stops API key.
 {{% /warning %}}
 
 The stops data API contains detailed data of Sweden's national stops and their mappings to stops from the [GTFS Regional](/api/gtfs-datasets/gtfs-regional/)
