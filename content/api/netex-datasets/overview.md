@@ -4,6 +4,13 @@ weight: 1
 layout: "single"
 sidebar: true
 ---
+{{% warning %}} **NeTEx files on Trafiklab will be upgraded to version 1.0.15.** <br>
+NeTEx version 1.0.11 will be upgraded to version 1.0.15 later this year, most likely in Q4 2025.
+
+Version 1.0.15 includes breaking changes, these breaking changes only require minor adjustments. For example spelling fixes in the enums, such as `WHEECHAIR_ASSISTANCE` now corrected to `WHEELCHAIR_ASSISTANCE`
+
+Stay tuned, more information will be sent by email to all users with an active NeTEx API key.
+{{% /warning %}}
 
 ## NeTEx at Trafiklab
 
