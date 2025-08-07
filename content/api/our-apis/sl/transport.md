@@ -46,7 +46,8 @@ This API consists of 5 endpoints, each with their own URL. No API key is require
 {{% tabs %}} {{% tab "Lines" %}}
 
 ```text
-https://transport.integration.sl.se/v1/lines
+https://transport.integration.sl.se/v1/lines?transport_authority_id=1
+https://transport.integration.sl.se/v1/lines?transport_authority_id=8
 ```
 
 {{% /tab %}}
