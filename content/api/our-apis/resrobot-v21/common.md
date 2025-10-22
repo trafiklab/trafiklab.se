@@ -10,13 +10,6 @@ collected these common data types here.
 
 ## Product
 
-{{% note %}}
-**Changes compared to ResRobot v2.0:**
-
-- `operatorUrl` is no longer available
-- Several fields have been added
-{{% /note %}}
-
 {{% tabs %}}
 {{% tab "json" %}}
 ```json

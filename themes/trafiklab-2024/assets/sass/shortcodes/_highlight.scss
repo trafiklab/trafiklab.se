@@ -3,6 +3,9 @@
   span {
     // Default color when no highlighting is used
     color: $color-white;
+    display: inline-block;
+    line-height: 16px;
+    height: 16px;
   }
 
   &:not(.code-tabs .highlight-wrapper) {
@@ -28,7 +31,7 @@
   .copy-code-button {
     position: absolute;
     z-index: 2;
-    right: 18px;
+    right: 0;
     top: 0;
     font-size: 13px;
     font-weight: 700;
@@ -59,5 +62,9 @@
     height: 0;
     z-index: -1;
     opacity: .01;
+  }
+
+  ::selection {
+    background-color: $color-purple-extra-dark;
   }
 }

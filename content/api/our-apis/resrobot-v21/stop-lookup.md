@@ -72,13 +72,6 @@ https://api.resrobot.se/v2.1/location.name?input=Göteborg&format=xml&accessId=A
 
 #### Request parameters
 
-{{% note %}}
-**Changes compared to ResRobot v2.0:**
-
-- The `key` parameter has been renamed to `accessId`.
-
-{{% /note %}}
-
 | **Name** | **Type** | **Required** | **Description**                                                                                              |
 |----------|----------|--------------|--------------------------------------------------------------------------------------------------------------|
 | accessId | String   | Yes          | Your API key                                                                                                 |
@@ -273,16 +266,6 @@ https://api.resrobot.se/v2.1/location.name?input=Göteborg?&format=xml&accessId=
 
 
 ## Response Data fields
-
-{{% note %}}
-**Changes compared to ResRobot v2.0:**
-
-- The root object now contains an array of `stopLocationOrCoordLocation` instead of an array of `stopLocation`.
-- `stopLocation` can now be found in the items present in the `stopLocationOrCoordLocation` array.
-- The `products` field has been replaced with an array of Products. Instead of accessing the sum of all products through `products`, you can now obtain all the individual products through `ProductAtStop[].cls`
-- `timezoneOffset` has been added to each `StopLocation`.
-
-{{% /note %}}
 
 
 | **Name**     | **Data type**               | **Description**                                                                                                                                                                                                                                                         |

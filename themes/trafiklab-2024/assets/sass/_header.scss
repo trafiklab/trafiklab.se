@@ -229,6 +229,22 @@ header.tl-header {
         }
       }
 
+      .tl-mobile-navigation-list--level-4 {
+        display: none;
+
+        li > a {
+          border-top: 1px solid $color-purple-hint;
+        }
+
+        .tl-mobile-navigation-item__chevron_wrapper {
+          width: 112px;
+        }
+
+        li:last-of-type a {
+          border-bottom: none;
+        }
+      }
+
       .tl-mobile-navigation-item--open > a > .tl-mobile-navigation-item__chevron_wrapper svg.tl-mobile-navigation-item__chevron {
         transform: rotate(90deg);
       }
