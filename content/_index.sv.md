@@ -7,7 +7,7 @@ mc: true
 type: home
 links:
     - text: "Kom igång"
-      link: "/sv/docs/using-trafiklab/getting-started/"
+      link: "/sv/docs/getting-started/using-trafiklab"
     - text: "Till API:erna"
       link: "/sv/api/"
 description: "Trafiklab är ett initiativ för öppen trafikdata. Vi vill göra det enklare att få tillgång till APIer från trafikföretag, lättare att visa upp vad som finns och roligare att prata om vad man skulle kunna göra. Här kan du utforska vad andra gjort, dela bra idéer och hitta information om tillgängliga APIer."
