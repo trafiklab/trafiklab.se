@@ -24,8 +24,8 @@ Om du upptäcker ett fel eller något du saknar kan du antingen nå oss i vårt 
 
 {{% info %}} För att kunna tillgängliggöra mer dokumentation till fler användare, tillhandahåller vi bara dokumentation på engelska. Skälet till detta är att många utvecklingsverktyg, kurser och videos på nätet bara finns tillgängliga på engelska. Vi hoppas därför att det ska vara fullt tillräckligt även hos oss. 
 
-Om du ändå tycker att vi borde översätta vissa sidor, för att till exempel kunna använda dem i samband med undervisning, går det bra att kontakta oss genom [support.trafiklab.se](https://support.trafiklab.se), [mejl](mailto:info@trafiklab.se) eller
-[GitHub](https://github.com/trafiklab/trafiklab.se).{{% /info %}}
+Om du ändå tycker att vi borde översätta vissa sidor, för att till exempel kunna använda dem i samband med undervisning, 
+går det bra att kontakta oss genom [support.trafiklab.se](https://support.trafiklab.se), [mejl](mailto:info@trafiklab.se) eller [GitHub](https://github.com/trafiklab/trafiklab.se).{{% /info %}}
 
 ### Om du är ny på Trafiklab är det enklast att börja här
 
