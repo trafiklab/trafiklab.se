@@ -2,7 +2,6 @@
 title: Trafiklab Stop Lookup
 weight: 20
 date: 2025-05-02
-badge: beta
 ---
 
 ## What does this API provide?

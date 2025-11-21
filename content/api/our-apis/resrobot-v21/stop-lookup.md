@@ -11,6 +11,14 @@ aliases:
 ResRobot stop lookup provides information about stops, including their ids and position, by searching based on their
 name.
 
+{{% note %}}
+**Trafiklab Realtime APIs are now available**
+
+Compared to Resrobot, the Trafiklab Realtime APIs contain more detailed data, such as platforms and realtime data.
+They offer significantly better performance as well, which translates into higher quota for end users.
+See more information in the [Trafiklab Realtime APIs section](../trafiklab-realtime-apis/stop-lookup/).
+{{% /note %}}
+
 ### Data format
 
 The data is formatted as JSON or XML, depending on the `format` query parameter.

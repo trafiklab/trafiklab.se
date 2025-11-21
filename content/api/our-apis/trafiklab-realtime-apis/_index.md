@@ -4,7 +4,6 @@ layout: "single"
 weight: 1
 date: 2025-05-01
 image: '/media/2024/09/banner_phone.jpg'
-badge: beta
 cascade:
   - image: '/media/2024/09/banner_phone.jpg'
 ---

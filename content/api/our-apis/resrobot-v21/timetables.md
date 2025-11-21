@@ -7,6 +7,12 @@ aliases:
   - /node/14075/documentation
   - /api/trafiklab-apis/resrobot-v2/timetables/
 ---
+
+## What does this API provide?
+
+ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
+transport modes, ... . Realtime data is available for SL and Trafikverket (All train traffic including SJ, MTRX, .... except for Arlanda Express).
+
 {{% note %}}
 **Trafiklab Realtime APIs are now available**
 
@@ -14,11 +20,6 @@ Compared to Resrobot, the Trafiklab Realtime APIs contain more detailed data, su
 They offer significantly better performance as well, which translates into higher quota for end users.
 See more information in the [Trafiklab Realtime APIs section](../trafiklab-realtime-apis/).
 {{% /note %}}
-
-## What does this API provide?
-
-ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time,
-transport modes, ... . Realtime data is available for SL and Trafikverket (All train traffic including SJ, MTRX, .... except for Arlanda Express).
 
 ### Data format
 
