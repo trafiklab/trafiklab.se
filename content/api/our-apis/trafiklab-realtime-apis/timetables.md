@@ -27,8 +27,8 @@ updates.
 
 ### Breaking changes
 
-This API has the **beta** status. We are actively developing this API based on user feedback. Minor breaking changes
-may occur on short notice. New fields may be added without warning.
+This API has the **stable** status. We are actively developing this API based on user feedback. You will receive an e-mail before any breaking changes are made, 
+and get around 3 to 6 months time to adjust depending on the size of the changes. New fields may be added without warning, your application should ignore any fields it doesn't recognize.
 
 ### Operators covered by this dataset
 
@@ -74,25 +74,7 @@ departure can be linked to one of these stops. The trafiklab realtime APIs take 
 This call will show all departures from Göteborg Central Station (740000002). The id can be obtained
 from [Trafiklab Stop Lookup](stop-lookup), [GTFS Sweden 3 (areas.txt)](/api/gtfs-datasets/gtfs-sweden-3/) or [GTFS Sverige 2 (stops.txt, no meta stops)](/api/gtfs-datasets/gtfs-sverige-2/).
 
-### Call
-
-{{% tabs %}} {{% tab "Departures" %}}
-
-```text
-https://realtime-api.trafiklab.se/v1/departures/740000002?key=API_KEY
-https://realtime-api.trafiklab.se/v1/departures/740000002/2025-04-01T16:00?key=API_KEY
-```
-
-{{% /tab %}}
-
-{{% tab "Arrivals" %}}
-
-```text
-https://realtime-api.trafiklab.se/v1/arrivals/740000003?key=API_KEY
-https://realtime-api.trafiklab.se/v1/arrivals/740000003/2025-04-01T16:00?key=API_KEY
-```
-
-{{% /tab %}} {{% /tabs %}}
+### Making an API call
 
 #### Request parameters
 
@@ -113,9 +95,28 @@ https://realtime-api.trafiklab.se/v1/arrivals/{area id}/{time}?key={key}
 
 The interval for which to show departures cannot be specified, and is always 60 minutes. Any filtering should be done on the client side.
 
+#### Example API calls
+{{% tabs %}} {{% tab "Departures" %}}
+
+```text
+https://realtime-api.trafiklab.se/v1/departures/740000002?key=API_KEY
+https://realtime-api.trafiklab.se/v1/departures/740000002/2025-04-01T16:00?key=API_KEY
+```
+
+{{% /tab %}}
+
+{{% tab "Arrivals" %}}
+
+```text
+https://realtime-api.trafiklab.se/v1/arrivals/740000003?key=API_KEY
+https://realtime-api.trafiklab.se/v1/arrivals/740000003/2025-04-01T16:00?key=API_KEY
+```
+
+{{% /tab %}} {{% /tabs %}}
+
 ### Response
 
-The responses consist of 4 parts:
+The responses consist of four parts:
 
 - The timestamp at which the response was created
 - Information about the query (which stop was looked up, which time was requested)
@@ -124,7 +125,7 @@ The responses consist of 4 parts:
 
 Precise technical documentation is available in the form of an OpenAPI specification on the bottom of this page.
 
-{{% note %}} Note that the actual responses contain more entries and stops - we removed some from this example
+{{% note %}} Note that the actual responses contain more entries and stops. We removed some from this example
 response since it's only meant to show the structure of the response. {{% /note %}}
 
 {{% tabs %}} {{% tab "Departures" %}}

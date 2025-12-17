@@ -1,6 +1,6 @@
 ---
 title: Trafiklab Stop Lookup
-weight: 20
+weight: 5
 date: 2025-05-02
 ---
 
@@ -18,8 +18,8 @@ The static data used for this API is updated when changes are made, at most once
 
 ### Breaking changes
 
-This API has the **beta** status. We are actively developing this API based on user feedback. Minor breaking changes
-may occur on short notice. New fields may be added without warning.
+This API has the **stable** status. We are actively developing this API based on user feedback. You will receive an e-mail before any breaking changes are made,
+and get around 3 to 6 months time to adjust depending on the size of the changes. New fields may be added without warning, your application should ignore any fields it doesn't recognize.
 
 ## Using Trafiklab Stop Lookup
 
@@ -58,23 +58,6 @@ In order to list all stops, use the second call. This will return all stops, sor
 
 ### Call
 
-{{% tabs %}} {{% tab "List stops by name" %}}
-
-```text
-https://realtime-api.trafiklab.se/v1/stops/name/sto/?key=API_KEY
-```
-
-{{% /tab %}}
-
-
-{{% tab "List all stops" %}}
-
-```text
-https://realtime-api.trafiklab.se/v1/stops/list?key=API_KEY
-```
-
-{{% /tab %}} {{% /tabs %}}
-
 #### Request parameters
 
 This API makes use of path parameters. They are part of the URL path and must be in the correct order.
@@ -99,11 +82,28 @@ https://realtime-api.trafiklab.se/v1/stops/list/?key={key}
 | name     | Path     | String        | Yes          | The search value to match the name of the stop group you want to look up. Must be at least 1 character. |
 | key      | Query    | String        | Yes          | Your API key                                                                                            |
 
+#### Example API calls
 
+{{% tabs %}} {{% tab "List stops by name" %}}
+
+```text
+https://realtime-api.trafiklab.se/v1/stops/name/sto/?key=API_KEY
+```
+
+{{% /tab %}}
+
+
+{{% tab "List all stops" %}}
+
+```text
+https://realtime-api.trafiklab.se/v1/stops/list?key=API_KEY
+```
+
+{{% /tab %}} {{% /tabs %}}
 
 ### Response
 
-The responses consist of 3 parts:
+The responses consist of three parts:
 
 - The timestamp at which the response was created
 - Information about the query (search value, which time was requested)
@@ -111,7 +111,7 @@ The responses consist of 3 parts:
 
 Precise technical documentation is available in the form of an OpenAPI specification on the bottom of this page.
 
-{{% note %}} Note that the actual responses contain more entries - we removed some from this example
+{{% note %}} Note that the actual responses contain more entries. We removed some from this example
 response since it's only meant to show the structure of the response. {{% /note %}}
 
 {{% tabs %}} {{% tab "List stops by name" %}}
