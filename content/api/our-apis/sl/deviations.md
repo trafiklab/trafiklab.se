@@ -34,7 +34,7 @@ older [Service Alerts (Störningsinformation)](service-alerts-2.md) and
 {{% tabs %}} {{% tab "Json" %}}
 
 ```text
-https://deviations.integration.sl.se/v1/messages?future=<true/false>&site=<siteId1,siteId2>&line=<lineId1,lineId2>&transport_mode=<mode1,mode2>
+https://deviations.integration.sl.se/v1/messages?future=<true/false>&site=<siteId1>&site=<siteId2>&line=<lineId1>&line=<lineId2>&transport_mode=<mode1>&transport_mode=<mode2>
 ```
 
 {{% /tab %}} {{% /tabs %}}
