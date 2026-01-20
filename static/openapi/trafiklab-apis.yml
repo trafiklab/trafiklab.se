@@ -104,6 +104,21 @@ paths:
           $ref: '#/components/responses/ArrivalsResponse'
       security:
         - api_key: [ ]
+  /trips/{tripId}/{startDate}:
+    get:
+      tags:
+        - Trip details
+      summary: Get trip information
+      description: Retrieve all departures and arrivals for a specific trip.
+      parameters:
+        - $ref: '#/components/parameters/TripId'
+        - $ref: '#/components/parameters/StartDate'
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          $ref: '#/components/responses/TripDetailsResponse'
+      security:
+        - api_key: [ ]
 components:
   parameters:
     StopId:
@@ -129,6 +144,21 @@ components:
       schema:
         type: string
         minLength: 3    
+    TripId:
+      name: tripId
+      in: path
+      required: true
+      description: The ID of the trip (e.g., "121120000386193630"), obtained from a departures or arrivals list, or from the GTFS Sweden 3 static or realtime data.
+      schema:
+        type: string
+    StartDate:
+      name: startDate
+      in: path
+      required: true
+      description: The start date for the trip in yyyy-MM-dd or yyyyMMdd format (e.g. "2025-03-31" or "20250331").
+      schema:
+        type: string
+        format: date-time
     ApiKey:
       name: key
       in: query
@@ -149,6 +179,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ArrivalsResponse'
+    TripDetailsResponse:
+      description: Success response with trip details.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TripDetailsResponse'
     NationalStopGroupResponse:
       description: Success response with stop group details.
       content:
@@ -192,6 +228,26 @@ components:
           description: A list of arrivals.
           items:
             $ref: '#/components/schemas/TimetableEntry'
+    TripDetailsResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp of the response. May be in the past for cached responses.
+        queryDetails:
+          $ref: '#/components/schemas/QueryDetails'
+        agency:
+          $ref: '#/components/schemas/Agency'
+        route:
+          $ref: '#/components/schemas/Route'
+        trip:
+          $ref: '#/components/schemas/Trip'
+        calls:
+          type: array
+          description: A list of all departures and arrivals in the order they are scheduled.
+          items:
+            $ref: '#/components/schemas/CallAtLocation'
     NationalStopGroupResponse:
       type: object
       properties:
@@ -260,7 +316,60 @@ components:
           type: boolean
           example: true
           description: Indicates if the data is based on real-time information.
-
+    CallAtLocation:
+      type: object
+      properties:
+        scheduledDeparture:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:30:00"
+          description: Scheduled departure time.
+        realtimeDeparture:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:29:14"
+          description: Real-time departure time, if available.
+        departureDelay:
+          type: integer
+          example: -46
+          description: Departure Delay in seconds. A negative value indicates an early departure.
+        departureCanceled:
+          type: boolean
+          example: false
+          description: Indicates whether the departure was canceled.
+        scheduledArrival:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:30:00"
+          description: Scheduled arrival time.
+        realtimeArrival:
+          type: string
+          format: date-time
+          example: "2025-03-31T16:29:14"
+          description: Real-time arrival time, if available.
+        arrivalDelay:
+          type: integer
+          example: -46
+          description: Arrival Delay in seconds. A negative value indicates an early arrival.
+        arrivalCanceled:
+          type: boolean
+          example: false
+          description: Indicates whether the arrival was canceled.
+        stop:
+          $ref: '#/components/schemas/Stop'
+        scheduled_platform:
+          $ref: '#/components/schemas/Platform'
+        realtime_platform:
+          $ref: '#/components/schemas/Platform'
+        alerts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Alert'
+          description: List of alerts related to this timetable entry.
+        is_realtime:
+          type: boolean
+          example: true
+          description: Indicates if the data is based on real-time information.
     Route:
       type: object
       description: Details about the route of the trip.
