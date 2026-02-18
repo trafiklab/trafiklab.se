@@ -18,8 +18,5 @@
     {{ end }}
     </span>
     {{ end }}
-    <span class="tl-side-navigation__title">{{ $targetPage.Title }}</span>
-    {{ if $targetPage.Params.badge }}
-    <span class="tl-side-navigation__badge">{{$targetPage.Params.badge}}</span>
-    {{end}}
+    <span class="tl-side-navigation__title">{{ $targetPage.Title }}{{ if $targetPage.Params.badge }} <span class="tl-side-navigation__badge">{{$targetPage.Params.badge}}</span>{{end}}</span>
 </a>

@@ -32,13 +32,18 @@ is quick and easy to use, and can be used directly without having to process it 
 example smartphone applications where travellers need an answer on their queries, but a poor choice for analytics where
 a lot of data from a lot of vehicles is needed.
 
-| Well suited for | Not so suited for |
-| :--- | :--- |
-| Quickly getting the next departures from a stop | Analysing public transport information |
+{{% info %}}
+Want to build departure or arrival boards for digital signage, smart mirrors, home automation, ... etc? Take a look at
+our [Trafiklab realtime APIs](/api/our-apis/trafiklab-realtime-apis/_index.md) which contain more details and realtime data,
+while being easier to use.
+{{% /info %}}
+
+| Well suited for                         | Not so suited for                                |
+|:----------------------------------------|:-------------------------------------------------|
+| Websites and widgets                    | Analysing public transport information           |
 | Quickly calculating a route from A to B | Applications requiring huge amounts of API calls |
-| Digital Signage | Data visualisation |
-| Mobile applications | Building your own route-planner algorithm |
-| Websites and widgets |  |
+| Mobile applications                     | Data visualisation                               |
+|                                         | Building your own route-planner algorithm        |
 
 ### API key levels
 There is only one API key required to access all features in ResRobot, the different key levels are specified in the table below. If you don´t have a key yet, 
@@ -49,8 +54,10 @@ read [here](/docs/using-trafiklab/getting-api-keys) on how to get one.
 | Bronze   |            45            |         30 000          |
 | Silver   |            60            |         200 000         |
 | Gold     |           200            |        1 000 000        |
-| Platinum |           200            |        2 000 000        |
 
+{{% warning %}} Upgrade requests for Resrobot API keys using the departure boards will not be approved when our
+[Trafiklab realtime APIs](/api/our-apis/trafiklab-realtime-apis/_index.md) are a better fit. Please check if the 
+realtime APIs are better for your use case before starting development. You can always ask us at [our support forum](https://support.trafiklab.se).{{% /warning %}}
 
 {{% warning %}} If you want to do analytics, or if your service will have more than a million active users,
 we recommend using GTFS and hosting your own API based on that data. One GTFS file can transfer more information than a

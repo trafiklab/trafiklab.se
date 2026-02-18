@@ -1,7 +1,8 @@
 ---
 title: ResRobot Timetables
-weight: 10
+weight: 80
 date: 2022-02-07
+badge: Deprecated
 aliases:
   - /api/resrobot-stolptidtabeller-2/documentation
   - /node/14075/documentation
