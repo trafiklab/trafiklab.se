@@ -186,6 +186,14 @@ Historical GTFS data can be accessed through the KoDa API.
 <br>
 
 ## Extra files
+
+{{% info %}}
+Starting on March 17th 2026,
+`trip_short_name` and `samtrafiken_internal_trip_number` are present in GTFS Regional and GTFS Sweden 3 files. These fields
+include the same data as extra files, meaning a separate download is no longer needed. The extra files are still present
+for backwards compatibility in existing systems.
+{{% /info %}}
+
 Extra files are files which provide additional information about the information in the GTFS files. They are not part of
 the GTFS standard, but contain the information which is needed to link the GTFS files to internal operator systems, or
 other data which is delivered by the operator.
