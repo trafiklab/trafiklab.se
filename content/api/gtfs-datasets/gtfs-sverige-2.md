@@ -35,7 +35,7 @@ The historical data contains information for a period of more than 5 years. It i
 dataset to analyse evolutions over time.
 
 ## Static data
-The static _GTFS Sverige 2_ dataset contains files describing all planned public transport data for Sweden. File and field explanations can be found [in the GTFS overview](/api/gtfs-datasets).
+The static _GTFS Sverige 2_ dataset contains files describing all planned public transport data for Sweden. File and field explanations can be found [in the GTFS overview](/api/gtfs-datasets/overview).
 
 In order to retrieve the static data you need an API key. Technical details for fetching the data can be found in the
 API's OpenAPI specification. Trafiklabs GTFS documentation can help you to get started with GTFS files.
