@@ -6,18 +6,19 @@ date: 2025-01-16
 aliases:
   - /api/trafiklab-apis/samtrafiken-sales-data/
 ---
-{{% warning %}} **NeTEx files on Trafiklab will be upgraded to version 1.0.15.** <br>
-NeTEx version 1.0.11 will be upgraded to version 1.0.15 on October 28th, 2025.
-
-Version 1.0.15 includes breaking changes, these breaking changes only require minor adjustments. For example spelling fixes in the enums, such as `WHEECHAIR_ASSISTANCE` now corrected to `WHEELCHAIR_ASSISTANCE`
-
-More information will be sent by email to all users with an active NeTEx API key.
-{{% /warning %}}
 
 Samtrafiken Sales data is a NeTEx feed with sellable data.
 This API differ from the NeTEx Sweden API, the main difference is that only data for trips sellable through Samtrafiken access is included. 
 More details about additional, removed or changed fields can be found through the following url:
 [Samtrafiken sales export](https://samtrafiken.atlassian.net/wiki/spaces/SamA/pages/3448668185/NeTEx+format+adjustments+-+Samtrafiken+sales+export)
+
+{{% info %}} **Upcoming change to the NeTEx sales file – September 2026.** <br>
+In mid-September 2026 (exact date to be confirmed), Samtrafiken will transition to a new method of generating the NeTEx sales file. This is an internal change and does not affect the file format, but all ServiceJourneyIds will be new.
+
+When loading the file for the first time from the date we announce, you must load the complete file and not rely on changes.csv or changeslines.csv for incremental updates. We recommend that you remove any previously loaded traffic data before importing the new file.
+
+We will return with the exact date closer to the release.
+{{% /info %}}
 
 ## What does this dataset contain?
 
