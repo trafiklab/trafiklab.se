@@ -20,6 +20,11 @@ documentation. {{% /warning %}}
 * In the tables below, the column 'available in dataset' will be bold if the field is always present and not bold if it
   is not always present.
 
+**An important note about ids**
+
+GTFS ids should always be treated as strings, even if they all seem to be numeric. They are only used to link rows
+between different files together, and may change on short notice.
+
 ### feed_info.txt
 
 | Field Name            | Type          | Available in dataset | Description                                    |
