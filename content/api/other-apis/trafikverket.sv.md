@@ -9,60 +9,89 @@ image_position: 'bottom'
 aliases:
   - /sv/api/trafiklab-apis/trafikverket/
 ---
-Strukturen skiljer sig en hel del från andra APIer på Trafiklab. Hämtning av data görs med ett HTTP-anrop. En fråga
-skickas med i POST-metoden som beskriver vilket data som efterfrågas samt innehållandes eventuella filter.
+## Vad är Trafikverkets öppna API?
 
-## Dataformat
+Trafikverkets öppna API är ett API för att hämta information om väg- och tågtrafik.
 
-XML eller JSON, anges via suffix.
+## Hur använder jag Trafikverkets öppna API?
 
-Om något värde saknas i svaret returneras inte detta element i svaret.
+En giltig API-nyckel krävs. Nya användare måste hämta en nyckel från [Trafikverkets eget dataportal](https://data.trafikverket.se/oauth2/Account/register). Trafiklab utfärdar inte längre nya nycklar för detta API, men befintliga nycklar som utfärdats via Trafiklab fortsätter att fungera.
 
-## API Nyckel
+API:et har flera versioner som alla använder samma API-nyckel. Använd den senaste tillgängliga endpointen, men befintliga applikationer kan fortsätta använda tidigare versioner.
 
-En API nyckel krävs. En API nyckel kan skapas kostnadsfritt i [Trafikverkets eget dataportal](https://data.trafikverket.se/oauth2/Account/register).
-Mer information hittas i [vår snabbstartsguide](https://www.trafiklab.se/docs/getting-started/using-trafiklab/).
+{{% tabs %}} {{% tab "Json" %}}
 
-## Metoder
+```text
+https://api.trafikinfo.trafikverket.se/v2/data.json
+```
 
-Hämtning av data görs med ett HTTP-anrop. En fråga skickas med i POST-metoden som beskriver vilket data som efterfrågas
-samt innehållandes eventuella filter. Frågan måste även inkludera en giltig API-nyckel.
+{{% /tab %}}
 
-Tillgängliga datatyper är:
+{{% tab "Xml" %}}
 
-- **TrainMessage** - Tågtrafikmeddelande, exempelvis information kring banarbete, tågfel, anläggningsfel och dylikt.
-- **TrainStation** - Trafikplatser, både med och utan resandeutbyte.
-- **TrainAnnouncement** - Tidtabellsinformation, d.v.s information om tåg på trafikplatser (stationer, hållplatser)
-  varje post motsvarar ett visst tåg vid respektive trafikplats.Innehåller inte godståg.
-- **Icon** - Ikoner, exempelvis för användning i grafiska användargränssnitt och kartor.
-- **RoadCondition** – Väglag
-- **RoadConditionOverview** – Väglagsöversikter
-- **Situation** - Situationer innehållandes händelser och störningar, exempelvis: Viktig information, Olyckor,
-  Bärighetsnedsättning, Evenemang, Avvikande färjetider, Kolonnkörning, Kövarning, Oförutsedda hinder, Vägarbete.
-- **WeatherStation** - Väderstationer med mätdata
+```text
+https://api.trafikinfo.trafikverket.se/v2/data.xml
+```
 
-## Koordinatsystem
+{{% /tab %}} {{% /tabs %}}
 
-Trafikverket använder sig av det svenska nationella
-koordinatsystemet [SWEREF 99 TM](/docs/using-trafiklab-data/combining-data/converting-sweref99-to-wgs84/). All
-geometridata publiceras dock även i koordinatsystemet WGS 84.<em></em>
+Trafikverkets öppna API används genom att skicka en POST-förfrågan som innehåller en XML-förfrågan. Förfrågan beskriver vilken data som ska hämtas och kan även innehålla filter. API-nyckeln skickas i `LOGIN`-elementet som attributet `authenticationkey`. Lägg inte in en riktig API-nyckel i källkod och dela den inte offentligt.
+
+Samma innehåll i förfrågan kan skickas till någon av endpointsen ovan. Suffixet `.json` eller `.xml` avgör om svaret returneras som JSON eller XML. Spara till exempel XML-förfrågan nedan som `request.xml` och kör:
+
+```bash
+curl --request POST \
+  --url https://api.trafikinfo.trafikverket.se/v2/data.json \
+  --header 'Content-Type: application/xml' \
+  --data-binary @request.xml
+```
+
+I `QUERY`-elementet väljer `objecttype` datatyp, `schemaversion` versionen av datatypen och `limit` begränsar antalet returnerade poster. `FILTER`-elementet är valfritt. Filtret `EQ` i exemplet begränsar resultatet till poster där `SomeDataField` är lika med `2`. Tillgängliga fält, schemaversioner, filteroperatorer och svarsstruktur dokumenteras för varje datatyp i Trafikverkets dokumentation.
+
+En förfrågan kan se ut så här:
+
+```xml
+<REQUEST>
+  <LOGIN authenticationkey="YourApiKey" />
+  <QUERY objecttype="SomeObjectType" schemaversion="SomeObjectVersion" limit="10">
+  <FILTER>
+    <EQ name="SomeDataField" value="2" />
+  </FILTER>
+  </QUERY>
+</REQUEST>
+```
+
+{{% info %}}
+Om ett efterfrågat fält saknar värde inkluderas fältet inte i svaret.
+{{% /info %}}
+
+Följande datatyper finns tillgängliga:
+
+| Data type | Beskrivning |
+|-----------|-------------|
+| TrainMessage | Meddelanden om arbeten på järnvägen, tekniska problem och liknande. |
+| TrainStation | Trafikplatser, inte bara för passagerare utan även för gods och gränser. |
+| TrainAnnouncement | Tidtabellsinformation, det vill säga information om tåg vid trafikplatser eller stationer. Innehåller inte godståg. |
+| Icon | Ikoner för användning på kartor eller i användargränssnitt. |
+| RoadCondition | Väglag. |
+| RoadConditionOverview | Översikt över väglag. |
+| Situation | Beskriver aktuella situationer på vägarna, till exempel incidenter och störningar i den normala trafiken. Det kan handla om viktig information, vägarbeten, olyckor, köer, evenemang eller ändrade färjetider. |
+| WeatherStation | Rapporter från väderstationer längs vägarna. |
+
+### Koordinater
+
+API:et använder det svenska nationella koordinatsystemet SWEREF 99 TM. All geometrisk data publiceras även i WGS 84. [Läs mer om konvertering från SWEREF 99](/docs/using-trafiklab-data/combining-data/converting-sweref99-to-wgs84/).
 
 ## Detaljerad dokumentation
 
-Detaljerad dokumentation hittar du på Trafikverkets informationssida för API:et, se nedan.
+Fullständig och uppdaterad dokumentation finns i Trafikverkets [Data Exchange Portal](https://data.trafikverket.se/documentation/datacache/intro). Portalen är Trafikverkets centrala webbplats för dokumentation om datautbytestjänster och innehåller bland annat:
 
-Den detaljerade dokumentationen innehåller bland annat information om:
-
-- uppbyggnad av frågan som bifogas anropet
-- svarets utformning
+- mer information om hur förfrågningar konstrueras
+- mer information om svarsstrukturer
 - felmeddelanden
-- tillgänglig datamodell
-- exempelkod och vanliga användningsfall
-- en API-konsol för testkörning
+- exempelkod
+- en interaktiv konsol för testning
 
-Observera att du som är Trafiklabs-medlem **inte** behöver registrera dig på Trafikverkets sida utan kan hämta en nyckel
-direkt här på Trafiklab.
+Om du redan har en API-nyckel som utfärdats via Trafiklab kan du fortsätta använda den. Nya nycklar måste hämtas från Trafikverkets eget dataportal.
 
-För mer information se ”[Trafikverkets öppna API för trafikinformation](http://api.trafikinfo.trafikverket.se/)”
-
-
+Trafikverkets dokumentation finns här: [https://data.trafikverket.se/documentation/datacache/intro](https://data.trafikverket.se/documentation/datacache/intro)

@@ -23,7 +23,7 @@ Trafikverkets open API is an API to fetch information regarding road and rail tr
 
 ## How do I use Trafikverkets open API?
 
-A valid API key is required. This key can be obtained from the [Trafikverkets own data portal](https://data.trafikverket.se/oauth2/Account/register).
+A valid API key is required. New users must obtain a key through [Trafikverkets own data portal](https://data.trafikverket.se/oauth2/Account/register). Trafiklab no longer issues new keys for this API, but existing Trafiklab-issued keys continue to work.
 
 This API has multiple versions, all using the same API key. You should use the latest available endpoint, but can keep using earlier ones if you have an existing application.
 
@@ -43,12 +43,23 @@ https://api.trafikinfo.trafikverket.se/v2/data.xml
 
 {{% /tab %}} {{% /tabs %}}
 
-You can use Trafikverkets open API by sending a POST-request, which describes which data you'd like to request, along with optional filters. The data is returned in JSON or XML format, depending on the suffix provided in the request.
+You use Trafikverkets open API by sending a POST-request containing an XML request. The request describes which data you'd like to retrieve, along with optional filters. The API key is passed in the `LOGIN` element as the `authenticationkey` attribute. Do not put a real API key in source code or share it publicly.
+
+The same request body can be sent to either endpoint listed above. The `.json` or `.xml` suffix determines whether the response is returned as JSON or XML. For example, save the XML request below as `request.xml` and run:
+
+```bash
+curl --request POST \
+  --url https://api.trafikinfo.trafikverket.se/v2/data.json \
+  --header 'Content-Type: application/xml' \
+  --data-binary @request.xml
+```
+
+In the `QUERY` element, `objecttype` selects the data type, `schemaversion` selects the version of that data type, and `limit` restricts the number of returned records. The `FILTER` element is optional; the `EQ` filter in the example limits results to records where `SomeDataField` equals `2`. The available fields, schema versions, filter operators, and response structure are documented for each data type in Trafikverkets documentation.
 
 A request can look like this:
 ```xml
 <REQUEST>
-  <LOGIN authenticationkey="YourTrafiklabKey" />
+  <LOGIN authenticationkey="YourApiKey" />
   <QUERY objecttype="SomeObjectType" schemaversion="SomeObjectVersion" limit="10">
   <FILTER>
     <EQ name="SomeDataField" value="2" />
@@ -80,7 +91,7 @@ This API uses the Swedish national coordinate system SWEREF 99 TM. All geometric
 
 ## Detailed documentation
 
-Complete and updated documentation is available at [Trafikverkets website](https://api.trafikinfo.trafikverket.se/), and contains for instance
+Complete and updated documentation is available in Trafikverkets [Data Exchange Portal](https://data.trafikverket.se/documentation/datacache/intro). The portal is Trafikverkets central site for documentation about data exchange services and contains, for instance,
 
 - more information about constructing requests
 - more information about response data structures
@@ -88,8 +99,6 @@ Complete and updated documentation is available at [Trafikverkets website](https
 - example code
 - an interactive console for testing
 
-Note that you, as a Trafiklab member, **don't** have to register on Trafikverkets website, as you can fetch your API key directly through Trafiklab.
+If you already have a Trafiklab-issued key, you can continue using it. New keys must be obtained through Trafikverkets own data portal.
 
-Trafikverkets documentation can be found here: [https://api.trafikinfo.trafikverket.se/](https://api.trafikinfo.trafikverket.se/)
-
-
+Trafikverkets documentation can be found here: [https://data.trafikverket.se/documentation/datacache/intro](https://data.trafikverket.se/documentation/datacache/intro)
