@@ -4,6 +4,7 @@
     {{ $source_page = index .Translations 0 }}
 {{ end }}
 
+{{ if (not (isset .Params "hide_github_footer")) }}
 <footer class="docs-footer">
     <hr>
     <div class="docs-footer__container">
@@ -31,3 +32,4 @@
         {{ end }}
     </div>
 </footer>
+{{ end }}

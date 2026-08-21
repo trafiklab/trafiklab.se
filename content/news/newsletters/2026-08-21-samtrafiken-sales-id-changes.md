@@ -2,6 +2,8 @@
 description: "Directed email"
 hidden: true 
 layout: "single"
+image: '/media/2024/09/banner_switch.jpg'
+hide_github_footer: true
 ---
 
 # Action required: Samtrafiken Sales IDs will change on September 15, 2026

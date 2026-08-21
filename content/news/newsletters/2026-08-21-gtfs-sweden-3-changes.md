@@ -2,6 +2,8 @@
 description: "Directed email"
 hidden: true 
 layout: "single"
+image: '/media/2024/09/banner_sj_oresundsbro.jpg'
+hide_github_footer: true
 ---
 
 # New data available in the GTFS Sweden 3 feed
