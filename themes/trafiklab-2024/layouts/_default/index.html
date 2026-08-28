@@ -155,7 +155,9 @@
       data => data.json().then(json => {
           if (active_trip_id === undefined) {
             const trip_ids = Object.keys(json);
-            while (active_trip_id === undefined || json[active_trip_id].from.name.length > 16 || json[active_trip_id].to.name.length > 16) {
+            let attempts = 0;
+            while (attempts++ < 5 &&
+                (active_trip_id === undefined || json[active_trip_id].from.name.length > 16 || json[active_trip_id].to.name.length > 16)) {
               active_trip_id = trip_ids[Math.floor(Math.random() * trip_ids.length)]
             }
           }
