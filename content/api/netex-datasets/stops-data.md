@@ -8,13 +8,6 @@ aliases:
   - /api/trafiklab-apis/stops-data/
   - /api/trafiklab-apis/stops-data/licence/
 ---
-{{% warning %}} **NeTEx files on Trafiklab will be upgraded to version 1.0.15.** <br>
-NeTEx version 1.0.11 will be upgraded to version 1.0.15 on October 28th, 2025.
-
-Version 1.0.15 includes breaking changes, these breaking changes only require minor adjustments. For example spelling fixes in the enums, such as `WHEECHAIR_ASSISTANCE` now corrected to `WHEELCHAIR_ASSISTANCE`
-
-More information will be sent by email to all users with an active NeTEx or Stops API key.
-{{% /warning %}}
 
 The stops data API contains detailed data of Sweden's national stops and their mappings to stops from the [GTFS Regional](/api/gtfs-datasets/gtfs-regional/)
 and [Netex Regional](/api/netex-datasets/netex-regional/) APIs.
