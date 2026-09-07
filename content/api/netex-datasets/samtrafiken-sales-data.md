@@ -10,7 +10,7 @@ aliases:
 Samtrafiken Sales data is a NeTEx feed with sellable data. This API differ from the NeTEx Sweden API, the main
 difference is that only data for trips sellable through Samtrafiken access is included. More details about additional,
 removed or changed fields can be found through the following url:
-[Samtrafiken sales export](https://samtrafiken.atlassian.net/wiki/spaces/SamA/pages/3448668185/NeTEx+format+adjustments+-+Samtrafiken+sales+export)
+[Samtrafiken sales export](https://samtrafiken.atlassian.net/wiki/spaces/SamA/pages/5579081459/NeTEx+format+adjustments+-+Samtrafiken+sales+export)
 
 {{% info %}} **Upcoming change to the NeTEx sales file – September 2026.** <br>
 In 15 September 2026, Samtrafiken will transition to a new method of generating the NeTEx sales file. This is an
