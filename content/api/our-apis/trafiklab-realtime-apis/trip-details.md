@@ -144,6 +144,10 @@ Precise technical documentation is available in the form of an OpenAPI specifica
         "designation": "B"
       },
       "alerts": [],
+      "advanceOrder": {
+        "required": true,
+        "message": "Resan måste beställas på sl.se senast 2 timmar innan avgång"
+      },
       "is_realtime": true
     },
     {
@@ -476,6 +480,9 @@ Precise technical documentation is available in the form of an OpenAPI specifica
 | realtime_platform.id    | String        | The realtime platform id.                                                                                                                                                                                                                                                                                                              |
 | realtime_platform.name  | String        | The realtime platform name.                                                                                                                                                                                                                                                                                                            |
 | alerts                  | Alert[]       | Any messages for this stop, for example regarding roadworks, delays, changed routes etc.                                                                                                                                                                                                                                               |
+| advanceOrder            | AdvanceOrder  | The booking conditions for this departure. Departures carrying this field are serviced only when a traveller has ordered the trip in advance, which is common for demand responsive services.                                                                                                                                          |
+| advanceOrder.required   | Boolean       | True when this departure has to be ordered before travelling.                                                                                                                                                                                                                                                                          |
+| advanceOrder.message    | String        | The agency's instructions for ordering this departure, for example a phone number, a website or a deadline. Intended to be shown to the traveller as it is written.                                                                                                                                                                    |
 | is_realtime             | Boolean       | Indicates weather realtime data is available for this departure/arrival. When false, realtime fields have been filled with scheduled data for easier client-side implementations.                                                                                                                                                      |
 
 ## License

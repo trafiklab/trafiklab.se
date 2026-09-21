@@ -312,6 +312,8 @@ components:
           items:
             $ref: '#/components/schemas/Alert'
           description: List of alerts related to this timetable entry.
+        advanceOrder:
+          $ref: '#/components/schemas/AdvanceOrder'
         is_realtime:
           type: boolean
           example: true
@@ -366,10 +368,24 @@ components:
           items:
             $ref: '#/components/schemas/Alert'
           description: List of alerts related to this timetable entry.
+        advanceOrder:
+          $ref: '#/components/schemas/AdvanceOrder'
         is_realtime:
           type: boolean
           example: true
           description: Indicates if the data is based on real-time information.
+    AdvanceOrder:
+      type: object
+      description: The booking conditions for this departure. Departures carrying this field are serviced only when a traveller has ordered the trip in advance, which is common for demand responsive services.
+      properties:
+        required:
+          type: boolean
+          example: true
+          description: True when this departure has to be ordered before travelling.
+        message:
+          type: string
+          example: "Resan måste beställas på sl.se senast 2 timmar innan avgång"
+          description: The agency's instructions for ordering this departure, for example a phone number, a website or a deadline. Intended to be shown to the traveller as it is written.
     Route:
       type: object
       description: Details about the route of the trip.
