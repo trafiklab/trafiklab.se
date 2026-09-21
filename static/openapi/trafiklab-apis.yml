@@ -318,6 +318,19 @@ components:
           type: boolean
           example: true
           description: Indicates if the data is based on real-time information.
+      required:
+        - scheduled
+        - realtime
+        - delay
+        - canceled
+        - route
+        - trip
+        - agency
+        - stop
+        - scheduled_platform
+        - realtime_platform
+        - alerts
+        - is_realtime
     CallAtLocation:
       type: object
       properties:
@@ -374,14 +387,24 @@ components:
           type: boolean
           example: true
           description: Indicates if the data is based on real-time information.
+      required:
+        - scheduledDeparture
+        - realtimeDeparture
+        - departureDelay
+        - departureCanceled
+        - scheduledArrival
+        - realtimeArrival
+        - arrivalDelay
+        - arrivalCanceled
+        - stop
+        - scheduled_platform
+        - realtime_platform
+        - alerts
+        - is_realtime
     AdvanceOrder:
       type: object
-      description: The booking conditions for this departure. Departures carrying this field are serviced only when a traveller has ordered the trip in advance, which is common for demand responsive services.
+      description: The booking conditions for boarding at this stop. Only present where boarding requires ordering in advance.
       properties:
-        required:
-          type: boolean
-          example: true
-          description: True when this departure has to be ordered before travelling.
         message:
           type: string
           example: "Resan måste beställas på sl.se senast 2 timmar innan avgång"
