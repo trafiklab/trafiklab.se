@@ -3,6 +3,7 @@ title: SL Transport
 weight: 10
 date: 2024-01-30
 aliases:
+  - ../../our-apis/sl/transport/
   - /api/trafiklab-apis/sl/stops-and-lines-2/
   - /sv/api/trafiklab-apis/sl/stops-and-lines-2/
   - /api/sl-hallplatser-och-linjer-2

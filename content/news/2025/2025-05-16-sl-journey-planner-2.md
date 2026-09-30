@@ -14,5 +14,5 @@ which allows end users to either recreate the same results as the official SL ap
 
 SL does no longer require API keys for this API. This means you can start using it straight away, without creating an API key first.
 
-The full documentation for this new API is available [on Trafiklab](https://www.trafiklab.se/api/our-apis/sl/journey-planner-2/). If you have any questions,
+The full documentation for this new API is available [on Trafiklab](https://www.trafiklab.se/api/other-apis/sl/journey-planner-2/). If you have any questions,
 please reach out to us [through our support forum](https://support.trafiklab.se).  

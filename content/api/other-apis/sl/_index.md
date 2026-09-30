@@ -1,24 +1,17 @@
 ---
 title: SL's APIs
 layout: "single"
-weight: 80
+weight: 2
 image: '/media/2024/09/banner_pendeltag.jpg'
 image_position: 'bottom'
+aliases:
+  - ../our-apis/sl/
 cascade:
   - image: '/media/2024/09/banner_pendeltag.jpg'
   - image_position: 'bottom'
 ---
 
 SL's APIs is a collection of 3 APIs which provide information about planned and realtime traffic.
-
-{{% info %}}
-SL has updated their API's. 7 API's have become 3:
-<ul>
-<li>SL Transport (new: has replaced Departures v4 & Stops and lines v2) 
-<li>SL Deviations (new: has replaced Service Alerts & Traffic Status)
-<li>SL Journeyplanner (new: has replaced Route-planner and Stop lookup)</li>
-</ul>
-{{% /info %}}
 
 | Well suited for                                 | Not so suited for                                |
 |:------------------------------------------------|:-------------------------------------------------|

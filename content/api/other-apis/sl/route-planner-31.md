@@ -4,6 +4,7 @@ weight: 100
 date: 2019-01-14
 expiryDate: 2025-07-01
 aliases:
+  - ../../our-apis/sl/route-planner-31/
   - /api/sl-reseplanerare-31
   - /api/sl-reseplanerare-31/documentation
   - /api/sl-reseplanerare-31/console

@@ -4,6 +4,7 @@ weight: 200
 date: 2014-03-14
 expiryDate: 2025-07-01
 aliases:
+  - ../../our-apis/sl/stop-lookup/
   - /api/sl-platsuppslag
   - /api/sl-platsuppslag/dokumentation
   - /api/sl-platsuppslag/nivaer

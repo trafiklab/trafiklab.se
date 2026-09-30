@@ -4,6 +4,7 @@ weight: 101
 date: 2025-05-12
 badge: new
 aliases:
+  - ../../our-apis/sl/journey-planner-2/
   - /api/sl-reseplanerare
 ---
 ## Description

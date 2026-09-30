@@ -3,6 +3,7 @@ title: Licence
 weight: 1000
 date: 2015-02-27
 aliases:
+  - ../../our-apis/sl/licence/
   - /api/sl-reseplanerare-31/license
   - /node/25593/license
   - /api/sl-realtidsinformation-4/license

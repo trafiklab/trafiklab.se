@@ -4,6 +4,7 @@ weight: 300
 date: 2019-01-14
 expiryDate: 2025-07-01
 aliases:
+  - ../../our-apis/sl/nearby-stops-2/
   - /api/sl-narliggande-hallplatser-2
   - /api/sl-narliggande-hallplatser-2/dokumentation
   - /api/sl-narliggande-hallplatser-2/nivaer

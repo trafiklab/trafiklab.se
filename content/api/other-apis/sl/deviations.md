@@ -3,6 +3,7 @@ title: SL Deviations
 weight: 20
 date: 2024-01-12
 aliases:
+  - ../../our-apis/sl/deviations/
   - /api/sl-storningsinformation-2
   - /api/sl-storningsinformation-2/documentation
   - /api/sl-storningsinformation-2/nivaer
