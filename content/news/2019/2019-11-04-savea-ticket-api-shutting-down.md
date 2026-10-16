@@ -1,9 +1,8 @@
 ---
-title: "Savea ticket api stängs ner"
+title: "Savea ticket API shutting down"
 date: "2019-11-04"
 
 ---
-Under Trainhack den 25-27 oktober lanserade Savea ett öppet försäljnings-API för de aktörer som använder företagets
-bokningsplattform. Denna API kommer inte längre finnas på Trafiklab nu att Savea har bestämd att göra den till en
-internt API, på grund av att Savea vill göra stora förändringar samt att användningsnivån av denna publika API var
-mindre än förväntad.
+During Trainhack on 25-27 October, Savea launched an open sales API for operators using the company's booking
+platform. This API will no longer be available on Trafiklab, as Savea has decided to make it an internal API. Savea
+wants to make major changes, and the usage of this public API was lower than expected.
