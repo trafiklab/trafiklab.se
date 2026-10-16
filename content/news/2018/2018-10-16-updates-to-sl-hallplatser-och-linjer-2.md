@@ -1,5 +1,5 @@
 ---
-title: "News in SL Hållplatser och linjer 2"
+title: "Updates to SL Hållplatser och linjer 2"
 date: 2018-10-16
 draft: true
 

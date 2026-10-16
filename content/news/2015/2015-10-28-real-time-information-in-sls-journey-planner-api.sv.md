@@ -1,5 +1,5 @@
 ---
-title: Realtidsinformation i SLs Reseplanerar-API
+title: "Realtidsinformation i SL:s Reseplanerar-API"
 date: 2015-10-28
 aliases:
 - "/post/132083208523/realtidsinformation-i-sls-reseplanerar-api"

@@ -1,5 +1,5 @@
 ---
-title: "Time for a Trafiklab Meetup! Sign up today to secure a spot."
+title: "Trafiklab meetup on 11 February – sign up now"
 date: 2016-01-29
 draft: true
 

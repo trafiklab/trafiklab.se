@@ -1,5 +1,5 @@
 ---
-title: Vilket format föredrar du som svar vid ett API anrop?
+title: "Vilket format föredrar du som svar vid ett API-anrop?"
 date: 2014-03-05
 aliases:
   - "/post/78644500759/vilket-format-föredrar-du-som-svar-vid-ett-api-anrop"

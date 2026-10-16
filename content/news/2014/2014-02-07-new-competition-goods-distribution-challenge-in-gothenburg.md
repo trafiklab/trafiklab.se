@@ -1,5 +1,5 @@
 ---
-title: "New competition - Goods Distribution Challenge in Gothenburg"
+title: "New competition: Goods Distribution Challenge in Gothenburg"
 date: 2014-02-07
 draft: true
 

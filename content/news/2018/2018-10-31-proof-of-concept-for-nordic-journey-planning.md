@@ -1,5 +1,5 @@
 ---
-title: "POC for Nordic journey planning"
+title: "Proof of concept for Nordic journey planning"
 date: 2018-10-31
 draft: true
 image: "/media/2018/10/2018-10-31-poc-for-nordisk-reseplanering-1.png"

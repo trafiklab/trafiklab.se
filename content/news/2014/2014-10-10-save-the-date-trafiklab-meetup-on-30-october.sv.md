@@ -1,5 +1,5 @@
 ---
-title: Save the date!
+title: "Save the date: Trafiklab meetup 30 oktober"
 date: 2014-10-10
 aliases:
   - "/post/99632975173/save-the-date"

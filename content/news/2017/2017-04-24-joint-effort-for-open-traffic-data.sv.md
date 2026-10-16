@@ -1,5 +1,5 @@
 ---
-title: Kraftsamling öppna trafikdata
+title: "Kraftsamling för öppna trafikdata"
 date: 2017-04-24
 aliases:
   - "/post/159933699388/kraftsamling-öppna-trafikdata"

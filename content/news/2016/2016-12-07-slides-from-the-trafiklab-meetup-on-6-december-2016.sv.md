@@ -1,5 +1,5 @@
 ---
-title: Slides från Trafiklab meetup 6 december 2016
+title: "Slides från Trafiklabs meetup 6 december 2016"
 date: 2016-12-07
 aliases:
   - "/post/154156370538/slides-från-trafiklab-meetup-6-december-2016"

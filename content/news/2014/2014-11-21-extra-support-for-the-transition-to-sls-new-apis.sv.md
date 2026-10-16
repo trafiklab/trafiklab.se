@@ -1,8 +1,9 @@
 ---
-title: Extra support för övergång till SLs nya APIer
+title: "Extra support för övergången till SL:s nya APIer"
 date: 2014-11-21
 aliases:
 - "/post/103192253568/extra-support-för-övergång-till-sls-nya-apier"
+- "/sv/nyheter/2014/11/extra-support-för-övergång-till-sls-nya-apier/"
 
 ---
 Som vi tidigare meddelat har SL släppt nya API:er på Trafiklab. De nya API:erna kommer ge en förbättrad driftstabilitet och är förberedda för kommande funktioner, som till exempel realtidsinformation i reseplaneraren. Detta betyder även att de gamla API:erna kommer att sluta fungera.

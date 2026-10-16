@@ -1,5 +1,5 @@
 ---
-title: "The winners of Trainhack"
+title: "The winners of Trainhack 2016"
 date: 2016-08-29
 draft: true
 image: "/media/2016/08/2016-08-29-vinnarna-fran-trainhack-1.jpg"

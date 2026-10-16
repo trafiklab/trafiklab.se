@@ -1,5 +1,5 @@
 ---
-title: Ny tävling - Goods Distribution Challenge i Göteborg
+title: "Ny tävling: Goods Distribution Challenge i Göteborg"
 date: 2014-02-07
 aliases:
   - "/post/75894930889/ny-tävling-goods-distribution-challenge-i-göteborg"

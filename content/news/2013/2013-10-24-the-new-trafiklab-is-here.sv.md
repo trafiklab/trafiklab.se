@@ -1,5 +1,5 @@
 ---
-title: Nya trafiklab är här
+title: "Nya Trafiklab är här"
 date: 2013-10-24
 aliases:
 - "/post/64951246993/nyatrafiklab"

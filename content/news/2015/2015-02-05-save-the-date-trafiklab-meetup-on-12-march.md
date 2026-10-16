@@ -1,5 +1,5 @@
 ---
-title: "SAVE THE DATE!"
+title: "Save the date: Trafiklab meetup on 12 March"
 date: 2015-02-05
 draft: true
 

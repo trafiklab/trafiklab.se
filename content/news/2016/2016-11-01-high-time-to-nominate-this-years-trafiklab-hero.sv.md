@@ -1,5 +1,5 @@
 ---
-title: Hög tid nominera till årets Trafiklabhjälte!
+title: "Hög tid att nominera till årets Trafiklabhjälte!"
 date: 2016-11-01
 aliases:
   - "/post/152589339448/hög-tid-nominera-till-årets-trafiklabhjälte"

@@ -1,5 +1,5 @@
 ---
-title: POC för Nordisk Reseplanering
+title: "Proof of concept för nordisk reseplanering"
 date: 2018-10-31
 aliases:
   - "/post/179616332203/poc-för-nordisk-reseplanering"

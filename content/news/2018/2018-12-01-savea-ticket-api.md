@@ -1,5 +1,5 @@
 ---
-title: "Savea ticket API launch"
+title: "Savea launches open ticket sales API"
 date: "2018-12-01"
 
 ---

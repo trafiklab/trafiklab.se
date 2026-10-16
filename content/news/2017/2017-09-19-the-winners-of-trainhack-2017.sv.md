@@ -1,5 +1,5 @@
 ---
-title: Vinnarna från Trainhack
+title: "Vinnarna från Trainhack 2017"
 date: 2017-09-19
 aliases:
   - "/post/165505417423/vinnarna-från-trainhack"

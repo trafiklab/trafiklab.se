@@ -1,5 +1,5 @@
 ---
-title: "Train monitor..."
+title: "Zugmonitor: German train service built on Deutsche Bahn data"
 date: 2013-04-13
 draft: true
 

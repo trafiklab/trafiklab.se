@@ -1,5 +1,5 @@
 ---
-title: Beta-test väginformation startar måndag 9/2 12.00
+title: "Betatest av väginformation startar måndag 9 februari kl. 12.00"
 date: 2015-02-04
 aliases:
   - "/post/110057128503/beta-test-väginformation-startar-måndag-92-1200"

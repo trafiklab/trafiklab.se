@@ -1,5 +1,5 @@
 ---
-title: Tågmonitor...
+title: "Zugmonitor: tysk tågtjänst byggd på data från Deutsche Bahn"
 date: 2013-04-13
 aliases:
   - "/post/64944466157/tågmonitor"

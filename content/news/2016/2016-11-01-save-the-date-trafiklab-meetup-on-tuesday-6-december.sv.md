@@ -1,5 +1,5 @@
 ---
-title: Save the date! Trafiklab Meetup tisdagen den 6e december
+title: "Save the date: Trafiklab meetup tisdagen den 6 december"
 date: 2016-11-01
 aliases:
   - "/post/152589303563/save-the-datetrafiklab-meetup-tisdagen-den-6e-december"

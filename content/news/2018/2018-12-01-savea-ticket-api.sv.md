@@ -1,5 +1,5 @@
 ---
-title: Savea ticket api
+title: "Savea lanserar öppet API för biljettförsäljning"
 date: 2018-12-01
 aliases:
   - "/post/180690772548/savea-ticket-api"

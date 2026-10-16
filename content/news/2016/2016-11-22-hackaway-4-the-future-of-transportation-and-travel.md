@@ -1,5 +1,5 @@
 ---
-title: "Hackaway #4"
+title: "Hackaway #4 – the future of transportation and travel"
 date: 2016-11-22
 draft: true
 image: "/media/2016/11/2016-11-22-hackaway-4-1.png"

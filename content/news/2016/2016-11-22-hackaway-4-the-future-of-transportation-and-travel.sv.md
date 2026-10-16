@@ -1,5 +1,5 @@
 ---
-title: Hackaway #4
+title: "Hackaway #4 – framtidens transporter och resande"
 date: 2016-11-22
 aliases:
   - "/post/153512438318/hackaway-4"

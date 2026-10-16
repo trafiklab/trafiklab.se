@@ -1,5 +1,5 @@
 ---
-title: "Well attended, with a rewarding dialogue, at Trafiklab's meetup!"
+title: "Well-attended meetup with a rewarding dialogue"
 date: 2014-04-15
 draft: true
 image: "/media/2014/04/2014-04-15-valbesokt-och-givande-dialog-pa-trafiklabs-meetup-1.jpg"

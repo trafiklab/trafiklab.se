@@ -1,5 +1,5 @@
 ---
-title: "Provision of EU-wide multimodal travel information services under the ITS Directive 2010/40/EU"
+title: "EU consultation on multimodal travel information services under the ITS Directive"
 date: 2015-09-04
 draft: true
 

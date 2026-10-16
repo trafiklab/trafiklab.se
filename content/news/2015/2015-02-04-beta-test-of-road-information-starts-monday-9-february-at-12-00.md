@@ -1,5 +1,5 @@
 ---
-title: "Beta test of road information starts Monday 9 February, 12:00"
+title: "Beta test of road information starts Monday 9 February at 12:00"
 date: 2015-02-04
 draft: true
 

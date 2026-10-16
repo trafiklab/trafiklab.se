@@ -1,5 +1,5 @@
 ---
-title: 5e upplagan av East Sweden Hack
+title: "Femte upplagan av East Sweden Hack"
 date: 2017-09-11
 aliases:
   - "/post/165221801713/5e-upplagan-av-east-sweden-hack"

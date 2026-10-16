@@ -1,5 +1,5 @@
 ---
-title: "EastSwedenHack2014"
+title: "Trafiklab at East Sweden Hack 2014"
 date: 2014-09-03
 
 ---

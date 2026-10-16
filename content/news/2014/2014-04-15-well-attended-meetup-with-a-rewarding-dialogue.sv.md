@@ -1,5 +1,5 @@
 ---
-title: Välbesökt och givande dialog på Trafiklabs meetup!
+title: "Välbesökt meetup med givande dialog"
 date: 2014-04-15
 aliases:
   - "/post/82795773821/välbesökt-och-givande-dialog-på-trafiklabs-meetup"
