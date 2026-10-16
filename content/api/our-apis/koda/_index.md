@@ -85,10 +85,7 @@ at https://api.koda.trafiklab.se/KoDa/api/v2/gtfs-rt/{operator}/{feed}?date={dat
 Replace `{apikey}` with your own API key. If you don´t have a key yet, read [HERE](/docs/using-trafiklab/getting-api-keys)
 on how to get it. `{operator}` should be one of the operator abbreviations as used in the GTFS Regional API. `{feed}`
 can be `ServiceAlerts`, `TripUpdates` or `VehiclePositions`. `Date` is the date for which you want to download the data,
-in `YYYY-MM-DD` format.
-
-Additionally, you can pass the `hour=[00-23]` parameter to the realtime data endpoint to obtain data for a specific
-hour. {{% /note %}}
+in `YYYY-MM-DD` format. {{% /note %}}
 
 | **API key level** |                                                   **Maximum calls**                                                    |
 |:-----------------:|:----------------------------------------------------------------------------------------------------------------------:|
