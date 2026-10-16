@@ -1,0 +1,4 @@
+{{- /* Publishes the news RSS feed of the current language as /rss.xml (default language) or /rss.<lang>.xml. Context: the news section page. */ -}}
+{{- $name := cond (eq .Site.LanguagePrefix "") "rss.xml" (printf "rss.%s.xml" .Language.Lang) -}}
+{{- $feed := resources.Get "rss/news.xml" | resources.ExecuteAsTemplate $name (dict "page" . "name" $name) -}}
+{{- return $feed -}}

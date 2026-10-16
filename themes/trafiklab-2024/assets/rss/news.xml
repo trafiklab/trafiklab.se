@@ -1,0 +1,26 @@
+{{- /* News RSS feed, rendered by partials/news-rss.html. Text template: escape values explicitly. baseURL is "/", so links are made absolute with params.publicUrl. */ -}}
+{{- $base := strings.TrimSuffix "/" site.Params.publicUrl -}}
+{{- $section := .page -}}
+{{- $pages := first 50 $section.RegularPagesRecursive.ByDate.Reverse -}}
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ printf "%s | %s" $section.Title site.Title | transform.XMLEscape }}</title>
+    <link>{{ $base }}{{ $section.RelPermalink }}</link>
+    <description>{{ trim $section.Plain " \n" | htmlUnescape | transform.XMLEscape }}</description>
+    <language>{{ $section.Language.Lang }}</language>
+    {{- with $pages }}
+    <lastBuildDate>{{ (index . 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    <atom:link href="{{ $base }}/{{ .name }}" rel="self" type="application/rss+xml" />
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title | transform.XMLEscape }}</title>
+      <link>{{ $base }}{{ .RelPermalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid>{{ $base }}{{ .RelPermalink }}</guid>
+      <description>{{ default .Summary .Description | transform.XMLEscape }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

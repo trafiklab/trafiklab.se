@@ -20,6 +20,13 @@
 {{ end }}{{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}" />
+{{/* Every language publishes its news feed, but pages only link the default-language feed since not all news is translated */}}
+{{ with site.GetPage "/news" }}
+{{ with partialCached "news-rss.html" . .Language.Lang }}{{ .Publish }}{{ end }}
+{{ range first 1 (where .AllTranslations "Site.LanguagePrefix" "") }}{{ $title := printf "%s | %s" .Title site.Title }}{{ with partialCached "news-rss.html" . .Language.Lang }}
+<link rel="alternate" type="application/rss+xml" title="{{ $title }}" href="{{ .RelPermalink }}" />
+{{ end }}{{ end }}
+{{ end }}
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta http-equiv="Cache-Control" content="no-transform" />
