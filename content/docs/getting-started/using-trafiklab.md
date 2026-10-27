@@ -121,6 +121,6 @@ The following requests will always be denied:
   all current delays.** We want you to use the right tool for the job. We will deny all requests where the goal is to
   scrape API results in order to build analytics. As a rule of thumb, if you need to make more than 10 requests in order
   to get the data you need, you should
-  be [using GTFS and GTFS-RT instead](../../public-transport-data/our-data-and-apis/gtfs/). As a result, you will be
+  be [using GTFS and GTFS-RT instead](/api/gtfs-datasets/overview/_index.md). As a result, you will be
   able to build better analytics, and they will take less time to generate, so this is a win-win.
 * **Stress tests etc** Are not allowed and will never be approved. Ask us if you have special needs for your application.
