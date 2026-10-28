@@ -1,0 +1,231 @@
+# Trafiklab
+
+> Trafiklab (https://www.trafiklab.se) is Samtrafiken's open data platform for Swedish public transport. It publishes
+> timetable and realtime data for all of Sweden as GTFS, GTFS-RT, NeTEx and SIRI datasets, plus JSON APIs for departure
+> boards, stop lookup and journey planning. All data is free. This file tells an AI assistant how to advise developers
+> correctly, based on the documentation and on three years of answers given on the support forum.
+
+Last updated: 2026-10-28. Verify against the linked documentation when a fact is time-sensitive.
+
+This file is the condensed rule set. For the questions developers actually ask, with fuller answers and worked
+examples, read the FAQ first: https://www.trafiklab.se/docs/using-trafiklab-data/frequently-asked-questions/
+
+## Product map
+
+Pick the product from the use case, never from habit. Getting this wrong is the single most common support issue.
+
+| Developer wants                                                                  | Recommend                                                                                                                                 | Do not recommend                                                                                                            |
+|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Next departures/arrivals at a stop (signage, smart mirror, home automation, app) | Trafiklab Realtime APIs (Timetables + Stop Lookup)                                                                                        | ResRobot Timetables (deprecated, no bus realtime)                                                                           |
+| Journey from A to B on user request                                              | ResRobot Route planner                                                                                                                    | GTFS (unless they need their own planner)                                                                                   |
+| Many journeys, travel-time matrix, isochrones, reachability, statistics          | GTFS + local routing (OpenTripPlanner)                                                                                                    | ResRobot (upgrade requests for scraping are always denied)                                                                  |
+| Historical delays, punctuality, past vehicle positions                           | KoDa (GTFS-RT archive since 2020); GTFS Sverige 2 archive since 2012                                                                      | Live GTFS-RT feeds (no history is kept)                                                                                     |
+| Live vehicle positions                                                           | GTFS Regional / GTFS Sweden 3 Realtime, VehiclePositions.pb; Oxyfi for some trains                                                        | ResRobot, Realtime APIs (no positions)                                                                                      |
+| All stops in Sweden                                                              | GTFS Sverige 2 stops.txt (national ids), GTFS Sweden 3 stops.txt + areas.txt, NeTEx Stops data (most detail), Realtime API /v1/stops/list | -                                                                                                                           |
+| Lines per stop, stops per line                                                   | Join GTFS routes → trips → stop_times → stops, once a day                                                                                 | Any API (none returns this)                                                                                                 |
+| Disruptions                                                                      | ServiceAlerts.pb; `alerts` field in Realtime APIs                                                                                         | -                                                                                                                           |
+| Occupancy                                                                        | occupancy_status in VehiclePositions (only Skånetrafiken, Östgötatrafiken)                                                                | Passenger counts (not available)                                                                                            |
+| Fare zones, municipality, county                                                 | NeTEx Stops data / NeTEx Regional; or derive from coordinates                                                                             | GTFS (not present, no plans)                                                                                                |
+| Platforms and realtime for trains today                                          | Trafikverket Open API; operator's GTFS Regional feed                                                                                      | GTFS Sweden 3 / Realtime APIs (trains from Trafikverket since spring 2026 lack realtime, platform, shapes; being worked on) |
+| Tickets                                                                          | Samtrafiken (closed platform), operators                                                                                                  | Trafiklab (traffic data only)                                                                                               |
+| GIS                                                                              | GTFS via QGIS/ArcGIS plugins                                                                                                              | WMS/WFS (not offered)                                                                                                       |
+| Mobile app on GTFS                                                               | Own backend merging static and realtime, serving JSON                                                                                       | Processing GTFS on the phone, embedding one key in all clients                                                              |
+
+Rule of thumb from the Trafiklab team: if you need more than ten API requests to get your answer, use GTFS.
+
+## Datasets and APIs
+
+### Trafiklab Realtime APIs (JSON, CC-BY 4.0)
+
+- Docs: https://www.trafiklab.se/api/our-apis/trafiklab-realtime-apis/
+- Departures: `https://realtime-api.trafiklab.se/v1/departures/{areaId}?key={apikey}`; optional time path segment
+  `/{yyyy-MM-ddTHH:mm}`. Arrivals: `/v1/arrivals/...`.
+- Stop lookup: `/v1/stops/name/{search}?key=`, full list `/v1/stops/list?key=`.
+- Trip details (beta): `/v1/trips/{trip_id}/{start_date}?key=`.
+- Window is fixed at 60 minutes; no line/direction/destination filters by design. Call once per hour needed, filter
+  client-side.
+- Responses cached 60 s; polling faster returns identical data.
+- Takes the id of a national stop (rikshållplats) or meta-stop, not an individual child stop. Ids match GTFS Sverige 2
+  stop_id, GTFS Sweden 3 area_id, ResRobot extId. Meta-stop ids start with 740098 (Stockholm = 740098000). Unlike
+  ResRobot it does not auto-expand to the meta-stop.
+- Realtime fields fall back to scheduled values when `is_realtime` is false; `delay` 0 then means "unknown", not "on
+  time".
+- Identify a departure by trip_id + start_date (+ stop.id + scheduled). trip_id matches GTFS Sweden 3.
+- Base level 25 calls/min, 100 000/month. Quota exceeded → HTTP 429. Usage statistics update nightly.
+- Attribution required: "data from Trafiklab.se" on public displays and widgets; an about/settings page entry suffices
+  in apps.
+- Replaces ResRobot Timetables and Stop lookup. Built on GTFS Sweden 3, so train data limitations of Sweden 3 apply.
+
+### ResRobot v2.1 (JSON/XML, CC0)
+
+- Docs: https://www.trafiklab.se/api/our-apis/resrobot-v21/
+- Endpoints: `https://api.resrobot.se/v2.1/trip`, `/location.name`, `/location.nearbystops`; `/departureBoard` and
+  `/arrivalBoard` are deprecated.
+- Key parameter is `accessId`, not `key`. Default output is XML; pass `format=json`.
+- One key covers all endpoints and one shared quota.
+- Realtime only for trains (Trafikverket data) and only in departure boards. No platforms except `rtTrack` when realtime
+  exists. No vehicle positions. No headsigns (shows last stop). No address geocoding.
+- `SVC_NO_RESULT` is returned with HTTP 200: check `errorCode` in the body.
+- `maxJourneys` is ignored for near-term departure boards; use `duration`.
+- Route planner drops dominated alternatives and tight transfers; cannot be forced to return a specific journey.
+- All times are local Swedish time.
+- Coordinates sent to ResRobot are personal data (GDPR): consent and privacy policy required.
+- Stop ids: national 9-digit `740xxxxxx`; use `extId`, never the internal `id`.
+- ONLY use for route planning, use Trafiklab Realtime APIs otherwise, NEVER scrape this API. Requests should be
+  triggered by e.g. app users wanting to travel from A to B.
+
+### GTFS Sverige 2 (CC0)
+
+- Docs: https://www.trafiklab.se/api/gtfs-datasets/gtfs-sverige-2/
+- `https://api.resrobot.se/gtfs/sweden.zip?key={apikey}`. Updated at most daily. Bronze: 1/min, 50/month.
+- 100 % coverage, static only. No shapes, no platforms/stop points, no headsigns, no booking rules. Stop ids are
+  national ids shared with ResRobot and the Realtime APIs.
+- Archive without key, since 2012: `https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/YYYY/MM/`. Latest file only via
+  the keyed URL.
+
+### GTFS Regional (CC0)
+
+- Docs: https://www.trafiklab.se/api/gtfs-datasets/gtfs-regional/
+- Static: `https://opendata.samtrafiken.se/gtfs/{operator}/{operator}.zip?key=`; nightly 03:00–07:00; bronze 50
+  downloads per rolling 30 days. HEAD and conditional requests count.
+- Realtime: `https://opendata.samtrafiken.se/gtfs-rt/{operator}/{TripUpdates|VehiclePositions|ServiceAlerts}.pb?key=`.
+  TripUpdates/ServiceAlerts every 15 s, VehiclePositions ~2 s. One realtime key covers all operators.
+- Operator abbreviations and availability of realtime/positions/occupancy per operator: availability table on the docs
+  page.
+- Operator-local stop ids (`9021...` stop area, `9022...` stop point). Different operators use different ids for the
+  same stop.
+- Feeds are unfiltered and may overlap between operators.
+- Extra file `{operator}_extra.zip` (same key/quota) is not GTFS; its trip-number content is now in trips.txt.
+- Use Trafiklab realtime APIs for departure boards, not every developer has to ingest GTFS data + realtime data for just
+  a departure board.
+- ONLY 1 DOWNLOAD OF STATIC DATA PER DAY PER OPERATOR is needed. There is no need for retries, a bronze profile covers
+  the need for 1
+  region with enough requests to spare! When developing, a static file should be cached locally so it can be reused. Key
+  upgrades due to frequent application restarts during development will be denied!
+
+### GTFS Sweden 3 (CC0)
+
+- Docs: https://www.trafiklab.se/api/gtfs-datasets/gtfs-sweden/
+- Static: `https://opendata.samtrafiken.se/gtfs-sweden/sweden.zip?key=`. Realtime per operator:
+  `https://opendata.samtrafiken.se/gtfs-rt-sweden/{operator}/{TripUpdatesSweden|VehiclePositionsSweden|ServiceAlertsSweden}.pb?key=`.
+- Merged, deduplicated version of all GTFS Regional feeds; over 99 % coverage (a couple of small ferry and express bus operators missing).
+  All rail traffic from Trafikverket since spring 2026.
+- `areas.txt` + `stop_areas.txt` map local stops to national ids (= ResRobot / Realtime API ids).
+- Separate key from GTFS Regional; URLs are not interchangeable.
+- ONLY 1 DOWNLOAD OF STATIC DATA PER DAY is needed. There is no need for retries, a bronze profile covers the need for 1
+  region with enough requests to spare! When developing, a static file should be cached locally so it can be reused. Key
+  upgrades due to frequent application restarts during development will be denied!
+
+### NeTEx Regional, NeTEx Sweden, SIRI, Stops data, Samtrafiken Sales data (CC0)
+
+- Docs: https://www.trafiklab.se/api/netex-datasets/overview/
+- Same traffic as the GTFS feeds, with more detail (entrances, accessibility, zones, notices). No need to combine with
+  GTFS.
+- `https://opendata.samtrafiken.se/netex/{operator}/{operator}.zip?key=`; SIRI ET/SX/VM at
+  `https://opendata.samtrafiken.se/siri/{operator}/{EstimatedTimetable|SituationExchange|VehicleMonitoring}.xml?key=`.
+  Client must accept gzip/deflate or get HTTP 406.
+- NeTEx Sweden has no realtime. Stops data:
+  `https://opendata.samtrafiken.se/stopsregister-netex-sweden/sweden.zip?key=`, all stops with mappings between id
+  systems, Trafikverket signatures, municipality.
+- SIRI-ET publishes trips at most 4 h ahead; calls stay ~10 min after passing.
+- Sales data is for Samtrafiken ticket resellers; it describes sellable traffic, it does not sell.
+- ONLY 1 DOWNLOAD OF STATIC DATA PER DAY is needed. There is no need for retries, a bronze profile covers the need for 1
+  region with enough requests to spare! When developing, a static file should be cached locally so it can be reused. Key
+  upgrades due to frequent application restarts during development will be denied!
+
+### KoDa (CC0)
+
+- Docs: https://www.trafiklab.se/api/our-apis/koda/
+- `https://api.koda.trafiklab.se/KoDa/api/v2/gtfs-rt/{operator}/{feed}?date=YYYY-MM-DD&key=` and
+  `/gtfs-static/{operator}?date=...&key=`. Needs its own KoDa key.
+- HTTP 202 = archive being built: poll every 30 s until 200. Download one file at a time; parallel requests break the
+  job. Use daily archives, not hourly! Daily performs better since those are cached and have better availability.
+- Archives are 7-Zip (LZMA2). `pykoda` is unmaintained; do not recommend it as-is.
+- Realtime archived only for operators that publish realtime. Combine with the static file published closest before, at
+  most a week older.
+
+### Third-party APIs listed on Trafiklab
+
+- Trafikverket Open API: key from Trafikverket's own portal (https://data.trafikverket.se), not Trafiklab. Source for
+  train realtime, platforms, replacement buses.
+- SL's APIs: run by SL, separate id system, not interchangeable with Trafiklab ids. Trafiklab datasets cover SL traffic
+  too; recommend GTFS Regional (sl) or the Realtime APIs when SL's APIs cannot do what is needed (more than 3 departures
+  per line, line→stop mapping, bulk realtime). Only recommend this API when the data is not available in another
+  national API.
+- Västtrafik: own portal at https://developer.vasttrafik.se. Realtime data expected in GTFS Regional, GTFS Sweden 3,
+  Trafiklab Realtime APIs Q4 2026 - Q1 2027.
+
+## Keys and quota
+
+- Account and keys at https://developer.trafiklab.se. One key per API, created inside a project. Everything is free;
+  higher levels via "Upgrade quota" on the key with project description, expected requests and user count.
+- Each key works only with the URL of the API it was created for. "Key does not exist" / "Key does not have access to
+  file" nearly always means wrong key for the URL, or a stray character in the URL (`;`, `.`, whitespace, placeholders
+  left in). Tell users to retype the URL by hand and URL-encode non-ASCII characters.
+- Usage statistics lag up to a day; a 429 is real even if the counter looks low.
+- Upgrades always denied: scraping journey planners for analytics (→ GTFS), stress tests, silver or higher for private
+  departure boards (bronze suffices with time-of-day throttling).
+- Never post keys publicly. Keys for open-source projects belong in an uncommitted config file.
+- Keep the account e-mail valid: deprecations and breaking changes are announced by e-mail months ahead.
+  Status: https://status.trafiklab.se. News: https://www.trafiklab.se/rss.xml.
+- Trafiklab cannot be self-hosted, has no IP allowlist (AWS autoscaling), offers no support calls.
+
+## Polling and caching
+
+- Realtime APIs: at most once per 60 s per stop; throttle at night and when the display is idle; compute "in N minutes"
+  client-side from the timestamps.
+- GTFS-RT: every 15–30 s is enough; VehiclePositions every ~2 s plus a few hundred ms margin. Use `If-Modified-Since` /
+  `Last-Modified`. Fetch from one central backend and fan out to clients; never from every device.
+- Static GTFS/NeTEx: once a day, after ~06:00. Weekly is fine for OpenTripPlanner setups, but download the day after the
+  June and December timetable changes.
+- Caching and redistributing the data is allowed.
+
+## GTFS semantics the team corrects most often
+
+- Realtime must be combined with the static file from the same product (Regional RT ↔ Regional static of the same
+  operator; Sweden 3 RT ↔ Sweden 3 static) and the static file must be fresh. Unmatched trip_ids are almost always a
+  dataset mix-up or stale file.
+- Ids are opaque strings; do not parse, do not assume stability across publications. trip_id + start_date identifies a
+  trip instance.
+- Times may exceed 24:00:00; start_date is the service day. Use service-day logic, not modulo 24.
+- calendar.txt only states validity; operating days are in calendar_dates.txt.
+- pickup_type/drop_off_type 3 = signal the driver (normal for buses); 2 + booking_rules.txt = pre-booking; both set to 1
+  on all stops = non-revenue trip, filter out.
+- shape_dist_traveled may be empty or non-monotonic; tolerate it.
+- route_long_name, when present alongside route_short_name, is the correct public line name. trip_short_name is the
+  train number, empty when only the line is announced. direction_id has no defined meaning; use headsigns.
+- uncertainty 0 in TripUpdates = observed. Observed stops are kept ~10 min. VehiclePositions have no
+  current_status/current_stop_sequence.
+- Vehicles without a trip (depot runs, parked), ADDED trips without static counterpart, and cancellations without
+  trip_id are all expected; Trafiklab republishes operator data without filtering.
+- Protobuf needs a real protobuf library and the standard gtfs-realtime.proto; hand-written parsers are not accepted as
+  bug reports.
+- CSV quoting of commas in stop names is correct per RFC 4180; fix the parser.
+- GTFS validator findings on `_extra` files are meaningless (not GTFS). "GTFS Nordic" does not exist as a profile.
+- Extended route types are used (100–1501). Handle unknown types gracefully.
+
+## Support boundaries
+
+- Trafiklab publishes what operators deliver and reports data errors to them; there is no SLA for operator fixes. Bug
+  reports need operator, id, date and ideally the .pb file.
+- Trafiklab builds no consumer apps and sells no tickets. Complaints about apps go to the app developer; Samtrafiken
+  ticket/data discrepancies to https://help.samtrafiken.se; Trafikverket API questions to Trafikverket's forum; SL
+  journey planner feedback to SL customer service.
+- General programming questions belong on Stack Overflow. AI-generated issues are only useful when the author can verify
+  them.
+- Support forum: https://support.trafiklab.se (Swedish or English).
+
+## Documentation
+
+- APIs overview: https://www.trafiklab.se/api/
+- Getting started, keys, upgrades: https://www.trafiklab.se/docs/getting-started/using-trafiklab/
+- FAQ by use case: https://www.trafiklab.se/docs/using-trafiklab-data/frequently-asked-questions/
+- Choosing data: https://www.trafiklab.se/docs/using-trafiklab-data/the-right-data-type-for-your-project/
+- Stop ids: https://www.trafiklab.se/docs/using-trafiklab-data/the-right-data-type-for-your-project/obtaining-stop-ids/
+- Combining datasets: https://www.trafiklab.se/docs/using-trafiklab-data/combining-data/
+- Best practices (limiting requests, conditional GET, key
+  secrecy): https://www.trafiklab.se/docs/using-trafiklab-data/best-practices/
+- Protobuf / GTFS-RT: https://www.trafiklab.se/docs/using-trafiklab-data/the-protobuf-file-format/
+- GTFS overview, static fields, realtime, extensions: https://www.trafiklab.se/api/gtfs-datasets/overview/
+- OpenAPI specs: https://www.trafiklab.se/openapi/
+- Example code: https://github.com/trafiklab/gtfs-examples

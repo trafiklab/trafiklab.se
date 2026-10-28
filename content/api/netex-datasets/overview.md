@@ -34,7 +34,7 @@ You can see the general difference between GTFS Regional and NeTEx Regional data
 
 |                          | GTFS Regional/ GTFS Sweden 3                                       | NeTEx Regional/ NeTEx Sweden                                           |
 |:-------------------------|:-------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| Coverage                 | 92%                                                                | 92%                                                                    |
+| Coverage                 | Over 99%                                                           | Over 99%                                                               |
 | Data quality             | High quality, based on higher level of details than GTFS Sverige 2 | Highest quality, based on higher level of details than GTFS Regional   |
 | Real-time data           | Static + Real-time + GPS positions                                 | Static + Real-time + GPS positions / only static data for NeTEx Sweden |
 | Historical data (static) | Partly available in Koda                                           | Not available                                                          |

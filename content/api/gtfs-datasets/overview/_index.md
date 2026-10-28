@@ -36,7 +36,7 @@ You can see the general difference between GTFS Sverige 2 and GTFS Regional data
 
 |                          | GTFS Sverige 2   | GTFS Regional/ GTFS Sweden 3                   |
 |:-------------------------|:-----------------|:-----------------------------------------------|
-| Coverage                 | 100%             | 92%                                            |
+| Coverage                 | 100%             | Over 99%                                       |
 | Data quality             | Average quality  | High quality, based on higher level of details |
 | Real-time data           | Only static data | Static + Real-time + GPS positions             |
 | Historical data (static) | Since 2012       | Partly available in Koda                       |
